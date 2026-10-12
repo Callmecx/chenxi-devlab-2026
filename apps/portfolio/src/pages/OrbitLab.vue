@@ -284,34 +284,43 @@ function compare() {
     return;
   }
   abortComparison();
+  comparison.value = null;
+  notice.value = "";
   comparing.value = true;
   drawer.value = "comparison";
   setCamera("comparison");
   const ticket = generation;
   const key = sourceKey(snapshot.value);
-  worker = new Worker(new URL("../workers/orbit.worker.ts", import.meta.url), {
-    type: "module",
-  });
-  worker.onmessage = (
-    event: MessageEvent<{ result?: OrbitComparison; error?: string }>,
-  ) => {
-    if (ticket !== generation || sourceKey(runtime.snapshot) !== key) return;
-    if (event.data.result) comparison.value = event.data.result;
-    if (event.data.error) notice.value = event.data.error;
+  try {
+    worker = new Worker(new URL("../workers/orbit.worker.ts", import.meta.url), {
+      type: "module",
+    });
+    worker.onmessage = (
+      event: MessageEvent<{ result?: OrbitComparison; error?: string }>,
+    ) => {
+      if (ticket !== generation || sourceKey(runtime.snapshot) !== key) return;
+      if (event.data.result) comparison.value = event.data.result;
+      if (event.data.error) notice.value = event.data.error;
+      abortComparison();
+    };
+    worker.onerror = () => {
+      if (ticket !== generation) return;
+      notice.value = "分支计算异常，当前任务保持原样，可重试。";
+      abortComparison();
+    };
+    workerTimer = setTimeout(() => {
+      if (ticket !== generation) return;
+      notice.value = "分支计算超时，已终止计算，可重试。";
+      abortComparison();
+    }, 5000);
+    worker.postMessage({
+      snapshot: structuredClone(snapshot.value),
+      seq: events.value.at(-1)?.seq ?? 0,
+    });
+  } catch {
+    notice.value = "无法启动分支计算，当前任务保持原样，可重试。";
     abortComparison();
-  };
-  worker.onerror = () => {
-    notice.value = "分支计算异常，当前任务保持原样，可重试。";
-    abortComparison();
-  };
-  workerTimer = setTimeout(() => {
-    notice.value = "分支计算超时，已终止计算，可重试。";
-    abortComparison();
-  }, 5000);
-  worker.postMessage({
-    snapshot: structuredClone(snapshot.value),
-    seq: events.value.at(-1)?.seq ?? 0,
-  });
+  }
 }
 function adopt(strategy: OrbitStrategy) {
   if (!canAdopt.value) {

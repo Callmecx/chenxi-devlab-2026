@@ -37,6 +37,7 @@ let frame = 0,
   lastRender = 0,
   lastMetric = 0;
 let compact = false;
+let wasOnDemand: boolean | undefined;
 let aspect = 1.5,
   pixelCount = 0,
   topology = "",
@@ -416,6 +417,7 @@ function pointerDown(event: PointerEvent) {
   desiredOrbit.copy(orbit);
   desiredFocus.copy(focus);
   emit("camera-interrupt");
+  wake();
 }
 function pointerMove(event: PointerEvent) {
   if (drag && drag.id === event.pointerId) {
@@ -427,6 +429,7 @@ function pointerMove(event: PointerEvent) {
       orbit.theta -= dx * 0.006;
       orbit.phi = THREE.MathUtils.clamp(orbit.phi - dy * 0.006, 0.15, 1.43);
       desiredOrbit.copy(orbit);
+      wake();
     }
     drag.x = event.clientX;
     drag.y = event.clientY;
@@ -449,6 +452,7 @@ function pointerMove(event: PointerEvent) {
       if (renderer)
         renderer.domElement.style.cursor = result ? "pointer" : "grab";
       updateFacts();
+      wake();
     }
   }
 }
@@ -461,6 +465,15 @@ function pointerUp(event: PointerEvent) {
   if (renderer?.domElement.hasPointerCapture(event.pointerId))
     renderer.domElement.releasePointerCapture(event.pointerId);
   drag = null;
+  wake();
+}
+function pointerLeave() {
+  if (drag || !hover) return;
+  hover = null;
+  hoverText.value = "";
+  if (renderer) renderer.domElement.style.cursor = "grab";
+  updateFacts();
+  wake();
 }
 function wheel(event: WheelEvent) {
   event.preventDefault();
@@ -473,6 +486,7 @@ function wheel(event: WheelEvent) {
   );
   desiredOrbit.copy(orbit);
   desiredFocus.copy(focus);
+  wake();
 }
 function keydown(event: KeyboardEvent) {
   if (
@@ -505,6 +519,7 @@ function keydown(event: KeyboardEvent) {
     desiredOrbit.copy(orbit);
     desiredFocus.copy(focus);
   }
+  wake();
 }
 function resize() {
   if (!host.value || !renderer) return;
@@ -537,20 +552,42 @@ function resize() {
   updateFacts();
   renderer.domElement.dataset.pixels = String(pixelCount);
   renderer.domElement.dataset.quality = props.quality;
+  wake();
+}
+function isOnDemand() {
+  return props.reduced && props.snapshot.status !== "running";
 }
 function animate(now: number) {
   frame = 0;
+  if (renderer) renderer.domElement.dataset.rafPending = "0";
   if (disposed || contextLost || document.hidden || !renderer) return;
-  frame = requestAnimationFrame(animate);
+  const onDemand = isOnDemand();
+  const modeChanged = wasOnDemand !== onDemand;
+  renderer.domElement.dataset.renderMode = onDemand
+    ? "on-demand"
+    : "continuous";
+  if (modeChanged) {
+    // An idle gap is not a slow rendered frame. Start a fresh cadence window
+    // whenever continuous rendering resumes or reduced-motion becomes static.
+    frameSamples.length = 0;
+    lastRender = 0;
+    wasOnDemand = onDemand;
+  }
+  if (!onDemand) {
+    frame = requestAnimationFrame(animate);
+    renderer.domElement.dataset.rafPending = "1";
+  }
   const targetInterval =
     compact && props.quality === "standard" ? 1000 / 30 : 1000 / 60;
-  if (lastRender && now - lastRender < targetInterval - 0.5) return;
-  if (lastRender) {
+  if (!onDemand && lastRender && now - lastRender < targetInterval - 0.5)
+    return;
+  if (!onDemand && lastRender) {
     frameSamples.push(now - lastRender);
     if (frameSamples.length > 240) frameSamples.shift();
   }
-  const delta = lastRender ? Math.min((now - lastRender) / 1000, 0.1) : 1;
-  lastRender = now;
+  const delta =
+    !onDemand && lastRender ? Math.min((now - lastRender) / 1000, 0.1) : 1;
+  lastRender = onDemand ? 0 : now;
   for (const model of carrierMeshes.values()) {
     const blend =
       props.reduced || props.snapshot.status !== "running"
@@ -582,7 +619,9 @@ function animate(now: number) {
   frames++;
   renderer.domElement.dataset.frames = String(frames);
   renderer.domElement.dataset.camera = props.camera;
-  if (now - lastMetric > 3000) {
+  // This acknowledgment is written only after the requested camera was drawn.
+  renderer.domElement.dataset.cameraRequest = String(props.cameraRequest);
+  if (modeChanged || now - lastMetric > 3000) {
     const sorted = [...frameSamples].sort((a, b) => a - b);
     renderer.domElement.dataset.drawCalls = String(renderer.info.render.calls);
     renderer.domElement.dataset.geometries = String(
@@ -604,18 +643,22 @@ function animate(now: number) {
   }
 }
 function wake() {
-  if (!frame && !disposed && !document.hidden && !contextLost)
+  if (renderer && !frame && !disposed && !document.hidden && !contextLost) {
     frame = requestAnimationFrame(animate);
+    renderer.domElement.dataset.rafPending = "1";
+  }
 }
 function visibility() {
   cancelAnimationFrame(frame);
   frame = 0;
   lastRender = 0;
   frameSamples.length = 0;
-  if (renderer)
+  if (renderer) {
+    renderer.domElement.dataset.rafPending = "0";
     renderer.domElement.dataset.rendering = document.hidden
       ? "paused-hidden"
       : "active";
+  }
   wake();
 }
 function lost(event: Event) {
@@ -623,12 +666,20 @@ function lost(event: Event) {
   contextLost = true;
   cancelAnimationFrame(frame);
   frame = 0;
-  if (renderer) renderer.domElement.dataset.rendering = "context-lost";
+  if (renderer) {
+    renderer.domElement.dataset.rafPending = "0";
+    renderer.domElement.dataset.rendering = "context-lost";
+  }
   emit("context-lost");
 }
 function restored() {
   contextLost = false;
   lastRender = 0;
+  frameSamples.length = 0;
+  if (renderer)
+    renderer.domElement.dataset.rendering = document.hidden
+      ? "paused-hidden"
+      : "active";
   resize();
   wake();
 }
@@ -726,8 +777,10 @@ onMounted(() => {
     listen(canvas, "pointerdown", pointerDown as SceneListener);
     listen(canvas, "pointermove", pointerMove as SceneListener);
     listen(canvas, "pointerup", pointerUp as SceneListener);
+    listen(canvas, "pointerleave", pointerLeave);
     listen(canvas, "pointercancel", (() => {
       drag = null;
+      wake();
     }) as SceneListener);
     listen(canvas, "wheel", wheel as SceneListener, { passive: false });
     listen(canvas, "keydown", keydown as SceneListener);
@@ -746,6 +799,7 @@ onBeforeUnmount(() => {
   disposed = true;
   cancelAnimationFrame(frame);
   frame = 0;
+  if (renderer) renderer.domElement.dataset.rafPending = "0";
   observer?.disconnect();
   for (const remove of listenerRemovers) remove();
   listenerRemovers.length = 0;

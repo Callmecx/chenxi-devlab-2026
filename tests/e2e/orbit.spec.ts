@@ -1,5 +1,5 @@
 import { test, expect, type Page } from "@playwright/test";
-import { readFile, mkdir } from "node:fs/promises";
+import { readFile, mkdir, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import type {
   OrbitRecording,
@@ -741,6 +741,46 @@ test("ORBIT 键盘 Space 与 Enter 都可操作星图对象", async ({ page }) =
   await expect(lab(page)).toHaveAttribute("data-tick", "0");
 });
 
+test("ORBIT 减弱动效三维静止时按需绘制，镜头和世界变化后真实更新", async ({
+  page,
+}) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await open(page);
+  await button(page, "切换任务星图").click();
+  const canvas = page.locator("canvas[data-orbit-canvas]");
+  await expect(canvas).toHaveAttribute("data-rendering", "active");
+  await expect
+    .poll(async () => Number(await canvas.getAttribute("data-frames")))
+    .toBeGreaterThan(0);
+  const identity = await lab(page).getAttribute("data-run-id");
+  const frames = () => canvas.getAttribute("data-frames").then(Number);
+  await page.mouse.move(10, 10);
+  await page.waitForTimeout(150);
+  const idleFrames = await frames();
+  await page.waitForTimeout(500);
+  expect(
+    await frames(),
+    "unchanged reduced-motion world must not redraw continuously",
+  ).toBe(idleFrames);
+  await button(page, "跟随载体").click();
+  await expect.poll(frames).toBeGreaterThan(idleFrames);
+  await expect(lab(page)).toHaveAttribute("data-run-id", identity!);
+  await expect(lab(page)).toHaveAttribute("data-tick", "0");
+  const cameraFrames = await frames();
+  await single(page);
+  await expect.poll(frames).toBeGreaterThan(cameraFrames);
+  await expect(lab(page)).toHaveAttribute("data-tick", "1");
+  await expect(lab(page)).toHaveAttribute("data-status", "paused");
+  const worldFrames = await frames();
+  await page.waitForTimeout(500);
+  expect(
+    await frames(),
+    "paused snapshot should settle after rendering its change",
+  ).toBe(worldFrames);
+  await expect(lab(page)).toHaveAttribute("data-run-id", identity!);
+  await expect(lab(page)).toHaveAttribute("data-delivered", "0");
+});
+
 // Keep each camera journey in its own browser context. Slow software-rendered
 // screenshot readback must not carry performance-degradation state into the next
 // independent journey; the real adaptive fallback remains enabled throughout.
@@ -782,7 +822,11 @@ for (const preset of ["世界全景", "跟随载体"]) {
         },
         { left: left.toString("base64"), right: right.toString("base64") },
       );
+    const initialFrames = Number(await canvas.getAttribute("data-frames"));
     await button(page, preset).click();
+    await expect
+      .poll(async () => Number(await canvas.getAttribute("data-frames")))
+      .toBeGreaterThan(initialFrames);
     const bounds = (await canvas.boundingBox())!;
     // Clear real raycast hover before comparing camera composition. Leaving the
     // canvas alone retains the last hover highlight, which is a separate effect.
@@ -808,11 +852,23 @@ for (const preset of ["世界全景", "跟随载体"]) {
     await page.mouse.move(10, 10);
     await page.waitForTimeout(150);
     const dragged = await canvas.screenshot();
+    const draggedFrames = Number(await canvas.getAttribute("data-frames"));
     await button(page, preset).click();
+    await expect
+      .poll(async () => Number(await canvas.getAttribute("data-frames")))
+      .toBeGreaterThan(draggedFrames);
     await page.mouse.move(bounds.x + 5, bounds.y + 5);
     await page.mouse.move(10, 10);
     await page.waitForTimeout(150);
     const restored = await canvas.screenshot();
+    await expect(canvas).toBeAttached();
+    await expect(canvas).toHaveAttribute("data-rendering", "active");
+    for (const [name, pixels] of [
+      ["before", before],
+      ["dragged", dragged],
+      ["restored", restored],
+    ] as const)
+      await writeFile(info.outputPath(`${name}.png`), pixels);
     const draggedDifference = await difference(before, dragged),
       restoredDifference = await difference(before, restored);
     measurements.push({ preset, draggedDifference, restoredDifference });

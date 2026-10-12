@@ -1,0 +1,14 @@
+export type Category = '全部' | '器物' | '出行' | '桌面'
+export type Art = 'cup' | 'bag' | 'lamp' | 'bottle' | 'book' | 'speaker'
+export interface Sku { id: string; name: string; color: string; price: number; stock: number }
+export interface Product { id: string; name: string; subtitle: string; category: Category; art: Art; backdrop: string; label: string; description: string; specs: string[]; skus: Sku[] }
+export const products: Product[] = [
+  { id:'cup',name:'山间 · 陶瓷马克杯',subtitle:'把慢下来的时间，握在手心。',category:'器物',art:'cup',backdrop:'#e8dfd0',label:'编辑之选',description:'圆润杯型与柔和哑光釉面，为每日的咖啡时间留一点安静。此商品为原创虚构演示商品，不支持购买或真实支付。',specs:['容量 350 mL','哑光陶瓷','手工质感'],skus:[{id:'cup-sand',name:'沙岩白',color:'#ded0b9',price:12900,stock:8},{id:'cup-moss',name:'苔藓绿',color:'#74846a',price:13900,stock:3},{id:'cup-clay',name:'陶土棕',color:'#b47658',price:13900,stock:0}] },
+  { id:'bag',name:'漫游 · 帆布托特包',subtitle:'轻一点出发，装下日常灵感。',category:'出行',art:'bag',backdrop:'#e2e5d9',label:'轻装日常',description:'通勤、咖啡馆或一场临时起意的散步。大开口与内置隔层，让日常收纳简单有序。演示商品，仅用于体验购物流程。',specs:['耐磨帆布','内置分隔袋','轻量 280 g'],skus:[{id:'bag-natural',name:'原色帆布',color:'#dbccaf',price:18900,stock:6},{id:'bag-forest',name:'森林绿',color:'#516758',price:19900,stock:4}] },
+  { id:'lamp',name:'暮光 · 桌面小灯',subtitle:'给每一个晚归的夜，一点温柔。',category:'桌面',art:'lamp',backdrop:'#eaddcf',label:'温暖陪伴',description:'蘑菇形灯罩把光晕柔和地铺在桌面。暖白灯光，适合阅读与夜间放松。演示商品，不涉及真实功效承诺。',specs:['暖光 2700 K','柔和漫射','USB 供电'],skus:[{id:'lamp-cream',name:'奶油白',color:'#e4d5b9',price:25900,stock:5},{id:'lamp-red',name:'铁锈红',color:'#a76246',price:27900,stock:2}] },
+  { id:'bottle',name:'流野 · 随行水瓶',subtitle:'城市与山野之间，随时补充能量。',category:'出行',art:'bottle',backdrop:'#dce5e1',label:'随行好物',description:'利落瓶身与便携提环，适合桌面或出行携带。演示产品说明，仅用于呈现多规格与库存约束。',specs:['容量 500 mL','双层瓶身','便携提环'],skus:[{id:'bottle-sage',name:'鼠尾草绿',color:'#8b9b87',price:15900,stock:9},{id:'bottle-stone',name:'雾石灰',color:'#a5aaa3',price:15900,stock:7}] },
+  { id:'book',name:'留白 · 灵感手账',subtitle:'把灵光一闪，变成下一步。',category:'桌面',art:'book',backdrop:'#e8dcd6',label:'记录灵感',description:'留白封面与点阵内页，从计划到速写，找到自己的节奏。全部商品与库存是本地演示数据。',specs:['A5 尺寸','点阵内页','平摊装订'],skus:[{id:'book-clay',name:'陶土红',color:'#b87861',price:5900,stock:20},{id:'book-olive',name:'橄榄绿',color:'#8c9470',price:5900,stock:12}] },
+  { id:'speaker',name:'回响 · 桌面音箱',subtitle:'一首歌，让房间有了自己的节奏。',category:'桌面',art:'speaker',backdrop:'#dfded5',label:'小小声场',description:'以简洁几何造型融入桌面，让生活空间多一点声音。演示商品，不连接任何真实设备或服务。',specs:['紧凑机身','织物面罩','复古旋钮'],skus:[{id:'speaker-sand',name:'暖沙色',color:'#c5b494',price:32900,stock:4},{id:'speaker-dark',name:'深岩灰',color:'#737873',price:32900,stock:2}] }
+]
+export function findSku(id: string): {product: Product; sku: Sku} | undefined { for (const product of products) { const sku = product.skus.find(item => item.id === id); if (sku) return {product, sku} } }
+export function money(cents: number): string { return (cents / 100).toFixed(2) }

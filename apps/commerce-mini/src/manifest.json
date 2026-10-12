@@ -1,0 +1,1 @@
+{"name":"ShopPilot","appid":"__UNI__SHOPPILOT","description":"Original local demo commerce by Chenxi DevLab","versionName":"1.0.0","versionCode":"100","transformPx":false,"vueVersion":"3","uniStatistics":{"enable":false},"h5":{"title":"ShopPilot · 日常好物，认真挑选","router":{"mode":"hash"}},"mp-weixin":{"appid":"touristappid","setting":{"urlCheck":false},"usingComponents":true}}

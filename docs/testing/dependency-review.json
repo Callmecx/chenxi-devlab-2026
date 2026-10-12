@@ -1,0 +1,32 @@
+{
+  "reviewDate": "2026-10-12",
+  "timezone": "Asia/Shanghai",
+  "registry": "https://registry.npmjs.org",
+  "root": {
+    "allVulnerabilities": 0,
+    "productionVulnerabilities": 0,
+    "evidence": ["audit-root-all.json", "audit-root-production.json"]
+  },
+  "commerce": {
+    "initialAllVulnerabilities": 58,
+    "initialProductionVulnerabilities": 41,
+    "allVulnerablePackages": 24,
+    "productionVulnerablePackages": 17,
+    "critical": 0,
+    "remainingLeafAdvisories": [
+      {
+        "package": "braces",
+        "version": "3.0.3",
+        "advisory": "GHSA-vfj7-8cjw-p6xm",
+        "url": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+        "severity": "high",
+        "patchedVersionAvailable": false,
+        "dependencyPaths": ["@dcloudio/uni-cli-shared > chokidar > braces", "@dcloudio/uni-cli-shared > fast-glob > micromatch > braces"],
+        "exposureAssessment": "Node build/file-watching dependency. The app accepts no glob input and public output is static. No current public input path to this dependency was identified; this does not mean the upstream issue is fixed.",
+        "constraints": ["Build trusted sources only", "Do not expose development servers publicly", "Do not add untrusted glob inputs", "Re-audit when an upstream patch is available"]
+      }
+    ],
+    "evidence": ["audit-commerce-all.json", "audit-commerce-production.json", "audit-commerce-initial-all.json", "audit-commerce-initial-production.json"]
+  },
+  "absoluteSafetyClaim": false
+}

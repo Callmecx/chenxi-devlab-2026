@@ -1,0 +1,1413 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@babel/core": {
+      "name": "@babel/core",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1123528,
+          "name": "@babel/core",
+          "dependency": "@babel/core",
+          "title": "@babel/core: Arbitrary File Read via sourceMappingURL Comment",
+          "url": "https://github.com/advisories/GHSA-4x5r-pxfx-6jf8",
+          "severity": "low",
+          "cwe": [
+            "CWE-22",
+            "CWE-200"
+          ],
+          "cvss": {
+            "score": 3.2,
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:L/I:N/A:N"
+          },
+          "range": "<=7.29.0"
+        }
+      ],
+      "effects": [
+        "@dcloudio/uni-cli-shared"
+      ],
+      "range": "<=7.29.0",
+      "nodes": [
+        "node_modules/@babel/core"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-cli-shared",
+        "version": "0.2.994",
+        "isSemVerMajor": true
+      }
+    },
+    "@dcloudio/uni-app": {
+      "name": "@dcloudio/uni-app",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@dcloudio/uni-cloud",
+        "@dcloudio/uni-components",
+        "@dcloudio/uni-console",
+        "@dcloudio/uni-push",
+        "@dcloudio/uni-stat"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-app"
+      ],
+      "fixAvailable": {
+        "isSemVerMajor": true
+      }
+    },
+    "@dcloudio/uni-cli-shared": {
+      "name": "@dcloudio/uni-cli-shared",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@babel/core",
+        "@dcloudio/uni-nvue-styler",
+        "@intlify/core-base",
+        "@intlify/vue-devtools",
+        "@vue/server-renderer",
+        "adm-zip",
+        "chokidar",
+        "esbuild",
+        "fast-glob",
+        "postcss-selector-parser",
+        "source-map-js",
+        "unimport"
+      ],
+      "effects": [
+        "@dcloudio/uni-cloud",
+        "@dcloudio/uni-console",
+        "@dcloudio/uni-mp-compiler",
+        "@dcloudio/uni-mp-vite",
+        "@dcloudio/uni-push",
+        "@dcloudio/uni-stat"
+      ],
+      "range": "<=0.0.1-nvue3.3040020220301001 || >=2.0.1-32920211122002",
+      "nodes": [
+        "node_modules/@dcloudio/uni-cli-shared"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-cli-shared",
+        "version": "0.2.994",
+        "isSemVerMajor": true
+      }
+    },
+    "@dcloudio/uni-cloud": {
+      "name": "@dcloudio/uni-cloud",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@dcloudio/uni-cli-shared",
+        "fast-glob"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-cloud"
+      ],
+      "fixAvailable": true
+    },
+    "@dcloudio/uni-components": {
+      "name": "@dcloudio/uni-components",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@dcloudio/uni-cloud",
+        "@dcloudio/uni-h5"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-components"
+      ],
+      "fixAvailable": {
+        "isSemVerMajor": true
+      }
+    },
+    "@dcloudio/uni-console": {
+      "name": "@dcloudio/uni-console",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        "@dcloudio/uni-cli-shared"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-console"
+      ],
+      "fixAvailable": true
+    },
+    "@dcloudio/uni-h5": {
+      "name": "@dcloudio/uni-h5",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@dcloudio/uni-h5-vite",
+        "@dcloudio/uni-h5-vue",
+        "@vue/server-renderer",
+        "postcss-selector-parser"
+      ],
+      "effects": [
+        "@dcloudio/uni-components"
+      ],
+      "range": "<=0.0.1-nvue3.3040020220301001 || >=2.0.1-32920211122002",
+      "nodes": [
+        "node_modules/@dcloudio/uni-h5"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-h5",
+        "version": "0.9.0",
+        "isSemVerMajor": true
+      }
+    },
+    "@dcloudio/uni-h5-vite": {
+      "name": "@dcloudio/uni-h5-vite",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@dcloudio/uni-cli-shared",
+        "@vue/server-renderer"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-h5-vite"
+      ],
+      "fixAvailable": true
+    },
+    "@dcloudio/uni-h5-vue": {
+      "name": "@dcloudio/uni-h5-vue",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@vue/server-renderer"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-h5-vue"
+      ],
+      "fixAvailable": true
+    },
+    "@dcloudio/uni-mp-compiler": {
+      "name": "@dcloudio/uni-mp-compiler",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        "@dcloudio/uni-cli-shared"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-mp-compiler"
+      ],
+      "fixAvailable": true
+    },
+    "@dcloudio/uni-mp-vite": {
+      "name": "@dcloudio/uni-mp-vite",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        "@dcloudio/uni-cli-shared",
+        "@dcloudio/uni-mp-compiler"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-mp-vite"
+      ],
+      "fixAvailable": true
+    },
+    "@dcloudio/uni-mp-weixin": {
+      "name": "@dcloudio/uni-mp-weixin",
+      "severity": "moderate",
+      "isDirect": true,
+      "via": [
+        "@dcloudio/uni-cli-shared",
+        "@dcloudio/uni-mp-compiler",
+        "@dcloudio/uni-mp-vite",
+        "jimp",
+        "ws"
+      ],
+      "effects": [],
+      "range": ">=2.0.1-32920211122002",
+      "nodes": [
+        "node_modules/@dcloudio/uni-mp-weixin"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-mp-weixin",
+        "version": "0.0.973",
+        "isSemVerMajor": true
+      }
+    },
+    "@dcloudio/uni-nvue-styler": {
+      "name": "@dcloudio/uni-nvue-styler",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "postcss"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-nvue-styler"
+      ],
+      "fixAvailable": true
+    },
+    "@dcloudio/uni-push": {
+      "name": "@dcloudio/uni-push",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        "@dcloudio/uni-cli-shared"
+      ],
+      "effects": [
+        "@dcloudio/uni-app"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-push"
+      ],
+      "fixAvailable": {
+        "isSemVerMajor": true
+      }
+    },
+    "@dcloudio/uni-stat": {
+      "name": "@dcloudio/uni-stat",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        "@dcloudio/uni-cli-shared"
+      ],
+      "effects": [],
+      "range": ">=2.0.1-32920211122002",
+      "nodes": [
+        "node_modules/@dcloudio/uni-stat"
+      ],
+      "fixAvailable": true
+    },
+    "@intlify/core-base": {
+      "name": "@intlify/core-base",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@intlify/message-compiler",
+        "@intlify/message-resolver",
+        "@intlify/runtime",
+        "@intlify/vue-devtools",
+        {
+          "source": 1106453,
+          "name": "@intlify/core-base",
+          "dependency": "@intlify/core-base",
+          "title": "vue-i18n's escapeParameterHtml does not prevent DOM-based XSS through its tag attributes",
+          "url": "https://github.com/advisories/GHSA-x8qp-wqqm-57ph",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=9.0.0 <9.14.5"
+        },
+        {
+          "source": 1146054,
+          "name": "@intlify/core-base",
+          "dependency": "@intlify/core-base",
+          "title": "Vue I18n Allows Prototype Pollution in `handleFlatJson`",
+          "url": "https://github.com/advisories/GHSA-p2ph-7g93-hw3m",
+          "severity": "high",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=9.1.0 <9.1.11"
+        }
+      ],
+      "effects": [],
+      "range": "9.0.0 - 9.14.4",
+      "nodes": [
+        "node_modules/@intlify/core-base"
+      ],
+      "fixAvailable": true
+    },
+    "@intlify/message-compiler": {
+      "name": "@intlify/message-compiler",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@intlify/message-resolver"
+      ],
+      "effects": [],
+      "range": "9.1.0 - 9.1.10",
+      "nodes": [
+        "node_modules/@intlify/message-compiler"
+      ],
+      "fixAvailable": true
+    },
+    "@intlify/message-resolver": {
+      "name": "@intlify/message-resolver",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1146058,
+          "name": "@intlify/message-resolver",
+          "dependency": "@intlify/message-resolver",
+          "title": "Vue I18n Allows Prototype Pollution in `handleFlatJson`",
+          "url": "https://github.com/advisories/GHSA-p2ph-7g93-hw3m",
+          "severity": "high",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=9.1.0 <9.1.11"
+        }
+      ],
+      "effects": [
+        "@intlify/core-base",
+        "@intlify/message-compiler",
+        "@intlify/runtime",
+        "@intlify/vue-devtools"
+      ],
+      "range": "9.1.0 - 9.1.10",
+      "nodes": [
+        "node_modules/@intlify/message-resolver"
+      ],
+      "fixAvailable": true
+    },
+    "@intlify/runtime": {
+      "name": "@intlify/runtime",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@intlify/message-compiler",
+        "@intlify/message-resolver"
+      ],
+      "effects": [],
+      "range": "9.1.0 - 9.1.10",
+      "nodes": [
+        "node_modules/@intlify/runtime"
+      ],
+      "fixAvailable": true
+    },
+    "@intlify/vue-devtools": {
+      "name": "@intlify/vue-devtools",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@intlify/message-resolver",
+        "@intlify/runtime"
+      ],
+      "effects": [],
+      "range": "<=9.1.10",
+      "nodes": [
+        "node_modules/@intlify/vue-devtools"
+      ],
+      "fixAvailable": true
+    },
+    "@jimp/core": {
+      "name": "@jimp/core",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "phin"
+      ],
+      "effects": [
+        "@jimp/custom"
+      ],
+      "range": "<=0.21.4--canary.1163.d07ed6254d130e2995d24101e93427ec091016e6.0",
+      "nodes": [
+        "node_modules/@jimp/core"
+      ],
+      "fixAvailable": true
+    },
+    "@jimp/custom": {
+      "name": "@jimp/custom",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "@jimp/core"
+      ],
+      "effects": [
+        "jimp"
+      ],
+      "range": "<=0.21.4--canary.1163.d07ed6254d130e2995d24101e93427ec091016e6.0",
+      "nodes": [
+        "node_modules/@jimp/custom"
+      ],
+      "fixAvailable": true
+    },
+    "@jimp/jpeg": {
+      "name": "@jimp/jpeg",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "jpeg-js"
+      ],
+      "effects": [
+        "@jimp/types"
+      ],
+      "range": "<=0.12.0",
+      "nodes": [
+        "node_modules/@jimp/jpeg"
+      ],
+      "fixAvailable": true
+    },
+    "@jimp/types": {
+      "name": "@jimp/types",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "@jimp/jpeg"
+      ],
+      "effects": [
+        "jimp"
+      ],
+      "range": "<=0.11.1-canary.891.908.0",
+      "nodes": [
+        "node_modules/@jimp/types"
+      ],
+      "fixAvailable": true
+    },
+    "@vue/server-renderer": {
+      "name": "@vue/server-renderer",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1241259,
+          "name": "@vue/server-renderer",
+          "dependency": "@vue/server-renderer",
+          "title": "@vue/server-renderer: XSS via missing CR in attribute-name blacklist",
+          "url": "https://github.com/advisories/GHSA-g2v6-rqmx-r4w6",
+          "severity": "high",
+          "cwe": [
+            "CWE-79",
+            "CWE-116"
+          ],
+          "cvss": {
+            "score": 7.2,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N"
+          },
+          "range": "<3.5.42"
+        },
+        "vue"
+      ],
+      "effects": [
+        "@dcloudio/uni-cli-shared",
+        "@dcloudio/uni-h5",
+        "@dcloudio/uni-h5-vite",
+        "@dcloudio/uni-h5-vue",
+        "vue"
+      ],
+      "range": "<=3.5.41",
+      "nodes": [
+        "node_modules/@vue/server-renderer"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-cli-shared",
+        "version": "0.2.994",
+        "isSemVerMajor": true
+      }
+    },
+    "adm-zip": {
+      "name": "adm-zip",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1123686,
+          "name": "adm-zip",
+          "dependency": "adm-zip",
+          "title": "adm-zip: Crafted ZIP file triggers 4GB memory allocation",
+          "url": "https://github.com/advisories/GHSA-xcpc-8h2w-3j85",
+          "severity": "high",
+          "cwe": [
+            "CWE-400",
+            "CWE-789"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<0.6.0"
+        },
+        {
+          "source": 1193734,
+          "name": "adm-zip",
+          "dependency": "adm-zip",
+          "title": "adm-zip extraction follows destination symlinks, allowing arbitrary file overwrite",
+          "url": "https://github.com/advisories/GHSA-vwc7-r8mq-g2x9",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-59"
+          ],
+          "cvss": {
+            "score": 6.5,
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N"
+          },
+          "range": ">=0.5.9 <=0.6.0"
+        },
+        {
+          "source": 1239030,
+          "name": "adm-zip",
+          "dependency": "adm-zip",
+          "title": "adm-zip: Uncontrolled memory allocation via the declared uncompressed size (DoS)",
+          "url": "https://github.com/advisories/GHSA-7q85-xj36-vmfc",
+          "severity": "high",
+          "cwe": [
+            "CWE-789"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<0.6.1"
+        },
+        {
+          "source": 1240032,
+          "name": "adm-zip",
+          "dependency": "adm-zip",
+          "title": "adm-zip: Decompression-bomb protection (fix for CVE-2026-39244) can be bypassed by declaring uncompressed size as 0",
+          "url": "https://github.com/advisories/GHSA-rcw4-f5rp-g42v",
+          "severity": "high",
+          "cwe": [
+            "CWE-409"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<=0.6.0"
+        },
+        {
+          "source": 1240034,
+          "name": "adm-zip",
+          "dependency": "adm-zip",
+          "title": "adm-zip extraction preserves SUID/SGID bits from untrusted ZIPs -> local privilege escalation",
+          "url": "https://github.com/advisories/GHSA-j5f4-cc29-5x44",
+          "severity": "high",
+          "cwe": [
+            "CWE-732"
+          ],
+          "cvss": {
+            "score": 7.1,
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N"
+          },
+          "range": "<=0.6.0"
+        },
+        {
+          "source": 1240064,
+          "name": "adm-zip",
+          "dependency": "adm-zip",
+          "title": "adm-zip: Duplicate ZIP entry names: getEntry() and extractAllTo() resolve to different content",
+          "url": "https://github.com/advisories/GHSA-p634-w6r4-rjp2",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-436",
+            "CWE-696"
+          ],
+          "cvss": {
+            "score": 5.9,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+          },
+          "range": "<=0.6.0"
+        },
+        {
+          "source": 1240065,
+          "name": "adm-zip",
+          "dependency": "adm-zip",
+          "title": "adm-zip: getDataAsync() bypasses the maxOutputLength size guard enforced by the synchronous getData() path",
+          "url": "https://github.com/advisories/GHSA-c6fg-446q-cg94",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-400",
+            "CWE-770"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "range": "<=0.6.0"
+        },
+        {
+          "source": 1240066,
+          "name": "adm-zip",
+          "dependency": "adm-zip",
+          "title": "adm-zip: Unhandled error event in async DEFLATE decompression crashes Node.js process (DoS)",
+          "url": "https://github.com/advisories/GHSA-8238-w5pm-2374",
+          "severity": "high",
+          "cwe": [
+            "CWE-248",
+            "CWE-400"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<=0.6.0"
+        }
+      ],
+      "effects": [],
+      "range": "<=0.6.0",
+      "nodes": [
+        "node_modules/adm-zip"
+      ],
+      "fixAvailable": true
+    },
+    "braces": {
+      "name": "braces",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1240992,
+          "name": "braces",
+          "dependency": "braces",
+          "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+          "url": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+          "severity": "high",
+          "cwe": [
+            "CWE-674"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<=3.0.3"
+        }
+      ],
+      "effects": [
+        "chokidar",
+        "micromatch"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/braces"
+      ],
+      "fixAvailable": true
+    },
+    "chokidar": {
+      "name": "chokidar",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "braces"
+      ],
+      "effects": [],
+      "range": "2.0.0 - 3.6.0",
+      "nodes": [
+        "node_modules/chokidar"
+      ],
+      "fixAvailable": true
+    },
+    "esbuild": {
+      "name": "esbuild",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1102341,
+          "name": "esbuild",
+          "dependency": "esbuild",
+          "title": "esbuild enables any website to send any requests to the development server and read the response",
+          "url": "https://github.com/advisories/GHSA-67mh-4wv8-2f99",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-346"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N"
+          },
+          "range": "<=0.24.2"
+        }
+      ],
+      "effects": [
+        "vite"
+      ],
+      "range": "<=0.24.2",
+      "nodes": [
+        "node_modules/esbuild"
+      ],
+      "fixAvailable": {
+        "name": "vite",
+        "version": "5.4.21",
+        "isSemVerMajor": false
+      }
+    },
+    "fast-glob": {
+      "name": "fast-glob",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "micromatch"
+      ],
+      "effects": [
+        "unimport"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/fast-glob"
+      ],
+      "fixAvailable": true
+    },
+    "jimp": {
+      "name": "jimp",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "@jimp/custom",
+        "@jimp/types"
+      ],
+      "effects": [],
+      "range": "0.3.6-alpha.5 - 0.21.4--canary.1163.d07ed6254d130e2995d24101e93427ec091016e6.0",
+      "nodes": [
+        "node_modules/jimp"
+      ],
+      "fixAvailable": true
+    },
+    "jpeg-js": {
+      "name": "jpeg-js",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1088964,
+          "name": "jpeg-js",
+          "dependency": "jpeg-js",
+          "title": "Infinite loop in jpeg-js",
+          "url": "https://github.com/advisories/GHSA-xvf7-4v9q-58w6",
+          "severity": "high",
+          "cwe": [
+            "CWE-835"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<0.4.4"
+        },
+        {
+          "source": 1093580,
+          "name": "jpeg-js",
+          "dependency": "jpeg-js",
+          "title": "Uncontrolled resource consumption in jpeg-js",
+          "url": "https://github.com/advisories/GHSA-w7q9-p3jq-fmhm",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-400"
+          ],
+          "cvss": {
+            "score": 5.5,
+            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+          },
+          "range": "<0.4.0"
+        }
+      ],
+      "effects": [
+        "@jimp/jpeg"
+      ],
+      "range": "<=0.4.3",
+      "nodes": [
+        "node_modules/jpeg-js"
+      ],
+      "fixAvailable": true
+    },
+    "micromatch": {
+      "name": "micromatch",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "braces"
+      ],
+      "effects": [
+        "fast-glob"
+      ],
+      "range": ">=0.2.0",
+      "nodes": [
+        "node_modules/micromatch"
+      ],
+      "fixAvailable": true
+    },
+    "phin": {
+      "name": "phin",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1096967,
+          "name": "phin",
+          "dependency": "phin",
+          "title": "phin may include sensitive headers in subsequent requests after redirect",
+          "url": "https://github.com/advisories/GHSA-x565-32qp-m3vf",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-200"
+          ],
+          "cvss": {
+            "score": 4.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N"
+          },
+          "range": "<3.7.1"
+        }
+      ],
+      "effects": [
+        "@jimp/core"
+      ],
+      "range": "<3.7.1",
+      "nodes": [
+        "node_modules/phin"
+      ],
+      "fixAvailable": true
+    },
+    "postcss": {
+      "name": "postcss",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1117015,
+          "name": "postcss",
+          "dependency": "postcss",
+          "title": "PostCSS has XSS via Unescaped </style> in its CSS Stringify Output",
+          "url": "https://github.com/advisories/GHSA-qx2v-qp2m-jg93",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 6.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          },
+          "range": "<8.5.10"
+        },
+        {
+          "source": 1124252,
+          "name": "postcss",
+          "dependency": "postcss",
+          "title": "PostCSS: Arbitrary file read and information disclosure via attacker-controlled sourceMappingURL in CSS comments",
+          "url": "https://github.com/advisories/GHSA-6g55-p6wh-862q",
+          "severity": "high",
+          "cwe": [
+            "CWE-22",
+            "CWE-200"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          },
+          "range": "<=8.5.11"
+        },
+        {
+          "source": 1130709,
+          "name": "postcss",
+          "dependency": "postcss",
+          "title": "PostCSS: incomplete fix of GHSA-6g55-p6wh-862q — attacker-controlled sourceMappingURL reads arbitrary .map files when `from` is unset",
+          "url": "https://github.com/advisories/GHSA-fxqj-rqcc-2cmp",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-22",
+            "CWE-200"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=8.5.22"
+        },
+        {
+          "source": 1139510,
+          "name": "postcss",
+          "dependency": "postcss",
+          "title": "PostCSS: Path Traversal in Previous Source Map Auto-Loading (sourceMappingURL) leads to Arbitrary .map File Disclosure",
+          "url": "https://github.com/advisories/GHSA-r28c-9q8g-f849",
+          "severity": "high",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          },
+          "range": "<=8.5.17"
+        }
+      ],
+      "effects": [
+        "@dcloudio/uni-nvue-styler"
+      ],
+      "range": "<=8.5.22",
+      "nodes": [
+        "node_modules/@dcloudio/uni-nvue-styler/node_modules/postcss"
+      ],
+      "fixAvailable": true
+    },
+    "postcss-selector-parser": {
+      "name": "postcss-selector-parser",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1153170,
+          "name": "postcss-selector-parser",
+          "dependency": "postcss-selector-parser",
+          "title": "postcss-selector-parser allows denial of service through uncontrolled AST recursion",
+          "url": "https://github.com/advisories/GHSA-w9m9-85wc-3x92",
+          "severity": "low",
+          "cwe": [
+            "CWE-404"
+          ],
+          "cvss": {
+            "score": 4.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L"
+          },
+          "range": ">=6.1.0 <6.1.3"
+        },
+        {
+          "source": 1241232,
+          "name": "postcss-selector-parser",
+          "dependency": "postcss-selector-parser",
+          "title": "PostCSS: Quadratic complexity in flat selector parsing allows CPU exhaustion",
+          "url": "https://github.com/advisories/GHSA-rj75-hqrm-r3gf",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-400",
+            "CWE-407"
+          ],
+          "cvss": {
+            "score": 5.9,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<7.1.6"
+        }
+      ],
+      "effects": [
+        "@dcloudio/uni-h5"
+      ],
+      "range": "<=7.1.5",
+      "nodes": [
+        "node_modules/postcss-selector-parser"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-h5",
+        "version": "0.9.0",
+        "isSemVerMajor": true
+      }
+    },
+    "source-map-js": {
+      "name": "source-map-js",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1241209,
+          "name": "source-map-js",
+          "dependency": "source-map-js",
+          "title": "source-map-js allows event-loop denial of service through indexed source-map section offsets",
+          "url": "https://github.com/advisories/GHSA-68fv-2mgg-jv7q",
+          "severity": "high",
+          "cwe": [
+            "CWE-1284"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": ">=1.0.0 <1.2.2"
+        }
+      ],
+      "effects": [],
+      "range": "1.0.0 - 1.2.1",
+      "nodes": [
+        "node_modules/source-map-js"
+      ],
+      "fixAvailable": true
+    },
+    "unimport": {
+      "name": "unimport",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "fast-glob"
+      ],
+      "effects": [],
+      "range": "0.2.2 - 3.13.4 || 3.14.5 - 4.1.1",
+      "nodes": [
+        "node_modules/unimport"
+      ],
+      "fixAvailable": true
+    },
+    "vite": {
+      "name": "vite",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        {
+          "source": 1099688,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "Vite's `server.fs.deny` is bypassed when using `?import&raw`",
+          "url": "https://github.com/advisories/GHSA-9cwx-2883-4wfx",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-200",
+            "CWE-284"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+          },
+          "range": ">=5.2.0 <5.2.14"
+        },
+        {
+          "source": 1099691,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "Vite DOM Clobbering gadget found in vite bundled scripts that leads to XSS",
+          "url": "https://github.com/advisories/GHSA-64vr-g452-qvp3",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 6.4,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:H"
+          },
+          "range": ">=5.2.0 <5.2.14"
+        },
+        {
+          "source": 1102437,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "Websites were able to send any requests to the development server and read the response in vite",
+          "url": "https://github.com/advisories/GHSA-vg6x-rcgg-rjx6",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-346",
+            "CWE-350",
+            "CWE-1385"
+          ],
+          "cvss": {
+            "score": 6.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+          },
+          "range": ">=5.0.0 <=5.4.11"
+        },
+        {
+          "source": 1103517,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "Vite bypasses server.fs.deny when using ?raw??",
+          "url": "https://github.com/advisories/GHSA-x574-m823-4x7w",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-200",
+            "CWE-284"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N"
+          },
+          "range": ">=5.0.0 <5.4.15"
+        },
+        {
+          "source": 1103884,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "Vite has an `server.fs.deny` bypass with an invalid `request-target`",
+          "url": "https://github.com/advisories/GHSA-356w-63v5-8wf4",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-200"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=5.0.0 <5.4.18"
+        },
+        {
+          "source": 1104173,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "Vite's server.fs.deny bypassed with /. for files under project root",
+          "url": "https://github.com/advisories/GHSA-859w-5945-r5v3",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=5.0.0 <=5.4.18"
+        },
+        {
+          "source": 1104202,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "Vite allows server.fs.deny to be bypassed with .svg or relative paths",
+          "url": "https://github.com/advisories/GHSA-xcj6-pq6g-qj4x",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-200",
+            "CWE-284"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N"
+          },
+          "range": ">=5.0.0 <5.4.17"
+        },
+        {
+          "source": 1107323,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "Vite middleware may serve files starting with the same name with the public directory",
+          "url": "https://github.com/advisories/GHSA-g4jq-h2w9-997c",
+          "severity": "low",
+          "cwe": [
+            "CWE-22",
+            "CWE-200",
+            "CWE-284"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=5.4.19"
+        },
+        {
+          "source": 1107327,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "Vite's `server.fs` settings were not applied to HTML files",
+          "url": "https://github.com/advisories/GHSA-jqfw-vq24-v9c3",
+          "severity": "low",
+          "cwe": [
+            "CWE-23",
+            "CWE-200",
+            "CWE-284"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=5.4.19"
+        },
+        {
+          "source": 1109131,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "vite allows server.fs.deny bypass via backslash on Windows",
+          "url": "https://github.com/advisories/GHSA-93m4-6634-74q7",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=5.2.6 <=5.4.20"
+        },
+        {
+          "source": 1112511,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "Vite has a `server.fs.deny` bypassed for `inline` and `raw` with `?import` query",
+          "url": "https://github.com/advisories/GHSA-4r4m-qw57-chr8",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-200",
+            "CWE-284"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N"
+          },
+          "range": ">=5.0.0 <5.4.16"
+        },
+        {
+          "source": 1116229,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "Vite Vulnerable to Path Traversal in Optimized Deps `.map` Handling",
+          "url": "https://github.com/advisories/GHSA-4w7w-66w2-5vf9",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-22",
+            "CWE-200"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=6.4.1"
+        },
+        {
+          "source": 1120061,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "launch-editor vulnerable to command injection via the crafted request on Windows",
+          "url": "https://github.com/advisories/GHSA-c27g-q93r-2cwf",
+          "severity": "high",
+          "cwe": [
+            "CWE-77"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=5.4.8"
+        },
+        {
+          "source": 1120784,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "launch-editor: NTLMv2 hash disclosure via UNC path handling on Windows",
+          "url": "https://github.com/advisories/GHSA-v6wh-96g9-6wx3",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-73",
+            "CWE-522"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=6.4.2"
+        },
+        {
+          "source": 1123525,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "vite: `server.fs.deny` bypass on Windows alternate paths",
+          "url": "https://github.com/advisories/GHSA-fx2h-pf6j-xcff",
+          "severity": "high",
+          "cwe": [
+            "CWE-22",
+            "CWE-200"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          },
+          "range": "<=6.4.2"
+        },
+        "esbuild"
+      ],
+      "effects": [],
+      "range": "<=6.4.2",
+      "nodes": [
+        "node_modules/vite"
+      ],
+      "fixAvailable": {
+        "name": "vite",
+        "version": "5.4.21",
+        "isSemVerMajor": false
+      }
+    },
+    "vue": {
+      "name": "vue",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@vue/server-renderer"
+      ],
+      "effects": [
+        "@vue/server-renderer"
+      ],
+      "range": "3.2.13 - 3.5.41",
+      "nodes": [
+        "node_modules/vue"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-cli-shared",
+        "version": "0.2.994",
+        "isSemVerMajor": true
+      }
+    },
+    "ws": {
+      "name": "ws",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1119108,
+          "name": "ws",
+          "dependency": "ws",
+          "title": "ws: Uninitialized memory disclosure",
+          "url": "https://github.com/advisories/GHSA-58qx-3vcg-4xpx",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-908"
+          ],
+          "cvss": {
+            "score": 4.4,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N"
+          },
+          "range": ">=8.0.0 <8.20.1"
+        },
+        {
+          "source": 1123259,
+          "name": "ws",
+          "dependency": "ws",
+          "title": "ws: Memory exhaustion DoS from tiny fragments and data chunks",
+          "url": "https://github.com/advisories/GHSA-96hv-2xvq-fx4p",
+          "severity": "high",
+          "cwe": [
+            "CWE-400",
+            "CWE-770",
+            "CWE-1050"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": ">=8.0.0 <8.21.0"
+        }
+      ],
+      "effects": [
+        "@dcloudio/uni-mp-weixin"
+      ],
+      "range": "8.0.0 - 8.20.1",
+      "nodes": [
+        "node_modules/ws"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-mp-weixin",
+        "version": "0.0.973",
+        "isSemVerMajor": true
+      }
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 6,
+      "moderate": 10,
+      "high": 25,
+      "critical": 0,
+      "total": 41
+    },
+    "dependencies": {
+      "prod": 329,
+      "dev": 370,
+      "optional": 50,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 748
+    }
+  }
+}

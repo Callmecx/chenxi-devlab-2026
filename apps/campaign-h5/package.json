@@ -1,0 +1,17 @@
+{
+  "name": "@chenxi/campaign-h5",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5175",
+    "build": "vue-tsc --noEmit && vite build",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "vue": "^3.5.29",
+    "pinia": "^3.0.4",
+    "vue-router": "^4.6.0",
+    "lucide-vue-next": "^0.577.0"
+  }
+}

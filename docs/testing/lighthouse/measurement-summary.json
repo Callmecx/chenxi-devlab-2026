@@ -1,0 +1,237 @@
+{
+  "measurementType": "Local production build, single-run laboratory measurements, not field data",
+  "nodeVersion": "v24.18.0",
+  "environment": "Windows x64, installed headless Chrome, loopback HTTP preview, no browser login profile",
+  "runs": [
+    {
+      "name": "portfolio-mobile-final",
+      "label": "主站 · 移动",
+      "url": "http://127.0.0.1:4176/#/",
+      "fetchTime": "2026-10-12T05:32:56.269Z",
+      "lighthouseVersion": "13.5.0",
+      "host": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "benchmarkIndex": 3463,
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "screen": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "scores": {
+        "performance": 92,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "numericValue": 1805.4362,
+          "displayValue": "1.8 s"
+        },
+        "largest-contentful-paint": {
+          "numericValue": 1968.9362,
+          "displayValue": "2.0 s"
+        },
+        "speed-index": {
+          "numericValue": 1805.4362,
+          "displayValue": "1.8 s"
+        },
+        "total-blocking-time": {
+          "numericValue": 277,
+          "displayValue": "280 ms"
+        },
+        "cumulative-layout-shift": {
+          "numericValue": 0,
+          "displayValue": "0"
+        }
+      },
+      "warnings": [],
+      "runtimeError": null,
+      "failedAccessibility": []
+    },
+    {
+      "name": "pulse-mobile-final",
+      "label": "Pulse · 移动",
+      "url": "http://127.0.0.1:4176/pulse/#/",
+      "fetchTime": "2026-10-12T05:33:08.726Z",
+      "lighthouseVersion": "13.5.0",
+      "host": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "benchmarkIndex": 3537.5,
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "screen": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "numericValue": 1654.5732,
+          "displayValue": "1.7 s"
+        },
+        "largest-contentful-paint": {
+          "numericValue": 1789.0732,
+          "displayValue": "1.8 s"
+        },
+        "speed-index": {
+          "numericValue": 1654.5732,
+          "displayValue": "1.7 s"
+        },
+        "total-blocking-time": {
+          "numericValue": 219,
+          "displayValue": "220 ms"
+        },
+        "cumulative-layout-shift": {
+          "numericValue": 0,
+          "displayValue": "0"
+        }
+      },
+      "warnings": [],
+      "runtimeError": null,
+      "failedAccessibility": []
+    },
+    {
+      "name": "shop-mobile-final",
+      "label": "ShopPilot · 移动",
+      "url": "http://127.0.0.1:4176/shop/#/",
+      "fetchTime": "2026-10-12T05:33:21.201Z",
+      "lighthouseVersion": "13.5.0",
+      "host": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "benchmarkIndex": 3484.5,
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 150,
+        "throughputKbps": 1638.4,
+        "requestLatencyMs": 562.5,
+        "downloadThroughputKbps": 1474.5600000000002,
+        "uploadThroughputKbps": 675,
+        "cpuSlowdownMultiplier": 4
+      },
+      "screen": {
+        "mobile": true,
+        "width": 412,
+        "height": 823,
+        "deviceScaleFactor": 1.75,
+        "disabled": false
+      },
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "numericValue": 2120.3716249999998,
+          "displayValue": "2.1 s"
+        },
+        "largest-contentful-paint": {
+          "numericValue": 2436.84595,
+          "displayValue": "2.4 s"
+        },
+        "speed-index": {
+          "numericValue": 2120.3716249999998,
+          "displayValue": "2.1 s"
+        },
+        "total-blocking-time": {
+          "numericValue": 4.5,
+          "displayValue": "0 ms"
+        },
+        "cumulative-layout-shift": {
+          "numericValue": 0,
+          "displayValue": "0"
+        }
+      },
+      "warnings": [],
+      "runtimeError": null,
+      "failedAccessibility": []
+    },
+    {
+      "name": "portfolio-desktop-final",
+      "label": "主站 · 桌面",
+      "url": "http://127.0.0.1:4176/#/",
+      "fetchTime": "2026-10-12T05:33:33.633Z",
+      "lighthouseVersion": "13.5.0",
+      "host": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "benchmarkIndex": 3512.5,
+      "formFactor": "desktop",
+      "throttlingMethod": "simulate",
+      "throttling": {
+        "rttMs": 40,
+        "throughputKbps": 10240,
+        "requestLatencyMs": 0,
+        "downloadThroughputKbps": 0,
+        "uploadThroughputKbps": 0,
+        "cpuSlowdownMultiplier": 1
+      },
+      "screen": {
+        "mobile": false,
+        "width": 1350,
+        "height": 940,
+        "deviceScaleFactor": 1,
+        "disabled": false
+      },
+      "scores": {
+        "performance": 100,
+        "accessibility": 95,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "numericValue": 486.4564,
+          "displayValue": "0.5 s"
+        },
+        "largest-contentful-paint": {
+          "numericValue": 486.4564,
+          "displayValue": "0.5 s"
+        },
+        "speed-index": {
+          "numericValue": 486.4564,
+          "displayValue": "0.5 s"
+        },
+        "total-blocking-time": {
+          "numericValue": 0,
+          "displayValue": "0 ms"
+        },
+        "cumulative-layout-shift": {
+          "numericValue": 0,
+          "displayValue": "0"
+        }
+      },
+      "warnings": [],
+      "runtimeError": null,
+      "failedAccessibility": [
+        "color-contrast"
+      ]
+    }
+  ]
+}

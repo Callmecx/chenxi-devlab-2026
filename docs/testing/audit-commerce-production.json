@@ -1,0 +1,363 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@dcloudio/uni-app": {
+      "name": "@dcloudio/uni-app",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@dcloudio/uni-cloud",
+        "@dcloudio/uni-components",
+        "@dcloudio/uni-console",
+        "@dcloudio/uni-push",
+        "@dcloudio/uni-stat"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-app"
+      ],
+      "fixAvailable": {
+        "isSemVerMajor": true
+      }
+    },
+    "@dcloudio/uni-cli-shared": {
+      "name": "@dcloudio/uni-cli-shared",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "chokidar",
+        "fast-glob",
+        "unimport"
+      ],
+      "effects": [
+        "@dcloudio/uni-cloud",
+        "@dcloudio/uni-console",
+        "@dcloudio/uni-h5-vite",
+        "@dcloudio/uni-mp-compiler",
+        "@dcloudio/uni-mp-vite",
+        "@dcloudio/uni-mp-weixin",
+        "@dcloudio/uni-push",
+        "@dcloudio/uni-stat"
+      ],
+      "range": "<=0.0.1-nvue3.3040020220301001 || >=2.0.1-32920211122002",
+      "nodes": [
+        "node_modules/@dcloudio/uni-cli-shared"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-cli-shared",
+        "version": "0.2.994",
+        "isSemVerMajor": true
+      }
+    },
+    "@dcloudio/uni-cloud": {
+      "name": "@dcloudio/uni-cloud",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@dcloudio/uni-cli-shared",
+        "fast-glob"
+      ],
+      "effects": [
+        "@dcloudio/uni-components"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-cloud"
+      ],
+      "fixAvailable": {
+        "isSemVerMajor": true
+      }
+    },
+    "@dcloudio/uni-components": {
+      "name": "@dcloudio/uni-components",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@dcloudio/uni-cloud",
+        "@dcloudio/uni-h5"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-components"
+      ],
+      "fixAvailable": {
+        "isSemVerMajor": true
+      }
+    },
+    "@dcloudio/uni-console": {
+      "name": "@dcloudio/uni-console",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@dcloudio/uni-cli-shared"
+      ],
+      "effects": [
+        "@dcloudio/uni-app"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-console"
+      ],
+      "fixAvailable": {
+        "isSemVerMajor": true
+      }
+    },
+    "@dcloudio/uni-h5": {
+      "name": "@dcloudio/uni-h5",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@dcloudio/uni-h5-vite"
+      ],
+      "effects": [],
+      "range": "<=0.0.1-nvue3.3040020220301001 || >=2.0.1-32920211122002",
+      "nodes": [
+        "node_modules/@dcloudio/uni-h5"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-h5",
+        "version": "0.9.0",
+        "isSemVerMajor": true
+      }
+    },
+    "@dcloudio/uni-h5-vite": {
+      "name": "@dcloudio/uni-h5-vite",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@dcloudio/uni-cli-shared"
+      ],
+      "effects": [
+        "@dcloudio/uni-h5"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-h5-vite"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-h5",
+        "version": "0.9.0",
+        "isSemVerMajor": true
+      }
+    },
+    "@dcloudio/uni-mp-compiler": {
+      "name": "@dcloudio/uni-mp-compiler",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@dcloudio/uni-cli-shared"
+      ],
+      "effects": [
+        "@dcloudio/uni-mp-weixin"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-mp-compiler"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-mp-weixin",
+        "version": "0.0.973",
+        "isSemVerMajor": true
+      }
+    },
+    "@dcloudio/uni-mp-vite": {
+      "name": "@dcloudio/uni-mp-vite",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@dcloudio/uni-cli-shared",
+        "@dcloudio/uni-mp-compiler"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-mp-vite"
+      ],
+      "fixAvailable": true
+    },
+    "@dcloudio/uni-mp-weixin": {
+      "name": "@dcloudio/uni-mp-weixin",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@dcloudio/uni-cli-shared",
+        "@dcloudio/uni-mp-compiler",
+        "@dcloudio/uni-mp-vite"
+      ],
+      "effects": [],
+      "range": "<=0.0.1-nvue3.3040020220301001 || >=2.0.1-32920211122002",
+      "nodes": [
+        "node_modules/@dcloudio/uni-mp-weixin"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-mp-weixin",
+        "version": "0.0.973",
+        "isSemVerMajor": true
+      }
+    },
+    "@dcloudio/uni-push": {
+      "name": "@dcloudio/uni-push",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@dcloudio/uni-cli-shared"
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/@dcloudio/uni-push"
+      ],
+      "fixAvailable": true
+    },
+    "@dcloudio/uni-stat": {
+      "name": "@dcloudio/uni-stat",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@dcloudio/uni-cli-shared"
+      ],
+      "effects": [],
+      "range": "<=0.0.1-nvue3.3040020220301001 || >=2.0.1-32920211122002",
+      "nodes": [
+        "node_modules/@dcloudio/uni-stat"
+      ],
+      "fixAvailable": true
+    },
+    "braces": {
+      "name": "braces",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1240992,
+          "name": "braces",
+          "dependency": "braces",
+          "title": "braces vulnerable to stack-exhaustion denial of service through deeply nested patterns",
+          "url": "https://github.com/advisories/GHSA-vfj7-8cjw-p6xm",
+          "severity": "high",
+          "cwe": [
+            "CWE-674"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<=3.0.3"
+        }
+      ],
+      "effects": [
+        "chokidar",
+        "micromatch"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/braces"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-cli-shared",
+        "version": "0.2.994",
+        "isSemVerMajor": true
+      }
+    },
+    "chokidar": {
+      "name": "chokidar",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "braces"
+      ],
+      "effects": [
+        "@dcloudio/uni-cli-shared"
+      ],
+      "range": "2.0.0 - 3.6.0",
+      "nodes": [
+        "node_modules/chokidar"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-cli-shared",
+        "version": "0.2.994",
+        "isSemVerMajor": true
+      }
+    },
+    "fast-glob": {
+      "name": "fast-glob",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "micromatch"
+      ],
+      "effects": [
+        "unimport"
+      ],
+      "range": "*",
+      "nodes": [
+        "node_modules/fast-glob"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-cli-shared",
+        "version": "0.2.994",
+        "isSemVerMajor": true
+      }
+    },
+    "micromatch": {
+      "name": "micromatch",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "braces"
+      ],
+      "effects": [
+        "fast-glob"
+      ],
+      "range": ">=0.2.0",
+      "nodes": [
+        "node_modules/micromatch"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-cli-shared",
+        "version": "0.2.994",
+        "isSemVerMajor": true
+      }
+    },
+    "unimport": {
+      "name": "unimport",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "fast-glob"
+      ],
+      "effects": [
+        "@dcloudio/uni-cli-shared"
+      ],
+      "range": "0.2.2 - 3.13.4 || 3.14.5 - 4.1.1",
+      "nodes": [
+        "node_modules/unimport"
+      ],
+      "fixAvailable": {
+        "name": "@dcloudio/uni-cli-shared",
+        "version": "0.2.994",
+        "isSemVerMajor": true
+      }
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 17,
+      "critical": 0,
+      "total": 17
+    },
+    "dependencies": {
+      "prod": 345,
+      "dev": 367,
+      "optional": 79,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 775
+    }
+  }
+}

@@ -1310,6 +1310,11 @@
   }
 }
 @media print {
+  body:has(.orbit-host),
+  .orbit-host {
+    background: white;
+    min-height: 0;
+  }
   .orbit-print-summary {
     display: block;
     color: #172b39;

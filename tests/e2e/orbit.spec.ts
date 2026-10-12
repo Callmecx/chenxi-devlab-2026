@@ -741,44 +741,47 @@ test("ORBIT 键盘 Space 与 Enter 都可操作星图对象", async ({ page }) =
   await expect(lab(page)).toHaveAttribute("data-tick", "0");
 });
 
-test("ORBIT 同一全景/跟随按钮恢复拖动前实际构图，而非只改模式标签", async ({
-  page,
-}, info) => {
-  await page.emulateMedia({ reducedMotion: "reduce" });
-  await open(page);
-  await button(page, "切换任务星图").click();
-  const canvas = page.locator("canvas[data-orbit-canvas]");
-  await expect(canvas).toHaveAttribute("data-rendering", "active");
-  const original = await lab(page).getAttribute("data-run-id");
-  const measurements: {
-    preset: string;
-    draggedDifference: number;
-    restoredDifference: number;
-  }[] = [];
-  const difference = async (left: Buffer, right: Buffer) =>
-    page.evaluate(
-      async ({ left, right }) => {
-        const pixels = async (base64: string) => {
-          const image = new Image();
-          image.src = `data:image/png;base64,${base64}`;
-          await image.decode();
-          const surface = document.createElement("canvas");
-          surface.width = 160;
-          surface.height = 100;
-          const context = surface.getContext("2d")!;
-          context.drawImage(image, 0, 0, 160, 100);
-          return context.getImageData(0, 0, 160, 100).data;
-        };
-        const a = await pixels(left),
-          b = await pixels(right);
-        let sum = 0;
-        for (let i = 0; i < a.length; i += 4)
-          for (let c = 0; c < 3; c++) sum += Math.abs(a[i + c]! - b[i + c]!);
-        return sum / (160 * 100 * 3 * 255);
-      },
-      { left: left.toString("base64"), right: right.toString("base64") },
-    );
-  for (const preset of ["世界全景", "跟随载体"]) {
+// Keep each camera journey in its own browser context. Slow software-rendered
+// screenshot readback must not carry performance-degradation state into the next
+// independent journey; the real adaptive fallback remains enabled throughout.
+for (const preset of ["世界全景", "跟随载体"]) {
+  test(`ORBIT ${preset}按钮恢复拖动前实际构图，而非只改模式标签`, async ({
+    page,
+  }, info) => {
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await open(page);
+    await button(page, "切换任务星图").click();
+    const canvas = page.locator("canvas[data-orbit-canvas]");
+    await expect(canvas).toHaveAttribute("data-rendering", "active");
+    const original = await lab(page).getAttribute("data-run-id");
+    const measurements: {
+      preset: string;
+      draggedDifference: number;
+      restoredDifference: number;
+    }[] = [];
+    const difference = async (left: Buffer, right: Buffer) =>
+      page.evaluate(
+        async ({ left, right }) => {
+          const pixels = async (base64: string) => {
+            const image = new Image();
+            image.src = `data:image/png;base64,${base64}`;
+            await image.decode();
+            const surface = document.createElement("canvas");
+            surface.width = 160;
+            surface.height = 100;
+            const context = surface.getContext("2d")!;
+            context.drawImage(image, 0, 0, 160, 100);
+            return context.getImageData(0, 0, 160, 100).data;
+          };
+          const a = await pixels(left),
+            b = await pixels(right);
+          let sum = 0;
+          for (let i = 0; i < a.length; i += 4)
+            for (let c = 0; c < 3; c++) sum += Math.abs(a[i + c]! - b[i + c]!);
+          return sum / (160 * 100 * 3 * 255);
+        },
+        { left: left.toString("base64"), right: right.toString("base64") },
+      );
     await button(page, preset).click();
     const bounds = (await canvas.boundingBox())!;
     // Clear real raycast hover before comparing camera composition. Leaving the
@@ -840,12 +843,12 @@ test("ORBIT 同一全景/跟随按钮恢复拖动前实际构图，而非只改�
     await expect(lab(page)).toHaveAttribute("data-run-id", original!);
     await expect(lab(page)).toHaveAttribute("data-tick", "0");
     await expect(lab(page)).toHaveAttribute("data-delivered", "0");
-  }
-  await info.attach("camera-pixel-differences", {
-    contentType: "application/json",
-    body: Buffer.from(JSON.stringify(measurements, null, 2)),
+    await info.attach("camera-pixel-differences", {
+      contentType: "application/json",
+      body: Buffer.from(JSON.stringify(measurements, null, 2)),
+    });
   });
-});
+}
 
 test("ORBIT 慢文件导入不能覆盖reset、新导入、returnLive或卸载后的用户意图", async ({
   page,

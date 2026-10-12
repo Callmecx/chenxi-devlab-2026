@@ -15,6 +15,8 @@
 
 完整矩阵：[V3 ACCEPTANCE_REPORT](docs/intelligence-lab-v3/ACCEPTANCE_REPORT.md)。正确性覆盖资源守恒、容量与能量、在途关闭、旧计划失效、不可达、双载体预约/等待、取消、同快照比较、严格历史导入、WebGL丢失及10次路由卸载。
 
+首次远端PR CI `38278671655` 实际结果为92/93，13.4分钟；唯一失败是同一浏览器上下文连续两段相机截图时，第二段等待已消失的Canvas超时。第一段像素/世界断言已通过，所有业务和异常恢复均通过。两个相机旅程现拆为独立上下文用例，保留全部断言、像素阈值及自动降级；总数变为94。该修改后的结果以随后实际记录为准，不将原本机93/93冒称新94/94。
+
 最终回归之前保留了失败证据：首轮全站89/90，旧测试点击全站“智能实验室”后进入新旗舰，仍断言旧工具页Canvas。修复为真实导航新旗舰→实用任务库，保留全部上下文释放断言。独立审查另发现Worker构造同步抛错会卡住比较，补充构造/postMessage失败恢复和过期onerror守卫，3项新增浏览器故障测试均核对原记录完整不变、重试真实Worker结果。没有关闭规则、降低阈值或跳过关键行为。
 
 手机性能来自桌面Chrome视口模拟；模型在线、实体机器人、真实移动GPU、签名安装包及商店上架未验证。调度为确定性优先级启发式；历史校验保证内部一致性，不认证外部事实来源。V2首页移动Lighthouse89和uni-app上游构建依赖风险未借本次改版宣称解决。
@@ -31,8 +33,8 @@
 | -------------- | ------------------------------------------------------------------------------------------------------------- |
 | 类型检查       | portfolio / campaign / uni-app / API 的 TypeScript 检查通过                                                   |
 | Lint           | 所有 apps/packages/services/tests/scripts 通过，未关闭规则                                                    |
-| 单元与接口     | 247/247，零失败、跳过和 todo；[脱敏逐项结果](docs/testing/vitest-results.json)                                |
-| 生产包浏览器   | 64/64、单 worker、零重试/跳过；[逐项结果](docs/testing/playwright-results.json)                               |
+| 单元与接口     | 247/247，零失败、跳过和 todo；[V2固定版本逐项结果](https://github.com/Callmecx/chenxi-devlab-2026/blob/v2.0.0/docs/testing/vitest-results.json) |
+| 生产包浏览器   | 64/64、单 worker、零重试/跳过；[V2固定版本逐项结果](https://github.com/Callmecx/chenxi-devlab-2026/blob/v2.0.0/docs/testing/playwright-results.json) |
 | 构建           | 三个独立网页应用 + 聚合；微信 mp-weixin 和 App 资源分别成功                                                   |
 | 确定性智能评测 | 450/450预期成立；包含正确失败和恢复，不等于450次全成功任务；[原始摘要](docs/intelligence-lab/evaluation.json) |
 | HTTP基准       | 350请求、0失败；含300计时样本，5并发访客；[真实p50/p95](docs/acceptance/api-performance.json)                 |

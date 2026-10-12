@@ -14,7 +14,7 @@ V2 已通过本地和远端验收并发布。功能发布提交：`e946a67b00dd1
 
 [主分支 CI 与 Pages 发布](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38260520649) 于 **2026-10-12 22:14（Asia/Shanghai）** 成功。两套依赖安装、类型检查、Lint、247 项单元/API、64 项生产 E2E、网页/微信/App资源构建、最终仓库子路径业务检查和发布扫描全部通过；逐步骤记录见 [ci-v2-release.json](docs/testing/ci-v2-release.json)。
 
-**22:15:31** 使用全新未登录 Chrome 154 上下文完成线上复验：8 个核心路由分别在 390/1440px 下 HTTP200、正确标题、无横向溢出；商品计划执行至审批后拒绝、商城 SKU→购物袋→结算与返回、H5 选择活动→预约入口均通过；4 个证据资产可访问，页面异常和失败资产均为0。`build-meta.json.sourceRevision` 与上述发布提交完全相同。机器证据：[online-smoke.json](docs/testing/online-smoke.json)。这不是只检查首页 HTTP200，也不是公网后端验收。
+**22:15:31** 使用全新未登录 Chrome 154 上下文完成线上复验：8 个核心路由分别在 390/1440px 下 HTTP200、正确标题、无横向溢出；商品计划执行至审批后拒绝、商城 SKU→购物袋→结算与返回、H5 选择活动→预约入口均通过；4 个证据资产可访问，页面异常和失败资产均为0。`build-meta.json.sourceRevision` 与上述发布提交完全相同。机器证据：[V2 online-smoke.json](https://github.com/Callmecx/chenxi-devlab-2026/blob/v2.0.0/docs/testing/online-smoke.json)。这不是只检查首页 HTTP200，也不是公网后端验收。
 
 - [主站](https://callmecx.github.io/chenxi-devlab-2026/#/) / [智能演化实验室](https://callmecx.github.io/chenxi-devlab-2026/#/intelligence)
 - [巷集 Select](https://callmecx.github.io/chenxi-devlab-2026/shop/#/) / [蓉城周末 Lab](https://callmecx.github.io/chenxi-devlab-2026/pulse/#/)

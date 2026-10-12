@@ -35,6 +35,7 @@ jobs:
         run: sudo apt-get install -y fonts-noto-cjk
       - run: npm run test:e2e
       - run: npm run test:summary
+        if: always()
       - run: npm run security:scan -- --report docs/testing/security-scan.json
       - name: Build repository-path deployment
         run: npm run build
@@ -49,9 +50,12 @@ jobs:
         if: always()
         with:
           name: test-evidence
+          # Explicit PNG-only ORBIT diagnostics; traces, videos and storage stay excluded.
+          include-hidden-files: true
           path: |
             docs/testing/
             docs/screenshots/
+            .local/e2e/results/orbit-*/*.png
       - uses: actions/upload-artifact@v4
         with:
           name: wechat-mini-build

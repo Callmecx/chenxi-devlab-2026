@@ -1,13 +1,14 @@
 {
-  "checkedAt": "2026-10-12T13:56:09.646Z",
+  "checkedAt": "2026-10-12T16:35:31.303Z",
   "base": "http://127.0.0.1:4186/chenxi-devlab-2026/",
   "browser": "154.0.8037.94",
   "anonymous": true,
   "result": "PASS",
   "build": {
     "basePath": "/chenxi-devlab-2026/",
-    "sourceRevision": "e3357f39b9bb9d90e283990db9a1b6fecc99a6c8",
-    "builtAt": "2026-10-12T13:55:52.249Z",
+    "sourceRevision": "dc336f17d672dc061e90c4a1b40966f1244ce4da",
+    "sourceTreeDirty": false,
+    "builtAt": "2026-10-12T16:34:57.987Z",
     "apps": [
       "portfolio",
       "shop",
@@ -37,7 +38,13 @@
       "path": "#/intelligence",
       "width": 390,
       "status": 200,
-      "title": "智能演化实验室 · Chenxi DevLab"
+      "title": "星域智航 · 智能演化实验室 · Chenxi DevLab"
+    },
+    {
+      "path": "#/intelligence/tasks",
+      "width": 390,
+      "status": 200,
+      "title": "实用任务库 · 智能演化实验室 · Chenxi DevLab"
     },
     {
       "path": "#/labs/market-replay",
@@ -85,7 +92,13 @@
       "path": "#/intelligence",
       "width": 1440,
       "status": 200,
-      "title": "智能演化实验室 · Chenxi DevLab"
+      "title": "星域智航 · 智能演化实验室 · Chenxi DevLab"
+    },
+    {
+      "path": "#/intelligence/tasks",
+      "width": 1440,
+      "status": 200,
+      "title": "实用任务库 · 智能演化实验室 · Chenxi DevLab"
     },
     {
       "path": "#/labs/market-replay",
@@ -129,6 +142,7 @@
     }
   ],
   "interactions": [
+    "ORBIT dual-carrier task: real step → all routes blocked → unreachable → reopen/retry → 3 delivered.",
     "Product planning and tools reach approval; rejecting cancels without committing.",
     "Public local shop SKU → cart → checkout uses preserved deployment paths.",
     "Public local activity selection reaches booking under the existing /pulse/ base."

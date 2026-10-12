@@ -27,6 +27,7 @@ try {
       ["shop/", "Select"],
       ["pulse/", "蓉城周末 Lab"],
       ["#/intelligence", "智能演化实验室"],
+      ["#/intelligence/tasks", "实用任务库"],
       ["#/labs/market-replay", "金融事件回放"],
       ["#/labs/enterprise-flow", "企业业务闭环"],
       ["#/writing", "工程笔记"],
@@ -50,6 +51,31 @@ try {
     }
   }
   await page.goto(base + "#/intelligence");
+  const orbit = page.getByTestId("orbit-lab");
+  await page.getByRole("button", { name: "开始补给任务", exact: true }).click();
+  await page.getByRole("button", { name: "暂停任务", exact: true }).click();
+  await page.getByRole("button", { name: "单步", exact: true }).click();
+  await expect(orbit).toHaveAttribute("data-status", "paused");
+  if (Number(await orbit.getAttribute("data-tick")) < 1)
+    throw new Error("ORBIT did not execute a real step");
+  await page.getByRole("button", { name: "封闭所有航道", exact: true }).click();
+  await page.getByRole("button", { name: "继续执行", exact: true }).click();
+  await expect(orbit).toHaveAttribute("data-status", "failed", {
+    timeout: 20000,
+  });
+  await expect(orbit).toHaveAttribute("data-delivered", "0");
+  await page
+    .getByRole("button", { name: "重新开放所有航道", exact: true })
+    .click();
+  await page.getByRole("button", { name: "重试任务", exact: true }).click();
+  await expect(orbit).toHaveAttribute("data-status", "completed", {
+    timeout: 45000,
+  });
+  await expect(orbit).toHaveAttribute("data-delivered", "3");
+  interactions.push(
+    "ORBIT dual-carrier task: real step → all routes blocked → unreachable → reopen/retry → 3 delivered.",
+  );
+  await page.goto(base + "#/intelligence/tasks");
   await page.getByRole("button", { name: "二维视图", exact: true }).click();
   await page.getByRole("button", { name: "生成计划", exact: true }).click();
   await page.getByRole("button", { name: "连续执行", exact: true }).click();

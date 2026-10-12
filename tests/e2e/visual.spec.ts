@@ -11,9 +11,10 @@ const routes = [
 
 test.beforeAll(async () => {
   await mkdir("docs/screenshots/v2", { recursive: true });
+  await mkdir("docs/screenshots/v3", { recursive: true });
 });
 for (const width of [360, 390, 768, 1440, 1920]) {
-  test(`V2 initial views fit ${width}px without script errors`, async ({
+  test(`Whole-site initial views fit ${width}px without script errors`, async ({
     page,
   }) => {
     await page.setViewportSize({ width, height: width < 500 ? 844 : 1000 });
@@ -33,7 +34,7 @@ for (const width of [360, 390, 768, 1440, 1920]) {
       await expect(page.locator("main > *").first()).toHaveCSS("opacity", "1");
       if (name === "intelligence")
         await expect(
-          page.locator("canvas, .il-world-grid, .il-flat-graph").first(),
+          page.locator("[data-orbit-canvas], .orbit-map").first(),
         ).toBeVisible();
       expect(
         await page.evaluate(
@@ -42,7 +43,7 @@ for (const width of [360, 390, 768, 1440, 1920]) {
         route,
       ).toBe(true);
       await page.screenshot({
-        path: `docs/screenshots/v2/${name}-${width}.png`,
+        path: `docs/screenshots/${name === "intelligence" ? "v3" : "v2"}/${name}-${width}.png`,
         fullPage: true,
       });
     }

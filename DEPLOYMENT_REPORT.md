@@ -1,12 +1,20 @@
 # GitHub 发布与线上验收
 
-## V2 当前状态（2026-10-12）
+## V3 本地发布前检查（2026-10-13）
+
+功能检查点 `dc336f17d672dc061e90c4a1b40966f1244ce4da`，分支 `feature/intelligence-lab-v3-rebuild`。完整本地93项生产浏览器、308项单元/API、类型、Lint及各端资源构建通过。
+
+**00:35:31（Asia/Shanghai）** 完成实际仓库路径 `/chenxi-devlab-2026/` 的生产构建与浏览器验证：9个路由分别在390/1440下检查，4个业务流程、4个证据资产通过；页面异常/失败资产均0，`sourceTreeDirty:false`，构建SHA与功能检查点一致。星港实际单步→全封路→不可达→开路重试→3份送达经过验证。机器证据：[deployment-path-check.json](docs/testing/deployment-path-check.json)。这还是本机子路径验证；公开发布和匿名线上结果在实际完成后补入。
+
+远端 `v2.0.0` 标签已读回核对，指向 `8059fb954e089a7880a4d1cea52941f03deb5c54`，保留为上个正式版本的恢复目标。无仓库可见性、自定义域名或旧仓变更。
+
+## V2 历史发布状态（2026-10-12）
 
 V2 已通过本地和远端验收并发布。功能发布提交：`e946a67b00dd103ead319b68af64300f35f14228`；[PR #1](https://github.com/Callmecx/chenxi-devlab-2026/pull/1) 在完整 [PR CI](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38259667428) 成功后合并。
 
 [主分支 CI 与 Pages 发布](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38260520649) 于 **2026-10-12 22:14（Asia/Shanghai）** 成功。两套依赖安装、类型检查、Lint、247 项单元/API、64 项生产 E2E、网页/微信/App资源构建、最终仓库子路径业务检查和发布扫描全部通过；逐步骤记录见 [ci-v2-release.json](docs/testing/ci-v2-release.json)。
 
-**22:15:31** 使用全新未登录 Chrome 154 上下文完成线上复验：8 个核心路由分别在 390/1440px 下 HTTP200、正确标题、无横向溢出；商品计划执行至审批后拒绝、商城 SKU→购物袋→结算与返回、H5 选择活动→预约入口均通过；4 个证据资产可访问，页面异常和失败资产均为0。`build-meta.json.sourceRevision` 与上述发布提交完全相同。机器证据：[online-smoke.json](docs/testing/online-smoke.json)。这不是只检查首页 HTTP200，也不是公网后端验收。
+**22:15:31** 使用全新未登录 Chrome 154 上下文完成线上复验：8 个核心路由分别在 390/1440px 下 HTTP200、正确标题、无横向溢出；商品计划执行至审批后拒绝、商城 SKU→购物袋→结算与返回、H5 选择活动→预约入口均通过；4 个证据资产可访问，页面异常和失败资产均为0。`build-meta.json.sourceRevision` 与上述发布提交完全相同。机器证据：[V2 online-smoke.json](https://github.com/Callmecx/chenxi-devlab-2026/blob/v2.0.0/docs/testing/online-smoke.json)。这不是只检查首页 HTTP200，也不是公网后端验收。
 
 - [主站](https://callmecx.github.io/chenxi-devlab-2026/#/) / [智能演化实验室](https://callmecx.github.io/chenxi-devlab-2026/#/intelligence)
 - [巷集 Select](https://callmecx.github.io/chenxi-devlab-2026/shop/#/) / [蓉城周末 Lab](https://callmecx.github.io/chenxi-devlab-2026/pulse/#/)

@@ -1,10 +1,10 @@
 {
-  "checkedAt": "2026-10-12T14:19:10.152Z",
+  "checkedAt": "2026-10-12T16:36:44.159Z",
   "scope": "Git tracked and untracked non-ignored publication candidates; no secret values included in findings.",
   "result": "PASS",
-  "candidateFiles": 287,
-  "textFiles": 220,
-  "binaryAssets": 67,
+  "candidateFiles": 367,
+  "textFiles": 254,
+  "binaryAssets": 113,
   "findings": [],
   "limitations": [
     "Pattern scanning cannot prove absence of all secrets or private copied code.",

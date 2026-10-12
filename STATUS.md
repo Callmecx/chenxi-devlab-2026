@@ -1,10 +1,31 @@
-# V2 status
+# V3 validated local checkpoint — 2026-10-13
+
+Only target: `Callmecx/chenxi-devlab-2026`; branch `feature/intelligence-lab-v3-rebuild`; released rollback baseline `v2.0.0` / `8059fb9`.
+
+- Replaced the flagship `/intelligence` experience with ORBIT: a layered orbital port, two carriers, direct-start mission, responsive bottom dock, object inspection, five camera modes and operational SVG fallback.
+- Implemented weighted graph search, inventory/capacity/energy guards, reservations, route closure/replanning, bounded unreachable/wait/history limits, isolated same-snapshot Worker comparison and strictly validated replay.
+- Retained practical product/activity/warehouse workflows at `/intelligence/tasks`; migrated their existing browser assertions without removing outcomes. Main, shop, pulse and other works remain in place.
+- Actual checks so far: 308/308 unit/API tests; full typecheck and lint; all three static applications, WeChat resources and App resources built. No device/store release is claimed.
+- V2 baseline and V3 round-1/round-2 real Chrome screenshots retained. Independent review identified and drove fixes for phone cropping, wide-screen heading wrapping, touch targets, material/lighting, camera reacquisition and stale file import.
+- Final production whole-site batch on `dc336f1`: **93/93 passed**, zero failures/skips/retries. All 26 flagship checks, 3 new Worker construction/postMessage/stale-error regressions and the original 64 whole-site checks passed in one run. Original failed runs remain in local evidence.
+- Actual 75.720-second recording includes route closure/detour, explicit UNREACHABLE, same-run recovery, isolated strategy comparison and read-only replay. Public sanitized video manifest and SHA-256 accompany the reviewed Release candidate.
+- Six active 10-second performance samples: desktop render P50/P95 16.7/16.8ms; desktop Chrome phone viewport 33.3/33.5ms. No real-phone GPU claim. Final printable facts and white background were recaptured.
+
+Repository-base smoke passed at 00:35 +08: 9 routes at 390/1440, 4 business flows, 4 evidence assets, zero page errors/missing assets; clean source `dc336f1` matches build metadata. Next: authorized feature PR and full GitHub CI, main publication, anonymous deployed-revision verification, reviewed video Release attachment. Online remains V2 until actual Pages success is recorded. Resume from this branch, preserving the existing V2 tag and the original three public paths.
+
+First PR CI `38278671655` completed 92/93 browser cases: only the combined overview/follow pixel test timed out when its second camera journey no longer had a Canvas. The first journey's actual pixel and state assertions passed. All business, Worker, recovery and lifecycle cases passed; software-rendered 3D cases were substantially slower than local hardware Chrome. Two camera journeys are now separate fresh-context cases, preserving every pixel threshold, identity/clock/delivery assertion and the real adaptive fallback. The suite therefore contains94 cases; new results must be recorded after actual execution. CI now summarizes failed runs as well and uploads only ORBIT PNG diagnostics, keeping raw traces/video/storage private.
+
+See `docs/intelligence-lab-v3/` for the baseline, rules, runtime boundary, visual review and demo guide. Old private portfolio, other repositories and withdrawn C-drive cleanup remain untouched.
+
+---
+
+# V2 status (preserved release record)
 
 Target: `Callmecx/chenxi-devlab-2026` · branch `feat/chenxi-v2` · baseline `b62db8d`.
 
 ## Released and anonymously verified — 2026-10-12 22:15 +08
 
-V2 source release: `e946a67b00dd103ead319b68af64300f35f14228`, [PR #1](https://github.com/Callmecx/chenxi-devlab-2026/pull/1). [Main CI and Pages](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38260520649) succeeded at 22:14 +08. [Anonymous smoke](docs/testing/online-smoke.json) verifies the exact deployed revision, all eight routes at 390/1440, three public business paths and four evidence assets. See [deployment record](DEPLOYMENT_REPORT.md) for dated evidence; later documentation commits do not imply new functional claims.
+V2 source release: `e946a67b00dd103ead319b68af64300f35f14228`, [PR #1](https://github.com/Callmecx/chenxi-devlab-2026/pull/1). [Main CI and Pages](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38260520649) succeeded at 22:14 +08. [V2 anonymous smoke](https://github.com/Callmecx/chenxi-devlab-2026/blob/v2.0.0/docs/testing/online-smoke.json) verifies the exact deployed revision, all eight routes at 390/1440, three public business paths and four evidence assets. See [deployment record](DEPLOYMENT_REPORT.md) for dated evidence; later documentation commits do not imply new functional claims.
 
 - Intelligence tools, warehouse A\*, interventions, approval/cancel/failure/retry and recorded replay implemented.
 - Persistent Fastify/SQLite API and both clients; unknown-response and lost-identity recovery verified.

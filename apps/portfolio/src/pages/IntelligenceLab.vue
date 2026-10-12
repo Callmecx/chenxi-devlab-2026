@@ -327,6 +327,8 @@ function visibility() {
   if (document.hidden) pause();
 }
 onMounted(() => {
+  if (route.query.preset === "product" || route.query.preset === "activity")
+    selectPreset(route.query.preset);
   media = matchMedia("(prefers-reduced-motion: reduce)");
   motion();
   taskCollapsed.value = matchMedia("(max-width:740px)").matches;
@@ -345,13 +347,14 @@ onBeforeUnmount(() => {
     <section class="il-heading">
       <div>
         <p class="il-eyebrow">
-          <span></span> CHENXI INTELLIGENCE LAB / 智能演化实验室
+          <span></span> CHENXI INTELLIGENCE LAB / 实用任务库
         </p>
         <h1>让智能，<em>在行动中演化。</em></h1>
         <p class="il-intro">
           从一个目标出发，观察规划、工具与环境如何互相改变。<br />这里的每一步，都有状态、有边界，也有可追溯的证据。
         </p>
       </div>
+      <RouterLink class="il-source" to="/intelligence">返回星域智航 ↗</RouterLink>
       <a
         class="il-source"
         href="https://github.com/Callmecx/chenxi-devlab-2026"

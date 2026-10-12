@@ -1,1 +1,25 @@
-{"name":"ShopPilot","appid":"__UNI__SHOPPILOT","description":"Original local demo commerce by Chenxi DevLab","versionName":"1.0.0","versionCode":"100","transformPx":false,"vueVersion":"3","uniStatistics":{"enable":false},"h5":{"title":"ShopPilot · 日常好物，认真挑选","router":{"mode":"hash"}},"mp-weixin":{"appid":"touristappid","setting":{"urlCheck":false},"usingComponents":true}}
+{
+  "name": "巷集 Select",
+  "appid": "__UNI__SHOPPILOT",
+  "description": "原创生活方式电商工程演示：本地模式与显式服务端模式",
+  "versionName": "2.0.0",
+  "versionCode": "200",
+  "transformPx": false,
+  "vueVersion": "3",
+  "uniStatistics": {
+    "enable": false
+  },
+  "h5": {
+    "title": "巷集 Select · 日常好物，认真挑选",
+    "router": {
+      "mode": "hash"
+    }
+  },
+  "mp-weixin": {
+    "appid": "touristappid",
+    "setting": {
+      "urlCheck": true
+    },
+    "usingComponents": true
+  }
+}

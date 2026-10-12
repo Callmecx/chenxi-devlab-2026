@@ -18,7 +18,7 @@ const secretRules = [
   ['cookie-header', /\b(?:cookie|authorization)\s*:\s*["'](?:Bearer\s+)?[A-Za-z0-9+/_.=-]{24,}["']/i],
 ];
 const excludedDirs = new Set(['.git', 'node_modules', 'dist', '.tools', '.local', 'coverage', 'test-results', 'playwright-report', 'unpackage', '.idea', '.vscode']);
-const approvedRoots = new Set(['apps', 'packages', 'docs', 'scripts', 'tests', '.github']);
+const approvedRoots = new Set(['apps', 'packages', 'services', 'docs', 'scripts', 'tests', '.github']);
 const imageExtensions = new Set(['.png', '.jpg', '.jpeg', '.webp', '.gif', '.ico', '.woff', '.woff2']);
 const forbiddenFile = /(?:^|\/)(?:\.env(?:\..+)?|id_rsa|id_ed25519|credentials(?:\.[^/]+)?|project\.private\.config\.json)$|\.(?:pem|key|p12|pfx|sqlite|sqlite3|db|dump|zip|7z|rar|exe)$/i;
 const privateSource = /\.(?:java|class|jar|rs|py|pyc|xlsx|xls|parquet)$/i;
@@ -69,7 +69,8 @@ for (const file of files) {
   }
   if (segments.length > 1 && !approvedRoots.has(segments[0])) findings.push({ file, rule: 'unexpected-top-level-directory' });
   if (segments[0] === 'apps' && !['portfolio', 'campaign-h5', 'commerce-mini'].includes(segments[1])) findings.push({ file, rule: 'unexpected-application-directory' });
-  if (segments[0] === 'packages' && segments[1] !== 'shared') findings.push({ file, rule: 'unexpected-package-directory' });
+  if (segments[0] === 'packages' && !['shared','intelligence'].includes(segments[1])) findings.push({ file, rule: 'unexpected-package-directory' });
+  if (segments[0] === 'services' && segments[1] !== 'demo-api') findings.push({ file, rule: 'unexpected-service-directory' });
   if (forbiddenFile.test(file) && !/(?:^|\/)\.env\.example$/.test(file)) findings.push({ file, rule: 'private-or-binary-artifact' });
   if (privateSource.test(file)) findings.push({ file, rule: 'unapproved-legacy-source-or-data' });
   const absolute = resolve(root, file);

@@ -1,0 +1,108 @@
+{
+  "measuredAt": "2026-10-12T13:42:59.722Z",
+  "browser": "154.0.8037.94",
+  "mode": "Real opt-in Three.js WebGL in headless desktop Chrome; idle product constellation, 180+ frames per run, three fresh contexts per viewport.",
+  "samples": [
+    {
+      "width": 1440,
+      "run": 1,
+      "frames": 240,
+      "p50FrameIntervalMs": 16.7,
+      "p95FrameIntervalMs": 16.8,
+      "drawCalls": 13,
+      "geometries": 13,
+      "textures": 1,
+      "canvas": {
+        "width": 1013,
+        "height": 405,
+        "cssWidth": 1013,
+        "cssHeight": 405
+      }
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "frames": 180,
+      "p50FrameIntervalMs": 16.7,
+      "p95FrameIntervalMs": 16.8,
+      "drawCalls": 13,
+      "geometries": 13,
+      "textures": 1,
+      "canvas": {
+        "width": 1013,
+        "height": 405,
+        "cssWidth": 1013,
+        "cssHeight": 405
+      }
+    },
+    {
+      "width": 1440,
+      "run": 3,
+      "frames": 180,
+      "p50FrameIntervalMs": 16.7,
+      "p95FrameIntervalMs": 16.8,
+      "drawCalls": 13,
+      "geometries": 13,
+      "textures": 1,
+      "canvas": {
+        "width": 1013,
+        "height": 405,
+        "cssWidth": 1013,
+        "cssHeight": 405
+      }
+    },
+    {
+      "width": 390,
+      "run": 1,
+      "frames": 180,
+      "p50FrameIntervalMs": 16.7,
+      "p95FrameIntervalMs": 16.8,
+      "drawCalls": 13,
+      "geometries": 13,
+      "textures": 1,
+      "canvas": {
+        "width": 352,
+        "height": 320,
+        "cssWidth": 352,
+        "cssHeight": 320
+      }
+    },
+    {
+      "width": 390,
+      "run": 2,
+      "frames": 180,
+      "p50FrameIntervalMs": 16.7,
+      "p95FrameIntervalMs": 16.8,
+      "drawCalls": 13,
+      "geometries": 13,
+      "textures": 1,
+      "canvas": {
+        "width": 352,
+        "height": 320,
+        "cssWidth": 352,
+        "cssHeight": 320
+      }
+    },
+    {
+      "width": 390,
+      "run": 3,
+      "frames": 180,
+      "p50FrameIntervalMs": 16.7,
+      "p95FrameIntervalMs": 16.8,
+      "drawCalls": 13,
+      "geometries": 13,
+      "textures": 1,
+      "canvas": {
+        "width": 352,
+        "height": 320,
+        "cssWidth": 352,
+        "cssHeight": 320
+      }
+    }
+  ],
+  "limits": [
+    "rAF frame intervals are not GPU timestamp measurements or real-phone FPS.",
+    "Mobile viewport explicitly enables 3D; the Lighthouse mobile navigation batch uses the lightweight 2D default.",
+    "Hardware load varies; no general 60fps or memory-leak-free claim. Separate browser tests verify ten actual context disposal cycles."
+  ]
+}

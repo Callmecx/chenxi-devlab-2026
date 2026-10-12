@@ -11,7 +11,7 @@
   --ink: #25372f;
   --muted: #62695f;
   --line: #d9ddd1;
-  --accent: #cc562e;
+  --accent: #ad4321;
   --green: #264a3c;
   --lime: #d9edab;
   --shadow: 0 14px 40px #17362b10;
@@ -38,6 +38,10 @@
 body {
   margin: 0;
   min-width: 280px;
+}
+#main {
+  /* Keep the footer below the initial viewport while a lazy route loads. */
+  min-height: calc(100svh - 70px);
 }
 button,
 input,
@@ -770,7 +774,7 @@ h2 span,
   font-size: clamp(60px, 7vw, 94px);
   font-weight: 800;
   letter-spacing: -7px;
-  color: #f1e9d7;
+  color: #263b33;
   line-height: 1;
 }
 .pulse-art i {
@@ -799,7 +803,7 @@ h2 span,
   top: 37px;
   font-size: 46px;
   line-height: 1.1;
-  color: #f7efdb;
+  color: #263b33;
   transform: rotate(6deg);
   z-index: 1;
 }
@@ -1407,6 +1411,8 @@ h2 span,
   object-fit: cover;
   object-position: top;
   width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
 }
 .screenshot-button > span {
   display: block;

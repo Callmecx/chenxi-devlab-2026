@@ -50,7 +50,7 @@ async function copy() {
     <div class="contact-footnote">
       <span class="status-dot"></span>
       <p>
-        公开邮箱由本人授权展示。本站无追踪脚本；演示应用不向服务器提交个人信息。
+        公开邮箱由本人授权展示。本站无广告追踪；演示应用无需真实姓名、手机号、地址或支付信息。
       </p>
     </div>
   </div>

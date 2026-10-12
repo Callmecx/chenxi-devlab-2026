@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { projects } from "../data/projects";
+import { projects, projectCategories } from "../data/projects";
 import ProjectCard from "../components/ProjectCard.vue";
 const filter = ref("全部");
 const query = ref("");
-const categories = ["全部", "前端体验", "全栈系统", "AI 应用", "数据与工具"];
+const categories = projectCategories;
 const filtered = computed(() =>
   projects.filter(
     (p) =>

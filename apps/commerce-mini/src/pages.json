@@ -1,1 +1,47 @@
-{"pages":[{"path":"pages/index/index","style":{"navigationStyle":"custom","navigationBarTitleText":"ShopPilot"}},{"path":"pages/product/product","style":{"navigationStyle":"custom"}},{"path":"pages/cart/cart","style":{"navigationStyle":"custom"}},{"path":"pages/checkout/checkout","style":{"navigationStyle":"custom"}},{"path":"pages/orders/orders","style":{"navigationStyle":"custom"}}],"globalStyle":{"navigationBarTextStyle":"black","navigationBarBackgroundColor":"#f6f4ed","backgroundColor":"#f6f4ed"}}
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "巷集 Select"
+      }
+    },
+    {
+      "path": "pages/product/product",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/cart/cart",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/checkout/checkout",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/orders/orders",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "巷集 Select · 订单详情"
+      },
+      "path": "pages/order/order"
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#f6f4ed",
+    "backgroundColor": "#f6f4ed"
+  }
+}

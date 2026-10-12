@@ -26,10 +26,10 @@ import ProjectCard from "../components/ProjectCard.vue";
           应用能力，<br class="desktop-break" />把复杂问题做成清晰、可用的产品。
         </p>
         <div class="hero-cta">
-          <RouterLink to="/projects" class="button primary"
-            >探索我的作品 <ArrowUpRight :size="18" /></RouterLink
-          ><RouterLink to="/contact" class="text-link"
-            >聊聊你的想法 <ArrowRight :size="17"
+          <RouterLink to="/intelligence" class="button primary"
+            >体验智能演化实验室 <ArrowUpRight :size="18" /></RouterLink
+          ><RouterLink to="/projects" class="text-link"
+            >查看工程作品 <ArrowRight :size="17"
           /></RouterLink>
         </div>
         <div class="hero-bottom">
@@ -82,6 +82,45 @@ import ProjectCard from "../components/ProjectCard.vue";
         ><b>Rust</b><span>✳</span><b>AI Engineering</b>
       </div>
     </div>
+    <section class="v2-feature section-wrap" aria-label="精选交互作品">
+      <div class="v2-feature-intro">
+        <p class="eyebrow">INTENT → PLAN → ACT → REFLECT</p>
+        <h2>让目标变成行动，<br /><span>让过程可以观察。</span></h2>
+        <p>
+          修改预算、批准工具动作，或为机器人放下一道障碍。<br />在智能演化实验室，亲手检验一条任务如何完成。
+        </p>
+        <div>
+          <RouterLink class="button primary" to="/intelligence"
+            >进入实验室 <ArrowUpRight :size="17" /></RouterLink
+          ><RouterLink class="text-link" to="/intelligence?guide=1"
+            >60 秒看作品 <ArrowRight :size="16"
+          /></RouterLink>
+        </div>
+      </div>
+      <div class="v2-feature-map" aria-label="四个精选作品入口">
+        <RouterLink to="/intelligence"
+          ><span>01 / INTELLIGENCE</span>
+          <h3>目标与行动实验室 <ArrowUpRight :size="19" /></h3>
+          <p>任务计划 · 审批 · A* 路径 · 事件回放</p>
+          <small>本地算法仿真与历史回放</small></RouterLink
+        ><a :href="demoUrl('shop')"
+          ><span>02 / COMMERCE</span>
+          <h3>巷集 Select <ArrowUpRight :size="19" /></h3>
+          <p>SKU · 金额 · 库存 · 订单状态</p>
+          <small>静态体验 / 可连接本地 API</small></a
+        ><a :href="demoUrl('pulse')"
+          ><span>03 / WEEKEND</span>
+          <h3>蓉城周末 Lab <ArrowUpRight :size="19" /></h3>
+          <p>偏好推荐 · 场次 · 预约与取消</p>
+          <small>原创虚构活动与模拟履约</small></a
+        ><RouterLink to="/labs/market-replay"
+          ><span>04 / MARKET DATA</span>
+          <h3>金融事件回放 <ArrowUpRight :size="19" /></h3>
+          <p>时间游标 · 缺口补偿 · 前缀计算</p>
+          <small>合成事件数据 / 不接交易</small></RouterLink
+        >
+      </div>
+    </section>
     <section class="section-wrap section-space">
       <div class="section-heading">
         <div>
@@ -142,15 +181,40 @@ import ProjectCard from "../components/ProjectCard.vue";
       <div>
         <p class="eyebrow">LESS TALK, MORE INTERACTION</p>
         <h2>好的作品，<br />欢迎你亲手试试。</h2>
-        <p>两个原创演示应用，真实交互，本地 Mock 数据。</p>
+        <p>从移动体验到工程边界，用可操作流程解释实现。</p>
       </div>
       <div class="demo-actions">
         <a :href="demoUrl('shop')"
-          ><span>01 / COMMERCE</span><b>逛逛 ShopPilot <ArrowUpRight /></b></a
+          ><span>01 / COMMERCE</span><b>逛逛巷集 Select <ArrowUpRight /></b></a
         ><a :href="demoUrl('pulse')"
-          ><span>02 / CAMPAIGN</span><b>体验 PulseCampaign <ArrowUpRight /></b
+          ><span>02 / CAMPAIGN</span><b>体验蓉城周末 Lab <ArrowUpRight /></b
         ></a>
       </div>
+    </section>
+    <section class="v2-engineering-links section-wrap">
+      <RouterLink to="/labs/enterprise-flow"
+        ><Code2 :size="22" />
+        <div>
+          <h3>技术面试模式</h3>
+          <p>沿业务状态操作，再追问为什么这样实现。</p>
+        </div>
+        <ArrowUpRight :size="20" /></RouterLink
+      ><RouterLink to="/writing"
+        ><Layers3 :size="22" />
+        <div>
+          <h3>工程笔记</h3>
+          <p>记录库存、回放与状态边界的实际取舍。</p>
+        </div>
+        <ArrowUpRight :size="20"
+      /></RouterLink>
+      <RouterLink to="/labs/engineering"
+        ><Workflow :size="22" />
+        <div>
+          <h3>三个工程实验</h3>
+          <p>并发库存、请求恢复与十万行列表。</p>
+        </div>
+        <ArrowUpRight :size="20"
+      /></RouterLink>
     </section>
     <section class="contact-teaser section-wrap section-space">
       <p class="eyebrow">HAVE A PROJECT IN MIND?</p>
@@ -162,3 +226,160 @@ import ProjectCard from "../components/ProjectCard.vue";
     </section>
   </div>
 </template>
+<style scoped>
+.v2-feature {
+  margin-top: 70px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 65px;
+  align-items: center;
+}
+.v2-feature-intro h2 {
+  font-size: 35px;
+  line-height: 1.5;
+  letter-spacing: -1px;
+}
+.v2-feature-intro h2 span {
+  color: var(--muted);
+}
+.v2-feature-intro > p:not(.eyebrow) {
+  font-size: 14px;
+}
+.v2-feature-intro > div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 27px;
+}
+.v2-feature-intro .button {
+  font-size: 13px;
+}
+.v2-feature-map {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  overflow: hidden;
+  background: var(--paper);
+}
+.v2-feature-map > a {
+  padding: 25px;
+  transition: background 0.2s;
+  min-width: 0;
+}
+.v2-feature-map > a:first-child {
+  background: #102e31;
+  color: #e1f5ec;
+}
+.v2-feature-map > a:first-child :is(p, small) {
+  color: #abd4c6;
+}
+.v2-feature-map > a:nth-child(even) {
+  border-left: 1px solid var(--line);
+}
+.v2-feature-map > a:nth-child(n + 3) {
+  border-top: 1px solid var(--line);
+}
+.v2-feature-map > a:hover {
+  background: var(--surface);
+}
+.v2-feature-map > a:first-child:hover {
+  background: #1c4141;
+}
+.v2-feature-map span {
+  font: 9px monospace;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+.v2-feature-map > a:first-child span {
+  color: #a7dcce;
+}
+.v2-feature-map h3 {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 16px;
+  margin: 20px 0 12px;
+}
+.v2-feature-map p {
+  font-size: 11px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+.v2-feature-map small {
+  font-size: 9px;
+  color: var(--muted);
+}
+.v2-engineering-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  margin-top: 65px;
+  padding-top: 30px;
+  gap: 25px;
+}
+.v2-engineering-links > a {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.v2-engineering-links > a > svg:last-child {
+  margin-left: auto;
+}
+.v2-engineering-links h3 {
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+.v2-engineering-links p {
+  font-size: 12px;
+  margin: 0;
+}
+@media (max-width: 1000px) {
+  .v2-feature {
+    gap: 30px;
+  }
+  .v2-feature-intro h2 {
+    font-size: 29px;
+  }
+  .v2-feature-map > a {
+    padding: 19px;
+  }
+  .v2-feature-map h3 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 740px) {
+  .v2-feature {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 48px;
+  }
+  .v2-feature-intro h2 {
+    font-size: 29px;
+  }
+  .v2-feature-map > a {
+    padding: 20px 16px;
+  }
+  .v2-feature-map h3 {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 16px;
+  }
+  .v2-feature-map h3 svg {
+    width: 15px;
+  }
+  .v2-feature-map small {
+    font-size: 9px;
+  }
+  .v2-engineering-links {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 40px;
+  }
+  .v2-feature-intro .text-link {
+    font-size: 12px;
+  }
+}
+</style>

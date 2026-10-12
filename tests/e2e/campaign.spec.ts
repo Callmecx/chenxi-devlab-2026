@@ -64,7 +64,7 @@ test('Pulse recovers from malformed storage, shows an empty state and handles un
   await expect(page.getByRole('heading', { name: '灵感在另一条路上。' })).toBeVisible();
 });
 
-for (const width of [1440, 768, 390, 320]) {
+for (const width of [1920, 1440, 768, 390, 360, 320]) {
   test(`Pulse responsive ${width}px, useful controls, detail navigation and screenshot`, async ({
     page,
   }) => {

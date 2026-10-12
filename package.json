@@ -12,24 +12,30 @@
     "dev": "npm run dev --workspace @chenxi/portfolio",
     "dev:pulse": "npm run dev --workspace @chenxi/campaign-h5",
     "dev:shop": "npm --prefix apps/commerce-mini run dev:h5",
-    "typecheck": "npm run typecheck --workspaces --if-present && npm --prefix apps/commerce-mini run typecheck",
-    "lint": "eslint apps packages tests scripts",
-    "test": "vitest run",
+    "typecheck": "npm run typecheck --workspaces --if-present && npm --prefix apps/commerce-mini run typecheck && tsc -p services/demo-api/tsconfig.json",
+    "lint": "eslint apps packages services tests scripts",
+    "dev:api": "node services/demo-api/src/start.ts",
+    "test:api": "vitest run services/demo-api",
+    "test": "vitest run --reporter=default --reporter=json --outputFile=.local/testing/vitest-results.json && node scripts/summarize-unit.mjs",
     "build": "node scripts/build.mjs",
     "build:mini": "npm --prefix apps/commerce-mini run build:mp-weixin",
+    "build:app": "npm --prefix apps/commerce-mini run build:app",
     "preview": "node scripts/serve.mjs",
     "test:e2e": "playwright test",
+    "test:summary": "node scripts/summarize-tests.mjs",
     "security:scan": "node scripts/security-scan.mjs",
-    "check": "npm run typecheck && npm run lint && npm test && npm run build && npm run build:mini && npm run test:e2e && npm run security:scan"
+    "check": "npm run typecheck && npm run lint && npm test && npm run build && npm run build:mini && npm run build:app && npm run test:e2e && npm run test:summary && npm run security:scan"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.0",
     "@playwright/test": "^1.58.0",
     "@types/node": "^24.0.0",
+    "@types/three": "0.186.0",
     "@vitejs/plugin-vue": "5.2.4",
     "eslint": "^9.39.0",
     "eslint-plugin-vue": "^10.5.0",
     "globals": "^16.5.0",
+    "lighthouse": "13.5.0",
     "prettier": "^3.6.2",
     "typescript": "5.9.3",
     "typescript-eslint": "^8.55.0",
@@ -38,9 +44,12 @@
     "vue-tsc": "^3.1.0"
   },
   "dependencies": {
+    "fastify": "5.12.5",
     "lucide-vue-next": "^0.577.0",
     "pinia": "^3.0.4",
+    "three": "0.186.1",
     "vue": "^3.5.29",
-    "vue-router": "^4.6.0"
+    "vue-router": "^4.6.0",
+    "zod": "4.6.6"
   }
 }

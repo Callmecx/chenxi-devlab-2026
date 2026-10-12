@@ -1,9 +1,17 @@
-import { spawnSync } from "node:child_process";
+import { spawnSync, execFileSync } from "node:child_process";
 import { mkdirSync, cpSync, existsSync, rmSync, writeFileSync } from "node:fs";
 import { resolve, dirname, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const base = process.env.BASE_PATH || "/";
+const sourceRevision =
+  process.env.GITHUB_SHA ||
+  execFileSync("git", ["rev-parse", "HEAD"], {
+    cwd: root,
+    encoding: "utf8",
+  }).trim();
+if (!/^[a-f0-9]{40}$/.test(sourceRevision))
+  throw Error("Invalid source revision");
 if (!/^\/[a-zA-Z0-9/_-]*\/$/.test(base) && base !== "/")
   throw Error("BASE_PATH must be a simple absolute directory path ending in /");
 function run(args, appBase) {
@@ -44,6 +52,11 @@ cpSync(resolve(root, "docs/research/assets"), resolve(output, "evidence"), {
 for (const name of ["TEST_REPORT.md", "ARCHITECTURE.md", "PROJECT_SHOWCASE.md"])
   if (existsSync(resolve(root, name)))
     cpSync(resolve(root, name), resolve(output, "evidence", name));
+for (const folder of ["acceptance", "intelligence-lab", "interview"])
+  if (existsSync(resolve(root, "docs", folder)))
+    cpSync(resolve(root, "docs", folder), resolve(output, "evidence", folder), {
+      recursive: true,
+    });
 if (existsSync(resolve(root, "docs/screenshots")))
   cpSync(resolve(root, "docs/screenshots"), resolve(output, "screenshots"), {
     recursive: true,
@@ -52,7 +65,12 @@ writeFileSync(resolve(output, ".nojekyll"), "");
 writeFileSync(
   resolve(output, "build-meta.json"),
   JSON.stringify(
-    { basePath: base, apps: ["portfolio", "shop", "pulse"] },
+    {
+      basePath: base,
+      sourceRevision,
+      builtAt: new Date().toISOString(),
+      apps: ["portfolio", "shop", "pulse"],
+    },
     null,
     2,
   ),

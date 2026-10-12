@@ -1,0 +1,303 @@
+{
+  "startedAt": "2026-10-12T16:23:21.461Z",
+  "browser": "154.0.8037.94",
+  "url": "本机生产预览（loopback）；不是公开部署或公网后端验收",
+  "steps": [
+    {
+      "seconds": 3.2,
+      "action": "总览：真实生产包，本地算法仿真",
+      "state": {
+        "status": "ready",
+        "mode": "local-simulation",
+        "worldVersion": "1",
+        "tick": "0",
+        "delivered": "0",
+        "runId": "orbit-mv5gobc3-1",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":140,\"p50\":16.699999999999818,\"p95\":16.800000000000068,\"drawCalls\":107,\"geometries\":64,\"textures\":3,\"pixels\":892800}"
+      }
+    },
+    {
+      "seconds": 3.4,
+      "action": "点击可见三维甲板，Raycaster选中港口",
+      "state": {
+        "status": "ready",
+        "mode": "local-simulation",
+        "worldVersion": "1",
+        "tick": "0",
+        "delivered": "0",
+        "runId": "orbit-mv5gobc3-1",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":140,\"p50\":16.699999999999818,\"p95\":16.800000000000068,\"drawCalls\":107,\"geometries\":64,\"textures\":3,\"pixels\":892800}"
+      }
+    },
+    {
+      "seconds": 7.3,
+      "action": "近景，物理状态保持未开始",
+      "state": {
+        "status": "ready",
+        "mode": "local-simulation",
+        "worldVersion": "1",
+        "tick": "0",
+        "delivered": "0",
+        "runId": "orbit-mv5gobc3-1",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":311,\"p50\":16.699999999999818,\"p95\":16.800000000000182,\"drawCalls\":71,\"geometries\":65,\"textures\":3,\"pixels\":892800}"
+      }
+    },
+    {
+      "seconds": 10.8,
+      "action": "正常执行后暂停",
+      "state": {
+        "status": "paused",
+        "mode": "local-simulation",
+        "worldVersion": "1",
+        "tick": "3",
+        "delivered": "0",
+        "runId": "orbit-mv5gobc3-1",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":492,\"p50\":16.699999999999818,\"p95\":16.899999999999636,\"drawCalls\":108,\"geometries\":65,\"textures\":3,\"pixels\":892800}"
+      }
+    },
+    {
+      "seconds": 11.1,
+      "action": "关闭relay-target使旧计划失效，尚未失败",
+      "state": {
+        "status": "paused",
+        "mode": "local-simulation",
+        "worldVersion": "2",
+        "tick": "3",
+        "delivered": "0",
+        "runId": "orbit-mv5gobc3-1",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":492,\"p50\":16.699999999999818,\"p95\":16.899999999999636,\"drawCalls\":108,\"geometries\":65,\"textures\":3,\"pixels\":892800}"
+      }
+    },
+    {
+      "seconds": 16.8,
+      "action": "封单路后真实重规划绕行并交付三份",
+      "state": {
+        "status": "completed",
+        "mode": "local-simulation",
+        "worldVersion": "2",
+        "tick": "18",
+        "delivered": "3",
+        "runId": "orbit-mv5gobc3-1",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":852,\"p50\":16.69999999999891,\"p95\":16.899999999999636,\"drawCalls\":111,\"geometries\":68,\"textures\":3,\"pixels\":892800}"
+      }
+    },
+    {
+      "seconds": 18.8,
+      "action": "新任务全部航道封闭，等待开始",
+      "state": {
+        "status": "ready",
+        "mode": "local-simulation",
+        "worldVersion": "10",
+        "tick": "0",
+        "delivered": "0",
+        "runId": "orbit-mv5gopkj-2",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":1032,\"p50\":16.69999999999891,\"p95\":16.899999999997817,\"drawCalls\":108,\"geometries\":68,\"textures\":3,\"pixels\":892800}"
+      }
+    },
+    {
+      "seconds": 20.5,
+      "action": "全部封闭导致真实failed/UNREACHABLE，零交付",
+      "state": {
+        "status": "failed",
+        "mode": "local-simulation",
+        "worldVersion": "10",
+        "tick": "1",
+        "delivered": "0",
+        "runId": "orbit-mv5gopkj-2",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":1032,\"p50\":16.69999999999891,\"p95\":16.899999999997817,\"drawCalls\":108,\"geometries\":68,\"textures\":3,\"pixels\":892800}"
+      }
+    },
+    {
+      "seconds": 24.4,
+      "action": "重新开放所有航道，仍处failed，等待显式重试",
+      "state": {
+        "status": "failed",
+        "mode": "local-simulation",
+        "worldVersion": "19",
+        "tick": "1",
+        "delivered": "0",
+        "runId": "orbit-mv5gopkj-2",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":1389,\"p50\":16.700000000000728,\"p95\":16.899999999997817,\"drawCalls\":111,\"geometries\":68,\"textures\":8,\"pixels\":892800}"
+      }
+    },
+    {
+      "seconds": 25.8,
+      "action": "用户明确重试，同一个run继续执行",
+      "state": {
+        "status": "running",
+        "mode": "local-simulation",
+        "worldVersion": "19",
+        "tick": "1",
+        "delivered": "0",
+        "runId": "orbit-mv5gopkj-2",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":1389,\"p50\":16.700000000000728,\"p95\":16.899999999997817,\"drawCalls\":111,\"geometries\":68,\"textures\":8,\"pixels\":892800}"
+      }
+    },
+    {
+      "seconds": 29.8,
+      "action": "失败恢复：同一run真实completed/3份交付",
+      "state": {
+        "status": "completed",
+        "mode": "local-simulation",
+        "worldVersion": "19",
+        "tick": "17",
+        "delivered": "3",
+        "runId": "orbit-mv5gopkj-2",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":1569,\"p50\":16.700000000000728,\"p95\":16.900000000001455,\"drawCalls\":110,\"geometries\":68,\"textures\":8,\"pixels\":892800}"
+      }
+    },
+    {
+      "seconds": 32.9,
+      "action": "从同一暂停tick2快照运行真实双策略Worker",
+      "state": {
+        "status": "paused",
+        "mode": "local-simulation",
+        "worldVersion": "1",
+        "tick": "2",
+        "delivered": "0",
+        "runId": "orbit-mv5gp0ad-3",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":1749,\"p50\":16.700000000000728,\"p95\":16.899999999997817,\"drawCalls\":108,\"geometries\":68,\"textures\":8,\"pixels\":892800}"
+      }
+    },
+    {
+      "seconds": 38.5,
+      "action": "采用策略仅改变后续规划，不导入预测动作",
+      "state": {
+        "status": "paused",
+        "mode": "local-simulation",
+        "worldVersion": "2",
+        "tick": "2",
+        "delivered": "0",
+        "runId": "orbit-mv5gp0ad-3",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":2105,\"p50\":16.69999999999709,\"p95\":16.89999999999418,\"drawCalls\":108,\"geometries\":68,\"textures\":8,\"pixels\":892800}"
+      }
+    },
+    {
+      "seconds": 43,
+      "action": "原世界采用策略后实际完成",
+      "state": {
+        "status": "completed",
+        "mode": "local-simulation",
+        "worldVersion": "2",
+        "tick": "18",
+        "delivered": "3",
+        "runId": "orbit-mv5gp0ad-3",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":2466,\"p50\":16.69999999999709,\"p95\":16.89999999999418,\"drawCalls\":110,\"geometries\":68,\"textures\":8,\"pixels\":892800}"
+      }
+    },
+    {
+      "seconds": 44.7,
+      "action": "进入历史回放，初始事实未交付",
+      "state": {
+        "status": "ready",
+        "mode": "history-replay",
+        "worldVersion": "1",
+        "tick": "0",
+        "delivered": "0",
+        "runId": "orbit-mv5gp0ad-3",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":2466,\"p50\":16.69999999999709,\"p95\":16.89999999999418,\"drawCalls\":110,\"geometries\":68,\"textures\":8,\"pixels\":892800}"
+      }
+    },
+    {
+      "seconds": 44.8,
+      "action": "回放早期事件，不执行新工具",
+      "state": {
+        "status": "running",
+        "mode": "history-replay",
+        "worldVersion": "1",
+        "tick": "1",
+        "delivered": "0",
+        "runId": "orbit-mv5gp0ad-3",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":2466,\"p50\":16.69999999999709,\"p95\":16.89999999999418,\"drawCalls\":110,\"geometries\":68,\"textures\":8,\"pixels\":892800}"
+      }
+    },
+    {
+      "seconds": 47,
+      "action": "回放终态，交付来自记录",
+      "state": {
+        "status": "completed",
+        "mode": "history-replay",
+        "worldVersion": "2",
+        "tick": "18",
+        "delivered": "3",
+        "runId": "orbit-mv5gp0ad-3",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":2644,\"p50\":16.69999999999709,\"p95\":16.80000000000291,\"drawCalls\":108,\"geometries\":68,\"textures\":8,\"pixels\":892800}"
+      }
+    },
+    {
+      "seconds": 75,
+      "action": "结束：实际运行已完成，可查看源码和工程记录",
+      "state": {
+        "status": "completed",
+        "mode": "local-simulation",
+        "worldVersion": "2",
+        "tick": "18",
+        "delivered": "3",
+        "runId": "orbit-mv5gp0ad-3",
+        "testid": "orbit-lab",
+        "renderMetrics": "{\"frames\":4263,\"p50\":16.69999999999709,\"p95\":16.80000000000291,\"drawCalls\":108,\"geometries\":68,\"textures\":8,\"pixels\":892800}"
+      }
+    }
+  ],
+  "errors": [],
+  "build": {
+    "basePath": "/",
+    "sourceRevision": "ec20eafe7571320c1f2a544caa94a7198dd63905",
+    "sourceTreeDirty": false,
+    "builtAt": "2026-10-12T16:21:59.574Z",
+    "apps": ["portfolio", "shop", "pulse"]
+  },
+  "recoveryAssertions": {
+    "sameRunId": "orbit-mv5gopkj-2",
+    "failedCode": "UNREACHABLE",
+    "failedDelivery": 0,
+    "recoveredStatus": "completed",
+    "recoveredDelivery": 3,
+    "uniqueActionIds": true,
+    "failedEventPreserved": true
+  },
+  "passed": true,
+  "scriptDurationSeconds": 75.016,
+  "video": "chenxi-orbit-v3-demo.webm",
+  "sizeBytes": 16000955,
+  "sha256": "ef0a69e7d2429a47664ab29813d4437f9c231ab2996f792c48c457324c915af7",
+  "completedAt": "2026-10-12T16:24:36.794Z",
+  "ffprobe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "vp9",
+        "width": 1440,
+        "height": 900,
+        "avg_frame_rate": "25/1"
+      }
+    ],
+    "format": {
+      "duration": "75.720000",
+      "size": "16000955"
+    }
+  },
+  "mediaEvidence": {
+    "releaseAssetName": "chenxi-orbit-v3-demo.webm",
+    "rawRecordingsPublished": false,
+    "sourceRevision": "ec20eafe7571320c1f2a544caa94a7198dd63905"
+  }
+}

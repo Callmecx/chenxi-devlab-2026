@@ -1,10 +1,10 @@
 {
   "source": "Actual Playwright run; sanitized summary. Raw traces and videos remain in ignored local storage; excluded from public CI artifacts.",
-  "generatedAt": "2026-10-12T13:27:22.035Z",
+  "generatedAt": "2026-10-12T16:34:36.361Z",
   "stats": {
-    "startTime": "2026-10-12T13:24:05.885Z",
-    "duration": 195536.44400000002,
-    "expected": 64,
+    "startTime": "2026-10-12T16:29:11.868Z",
+    "duration": 301284.886,
+    "expected": 93,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
@@ -17,7 +17,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 8593,
+          "durationMs": 8570,
           "retry": 0
         }
       ]
@@ -29,7 +29,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1057,
+          "durationMs": 718,
           "retry": 0
         }
       ]
@@ -41,7 +41,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2163,
+          "durationMs": 1806,
           "retry": 0
         }
       ]
@@ -53,7 +53,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2168,
+          "durationMs": 1837,
           "retry": 0
         }
       ]
@@ -65,7 +65,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1977,
+          "durationMs": 1799,
           "retry": 0
         }
       ]
@@ -77,7 +77,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2108,
+          "durationMs": 1773,
           "retry": 0
         }
       ]
@@ -89,7 +89,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2055,
+          "durationMs": 1736,
           "retry": 0
         }
       ]
@@ -101,7 +101,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2001,
+          "durationMs": 1807,
           "retry": 0
         }
       ]
@@ -113,7 +113,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 4611,
+          "durationMs": 4615,
           "retry": 0
         }
       ]
@@ -125,7 +125,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1180,
+          "durationMs": 1137,
           "retry": 0
         }
       ]
@@ -137,7 +137,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1132,
+          "durationMs": 1133,
           "retry": 0
         }
       ]
@@ -149,7 +149,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1093,
+          "durationMs": 1153,
           "retry": 0
         }
       ]
@@ -161,7 +161,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1035,
+          "durationMs": 1186,
           "retry": 0
         }
       ]
@@ -173,7 +173,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1087,
+          "durationMs": 1159,
           "retry": 0
         }
       ]
@@ -185,7 +185,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1027,
+          "durationMs": 1213,
           "retry": 0
         }
       ]
@@ -197,7 +197,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3928,
+          "durationMs": 4138,
           "retry": 0
         }
       ]
@@ -209,7 +209,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 4536,
+          "durationMs": 4667,
           "retry": 0
         }
       ]
@@ -221,7 +221,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3829,
+          "durationMs": 4086,
           "retry": 0
         }
       ]
@@ -233,7 +233,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 4659,
+          "durationMs": 4960,
           "retry": 0
         }
       ]
@@ -245,7 +245,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2647,
+          "durationMs": 2765,
           "retry": 0
         }
       ]
@@ -257,7 +257,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3526,
+          "durationMs": 3660,
           "retry": 0
         }
       ]
@@ -269,7 +269,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2667,
+          "durationMs": 2797,
           "retry": 0
         }
       ]
@@ -281,7 +281,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3775,
+          "durationMs": 3941,
           "retry": 0
         }
       ]
@@ -293,7 +293,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3072,
+          "durationMs": 2902,
           "retry": 0
         }
       ]
@@ -305,7 +305,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3429,
+          "durationMs": 2891,
           "retry": 0
         }
       ]
@@ -317,7 +317,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2657,
+          "durationMs": 2914,
           "retry": 0
         }
       ]
@@ -329,7 +329,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3528,
+          "durationMs": 3578,
           "retry": 0
         }
       ]
@@ -341,7 +341,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3570,
+          "durationMs": 2704,
           "retry": 0
         }
       ]
@@ -353,7 +353,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 4684,
+          "durationMs": 4059,
           "retry": 0
         }
       ]
@@ -365,7 +365,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 4010,
+          "durationMs": 3374,
           "retry": 0
         }
       ]
@@ -377,7 +377,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 6293,
+          "durationMs": 5469,
           "retry": 0
         }
       ]
@@ -389,7 +389,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3613,
+          "durationMs": 2911,
           "retry": 0
         }
       ]
@@ -401,7 +401,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 21021,
+          "durationMs": 20217,
           "retry": 0
         }
       ]
@@ -413,7 +413,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2225,
+          "durationMs": 2446,
           "retry": 0
         }
       ]
@@ -425,7 +425,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1226,
+          "durationMs": 1562,
           "retry": 0
         }
       ]
@@ -437,7 +437,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3063,
+          "durationMs": 3475,
           "retry": 0
         }
       ]
@@ -449,7 +449,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1503,
+          "durationMs": 1486,
           "retry": 0
         }
       ]
@@ -461,7 +461,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3810,
+          "durationMs": 4300,
           "retry": 0
         }
       ]
@@ -473,7 +473,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3119,
+          "durationMs": 3589,
           "retry": 0
         }
       ]
@@ -485,7 +485,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3422,
+          "durationMs": 2697,
           "retry": 0
         }
       ]
@@ -497,7 +497,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2000,
+          "durationMs": 1573,
           "retry": 0
         }
       ]
@@ -509,7 +509,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 6176,
+          "durationMs": 8966,
           "retry": 0
         }
       ]
@@ -521,7 +521,355 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1459,
+          "durationMs": 993,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit-worker.spec.ts",
+      "title": "ORBIT Worker constructor 同步失败保留原世界，重试使用真实 Worker 计算",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1742,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit-worker.spec.ts",
+      "title": "ORBIT Worker postMessage 同步失败保留原世界，重试使用真实 Worker 计算",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1802,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit-worker.spec.ts",
+      "title": "ORBIT 已取消 Worker 的迟到 onerror 不得终止新的真实分支计算",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1692,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 1440: 首屏主按钮可见、无横溢出、3D真实挂载与状态诚实",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 852,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 1920: 首屏主按钮可见、无横溢出、3D真实挂载与状态诚实",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1021,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 390: 首屏主按钮可见、无横溢出、3D真实挂载与状态诚实",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 656,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 360: 首屏主按钮可见、无横溢出、3D真实挂载与状态诚实",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 674,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 正常补给：两载体真实交付、所有事件资源/容量/能量守恒与动作唯一",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6078,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 暂停/单步只前进一tick；五种镜头和二维切换不改业务身份或物资",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3618,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 关闭在途航道：版本失效、已有载体到下一安全节点、后续不进入关闭边",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5595,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 全封路真实失败，开放后同run重试恢复且不重复交付",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6323,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT sealed：明确有限失败，未虚构交付或扣成负库存",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2399,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT scarce：明确有限失败，未虚构交付或扣成负库存",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2171,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT low-energy：明确有限失败，未虚构交付或扣成负库存",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2566,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 预置绕行：tick4故障真实进入事件，自动重规划后送达",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6307,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 真Worker双分支隔离；采纳只换策略不导入未来动作",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6461,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 比较期间重置取消旧Worker，不把旧分支应用到新run",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1967,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 导入有效历史是隔离只读投影，退出后恢复新的实时世界",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5950,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 分支结果过期后禁用采用，重新计算失败分支也不能伪报成功",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1586,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 回放随机seek只读；返回实时保持全量事件，损坏记录拒绝导入",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5724,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 取消释放未装载预留，保留已装载货物与能量；重置生成新run",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2145,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT reduced-motion二维与键盘选航道可完成相同业务",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6480,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT WebGL上下文丢失自动二维，暂停事实保留后仍可完成",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5345,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 手机横竖切换保留身份与货物，主要动作触控高度至少44px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1214,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 十次挂载卸载释放实际WebGL上下文与canvas，回到新run",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6942,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 优先级改变真实预留次序；更换目标触发新版本而不改变既有物资",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 8576,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 键盘 Space 与 Enter 都可操作星图对象",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 751,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 同一全景/跟随按钮恢复拖动前实际构图，而非只改模式标签",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3639,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 慢文件导入不能覆盖reset、新导入、returnLive或卸载后的用户意图",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 10661,
           "retry": 0
         }
       ]
@@ -533,7 +881,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 4694,
+          "durationMs": 3534,
           "retry": 0
         }
       ]
@@ -545,7 +893,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1508,
+          "durationMs": 790,
           "retry": 0
         }
       ]
@@ -557,7 +905,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2298,
+          "durationMs": 969,
           "retry": 0
         }
       ]
@@ -569,7 +917,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1687,
+          "durationMs": 917,
           "retry": 0
         }
       ]
@@ -581,7 +929,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1269,
+          "durationMs": 830,
           "retry": 0
         }
       ]
@@ -593,7 +941,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1241,
+          "durationMs": 1024,
           "retry": 0
         }
       ]
@@ -605,7 +953,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1243,
+          "durationMs": 956,
           "retry": 0
         }
       ]
@@ -617,7 +965,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1191,
+          "durationMs": 949,
           "retry": 0
         }
       ]
@@ -629,7 +977,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2238,
+          "durationMs": 1975,
           "retry": 0
         }
       ]
@@ -641,7 +989,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2991,
+          "durationMs": 3009,
           "retry": 0
         }
       ]
@@ -653,7 +1001,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3342,
+          "durationMs": 2609,
           "retry": 0
         }
       ]
@@ -665,7 +1013,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2064,
+          "durationMs": 1382,
           "retry": 0
         }
       ]
@@ -677,7 +1025,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1356,
+          "durationMs": 819,
           "retry": 0
         }
       ]
@@ -689,7 +1037,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3419,
+          "durationMs": 2995,
           "retry": 0
         }
       ]
@@ -701,67 +1049,67 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1831,
+          "durationMs": 1283,
           "retry": 0
         }
       ]
     },
     {
       "file": "visual.spec.ts",
-      "title": "V2 initial views fit 360px without script errors",
+      "title": "Whole-site initial views fit 360px without script errors",
       "status": "expected",
       "results": [
         {
           "status": "passed",
-          "durationMs": 1861,
+          "durationMs": 2457,
           "retry": 0
         }
       ]
     },
     {
       "file": "visual.spec.ts",
-      "title": "V2 initial views fit 390px without script errors",
+      "title": "Whole-site initial views fit 390px without script errors",
       "status": "expected",
       "results": [
         {
           "status": "passed",
-          "durationMs": 1634,
+          "durationMs": 2408,
           "retry": 0
         }
       ]
     },
     {
       "file": "visual.spec.ts",
-      "title": "V2 initial views fit 768px without script errors",
+      "title": "Whole-site initial views fit 768px without script errors",
       "status": "expected",
       "results": [
         {
           "status": "passed",
-          "durationMs": 1714,
+          "durationMs": 2634,
           "retry": 0
         }
       ]
     },
     {
       "file": "visual.spec.ts",
-      "title": "V2 initial views fit 1440px without script errors",
+      "title": "Whole-site initial views fit 1440px without script errors",
       "status": "expected",
       "results": [
         {
           "status": "passed",
-          "durationMs": 1776,
+          "durationMs": 2780,
           "retry": 0
         }
       ]
     },
     {
       "file": "visual.spec.ts",
-      "title": "V2 initial views fit 1920px without script errors",
+      "title": "Whole-site initial views fit 1920px without script errors",
       "status": "expected",
       "results": [
         {
           "status": "passed",
-          "durationMs": 1799,
+          "durationMs": 2840,
           "retry": 0
         }
       ]
@@ -773,7 +1121,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 437,
+          "durationMs": 382,
           "retry": 0
         }
       ]

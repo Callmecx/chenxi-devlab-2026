@@ -1,6 +1,14 @@
 # GitHub 发布与线上验收
 
-## V2 当前状态（2026-10-12）
+## V3 本地发布前检查（2026-10-13）
+
+功能检查点 `dc336f17d672dc061e90c4a1b40966f1244ce4da`，分支 `feature/intelligence-lab-v3-rebuild`。完整本地93项生产浏览器、308项单元/API、类型、Lint及各端资源构建通过。
+
+**00:35:31（Asia/Shanghai）** 完成实际仓库路径 `/chenxi-devlab-2026/` 的生产构建与浏览器验证：9个路由分别在390/1440下检查，4个业务流程、4个证据资产通过；页面异常/失败资产均0，`sourceTreeDirty:false`，构建SHA与功能检查点一致。星港实际单步→全封路→不可达→开路重试→3份送达经过验证。机器证据：[deployment-path-check.json](docs/testing/deployment-path-check.json)。这还是本机子路径验证；公开发布和匿名线上结果在实际完成后补入。
+
+远端 `v2.0.0` 标签已读回核对，指向 `8059fb954e089a7880a4d1cea52941f03deb5c54`，保留为上个正式版本的恢复目标。无仓库可见性、自定义域名或旧仓变更。
+
+## V2 历史发布状态（2026-10-12）
 
 V2 已通过本地和远端验收并发布。功能发布提交：`e946a67b00dd103ead319b68af64300f35f14228`；[PR #1](https://github.com/Callmecx/chenxi-devlab-2026/pull/1) 在完整 [PR CI](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38259667428) 成功后合并。
 

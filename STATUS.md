@@ -1,4 +1,4 @@
-# V3 development checkpoint — 2026-10-12 23:56 +08
+# V3 validated local checkpoint — 2026-10-13
 
 Only target: `Callmecx/chenxi-devlab-2026`; branch `feature/intelligence-lab-v3-rebuild`; released rollback baseline `v2.0.0` / `8059fb9`.
 
@@ -7,9 +7,11 @@ Only target: `Callmecx/chenxi-devlab-2026`; branch `feature/intelligence-lab-v3-
 - Retained practical product/activity/warehouse workflows at `/intelligence/tasks`; migrated their existing browser assertions without removing outcomes. Main, shop, pulse and other works remain in place.
 - Actual checks so far: 308/308 unit/API tests; full typecheck and lint; all three static applications, WeChat resources and App resources built. No device/store release is claimed.
 - V2 baseline and V3 round-1/round-2 real Chrome screenshots retained. Independent review identified and drove fixes for phone cropping, wide-screen heading wrapping, touch targets, material/lighting, camera reacquisition and stale file import.
-- Production V3 browser batch: 25/26 passed; the remaining camera comparison passed after closing the real manual-camera notice before screenshot comparison, with its pixel threshold unchanged. A fresh whole-site batch is still required; do not report 26/26 as one completed run yet.
+- Final production whole-site batch on `dc336f1`: **93/93 passed**, zero failures/skips/retries. All 26 flagship checks, 3 new Worker construction/postMessage/stale-error regressions and the original 64 whole-site checks passed in one run. Original failed runs remain in local evidence.
+- Actual 75.720-second recording includes route closure/detour, explicit UNREACHABLE, same-run recovery, isolated strategy comparison and read-only replay. Public sanitized video manifest and SHA-256 accompany the reviewed Release candidate.
+- Six active 10-second performance samples: desktop render P50/P95 16.7/16.8ms; desktop Chrome phone viewport 33.3/33.5ms. No real-phone GPU claim. Final printable facts and white background were recaptured.
 
-Next: final production build from this checkpoint, comparison-panel recapture, real failure/recovery video, active scene performance samples, complete browser regression, repository-base smoke, then authorized main publication and anonymous deployed-revision verification. Current online site remains V2 until that release completes.
+Repository-base smoke passed at 00:35 +08: 9 routes at 390/1440, 4 business flows, 4 evidence assets, zero page errors/missing assets; clean source `dc336f1` matches build metadata. Next: authorized feature PR and full GitHub CI, main publication, anonymous deployed-revision verification, reviewed video Release attachment. Online remains V2 until actual Pages success is recorded. Resume from this branch, preserving the existing V2 tag and the original three public paths.
 
 See `docs/intelligence-lab-v3/` for the baseline, rules, runtime boundary, visual review and demo guide. Old private portfolio, other repositories and withdrawn C-drive cleanup remain untouched.
 

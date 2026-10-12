@@ -235,6 +235,11 @@ for (const width of [390, 1440]) {
   test(`${width}px布局截图：入口、真实任务详情和二维仓库均无横向溢出`, async ({ page }) => {
     await page.setViewportSize({ width, height: 1000 });
     await page.goto('/#/intelligence');
+    if (width <= 740) {
+      await expect(page.locator('.il-flat-graph')).toBeVisible();
+      expect(await page.evaluate(() => performance.getEntriesByType('resource').some(entry => entry.name.includes('IntelligenceScene-') && entry.name.endsWith('.js')))).toBe(false);
+      await page.getByRole('button', { name: '启用 3D', exact: true }).click();
+    }
     await expect(page.locator('[data-testid="intelligence-scene"] canvas')).toBeVisible();
     const canvasBox = await page.locator('[data-testid="intelligence-scene"] canvas').boundingBox();
     const controlsBox = await page.locator('.il-controls').boundingBox();

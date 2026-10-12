@@ -28,10 +28,11 @@ const cases = [
   },
   {
     id: "lab-mobile",
-    label: "智能演化 Lab / mobile",
+    label: "智能演化 Lab 默认 2D / mobile",
     route: "#/intelligence",
     device: "mobile",
     heading: "在行动中演化",
+    labMode: "default-2d",
   },
   {
     id: "h5-mobile",
@@ -295,6 +296,10 @@ for (const target of cases) {
             .querySelector(".wk-mode p,.select-mode-copy")
             ?.textContent?.replace(/\s+/g, " ")
             .trim() || null,
+        canvasCount: document.querySelectorAll("canvas").length,
+        canEnable3D: Array.from(document.querySelectorAll("button")).some(
+          (button) => button.textContent?.includes("启用 3D"),
+        ),
       }));
       if (lhr.runtimeError)
         throw new Error(
@@ -315,6 +320,13 @@ for (const target of cases) {
       if (target.localMode && !entry.page.mode?.includes("本地演示"))
         throw new Error(
           "Expected fresh-profile local demo mode; refusing to combine service-mode results.",
+        );
+      if (
+        target.labMode === "default-2d" &&
+        (entry.page.canvasCount !== 0 || !entry.page.canEnable3D)
+      )
+        throw new Error(
+          "Lab mobile must show its default 2D view and explicit Enable 3D control; do not label a different mode as this measurement.",
         );
       entry.metrics = {
         performance:
@@ -369,14 +381,32 @@ for (const directory of await readdir(resolve(root, ".local/performance"), {
   if (!directory.isDirectory() || directory.name === sessionId) continue;
   const previous = resolve(root, ".local/performance", directory.name);
   const names = await readdir(previous);
-  if (names.includes("run-manifest.json")) continue;
+  let interruptionReason =
+    "Earlier interrupted tooling attempt without a completed manifest; retained outside this batch statistics.";
+  if (names.includes("run-manifest.json")) {
+    const manifest = JSON.parse(
+      await readFile(resolve(previous, "run-manifest.json"), "utf8"),
+    );
+    if (
+      manifest.runs?.length === cases.length * repetitions &&
+      !manifest.interruption
+    )
+      continue;
+    interruptionReason =
+      manifest.interruption?.reason ||
+      "Earlier batch stopped before all planned samples completed; retained outside this batch statistics.";
+  } else if (names.includes("interruption.json")) {
+    const interruption = JSON.parse(
+      await readFile(resolve(previous, "interruption.json"), "utf8"),
+    );
+    interruptionReason = interruption.reason;
+  }
   for (const name of names.filter((name) => /-\d+\.json$/.test(name))) {
     try {
       const lhr = JSON.parse(await readFile(resolve(previous, name), "utf8"));
       if (!lhr.lighthouseVersion) continue;
       priorInterruptedMeasurements.push({
-        reason:
-          "Earlier interrupted tooling attempt without a completed manifest; retained outside this batch statistics.",
+        reason: interruptionReason,
         rawJson: localPath(resolve(previous, name)),
         fetchTime: lhr.fetchTime,
         url: lhr.finalDisplayedUrl,
@@ -467,6 +497,8 @@ const summary = {
     note: "Working tree may contain uncommitted changes; dist SHA-256 is the measured artifact fingerprint.",
   },
   settings,
+  labMobileMode:
+    "default-2d; full task controls retained, explicit 3D opt-in not measured in this navigation batch",
   build: { initial: initialDist, final: finalDist, unchanged: buildUnchanged },
   storage: {
     rawDirectory: localPath(sessionDir),
@@ -496,6 +528,8 @@ const lines = [
   `状态：**${summary.status}**；实际运行 ${runs.length} 次，有效 ${summary.validRuns} 次。每个固定页面 / 设备条件计划 3 次，串行执行，不自动重跑或丢弃低分。`,
   "",
   "这是本机生产构建的导航实验测量，不是公网真实访客数据、手机实测或后端业务链路耗时。H5 与商城使用全新浏览器身份的默认本地演示入口；未预填服务端模式或把 API 业务验收成绩混入 Lighthouse。",
+  "",
+  "本轮手机 Lab 默认使用保留完整任务流程的二维视图，并保留一键启用 3D。脚本验证初始没有 canvas 且存在启用 3D 按钮；这里的 Lab 指标只描述默认 2D 导航，不代表启用 3D 后的加载、帧率或交互性能。首批不同构建 / 默认视图的结果保存在 LIGHTHOUSE_BEFORE.md 与 lighthouse-before.json，不覆盖或混入本轮样本。",
   "",
   "## 固定条件",
   "",
@@ -563,12 +597,12 @@ if (priorInterruptedMeasurements.length) {
   lines.push(
     "## 先前中断尝试（单列保留）",
     "",
-    "以下真实测量在工具执行中断前已产生原始报告，不纳入本批三次统计，也未因低分删除。首次中断来自 Chrome 清理方法返回 void 与脚本 Promise 假设不符；修复的只是清理脚本，业务代码及构建未因此修改。",
+    "以下真实测量在批次中断前已产生原始报告，不纳入本批三次统计，也未因低分删除。每项记录具体中断原因；需要修复真实页面问题并重建时，不将构建前后的样本混合统计。",
     "",
   );
   for (const previous of priorInterruptedMeasurements)
     lines.push(
-      `- ${previous.fetchTime} ${previous.url}：Performance ${previous.performance} / Accessibility ${previous.accessibility}；LCP ${Math.round(previous.lcpMs)}ms，TBT ${Math.round(previous.tbtMs)}ms，CLS ${previous.cls}。原始 JSON：\`${previous.rawJson}\`（同名 HTML 同目录）。`,
+      `- ${previous.fetchTime} ${previous.url}：Performance ${previous.performance} / Accessibility ${previous.accessibility}；LCP ${Math.round(previous.lcpMs)}ms，TBT ${Math.round(previous.tbtMs)}ms，CLS ${previous.cls}。原始 JSON：\`${previous.rawJson}\`（同名 HTML 同目录）。中断原因：${previous.reason}`,
     );
   lines.push("");
 }

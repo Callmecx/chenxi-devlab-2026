@@ -48,7 +48,7 @@ const goal = reactive(defaultGoal("product"));
 const mode = ref<"local-simulation" | "recorded-replay">("local-simulation");
 const running = ref(false),
   busy = ref(false),
-  twoD = ref(false),
+  twoD = ref(matchMedia("(max-width:740px)").matches),
   reduced = ref(false),
   speed = ref(1),
   fault = ref<Fault>("none");
@@ -384,6 +384,9 @@ onBeforeUnmount(() => {
         ><button v-else @click="guideStep = -1">开始体验</button></template
       >
     </div>
+    <p v-if="twoD" class="il-small">
+      轻量二维保留完整任务操作，也可随时启用 3D。
+    </p>
     <section class="il-console" aria-label="智能演化实验室操作台">
       <aside class="il-task" :class="{ 'task-collapsed': taskCollapsed }">
         <button

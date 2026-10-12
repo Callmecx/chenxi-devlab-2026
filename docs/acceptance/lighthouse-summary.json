@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "startedAt": "2026-10-12T13:13:32.875Z",
-  "completedAt": "2026-10-12T13:16:22.444Z",
+  "startedAt": "2026-10-12T13:33:29.190Z",
+  "completedAt": "2026-10-12T13:35:59.718Z",
   "scope": "Local production-build navigation lab measurements; not real-user monitoring, production traffic, device certification, or service-flow timing.",
   "status": "measured",
   "baseUrl": "http://127.0.0.1:4177/",
@@ -20,7 +20,7 @@
     "release": "10.0.26200",
     "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
     "logicalCpus": 16,
-    "gitRevision": "b62db8d0beb9d55c59649767a7281b500a07020d",
+    "gitRevision": "e3357f39b9bb9d90e283990db9a1b6fecc99a6c8",
     "note": "Working tree may contain uncommitted changes; dist SHA-256 is the measured artifact fingerprint."
   },
   "settings": {
@@ -75,21 +75,22 @@
       "maxWaitForLoad": 45000
     }
   },
+  "labMobileMode": "default-2d; full task controls retained, explicit 3D opt-in not measured in this navigation batch",
   "build": {
     "initial": {
-      "sha256": "da305aeb8dc1377f45ce39c1f1a27e73a111bca3c835cf40c0ab786457087a8f",
-      "fileCount": 44
+      "sha256": "65b92b6013f3e37d38760cddc758f433a3d67ea6f37a455a9ac94546e9dbf03f",
+      "fileCount": 48
     },
     "final": {
-      "sha256": "da305aeb8dc1377f45ce39c1f1a27e73a111bca3c835cf40c0ab786457087a8f",
-      "fileCount": 44
+      "sha256": "65b92b6013f3e37d38760cddc758f433a3d67ea6f37a455a9ac94546e9dbf03f",
+      "fileCount": 48
     },
     "unchanged": true
   },
   "storage": {
-    "rawDirectory": ".local/performance/2026-10-12T13-13-32-875Z",
-    "chromeProfiles": ".local/performance/2026-10-12T13-13-32-875Z/profiles",
-    "temporaryDirectory": ".local/performance/2026-10-12T13-13-32-875Z/temp"
+    "rawDirectory": ".local/performance/2026-10-12T13-33-29-190Z",
+    "chromeProfiles": ".local/performance/2026-10-12T13-33-29-190Z/profiles",
+    "temporaryDirectory": ".local/performance/2026-10-12T13-33-29-190Z/temp"
   },
   "groups": [
     {
@@ -102,8 +103,8 @@
       "expectedRuns": 3,
       "metrics": {
         "performance": {
-          "median": 91,
-          "min": 87,
+          "median": 89,
+          "min": 88,
           "max": 91,
           "samples": 3
         },
@@ -114,15 +115,15 @@
           "samples": 3
         },
         "lcpMs": {
-          "median": 2121.3571,
-          "min": 2041.8801000000003,
-          "max": 2132.8399,
+          "median": 2151.7648,
+          "min": 2125.8289,
+          "max": 2166.2315,
           "samples": 3
         },
         "tbtMs": {
-          "median": 309,
-          "min": 285.0000000000002,
-          "max": 423.0000000000002,
+          "median": 344,
+          "min": 288,
+          "max": 374.9999999999998,
           "samples": 3
         },
         "cls": {
@@ -132,7 +133,7 @@
           "samples": 3
         }
       },
-      "below90": [],
+      "below90": ["performance"],
       "allSamplesAtLeast90": false,
       "issues": [
         {
@@ -142,40 +143,40 @@
           "score": 0.85,
           "weight": 10,
           "displayValue": "2.0 s",
-          "numericValue": 1953.8571,
+          "numericValue": 1953.7315,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
           "runs": ["home-mobile-1", "home-mobile-2", "home-mobile-3"],
-          "displayValues": ["2.0 s", "1.8 s"]
+          "displayValues": ["2.0 s"]
         },
         {
           "category": "performance",
           "id": "largest-contentful-paint",
           "title": "Largest Contentful Paint",
-          "score": 0.96,
+          "score": 0.95,
           "weight": 25,
-          "displayValue": "2.1 s",
-          "numericValue": 2121.3571,
+          "displayValue": "2.2 s",
+          "numericValue": 2166.2315,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
           "runs": ["home-mobile-1", "home-mobile-2", "home-mobile-3"],
-          "displayValues": ["2.1 s", "2.0 s"]
+          "displayValues": ["2.2 s", "2.1 s"]
         },
         {
           "category": "performance",
           "id": "total-blocking-time",
           "title": "Total Blocking Time",
-          "score": 0.8,
+          "score": 0.7,
           "weight": 30,
-          "displayValue": "290 ms",
-          "numericValue": 285.0000000000002,
+          "displayValue": "370 ms",
+          "numericValue": 374.9999999999998,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
           "runs": ["home-mobile-1", "home-mobile-2", "home-mobile-3"],
-          "displayValues": ["290 ms", "310 ms", "420 ms"]
+          "displayValues": ["370 ms", "340 ms", "290 ms"]
         },
         {
           "category": "performance",
@@ -184,11 +185,11 @@
           "score": 0.99,
           "weight": 10,
           "displayValue": "2.0 s",
-          "numericValue": 1953.8571,
+          "numericValue": 1953.7315,
           "scoreDisplayMode": "numeric",
           "nodes": [],
-          "occurrences": 1,
-          "runs": ["home-mobile-1"],
+          "occurrences": 3,
+          "runs": ["home-mobile-1", "home-mobile-2", "home-mobile-3"],
           "displayValues": ["2.0 s"]
         },
         {
@@ -226,35 +227,35 @@
           "nodes": [],
           "occurrences": 3,
           "runs": ["home-mobile-1", "home-mobile-2", "home-mobile-3"],
-          "displayValues": ["Est savings of 300 ms", "Est savings of 150 ms"]
+          "displayValues": ["Est savings of 300 ms"]
         },
         {
           "category": "performance",
           "id": "interactive",
           "title": "Time to Interactive",
-          "score": 0.99,
+          "score": 0.98,
           "weight": 0,
-          "displayValue": "2.3 s",
-          "numericValue": 2288.8571,
+          "displayValue": "2.4 s",
+          "numericValue": 2378.7315,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
           "runs": ["home-mobile-1", "home-mobile-2", "home-mobile-3"],
-          "displayValues": ["2.3 s"]
+          "displayValues": ["2.4 s", "2.3 s"]
         },
         {
           "category": "performance",
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.28,
+          "score": 0.14,
           "weight": 0,
-          "displayValue": "340 ms",
-          "numericValue": 335.0000000000002,
+          "displayValue": "420 ms",
+          "numericValue": 424.9999999999998,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
           "runs": ["home-mobile-1", "home-mobile-2", "home-mobile-3"],
-          "displayValues": ["340 ms", "360 ms", "470 ms"]
+          "displayValues": ["420 ms", "390 ms", "340 ms"]
         },
         {
           "category": "performance",
@@ -339,20 +340,20 @@
           "samples": 3
         },
         "accessibility": {
-          "median": 95,
-          "min": 95,
-          "max": 95,
+          "median": 100,
+          "min": 100,
+          "max": 100,
           "samples": 3
         },
         "lcpMs": {
-          "median": 448.2658,
-          "min": 446.1534,
-          "max": 448.4218,
+          "median": 447.9017,
+          "min": 445.3824,
+          "max": 450.1226,
           "samples": 3
         },
         "tbtMs": {
           "median": 35,
-          "min": 33,
+          "min": 32,
           "max": 39,
           "samples": 3
         },
@@ -460,37 +461,6 @@
         },
         {
           "category": "accessibility",
-          "id": "color-contrast",
-          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-          "score": 0,
-          "weight": 7,
-          "scoreDisplayMode": "binary",
-          "nodes": [
-            {
-              "selector": "a.visual-link > div.project-visual > div.pulse-art > span",
-              "snippet": "<span>",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #f1e9d7, background color: #e97149, font size: 70.5pt (94px), font weight: bold). Expected contrast ratio of 3:1"
-            },
-            {
-              "selector": "div.projects-grid > article.project-card > a.visual-link > div.project-visual",
-              "snippet": "<div class=\"project-visual pulse\" aria-hidden=\"true\">"
-            },
-            {
-              "selector": "a.visual-link > div.project-visual > div.pulse-art > b",
-              "snippet": "<b>",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.64 (foreground color: #f7efdb, background color: #e97149, font size: 34.5pt (46px), font weight: bold). Expected contrast ratio of 3:1"
-            },
-            {
-              "selector": "div.projects-grid > article.project-card > a.visual-link > div.project-visual",
-              "snippet": "<div class=\"project-visual pulse\" aria-hidden=\"true\">"
-            }
-          ],
-          "occurrences": 3,
-          "runs": ["home-desktop-1", "home-desktop-2", "home-desktop-3"],
-          "displayValues": []
-        },
-        {
-          "category": "accessibility",
           "id": "label-content-name-mismatch",
           "title": "Elements with visible text labels do not have matching accessible names.",
           "score": 0,
@@ -540,38 +510,38 @@
       "expectedRuns": 3,
       "metrics": {
         "performance": {
-          "median": 85,
-          "min": 85,
-          "max": 86,
+          "median": 95,
+          "min": 95,
+          "max": 95,
           "samples": 3
         },
         "accessibility": {
-          "median": 96,
-          "min": 96,
-          "max": 96,
+          "median": 100,
+          "min": 100,
+          "max": 100,
           "samples": 3
         },
         "lcpMs": {
-          "median": 2472.27725,
-          "min": 2458.0519999999997,
-          "max": 2474.0633749999997,
+          "median": 2475.556375,
+          "min": 2473.3532499999997,
+          "max": 2502.2136250000003,
           "samples": 3
         },
         "tbtMs": {
-          "median": 65,
-          "min": 53.99999999999977,
-          "max": 66.5,
+          "median": 68.5,
+          "min": 64.99999999999977,
+          "max": 89.00000000000023,
           "samples": 3
         },
         "cls": {
-          "median": 0.2068720379146919,
-          "min": 0.2068720379146919,
-          "max": 0.2068720379146919,
+          "median": 0,
+          "min": 0,
+          "max": 0,
           "samples": 3
         }
       },
-      "below90": ["performance"],
-      "allSamplesAtLeast90": false,
+      "below90": [],
+      "allSamplesAtLeast90": true,
       "issues": [
         {
           "category": "performance",
@@ -580,7 +550,7 @@
           "score": 0.82,
           "weight": 10,
           "displayValue": "2.1 s",
-          "numericValue": 2054.5519999999997,
+          "numericValue": 2057.056375,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
@@ -598,7 +568,7 @@
           "score": 0.9,
           "weight": 25,
           "displayValue": "2.5 s",
-          "numericValue": 2458.0519999999997,
+          "numericValue": 2475.556375,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
@@ -611,12 +581,12 @@
         },
         {
           "category": "performance",
-          "id": "cumulative-layout-shift",
-          "title": "Cumulative Layout Shift",
-          "score": 0.6,
-          "weight": 25,
-          "displayValue": "0.207",
-          "numericValue": 0.2068720379146919,
+          "id": "total-blocking-time",
+          "title": "Total Blocking Time",
+          "score": 0.99,
+          "weight": 30,
+          "displayValue": "70 ms",
+          "numericValue": 68.5,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
@@ -625,7 +595,7 @@
             "enterprise-mobile-2",
             "enterprise-mobile-3"
           ],
-          "displayValues": ["0.207"]
+          "displayValues": ["70 ms", "60 ms", "90 ms"]
         },
         {
           "category": "performance",
@@ -634,7 +604,7 @@
           "score": 0.99,
           "weight": 10,
           "displayValue": "2.1 s",
-          "numericValue": 2054.5519999999997,
+          "numericValue": 2057.056375,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
@@ -644,27 +614,6 @@
             "enterprise-mobile-3"
           ],
           "displayValues": ["2.1 s"]
-        },
-        {
-          "category": "performance",
-          "id": "cls-culprits-insight",
-          "title": "Layout shift culprits",
-          "score": 0,
-          "weight": 0,
-          "scoreDisplayMode": "numeric",
-          "nodes": [
-            {
-              "selector": "body > div#app > footer.site-footer",
-              "snippet": "<footer class=\"site-footer\">"
-            }
-          ],
-          "occurrences": 3,
-          "runs": [
-            "enterprise-mobile-1",
-            "enterprise-mobile-2",
-            "enterprise-mobile-3"
-          ],
-          "displayValues": []
         },
         {
           "category": "performance",
@@ -688,12 +637,12 @@
           "title": "Improve image delivery",
           "score": 0.5,
           "weight": 0,
-          "displayValue": "Est savings of 104 KiB",
+          "displayValue": "Est savings of 102 KiB",
           "scoreDisplayMode": "metricSavings",
           "nodes": [
             {
               "selector": "div.detail-body > section#project-evidence > button.screenshot-button > img",
-              "snippet": "<img data-v-31fc4e59=\"\" src=\"/evidence/enterpriseflow-dashboard.png\" alt=\"既有真实本地经营看板截图；画面明确标注演示环境，金额是模拟业务数据。\" loading=\"lazy\">"
+              "snippet": "<img data-v-b54213d8=\"\" src=\"/evidence/enterpriseflow-dashboard.png\" alt=\"既有真实本地经营看板截图；画面明确标注演示环境，金额是模拟业务数据。\" loading=\"lazy\">"
             }
           ],
           "occurrences": 3,
@@ -702,7 +651,7 @@
             "enterprise-mobile-2",
             "enterprise-mobile-3"
           ],
-          "displayValues": ["Est savings of 104 KiB"]
+          "displayValues": ["Est savings of 102 KiB"]
         },
         {
           "category": "performance",
@@ -744,7 +693,7 @@
           "score": 0.98,
           "weight": 0,
           "displayValue": "2.5 s",
-          "numericValue": 2491.0415999999996,
+          "numericValue": 2521.0451000000003,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
@@ -753,16 +702,16 @@
             "enterprise-mobile-2",
             "enterprise-mobile-3"
           ],
-          "displayValues": ["2.5 s"]
+          "displayValues": ["2.5 s", "2.6 s"]
         },
         {
           "category": "performance",
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.81,
+          "score": 0.72,
           "weight": 0,
-          "displayValue": "160 ms",
-          "numericValue": 157.99999999999955,
+          "displayValue": "180 ms",
+          "numericValue": 183,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
@@ -771,7 +720,7 @@
             "enterprise-mobile-2",
             "enterprise-mobile-3"
           ],
-          "displayValues": ["160 ms", "180 ms"]
+          "displayValues": ["180 ms", "170 ms", "210 ms"]
         },
         {
           "category": "performance",
@@ -811,27 +760,6 @@
         },
         {
           "category": "performance",
-          "id": "unsized-images",
-          "title": "Image elements do not have explicit `width` and `height`",
-          "score": 0.5,
-          "weight": 0,
-          "scoreDisplayMode": "metricSavings",
-          "nodes": [
-            {
-              "selector": "div.detail-body > section#project-evidence > button.screenshot-button > img",
-              "snippet": "<img data-v-31fc4e59=\"\" src=\"/evidence/enterpriseflow-dashboard.png\" alt=\"既有真实本地经营看板截图；画面明确标注演示环境，金额是模拟业务数据。\" loading=\"lazy\">"
-            }
-          ],
-          "occurrences": 3,
-          "runs": [
-            "enterprise-mobile-1",
-            "enterprise-mobile-2",
-            "enterprise-mobile-3"
-          ],
-          "displayValues": []
-        },
-        {
-          "category": "performance",
           "id": "bf-cache",
           "title": "Page prevented back/forward cache restoration",
           "score": 0,
@@ -848,85 +776,6 @@
           "displayValues": ["1 failure reason"]
         },
         {
-          "category": "performance",
-          "id": "layout-shifts",
-          "title": "Avoid large layout shifts",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "1 layout shift found",
-          "scoreDisplayMode": "metricSavings",
-          "nodes": [
-            {
-              "selector": "body > div#app > footer.site-footer",
-              "snippet": "<footer class=\"site-footer\">"
-            },
-            {
-              "selector": "div.detail-body > section#project-evidence > button.screenshot-button > img",
-              "snippet": "<img data-v-31fc4e59=\"\" src=\"/evidence/enterpriseflow-dashboard.png\" alt=\"既有真实本地经营看板截图；画面明确标注演示环境，金额是模拟业务数据。\" loading=\"lazy\">"
-            }
-          ],
-          "occurrences": 3,
-          "runs": [
-            "enterprise-mobile-1",
-            "enterprise-mobile-2",
-            "enterprise-mobile-3"
-          ],
-          "displayValues": ["1 layout shift found"]
-        },
-        {
-          "category": "accessibility",
-          "id": "color-contrast",
-          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-          "score": 0,
-          "weight": 7,
-          "scoreDisplayMode": "binary",
-          "nodes": [
-            {
-              "selector": "section#project-process > div.flow > div > span",
-              "snippet": "<span data-v-31fc4e59=\"\">",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.64 (foreground color: #cc562e, background color: #eeeee6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "div.detail-body > section#project-process > div.flow > div",
-              "snippet": "<div data-v-31fc4e59=\"\">"
-            },
-            {
-              "selector": "section#project-process > div.flow > div > span",
-              "snippet": "<span data-v-31fc4e59=\"\">",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.64 (foreground color: #cc562e, background color: #eeeee6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "div.detail-body > section#project-process > div.flow > div",
-              "snippet": "<div data-v-31fc4e59=\"\">"
-            },
-            {
-              "selector": "section#project-process > div.flow > div > span",
-              "snippet": "<span data-v-31fc4e59=\"\">",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.64 (foreground color: #cc562e, background color: #eeeee6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "div.detail-body > section#project-process > div.flow > div",
-              "snippet": "<div data-v-31fc4e59=\"\">"
-            },
-            {
-              "selector": "section#project-process > div.flow > div > span",
-              "snippet": "<span data-v-31fc4e59=\"\">",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.64 (foreground color: #cc562e, background color: #eeeee6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "div.detail-body > section#project-process > div.flow > div",
-              "snippet": "<div data-v-31fc4e59=\"\">"
-            }
-          ],
-          "occurrences": 3,
-          "runs": [
-            "enterprise-mobile-1",
-            "enterprise-mobile-2",
-            "enterprise-mobile-3"
-          ],
-          "displayValues": []
-        },
-        {
           "category": "accessibility",
           "id": "label-content-name-mismatch",
           "title": "Elements with visible text labels do not have matching accessible names.",
@@ -941,7 +790,7 @@
             },
             {
               "selector": "div.detail-layout > div.detail-body > section#project-evidence > button.screenshot-button",
-              "snippet": "<button data-v-31fc4e59=\"\" class=\"screenshot-button\" aria-label=\"放大项目证据图\">",
+              "snippet": "<button data-v-b54213d8=\"\" class=\"screenshot-button\" aria-label=\"放大项目证据图\">",
               "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
             }
           ],
@@ -952,37 +801,24 @@
             "enterprise-mobile-3"
           ],
           "displayValues": []
-        },
-        {
-          "category": "performance",
-          "id": "total-blocking-time",
-          "title": "Total Blocking Time",
-          "score": 0.99,
-          "weight": 30,
-          "displayValue": "70 ms",
-          "numericValue": 66.5,
-          "scoreDisplayMode": "numeric",
-          "nodes": [],
-          "occurrences": 2,
-          "runs": ["enterprise-mobile-2", "enterprise-mobile-3"],
-          "displayValues": ["70 ms"]
         }
       ]
     },
     {
       "id": "lab-mobile",
-      "label": "智能演化 Lab / mobile",
+      "label": "智能演化 Lab 默认 2D / mobile",
       "route": "#/intelligence",
       "device": "mobile",
       "heading": "在行动中演化",
+      "labMode": "default-2d",
       "url": "http://127.0.0.1:4177/#/intelligence",
       "validRuns": 3,
       "expectedRuns": 3,
       "metrics": {
         "performance": {
-          "median": 56.00000000000001,
-          "min": 50,
-          "max": 56.99999999999999,
+          "median": 95,
+          "min": 95,
+          "max": 95,
           "samples": 3
         },
         "accessibility": {
@@ -992,113 +828,68 @@
           "samples": 3
         },
         "lcpMs": {
-          "median": 5422.4616000000005,
-          "min": 5419.5218,
-          "max": 5620.277599999999,
+          "median": 2459.7804,
+          "min": 2453.41795,
+          "max": 2467.513,
           "samples": 3
         },
         "tbtMs": {
-          "median": 266,
-          "min": 239,
-          "max": 432.9999999999999,
+          "median": 29,
+          "min": 21.500000000000114,
+          "max": 44.5,
           "samples": 3
         },
         "cls": {
-          "median": 0.2068720379146919,
-          "min": 0.2068720379146919,
-          "max": 0.2068720379146919,
+          "median": 0,
+          "min": 0,
+          "max": 0,
           "samples": 3
         }
       },
-      "below90": ["performance"],
-      "allSamplesAtLeast90": false,
+      "below90": [],
+      "allSamplesAtLeast90": true,
       "issues": [
         {
           "category": "performance",
           "id": "first-contentful-paint",
           "title": "First Contentful Paint",
-          "score": 0.31,
+          "score": 0.78,
           "weight": 10,
-          "displayValue": "3.6 s",
-          "numericValue": 3625.7663500000003,
+          "displayValue": "2.2 s",
+          "numericValue": 2203.181625,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
           "runs": ["lab-mobile-1", "lab-mobile-2", "lab-mobile-3"],
-          "displayValues": ["3.6 s", "3.7 s"]
+          "displayValues": ["2.2 s"]
         },
         {
           "category": "performance",
           "id": "largest-contentful-paint",
           "title": "Largest Contentful Paint",
-          "score": 0.2,
+          "score": 0.9,
           "weight": 25,
-          "displayValue": "5.4 s",
-          "numericValue": 5419.5218,
+          "displayValue": "2.5 s",
+          "numericValue": 2453.41795,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
           "runs": ["lab-mobile-1", "lab-mobile-2", "lab-mobile-3"],
-          "displayValues": ["5.4 s", "5.6 s"]
-        },
-        {
-          "category": "performance",
-          "id": "total-blocking-time",
-          "title": "Total Blocking Time",
-          "score": 0.85,
-          "weight": 30,
-          "displayValue": "240 ms",
-          "numericValue": 239,
-          "scoreDisplayMode": "numeric",
-          "nodes": [],
-          "occurrences": 3,
-          "runs": ["lab-mobile-1", "lab-mobile-2", "lab-mobile-3"],
-          "displayValues": ["240 ms", "270 ms", "430 ms"]
-        },
-        {
-          "category": "performance",
-          "id": "cumulative-layout-shift",
-          "title": "Cumulative Layout Shift",
-          "score": 0.6,
-          "weight": 25,
-          "displayValue": "0.207",
-          "numericValue": 0.2068720379146919,
-          "scoreDisplayMode": "numeric",
-          "nodes": [],
-          "occurrences": 3,
-          "runs": ["lab-mobile-1", "lab-mobile-2", "lab-mobile-3"],
-          "displayValues": ["0.207"]
+          "displayValues": ["2.5 s"]
         },
         {
           "category": "performance",
           "id": "speed-index",
           "title": "Speed Index",
-          "score": 0.86,
+          "score": 0.99,
           "weight": 10,
-          "displayValue": "3.6 s",
-          "numericValue": 3625.7663500000003,
+          "displayValue": "2.2 s",
+          "numericValue": 2203.181625,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
           "runs": ["lab-mobile-1", "lab-mobile-2", "lab-mobile-3"],
-          "displayValues": ["3.6 s", "3.7 s"]
-        },
-        {
-          "category": "performance",
-          "id": "cls-culprits-insight",
-          "title": "Layout shift culprits",
-          "score": 0,
-          "weight": 0,
-          "scoreDisplayMode": "numeric",
-          "nodes": [
-            {
-              "selector": "body > div#app > footer.site-footer",
-              "snippet": "<footer class=\"site-footer\">"
-            }
-          ],
-          "occurrences": 3,
-          "runs": ["lab-mobile-1", "lab-mobile-2", "lab-mobile-3"],
-          "displayValues": []
+          "displayValues": ["2.2 s"]
         },
         {
           "category": "performance",
@@ -1141,29 +932,15 @@
           "category": "performance",
           "id": "interactive",
           "title": "Time to Interactive",
-          "score": 0.7,
+          "score": 0.98,
           "weight": 0,
-          "displayValue": "5.5 s",
-          "numericValue": 5542.0218,
+          "displayValue": "2.5 s",
+          "numericValue": 2453.4179500000005,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
           "runs": ["lab-mobile-1", "lab-mobile-2", "lab-mobile-3"],
-          "displayValues": ["5.5 s", "5.6 s", "5.8 s"]
-        },
-        {
-          "category": "performance",
-          "id": "max-potential-fid",
-          "title": "Max Potential First Input Delay",
-          "score": 0.51,
-          "weight": 0,
-          "displayValue": "250 ms",
-          "numericValue": 245,
-          "scoreDisplayMode": "numeric",
-          "nodes": [],
-          "occurrences": 3,
-          "runs": ["lab-mobile-1", "lab-mobile-2", "lab-mobile-3"],
-          "displayValues": ["250 ms", "280 ms", "370 ms"]
+          "displayValues": ["2.5 s"]
         },
         {
           "category": "performance",
@@ -1185,13 +962,13 @@
           "title": "Reduce unused JavaScript",
           "score": 0,
           "weight": 0,
-          "displayValue": "Est savings of 265 KiB",
-          "numericValue": 1350,
+          "displayValue": "Est savings of 69 KiB",
+          "numericValue": 450,
           "scoreDisplayMode": "metricSavings",
           "nodes": [],
           "occurrences": 3,
           "runs": ["lab-mobile-1", "lab-mobile-2", "lab-mobile-3"],
-          "displayValues": ["Est savings of 265 KiB"]
+          "displayValues": ["Est savings of 69 KiB"]
         },
         {
           "category": "performance",
@@ -1205,24 +982,6 @@
           "occurrences": 3,
           "runs": ["lab-mobile-1", "lab-mobile-2", "lab-mobile-3"],
           "displayValues": ["1 failure reason"]
-        },
-        {
-          "category": "performance",
-          "id": "layout-shifts",
-          "title": "Avoid large layout shifts",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "1 layout shift found",
-          "scoreDisplayMode": "metricSavings",
-          "nodes": [
-            {
-              "selector": "body > div#app > footer.site-footer",
-              "snippet": "<footer class=\"site-footer\">"
-            }
-          ],
-          "occurrences": 3,
-          "runs": ["lab-mobile-1", "lab-mobile-2", "lab-mobile-3"],
-          "displayValues": ["1 layout shift found"]
         },
         {
           "category": "accessibility",
@@ -1249,17 +1008,17 @@
         },
         {
           "category": "performance",
-          "id": "mainthread-work-breakdown",
-          "title": "Minimize main-thread work",
-          "score": 0,
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.99,
           "weight": 0,
-          "displayValue": "2.1 s",
-          "numericValue": 2115.7480000000023,
-          "scoreDisplayMode": "metricSavings",
+          "displayValue": "70 ms",
+          "numericValue": 72,
+          "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 1,
           "runs": ["lab-mobile-3"],
-          "displayValues": ["2.1 s"]
+          "displayValues": ["70 ms"]
         }
       ]
     },
@@ -1274,9 +1033,9 @@
       "expectedRuns": 3,
       "metrics": {
         "performance": {
-          "median": 87,
-          "min": 84,
-          "max": 88,
+          "median": 93,
+          "min": 92,
+          "max": 93,
           "samples": 3
         },
         "accessibility": {
@@ -1286,15 +1045,15 @@
           "samples": 3
         },
         "lcpMs": {
-          "median": 2169.1122,
-          "min": 2097.361,
-          "max": 2191.3917,
+          "median": 2102.8127,
+          "min": 2096.1485000000002,
+          "max": 2122.6741,
           "samples": 3
         },
         "tbtMs": {
-          "median": 424,
-          "min": 380,
-          "max": 532,
+          "median": 246,
+          "min": 236.00000000000023,
+          "max": 289.0000000000002,
           "samples": 3
         },
         "cls": {
@@ -1304,8 +1063,8 @@
           "samples": 3
         }
       },
-      "below90": ["performance"],
-      "allSamplesAtLeast90": false,
+      "below90": [],
+      "allSamplesAtLeast90": true,
       "issues": [
         {
           "category": "performance",
@@ -1314,54 +1073,40 @@
           "score": 0.85,
           "weight": 10,
           "displayValue": "2.0 s",
-          "numericValue": 1954.3917000000001,
+          "numericValue": 1953.1741,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
           "runs": ["h5-mobile-1", "h5-mobile-2", "h5-mobile-3"],
-          "displayValues": ["2.0 s", "1.8 s"]
+          "displayValues": ["2.0 s"]
         },
         {
           "category": "performance",
           "id": "largest-contentful-paint",
           "title": "Largest Contentful Paint",
-          "score": 0.95,
+          "score": 0.96,
           "weight": 25,
-          "displayValue": "2.2 s",
-          "numericValue": 2191.3917,
+          "displayValue": "2.1 s",
+          "numericValue": 2122.6741,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
           "runs": ["h5-mobile-1", "h5-mobile-2", "h5-mobile-3"],
-          "displayValues": ["2.2 s", "2.1 s"]
+          "displayValues": ["2.1 s"]
         },
         {
           "category": "performance",
           "id": "total-blocking-time",
           "title": "Total Blocking Time",
-          "score": 0.65,
+          "score": 0.8,
           "weight": 30,
-          "displayValue": "420 ms",
-          "numericValue": 424,
+          "displayValue": "290 ms",
+          "numericValue": 289.0000000000002,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
           "runs": ["h5-mobile-1", "h5-mobile-2", "h5-mobile-3"],
-          "displayValues": ["420 ms", "380 ms", "530 ms"]
-        },
-        {
-          "category": "performance",
-          "id": "speed-index",
-          "title": "Speed Index",
-          "score": 0.99,
-          "weight": 10,
-          "displayValue": "2.0 s",
-          "numericValue": 1954.3917000000001,
-          "scoreDisplayMode": "numeric",
-          "nodes": [],
-          "occurrences": 2,
-          "runs": ["h5-mobile-1", "h5-mobile-2"],
-          "displayValues": ["2.0 s"]
+          "displayValues": ["290 ms", "250 ms", "240 ms"]
         },
         {
           "category": "performance",
@@ -1398,35 +1143,35 @@
           "nodes": [],
           "occurrences": 3,
           "runs": ["h5-mobile-1", "h5-mobile-2", "h5-mobile-3"],
-          "displayValues": ["Est savings of 450 ms", "Est savings of 300 ms"]
+          "displayValues": ["Est savings of 450 ms"]
         },
         {
           "category": "performance",
           "id": "interactive",
           "title": "Time to Interactive",
-          "score": 0.98,
+          "score": 0.99,
           "weight": 0,
-          "displayValue": "2.4 s",
-          "numericValue": 2428.3917,
+          "displayValue": "2.3 s",
+          "numericValue": 2292.1741,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
           "runs": ["h5-mobile-1", "h5-mobile-2", "h5-mobile-3"],
-          "displayValues": ["2.4 s"]
+          "displayValues": ["2.3 s", "2.2 s"]
         },
         {
           "category": "performance",
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.1,
+          "score": 0.27,
           "weight": 0,
-          "displayValue": "470 ms",
-          "numericValue": 474,
+          "displayValue": "340 ms",
+          "numericValue": 339.0000000000002,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
           "runs": ["h5-mobile-1", "h5-mobile-2", "h5-mobile-3"],
-          "displayValues": ["470 ms", "430 ms", "580 ms"]
+          "displayValues": ["340 ms", "300 ms", "290 ms"]
         },
         {
           "category": "performance",
@@ -1501,6 +1246,20 @@
           "occurrences": 3,
           "runs": ["h5-mobile-1", "h5-mobile-2", "h5-mobile-3"],
           "displayValues": []
+        },
+        {
+          "category": "performance",
+          "id": "speed-index",
+          "title": "Speed Index",
+          "score": 0.99,
+          "weight": 10,
+          "displayValue": "2.0 s",
+          "numericValue": 1954.8127,
+          "scoreDisplayMode": "numeric",
+          "nodes": [],
+          "occurrences": 1,
+          "runs": ["h5-mobile-2"],
+          "displayValues": ["2.0 s"]
         }
       ]
     },
@@ -1521,21 +1280,21 @@
           "samples": 3
         },
         "accessibility": {
-          "median": 96,
-          "min": 96,
-          "max": 96,
+          "median": 100,
+          "min": 100,
+          "max": 100,
           "samples": 3
         },
         "lcpMs": {
-          "median": 3049.2046000000005,
-          "min": 3036.3193499999998,
-          "max": 3053.3641,
+          "median": 3040.7131999999997,
+          "min": 3038.3446500000005,
+          "max": 3045.7663500000003,
           "samples": 3
         },
         "tbtMs": {
-          "median": 46,
-          "min": 6,
-          "max": 49,
+          "median": 7.5,
+          "min": 7,
+          "max": 35,
           "samples": 3
         },
         "cls": {
@@ -1552,10 +1311,10 @@
           "category": "performance",
           "id": "first-contentful-paint",
           "title": "First Contentful Paint",
-          "score": 0.64,
+          "score": 0.65,
           "weight": 10,
           "displayValue": "2.6 s",
-          "numericValue": 2576.6705,
+          "numericValue": 2570.953875,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
@@ -1569,12 +1328,12 @@
           "score": 0.77,
           "weight": 25,
           "displayValue": "3.0 s",
-          "numericValue": 3049.2046000000005,
+          "numericValue": 3038.3446500000005,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
           "runs": ["shop-mobile-1", "shop-mobile-2", "shop-mobile-3"],
-          "displayValues": ["3.0 s", "3.1 s"]
+          "displayValues": ["3.0 s"]
         },
         {
           "category": "performance",
@@ -1583,7 +1342,7 @@
           "score": 0.97,
           "weight": 10,
           "displayValue": "2.6 s",
-          "numericValue": 2576.6705,
+          "numericValue": 2570.953875,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
@@ -1622,26 +1381,12 @@
           "score": 0.95,
           "weight": 0,
           "displayValue": "3.1 s",
-          "numericValue": 3148.204600000001,
+          "numericValue": 3073.5446500000007,
           "scoreDisplayMode": "numeric",
           "nodes": [],
           "occurrences": 3,
           "runs": ["shop-mobile-1", "shop-mobile-2", "shop-mobile-3"],
           "displayValues": ["3.1 s"]
-        },
-        {
-          "category": "performance",
-          "id": "max-potential-fid",
-          "title": "Max Potential First Input Delay",
-          "score": 0.96,
-          "weight": 0,
-          "displayValue": "100 ms",
-          "numericValue": 99,
-          "scoreDisplayMode": "numeric",
-          "nodes": [],
-          "occurrences": 2,
-          "runs": ["shop-mobile-1", "shop-mobile-2"],
-          "displayValues": ["100 ms"]
         },
         {
           "category": "performance",
@@ -1664,7 +1409,7 @@
           "score": 0,
           "weight": 0,
           "displayValue": "Est savings of 157 KiB",
-          "numericValue": 750,
+          "numericValue": 900,
           "scoreDisplayMode": "metricSavings",
           "nodes": [],
           "occurrences": 3,
@@ -1672,26 +1417,18 @@
           "displayValues": ["Est savings of 157 KiB"]
         },
         {
-          "category": "accessibility",
-          "id": "color-contrast",
-          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-          "score": 0,
-          "weight": 7,
-          "scoreDisplayMode": "binary",
-          "nodes": [
-            {
-              "selector": "uni-view.select-mode > uni-view > uni-text.select-mode-copy > span",
-              "snippet": "<span>",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #64705f, background color: #e5e8dc, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "uni-page > uni-page-wrapper > uni-page-body > uni-view.select-mode",
-              "snippet": "<uni-view data-v-f9b0a2b6=\"\" class=\"select-mode\">"
-            }
-          ],
-          "occurrences": 3,
-          "runs": ["shop-mobile-1", "shop-mobile-2", "shop-mobile-3"],
-          "displayValues": []
+          "category": "performance",
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.98,
+          "weight": 0,
+          "displayValue": "90 ms",
+          "numericValue": 85,
+          "scoreDisplayMode": "numeric",
+          "nodes": [],
+          "occurrences": 1,
+          "runs": ["shop-mobile-3"],
+          "displayValues": ["90 ms"]
         }
       ]
     }
@@ -1702,17 +1439,17 @@
       "caseId": "home-mobile",
       "repetition": 1,
       "requestedUrl": "http://127.0.0.1:4177/#/",
-      "startedAt": "2026-10-12T13:13:33.546Z",
+      "startedAt": "2026-10-12T13:33:30.436Z",
       "status": "passed",
       "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/home-mobile-1.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/home-mobile-1.html"
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/home-mobile-1.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/home-mobile-1.html"
       },
       "finalDisplayedUrl": "http://127.0.0.1:4177/#/",
       "finalUrl": "http://127.0.0.1:4177/",
       "lighthouseVersion": "13.5.0",
       "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:13:35.672Z",
+      "fetchTime": "2026-10-12T13:33:32.490Z",
       "warnings": [],
       "issues": [
         {
@@ -1722,7 +1459,7 @@
           "score": 0.85,
           "weight": 10,
           "displayValue": "2.0 s",
-          "numericValue": 1953.8571,
+          "numericValue": 1953.7315,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -1730,10 +1467,10 @@
           "category": "performance",
           "id": "largest-contentful-paint",
           "title": "Largest Contentful Paint",
-          "score": 0.96,
+          "score": 0.95,
           "weight": 25,
-          "displayValue": "2.1 s",
-          "numericValue": 2121.3571,
+          "displayValue": "2.2 s",
+          "numericValue": 2166.2315,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -1741,10 +1478,10 @@
           "category": "performance",
           "id": "total-blocking-time",
           "title": "Total Blocking Time",
-          "score": 0.8,
+          "score": 0.7,
           "weight": 30,
-          "displayValue": "290 ms",
-          "numericValue": 285.0000000000002,
+          "displayValue": "370 ms",
+          "numericValue": 374.9999999999998,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -1755,7 +1492,7 @@
           "score": 0.99,
           "weight": 10,
           "displayValue": "2.0 s",
-          "numericValue": 1953.8571,
+          "numericValue": 1953.7315,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -1791,10 +1528,10 @@
           "category": "performance",
           "id": "interactive",
           "title": "Time to Interactive",
-          "score": 0.99,
+          "score": 0.98,
           "weight": 0,
-          "displayValue": "2.3 s",
-          "numericValue": 2288.8571,
+          "displayValue": "2.4 s",
+          "numericValue": 2378.7315,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -1802,10 +1539,10 @@
           "category": "performance",
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.28,
+          "score": 0.14,
           "weight": 0,
-          "displayValue": "340 ms",
-          "numericValue": 335.0000000000002,
+          "displayValue": "420 ms",
+          "numericValue": 424.9999999999998,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -1870,33 +1607,35 @@
         "url": "http://127.0.0.1:4177/#/",
         "title": "从业务需求到工程交付 · Chenxi DevLab",
         "headings": ["从业务需求，到工程交付。*"],
-        "mode": null
+        "mode": null,
+        "canvasCount": 0,
+        "canEnable3D": false
       },
       "metrics": {
-        "performance": 91,
+        "performance": 88,
         "accessibility": 100,
-        "lcpMs": 2121.3571,
-        "tbtMs": 285.0000000000002,
+        "lcpMs": 2166.2315,
+        "tbtMs": 374.9999999999998,
         "cls": 0
       },
-      "finishedAt": "2026-10-12T13:13:41.832Z"
+      "finishedAt": "2026-10-12T13:33:41.114Z"
     },
     {
       "id": "home-mobile-2",
       "caseId": "home-mobile",
       "repetition": 2,
       "requestedUrl": "http://127.0.0.1:4177/#/",
-      "startedAt": "2026-10-12T13:13:41.833Z",
+      "startedAt": "2026-10-12T13:33:41.117Z",
       "status": "passed",
       "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/home-mobile-2.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/home-mobile-2.html"
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/home-mobile-2.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/home-mobile-2.html"
       },
       "finalDisplayedUrl": "http://127.0.0.1:4177/#/",
       "finalUrl": "http://127.0.0.1:4177/",
       "lighthouseVersion": "13.5.0",
       "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:13:43.514Z",
+      "fetchTime": "2026-10-12T13:33:43.168Z",
       "warnings": [],
       "issues": [
         {
@@ -1906,7 +1645,7 @@
           "score": 0.85,
           "weight": 10,
           "displayValue": "2.0 s",
-          "numericValue": 1953.3399,
+          "numericValue": 1954.7648,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -1916,8 +1655,8 @@
           "title": "Largest Contentful Paint",
           "score": 0.95,
           "weight": 25,
-          "displayValue": "2.1 s",
-          "numericValue": 2132.8399,
+          "displayValue": "2.2 s",
+          "numericValue": 2151.7648,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -1925,10 +1664,21 @@
           "category": "performance",
           "id": "total-blocking-time",
           "title": "Total Blocking Time",
-          "score": 0.78,
+          "score": 0.74,
           "weight": 30,
-          "displayValue": "310 ms",
-          "numericValue": 309,
+          "displayValue": "340 ms",
+          "numericValue": 344,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "speed-index",
+          "title": "Speed Index",
+          "score": 0.99,
+          "weight": 10,
+          "displayValue": "2.0 s",
+          "numericValue": 1954.7648,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -1967,7 +1717,7 @@
           "score": 0.99,
           "weight": 0,
           "displayValue": "2.3 s",
-          "numericValue": 2312.3399,
+          "numericValue": 2348.7648,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -1975,10 +1725,10 @@
           "category": "performance",
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.23,
+          "score": 0.18,
           "weight": 0,
-          "displayValue": "360 ms",
-          "numericValue": 359,
+          "displayValue": "390 ms",
+          "numericValue": 394,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -2043,43 +1793,45 @@
         "url": "http://127.0.0.1:4177/#/",
         "title": "从业务需求到工程交付 · Chenxi DevLab",
         "headings": ["从业务需求，到工程交付。*"],
-        "mode": null
+        "mode": null,
+        "canvasCount": 0,
+        "canEnable3D": false
       },
       "metrics": {
-        "performance": 91,
+        "performance": 89,
         "accessibility": 100,
-        "lcpMs": 2132.8399,
-        "tbtMs": 309,
+        "lcpMs": 2151.7648,
+        "tbtMs": 344,
         "cls": 0
       },
-      "finishedAt": "2026-10-12T13:13:52.034Z"
+      "finishedAt": "2026-10-12T13:33:51.824Z"
     },
     {
       "id": "home-mobile-3",
       "caseId": "home-mobile",
       "repetition": 3,
       "requestedUrl": "http://127.0.0.1:4177/#/",
-      "startedAt": "2026-10-12T13:13:52.036Z",
+      "startedAt": "2026-10-12T13:33:51.826Z",
       "status": "passed",
       "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/home-mobile-3.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/home-mobile-3.html"
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/home-mobile-3.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/home-mobile-3.html"
       },
       "finalDisplayedUrl": "http://127.0.0.1:4177/#/",
       "finalUrl": "http://127.0.0.1:4177/",
       "lighthouseVersion": "13.5.0",
       "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:13:54.080Z",
+      "fetchTime": "2026-10-12T13:33:53.905Z",
       "warnings": [],
       "issues": [
         {
           "category": "performance",
           "id": "first-contentful-paint",
           "title": "First Contentful Paint",
-          "score": 0.89,
+          "score": 0.85,
           "weight": 10,
-          "displayValue": "1.8 s",
-          "numericValue": 1805.3801,
+          "displayValue": "2.0 s",
+          "numericValue": 1956.8289,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -2089,8 +1841,8 @@
           "title": "Largest Contentful Paint",
           "score": 0.96,
           "weight": 25,
-          "displayValue": "2.0 s",
-          "numericValue": 2041.8801000000003,
+          "displayValue": "2.1 s",
+          "numericValue": 2125.8289,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -2098,10 +1850,21 @@
           "category": "performance",
           "id": "total-blocking-time",
           "title": "Total Blocking Time",
-          "score": 0.65,
+          "score": 0.8,
           "weight": 30,
-          "displayValue": "420 ms",
-          "numericValue": 423.0000000000002,
+          "displayValue": "290 ms",
+          "numericValue": 288,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "speed-index",
+          "title": "Speed Index",
+          "score": 0.99,
+          "weight": 10,
+          "displayValue": "2.0 s",
+          "numericValue": 1956.8289,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -2129,7 +1892,7 @@
           "title": "Render-blocking requests",
           "score": 0,
           "weight": 0,
-          "displayValue": "Est savings of 150 ms",
+          "displayValue": "Est savings of 300 ms",
           "scoreDisplayMode": "metricSavings",
           "nodes": []
         },
@@ -2140,7 +1903,7 @@
           "score": 0.99,
           "weight": 0,
           "displayValue": "2.3 s",
-          "numericValue": 2278.3801000000003,
+          "numericValue": 2294.8289000000004,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -2148,10 +1911,10 @@
           "category": "performance",
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.1,
+          "score": 0.27,
           "weight": 0,
-          "displayValue": "470 ms",
-          "numericValue": 473.0000000000002,
+          "displayValue": "340 ms",
+          "numericValue": 338,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -2162,7 +1925,7 @@
           "score": 0,
           "weight": 0,
           "displayValue": "Est savings of 38 KiB",
-          "numericValue": 150,
+          "numericValue": 300,
           "scoreDisplayMode": "metricSavings",
           "nodes": []
         },
@@ -2216,33 +1979,35 @@
         "url": "http://127.0.0.1:4177/#/",
         "title": "从业务需求到工程交付 · Chenxi DevLab",
         "headings": ["从业务需求，到工程交付。*"],
-        "mode": null
+        "mode": null,
+        "canvasCount": 0,
+        "canEnable3D": false
       },
       "metrics": {
-        "performance": 87,
+        "performance": 91,
         "accessibility": 100,
-        "lcpMs": 2041.8801000000003,
-        "tbtMs": 423.0000000000002,
+        "lcpMs": 2125.8289,
+        "tbtMs": 288,
         "cls": 0
       },
-      "finishedAt": "2026-10-12T13:14:02.351Z"
+      "finishedAt": "2026-10-12T13:34:02.324Z"
     },
     {
       "id": "home-desktop-1",
       "caseId": "home-desktop",
       "repetition": 1,
       "requestedUrl": "http://127.0.0.1:4177/#/",
-      "startedAt": "2026-10-12T13:14:02.353Z",
+      "startedAt": "2026-10-12T13:34:02.335Z",
       "status": "passed",
       "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/home-desktop-1.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/home-desktop-1.html"
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/home-desktop-1.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/home-desktop-1.html"
       },
       "finalDisplayedUrl": "http://127.0.0.1:4177/#/",
       "finalUrl": "http://127.0.0.1:4177/",
       "lighthouseVersion": "13.5.0",
       "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:14:04.423Z",
+      "fetchTime": "2026-10-12T13:34:04.532Z",
       "warnings": [],
       "issues": [
         {
@@ -2318,34 +2083,6 @@
         },
         {
           "category": "accessibility",
-          "id": "color-contrast",
-          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-          "score": 0,
-          "weight": 7,
-          "scoreDisplayMode": "binary",
-          "nodes": [
-            {
-              "selector": "a.visual-link > div.project-visual > div.pulse-art > span",
-              "snippet": "<span>",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #f1e9d7, background color: #e97149, font size: 70.5pt (94px), font weight: bold). Expected contrast ratio of 3:1"
-            },
-            {
-              "selector": "div.projects-grid > article.project-card > a.visual-link > div.project-visual",
-              "snippet": "<div class=\"project-visual pulse\" aria-hidden=\"true\">"
-            },
-            {
-              "selector": "a.visual-link > div.project-visual > div.pulse-art > b",
-              "snippet": "<b>",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.64 (foreground color: #f7efdb, background color: #e97149, font size: 34.5pt (46px), font weight: bold). Expected contrast ratio of 3:1"
-            },
-            {
-              "selector": "div.projects-grid > article.project-card > a.visual-link > div.project-visual",
-              "snippet": "<div class=\"project-visual pulse\" aria-hidden=\"true\">"
-            }
-          ]
-        },
-        {
-          "category": "accessibility",
           "id": "label-content-name-mismatch",
           "title": "Elements with visible text labels do not have matching accessible names.",
           "score": 0,
@@ -2384,33 +2121,35 @@
         "url": "http://127.0.0.1:4177/#/",
         "title": "从业务需求到工程交付 · Chenxi DevLab",
         "headings": ["从业务需求，到工程交付。*"],
-        "mode": null
+        "mode": null,
+        "canvasCount": 0,
+        "canEnable3D": false
       },
       "metrics": {
         "performance": 100,
-        "accessibility": 95,
-        "lcpMs": 448.2658,
+        "accessibility": 100,
+        "lcpMs": 450.1226,
         "tbtMs": 39,
         "cls": 0
       },
-      "finishedAt": "2026-10-12T13:14:13.027Z"
+      "finishedAt": "2026-10-12T13:34:13.074Z"
     },
     {
       "id": "home-desktop-2",
       "caseId": "home-desktop",
       "repetition": 2,
       "requestedUrl": "http://127.0.0.1:4177/#/",
-      "startedAt": "2026-10-12T13:14:13.029Z",
+      "startedAt": "2026-10-12T13:34:13.086Z",
       "status": "passed",
       "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/home-desktop-2.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/home-desktop-2.html"
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/home-desktop-2.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/home-desktop-2.html"
       },
       "finalDisplayedUrl": "http://127.0.0.1:4177/#/",
       "finalUrl": "http://127.0.0.1:4177/",
       "lighthouseVersion": "13.5.0",
       "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:14:15.176Z",
+      "fetchTime": "2026-10-12T13:34:14.953Z",
       "warnings": [],
       "issues": [
         {
@@ -2448,7 +2187,7 @@
           "score": 0.98,
           "weight": 0,
           "displayValue": "80 ms",
-          "numericValue": 83,
+          "numericValue": 82,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -2483,34 +2222,6 @@
           "displayValue": "1 failure reason",
           "scoreDisplayMode": "binary",
           "nodes": []
-        },
-        {
-          "category": "accessibility",
-          "id": "color-contrast",
-          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-          "score": 0,
-          "weight": 7,
-          "scoreDisplayMode": "binary",
-          "nodes": [
-            {
-              "selector": "a.visual-link > div.project-visual > div.pulse-art > span",
-              "snippet": "<span>",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #f1e9d7, background color: #e97149, font size: 70.5pt (94px), font weight: bold). Expected contrast ratio of 3:1"
-            },
-            {
-              "selector": "div.projects-grid > article.project-card > a.visual-link > div.project-visual",
-              "snippet": "<div class=\"project-visual pulse\" aria-hidden=\"true\">"
-            },
-            {
-              "selector": "a.visual-link > div.project-visual > div.pulse-art > b",
-              "snippet": "<b>",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.64 (foreground color: #f7efdb, background color: #e97149, font size: 34.5pt (46px), font weight: bold). Expected contrast ratio of 3:1"
-            },
-            {
-              "selector": "div.projects-grid > article.project-card > a.visual-link > div.project-visual",
-              "snippet": "<div class=\"project-visual pulse\" aria-hidden=\"true\">"
-            }
-          ]
         },
         {
           "category": "accessibility",
@@ -2552,33 +2263,35 @@
         "url": "http://127.0.0.1:4177/#/",
         "title": "从业务需求到工程交付 · Chenxi DevLab",
         "headings": ["从业务需求，到工程交付。*"],
-        "mode": null
+        "mode": null,
+        "canvasCount": 0,
+        "canEnable3D": false
       },
       "metrics": {
         "performance": 100,
-        "accessibility": 95,
-        "lcpMs": 446.1534,
-        "tbtMs": 33,
+        "accessibility": 100,
+        "lcpMs": 445.3824,
+        "tbtMs": 32,
         "cls": 0
       },
-      "finishedAt": "2026-10-12T13:14:23.793Z"
+      "finishedAt": "2026-10-12T13:34:21.912Z"
     },
     {
       "id": "home-desktop-3",
       "caseId": "home-desktop",
       "repetition": 3,
       "requestedUrl": "http://127.0.0.1:4177/#/",
-      "startedAt": "2026-10-12T13:14:23.794Z",
+      "startedAt": "2026-10-12T13:34:21.921Z",
       "status": "passed",
       "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/home-desktop-3.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/home-desktop-3.html"
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/home-desktop-3.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/home-desktop-3.html"
       },
       "finalDisplayedUrl": "http://127.0.0.1:4177/#/",
       "finalUrl": "http://127.0.0.1:4177/",
       "lighthouseVersion": "13.5.0",
       "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:14:25.861Z",
+      "fetchTime": "2026-10-12T13:34:23.959Z",
       "warnings": [],
       "issues": [
         {
@@ -2654,34 +2367,6 @@
         },
         {
           "category": "accessibility",
-          "id": "color-contrast",
-          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-          "score": 0,
-          "weight": 7,
-          "scoreDisplayMode": "binary",
-          "nodes": [
-            {
-              "selector": "a.visual-link > div.project-visual > div.pulse-art > span",
-              "snippet": "<span>",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.51 (foreground color: #f1e9d7, background color: #e97149, font size: 70.5pt (94px), font weight: bold). Expected contrast ratio of 3:1"
-            },
-            {
-              "selector": "div.projects-grid > article.project-card > a.visual-link > div.project-visual",
-              "snippet": "<div class=\"project-visual pulse\" aria-hidden=\"true\">"
-            },
-            {
-              "selector": "a.visual-link > div.project-visual > div.pulse-art > b",
-              "snippet": "<b>",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 2.64 (foreground color: #f7efdb, background color: #e97149, font size: 34.5pt (46px), font weight: bold). Expected contrast ratio of 3:1"
-            },
-            {
-              "selector": "div.projects-grid > article.project-card > a.visual-link > div.project-visual",
-              "snippet": "<div class=\"project-visual pulse\" aria-hidden=\"true\">"
-            }
-          ]
-        },
-        {
-          "category": "accessibility",
           "id": "label-content-name-mismatch",
           "title": "Elements with visible text labels do not have matching accessible names.",
           "score": 0,
@@ -2720,33 +2405,35 @@
         "url": "http://127.0.0.1:4177/#/",
         "title": "从业务需求到工程交付 · Chenxi DevLab",
         "headings": ["从业务需求，到工程交付。*"],
-        "mode": null
+        "mode": null,
+        "canvasCount": 0,
+        "canEnable3D": false
       },
       "metrics": {
         "performance": 100,
-        "accessibility": 95,
-        "lcpMs": 448.4218,
+        "accessibility": 100,
+        "lcpMs": 447.9017,
         "tbtMs": 35,
         "cls": 0
       },
-      "finishedAt": "2026-10-12T13:14:34.298Z"
+      "finishedAt": "2026-10-12T13:34:30.130Z"
     },
     {
       "id": "enterprise-mobile-1",
       "caseId": "enterprise-mobile",
       "repetition": 1,
       "requestedUrl": "http://127.0.0.1:4177/#/projects/enterprise-flow",
-      "startedAt": "2026-10-12T13:14:34.300Z",
+      "startedAt": "2026-10-12T13:34:30.136Z",
       "status": "passed",
       "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/enterprise-mobile-1.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/enterprise-mobile-1.html"
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/enterprise-mobile-1.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/enterprise-mobile-1.html"
       },
       "finalDisplayedUrl": "http://127.0.0.1:4177/#/projects/enterprise-flow",
       "finalUrl": "http://127.0.0.1:4177/",
       "lighthouseVersion": "13.5.0",
       "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:14:36.370Z",
+      "fetchTime": "2026-10-12T13:34:31.864Z",
       "warnings": [],
       "issues": [
         {
@@ -2756,7 +2443,7 @@
           "score": 0.82,
           "weight": 10,
           "displayValue": "2.1 s",
-          "numericValue": 2054.5519999999997,
+          "numericValue": 2057.056375,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -2767,18 +2454,18 @@
           "score": 0.9,
           "weight": 25,
           "displayValue": "2.5 s",
-          "numericValue": 2458.0519999999997,
+          "numericValue": 2475.556375,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
         {
           "category": "performance",
-          "id": "cumulative-layout-shift",
-          "title": "Cumulative Layout Shift",
-          "score": 0.6,
-          "weight": 25,
-          "displayValue": "0.207",
-          "numericValue": 0.2068720379146919,
+          "id": "total-blocking-time",
+          "title": "Total Blocking Time",
+          "score": 0.99,
+          "weight": 30,
+          "displayValue": "70 ms",
+          "numericValue": 68.5,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -2789,23 +2476,9 @@
           "score": 0.99,
           "weight": 10,
           "displayValue": "2.1 s",
-          "numericValue": 2054.5519999999997,
+          "numericValue": 2057.056375,
           "scoreDisplayMode": "numeric",
           "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "cls-culprits-insight",
-          "title": "Layout shift culprits",
-          "score": 0,
-          "weight": 0,
-          "scoreDisplayMode": "numeric",
-          "nodes": [
-            {
-              "selector": "body > div#app > footer.site-footer",
-              "snippet": "<footer class=\"site-footer\">"
-            }
-          ]
         },
         {
           "category": "performance",
@@ -2822,12 +2495,12 @@
           "title": "Improve image delivery",
           "score": 0.5,
           "weight": 0,
-          "displayValue": "Est savings of 104 KiB",
+          "displayValue": "Est savings of 102 KiB",
           "scoreDisplayMode": "metricSavings",
           "nodes": [
             {
               "selector": "div.detail-body > section#project-evidence > button.screenshot-button > img",
-              "snippet": "<img data-v-31fc4e59=\"\" src=\"/evidence/enterpriseflow-dashboard.png\" alt=\"既有真实本地经营看板截图；画面明确标注演示环境，金额是模拟业务数据。\" loading=\"lazy\">"
+              "snippet": "<img data-v-b54213d8=\"\" src=\"/evidence/enterpriseflow-dashboard.png\" alt=\"既有真实本地经营看板截图；画面明确标注演示环境，金额是模拟业务数据。\" loading=\"lazy\">"
             }
           ]
         },
@@ -2857,7 +2530,7 @@
           "score": 0.98,
           "weight": 0,
           "displayValue": "2.5 s",
-          "numericValue": 2491.0415999999996,
+          "numericValue": 2521.0451000000003,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -2865,10 +2538,10 @@
           "category": "performance",
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.81,
+          "score": 0.72,
           "weight": 0,
-          "displayValue": "160 ms",
-          "numericValue": 157.99999999999955,
+          "displayValue": "180 ms",
+          "numericValue": 183,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -2896,20 +2569,6 @@
         },
         {
           "category": "performance",
-          "id": "unsized-images",
-          "title": "Image elements do not have explicit `width` and `height`",
-          "score": 0.5,
-          "weight": 0,
-          "scoreDisplayMode": "metricSavings",
-          "nodes": [
-            {
-              "selector": "div.detail-body > section#project-evidence > button.screenshot-button > img",
-              "snippet": "<img data-v-31fc4e59=\"\" src=\"/evidence/enterpriseflow-dashboard.png\" alt=\"既有真实本地经营看板截图；画面明确标注演示环境，金额是模拟业务数据。\" loading=\"lazy\">"
-            }
-          ]
-        },
-        {
-          "category": "performance",
           "id": "bf-cache",
           "title": "Page prevented back/forward cache restoration",
           "score": 0,
@@ -2917,71 +2576,6 @@
           "displayValue": "1 failure reason",
           "scoreDisplayMode": "binary",
           "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "layout-shifts",
-          "title": "Avoid large layout shifts",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "1 layout shift found",
-          "scoreDisplayMode": "metricSavings",
-          "nodes": [
-            {
-              "selector": "body > div#app > footer.site-footer",
-              "snippet": "<footer class=\"site-footer\">"
-            },
-            {
-              "selector": "div.detail-body > section#project-evidence > button.screenshot-button > img",
-              "snippet": "<img data-v-31fc4e59=\"\" src=\"/evidence/enterpriseflow-dashboard.png\" alt=\"既有真实本地经营看板截图；画面明确标注演示环境，金额是模拟业务数据。\" loading=\"lazy\">"
-            }
-          ]
-        },
-        {
-          "category": "accessibility",
-          "id": "color-contrast",
-          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-          "score": 0,
-          "weight": 7,
-          "scoreDisplayMode": "binary",
-          "nodes": [
-            {
-              "selector": "section#project-process > div.flow > div > span",
-              "snippet": "<span data-v-31fc4e59=\"\">",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.64 (foreground color: #cc562e, background color: #eeeee6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "div.detail-body > section#project-process > div.flow > div",
-              "snippet": "<div data-v-31fc4e59=\"\">"
-            },
-            {
-              "selector": "section#project-process > div.flow > div > span",
-              "snippet": "<span data-v-31fc4e59=\"\">",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.64 (foreground color: #cc562e, background color: #eeeee6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "div.detail-body > section#project-process > div.flow > div",
-              "snippet": "<div data-v-31fc4e59=\"\">"
-            },
-            {
-              "selector": "section#project-process > div.flow > div > span",
-              "snippet": "<span data-v-31fc4e59=\"\">",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.64 (foreground color: #cc562e, background color: #eeeee6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "div.detail-body > section#project-process > div.flow > div",
-              "snippet": "<div data-v-31fc4e59=\"\">"
-            },
-            {
-              "selector": "section#project-process > div.flow > div > span",
-              "snippet": "<span data-v-31fc4e59=\"\">",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.64 (foreground color: #cc562e, background color: #eeeee6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "div.detail-body > section#project-process > div.flow > div",
-              "snippet": "<div data-v-31fc4e59=\"\">"
-            }
-          ]
         },
         {
           "category": "accessibility",
@@ -2998,7 +2592,7 @@
             },
             {
               "selector": "div.detail-layout > div.detail-body > section#project-evidence > button.screenshot-button",
-              "snippet": "<button data-v-31fc4e59=\"\" class=\"screenshot-button\" aria-label=\"放大项目证据图\">",
+              "snippet": "<button data-v-b54213d8=\"\" class=\"screenshot-button\" aria-label=\"放大项目证据图\">",
               "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
             }
           ]
@@ -3008,33 +2602,35 @@
         "url": "http://127.0.0.1:4177/#/projects/enterprise-flow",
         "title": "项目档案 · Chenxi DevLab",
         "headings": ["EnterpriseFlow"],
-        "mode": null
+        "mode": null,
+        "canvasCount": 0,
+        "canEnable3D": false
       },
       "metrics": {
-        "performance": 86,
-        "accessibility": 96,
-        "lcpMs": 2458.0519999999997,
-        "tbtMs": 53.99999999999977,
-        "cls": 0.2068720379146919
+        "performance": 95,
+        "accessibility": 100,
+        "lcpMs": 2475.556375,
+        "tbtMs": 68.5,
+        "cls": 0
       },
-      "finishedAt": "2026-10-12T13:14:44.076Z"
+      "finishedAt": "2026-10-12T13:34:37.392Z"
     },
     {
       "id": "enterprise-mobile-2",
       "caseId": "enterprise-mobile",
       "repetition": 2,
       "requestedUrl": "http://127.0.0.1:4177/#/projects/enterprise-flow",
-      "startedAt": "2026-10-12T13:14:44.078Z",
+      "startedAt": "2026-10-12T13:34:37.398Z",
       "status": "passed",
       "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/enterprise-mobile-2.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/enterprise-mobile-2.html"
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/enterprise-mobile-2.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/enterprise-mobile-2.html"
       },
       "finalDisplayedUrl": "http://127.0.0.1:4177/#/projects/enterprise-flow",
       "finalUrl": "http://127.0.0.1:4177/",
       "lighthouseVersion": "13.5.0",
       "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:14:46.177Z",
+      "fetchTime": "2026-10-12T13:34:39.115Z",
       "warnings": [],
       "issues": [
         {
@@ -3044,7 +2640,7 @@
           "score": 0.82,
           "weight": 10,
           "displayValue": "2.1 s",
-          "numericValue": 2055.77725,
+          "numericValue": 2058.35325,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -3055,7 +2651,7 @@
           "score": 0.9,
           "weight": 25,
           "displayValue": "2.5 s",
-          "numericValue": 2472.27725,
+          "numericValue": 2473.3532499999997,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -3065,19 +2661,8 @@
           "title": "Total Blocking Time",
           "score": 0.99,
           "weight": 30,
-          "displayValue": "70 ms",
-          "numericValue": 66.5,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "cumulative-layout-shift",
-          "title": "Cumulative Layout Shift",
-          "score": 0.6,
-          "weight": 25,
-          "displayValue": "0.207",
-          "numericValue": 0.2068720379146919,
+          "displayValue": "60 ms",
+          "numericValue": 64.99999999999977,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -3088,23 +2673,9 @@
           "score": 0.99,
           "weight": 10,
           "displayValue": "2.1 s",
-          "numericValue": 2055.77725,
+          "numericValue": 2058.35325,
           "scoreDisplayMode": "numeric",
           "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "cls-culprits-insight",
-          "title": "Layout shift culprits",
-          "score": 0,
-          "weight": 0,
-          "scoreDisplayMode": "numeric",
-          "nodes": [
-            {
-              "selector": "body > div#app > footer.site-footer",
-              "snippet": "<footer class=\"site-footer\">"
-            }
-          ]
         },
         {
           "category": "performance",
@@ -3121,12 +2692,12 @@
           "title": "Improve image delivery",
           "score": 0.5,
           "weight": 0,
-          "displayValue": "Est savings of 104 KiB",
+          "displayValue": "Est savings of 102 KiB",
           "scoreDisplayMode": "metricSavings",
           "nodes": [
             {
               "selector": "div.detail-body > section#project-evidence > button.screenshot-button > img",
-              "snippet": "<img data-v-31fc4e59=\"\" src=\"/evidence/enterpriseflow-dashboard.png\" alt=\"既有真实本地经营看板截图；画面明确标注演示环境，金额是模拟业务数据。\" loading=\"lazy\">"
+              "snippet": "<img data-v-b54213d8=\"\" src=\"/evidence/enterpriseflow-dashboard.png\" alt=\"既有真实本地经营看板截图；画面明确标注演示环境，金额是模拟业务数据。\" loading=\"lazy\">"
             }
           ]
         },
@@ -3156,7 +2727,7 @@
           "score": 0.98,
           "weight": 0,
           "displayValue": "2.5 s",
-          "numericValue": 2517.2218000000003,
+          "numericValue": 2514.2825999999995,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -3164,10 +2735,10 @@
           "category": "performance",
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.73,
+          "score": 0.76,
           "weight": 0,
-          "displayValue": "180 ms",
-          "numericValue": 182,
+          "displayValue": "170 ms",
+          "numericValue": 173.99999999999955,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -3195,20 +2766,6 @@
         },
         {
           "category": "performance",
-          "id": "unsized-images",
-          "title": "Image elements do not have explicit `width` and `height`",
-          "score": 0.5,
-          "weight": 0,
-          "scoreDisplayMode": "metricSavings",
-          "nodes": [
-            {
-              "selector": "div.detail-body > section#project-evidence > button.screenshot-button > img",
-              "snippet": "<img data-v-31fc4e59=\"\" src=\"/evidence/enterpriseflow-dashboard.png\" alt=\"既有真实本地经营看板截图；画面明确标注演示环境，金额是模拟业务数据。\" loading=\"lazy\">"
-            }
-          ]
-        },
-        {
-          "category": "performance",
           "id": "bf-cache",
           "title": "Page prevented back/forward cache restoration",
           "score": 0,
@@ -3216,71 +2773,6 @@
           "displayValue": "1 failure reason",
           "scoreDisplayMode": "binary",
           "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "layout-shifts",
-          "title": "Avoid large layout shifts",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "1 layout shift found",
-          "scoreDisplayMode": "metricSavings",
-          "nodes": [
-            {
-              "selector": "body > div#app > footer.site-footer",
-              "snippet": "<footer class=\"site-footer\">"
-            },
-            {
-              "selector": "div.detail-body > section#project-evidence > button.screenshot-button > img",
-              "snippet": "<img data-v-31fc4e59=\"\" src=\"/evidence/enterpriseflow-dashboard.png\" alt=\"既有真实本地经营看板截图；画面明确标注演示环境，金额是模拟业务数据。\" loading=\"lazy\">"
-            }
-          ]
-        },
-        {
-          "category": "accessibility",
-          "id": "color-contrast",
-          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-          "score": 0,
-          "weight": 7,
-          "scoreDisplayMode": "binary",
-          "nodes": [
-            {
-              "selector": "section#project-process > div.flow > div > span",
-              "snippet": "<span data-v-31fc4e59=\"\">",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.64 (foreground color: #cc562e, background color: #eeeee6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "div.detail-body > section#project-process > div.flow > div",
-              "snippet": "<div data-v-31fc4e59=\"\">"
-            },
-            {
-              "selector": "section#project-process > div.flow > div > span",
-              "snippet": "<span data-v-31fc4e59=\"\">",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.64 (foreground color: #cc562e, background color: #eeeee6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "div.detail-body > section#project-process > div.flow > div",
-              "snippet": "<div data-v-31fc4e59=\"\">"
-            },
-            {
-              "selector": "section#project-process > div.flow > div > span",
-              "snippet": "<span data-v-31fc4e59=\"\">",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.64 (foreground color: #cc562e, background color: #eeeee6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "div.detail-body > section#project-process > div.flow > div",
-              "snippet": "<div data-v-31fc4e59=\"\">"
-            },
-            {
-              "selector": "section#project-process > div.flow > div > span",
-              "snippet": "<span data-v-31fc4e59=\"\">",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.64 (foreground color: #cc562e, background color: #eeeee6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "div.detail-body > section#project-process > div.flow > div",
-              "snippet": "<div data-v-31fc4e59=\"\">"
-            }
-          ]
         },
         {
           "category": "accessibility",
@@ -3297,7 +2789,7 @@
             },
             {
               "selector": "div.detail-layout > div.detail-body > section#project-evidence > button.screenshot-button",
-              "snippet": "<button data-v-31fc4e59=\"\" class=\"screenshot-button\" aria-label=\"放大项目证据图\">",
+              "snippet": "<button data-v-b54213d8=\"\" class=\"screenshot-button\" aria-label=\"放大项目证据图\">",
               "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
             }
           ]
@@ -3307,33 +2799,35 @@
         "url": "http://127.0.0.1:4177/#/projects/enterprise-flow",
         "title": "项目档案 · Chenxi DevLab",
         "headings": ["EnterpriseFlow"],
-        "mode": null
+        "mode": null,
+        "canvasCount": 0,
+        "canEnable3D": false
       },
       "metrics": {
-        "performance": 85,
-        "accessibility": 96,
-        "lcpMs": 2472.27725,
-        "tbtMs": 66.5,
-        "cls": 0.2068720379146919
+        "performance": 95,
+        "accessibility": 100,
+        "lcpMs": 2473.3532499999997,
+        "tbtMs": 64.99999999999977,
+        "cls": 0
       },
-      "finishedAt": "2026-10-12T13:14:53.648Z"
+      "finishedAt": "2026-10-12T13:34:44.770Z"
     },
     {
       "id": "enterprise-mobile-3",
       "caseId": "enterprise-mobile",
       "repetition": 3,
       "requestedUrl": "http://127.0.0.1:4177/#/projects/enterprise-flow",
-      "startedAt": "2026-10-12T13:14:53.653Z",
+      "startedAt": "2026-10-12T13:34:44.779Z",
       "status": "passed",
       "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/enterprise-mobile-3.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/enterprise-mobile-3.html"
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/enterprise-mobile-3.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/enterprise-mobile-3.html"
       },
       "finalDisplayedUrl": "http://127.0.0.1:4177/#/projects/enterprise-flow",
       "finalUrl": "http://127.0.0.1:4177/",
       "lighthouseVersion": "13.5.0",
       "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:14:55.847Z",
+      "fetchTime": "2026-10-12T13:34:46.482Z",
       "warnings": [],
       "issues": [
         {
@@ -3343,7 +2837,7 @@
           "score": 0.82,
           "weight": 10,
           "displayValue": "2.1 s",
-          "numericValue": 2059.0633749999997,
+          "numericValue": 2063.2136250000003,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -3351,10 +2845,10 @@
           "category": "performance",
           "id": "largest-contentful-paint",
           "title": "Largest Contentful Paint",
-          "score": 0.9,
+          "score": 0.89,
           "weight": 25,
           "displayValue": "2.5 s",
-          "numericValue": 2474.0633749999997,
+          "numericValue": 2502.2136250000003,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -3364,19 +2858,8 @@
           "title": "Total Blocking Time",
           "score": 0.99,
           "weight": 30,
-          "displayValue": "70 ms",
-          "numericValue": 65,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "cumulative-layout-shift",
-          "title": "Cumulative Layout Shift",
-          "score": 0.6,
-          "weight": 25,
-          "displayValue": "0.207",
-          "numericValue": 0.2068720379146919,
+          "displayValue": "90 ms",
+          "numericValue": 89.00000000000023,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -3387,23 +2870,9 @@
           "score": 0.99,
           "weight": 10,
           "displayValue": "2.1 s",
-          "numericValue": 2059.0633749999997,
+          "numericValue": 2063.2136250000003,
           "scoreDisplayMode": "numeric",
           "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "cls-culprits-insight",
-          "title": "Layout shift culprits",
-          "score": 0,
-          "weight": 0,
-          "scoreDisplayMode": "numeric",
-          "nodes": [
-            {
-              "selector": "body > div#app > footer.site-footer",
-              "snippet": "<footer class=\"site-footer\">"
-            }
-          ]
         },
         {
           "category": "performance",
@@ -3420,12 +2889,12 @@
           "title": "Improve image delivery",
           "score": 0.5,
           "weight": 0,
-          "displayValue": "Est savings of 104 KiB",
+          "displayValue": "Est savings of 102 KiB",
           "scoreDisplayMode": "metricSavings",
           "nodes": [
             {
               "selector": "div.detail-body > section#project-evidence > button.screenshot-button > img",
-              "snippet": "<img data-v-31fc4e59=\"\" src=\"/evidence/enterpriseflow-dashboard.png\" alt=\"既有真实本地经营看板截图；画面明确标注演示环境，金额是模拟业务数据。\" loading=\"lazy\">"
+              "snippet": "<img data-v-b54213d8=\"\" src=\"/evidence/enterpriseflow-dashboard.png\" alt=\"既有真实本地经营看板截图；画面明确标注演示环境，金额是模拟业务数据。\" loading=\"lazy\">"
             }
           ]
         },
@@ -3454,8 +2923,8 @@
           "title": "Time to Interactive",
           "score": 0.98,
           "weight": 0,
-          "displayValue": "2.5 s",
-          "numericValue": 2515.2507,
+          "displayValue": "2.6 s",
+          "numericValue": 2561.7709000000004,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -3463,10 +2932,10 @@
           "category": "performance",
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.75,
+          "score": 0.63,
           "weight": 0,
-          "displayValue": "180 ms",
-          "numericValue": 175,
+          "displayValue": "210 ms",
+          "numericValue": 211.00000000000045,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -3494,20 +2963,6 @@
         },
         {
           "category": "performance",
-          "id": "unsized-images",
-          "title": "Image elements do not have explicit `width` and `height`",
-          "score": 0.5,
-          "weight": 0,
-          "scoreDisplayMode": "metricSavings",
-          "nodes": [
-            {
-              "selector": "div.detail-body > section#project-evidence > button.screenshot-button > img",
-              "snippet": "<img data-v-31fc4e59=\"\" src=\"/evidence/enterpriseflow-dashboard.png\" alt=\"既有真实本地经营看板截图；画面明确标注演示环境，金额是模拟业务数据。\" loading=\"lazy\">"
-            }
-          ]
-        },
-        {
-          "category": "performance",
           "id": "bf-cache",
           "title": "Page prevented back/forward cache restoration",
           "score": 0,
@@ -3515,71 +2970,6 @@
           "displayValue": "1 failure reason",
           "scoreDisplayMode": "binary",
           "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "layout-shifts",
-          "title": "Avoid large layout shifts",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "1 layout shift found",
-          "scoreDisplayMode": "metricSavings",
-          "nodes": [
-            {
-              "selector": "body > div#app > footer.site-footer",
-              "snippet": "<footer class=\"site-footer\">"
-            },
-            {
-              "selector": "div.detail-body > section#project-evidence > button.screenshot-button > img",
-              "snippet": "<img data-v-31fc4e59=\"\" src=\"/evidence/enterpriseflow-dashboard.png\" alt=\"既有真实本地经营看板截图；画面明确标注演示环境，金额是模拟业务数据。\" loading=\"lazy\">"
-            }
-          ]
-        },
-        {
-          "category": "accessibility",
-          "id": "color-contrast",
-          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-          "score": 0,
-          "weight": 7,
-          "scoreDisplayMode": "binary",
-          "nodes": [
-            {
-              "selector": "section#project-process > div.flow > div > span",
-              "snippet": "<span data-v-31fc4e59=\"\">",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.64 (foreground color: #cc562e, background color: #eeeee6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "div.detail-body > section#project-process > div.flow > div",
-              "snippet": "<div data-v-31fc4e59=\"\">"
-            },
-            {
-              "selector": "section#project-process > div.flow > div > span",
-              "snippet": "<span data-v-31fc4e59=\"\">",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.64 (foreground color: #cc562e, background color: #eeeee6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "div.detail-body > section#project-process > div.flow > div",
-              "snippet": "<div data-v-31fc4e59=\"\">"
-            },
-            {
-              "selector": "section#project-process > div.flow > div > span",
-              "snippet": "<span data-v-31fc4e59=\"\">",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.64 (foreground color: #cc562e, background color: #eeeee6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "div.detail-body > section#project-process > div.flow > div",
-              "snippet": "<div data-v-31fc4e59=\"\">"
-            },
-            {
-              "selector": "section#project-process > div.flow > div > span",
-              "snippet": "<span data-v-31fc4e59=\"\">",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 3.64 (foreground color: #cc562e, background color: #eeeee6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "div.detail-body > section#project-process > div.flow > div",
-              "snippet": "<div data-v-31fc4e59=\"\">"
-            }
-          ]
         },
         {
           "category": "accessibility",
@@ -3596,7 +2986,7 @@
             },
             {
               "selector": "div.detail-layout > div.detail-body > section#project-evidence > button.screenshot-button",
-              "snippet": "<button data-v-31fc4e59=\"\" class=\"screenshot-button\" aria-label=\"放大项目证据图\">",
+              "snippet": "<button data-v-b54213d8=\"\" class=\"screenshot-button\" aria-label=\"放大项目证据图\">",
               "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
             }
           ]
@@ -3606,43 +2996,45 @@
         "url": "http://127.0.0.1:4177/#/projects/enterprise-flow",
         "title": "项目档案 · Chenxi DevLab",
         "headings": ["EnterpriseFlow"],
-        "mode": null
+        "mode": null,
+        "canvasCount": 0,
+        "canEnable3D": false
       },
       "metrics": {
-        "performance": 85,
-        "accessibility": 96,
-        "lcpMs": 2474.0633749999997,
-        "tbtMs": 65,
-        "cls": 0.2068720379146919
+        "performance": 95,
+        "accessibility": 100,
+        "lcpMs": 2502.2136250000003,
+        "tbtMs": 89.00000000000023,
+        "cls": 0
       },
-      "finishedAt": "2026-10-12T13:15:01.601Z"
+      "finishedAt": "2026-10-12T13:34:52.328Z"
     },
     {
       "id": "lab-mobile-1",
       "caseId": "lab-mobile",
       "repetition": 1,
       "requestedUrl": "http://127.0.0.1:4177/#/intelligence",
-      "startedAt": "2026-10-12T13:15:01.608Z",
+      "startedAt": "2026-10-12T13:34:52.329Z",
       "status": "passed",
       "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/lab-mobile-1.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/lab-mobile-1.html"
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/lab-mobile-1.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/lab-mobile-1.html"
       },
       "finalDisplayedUrl": "http://127.0.0.1:4177/#/intelligence",
       "finalUrl": "http://127.0.0.1:4177/",
       "lighthouseVersion": "13.5.0",
       "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:15:03.324Z",
+      "fetchTime": "2026-10-12T13:34:54.020Z",
       "warnings": [],
       "issues": [
         {
           "category": "performance",
           "id": "first-contentful-paint",
           "title": "First Contentful Paint",
-          "score": 0.31,
+          "score": 0.78,
           "weight": 10,
-          "displayValue": "3.6 s",
-          "numericValue": 3625.7663500000003,
+          "displayValue": "2.2 s",
+          "numericValue": 2203.181625,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -3650,32 +3042,10 @@
           "category": "performance",
           "id": "largest-contentful-paint",
           "title": "Largest Contentful Paint",
-          "score": 0.2,
+          "score": 0.9,
           "weight": 25,
-          "displayValue": "5.4 s",
-          "numericValue": 5419.5218,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "total-blocking-time",
-          "title": "Total Blocking Time",
-          "score": 0.85,
-          "weight": 30,
-          "displayValue": "240 ms",
-          "numericValue": 239,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "cumulative-layout-shift",
-          "title": "Cumulative Layout Shift",
-          "score": 0.6,
-          "weight": 25,
-          "displayValue": "0.207",
-          "numericValue": 0.2068720379146919,
+          "displayValue": "2.5 s",
+          "numericValue": 2453.41795,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -3683,26 +3053,12 @@
           "category": "performance",
           "id": "speed-index",
           "title": "Speed Index",
-          "score": 0.86,
+          "score": 0.99,
           "weight": 10,
-          "displayValue": "3.6 s",
-          "numericValue": 3625.7663500000003,
+          "displayValue": "2.2 s",
+          "numericValue": 2203.181625,
           "scoreDisplayMode": "numeric",
           "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "cls-culprits-insight",
-          "title": "Layout shift culprits",
-          "score": 0,
-          "weight": 0,
-          "scoreDisplayMode": "numeric",
-          "nodes": [
-            {
-              "selector": "body > div#app > footer.site-footer",
-              "snippet": "<footer class=\"site-footer\">"
-            }
-          ]
         },
         {
           "category": "performance",
@@ -3736,21 +3092,10 @@
           "category": "performance",
           "id": "interactive",
           "title": "Time to Interactive",
-          "score": 0.7,
+          "score": 0.98,
           "weight": 0,
-          "displayValue": "5.5 s",
-          "numericValue": 5542.0218,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "max-potential-fid",
-          "title": "Max Potential First Input Delay",
-          "score": 0.51,
-          "weight": 0,
-          "displayValue": "250 ms",
-          "numericValue": 245,
+          "displayValue": "2.5 s",
+          "numericValue": 2453.4179500000005,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -3771,8 +3116,8 @@
           "title": "Reduce unused JavaScript",
           "score": 0,
           "weight": 0,
-          "displayValue": "Est savings of 265 KiB",
-          "numericValue": 1350,
+          "displayValue": "Est savings of 69 KiB",
+          "numericValue": 450,
           "scoreDisplayMode": "metricSavings",
           "nodes": []
         },
@@ -3785,21 +3130,6 @@
           "displayValue": "1 failure reason",
           "scoreDisplayMode": "binary",
           "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "layout-shifts",
-          "title": "Avoid large layout shifts",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "1 layout shift found",
-          "scoreDisplayMode": "metricSavings",
-          "nodes": [
-            {
-              "selector": "body > div#app > footer.site-footer",
-              "snippet": "<footer class=\"site-footer\">"
-            }
-          ]
         },
         {
           "category": "accessibility",
@@ -3826,43 +3156,45 @@
         "url": "http://127.0.0.1:4177/#/intelligence",
         "title": "智能演化实验室 · Chenxi DevLab",
         "headings": ["让智能，在行动中演化。"],
-        "mode": null
+        "mode": null,
+        "canvasCount": 0,
+        "canEnable3D": true
       },
       "metrics": {
-        "performance": 56.99999999999999,
+        "performance": 95,
         "accessibility": 100,
-        "lcpMs": 5419.5218,
-        "tbtMs": 239,
-        "cls": 0.2068720379146919
+        "lcpMs": 2453.41795,
+        "tbtMs": 21.500000000000114,
+        "cls": 0
       },
-      "finishedAt": "2026-10-12T13:15:09.588Z"
+      "finishedAt": "2026-10-12T13:34:59.366Z"
     },
     {
       "id": "lab-mobile-2",
       "caseId": "lab-mobile",
       "repetition": 2,
       "requestedUrl": "http://127.0.0.1:4177/#/intelligence",
-      "startedAt": "2026-10-12T13:15:09.599Z",
+      "startedAt": "2026-10-12T13:34:59.367Z",
       "status": "passed",
       "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/lab-mobile-2.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/lab-mobile-2.html"
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/lab-mobile-2.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/lab-mobile-2.html"
       },
       "finalDisplayedUrl": "http://127.0.0.1:4177/#/intelligence",
       "finalUrl": "http://127.0.0.1:4177/",
       "lighthouseVersion": "13.5.0",
       "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:15:11.412Z",
+      "fetchTime": "2026-10-12T13:35:01.067Z",
       "warnings": [],
       "issues": [
         {
           "category": "performance",
           "id": "first-contentful-paint",
           "title": "First Contentful Paint",
-          "score": 0.31,
+          "score": 0.77,
           "weight": 10,
-          "displayValue": "3.6 s",
-          "numericValue": 3618.7212000000004,
+          "displayValue": "2.2 s",
+          "numericValue": 2206.817,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -3870,32 +3202,10 @@
           "category": "performance",
           "id": "largest-contentful-paint",
           "title": "Largest Contentful Paint",
-          "score": 0.2,
+          "score": 0.9,
           "weight": 25,
-          "displayValue": "5.4 s",
-          "numericValue": 5422.4616000000005,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "total-blocking-time",
-          "title": "Total Blocking Time",
-          "score": 0.82,
-          "weight": 30,
-          "displayValue": "270 ms",
-          "numericValue": 266,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "cumulative-layout-shift",
-          "title": "Cumulative Layout Shift",
-          "score": 0.6,
-          "weight": 25,
-          "displayValue": "0.207",
-          "numericValue": 0.2068720379146919,
+          "displayValue": "2.5 s",
+          "numericValue": 2459.7804,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -3903,26 +3213,12 @@
           "category": "performance",
           "id": "speed-index",
           "title": "Speed Index",
-          "score": 0.86,
+          "score": 0.99,
           "weight": 10,
-          "displayValue": "3.6 s",
-          "numericValue": 3618.7212000000004,
+          "displayValue": "2.2 s",
+          "numericValue": 2206.817,
           "scoreDisplayMode": "numeric",
           "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "cls-culprits-insight",
-          "title": "Layout shift culprits",
-          "score": 0,
-          "weight": 0,
-          "scoreDisplayMode": "numeric",
-          "nodes": [
-            {
-              "selector": "body > div#app > footer.site-footer",
-              "snippet": "<footer class=\"site-footer\">"
-            }
-          ]
         },
         {
           "category": "performance",
@@ -3956,21 +3252,10 @@
           "category": "performance",
           "id": "interactive",
           "title": "Time to Interactive",
-          "score": 0.7,
+          "score": 0.98,
           "weight": 0,
-          "displayValue": "5.6 s",
-          "numericValue": 5561.9616000000005,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "max-potential-fid",
-          "title": "Max Potential First Input Delay",
-          "score": 0.41,
-          "weight": 0,
-          "displayValue": "280 ms",
-          "numericValue": 279,
+          "displayValue": "2.5 s",
+          "numericValue": 2459.7804000000006,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -3991,8 +3276,8 @@
           "title": "Reduce unused JavaScript",
           "score": 0,
           "weight": 0,
-          "displayValue": "Est savings of 265 KiB",
-          "numericValue": 1350,
+          "displayValue": "Est savings of 69 KiB",
+          "numericValue": 450,
           "scoreDisplayMode": "metricSavings",
           "nodes": []
         },
@@ -4005,21 +3290,6 @@
           "displayValue": "1 failure reason",
           "scoreDisplayMode": "binary",
           "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "layout-shifts",
-          "title": "Avoid large layout shifts",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "1 layout shift found",
-          "scoreDisplayMode": "metricSavings",
-          "nodes": [
-            {
-              "selector": "body > div#app > footer.site-footer",
-              "snippet": "<footer class=\"site-footer\">"
-            }
-          ]
         },
         {
           "category": "accessibility",
@@ -4046,43 +3316,45 @@
         "url": "http://127.0.0.1:4177/#/intelligence",
         "title": "智能演化实验室 · Chenxi DevLab",
         "headings": ["让智能，在行动中演化。"],
-        "mode": null
+        "mode": null,
+        "canvasCount": 0,
+        "canEnable3D": true
       },
       "metrics": {
-        "performance": 56.00000000000001,
+        "performance": 95,
         "accessibility": 100,
-        "lcpMs": 5422.4616000000005,
-        "tbtMs": 266,
-        "cls": 0.2068720379146919
+        "lcpMs": 2459.7804,
+        "tbtMs": 29,
+        "cls": 0
       },
-      "finishedAt": "2026-10-12T13:15:18.513Z"
+      "finishedAt": "2026-10-12T13:35:06.503Z"
     },
     {
       "id": "lab-mobile-3",
       "caseId": "lab-mobile",
       "repetition": 3,
       "requestedUrl": "http://127.0.0.1:4177/#/intelligence",
-      "startedAt": "2026-10-12T13:15:18.524Z",
+      "startedAt": "2026-10-12T13:35:06.509Z",
       "status": "passed",
       "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/lab-mobile-3.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/lab-mobile-3.html"
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/lab-mobile-3.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/lab-mobile-3.html"
       },
       "finalDisplayedUrl": "http://127.0.0.1:4177/#/intelligence",
       "finalUrl": "http://127.0.0.1:4177/",
       "lighthouseVersion": "13.5.0",
       "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:15:20.546Z",
+      "fetchTime": "2026-10-12T13:35:08.198Z",
       "warnings": [],
       "issues": [
         {
           "category": "performance",
           "id": "first-contentful-paint",
           "title": "First Contentful Paint",
-          "score": 0.3,
+          "score": 0.77,
           "weight": 10,
-          "displayValue": "3.7 s",
-          "numericValue": 3695.2081999999996,
+          "displayValue": "2.2 s",
+          "numericValue": 2210.9275,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -4090,32 +3362,10 @@
           "category": "performance",
           "id": "largest-contentful-paint",
           "title": "Largest Contentful Paint",
-          "score": 0.17,
+          "score": 0.9,
           "weight": 25,
-          "displayValue": "5.6 s",
-          "numericValue": 5620.277599999999,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "total-blocking-time",
-          "title": "Total Blocking Time",
-          "score": 0.64,
-          "weight": 30,
-          "displayValue": "430 ms",
-          "numericValue": 432.9999999999999,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "cumulative-layout-shift",
-          "title": "Cumulative Layout Shift",
-          "score": 0.6,
-          "weight": 25,
-          "displayValue": "0.207",
-          "numericValue": 0.2068720379146919,
+          "displayValue": "2.5 s",
+          "numericValue": 2467.513,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -4123,26 +3373,12 @@
           "category": "performance",
           "id": "speed-index",
           "title": "Speed Index",
-          "score": 0.85,
+          "score": 0.99,
           "weight": 10,
-          "displayValue": "3.7 s",
-          "numericValue": 3695.2081999999996,
+          "displayValue": "2.2 s",
+          "numericValue": 2210.9275,
           "scoreDisplayMode": "numeric",
           "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "cls-culprits-insight",
-          "title": "Layout shift culprits",
-          "score": 0,
-          "weight": 0,
-          "scoreDisplayMode": "numeric",
-          "nodes": [
-            {
-              "selector": "body > div#app > footer.site-footer",
-              "snippet": "<footer class=\"site-footer\">"
-            }
-          ]
         },
         {
           "category": "performance",
@@ -4176,10 +3412,10 @@
           "category": "performance",
           "id": "interactive",
           "title": "Time to Interactive",
-          "score": 0.67,
+          "score": 0.98,
           "weight": 0,
-          "displayValue": "5.8 s",
-          "numericValue": 5806.277599999999,
+          "displayValue": "2.5 s",
+          "numericValue": 2467.513,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -4187,10 +3423,10 @@
           "category": "performance",
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.21,
+          "score": 0.99,
           "weight": 0,
-          "displayValue": "370 ms",
-          "numericValue": 372,
+          "displayValue": "70 ms",
+          "numericValue": 72,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -4211,19 +3447,8 @@
           "title": "Reduce unused JavaScript",
           "score": 0,
           "weight": 0,
-          "displayValue": "Est savings of 265 KiB",
-          "numericValue": 1500,
-          "scoreDisplayMode": "metricSavings",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "mainthread-work-breakdown",
-          "title": "Minimize main-thread work",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "2.1 s",
-          "numericValue": 2115.7480000000023,
+          "displayValue": "Est savings of 69 KiB",
+          "numericValue": 450,
           "scoreDisplayMode": "metricSavings",
           "nodes": []
         },
@@ -4236,21 +3461,6 @@
           "displayValue": "1 failure reason",
           "scoreDisplayMode": "binary",
           "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "layout-shifts",
-          "title": "Avoid large layout shifts",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "1 layout shift found",
-          "scoreDisplayMode": "metricSavings",
-          "nodes": [
-            {
-              "selector": "body > div#app > footer.site-footer",
-              "snippet": "<footer class=\"site-footer\">"
-            }
-          ]
         },
         {
           "category": "accessibility",
@@ -4277,33 +3487,35 @@
         "url": "http://127.0.0.1:4177/#/intelligence",
         "title": "智能演化实验室 · Chenxi DevLab",
         "headings": ["让智能，在行动中演化。"],
-        "mode": null
+        "mode": null,
+        "canvasCount": 0,
+        "canEnable3D": true
       },
       "metrics": {
-        "performance": 50,
+        "performance": 95,
         "accessibility": 100,
-        "lcpMs": 5620.277599999999,
-        "tbtMs": 432.9999999999999,
-        "cls": 0.2068720379146919
+        "lcpMs": 2467.513,
+        "tbtMs": 44.5,
+        "cls": 0
       },
-      "finishedAt": "2026-10-12T13:15:27.807Z"
+      "finishedAt": "2026-10-12T13:35:13.460Z"
     },
     {
       "id": "h5-mobile-1",
       "caseId": "h5-mobile",
       "repetition": 1,
       "requestedUrl": "http://127.0.0.1:4177/pulse/#/",
-      "startedAt": "2026-10-12T13:15:27.815Z",
+      "startedAt": "2026-10-12T13:35:13.467Z",
       "status": "passed",
       "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/h5-mobile-1.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/h5-mobile-1.html"
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/h5-mobile-1.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/h5-mobile-1.html"
       },
       "finalDisplayedUrl": "http://127.0.0.1:4177/pulse/#/",
       "finalUrl": "http://127.0.0.1:4177/pulse/",
       "lighthouseVersion": "13.5.0",
       "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:15:29.935Z",
+      "fetchTime": "2026-10-12T13:35:15.186Z",
       "warnings": [],
       "issues": [
         {
@@ -4313,387 +3525,7 @@
           "score": 0.85,
           "weight": 10,
           "displayValue": "2.0 s",
-          "numericValue": 1954.3917000000001,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "largest-contentful-paint",
-          "title": "Largest Contentful Paint",
-          "score": 0.95,
-          "weight": 25,
-          "displayValue": "2.2 s",
-          "numericValue": 2191.3917,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "total-blocking-time",
-          "title": "Total Blocking Time",
-          "score": 0.65,
-          "weight": 30,
-          "displayValue": "420 ms",
-          "numericValue": 424,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "speed-index",
-          "title": "Speed Index",
-          "score": 0.99,
-          "weight": 10,
-          "displayValue": "2.0 s",
-          "numericValue": 1954.3917000000001,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
-          "score": 0,
-          "weight": 0,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "network-dependency-tree-insight",
-          "title": "Network dependency tree",
-          "score": 0,
-          "weight": 0,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "render-blocking-insight",
-          "title": "Render-blocking requests",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "Est savings of 450 ms",
-          "scoreDisplayMode": "metricSavings",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "interactive",
-          "title": "Time to Interactive",
-          "score": 0.98,
-          "weight": 0,
-          "displayValue": "2.4 s",
-          "numericValue": 2428.3917,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "max-potential-fid",
-          "title": "Max Potential First Input Delay",
-          "score": 0.1,
-          "weight": 0,
-          "displayValue": "470 ms",
-          "numericValue": 474,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "unused-css-rules",
-          "title": "Reduce unused CSS",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "Est savings of 26 KiB",
-          "numericValue": 150,
-          "scoreDisplayMode": "metricSavings",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "unused-javascript",
-          "title": "Reduce unused JavaScript",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "Est savings of 55 KiB",
-          "numericValue": 300,
-          "scoreDisplayMode": "metricSavings",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "bf-cache",
-          "title": "Page prevented back/forward cache restoration",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "1 failure reason",
-          "scoreDisplayMode": "binary",
-          "nodes": []
-        },
-        {
-          "category": "accessibility",
-          "id": "label-content-name-mismatch",
-          "title": "Elements with visible text labels do not have matching accessible names.",
-          "score": 0,
-          "weight": 0,
-          "scoreDisplayMode": "binary",
-          "nodes": [
-            {
-              "selector": "section#experiences > div.session-grid > article.session-card > a.session-art-link",
-              "snippet": "<a href=\"#/session/print\" class=\"session-art-link\" aria-label=\"查看把城市，印在纸上详情\">",
-              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
-            },
-            {
-              "selector": "section#experiences > div.session-grid > article.session-card > a.session-art-link",
-              "snippet": "<a href=\"#/session/walk\" class=\"session-art-link\" aria-label=\"查看换个角度，读成都详情\">",
-              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
-            },
-            {
-              "selector": "section#experiences > div.session-grid > article.session-card > a.session-art-link",
-              "snippet": "<a href=\"#/session/talk\" class=\"session-art-link\" aria-label=\"查看灵感，不必等天亮详情\">",
-              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
-            },
-            {
-              "selector": "section#experiences > div.session-grid > article.session-card > a.session-art-link",
-              "snippet": "<a href=\"#/session/sound\" class=\"session-art-link\" aria-label=\"查看听见日常的另一面详情\">",
-              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
-            }
-          ]
-        }
-      ],
-      "page": {
-        "url": "http://127.0.0.1:4177/pulse/#/",
-        "title": "城市灵感现场 · 蓉城周末 Lab",
-        "headings": ["给日常，一点灵感脉冲✳"],
-        "mode": "蓉城周末 Lab本地演示 · 旧版 Pulse 流程与历史，仅当前浏览器保存"
-      },
-      "metrics": {
-        "performance": 87,
-        "accessibility": 100,
-        "lcpMs": 2191.3917,
-        "tbtMs": 424,
-        "cls": 0
-      },
-      "finishedAt": "2026-10-12T13:15:36.452Z"
-    },
-    {
-      "id": "h5-mobile-2",
-      "caseId": "h5-mobile",
-      "repetition": 2,
-      "requestedUrl": "http://127.0.0.1:4177/pulse/#/",
-      "startedAt": "2026-10-12T13:15:36.454Z",
-      "status": "passed",
-      "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/h5-mobile-2.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/h5-mobile-2.html"
-      },
-      "finalDisplayedUrl": "http://127.0.0.1:4177/pulse/#/",
-      "finalUrl": "http://127.0.0.1:4177/pulse/",
-      "lighthouseVersion": "13.5.0",
-      "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:15:38.967Z",
-      "warnings": [],
-      "issues": [
-        {
-          "category": "performance",
-          "id": "first-contentful-paint",
-          "title": "First Contentful Paint",
-          "score": 0.85,
-          "weight": 10,
-          "displayValue": "2.0 s",
-          "numericValue": 1954.1122,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "largest-contentful-paint",
-          "title": "Largest Contentful Paint",
-          "score": 0.95,
-          "weight": 25,
-          "displayValue": "2.2 s",
-          "numericValue": 2169.1122,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "total-blocking-time",
-          "title": "Total Blocking Time",
-          "score": 0.7,
-          "weight": 30,
-          "displayValue": "380 ms",
-          "numericValue": 380,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "speed-index",
-          "title": "Speed Index",
-          "score": 0.99,
-          "weight": 10,
-          "displayValue": "2.0 s",
-          "numericValue": 1954.1122,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "forced-reflow-insight",
-          "title": "Forced reflow",
-          "score": 0,
-          "weight": 0,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "network-dependency-tree-insight",
-          "title": "Network dependency tree",
-          "score": 0,
-          "weight": 0,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "render-blocking-insight",
-          "title": "Render-blocking requests",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "Est savings of 450 ms",
-          "scoreDisplayMode": "metricSavings",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "interactive",
-          "title": "Time to Interactive",
-          "score": 0.98,
-          "weight": 0,
-          "displayValue": "2.4 s",
-          "numericValue": 2384.1122000000005,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "max-potential-fid",
-          "title": "Max Potential First Input Delay",
-          "score": 0.14,
-          "weight": 0,
-          "displayValue": "430 ms",
-          "numericValue": 430,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "unused-css-rules",
-          "title": "Reduce unused CSS",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "Est savings of 26 KiB",
-          "numericValue": 150,
-          "scoreDisplayMode": "metricSavings",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "unused-javascript",
-          "title": "Reduce unused JavaScript",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "Est savings of 55 KiB",
-          "numericValue": 300,
-          "scoreDisplayMode": "metricSavings",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "bf-cache",
-          "title": "Page prevented back/forward cache restoration",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "1 failure reason",
-          "scoreDisplayMode": "binary",
-          "nodes": []
-        },
-        {
-          "category": "accessibility",
-          "id": "label-content-name-mismatch",
-          "title": "Elements with visible text labels do not have matching accessible names.",
-          "score": 0,
-          "weight": 0,
-          "scoreDisplayMode": "binary",
-          "nodes": [
-            {
-              "selector": "section#experiences > div.session-grid > article.session-card > a.session-art-link",
-              "snippet": "<a href=\"#/session/print\" class=\"session-art-link\" aria-label=\"查看把城市，印在纸上详情\">",
-              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
-            },
-            {
-              "selector": "section#experiences > div.session-grid > article.session-card > a.session-art-link",
-              "snippet": "<a href=\"#/session/walk\" class=\"session-art-link\" aria-label=\"查看换个角度，读成都详情\">",
-              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
-            },
-            {
-              "selector": "section#experiences > div.session-grid > article.session-card > a.session-art-link",
-              "snippet": "<a href=\"#/session/talk\" class=\"session-art-link\" aria-label=\"查看灵感，不必等天亮详情\">",
-              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
-            },
-            {
-              "selector": "section#experiences > div.session-grid > article.session-card > a.session-art-link",
-              "snippet": "<a href=\"#/session/sound\" class=\"session-art-link\" aria-label=\"查看听见日常的另一面详情\">",
-              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
-            }
-          ]
-        }
-      ],
-      "page": {
-        "url": "http://127.0.0.1:4177/pulse/#/",
-        "title": "城市灵感现场 · 蓉城周末 Lab",
-        "headings": ["给日常，一点灵感脉冲✳"],
-        "mode": "蓉城周末 Lab本地演示 · 旧版 Pulse 流程与历史，仅当前浏览器保存"
-      },
-      "metrics": {
-        "performance": 88,
-        "accessibility": 100,
-        "lcpMs": 2169.1122,
-        "tbtMs": 380,
-        "cls": 0
-      },
-      "finishedAt": "2026-10-12T13:15:45.579Z"
-    },
-    {
-      "id": "h5-mobile-3",
-      "caseId": "h5-mobile",
-      "repetition": 3,
-      "requestedUrl": "http://127.0.0.1:4177/pulse/#/",
-      "startedAt": "2026-10-12T13:15:45.581Z",
-      "status": "passed",
-      "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/h5-mobile-3.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/h5-mobile-3.html"
-      },
-      "finalDisplayedUrl": "http://127.0.0.1:4177/pulse/#/",
-      "finalUrl": "http://127.0.0.1:4177/pulse/",
-      "lighthouseVersion": "13.5.0",
-      "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:15:47.880Z",
-      "warnings": [],
-      "issues": [
-        {
-          "category": "performance",
-          "id": "first-contentful-paint",
-          "title": "First Contentful Paint",
-          "score": 0.89,
-          "weight": 10,
-          "displayValue": "1.8 s",
-          "numericValue": 1806.3609999999999,
+          "numericValue": 1953.1741,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -4704,7 +3536,7 @@
           "score": 0.96,
           "weight": 25,
           "displayValue": "2.1 s",
-          "numericValue": 2097.361,
+          "numericValue": 2122.6741,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -4712,10 +3544,10 @@
           "category": "performance",
           "id": "total-blocking-time",
           "title": "Total Blocking Time",
-          "score": 0.55,
+          "score": 0.8,
           "weight": 30,
-          "displayValue": "530 ms",
-          "numericValue": 532,
+          "displayValue": "290 ms",
+          "numericValue": 289.0000000000002,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -4743,7 +3575,7 @@
           "title": "Render-blocking requests",
           "score": 0,
           "weight": 0,
-          "displayValue": "Est savings of 300 ms",
+          "displayValue": "Est savings of 450 ms",
           "scoreDisplayMode": "metricSavings",
           "nodes": []
         },
@@ -4751,10 +3583,10 @@
           "category": "performance",
           "id": "interactive",
           "title": "Time to Interactive",
-          "score": 0.98,
+          "score": 0.99,
           "weight": 0,
-          "displayValue": "2.4 s",
-          "numericValue": 2388.361,
+          "displayValue": "2.3 s",
+          "numericValue": 2292.1741,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -4762,10 +3594,10 @@
           "category": "performance",
           "id": "max-potential-fid",
           "title": "Max Potential First Input Delay",
-          "score": 0.04,
+          "score": 0.27,
           "weight": 0,
-          "displayValue": "580 ms",
-          "numericValue": 582,
+          "displayValue": "340 ms",
+          "numericValue": 339.0000000000002,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -4773,10 +3605,10 @@
           "category": "performance",
           "id": "unused-css-rules",
           "title": "Reduce unused CSS",
-          "score": 0.5,
+          "score": 0,
           "weight": 0,
           "displayValue": "Est savings of 26 KiB",
-          "numericValue": 0,
+          "numericValue": 150,
           "scoreDisplayMode": "metricSavings",
           "nodes": []
         },
@@ -4836,331 +3668,408 @@
         "url": "http://127.0.0.1:4177/pulse/#/",
         "title": "城市灵感现场 · 蓉城周末 Lab",
         "headings": ["给日常，一点灵感脉冲✳"],
-        "mode": "蓉城周末 Lab本地演示 · 旧版 Pulse 流程与历史，仅当前浏览器保存"
+        "mode": "蓉城周末 Lab本地演示 · 旧版 Pulse 流程与历史，仅当前浏览器保存",
+        "canvasCount": 0,
+        "canEnable3D": false
       },
       "metrics": {
-        "performance": 84,
+        "performance": 92,
         "accessibility": 100,
-        "lcpMs": 2097.361,
-        "tbtMs": 532,
+        "lcpMs": 2122.6741,
+        "tbtMs": 289.0000000000002,
         "cls": 0
       },
-      "finishedAt": "2026-10-12T13:15:55.058Z"
+      "finishedAt": "2026-10-12T13:35:20.901Z"
+    },
+    {
+      "id": "h5-mobile-2",
+      "caseId": "h5-mobile",
+      "repetition": 2,
+      "requestedUrl": "http://127.0.0.1:4177/pulse/#/",
+      "startedAt": "2026-10-12T13:35:20.909Z",
+      "status": "passed",
+      "raw": {
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/h5-mobile-2.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/h5-mobile-2.html"
+      },
+      "finalDisplayedUrl": "http://127.0.0.1:4177/pulse/#/",
+      "finalUrl": "http://127.0.0.1:4177/pulse/",
+      "lighthouseVersion": "13.5.0",
+      "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "fetchTime": "2026-10-12T13:35:22.618Z",
+      "warnings": [],
+      "issues": [
+        {
+          "category": "performance",
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.85,
+          "weight": 10,
+          "displayValue": "2.0 s",
+          "numericValue": 1954.8127,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.96,
+          "weight": 25,
+          "displayValue": "2.1 s",
+          "numericValue": 2102.8127,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "total-blocking-time",
+          "title": "Total Blocking Time",
+          "score": 0.85,
+          "weight": 30,
+          "displayValue": "250 ms",
+          "numericValue": 246,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "speed-index",
+          "title": "Speed Index",
+          "score": 0.99,
+          "weight": 10,
+          "displayValue": "2.0 s",
+          "numericValue": 1954.8127,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "forced-reflow-insight",
+          "title": "Forced reflow",
+          "score": 0,
+          "weight": 0,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0,
+          "weight": 0,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 450 ms",
+          "scoreDisplayMode": "metricSavings",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.99,
+          "weight": 0,
+          "displayValue": "2.3 s",
+          "numericValue": 2250.8127,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.37,
+          "weight": 0,
+          "displayValue": "300 ms",
+          "numericValue": 296,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 26 KiB",
+          "numericValue": 150,
+          "scoreDisplayMode": "metricSavings",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 55 KiB",
+          "numericValue": 300,
+          "scoreDisplayMode": "metricSavings",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "bf-cache",
+          "title": "Page prevented back/forward cache restoration",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "1 failure reason",
+          "scoreDisplayMode": "binary",
+          "nodes": []
+        },
+        {
+          "category": "accessibility",
+          "id": "label-content-name-mismatch",
+          "title": "Elements with visible text labels do not have matching accessible names.",
+          "score": 0,
+          "weight": 0,
+          "scoreDisplayMode": "binary",
+          "nodes": [
+            {
+              "selector": "section#experiences > div.session-grid > article.session-card > a.session-art-link",
+              "snippet": "<a href=\"#/session/print\" class=\"session-art-link\" aria-label=\"查看把城市，印在纸上详情\">",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "selector": "section#experiences > div.session-grid > article.session-card > a.session-art-link",
+              "snippet": "<a href=\"#/session/walk\" class=\"session-art-link\" aria-label=\"查看换个角度，读成都详情\">",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "selector": "section#experiences > div.session-grid > article.session-card > a.session-art-link",
+              "snippet": "<a href=\"#/session/talk\" class=\"session-art-link\" aria-label=\"查看灵感，不必等天亮详情\">",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "selector": "section#experiences > div.session-grid > article.session-card > a.session-art-link",
+              "snippet": "<a href=\"#/session/sound\" class=\"session-art-link\" aria-label=\"查看听见日常的另一面详情\">",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "page": {
+        "url": "http://127.0.0.1:4177/pulse/#/",
+        "title": "城市灵感现场 · 蓉城周末 Lab",
+        "headings": ["给日常，一点灵感脉冲✳"],
+        "mode": "蓉城周末 Lab本地演示 · 旧版 Pulse 流程与历史，仅当前浏览器保存",
+        "canvasCount": 0,
+        "canEnable3D": false
+      },
+      "metrics": {
+        "performance": 93,
+        "accessibility": 100,
+        "lcpMs": 2102.8127,
+        "tbtMs": 246,
+        "cls": 0
+      },
+      "finishedAt": "2026-10-12T13:35:28.242Z"
+    },
+    {
+      "id": "h5-mobile-3",
+      "caseId": "h5-mobile",
+      "repetition": 3,
+      "requestedUrl": "http://127.0.0.1:4177/pulse/#/",
+      "startedAt": "2026-10-12T13:35:28.250Z",
+      "status": "passed",
+      "raw": {
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/h5-mobile-3.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/h5-mobile-3.html"
+      },
+      "finalDisplayedUrl": "http://127.0.0.1:4177/pulse/#/",
+      "finalUrl": "http://127.0.0.1:4177/pulse/",
+      "lighthouseVersion": "13.5.0",
+      "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "fetchTime": "2026-10-12T13:35:29.971Z",
+      "warnings": [],
+      "issues": [
+        {
+          "category": "performance",
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.85,
+          "weight": 10,
+          "displayValue": "2.0 s",
+          "numericValue": 1953.1485,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.96,
+          "weight": 25,
+          "displayValue": "2.1 s",
+          "numericValue": 2096.1485000000002,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "total-blocking-time",
+          "title": "Total Blocking Time",
+          "score": 0.86,
+          "weight": 30,
+          "displayValue": "240 ms",
+          "numericValue": 236.00000000000023,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "forced-reflow-insight",
+          "title": "Forced reflow",
+          "score": 0,
+          "weight": 0,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0,
+          "weight": 0,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 450 ms",
+          "scoreDisplayMode": "metricSavings",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.99,
+          "weight": 0,
+          "displayValue": "2.2 s",
+          "numericValue": 2239.1485000000002,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.39,
+          "weight": 0,
+          "displayValue": "290 ms",
+          "numericValue": 286.0000000000002,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 26 KiB",
+          "numericValue": 150,
+          "scoreDisplayMode": "metricSavings",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 55 KiB",
+          "numericValue": 300,
+          "scoreDisplayMode": "metricSavings",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "bf-cache",
+          "title": "Page prevented back/forward cache restoration",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "1 failure reason",
+          "scoreDisplayMode": "binary",
+          "nodes": []
+        },
+        {
+          "category": "accessibility",
+          "id": "label-content-name-mismatch",
+          "title": "Elements with visible text labels do not have matching accessible names.",
+          "score": 0,
+          "weight": 0,
+          "scoreDisplayMode": "binary",
+          "nodes": [
+            {
+              "selector": "section#experiences > div.session-grid > article.session-card > a.session-art-link",
+              "snippet": "<a href=\"#/session/print\" class=\"session-art-link\" aria-label=\"查看把城市，印在纸上详情\">",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "selector": "section#experiences > div.session-grid > article.session-card > a.session-art-link",
+              "snippet": "<a href=\"#/session/walk\" class=\"session-art-link\" aria-label=\"查看换个角度，读成都详情\">",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "selector": "section#experiences > div.session-grid > article.session-card > a.session-art-link",
+              "snippet": "<a href=\"#/session/talk\" class=\"session-art-link\" aria-label=\"查看灵感，不必等天亮详情\">",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            },
+            {
+              "selector": "section#experiences > div.session-grid > article.session-card > a.session-art-link",
+              "snippet": "<a href=\"#/session/sound\" class=\"session-art-link\" aria-label=\"查看听见日常的另一面详情\">",
+              "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+            }
+          ]
+        }
+      ],
+      "page": {
+        "url": "http://127.0.0.1:4177/pulse/#/",
+        "title": "城市灵感现场 · 蓉城周末 Lab",
+        "headings": ["给日常，一点灵感脉冲✳"],
+        "mode": "蓉城周末 Lab本地演示 · 旧版 Pulse 流程与历史，仅当前浏览器保存",
+        "canvasCount": 0,
+        "canEnable3D": false
+      },
+      "metrics": {
+        "performance": 93,
+        "accessibility": 100,
+        "lcpMs": 2096.1485000000002,
+        "tbtMs": 236.00000000000023,
+        "cls": 0
+      },
+      "finishedAt": "2026-10-12T13:35:35.629Z"
     },
     {
       "id": "shop-mobile-1",
       "caseId": "shop-mobile",
       "repetition": 1,
       "requestedUrl": "http://127.0.0.1:4177/shop/#/pages/index/index",
-      "startedAt": "2026-10-12T13:15:55.060Z",
+      "startedAt": "2026-10-12T13:35:35.634Z",
       "status": "passed",
       "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/shop-mobile-1.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/shop-mobile-1.html"
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/shop-mobile-1.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/shop-mobile-1.html"
       },
       "finalDisplayedUrl": "http://127.0.0.1:4177/shop/#/pages/index/index",
       "finalUrl": "http://127.0.0.1:4177/shop/",
       "lighthouseVersion": "13.5.0",
       "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:15:57.029Z",
-      "warnings": [],
-      "issues": [
-        {
-          "category": "performance",
-          "id": "first-contentful-paint",
-          "title": "First Contentful Paint",
-          "score": 0.64,
-          "weight": 10,
-          "displayValue": "2.6 s",
-          "numericValue": 2576.6705,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "largest-contentful-paint",
-          "title": "Largest Contentful Paint",
-          "score": 0.77,
-          "weight": 25,
-          "displayValue": "3.0 s",
-          "numericValue": 3049.2046000000005,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "speed-index",
-          "title": "Speed Index",
-          "score": 0.97,
-          "weight": 10,
-          "displayValue": "2.6 s",
-          "numericValue": 2576.6705,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "network-dependency-tree-insight",
-          "title": "Network dependency tree",
-          "score": 0,
-          "weight": 0,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "render-blocking-insight",
-          "title": "Render-blocking requests",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "Est savings of 300 ms",
-          "scoreDisplayMode": "metricSavings",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "interactive",
-          "title": "Time to Interactive",
-          "score": 0.95,
-          "weight": 0,
-          "displayValue": "3.1 s",
-          "numericValue": 3148.204600000001,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "max-potential-fid",
-          "title": "Max Potential First Input Delay",
-          "score": 0.96,
-          "weight": 0,
-          "displayValue": "100 ms",
-          "numericValue": 99,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "unused-css-rules",
-          "title": "Reduce unused CSS",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "Est savings of 42 KiB",
-          "numericValue": 150,
-          "scoreDisplayMode": "metricSavings",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "unused-javascript",
-          "title": "Reduce unused JavaScript",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "Est savings of 157 KiB",
-          "numericValue": 750,
-          "scoreDisplayMode": "metricSavings",
-          "nodes": []
-        },
-        {
-          "category": "accessibility",
-          "id": "color-contrast",
-          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-          "score": 0,
-          "weight": 7,
-          "scoreDisplayMode": "binary",
-          "nodes": [
-            {
-              "selector": "uni-view.select-mode > uni-view > uni-text.select-mode-copy > span",
-              "snippet": "<span>",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #64705f, background color: #e5e8dc, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "uni-page > uni-page-wrapper > uni-page-body > uni-view.select-mode",
-              "snippet": "<uni-view data-v-f9b0a2b6=\"\" class=\"select-mode\">"
-            }
-          ]
-        }
-      ],
-      "page": {
-        "url": "http://127.0.0.1:4177/shop/#/pages/index/index",
-        "title": "巷集 Select",
-        "headings": ["让日常好物，陪你慢下来。"],
-        "mode": "本地演示 · 旧版 ShopPilot 流程，仅当前设备保存"
-      },
-      "metrics": {
-        "performance": 90,
-        "accessibility": 96,
-        "lcpMs": 3049.2046000000005,
-        "tbtMs": 49,
-        "cls": 0
-      },
-      "finishedAt": "2026-10-12T13:16:03.211Z"
-    },
-    {
-      "id": "shop-mobile-2",
-      "caseId": "shop-mobile",
-      "repetition": 2,
-      "requestedUrl": "http://127.0.0.1:4177/shop/#/pages/index/index",
-      "startedAt": "2026-10-12T13:16:03.213Z",
-      "status": "passed",
-      "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/shop-mobile-2.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/shop-mobile-2.html"
-      },
-      "finalDisplayedUrl": "http://127.0.0.1:4177/shop/#/pages/index/index",
-      "finalUrl": "http://127.0.0.1:4177/shop/",
-      "lighthouseVersion": "13.5.0",
-      "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:16:05.036Z",
-      "warnings": [],
-      "issues": [
-        {
-          "category": "performance",
-          "id": "first-contentful-paint",
-          "title": "First Contentful Paint",
-          "score": 0.64,
-          "weight": 10,
-          "displayValue": "2.6 s",
-          "numericValue": 2579.1367499999997,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "largest-contentful-paint",
-          "title": "Largest Contentful Paint",
-          "score": 0.76,
-          "weight": 25,
-          "displayValue": "3.1 s",
-          "numericValue": 3053.3641,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "speed-index",
-          "title": "Speed Index",
-          "score": 0.97,
-          "weight": 10,
-          "displayValue": "2.6 s",
-          "numericValue": 2579.1367499999997,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "network-dependency-tree-insight",
-          "title": "Network dependency tree",
-          "score": 0,
-          "weight": 0,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "render-blocking-insight",
-          "title": "Render-blocking requests",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "Est savings of 300 ms",
-          "scoreDisplayMode": "metricSavings",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "interactive",
-          "title": "Time to Interactive",
-          "score": 0.95,
-          "weight": 0,
-          "displayValue": "3.1 s",
-          "numericValue": 3149.3641,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "max-potential-fid",
-          "title": "Max Potential First Input Delay",
-          "score": 0.97,
-          "weight": 0,
-          "displayValue": "100 ms",
-          "numericValue": 96,
-          "scoreDisplayMode": "numeric",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "unused-css-rules",
-          "title": "Reduce unused CSS",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "Est savings of 42 KiB",
-          "numericValue": 150,
-          "scoreDisplayMode": "metricSavings",
-          "nodes": []
-        },
-        {
-          "category": "performance",
-          "id": "unused-javascript",
-          "title": "Reduce unused JavaScript",
-          "score": 0,
-          "weight": 0,
-          "displayValue": "Est savings of 157 KiB",
-          "numericValue": 750,
-          "scoreDisplayMode": "metricSavings",
-          "nodes": []
-        },
-        {
-          "category": "accessibility",
-          "id": "color-contrast",
-          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-          "score": 0,
-          "weight": 7,
-          "scoreDisplayMode": "binary",
-          "nodes": [
-            {
-              "selector": "uni-view.select-mode > uni-view > uni-text.select-mode-copy > span",
-              "snippet": "<span>",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #64705f, background color: #e5e8dc, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "uni-page > uni-page-wrapper > uni-page-body > uni-view.select-mode",
-              "snippet": "<uni-view data-v-f9b0a2b6=\"\" class=\"select-mode\">"
-            }
-          ]
-        }
-      ],
-      "page": {
-        "url": "http://127.0.0.1:4177/shop/#/pages/index/index",
-        "title": "巷集 Select",
-        "headings": ["让日常好物，陪你慢下来。"],
-        "mode": "本地演示 · 旧版 ShopPilot 流程，仅当前设备保存"
-      },
-      "metrics": {
-        "performance": 90,
-        "accessibility": 96,
-        "lcpMs": 3053.3641,
-        "tbtMs": 46,
-        "cls": 0
-      },
-      "finishedAt": "2026-10-12T13:16:12.863Z"
-    },
-    {
-      "id": "shop-mobile-3",
-      "caseId": "shop-mobile",
-      "repetition": 3,
-      "requestedUrl": "http://127.0.0.1:4177/shop/#/pages/index/index",
-      "startedAt": "2026-10-12T13:16:12.868Z",
-      "status": "passed",
-      "raw": {
-        "json": ".local/performance/2026-10-12T13-13-32-875Z/shop-mobile-3.json",
-        "html": ".local/performance/2026-10-12T13-13-32-875Z/shop-mobile-3.html"
-      },
-      "finalDisplayedUrl": "http://127.0.0.1:4177/shop/#/pages/index/index",
-      "finalUrl": "http://127.0.0.1:4177/shop/",
-      "lighthouseVersion": "13.5.0",
-      "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
-      "fetchTime": "2026-10-12T13:16:14.917Z",
+      "fetchTime": "2026-10-12T13:35:37.297Z",
       "warnings": [],
       "issues": [
         {
@@ -5170,7 +4079,7 @@
           "score": 0.65,
           "weight": 10,
           "displayValue": "2.6 s",
-          "numericValue": 2570.266125,
+          "numericValue": 2570.953875,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -5181,7 +4090,7 @@
           "score": 0.77,
           "weight": 25,
           "displayValue": "3.0 s",
-          "numericValue": 3036.3193499999998,
+          "numericValue": 3038.3446500000005,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -5192,7 +4101,7 @@
           "score": 0.97,
           "weight": 10,
           "displayValue": "2.6 s",
-          "numericValue": 2570.266125,
+          "numericValue": 2570.953875,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -5222,7 +4131,128 @@
           "score": 0.95,
           "weight": 0,
           "displayValue": "3.1 s",
-          "numericValue": 3070.41935,
+          "numericValue": 3073.5446500000007,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 42 KiB",
+          "numericValue": 150,
+          "scoreDisplayMode": "metricSavings",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 157 KiB",
+          "numericValue": 900,
+          "scoreDisplayMode": "metricSavings",
+          "nodes": []
+        }
+      ],
+      "page": {
+        "url": "http://127.0.0.1:4177/shop/#/pages/index/index",
+        "title": "巷集 Select",
+        "headings": ["让日常好物，陪你慢下来。"],
+        "mode": "本地演示 · 旧版 ShopPilot 流程，仅当前设备保存",
+        "canvasCount": 0,
+        "canEnable3D": false
+      },
+      "metrics": {
+        "performance": 90,
+        "accessibility": 100,
+        "lcpMs": 3038.3446500000005,
+        "tbtMs": 7,
+        "cls": 0
+      },
+      "finishedAt": "2026-10-12T13:35:43.061Z"
+    },
+    {
+      "id": "shop-mobile-2",
+      "caseId": "shop-mobile",
+      "repetition": 2,
+      "requestedUrl": "http://127.0.0.1:4177/shop/#/pages/index/index",
+      "startedAt": "2026-10-12T13:35:43.068Z",
+      "status": "passed",
+      "raw": {
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/shop-mobile-2.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/shop-mobile-2.html"
+      },
+      "finalDisplayedUrl": "http://127.0.0.1:4177/shop/#/pages/index/index",
+      "finalUrl": "http://127.0.0.1:4177/shop/",
+      "lighthouseVersion": "13.5.0",
+      "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "fetchTime": "2026-10-12T13:35:44.775Z",
+      "warnings": [],
+      "issues": [
+        {
+          "category": "performance",
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.65,
+          "weight": 10,
+          "displayValue": "2.6 s",
+          "numericValue": 2572.2609999999995,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.77,
+          "weight": 25,
+          "displayValue": "3.0 s",
+          "numericValue": 3040.7131999999997,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "speed-index",
+          "title": "Speed Index",
+          "score": 0.97,
+          "weight": 10,
+          "displayValue": "2.6 s",
+          "numericValue": 2572.2609999999995,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0,
+          "weight": 0,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 300 ms",
+          "scoreDisplayMode": "metricSavings",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.95,
+          "weight": 0,
+          "displayValue": "3.1 s",
+          "numericValue": 3076.4632,
           "scoreDisplayMode": "numeric",
           "nodes": []
         },
@@ -5247,46 +4277,161 @@
           "numericValue": 750,
           "scoreDisplayMode": "metricSavings",
           "nodes": []
-        },
-        {
-          "category": "accessibility",
-          "id": "color-contrast",
-          "title": "Background and foreground colors do not have a sufficient contrast ratio.",
-          "score": 0,
-          "weight": 7,
-          "scoreDisplayMode": "binary",
-          "nodes": [
-            {
-              "selector": "uni-view.select-mode > uni-view > uni-text.select-mode-copy > span",
-              "snippet": "<span>",
-              "explanation": "Fix any of the following:\n  Element has insufficient color contrast of 4.2 (foreground color: #64705f, background color: #e5e8dc, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
-            },
-            {
-              "selector": "uni-page > uni-page-wrapper > uni-page-body > uni-view.select-mode",
-              "snippet": "<uni-view data-v-f9b0a2b6=\"\" class=\"select-mode\">"
-            }
-          ]
         }
       ],
       "page": {
         "url": "http://127.0.0.1:4177/shop/#/pages/index/index",
         "title": "巷集 Select",
         "headings": ["让日常好物，陪你慢下来。"],
-        "mode": "本地演示 · 旧版 ShopPilot 流程，仅当前设备保存"
+        "mode": "本地演示 · 旧版 ShopPilot 流程，仅当前设备保存",
+        "canvasCount": 0,
+        "canEnable3D": false
       },
       "metrics": {
         "performance": 90,
-        "accessibility": 96,
-        "lcpMs": 3036.3193499999998,
-        "tbtMs": 6,
+        "accessibility": 100,
+        "lcpMs": 3040.7131999999997,
+        "tbtMs": 7.5,
         "cls": 0
       },
-      "finishedAt": "2026-10-12T13:16:22.376Z"
+      "finishedAt": "2026-10-12T13:35:50.448Z"
+    },
+    {
+      "id": "shop-mobile-3",
+      "caseId": "shop-mobile",
+      "repetition": 3,
+      "requestedUrl": "http://127.0.0.1:4177/shop/#/pages/index/index",
+      "startedAt": "2026-10-12T13:35:50.454Z",
+      "status": "passed",
+      "raw": {
+        "json": ".local/performance/2026-10-12T13-33-29-190Z/shop-mobile-3.json",
+        "html": ".local/performance/2026-10-12T13-33-29-190Z/shop-mobile-3.html"
+      },
+      "finalDisplayedUrl": "http://127.0.0.1:4177/shop/#/pages/index/index",
+      "finalUrl": "http://127.0.0.1:4177/shop/",
+      "lighthouseVersion": "13.5.0",
+      "browserUserAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+      "fetchTime": "2026-10-12T13:35:52.165Z",
+      "warnings": [],
+      "issues": [
+        {
+          "category": "performance",
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "score": 0.64,
+          "weight": 10,
+          "displayValue": "2.6 s",
+          "numericValue": 2576.1386250000005,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "score": 0.77,
+          "weight": 25,
+          "displayValue": "3.0 s",
+          "numericValue": 3045.7663500000003,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "speed-index",
+          "title": "Speed Index",
+          "score": 0.97,
+          "weight": 10,
+          "displayValue": "2.6 s",
+          "numericValue": 2576.1386250000005,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree",
+          "score": 0,
+          "weight": 0,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 300 ms",
+          "scoreDisplayMode": "metricSavings",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "score": 0.95,
+          "weight": 0,
+          "displayValue": "3.1 s",
+          "numericValue": 3130.766350000001,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "score": 0.98,
+          "weight": 0,
+          "displayValue": "90 ms",
+          "numericValue": 85,
+          "scoreDisplayMode": "numeric",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 42 KiB",
+          "numericValue": 150,
+          "scoreDisplayMode": "metricSavings",
+          "nodes": []
+        },
+        {
+          "category": "performance",
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "score": 0,
+          "weight": 0,
+          "displayValue": "Est savings of 157 KiB",
+          "numericValue": 750,
+          "scoreDisplayMode": "metricSavings",
+          "nodes": []
+        }
+      ],
+      "page": {
+        "url": "http://127.0.0.1:4177/shop/#/pages/index/index",
+        "title": "巷集 Select",
+        "headings": ["让日常好物，陪你慢下来。"],
+        "mode": "本地演示 · 旧版 ShopPilot 流程，仅当前设备保存",
+        "canvasCount": 0,
+        "canEnable3D": false
+      },
+      "metrics": {
+        "performance": 90,
+        "accessibility": 100,
+        "lcpMs": 3045.7663500000003,
+        "tbtMs": 35,
+        "cls": 0
+      },
+      "finishedAt": "2026-10-12T13:35:59.603Z"
     }
   ],
   "priorInterruptedMeasurements": [
     {
-      "reason": "Earlier interrupted tooling attempt without a completed manifest; retained outside this batch statistics.",
+      "reason": "首轮工具中断：Chrome 清理方法返回 void 与脚本 Promise 假设不符；已修复测量脚本。业务代码和构建未因该次中断修改，首页70分原始报告完整保留。",
       "rawJson": ".local/performance/2026-10-12T13-08-05-279Z/home-mobile-1.json",
       "fetchTime": "2026-10-12T13:08:20.225Z",
       "url": "http://127.0.0.1:4177/#/",
@@ -5294,6 +4439,72 @@
       "accessibility": 100,
       "lcpMs": 2629.0357,
       "tbtMs": 1411,
+      "cls": 0
+    },
+    {
+      "reason": "Integration owner identified real low-contrast text in mobile Lab 2D empty state (.il-flat-nodes > p), requested stopping measurement before CSS correction and rebuild. Not a score-based retry. Six completed home samples remain; seventh navigation was interrupted.",
+      "rawJson": ".local/performance/2026-10-12T13-29-24-655Z/home-desktop-1.json",
+      "fetchTime": "2026-10-12T13:29:59.054Z",
+      "url": "http://127.0.0.1:4177/#/",
+      "performance": 100,
+      "accessibility": 100,
+      "lcpMs": 447.5904,
+      "tbtMs": 31,
+      "cls": 0
+    },
+    {
+      "reason": "Integration owner identified real low-contrast text in mobile Lab 2D empty state (.il-flat-nodes > p), requested stopping measurement before CSS correction and rebuild. Not a score-based retry. Six completed home samples remain; seventh navigation was interrupted.",
+      "rawJson": ".local/performance/2026-10-12T13-29-24-655Z/home-desktop-2.json",
+      "fetchTime": "2026-10-12T13:30:09.869Z",
+      "url": "http://127.0.0.1:4177/#/",
+      "performance": 100,
+      "accessibility": 100,
+      "lcpMs": 448.1645,
+      "tbtMs": 37,
+      "cls": 0
+    },
+    {
+      "reason": "Integration owner identified real low-contrast text in mobile Lab 2D empty state (.il-flat-nodes > p), requested stopping measurement before CSS correction and rebuild. Not a score-based retry. Six completed home samples remain; seventh navigation was interrupted.",
+      "rawJson": ".local/performance/2026-10-12T13-29-24-655Z/home-desktop-3.json",
+      "fetchTime": "2026-10-12T13:30:18.618Z",
+      "url": "http://127.0.0.1:4177/#/",
+      "performance": 100,
+      "accessibility": 100,
+      "lcpMs": 446.4915,
+      "tbtMs": 36,
+      "cls": 0
+    },
+    {
+      "reason": "Integration owner identified real low-contrast text in mobile Lab 2D empty state (.il-flat-nodes > p), requested stopping measurement before CSS correction and rebuild. Not a score-based retry. Six completed home samples remain; seventh navigation was interrupted.",
+      "rawJson": ".local/performance/2026-10-12T13-29-24-655Z/home-mobile-1.json",
+      "fetchTime": "2026-10-12T13:29:27.535Z",
+      "url": "http://127.0.0.1:4177/#/",
+      "performance": 90,
+      "accessibility": 100,
+      "lcpMs": 2136.2664999999997,
+      "tbtMs": 314.9999999999998,
+      "cls": 0
+    },
+    {
+      "reason": "Integration owner identified real low-contrast text in mobile Lab 2D empty state (.il-flat-nodes > p), requested stopping measurement before CSS correction and rebuild. Not a score-based retry. Six completed home samples remain; seventh navigation was interrupted.",
+      "rawJson": ".local/performance/2026-10-12T13-29-24-655Z/home-mobile-2.json",
+      "fetchTime": "2026-10-12T13:29:38.116Z",
+      "url": "http://127.0.0.1:4177/#/",
+      "performance": 92,
+      "accessibility": 100,
+      "lcpMs": 2120.7804,
+      "tbtMs": 281,
+      "cls": 0
+    },
+    {
+      "reason": "Integration owner identified real low-contrast text in mobile Lab 2D empty state (.il-flat-nodes > p), requested stopping measurement before CSS correction and rebuild. Not a score-based retry. Six completed home samples remain; seventh navigation was interrupted.",
+      "rawJson": ".local/performance/2026-10-12T13-29-24-655Z/home-mobile-3.json",
+      "fetchTime": "2026-10-12T13:29:48.756Z",
+      "url": "http://127.0.0.1:4177/#/",
+      "performance": 92,
+      "accessibility": 100,
+      "lcpMs": 1974.5613000000003,
+      "tbtMs": 292.0000000000002,
       "cls": 0
     }
   ]

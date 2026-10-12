@@ -180,15 +180,15 @@ const evidenceIds: Record<string, string> = {
   "agent-workbench": "ai-agent-workbench",
   "rust-tools": "rust-chain-tools",
 };
-projects[0].screenshot = 'screenshots/shop-checkout-390.png';
+projects[0].screenshot = 'screenshots/v2/select-completed-390.png';
 projects[0].github = 'https://github.com/Callmecx/chenxi-devlab-2026/tree/main/apps/commerce-mini';
 projects[0].sourceLabel = '查看本项目源码';
-projects[0].screenshotCaption = '既有 Chrome 验收截图：ShopPilot 演示地址、优惠与订单金额确认；不是本轮 V2 重新截图。';
+projects[0].screenshotCaption = 'V2 本机真实 API 浏览器验收：巷集 Select 模拟付款失败后恢复、发货与收货完成；金额和履约均为模拟。';
 projects[0].limitations = ['本地 Mock 商城，无真实支付、物流或跨设备库存服务。', '微信小程序已编译为游客 AppID 产物，未做微信审核上线或真机验收。'];
-projects[1].screenshot = 'screenshots/pulse-390.png';
+projects[1].screenshot = 'screenshots/v2/weekend-cancelled-390.png';
 projects[1].github = 'https://github.com/Callmecx/chenxi-devlab-2026/tree/main/apps/campaign-h5';
 projects[1].sourceLabel = '查看本项目源码';
-projects[1].screenshotCaption = '既有 Chrome 验收截图：PulseCampaign 移动端活动选择首页；不是本轮 V2 重新截图。';
+projects[1].screenshotCaption = 'V2 本机真实 API 浏览器验收：蓉城周末 Lab 预约查询与取消，状态由服务端确认；活动与名额均为模拟。';
 projects[1].limitations = ['活动品牌、地点和名额均为虚构演示；记录只保存于当前浏览器。', '不采集真实手机号或身份证，不提供正式活动报名服务。'];
 for (const project of projects) {
   const evidence = research.projects.find(
@@ -291,7 +291,7 @@ const details: Record<string, Partial<Project>> = {
     limitations: ['公开静态体验为本地演示；服务报价、库存事务与服务端恢复已在本机验证，后端尚未公网部署。', '无真实支付与物流；微信小程序仅游客 AppID 构建，未微信审核上线或真机验收。'],
     reviewedAt: '2026-10-12', historicalAcceptanceDate: '2026-10-12',
     evidenceSources: ['apps/commerce-mini/src/v2/client.ts', 'apps/commerce-mini/src/v2/store.ts', 'services/demo-api/src/shop.ts', 'services/demo-api/src/server.test.ts', 'tests/e2e/server-flows.spec.ts', 'TEST_REPORT.md（V1 历史验收）'],
-    screenshotAlt: 'ShopPilot 既有 Chrome 验收截图：演示地址、优惠与模拟订单确认',
+    screenshotAlt: '巷集 Select V2 本机服务端演示验收截图：模拟订单已完成',
     verifiedScope: ['本轮客户端与服务测试覆盖整数分、购物车版本、库存约束、优惠和订单状态；本机 Chrome 验证真实 API 与丢响应后的原请求恢复。', 'V2 H5 与微信小程序编译通过；游客 AppID 产物不等于微信正式上线。'],
     pendingScope: ['服务仅本机 SQLite；没有公网持久化后端、生产负载或真实支付验收。', '全站最终集成回归仍由统一报告记录；小程序真机、微信审核和生产部署未完成。'],
     decisions: [
@@ -313,7 +313,7 @@ const details: Record<string, Partial<Project>> = {
     limitations: ['路线、品牌、场次与名额均为模拟；不采集手机号、身份证或提供正式活动服务。', '真实 API 与 SQLite 名额池仅本机运行；公网默认仍是本地演示，没有生产公共席位或跨设备身份同步。'],
     reviewedAt: '2026-10-12', historicalAcceptanceDate: '2026-10-12',
     evidenceSources: ['apps/campaign-h5/src/v2/client.ts', 'apps/campaign-h5/src/v2/store.ts', 'packages/shared/src/api.ts', 'services/demo-api/src/h5.ts', 'tests/e2e/server-flows.spec.ts', 'TEST_REPORT.md（V1 历史验收）'],
-    screenshotAlt: 'PulseCampaign 既有 Chrome 验收截图：虚构活动与场次选择',
+    screenshotAlt: '蓉城周末 Lab V2 本机服务端演示验收截图：预约已取消',
     verifiedScope: ['本轮客户端与服务测试验证推荐规则、服务名额、一次有效预约、取消和会话边界。', '本机 Chrome 已走通真实 API 预约流程和提交成功后丢响应恢复；H5 构建通过。'],
     pendingScope: ['尚未部署公网持久化 API，公开静态模式不拥有服务端名额池。', '全站最终回归另行记录；真实活动运营、短信、跨设备账号体系不在范围。'],
     decisions: [

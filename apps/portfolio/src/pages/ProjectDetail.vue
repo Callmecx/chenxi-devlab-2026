@@ -152,7 +152,7 @@ function scrollSection(id: string) {
               target="_blank"
               rel="noopener noreferrer"
               class="text-link"
-              >本站 V1 交付记录（不是旧项目复测） ↗</a
+              >本站 V2 交付记录（不是旧项目复测） ↗</a
             >
           </div>
         </section>

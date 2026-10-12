@@ -2,11 +2,11 @@ import { expect, test } from "@playwright/test";
 import { mkdir } from "node:fs/promises";
 
 const routes = [
-  ["intelligence", "/#/intelligence"],
-  ["market", "/#/labs/market-replay"],
-  ["enterprise", "/#/labs/enterprise-flow"],
-  ["engineering", "/#/labs/engineering"],
-  ["writing", "/#/writing"],
+  ["intelligence", "/#/intelligence", "智能演化实验室"],
+  ["market", "/#/labs/market-replay", "金融事件回放"],
+  ["enterprise", "/#/labs/enterprise-flow", "企业业务闭环"],
+  ["engineering", "/#/labs/engineering", "三个工程实验"],
+  ["writing", "/#/writing", "工程笔记"],
 ] as const;
 
 test.beforeAll(async () => {
@@ -19,10 +19,18 @@ for (const width of [360, 390, 768, 1440, 1920]) {
     await page.setViewportSize({ width, height: width < 500 ? 844 : 1000 });
     const errors: string[] = [];
     page.on("pageerror", (error) => errors.push(error.message));
-    for (const [name, route] of routes) {
+    for (const [name, route, title] of routes) {
+      // These are initial-view captures. A fresh document prevents the previous
+      // hash route's still-visible heading from satisfying the next route check.
+      await page.goto("about:blank");
       await page.goto(route);
+      await expect(page).toHaveTitle(new RegExp(title));
       await expect(page.locator("main h1").first()).toBeVisible();
       await page.evaluate(() => document.fonts.ready);
+      await expect(
+        page.locator("main .page-enter-active, main .page-leave-active"),
+      ).toHaveCount(0);
+      await expect(page.locator("main > *").first()).toHaveCSS("opacity", "1");
       if (name === "intelligence")
         await expect(
           page.locator("canvas, .il-world-grid, .il-flat-graph").first(),

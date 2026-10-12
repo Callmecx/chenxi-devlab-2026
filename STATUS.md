@@ -2,7 +2,7 @@
 
 Target: `Callmecx/chenxi-devlab-2026` · branch `feat/chenxi-v2` · baseline `b62db8d`.
 
-## Runnable checkpoint — 2026-10-12 21:20 +08
+## Accepted local release candidate — 2026-10-12
 
 - Intelligence tools, warehouse A\*, interventions, approval/cancel/failure/retry and recorded replay implemented.
 - Persistent Fastify/SQLite API and both clients; unknown-response and lost-identity recovery verified.
@@ -11,15 +11,18 @@ Target: `Callmecx/chenxi-devlab-2026` · branch `feat/chenxi-v2` · baseline `b6
 - Three static app builds, WeChat resources and App resources passed.
 - 450 deterministic evaluation scenarios meet their expected outcomes; 350 real HTTP benchmark requests, zero failures.
 - 360/390/768/1440/1920 screenshots and local videos generated. No V2 release yet.
-- First complete Lighthouse batch: home mobile91/desktop100, enterprise85, Lab56, H5 87, shop90 (medians). Original results retained; layout/contrast/performance fixes next.
+- Final Lighthouse batch: 18/18 measurements; home mobile89/desktop100, enterprise95, Lab default 2D95, H5 93, shop90 (medians). All accessibility100 and CLS0. Home mobile remains below the 90 target; original results retained.
+- Six separate opt-in WebGL measurements: local desktop Chrome idle scene, rAF p50 16.7ms/p95 16.8ms. This is not a phone GPU guarantee or a 3D Lighthouse score.
+- Mobile defaults to an operational 2D view and loads Three.js only after opt-in. A final six-test visual pass followed the 64-test full run.
+- Final repository-base browser smoke passed at 21:56 +08: 8 routes at 390/1440, three public business paths, four evidence assets and build metadata; no page errors or missing assets.
+- Final visual evidence was recaptured after fixing an old-heading/route-transition screenshot race: 6/6 checks passed in 19.2 seconds; enterprise/writing desktop and Lab mobile screenshots manually inspected.
 - Feature/source/test/demo/resume matrix and A/B replacement project sections written. Original editable resumes were not found, so no employment timeline changed.
 
 ## Next
 
-1. Fix measured layout shifts and contrast; keep mobile actions and optional 3D while reducing unnecessary startup cost.
-2. Rebuild and recheck affected behavior/visuals, repeat fixed performance batch with original results retained.
-3. Execute the new final repository-base smoke, finalize reviewed evidence and release/rollback notes.
-4. Push only the accepted main-repository branch, complete CI, publish and check anonymously.
+1. Publish the reviewed candidate branch for CI.
+2. Merge only after CI passes; publish Pages and verify anonymous business flows and deployed sourceRevision.
+3. Record actual remote commit/run and final online evidence. Public API/model/device conditions remain explicitly unclaimed.
 
 Raw traces, API data and credentials remain in ignored .local. Public CI artifacts include only sanitized summaries and screenshots.
 No public API hosting, live model, real WeChat AppID, physical device, signed APK/IPA or store release is claimed.

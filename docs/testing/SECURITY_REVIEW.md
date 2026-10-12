@@ -2,6 +2,16 @@
 
 审查日期：2026-10-12（Asia/Shanghai）。此记录描述具体检查与已知边界，不保证绝对安全。开发尚在进行时生成的扫描只覆盖当时快照；最终发布前需要对最终文件再次运行。
 
+## V2 最新复核
+
+2026-10-12 在新增 Fastify、Three 与 App 编译目标后重新执行官方 npm audit：根完整依赖 0 项；uni-app 完整依赖 27 项 high、0 critical，仍由同一条 braces 公告向工具依赖链传播。原始结果：[V2 root](audit-v2-root.json)、[V2 commerce](audit-v2-commerce.json)。下文 24/17 数字是 V1 历史记录，不能作为 V2 数字。
+
+再次查看 GitHub Reviewed 公告确认影响 <=3.0.3、暂无修补版本；本轮 npm ls 确认仍仅 chokidar / fast-glob → micromatch 工具路径。定向搜索业务源码与发布 H5 JS 未出现这些模块名，没有把不可信 glob 输入暴露给后端。该暴露判断不等于修复漏洞，保留可信配置/回环开发边界；不执行跨 uni-app 发行线的 audit fix --force。
+
+V2 API 是新编写的 Fastify/SQLite 本机服务，校验严格 schema、原会话/域、Origin、幂等及状态约束。根依赖审计覆盖该服务；公开 Pages 不部署服务进程。待公网部署时仍需 HTTPS、Secure Cookie、精确 Origin、持久卷及容量/恢复验证。
+
+独立审查发现失败 trace 可携带本机演示会话 cookie/token。已将原始 Playwright HTML、trace、原 JSON 和 SQLite 从公开 CI artifacts 排除，只保留脱敏摘要及审核截图；敏感诊断仍在忽略的 .local。最终扫描见 security-scan.json。模式扫描不能证明完全没有未知秘密或越权问题。
+
 ## 源码发布内容
 
 `scripts/security-scan.mjs` 使用 Node 内置库，以 Git 已跟踪文件和非忽略的待加入文件作为发布候选。忽略的依赖、构建、工具、日志和浏览器临时产物不会进入候选；若已经被错误跟踪，扫描会拒绝它们。
@@ -14,7 +24,7 @@
 
 均使用 `https://registry.npmjs.org` 执行真实 npm audit，以下不是手填的推测评分：
 
-| 范围 | 当前已保存结果 | 状态 |
+| 范围 | V1 历史保存结果 | 状态 |
 |---|---|---|
 | 根 workspace：完整依赖 | [audit-root-all.json](./audit-root-all.json)，0 项 | 升级测试链后重新审计通过 |
 | 根 workspace：排除开发依赖 | [audit-root-production.json](./audit-root-production.json)，0 项 | 通过 |
@@ -41,7 +51,7 @@
 
 ## 数据与执行边界
 
-- 新应用使用演示商品、固定虚构地址、虚构昵称与本地浏览器存储，没有真实支付、真实物流或数据接收后端。
+- 新应用使用模拟商品、固定虚构地址与虚构昵称。V2 的明确服务端模式会将模拟业务写入本机 API；公开本地模式留在浏览器，无真实支付或物流。
 - 表单内容通过 Vue 文本绑定显示；本轮定向搜索未见业务代码使用 `v-html`、`innerHTML`、`eval` 或任意动态执行。
 - 原有 EnterpriseFlow、Workbench、PokerReplay、V23、Rust 源码与数据未被合并进本仓库。公开文案只引用核对过的事实，未启动旧采集或交易流程。
 - 用户已明确授权公开邮箱 `496684212@qq.com` 与 GitHub 主页；不额外公开电话、客户标识、钱包集合或私人路径。

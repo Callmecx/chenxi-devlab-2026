@@ -63,7 +63,7 @@ const server = useSelect();
   display: block;
   font-size: 11px;
   line-height: 1.7;
-  color: #64705f;
+  color: #52604d;
 }
 .select-mode-actions {
   display: flex;

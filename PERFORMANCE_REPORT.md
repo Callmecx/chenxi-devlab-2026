@@ -1,39 +1,40 @@
-# Performance & accessibility evidence
+# V2 真实性能记录
 
-2026-10-12 对最终聚合生产构建执行真实 Lighthouse 测量。下面为本机单次实验室结果，不代表公网、真实手机或生产用户表现。
+2026-10-12，Windows 11 / Intel i5-13500H / Node 24.18.0 / Chrome 154 / Lighthouse 13.5.0。固定本机生产预览，独立浏览器资料目录，每组串行3次。手机为390×844及模拟4倍CPU/Slow 4G，桌面1440×900。不是手机真机或线上用户监测。
 
-| 页面 / 原始 HTML 报告 | Performance | Accessibility | Best practices | SEO | FCP | LCP | TBT | CLS |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| [主站 · 移动](docs/testing/lighthouse/portfolio-mobile-final.report.html) | 92 | 100 | 100 | 100 | 1.8 s | 2.0 s | 280 ms | 0 |
-| [Pulse · 移动](docs/testing/lighthouse/pulse-mobile-final.report.html) | 95 | 100 | 100 | 100 | 1.7 s | 1.8 s | 220 ms | 0 |
-| [ShopPilot · 移动](docs/testing/lighthouse/shop-mobile-final.report.html) | 96 | 100 | 100 | 100 | 2.1 s | 2.4 s | 0 ms | 0 |
-| [主站 · 桌面](docs/testing/lighthouse/portfolio-desktop-final.report.html) | 100 | 95 | 100 | 100 | 0.5 s | 0.5 s | 0 ms | 0 |
+## Lighthouse 最终批次
 
-表格沿用 Lighthouse 显示精度；精确值见 JSON。例如 ShopPilot TBT 为 4.5 ms，在原报告中显示为 0 ms。
+| 页面                       | 性能中位数（范围） | 可访问性 | LCP中位ms | TBT中位ms | CLS |
+| -------------------------- | ------------------ | -------- | --------- | --------- | --- |
+| 首页手机                   | 89（88–91）        | 100      | 2152      | 344       | 0   |
+| 首页桌面                   | 100（100–100）     | 100      | 448       | 35        | 0   |
+| EnterpriseFlow静态案例手机 | 95（95–95）        | 100      | 2476      | 68.5      | 0   |
+| 智能实验室手机默认二维     | 95（95–95）        | 100      | 2460      | 29        | 0   |
+| H5本地入口手机             | 93（92–93）        | 100      | 2103      | 246       | 0   |
+| 商城本地入口手机           | 90（90–90）        | 100      | 3041      | 7.5       | 0   |
 
-## 测量环境
+**首页手机仍未达到90分目标**，瓶颈主要为主线程阻塞；不能用先前单次92或桌面100替代。API模式不在上述导航分数中。Lab手机95对应完整二维业务与可选3D入口，绝不当作3D启动分数。
 
-- Lighthouse **13.5.0**（npm 注册表核实后固定版本）；Node **v24.18.0**；Windows x64；安装版 **HeadlessChrome/154.0.0.0**。Chrome 使用独立临时会话，没有复用用户登录资料。
-- 对象：根构建生成的静态产物，经独立端口 `http://127.0.0.1:4176/` 读取；主站、`/pulse/`、`/shop/`，不是 Vite 开发性能数据。
-- 移动：默认 Moto G Power 模拟，412 × 823、DPR 1.75，`throttlingMethod=simulate`；RTT 150 ms、吞吐 1638.4 Kbps、CPU 4× slowdown。
-- 桌面：`--preset=desktop`，1350 × 940、DPR 1，模拟 RTT 40 ms、吞吐 10240 Kbps、CPU 1×。
-- 每个配置测量一次；没有取最高分、平均值或编造分位数。机器负载、浏览器版本、真实网络、缓存状态均可能导致分数变化。
-- 原始 JSON 保留真实采集时间、审计详情与截图；[结构化测量汇总](docs/testing/lighthouse/measurement-summary.json) 提供精确数值与配置。公开报告已检查没有本机用户名、用户目录、凭证或私人内容。
+完整配置、18份样本与范围见 [报告](docs/acceptance/LIGHTHOUSE_REPORT.md) / [机器摘要](docs/acceptance/lighthouse-summary.json)。首轮 [before](docs/acceptance/lighthouse-before.json) 与两次工具/真实对比度修复中断的7份有效样本原样保留；不同版本不混算。完整批次前后dist指纹一致，原始JSON/HTML在忽略的.local/performance。
 
-## 实际发现与处理
+修复依据：给懒路由主内容与证据图预留空间，消除案例和Lab的0.2069布局位移；提高海报/小字/二维空态对比度；手机默认二维避免提前下载Three，但完整WebGL可由用户启用。没有通过删核心功能或替换差分数达标。
 
-首次审计发现了部分小字对比度不足、演示页 favicon 404，以及 ShopPilot 视口限制缩放与缺少主内容地标。已修复并对最终生产产物重新测量。原始基线文件保留为无 `-final` 后缀的报告；`pulse-accessibility-source.json` 是开发源的单项检查，不用作性能结论。
+## 独立3D测量
 
-最终三个移动入口的加权自动可访问性评分为 100。桌面主站保留 **95**：Pulse 项目装饰海报上的两处浅色大字与橘色底的对比度为 2.51/2.64，未达到 3:1；这是明确保留的改进项，未宣称无可访问性问题。另有装饰海报文字与中文详情链接名不完全一致的零权重建议。评分 100 也不能替代键盘、读屏与人工体验检查。
+node scripts/measure-scene.mjs 在1440和390各启用真实WebGL，3个全新上下文/宽度，每次180帧以上：rAF帧间隔p50均16.7ms、p95均16.8ms，13 draw calls、13 geometries、1 texture。桌面画布1013×405，手机352×320。见 [逐次结果](docs/acceptance/scene-performance.json)。
 
-首屏使用原创 CSS 几何视觉、系统字体与路由懒加载，不依赖远程素材服务。所有页面 CLS 实测为 0；TBT 为本轮模拟值，不能作为真实用户 INP 或生产 SLA。
+这是本机空闲商品星图，不是GPU计时、仓库压力极限或真实手机60fps保证。业务E2E另验证10次退出时旧WebGL context已释放，无残留canvas。不能仅凭此声明所有内存泄漏已排除。
 
-## 复现
+Three图形chunk约531kB未压缩/134kB gzip，Vite大包提醒仍保留；它与首页分离且手机初始不请求。后续可继续缩减图形依赖、首页布局成本并补真实低端设备。
 
-先执行根 `npm run build` 并通过 `PORT=4176 node scripts/serve.mjs` 启动预览。Windows PowerShell 可用 `$env:PORT='4176'` 设置端口；必要时将 `CHROME_PATH` 指向本机 Chrome 可执行文件。
+## API真实HTTP
 
-```text
-npx --yes lighthouse@13.5.0 http://127.0.0.1:4176/ --chrome-flags="--headless=new --disable-dev-shm-usage --no-first-run" --output=json --output=html --output-path=docs/testing/lighthouse/portfolio-mobile-final --only-categories=performance,accessibility,best-practices,seo
-```
+单进程Fastify + SQLite WAL、5并发访客、10个独立shop/H5身份。350次HTTP含预热/建会话，300条计时样本，失败0：
 
-桌面另加 `--preset=desktop`；两个作品分别替换 URL 路径。命令与模拟配置依据 [Lighthouse 官方 CLI 文档](https://github.com/GoogleChrome/lighthouse#using-the-node-cli)。
+| 操作（各100次）        | p50ms | p95ms | 最大ms |
+| ---------------------- | ----- | ----- | ------ |
+| 12商品/25SKU目录       | 5.05  | 10.54 | 14.43  |
+| 单路线3场次            | 3.52  | 6.53  | 16.90  |
+| 带版本校验的购物车写入 | 6.59  | 9.39  | 11.52  |
+
+[原始摘要](docs/acceptance/api-performance.json)，复现 node scripts/benchmark-api.ts。读写均经过真实HTTP和SQLite事务；无WAN/TLS/公网负载，不外推生产容量。每会话使用小JSON文档，读取也刷新持久状态，是明确的演示设计取舍。

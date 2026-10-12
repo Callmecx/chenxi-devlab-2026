@@ -1,5 +1,13 @@
 # GitHub 发布与线上验收
 
+## V2 当前状态（2026-10-12）
+
+本轮已完成本地 247 项单元/接口、64 项生产浏览器测试与构建验收；V2 远端 CI、Pages 发布及匿名复验正在执行。本节后续以实际 Actions 和源码版本补齐，不能把下面 V1 的成功记录当作 V2 发布证据。
+
+目标仅 `Callmecx/chenxi-devlab-2026`。公开 Pages 提供本地算法、模拟业务及回放；Fastify/SQLite API 为本机演示，未部署公网。三个既有入口保持不变。详细验收见 [V2 矩阵](docs/upgrade/ACCEPTANCE_MATRIX.md)，回退办法见 [发布与回退](docs/acceptance/DEPLOYMENT_AND_ROLLBACK.md)。
+
+## V1 历史发布记录
+
 首次部署成功：**2026-10-12 13:43:22（Asia/Shanghai）**。
 
 - 公开仓库：[Callmecx/chenxi-devlab-2026](https://github.com/Callmecx/chenxi-devlab-2026)

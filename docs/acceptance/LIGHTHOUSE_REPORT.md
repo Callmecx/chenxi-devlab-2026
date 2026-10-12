@@ -1,10 +1,12 @@
 # Lighthouse 本机性能与可访问性报告
 
-测量开始：2026-10-12T13:13:32.875Z；完成：2026-10-12T13:16:22.444Z。
+测量开始：2026-10-12T13:33:29.190Z；完成：2026-10-12T13:35:59.718Z。
 
 状态：**measured**；实际运行 18 次，有效 18 次。每个固定页面 / 设备条件计划 3 次，串行执行，不自动重跑或丢弃低分。
 
 这是本机生产构建的导航实验测量，不是公网真实访客数据、手机实测或后端业务链路耗时。H5 与商城使用全新浏览器身份的默认本地演示入口；未预填服务端模式或把 API 业务验收成绩混入 Lighthouse。
+
+本轮手机 Lab 默认使用保留完整任务流程的二维视图，并保留一键启用 3D。脚本验证初始没有 canvas 且存在启用 3D 按钮；这里的 Lab 指标只描述默认 2D 导航，不代表启用 3D 后的加载、帧率或交互性能。首批不同构建 / 默认视图的结果保存在 LIGHTHOUSE_BEFORE.md 与 lighthouse-before.json，不覆盖或混入本轮样本。
 
 ## 固定条件
 
@@ -12,21 +14,21 @@
 - 基址：http://127.0.0.1:4177/；每次新建专属 Chrome profile，使用 headless Chrome，无个人浏览器数据。
 - mobile：390 × 844，DPR 1；desktop：1440 × 900，DPR 1。均使用 Lighthouse simulate；mobileSlow4G / desktopDense4G 参数完整保存在摘要 settings 中。
 - 仅测 performance 与 accessibility；英文审计规则。保持默认页面行为，不强制减少动画、不禁用 GPU 来改变 Lab 呈现。
-- 构建指纹：da305aeb8dc1377f45ce39c1f1a27e73a111bca3c835cf40c0ab786457087a8f（44 个 HTML / JS / CSS / JSON / 字体文件）；测量期间构建未变更。
-- 原始 JSON / HTML 与逐次 manifest：`.local/performance/2026-10-12T13-13-32-875Z`；Chrome profile / TEMP 同置该 D 盘工作区目录。
+- 构建指纹：65b92b6013f3e37d38760cddc758f433a3d67ea6f37a455a9ac94546e9dbf03f（48 个 HTML / JS / CSS / JSON / 字体文件）；测量期间构建未变更。
+- 原始 JSON / HTML 与逐次 manifest：`.local/performance/2026-10-12T13-33-29-190Z`；Chrome profile / TEMP 同置该 D 盘工作区目录。
 
 ## 中位数与范围
 
 方括号为三次有效样本的最小值–最大值；缺少样本时明确列出，不按完整三次验收。Performance / Accessibility 目标均为中位数至少 90；范围中的低分也保留。
 
-| 页面                               | 有效 / 计划 | Performance         | Accessibility       | LCP ms           | TBT ms        | CLS                 | 90 分目标                   |
-| ---------------------------------- | ----------- | ------------------- | ------------------- | ---------------- | ------------- | ------------------- | --------------------------- |
-| 首页 / mobile                      | 3/3         | 91.0 [87.0–91.0]    | 100.0 [100.0–100.0] | 2121 [2042–2133] | 309 [285–423] | 0.000 [0.000–0.000] | 中位数达标，存在单次低于 90 |
-| 首页 / desktop                     | 3/3         | 100.0 [100.0–100.0] | 95.0 [95.0–95.0]    | 448 [446–448]    | 35 [33–39]    | 0.000 [0.000–0.000] | 三次均达标                  |
-| EnterpriseFlow 静态案例 / mobile   | 3/3         | 85.0 [85.0–86.0]    | 96.0 [96.0–96.0]    | 2472 [2458–2474] | 65 [54–67]    | 0.207 [0.207–0.207] | 未达标：performance         |
-| 智能演化 Lab / mobile              | 3/3         | 56.0 [50.0–57.0]    | 100.0 [100.0–100.0] | 5422 [5420–5620] | 266 [239–433] | 0.207 [0.207–0.207] | 未达标：performance         |
-| 蓉城周末 Lab 默认本地入口 / mobile | 3/3         | 87.0 [84.0–88.0]    | 100.0 [100.0–100.0] | 2169 [2097–2191] | 424 [380–532] | 0.000 [0.000–0.000] | 未达标：performance         |
-| 巷集 Select 默认本地入口 / mobile  | 3/3         | 90.0 [90.0–90.0]    | 96.0 [96.0–96.0]    | 3049 [3036–3053] | 46 [6–49]     | 0.000 [0.000–0.000] | 三次均达标                  |
+| 页面                               | 有效 / 计划 | Performance         | Accessibility       | LCP ms           | TBT ms        | CLS                 | 90 分目标           |
+| ---------------------------------- | ----------- | ------------------- | ------------------- | ---------------- | ------------- | ------------------- | ------------------- |
+| 首页 / mobile                      | 3/3         | 89.0 [88.0–91.0]    | 100.0 [100.0–100.0] | 2152 [2126–2166] | 344 [288–375] | 0.000 [0.000–0.000] | 未达标：performance |
+| 首页 / desktop                     | 3/3         | 100.0 [100.0–100.0] | 100.0 [100.0–100.0] | 448 [445–450]    | 35 [32–39]    | 0.000 [0.000–0.000] | 三次均达标          |
+| EnterpriseFlow 静态案例 / mobile   | 3/3         | 95.0 [95.0–95.0]    | 100.0 [100.0–100.0] | 2476 [2473–2502] | 69 [65–89]    | 0.000 [0.000–0.000] | 三次均达标          |
+| 智能演化 Lab 默认 2D / mobile      | 3/3         | 95.0 [95.0–95.0]    | 100.0 [100.0–100.0] | 2460 [2453–2468] | 29 [22–45]    | 0.000 [0.000–0.000] | 三次均达标          |
+| 蓉城周末 Lab 默认本地入口 / mobile | 3/3         | 93.0 [92.0–93.0]    | 100.0 [100.0–100.0] | 2103 [2096–2123] | 246 [236–289] | 0.000 [0.000–0.000] | 三次均达标          |
+| 巷集 Select 默认本地入口 / mobile  | 3/3         | 90.0 [90.0–90.0]    | 100.0 [100.0–100.0] | 3041 [3038–3046] | 8 [7–35]      | 0.000 [0.000–0.000] | 三次均达标          |
 
 ## 路由与具体问题
 
@@ -36,15 +38,15 @@
 
 实测 URL：http://127.0.0.1:4177/#/
 
-- **performance / first-contentful-paint**：First Contentful Paint；出现 3/3 次；2.0 s / 1.8 s。
-- **performance / largest-contentful-paint**：Largest Contentful Paint；出现 3/3 次；2.1 s / 2.0 s。
-- **performance / total-blocking-time**：Total Blocking Time；出现 3/3 次；290 ms / 310 ms / 420 ms。
-- **performance / speed-index**：Speed Index；出现 1/3 次；2.0 s。
+- **performance / first-contentful-paint**：First Contentful Paint；出现 3/3 次；2.0 s。
+- **performance / largest-contentful-paint**：Largest Contentful Paint；出现 3/3 次；2.2 s / 2.1 s。
+- **performance / total-blocking-time**：Total Blocking Time；出现 3/3 次；370 ms / 340 ms / 290 ms。
+- **performance / speed-index**：Speed Index；出现 3/3 次；2.0 s。
 - **performance / forced-reflow-insight**：Forced reflow；出现 3/3 次。
 - **performance / network-dependency-tree-insight**：Network dependency tree；出现 3/3 次。
-- **performance / render-blocking-insight**：Render-blocking requests；出现 3/3 次；Est savings of 300 ms / Est savings of 150 ms。
-- **performance / interactive**：Time to Interactive；出现 3/3 次；2.3 s。
-- **performance / max-potential-fid**：Max Potential First Input Delay；出现 3/3 次；340 ms / 360 ms / 470 ms。
+- **performance / render-blocking-insight**：Render-blocking requests；出现 3/3 次；Est savings of 300 ms。
+- **performance / interactive**：Time to Interactive；出现 3/3 次；2.4 s / 2.3 s。
+- **performance / max-potential-fid**：Max Potential First Input Delay；出现 3/3 次；420 ms / 390 ms / 340 ms。
 - **performance / unused-javascript**：Reduce unused JavaScript；出现 3/3 次；Est savings of 38 KiB。
 - **performance / bf-cache**：Page prevented back/forward cache restoration；出现 3/3 次；1 failure reason。
 - **accessibility / label-content-name-mismatch**：Elements with visible text labels do not have matching accessible names.；出现 3/3 次；位置：`div#app > header.site-header > div.header-inner > a.router-link-active；section.section-wrap > div.projects-grid > article.project-card > a.visual-link；section.section-wrap > div.projects-grid > article.project-card > a.visual-link`。
@@ -60,7 +62,6 @@
 - **performance / unused-css-rules**：Reduce unused CSS；出现 3/3 次；Est savings of 18 KiB。
 - **performance / unused-javascript**：Reduce unused JavaScript；出现 3/3 次；Est savings of 38 KiB。
 - **performance / bf-cache**：Page prevented back/forward cache restoration；出现 3/3 次；1 failure reason。
-- **accessibility / color-contrast**：Background and foreground colors do not have a sufficient contrast ratio.；出现 3/3 次；位置：`a.visual-link > div.project-visual > div.pulse-art > span；div.projects-grid > article.project-card > a.visual-link > div.project-visual；a.visual-link > div.project-visual > div.pulse-art > b`。
 - **accessibility / label-content-name-mismatch**：Elements with visible text labels do not have matching accessible names.；出现 3/3 次；位置：`div#app > header.site-header > div.header-inner > a.router-link-active；section.section-wrap > div.projects-grid > article.project-card > a.visual-link；section.section-wrap > div.projects-grid > article.project-card > a.visual-link`。
 
 ### EnterpriseFlow 静态案例 / mobile
@@ -69,84 +70,79 @@
 
 - **performance / first-contentful-paint**：First Contentful Paint；出现 3/3 次；2.1 s。
 - **performance / largest-contentful-paint**：Largest Contentful Paint；出现 3/3 次；2.5 s。
-- **performance / cumulative-layout-shift**：Cumulative Layout Shift；出现 3/3 次；0.207。
+- **performance / total-blocking-time**：Total Blocking Time；出现 3/3 次；70 ms / 60 ms / 90 ms。
 - **performance / speed-index**：Speed Index；出现 3/3 次；2.1 s。
-- **performance / cls-culprits-insight**：Layout shift culprits；出现 3/3 次；位置：`body > div#app > footer.site-footer`。
 - **performance / forced-reflow-insight**：Forced reflow；出现 3/3 次。
-- **performance / image-delivery-insight**：Improve image delivery；出现 3/3 次；Est savings of 104 KiB；位置：`div.detail-body > section#project-evidence > button.screenshot-button > img`。
+- **performance / image-delivery-insight**：Improve image delivery；出现 3/3 次；Est savings of 102 KiB；位置：`div.detail-body > section#project-evidence > button.screenshot-button > img`。
 - **performance / network-dependency-tree-insight**：Network dependency tree；出现 3/3 次。
 - **performance / render-blocking-insight**：Render-blocking requests；出现 3/3 次；Est savings of 300 ms。
-- **performance / interactive**：Time to Interactive；出现 3/3 次；2.5 s。
-- **performance / max-potential-fid**：Max Potential First Input Delay；出现 3/3 次；160 ms / 180 ms。
+- **performance / interactive**：Time to Interactive；出现 3/3 次；2.5 s / 2.6 s。
+- **performance / max-potential-fid**：Max Potential First Input Delay；出现 3/3 次；180 ms / 170 ms / 210 ms。
 - **performance / unused-css-rules**：Reduce unused CSS；出现 3/3 次；Est savings of 23 KiB。
 - **performance / unused-javascript**：Reduce unused JavaScript；出现 3/3 次；Est savings of 47 KiB。
-- **performance / unsized-images**：Image elements do not have explicit `width` and `height`；出现 3/3 次；位置：`div.detail-body > section#project-evidence > button.screenshot-button > img`。
 - **performance / bf-cache**：Page prevented back/forward cache restoration；出现 3/3 次；1 failure reason。
-- **performance / layout-shifts**：Avoid large layout shifts；出现 3/3 次；1 layout shift found；位置：`body > div#app > footer.site-footer；div.detail-body > section#project-evidence > button.screenshot-button > img`。
-- **accessibility / color-contrast**：Background and foreground colors do not have a sufficient contrast ratio.；出现 3/3 次；位置：`section#project-process > div.flow > div > span；div.detail-body > section#project-process > div.flow > div；section#project-process > div.flow > div > span`。
 - **accessibility / label-content-name-mismatch**：Elements with visible text labels do not have matching accessible names.；出现 3/3 次；位置：`div#app > header.site-header > div.header-inner > a.brand；div.detail-layout > div.detail-body > section#project-evidence > button.screenshot-button`。
-- **performance / total-blocking-time**：Total Blocking Time；出现 2/3 次；70 ms。
 
-### 智能演化 Lab / mobile
+### 智能演化 Lab 默认 2D / mobile
 
 实测 URL：http://127.0.0.1:4177/#/intelligence
 
-- **performance / first-contentful-paint**：First Contentful Paint；出现 3/3 次；3.6 s / 3.7 s。
-- **performance / largest-contentful-paint**：Largest Contentful Paint；出现 3/3 次；5.4 s / 5.6 s。
-- **performance / total-blocking-time**：Total Blocking Time；出现 3/3 次；240 ms / 270 ms / 430 ms。
-- **performance / cumulative-layout-shift**：Cumulative Layout Shift；出现 3/3 次；0.207。
-- **performance / speed-index**：Speed Index；出现 3/3 次；3.6 s / 3.7 s。
-- **performance / cls-culprits-insight**：Layout shift culprits；出现 3/3 次；位置：`body > div#app > footer.site-footer`。
+- **performance / first-contentful-paint**：First Contentful Paint；出现 3/3 次；2.2 s。
+- **performance / largest-contentful-paint**：Largest Contentful Paint；出现 3/3 次；2.5 s。
+- **performance / speed-index**：Speed Index；出现 3/3 次；2.2 s。
 - **performance / forced-reflow-insight**：Forced reflow；出现 3/3 次。
 - **performance / network-dependency-tree-insight**：Network dependency tree；出现 3/3 次。
 - **performance / render-blocking-insight**：Render-blocking requests；出现 3/3 次；Est savings of 300 ms。
-- **performance / interactive**：Time to Interactive；出现 3/3 次；5.5 s / 5.6 s / 5.8 s。
-- **performance / max-potential-fid**：Max Potential First Input Delay；出现 3/3 次；250 ms / 280 ms / 370 ms。
+- **performance / interactive**：Time to Interactive；出现 3/3 次；2.5 s。
 - **performance / unused-css-rules**：Reduce unused CSS；出现 3/3 次；Est savings of 30 KiB。
-- **performance / unused-javascript**：Reduce unused JavaScript；出现 3/3 次；Est savings of 265 KiB。
+- **performance / unused-javascript**：Reduce unused JavaScript；出现 3/3 次；Est savings of 69 KiB。
 - **performance / bf-cache**：Page prevented back/forward cache restoration；出现 3/3 次；1 failure reason。
-- **performance / layout-shifts**：Avoid large layout shifts；出现 3/3 次；1 layout shift found；位置：`body > div#app > footer.site-footer`。
 - **accessibility / label-content-name-mismatch**：Elements with visible text labels do not have matching accessible names.；出现 3/3 次；位置：`div#app > header.site-header > div.header-inner > a.brand；section.il-console > div.il-stage-column > div.il-controls > button.il-play`。
-- **performance / mainthread-work-breakdown**：Minimize main-thread work；出现 1/3 次；2.1 s。
+- **performance / max-potential-fid**：Max Potential First Input Delay；出现 1/3 次；70 ms。
 
 ### 蓉城周末 Lab 默认本地入口 / mobile
 
 实测 URL：http://127.0.0.1:4177/pulse/#/
 
-- **performance / first-contentful-paint**：First Contentful Paint；出现 3/3 次；2.0 s / 1.8 s。
-- **performance / largest-contentful-paint**：Largest Contentful Paint；出现 3/3 次；2.2 s / 2.1 s。
-- **performance / total-blocking-time**：Total Blocking Time；出现 3/3 次；420 ms / 380 ms / 530 ms。
-- **performance / speed-index**：Speed Index；出现 2/3 次；2.0 s。
+- **performance / first-contentful-paint**：First Contentful Paint；出现 3/3 次；2.0 s。
+- **performance / largest-contentful-paint**：Largest Contentful Paint；出现 3/3 次；2.1 s。
+- **performance / total-blocking-time**：Total Blocking Time；出现 3/3 次；290 ms / 250 ms / 240 ms。
 - **performance / forced-reflow-insight**：Forced reflow；出现 3/3 次。
 - **performance / network-dependency-tree-insight**：Network dependency tree；出现 3/3 次。
-- **performance / render-blocking-insight**：Render-blocking requests；出现 3/3 次；Est savings of 450 ms / Est savings of 300 ms。
-- **performance / interactive**：Time to Interactive；出现 3/3 次；2.4 s。
-- **performance / max-potential-fid**：Max Potential First Input Delay；出现 3/3 次；470 ms / 430 ms / 580 ms。
+- **performance / render-blocking-insight**：Render-blocking requests；出现 3/3 次；Est savings of 450 ms。
+- **performance / interactive**：Time to Interactive；出现 3/3 次；2.3 s / 2.2 s。
+- **performance / max-potential-fid**：Max Potential First Input Delay；出现 3/3 次；340 ms / 300 ms / 290 ms。
 - **performance / unused-css-rules**：Reduce unused CSS；出现 3/3 次；Est savings of 26 KiB。
 - **performance / unused-javascript**：Reduce unused JavaScript；出现 3/3 次；Est savings of 55 KiB。
 - **performance / bf-cache**：Page prevented back/forward cache restoration；出现 3/3 次；1 failure reason。
 - **accessibility / label-content-name-mismatch**：Elements with visible text labels do not have matching accessible names.；出现 3/3 次；位置：`section#experiences > div.session-grid > article.session-card > a.session-art-link；section#experiences > div.session-grid > article.session-card > a.session-art-link；section#experiences > div.session-grid > article.session-card > a.session-art-link`。
+- **performance / speed-index**：Speed Index；出现 1/3 次；2.0 s。
 
 ### 巷集 Select 默认本地入口 / mobile
 
 实测 URL：http://127.0.0.1:4177/shop/#/pages/index/index
 
 - **performance / first-contentful-paint**：First Contentful Paint；出现 3/3 次；2.6 s。
-- **performance / largest-contentful-paint**：Largest Contentful Paint；出现 3/3 次；3.0 s / 3.1 s。
+- **performance / largest-contentful-paint**：Largest Contentful Paint；出现 3/3 次；3.0 s。
 - **performance / speed-index**：Speed Index；出现 3/3 次；2.6 s。
 - **performance / network-dependency-tree-insight**：Network dependency tree；出现 3/3 次。
 - **performance / render-blocking-insight**：Render-blocking requests；出现 3/3 次；Est savings of 300 ms。
 - **performance / interactive**：Time to Interactive；出现 3/3 次；3.1 s。
-- **performance / max-potential-fid**：Max Potential First Input Delay；出现 2/3 次；100 ms。
 - **performance / unused-css-rules**：Reduce unused CSS；出现 3/3 次；Est savings of 42 KiB。
 - **performance / unused-javascript**：Reduce unused JavaScript；出现 3/3 次；Est savings of 157 KiB。
-- **accessibility / color-contrast**：Background and foreground colors do not have a sufficient contrast ratio.；出现 3/3 次；位置：`uni-view.select-mode > uni-view > uni-text.select-mode-copy > span；uni-page > uni-page-wrapper > uni-page-body > uni-view.select-mode`。
+- **performance / max-potential-fid**：Max Potential First Input Delay；出现 1/3 次；90 ms。
 
 ## 先前中断尝试（单列保留）
 
-以下真实测量在工具执行中断前已产生原始报告，不纳入本批三次统计，也未因低分删除。首次中断来自 Chrome 清理方法返回 void 与脚本 Promise 假设不符；修复的只是清理脚本，业务代码及构建未因此修改。
+以下真实测量在批次中断前已产生原始报告，不纳入本批三次统计，也未因低分删除。每项记录具体中断原因；需要修复真实页面问题并重建时，不将构建前后的样本混合统计。
 
-- 2026-10-12T13:08:20.225Z http://127.0.0.1:4177/#/：Performance 70 / Accessibility 100；LCP 2629ms，TBT 1411ms，CLS 0。原始 JSON：`.local/performance/2026-10-12T13-08-05-279Z/home-mobile-1.json`（同名 HTML 同目录）。
+- 2026-10-12T13:08:20.225Z http://127.0.0.1:4177/#/：Performance 70 / Accessibility 100；LCP 2629ms，TBT 1411ms，CLS 0。原始 JSON：`.local/performance/2026-10-12T13-08-05-279Z/home-mobile-1.json`（同名 HTML 同目录）。中断原因：首轮工具中断：Chrome 清理方法返回 void 与脚本 Promise 假设不符；已修复测量脚本。业务代码和构建未因该次中断修改，首页70分原始报告完整保留。
+- 2026-10-12T13:29:59.054Z http://127.0.0.1:4177/#/：Performance 100 / Accessibility 100；LCP 448ms，TBT 31ms，CLS 0。原始 JSON：`.local/performance/2026-10-12T13-29-24-655Z/home-desktop-1.json`（同名 HTML 同目录）。中断原因：Integration owner identified real low-contrast text in mobile Lab 2D empty state (.il-flat-nodes > p), requested stopping measurement before CSS correction and rebuild. Not a score-based retry. Six completed home samples remain; seventh navigation was interrupted.
+- 2026-10-12T13:30:09.869Z http://127.0.0.1:4177/#/：Performance 100 / Accessibility 100；LCP 448ms，TBT 37ms，CLS 0。原始 JSON：`.local/performance/2026-10-12T13-29-24-655Z/home-desktop-2.json`（同名 HTML 同目录）。中断原因：Integration owner identified real low-contrast text in mobile Lab 2D empty state (.il-flat-nodes > p), requested stopping measurement before CSS correction and rebuild. Not a score-based retry. Six completed home samples remain; seventh navigation was interrupted.
+- 2026-10-12T13:30:18.618Z http://127.0.0.1:4177/#/：Performance 100 / Accessibility 100；LCP 446ms，TBT 36ms，CLS 0。原始 JSON：`.local/performance/2026-10-12T13-29-24-655Z/home-desktop-3.json`（同名 HTML 同目录）。中断原因：Integration owner identified real low-contrast text in mobile Lab 2D empty state (.il-flat-nodes > p), requested stopping measurement before CSS correction and rebuild. Not a score-based retry. Six completed home samples remain; seventh navigation was interrupted.
+- 2026-10-12T13:29:27.535Z http://127.0.0.1:4177/#/：Performance 90 / Accessibility 100；LCP 2136ms，TBT 315ms，CLS 0。原始 JSON：`.local/performance/2026-10-12T13-29-24-655Z/home-mobile-1.json`（同名 HTML 同目录）。中断原因：Integration owner identified real low-contrast text in mobile Lab 2D empty state (.il-flat-nodes > p), requested stopping measurement before CSS correction and rebuild. Not a score-based retry. Six completed home samples remain; seventh navigation was interrupted.
+- 2026-10-12T13:29:38.116Z http://127.0.0.1:4177/#/：Performance 92 / Accessibility 100；LCP 2121ms，TBT 281ms，CLS 0。原始 JSON：`.local/performance/2026-10-12T13-29-24-655Z/home-mobile-2.json`（同名 HTML 同目录）。中断原因：Integration owner identified real low-contrast text in mobile Lab 2D empty state (.il-flat-nodes > p), requested stopping measurement before CSS correction and rebuild. Not a score-based retry. Six completed home samples remain; seventh navigation was interrupted.
+- 2026-10-12T13:29:48.756Z http://127.0.0.1:4177/#/：Performance 92 / Accessibility 100；LCP 1975ms，TBT 292ms，CLS 0。原始 JSON：`.local/performance/2026-10-12T13-29-24-655Z/home-mobile-3.json`（同名 HTML 同目录）。中断原因：Integration owner identified real low-contrast text in mobile Lab 2D empty state (.il-flat-nodes > p), requested stopping measurement before CSS correction and rebuild. Not a score-based retry. Six completed home samples remain; seventh navigation was interrupted.
 
 ## 复现
 

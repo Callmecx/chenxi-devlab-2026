@@ -11,6 +11,9 @@
   font-size: 14px;
   overflow: hidden;
 }
+.il-flat-nodes > p {
+  color: var(--il-muted);
+}
 .intelligence-lab button,
 .intelligence-lab input,
 .intelligence-lab select,

@@ -25,7 +25,7 @@ try {
     for (const [path, expected] of [
       ["", "工程交付"],
       ["shop/", "Select"],
-      ["pulse/", "Pulse"],
+      ["pulse/", "蓉城周末 Lab"],
       ["#/intelligence", "智能演化实验室"],
       ["#/labs/market-replay", "金融事件回放"],
       ["#/labs/enterprise-flow", "企业业务闭环"],
@@ -112,6 +112,22 @@ try {
   }
   if (errors.length || failures.length)
     throw new Error(JSON.stringify({ errors, failures }));
+  const metadataResponse = await page.request.get(
+    new URL("build-meta.json", base).href,
+  );
+  if (!metadataResponse.ok())
+    throw new Error("Missing deployment build metadata");
+  const build = await metadataResponse.json();
+  if (
+    build.basePath !== new URL(base).pathname ||
+    !/^[a-f0-9]{40}$/.test(build.sourceRevision)
+  )
+    throw new Error("Deployment base or source revision is invalid");
+  if (
+    process.env.EXPECTED_REVISION &&
+    build.sourceRevision !== process.env.EXPECTED_REVISION
+  )
+    throw new Error(`Unexpected deployed revision: ${build.sourceRevision}`);
   await mkdir("docs/testing", { recursive: true });
   const report = {
     checkedAt: new Date().toISOString(),
@@ -119,6 +135,7 @@ try {
     browser: browser.version(),
     anonymous: true,
     result: "PASS",
+    build,
     pagesAndAssets: results,
     interactions,
     pageErrors: errors,

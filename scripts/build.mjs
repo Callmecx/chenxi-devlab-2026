@@ -12,6 +12,25 @@ const sourceRevision =
   }).trim();
 if (!/^[a-f0-9]{40}$/.test(sourceRevision))
   throw Error("Invalid source revision");
+const sourceTreeDirty =
+  execFileSync(
+    "git",
+    [
+      "status",
+      "--porcelain",
+      "--untracked-files=normal",
+      "--",
+      "apps",
+      "packages",
+      "services",
+      "scripts",
+      "tests",
+      "*.json",
+      "*.ts",
+      ".github",
+    ],
+    { cwd: root, encoding: "utf8" },
+  ).trim().length > 0;
 if (!/^\/[a-zA-Z0-9/_-]*\/$/.test(base) && base !== "/")
   throw Error("BASE_PATH must be a simple absolute directory path ending in /");
 function run(args, appBase) {
@@ -52,7 +71,12 @@ cpSync(resolve(root, "docs/research/assets"), resolve(output, "evidence"), {
 for (const name of ["TEST_REPORT.md", "ARCHITECTURE.md", "PROJECT_SHOWCASE.md"])
   if (existsSync(resolve(root, name)))
     cpSync(resolve(root, name), resolve(output, "evidence", name));
-for (const folder of ["acceptance", "intelligence-lab", "interview"])
+for (const folder of [
+  "acceptance",
+  "intelligence-lab",
+  "intelligence-lab-v3",
+  "interview",
+])
   if (existsSync(resolve(root, "docs", folder)))
     cpSync(resolve(root, "docs", folder), resolve(output, "evidence", folder), {
       recursive: true,
@@ -68,6 +92,7 @@ writeFileSync(
     {
       basePath: base,
       sourceRevision,
+      sourceTreeDirty,
       builtAt: new Date().toISOString(),
       apps: ["portfolio", "shop", "pulse"],
     },

@@ -1,9 +1,9 @@
 {
   "source": "Actual Vitest run; sanitized result without absolute paths or failure payloads.",
-  "generatedAt": "2026-10-12T13:23:48.401Z",
-  "startTime": "2026-10-12T13:23:47.016Z",
-  "total": 247,
-  "passed": 247,
+  "generatedAt": "2026-10-12T15:54:52.612Z",
+  "startTime": "2026-10-12T15:54:48.678Z",
+  "total": 308,
+  "passed": 308,
   "failed": 0,
   "skipped": 0,
   "todo": 0,
@@ -16,57 +16,57 @@
         {
           "title": "Pulse booking rules detects partial time overlaps and allows separate slots",
           "status": "passed",
-          "durationMs": 3.146199999999965
+          "durationMs": 2.6154000000000224
         },
         {
           "title": "Pulse booking rules requires known, unique sessions and 1–3 integer tickets",
           "status": "passed",
-          "durationMs": 0.7637000000000285
+          "durationMs": 0.6408000000000129
         },
         {
           "title": "Pulse booking rules prevents over-capacity booking but accepts exact capacity",
           "status": "passed",
-          "durationMs": 0.39990000000000236
+          "durationMs": 0.42470000000002983
         },
         {
           "title": "Pulse booking rules releases capacity when a booking is cancelled",
           "status": "passed",
-          "durationMs": 0.21719999999999118
+          "durationMs": 0.22750000000002046
         },
         {
           "title": "Pulse booking rules validates nickname, remark length and demonstration consent",
           "status": "passed",
-          "durationMs": 3.6311999999999784
+          "durationMs": 3.0125999999999635
         },
         {
           "title": "Pulse booking rules prevents duplicate reservations for the same nickname and experience",
           "status": "passed",
-          "durationMs": 0.6553000000000111
+          "durationMs": 0.5892000000000053
         },
         {
           "title": "Pulse booking rules normalizes unsafe or incompatible persisted drafts",
           "status": "passed",
-          "durationMs": 1.5656999999999357
+          "durationMs": 1.238900000000001
         },
         {
           "title": "Pulse booking rules drops corrupt, duplicate and impossible persisted booking records",
           "status": "passed",
-          "durationMs": 1.1188999999999396
+          "durationMs": 1.1073999999999842
         },
         {
           "title": "Pulse booking rules restores only records that fit cumulative capacity, retaining other valid records",
           "status": "passed",
-          "durationMs": 1.829499999999939
+          "durationMs": 1.901200000000017
         },
         {
           "title": "Pulse booking rules rejects duplicate restored nickname/session pairs, including case and space variants",
           "status": "passed",
-          "durationMs": 0.4635000000000673
+          "durationMs": 0.5054000000000087
         },
         {
           "title": "Pulse booking rules restores cancelled history without consuming seats, but rejects reused cancelled IDs",
           "status": "passed",
-          "durationMs": 0.40830000000005384
+          "durationMs": 0.3631000000000313
         }
       ]
     },
@@ -77,32 +77,32 @@
         {
           "title": "Pulse asynchronous booking store holds a submission lock and creates exactly one booking",
           "status": "passed",
-          "durationMs": 27.262500000000045
+          "durationMs": 24.7666999999999
         },
         {
           "title": "Pulse asynchronous booking store keeps a failed draft and permits a successful retry",
           "status": "passed",
-          "durationMs": 3.524099999999976
+          "durationMs": 2.7934999999999945
         },
         {
           "title": "Pulse asynchronous booking store submits a fixed snapshot even if a draft changes during the simulated request",
           "status": "passed",
-          "durationMs": 2.3999999999999773
+          "durationMs": 2.288400000000024
         },
         {
           "title": "Pulse asynchronous booking store cancels a booking and updates statistics without deleting the audit record",
           "status": "passed",
-          "durationMs": 2.8482999999999947
+          "durationMs": 1.9904000000000224
         },
         {
           "title": "Pulse asynchronous booking store survives malformed local data and storage write failures",
           "status": "passed",
-          "durationMs": 1.4855999999999767
+          "durationMs": 1.1486999999999625
         },
         {
           "title": "Pulse asynchronous booking store handles an unexpected local runtime error without leaving the submission locked",
           "status": "passed",
-          "durationMs": 1.7093999999999596
+          "durationMs": 1.308400000000006
         }
       ]
     },
@@ -113,67 +113,67 @@
         {
           "title": "ShopPilot shopping invariants merges matching SKUs but keeps distinct specifications separate",
           "status": "passed",
-          "durationMs": 3.6724000000000387
+          "durationMs": 3.079800000000091
         },
         {
           "title": "ShopPilot shopping invariants rejects sold-out SKUs, unknown SKUs, excessive and non-integer quantities",
           "status": "passed",
-          "durationMs": 2.078700000000026
+          "durationMs": 1.5801999999999907
         },
         {
           "title": "ShopPilot shopping invariants checks total in-cart quantity against stock when adding repeatedly",
           "status": "passed",
-          "durationMs": 0.7226000000000568
+          "durationMs": 0.5792999999999893
         },
         {
           "title": "ShopPilot shopping invariants uses integer cents, conditional coupons and pre-discount shipping threshold",
           "status": "passed",
-          "durationMs": 1.4863000000000284
+          "durationMs": 1.398300000000063
         },
         {
           "title": "ShopPilot shopping invariants applies coupon at exact threshold and keeps unselected items out of totals",
           "status": "passed",
-          "durationMs": 0.5630999999999631
+          "durationMs": 0.5732000000000426
         },
         {
           "title": "ShopPilot shopping invariants rejects empty checkouts and ineligible coupons",
           "status": "passed",
-          "durationMs": 0.9076999999999771
+          "durationMs": 0.9016999999998916
         },
         {
           "title": "ShopPilot shopping invariants decrements available inventory and retains only unselected items",
           "status": "passed",
-          "durationMs": 4.310699999999997
+          "durationMs": 3.039100000000076
         },
         {
           "title": "ShopPilot shopping invariants returns the original order for the same request key without charging twice",
           "status": "passed",
-          "durationMs": 0.5267999999999802
+          "durationMs": 0.5696000000000367
         },
         {
           "title": "ShopPilot shopping invariants rechecks stock at order submission",
           "status": "passed",
-          "durationMs": 0.43279999999992924
+          "durationMs": 0.40190000000006876
         },
         {
           "title": "ShopPilot shopping invariants progresses order status without moving beyond completed",
           "status": "passed",
-          "durationMs": 0.3330999999999449
+          "durationMs": 0.2839999999999918
         },
         {
           "title": "ShopPilot shopping invariants round-trips valid persisted state and sanitizes untrusted storage",
           "status": "passed",
-          "durationMs": 1.2579999999999245
+          "durationMs": 0.8881000000000085
         },
         {
           "title": "ShopPilot shopping invariants rejects duplicate cart lines and fake persisted orders that exceed stock",
           "status": "passed",
-          "durationMs": 0.462099999999964
+          "durationMs": 0.2949999999999591
         },
         {
           "title": "ShopPilot shopping invariants clamps valid cart state to remaining inventory after restoration",
           "status": "passed",
-          "durationMs": 0.35219999999992524
+          "durationMs": 0.2095000000000482
         }
       ]
     },
@@ -184,62 +184,62 @@
         {
           "title": "Select service recovery contract preserves uncertain order intent when recovery returns UNAUTHORIZED",
           "status": "passed",
-          "durationMs": 6.110400000000027
+          "durationMs": 5.042199999999923
         },
         {
           "title": "Select service recovery contract preserves uncertain order intent when recovery returns SESSION_EXPIRED",
           "status": "passed",
-          "durationMs": 0.8677999999999884
+          "durationMs": 0.7396999999999707
         },
         {
           "title": "Select service recovery contract preserves uncertain order intent when recovery returns IDEMPOTENCY_CONFLICT",
           "status": "passed",
-          "durationMs": 0.7785000000000082
+          "durationMs": 0.6648000000000138
         },
         {
           "title": "Select service recovery contract archives unknown intent on explicit abandonment without creating a new session",
           "status": "passed",
-          "durationMs": 3.5593999999999824
+          "durationMs": 2.495400000000018
         },
         {
           "title": "Select service recovery contract keeps original quote body and key after a response loss and application restart",
           "status": "passed",
-          "durationMs": 2.3202999999999747
+          "durationMs": 1.7087999999999965
         },
         {
           "title": "Select service recovery contract prevents editing or resetting while an intent is unresolved",
           "status": "passed",
-          "durationMs": 1.1666999999999916
+          "durationMs": 0.8686000000000149
         },
         {
           "title": "Select service recovery contract does not transmit an order without durable pending storage",
           "status": "passed",
-          "durationMs": 0.6798000000000002
+          "durationMs": 0.8089999999999691
         },
         {
           "title": "Select service recovery contract does not treat operation-not-found as permission to change the key",
           "status": "passed",
-          "durationMs": 1.0199999999999818
+          "durationMs": 0.8905000000000882
         },
         {
           "title": "Select service recovery contract checks application errors even when transport completes successfully",
           "status": "passed",
-          "durationMs": 0.6743000000000166
+          "durationMs": 0.6258000000000266
         },
         {
           "title": "Select service recovery contract uses the saved bearer token without issuing an extra session creation",
           "status": "passed",
-          "durationMs": 0.5947999999999638
+          "durationMs": 0.5401000000000522
         },
         {
           "title": "Select service recovery contract cannot silently replace a missing session while an order is unresolved",
           "status": "passed",
-          "durationMs": 0.6389000000000351
+          "durationMs": 0.4553999999999405
         },
         {
           "title": "Select service recovery contract cannot silently replace a expired session while an order is unresolved",
           "status": "passed",
-          "durationMs": 0.3390999999999167
+          "durationMs": 0.23969999999997071
         }
       ]
     },
@@ -250,7 +250,7 @@
         {
           "title": "keeps a connecting session owned by its generation and permits later mode changes",
           "status": "passed",
-          "durationMs": 10.959100000000035
+          "durationMs": 8.258700000000033
         }
       ]
     },
@@ -261,656 +261,17 @@
         {
           "title": "ShopPilot pending checkout consistency rejects a confirmation changed while awaiting and preserves the latest cart/address",
           "status": "passed",
-          "durationMs": 21.685800000000086
+          "durationMs": 17.637500000000045
         },
         {
           "title": "ShopPilot pending checkout consistency locks concurrent submissions and releases the lock on successful completion",
           "status": "passed",
-          "durationMs": 3.049099999999953
+          "durationMs": 2.8558000000000447
         },
         {
           "title": "ShopPilot pending checkout consistency preserves a failed confirmation and releases the lock for retry",
           "status": "passed",
-          "durationMs": 3.143100000000004
-        }
-      ]
-    },
-    {
-      "file": "packages/intelligence/src/engine.test.ts",
-      "status": "passed",
-      "tests": [
-        {
-          "title": "deterministic workflow and approval boundary queries and compares real fixture constraints, awaits approval, then writes exactly once",
-          "status": "passed",
-          "durationMs": 32.43629999999996
-        },
-        {
-          "title": "deterministic workflow and approval boundary keeps a retrieved malicious instruction as data and cannot bypass rejected approval",
-          "status": "passed",
-          "durationMs": 4.85469999999998
-        },
-        {
-          "title": "deterministic workflow and approval boundary confirms a synthetic activity against local capacity and records the actual remaining seats",
-          "status": "passed",
-          "durationMs": 3.2035000000000764
-        },
-        {
-          "title": "deterministic workflow and approval boundary does not draft an infeasible combination: {\"preset\":\"product\",\"budgetCents\":1000,\"category\":\"all\",\"slotId\":\"all\"}",
-          "status": "passed",
-          "durationMs": 2.820100000000025
-        },
-        {
-          "title": "deterministic workflow and approval boundary does not draft an infeasible combination: {\"preset\":\"activity\",\"budgetCents\":50000,\"category\":\"all\",\"slotId\":\"slot-talk\"}",
-          "status": "passed",
-          "durationMs": 1.8813000000000102
-        },
-        {
-          "title": "deterministic workflow and approval boundary does not draft an infeasible combination: {\"preset\":\"product\",\"budgetCents\":50000,\"category\":\"不存在\",\"slotId\":\"all\"}",
-          "status": "passed",
-          "durationMs": 2.6829999999999927
-        },
-        {
-          "title": "deterministic workflow and approval boundary asks for clarification without tools for unsupported or conflicting goal {\"prompt\":\"帮我整理一下宇宙\"}",
-          "status": "passed",
-          "durationMs": 3.3309000000000424
-        },
-        {
-          "title": "deterministic workflow and approval boundary asks for clarification without tools for unsupported or conflicting goal {\"prompt\":\"商品预算 1 元\",\"budgetCents\":50000}",
-          "status": "passed",
-          "durationMs": 2.0060999999999467
-        },
-        {
-          "title": "deterministic workflow and approval boundary asks for clarification without tools for unsupported or conflicting goal {\"prompt\":\"选择 3 件商品\",\"quantity\":2}",
-          "status": "passed",
-          "durationMs": 2.4922000000000253
-        },
-        {
-          "title": "deterministic workflow and approval boundary asks for clarification without tools for unsupported or conflicting goal {\"quantity\":null}",
-          "status": "passed",
-          "durationMs": 2.655300000000011
-        },
-        {
-          "title": "deterministic workflow and approval boundary asks for clarification without tools for unsupported or conflicting goal {\"seed\":-1}",
-          "status": "passed",
-          "durationMs": 1.8514999999999873
-        },
-        {
-          "title": "deterministic workflow and approval boundary returns detached state so external mutation cannot grant approval or change prices",
-          "status": "passed",
-          "durationMs": 3.0915999999999713
-        },
-        {
-          "title": "async execution, bounded recovery and stale-response protection reports timeout with measured wall time and safely retries",
-          "status": "passed",
-          "durationMs": 4.255700000000047
-        },
-        {
-          "title": "async execution, bounded recovery and stale-response protection reports failure with measured wall time and safely retries",
-          "status": "passed",
-          "durationMs": 3.051900000000046
-        },
-        {
-          "title": "async execution, bounded recovery and stale-response protection does not accept partial data and a retry executes a fresh query",
-          "status": "passed",
-          "durationMs": 2.9580000000000837
-        },
-        {
-          "title": "async execution, bounded recovery and stale-response protection limits repeated manual retries instead of looping indefinitely",
-          "status": "passed",
-          "durationMs": 3.39670000000001
-        },
-        {
-          "title": "async execution, bounded recovery and stale-response protection bounds event history and freezes exhausted runs until a fresh reset",
-          "status": "passed",
-          "durationMs": 152.99830000000009
-        },
-        {
-          "title": "async execution, bounded recovery and stale-response protection cancel while query is pending prevents late responses and all writes",
-          "status": "passed",
-          "durationMs": 1.165300000000002
-        },
-        {
-          "title": "async execution, bounded recovery and stale-response protection cancel while confirm is pending prevents late responses and all writes",
-          "status": "passed",
-          "durationMs": 2.1219999999999573
-        },
-        {
-          "title": "async execution, bounded recovery and stale-response protection serializes concurrent step calls into a single tool",
-          "status": "passed",
-          "durationMs": 0.6871999999999616
-        },
-        {
-          "title": "async execution, bounded recovery and stale-response protection planning a new run invalidates an old in-flight tool without contaminating the new trace",
-          "status": "passed",
-          "durationMs": 1.0324000000000524
-        },
-        {
-          "title": "warehouse discrete simulator actually picks and delivers all three cargo with capacity one, cardinal collision-free moves and a replayable trace",
-          "status": "passed",
-          "durationMs": 21.697200000000066
-        },
-        {
-          "title": "warehouse discrete simulator a single step computes a path without moving; each subsequent step moves just one cell",
-          "status": "passed",
-          "durationMs": 0.8378000000000156
-        },
-        {
-          "title": "warehouse discrete simulator obstacle changes invalidate the old path/version and A* computes a real detour",
-          "status": "passed",
-          "durationMs": 4.750700000000052
-        },
-        {
-          "title": "warehouse discrete simulator fully enclosed robot fails honestly, then a cleared obstacle permits recovery",
-          "status": "passed",
-          "durationMs": 4.57650000000001
-        },
-        {
-          "title": "warehouse discrete simulator moving the target invalidates pending work and earlier deliveries must reach the new target",
-          "status": "passed",
-          "durationMs": 11.838599999999929
-        },
-        {
-          "title": "warehouse discrete simulator missing required cargo fails instead of reducing the success criterion, and reset restores fixtures",
-          "status": "passed",
-          "durationMs": 4.337400000000002
-        },
-        {
-          "title": "warehouse discrete simulator finite reprioritization selects higher priority cargo without replacing an occupied payload",
-          "status": "passed",
-          "durationMs": 9.474900000000048
-        },
-        {
-          "title": "warehouse discrete simulator bounds repeated environment replans and cannot be reopened by another world edit",
-          "status": "passed",
-          "durationMs": 1.63149999999996
-        }
-      ]
-    },
-    {
-      "file": "packages/intelligence/src/pathfinding.test.ts",
-      "status": "passed",
-      "tests": [
-        {
-          "title": "deterministic grid A* finds a cardinal shortest route on the 12 × 8 world, excluding start and including target",
-          "status": "passed",
-          "durationMs": 5.099699999999984
-        },
-        {
-          "title": "deterministic grid A* takes the shortest detour around a wall, even when it initially moves away from the goal",
-          "status": "passed",
-          "durationMs": 1.054200000000037
-        },
-        {
-          "title": "deterministic grid A* returns the same equal-cost route repeatedly regardless of obstacle order or duplicates",
-          "status": "passed",
-          "durationMs": 3.2936999999999443
-        },
-        {
-          "title": "deterministic grid A* returns no route for a complete separating wall and for a fully surrounded robot",
-          "status": "passed",
-          "durationMs": 0.7062000000000808
-        },
-        {
-          "title": "deterministic grid A* returns an empty route only when the shared start/goal is valid and unblocked",
-          "status": "passed",
-          "durationMs": 0.4115000000000464
-        },
-        {
-          "title": "deterministic grid A* rejects blocked endpoints",
-          "status": "passed",
-          "durationMs": 0.2595999999999776
-        },
-        {
-          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":-1,\"y\":0}",
-          "status": "passed",
-          "durationMs": 0.41289999999992233
-        },
-        {
-          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":0,\"y\":-1}",
-          "status": "passed",
-          "durationMs": 0.32589999999993324
-        },
-        {
-          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":12,\"y\":0}",
-          "status": "passed",
-          "durationMs": 0.27530000000001564
-        },
-        {
-          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":0,\"y\":8}",
-          "status": "passed",
-          "durationMs": 0.3505000000000109
-        },
-        {
-          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":1.5,\"y\":0}",
-          "status": "passed",
-          "durationMs": 0.20310000000006312
-        },
-        {
-          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":0,\"y\":1.5}",
-          "status": "passed",
-          "durationMs": 0.1634999999999991
-        },
-        {
-          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":null,\"y\":0}",
-          "status": "passed",
-          "durationMs": 0.1493000000000393
-        },
-        {
-          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":0,\"y\":null}",
-          "status": "passed",
-          "durationMs": 0.16770000000008167
-        },
-        {
-          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":9007199254740992,\"y\":0}",
-          "status": "passed",
-          "durationMs": 0.1534000000000333
-        },
-        {
-          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: null",
-          "status": "passed",
-          "durationMs": 0.1693000000000211
-        },
-        {
-          "title": "deterministic grid A* rejects invalid or excessively large dimensions: {\"width\":0,\"height\":8}",
-          "status": "passed",
-          "durationMs": 0.21699999999998454
-        },
-        {
-          "title": "deterministic grid A* rejects invalid or excessively large dimensions: {\"width\":12,\"height\":-1}",
-          "status": "passed",
-          "durationMs": 0.12369999999998527
-        },
-        {
-          "title": "deterministic grid A* rejects invalid or excessively large dimensions: {\"width\":1.5,\"height\":8}",
-          "status": "passed",
-          "durationMs": 0.11270000000001801
-        },
-        {
-          "title": "deterministic grid A* rejects invalid or excessively large dimensions: {\"width\":null,\"height\":8}",
-          "status": "passed",
-          "durationMs": 0.13540000000000418
-        },
-        {
-          "title": "deterministic grid A* rejects invalid or excessively large dimensions: {\"width\":12,\"height\":null}",
-          "status": "passed",
-          "durationMs": 0.12139999999999418
-        },
-        {
-          "title": "deterministic grid A* rejects invalid or excessively large dimensions: {\"width\":129,\"height\":128}",
-          "status": "passed",
-          "durationMs": 0.12750000000005457
-        },
-        {
-          "title": "deterministic grid A* rejects invalid or excessively large dimensions: {\"width\":16385,\"height\":1}",
-          "status": "passed",
-          "durationMs": 0.11950000000001637
-        },
-        {
-          "title": "deterministic grid A* bounds obstacle input and supports the maximum number of cells",
-          "status": "passed",
-          "durationMs": 20.801600000000008
-        },
-        {
-          "title": "deterministic grid A* rejects malformed world/obstacle arrays from recordings without throwing",
-          "status": "passed",
-          "durationMs": 0.5073999999999614
-        },
-        {
-          "title": "deterministic grid A* does not mutate input objects, obstacles, or previous results",
-          "status": "passed",
-          "durationMs": 0.49060000000008586
-        },
-        {
-          "title": "deterministic grid A* matches an independent BFS oracle for every target across 24 seeded obstacle fields",
-          "status": "passed",
-          "durationMs": 136.21730000000002
-        },
-        {
-          "title": "route validation for runtime world-version checks validates a remaining route from the current robot position",
-          "status": "passed",
-          "durationMs": 0.384900000000016
-        },
-        {
-          "title": "route validation for runtime world-version checks rejects a route after an obstacle blocks it or its destination changes",
-          "status": "passed",
-          "durationMs": 0.33159999999998035
-        },
-        {
-          "title": "route validation for runtime world-version checks rejects diagonals, jumps, cycles, and invalid cells: {\"x\":1,\"y\":1}",
-          "status": "passed",
-          "durationMs": 0.20119999999997162
-        },
-        {
-          "title": "route validation for runtime world-version checks rejects diagonals, jumps, cycles, and invalid cells: {\"x\":2,\"y\":0}",
-          "status": "passed",
-          "durationMs": 0.08240000000000691
-        },
-        {
-          "title": "route validation for runtime world-version checks rejects diagonals, jumps, cycles, and invalid cells: {\"x\":0,\"y\":0}",
-          "status": "passed",
-          "durationMs": 0.0443000000000211
-        },
-        {
-          "title": "route validation for runtime world-version checks rejects diagonals, jumps, cycles, and invalid cells: {\"x\":1,\"y\":0}",
-          "status": "passed",
-          "durationMs": 0.03769999999997253
-        },
-        {
-          "title": "route validation for runtime world-version checks rejects diagonals, jumps, cycles, and invalid cells: {\"x\":-1,\"y\":0}",
-          "status": "passed",
-          "durationMs": 0.036999999999920874
-        },
-        {
-          "title": "route validation for runtime world-version checks rejects diagonals, jumps, cycles, and invalid cells: {\"x\":null,\"y\":0}",
-          "status": "passed",
-          "durationMs": 0.03170000000000073
-        },
-        {
-          "title": "route validation for runtime world-version checks rejects diagonals, jumps, cycles, and invalid cells: null",
-          "status": "passed",
-          "durationMs": 0.03290000000004056
-        },
-        {
-          "title": "route validation for runtime world-version checks rejects malformed or excessively long route arrays",
-          "status": "passed",
-          "durationMs": 0.13419999999996435
-        },
-        {
-          "title": "route validation for runtime world-version checks distinguishes exact coordinates and checks all four world boundaries",
-          "status": "passed",
-          "durationMs": 0.1956000000000131
-        }
-      ]
-    },
-    {
-      "file": "packages/intelligence/src/recording.test.ts",
-      "status": "passed",
-      "tests": [
-        {
-          "title": "bounded recording schema and detached imports preserves actual event IDs, input, seed, sequence and every step snapshot on JSON round-trip",
-          "status": "passed",
-          "durationMs": 68.23159999999996
-        },
-        {
-          "title": "bounded recording schema and detached imports allows semantically identical JSON key order without weakening coordinate checks",
-          "status": "passed",
-          "durationMs": 4.381399999999985
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects schema",
-          "status": "passed",
-          "durationMs": 2.078999999999951
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects event schema",
-          "status": "passed",
-          "durationMs": 1.7223999999999933
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects duplicate sequence",
-          "status": "passed",
-          "durationMs": 1.7618999999999687
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects duplicate event ID",
-          "status": "passed",
-          "durationMs": 1.5825999999999567
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects wrong event run",
-          "status": "passed",
-          "durationMs": 0.9809000000000196
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects wrong snapshot run",
-          "status": "passed",
-          "durationMs": 0.8940999999999804
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects unknown parent",
-          "status": "passed",
-          "durationMs": 1.0090000000000146
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects unsafe identifier",
-          "status": "passed",
-          "durationMs": 1.643699999999967
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects input seed mismatch",
-          "status": "passed",
-          "durationMs": 1.2824000000000524
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects snapshot seed mismatch",
-          "status": "passed",
-          "durationMs": 1.1041999999999916
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects snapshot input mismatch",
-          "status": "passed",
-          "durationMs": 0.8034999999999854
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects negative quantity",
-          "status": "passed",
-          "durationMs": 0.7794999999999845
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects fractional money",
-          "status": "passed",
-          "durationMs": 0.8038999999999987
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects unknown mode",
-          "status": "passed",
-          "durationMs": 0.8234999999999673
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects world version mismatch",
-          "status": "passed",
-          "durationMs": 0.8437000000000126
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects invalid timestamp",
-          "status": "passed",
-          "durationMs": 0.8365000000000009
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects negative duration",
-          "status": "passed",
-          "durationMs": 0.8014000000000578
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects duplicate node",
-          "status": "passed",
-          "durationMs": 0.8355000000000246
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects carrying absent cargo",
-          "status": "passed",
-          "durationMs": 0.84699999999998
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects carrying cargo away from robot",
-          "status": "passed",
-          "durationMs": 0.876700000000028
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects delivered cargo outside target",
-          "status": "passed",
-          "durationMs": 1.2471000000000458
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects teleport path",
-          "status": "passed",
-          "durationMs": 0.9150000000000773
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects duplicate obstacle in different key order",
-          "status": "passed",
-          "durationMs": 1.7205999999999904
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects backwards timestamps",
-          "status": "passed",
-          "durationMs": 0.8968999999999596
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects malformed roots: undefined",
-          "status": "passed",
-          "durationMs": 0.2153000000000702
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects malformed roots: null",
-          "status": "passed",
-          "durationMs": 0.11220000000002983
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects malformed roots: undefined",
-          "status": "passed",
-          "durationMs": 0.08900000000005548
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects malformed roots: {}",
-          "status": "passed",
-          "durationMs": 0.08659999999997581
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects malformed roots: \"{broken json\"",
-          "status": "passed",
-          "durationMs": 0.09199999999998454
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects malformed roots: 17",
-          "status": "passed",
-          "durationMs": 0.07029999999997472
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects malformed roots: true",
-          "status": "passed",
-          "durationMs": 0.0703000000000884
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects missing and unexpected fields",
-          "status": "passed",
-          "durationMs": 1.831299999999942
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects an empty event trace and a trace exceeding the event limit",
-          "status": "passed",
-          "durationMs": 1.570799999999963
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects oversized strings and oversized UTF-8 JSON byte payloads before replay",
-          "status": "passed",
-          "durationMs": 51.62469999999996
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: cycle",
-          "status": "passed",
-          "durationMs": 0.9434999999999718
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: function",
-          "status": "passed",
-          "durationMs": 0.7250999999999976
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: nan",
-          "status": "passed",
-          "durationMs": 0.6961000000000013
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: infinity",
-          "status": "passed",
-          "durationMs": 0.6924000000000206
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: bigint",
-          "status": "passed",
-          "durationMs": 0.6251000000000886
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: undefined",
-          "status": "passed",
-          "durationMs": 0.8369999999999891
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: symbol",
-          "status": "passed",
-          "durationMs": 0.6005999999999858
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: prototype",
-          "status": "passed",
-          "durationMs": 0.5632999999999129
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: deep",
-          "status": "passed",
-          "durationMs": 1.0575000000000045
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: array-hole",
-          "status": "passed",
-          "durationMs": 0.9415000000000191
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: array-property",
-          "status": "passed",
-          "durationMs": 0.759900000000016
-        },
-        {
-          "title": "bounded recording schema and detached imports rejects accessors without executing them or calling toJSON",
-          "status": "passed",
-          "durationMs": 2.9055000000000746
-        },
-        {
-          "title": "pure snapshot replay selects a detached historical snapshot and never dispatches tools, network, storage, timers or runtime mutations",
-          "status": "passed",
-          "durationMs": 3.481100000000083
-        },
-        {
-          "title": "pure snapshot replay rejects replay index -1",
-          "status": "passed",
-          "durationMs": 0.9585000000000719
-        },
-        {
-          "title": "pure snapshot replay rejects replay index 1.5",
-          "status": "passed",
-          "durationMs": 0.8188999999999851
-        },
-        {
-          "title": "pure snapshot replay rejects replay index NaN",
-          "status": "passed",
-          "durationMs": 0.8946999999999434
-        },
-        {
-          "title": "pure snapshot replay rejects replay index Infinity",
-          "status": "passed",
-          "durationMs": 0.7904999999999518
-        },
-        {
-          "title": "pure snapshot replay rejects replay index 999999",
-          "status": "passed",
-          "durationMs": 0.7590999999999894
-        }
-      ]
-    },
-    {
-      "file": "packages/shared/src/index.test.ts",
-      "status": "passed",
-      "tests": [
-        {
-          "title": "integer money formatting preserves cents and zero",
-          "status": "passed",
-          "durationMs": 1.328000000000003
-        },
-        {
-          "title": "integer money formatting rejects invalid money",
-          "status": "passed",
-          "durationMs": 0.8266000000000133
+          "durationMs": 3.683400000000006
         }
       ]
     },
@@ -921,242 +282,881 @@
         {
           "title": "shop service: authoritative inventory, money and states offers 12 SPU, ≥24 SKU and four categories including zero/one stock",
           "status": "passed",
-          "durationMs": 147.18450000000007
+          "durationMs": 309.0377
         },
         {
           "title": "shop service: authoritative inventory, money and states computes 5900×2 +600 −1000 =11400 and preserves rule version",
           "status": "passed",
-          "durationMs": 16.935799999999972
+          "durationMs": 33.8467999999998
         },
         {
           "title": "shop service: authoritative inventory, money and states checks integer boundary 9999 cents",
           "status": "passed",
-          "durationMs": 4.205400000000054
+          "durationMs": 5.822799999999916
         },
         {
           "title": "shop service: authoritative inventory, money and states checks integer boundary 10000 cents",
           "status": "passed",
-          "durationMs": 3.3070999999999913
+          "durationMs": 6.203099999999949
         },
         {
           "title": "shop service: authoritative inventory, money and states checks integer boundary 10001 cents",
           "status": "passed",
-          "durationMs": 3.2654000000001133
+          "durationMs": 9.82569999999987
         },
         {
           "title": "shop service: authoritative inventory, money and states checks integer boundary 12899 cents",
           "status": "passed",
-          "durationMs": 2.780300000000125
+          "durationMs": 3.8151000000000295
         },
         {
           "title": "shop service: authoritative inventory, money and states checks integer boundary 12900 cents",
           "status": "passed",
-          "durationMs": 2.927099999999882
+          "durationMs": 3.48479999999995
         },
         {
           "title": "shop service: authoritative inventory, money and states checks integer boundary 12901 cents",
           "status": "passed",
-          "durationMs": 2.4480999999998403
+          "durationMs": 4.899300000000039
         },
         {
           "title": "shop service: authoritative inventory, money and states rejects malformed quantity 0 at runtime",
           "status": "passed",
-          "durationMs": 6.5866000000000895
+          "durationMs": 6.984699999999975
         },
         {
           "title": "shop service: authoritative inventory, money and states rejects malformed quantity -1 at runtime",
           "status": "passed",
-          "durationMs": 3.399499999999989
+          "durationMs": 9.705500000000029
         },
         {
           "title": "shop service: authoritative inventory, money and states rejects malformed quantity 1.2 at runtime",
           "status": "passed",
-          "durationMs": 2.710299999999961
+          "durationMs": 6.586000000000013
         },
         {
           "title": "shop service: authoritative inventory, money and states rejects malformed quantity 6 at runtime",
           "status": "passed",
-          "durationMs": 2.4692999999999756
+          "durationMs": 6.276399999999967
         },
         {
           "title": "shop service: authoritative inventory, money and states rejects malformed quantity 21 at runtime",
           "status": "passed",
-          "durationMs": 2.852000000000089
+          "durationMs": 6.874499999999898
         },
         {
           "title": "shop service: authoritative inventory, money and states rejects malformed quantity 9007199254740991 at runtime",
           "status": "passed",
-          "durationMs": 2.5085999999998876
+          "durationMs": 7.731899999999996
         },
         {
           "title": "shop service: authoritative inventory, money and states rejects supplied client price and unavailable SKU",
           "status": "passed",
-          "durationMs": 5.732500000000073
+          "durationMs": 13.414899999999989
         },
         {
           "title": "shop service: authoritative inventory, money and states rejects stale cart updates without losing latest state",
           "status": "passed",
-          "durationMs": 7.101100000000088
+          "durationMs": 12.974300000000085
         },
         {
           "title": "shop service: authoritative inventory, money and states quote does not reserve stock; expired quote creates no order",
           "status": "passed",
-          "durationMs": 4.983399999999847
+          "durationMs": 7.338599999999815
         },
         {
           "title": "shop service: authoritative inventory, money and states competing order requests create one hold and one order",
           "status": "passed",
-          "durationMs": 5.602899999999863
+          "durationMs": 15.47770000000014
         },
         {
           "title": "shop service: authoritative inventory, money and states same order key replays exact result, different payload conflicts",
           "status": "passed",
-          "durationMs": 6.123999999999796
+          "durationMs": 13.174999999999955
         },
         {
           "title": "shop service: authoritative inventory, money and states selected lines clear atomically and unselected lines remain",
           "status": "passed",
-          "durationMs": 5.1819000000000415
+          "durationMs": 9.27819999999997
         },
         {
           "title": "shop service: authoritative inventory, money and states failed payment keeps pending hold; success deducts once; shipping and receipt constrained",
           "status": "passed",
-          "durationMs": 6.941199999999981
+          "durationMs": 12.226400000000012
         },
         {
           "title": "shop service: authoritative inventory, money and states cancel twice releases stock and coupon exactly once",
           "status": "passed",
-          "durationMs": 5.364100000000008
+          "durationMs": 10.776299999999992
         },
         {
           "title": "shop service: authoritative inventory, money and states order TTL closes at exact boundary and releases once",
           "status": "passed",
-          "durationMs": 5.153099999999995
+          "durationMs": 8.086399999999912
         },
         {
           "title": "shop service: authoritative inventory, money and states idempotent result is immutable after order later changes status",
           "status": "passed",
-          "durationMs": 5.131399999999985
+          "durationMs": 6.510400000000118
         },
         {
           "title": "H5 server capacity, rules and session boundaries returns three routes with three slots including unavailable states",
           "status": "passed",
-          "durationMs": 4.770800000000008
+          "durationMs": 5.404399999999896
         },
         {
           "title": "H5 server capacity, rules and session boundaries creates, retrieves and cancels persisted booking with exact-once seat release",
           "status": "passed",
-          "durationMs": 6.748900000000049
+          "durationMs": 12.322499999999991
         },
         {
           "title": "H5 server capacity, rules and session boundaries competing last-seat requests cannot oversell",
           "status": "passed",
-          "durationMs": 5.325400000000172
+          "durationMs": 6.1305999999999585
         },
         {
           "title": "H5 server capacity, rules and session boundaries one active booking per campaign enforced server-side",
           "status": "passed",
-          "durationMs": 3.0124000000000706
+          "durationMs": 7.211099999999988
         },
         {
           "title": "H5 server capacity, rules and session boundaries rejects closed/cancelled/ended slot slow-3",
           "status": "passed",
-          "durationMs": 2.7549999999998818
+          "durationMs": 4.315600000000131
         },
         {
           "title": "H5 server capacity, rules and session boundaries rejects closed/cancelled/ended slot maker-3",
           "status": "passed",
-          "durationMs": 2.5320999999999003
+          "durationMs": 3.7998999999999796
         },
         {
           "title": "H5 server capacity, rules and session boundaries rejects closed/cancelled/ended slot explore-3",
           "status": "passed",
-          "durationMs": 2.692700000000059
+          "durationMs": 7.269600000000082
         },
         {
           "title": "H5 server capacity, rules and session boundaries rejects full slot and insufficient last seat",
           "status": "passed",
-          "durationMs": 3.0108999999999924
+          "durationMs": 8.249700000000075
         },
         {
           "title": "H5 server capacity, rules and session boundaries rejects participant count 0",
           "status": "passed",
-          "durationMs": 2.7006999999998698
+          "durationMs": 5.419399999999996
         },
         {
           "title": "H5 server capacity, rules and session boundaries rejects participant count 5",
           "status": "passed",
-          "durationMs": 2.6835000000000946
+          "durationMs": 5.692299999999932
         },
         {
           "title": "H5 server capacity, rules and session boundaries rejects participant count 1.2",
           "status": "passed",
-          "durationMs": 2.9312999999999647
+          "durationMs": 6.897799999999961
         },
         {
           "title": "H5 server capacity, rules and session boundaries requires rules acceptance/version, rejects PII-shaped alias",
           "status": "passed",
-          "durationMs": 3.577400000000125
+          "durationMs": 8.322499999999991
         },
         {
           "title": "H5 server capacity, rules and session boundaries server time closes slot exactly at deadline",
           "status": "passed",
-          "durationMs": 2.9716000000000804
+          "durationMs": 4.142399999999952
         },
         {
           "title": "H5 server capacity, rules and session boundaries expiry preserves historical capacity and permits another active booking",
           "status": "passed",
-          "durationMs": 6.871600000000171
+          "durationMs": 8.942000000000007
         },
         {
           "title": "authorization, persistence and isolated experiments operation lookup accepts the same colon/dot/128-character key contract as writes",
           "status": "passed",
-          "durationMs": 4.512499999999818
+          "durationMs": 6.850000000000136
         },
         {
           "title": "authorization, persistence and isolated experiments rejects cross-domain token/cookie, cross-session IDs and expired sessions",
           "status": "passed",
-          "durationMs": 5.125700000000052
+          "durationMs": 11.3753999999999
         },
         {
           "title": "authorization, persistence and isolated experiments rejects malicious Origin and H5 missing app header before mutations",
           "status": "passed",
-          "durationMs": 2.970299999999952
+          "durationMs": 7.027400000000171
         },
         {
           "title": "authorization, persistence and isolated experiments uses HttpOnly SameSite cookie scoped to H5",
           "status": "passed",
-          "durationMs": 2.4513999999999214
+          "durationMs": 7.083700000000135
         },
         {
           "title": "authorization, persistence and isolated experiments H5 reconnect resumes existing session without losing bookings or replacing cookie",
           "status": "passed",
-          "durationMs": 3.450399999999945
+          "durationMs": 16.15059999999994
         },
         {
           "title": "authorization, persistence and isolated experiments resume-only refuses missing identity and never assigns a replacement cookie",
           "status": "passed",
-          "durationMs": 5.410200000000032
+          "durationMs": 9.499499999999898
         },
         {
           "title": "authorization, persistence and isolated experiments reset affects only current visitor and reset key can replay",
           "status": "passed",
-          "durationMs": 6.560600000000022
+          "durationMs": 13.911899999999832
         },
         {
           "title": "authorization, persistence and isolated experiments last-stock experiment runs two actual requests within one isolated inventory pool",
           "status": "passed",
-          "durationMs": 3.9704999999999018
+          "durationMs": 8.919799999999896
         },
         {
           "title": "authorization, persistence and isolated experiments invalid JSON and missing API paths return JSON without stacks or HTML",
           "status": "passed",
-          "durationMs": 3.026500000000169
+          "durationMs": 5.164800000000014
         },
         {
           "title": "authorization, persistence and isolated experiments retains order, booking and idempotency through SQLite close/open and actual HTTP restart",
           "status": "passed",
-          "durationMs": 59.19219999999996
+          "durationMs": 78.91540000000009
+        }
+      ]
+    },
+    {
+      "file": "packages/shared/src/index.test.ts",
+      "status": "passed",
+      "tests": [
+        {
+          "title": "integer money formatting preserves cents and zero",
+          "status": "passed",
+          "durationMs": 1.8935999999999922
+        },
+        {
+          "title": "integer money formatting rejects invalid money",
+          "status": "passed",
+          "durationMs": 0.977800000000002
+        }
+      ]
+    },
+    {
+      "file": "packages/intelligence/src/engine.test.ts",
+      "status": "passed",
+      "tests": [
+        {
+          "title": "deterministic workflow and approval boundary queries and compares real fixture constraints, awaits approval, then writes exactly once",
+          "status": "passed",
+          "durationMs": 24.5068
+        },
+        {
+          "title": "deterministic workflow and approval boundary keeps a retrieved malicious instruction as data and cannot bypass rejected approval",
+          "status": "passed",
+          "durationMs": 5.378900000000044
+        },
+        {
+          "title": "deterministic workflow and approval boundary confirms a synthetic activity against local capacity and records the actual remaining seats",
+          "status": "passed",
+          "durationMs": 3.005200000000059
+        },
+        {
+          "title": "deterministic workflow and approval boundary does not draft an infeasible combination: {\"preset\":\"product\",\"budgetCents\":1000,\"category\":\"all\",\"slotId\":\"all\"}",
+          "status": "passed",
+          "durationMs": 2.4284999999999854
+        },
+        {
+          "title": "deterministic workflow and approval boundary does not draft an infeasible combination: {\"preset\":\"activity\",\"budgetCents\":50000,\"category\":\"all\",\"slotId\":\"slot-talk\"}",
+          "status": "passed",
+          "durationMs": 2.4594000000000733
+        },
+        {
+          "title": "deterministic workflow and approval boundary does not draft an infeasible combination: {\"preset\":\"product\",\"budgetCents\":50000,\"category\":\"不存在\",\"slotId\":\"all\"}",
+          "status": "passed",
+          "durationMs": 2.5125000000000455
+        },
+        {
+          "title": "deterministic workflow and approval boundary asks for clarification without tools for unsupported or conflicting goal {\"prompt\":\"帮我整理一下宇宙\"}",
+          "status": "passed",
+          "durationMs": 2.400700000000029
+        },
+        {
+          "title": "deterministic workflow and approval boundary asks for clarification without tools for unsupported or conflicting goal {\"prompt\":\"商品预算 1 元\",\"budgetCents\":50000}",
+          "status": "passed",
+          "durationMs": 1.9506999999999834
+        },
+        {
+          "title": "deterministic workflow and approval boundary asks for clarification without tools for unsupported or conflicting goal {\"prompt\":\"选择 3 件商品\",\"quantity\":2}",
+          "status": "passed",
+          "durationMs": 2.0883999999999787
+        },
+        {
+          "title": "deterministic workflow and approval boundary asks for clarification without tools for unsupported or conflicting goal {\"quantity\":null}",
+          "status": "passed",
+          "durationMs": 1.8618999999999915
+        },
+        {
+          "title": "deterministic workflow and approval boundary asks for clarification without tools for unsupported or conflicting goal {\"seed\":-1}",
+          "status": "passed",
+          "durationMs": 1.5538999999999987
+        },
+        {
+          "title": "deterministic workflow and approval boundary returns detached state so external mutation cannot grant approval or change prices",
+          "status": "passed",
+          "durationMs": 2.5990000000000464
+        },
+        {
+          "title": "async execution, bounded recovery and stale-response protection reports timeout with measured wall time and safely retries",
+          "status": "passed",
+          "durationMs": 3.0412999999999784
+        },
+        {
+          "title": "async execution, bounded recovery and stale-response protection reports failure with measured wall time and safely retries",
+          "status": "passed",
+          "durationMs": 9.624300000000062
+        },
+        {
+          "title": "async execution, bounded recovery and stale-response protection does not accept partial data and a retry executes a fresh query",
+          "status": "passed",
+          "durationMs": 6.006199999999922
+        },
+        {
+          "title": "async execution, bounded recovery and stale-response protection limits repeated manual retries instead of looping indefinitely",
+          "status": "passed",
+          "durationMs": 11.053100000000086
+        },
+        {
+          "title": "async execution, bounded recovery and stale-response protection bounds event history and freezes exhausted runs until a fresh reset",
+          "status": "passed",
+          "durationMs": 280.1486
+        },
+        {
+          "title": "async execution, bounded recovery and stale-response protection cancel while query is pending prevents late responses and all writes",
+          "status": "passed",
+          "durationMs": 2.47969999999998
+        },
+        {
+          "title": "async execution, bounded recovery and stale-response protection cancel while confirm is pending prevents late responses and all writes",
+          "status": "passed",
+          "durationMs": 8.012499999999932
+        },
+        {
+          "title": "async execution, bounded recovery and stale-response protection serializes concurrent step calls into a single tool",
+          "status": "passed",
+          "durationMs": 1.0973999999999933
+        },
+        {
+          "title": "async execution, bounded recovery and stale-response protection planning a new run invalidates an old in-flight tool without contaminating the new trace",
+          "status": "passed",
+          "durationMs": 1.6327999999999747
+        },
+        {
+          "title": "warehouse discrete simulator actually picks and delivers all three cargo with capacity one, cardinal collision-free moves and a replayable trace",
+          "status": "passed",
+          "durationMs": 50.1309
+        },
+        {
+          "title": "warehouse discrete simulator a single step computes a path without moving; each subsequent step moves just one cell",
+          "status": "passed",
+          "durationMs": 7.8595000000000255
+        },
+        {
+          "title": "warehouse discrete simulator obstacle changes invalidate the old path/version and A* computes a real detour",
+          "status": "passed",
+          "durationMs": 18.457300000000032
+        },
+        {
+          "title": "warehouse discrete simulator fully enclosed robot fails honestly, then a cleared obstacle permits recovery",
+          "status": "passed",
+          "durationMs": 16.248199999999997
+        },
+        {
+          "title": "warehouse discrete simulator moving the target invalidates pending work and earlier deliveries must reach the new target",
+          "status": "passed",
+          "durationMs": 23.50909999999999
+        },
+        {
+          "title": "warehouse discrete simulator missing required cargo fails instead of reducing the success criterion, and reset restores fixtures",
+          "status": "passed",
+          "durationMs": 13.61570000000006
+        },
+        {
+          "title": "warehouse discrete simulator finite reprioritization selects higher priority cargo without replacing an occupied payload",
+          "status": "passed",
+          "durationMs": 21.039800000000014
+        },
+        {
+          "title": "warehouse discrete simulator bounds repeated environment replans and cannot be reopened by another world edit",
+          "status": "passed",
+          "durationMs": 3.723600000000033
+        }
+      ]
+    },
+    {
+      "file": "packages/intelligence/src/pathfinding.test.ts",
+      "status": "passed",
+      "tests": [
+        {
+          "title": "deterministic grid A* finds a cardinal shortest route on the 12 × 8 world, excluding start and including target",
+          "status": "passed",
+          "durationMs": 4.7094000000000165
+        },
+        {
+          "title": "deterministic grid A* takes the shortest detour around a wall, even when it initially moves away from the goal",
+          "status": "passed",
+          "durationMs": 0.9686000000000377
+        },
+        {
+          "title": "deterministic grid A* returns the same equal-cost route repeatedly regardless of obstacle order or duplicates",
+          "status": "passed",
+          "durationMs": 2.3507000000000176
+        },
+        {
+          "title": "deterministic grid A* returns no route for a complete separating wall and for a fully surrounded robot",
+          "status": "passed",
+          "durationMs": 0.4777000000000271
+        },
+        {
+          "title": "deterministic grid A* returns an empty route only when the shared start/goal is valid and unblocked",
+          "status": "passed",
+          "durationMs": 0.538599999999974
+        },
+        {
+          "title": "deterministic grid A* rejects blocked endpoints",
+          "status": "passed",
+          "durationMs": 0.22110000000003538
+        },
+        {
+          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":-1,\"y\":0}",
+          "status": "passed",
+          "durationMs": 0.3602000000000203
+        },
+        {
+          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":0,\"y\":-1}",
+          "status": "passed",
+          "durationMs": 0.2588000000000079
+        },
+        {
+          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":12,\"y\":0}",
+          "status": "passed",
+          "durationMs": 0.19709999999997763
+        },
+        {
+          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":0,\"y\":8}",
+          "status": "passed",
+          "durationMs": 0.2626000000000204
+        },
+        {
+          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":1.5,\"y\":0}",
+          "status": "passed",
+          "durationMs": 0.1360000000000241
+        },
+        {
+          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":0,\"y\":1.5}",
+          "status": "passed",
+          "durationMs": 0.12350000000003547
+        },
+        {
+          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":null,\"y\":0}",
+          "status": "passed",
+          "durationMs": 0.12010000000003629
+        },
+        {
+          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":0,\"y\":null}",
+          "status": "passed",
+          "durationMs": 0.11140000000000327
+        },
+        {
+          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: {\"x\":9007199254740992,\"y\":0}",
+          "status": "passed",
+          "durationMs": 0.09780000000000655
+        },
+        {
+          "title": "deterministic grid A* rejects an invalid point as either endpoint or an obstacle: null",
+          "status": "passed",
+          "durationMs": 0.11919999999997799
+        },
+        {
+          "title": "deterministic grid A* rejects invalid or excessively large dimensions: {\"width\":0,\"height\":8}",
+          "status": "passed",
+          "durationMs": 0.1442000000000121
+        },
+        {
+          "title": "deterministic grid A* rejects invalid or excessively large dimensions: {\"width\":12,\"height\":-1}",
+          "status": "passed",
+          "durationMs": 0.07330000000001746
+        },
+        {
+          "title": "deterministic grid A* rejects invalid or excessively large dimensions: {\"width\":1.5,\"height\":8}",
+          "status": "passed",
+          "durationMs": 0.06369999999998299
+        },
+        {
+          "title": "deterministic grid A* rejects invalid or excessively large dimensions: {\"width\":null,\"height\":8}",
+          "status": "passed",
+          "durationMs": 0.08370000000002165
+        },
+        {
+          "title": "deterministic grid A* rejects invalid or excessively large dimensions: {\"width\":12,\"height\":null}",
+          "status": "passed",
+          "durationMs": 0.08620000000001937
+        },
+        {
+          "title": "deterministic grid A* rejects invalid or excessively large dimensions: {\"width\":129,\"height\":128}",
+          "status": "passed",
+          "durationMs": 0.09050000000002001
+        },
+        {
+          "title": "deterministic grid A* rejects invalid or excessively large dimensions: {\"width\":16385,\"height\":1}",
+          "status": "passed",
+          "durationMs": 0.07670000000001664
+        },
+        {
+          "title": "deterministic grid A* bounds obstacle input and supports the maximum number of cells",
+          "status": "passed",
+          "durationMs": 16.846900000000005
+        },
+        {
+          "title": "deterministic grid A* rejects malformed world/obstacle arrays from recordings without throwing",
+          "status": "passed",
+          "durationMs": 0.40809999999999036
+        },
+        {
+          "title": "deterministic grid A* does not mutate input objects, obstacles, or previous results",
+          "status": "passed",
+          "durationMs": 0.46460000000001855
+        },
+        {
+          "title": "deterministic grid A* matches an independent BFS oracle for every target across 24 seeded obstacle fields",
+          "status": "passed",
+          "durationMs": 140.5716
+        },
+        {
+          "title": "route validation for runtime world-version checks validates a remaining route from the current robot position",
+          "status": "passed",
+          "durationMs": 1.2708000000000084
+        },
+        {
+          "title": "route validation for runtime world-version checks rejects a route after an obstacle blocks it or its destination changes",
+          "status": "passed",
+          "durationMs": 0.3284999999999627
+        },
+        {
+          "title": "route validation for runtime world-version checks rejects diagonals, jumps, cycles, and invalid cells: {\"x\":1,\"y\":1}",
+          "status": "passed",
+          "durationMs": 0.2157999999999447
+        },
+        {
+          "title": "route validation for runtime world-version checks rejects diagonals, jumps, cycles, and invalid cells: {\"x\":2,\"y\":0}",
+          "status": "passed",
+          "durationMs": 0.08190000000001874
+        },
+        {
+          "title": "route validation for runtime world-version checks rejects diagonals, jumps, cycles, and invalid cells: {\"x\":0,\"y\":0}",
+          "status": "passed",
+          "durationMs": 0.0666999999999689
+        },
+        {
+          "title": "route validation for runtime world-version checks rejects diagonals, jumps, cycles, and invalid cells: {\"x\":1,\"y\":0}",
+          "status": "passed",
+          "durationMs": 0.06140000000004875
+        },
+        {
+          "title": "route validation for runtime world-version checks rejects diagonals, jumps, cycles, and invalid cells: {\"x\":-1,\"y\":0}",
+          "status": "passed",
+          "durationMs": 4.14689999999996
+        },
+        {
+          "title": "route validation for runtime world-version checks rejects diagonals, jumps, cycles, and invalid cells: {\"x\":null,\"y\":0}",
+          "status": "passed",
+          "durationMs": 1.6727000000000771
+        },
+        {
+          "title": "route validation for runtime world-version checks rejects diagonals, jumps, cycles, and invalid cells: null",
+          "status": "passed",
+          "durationMs": 0.19659999999998945
+        },
+        {
+          "title": "route validation for runtime world-version checks rejects malformed or excessively long route arrays",
+          "status": "passed",
+          "durationMs": 0.21440000000006876
+        },
+        {
+          "title": "route validation for runtime world-version checks distinguishes exact coordinates and checks all four world boundaries",
+          "status": "passed",
+          "durationMs": 0.26130000000000564
+        }
+      ]
+    },
+    {
+      "file": "packages/intelligence/src/recording.test.ts",
+      "status": "passed",
+      "tests": [
+        {
+          "title": "bounded recording schema and detached imports preserves actual event IDs, input, seed, sequence and every step snapshot on JSON round-trip",
+          "status": "passed",
+          "durationMs": 58.8682
+        },
+        {
+          "title": "bounded recording schema and detached imports allows semantically identical JSON key order without weakening coordinate checks",
+          "status": "passed",
+          "durationMs": 4.609199999999987
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects schema",
+          "status": "passed",
+          "durationMs": 2.1602000000000317
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects event schema",
+          "status": "passed",
+          "durationMs": 1.552000000000021
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects duplicate sequence",
+          "status": "passed",
+          "durationMs": 1.677599999999984
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects duplicate event ID",
+          "status": "passed",
+          "durationMs": 1.4183000000000447
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects wrong event run",
+          "status": "passed",
+          "durationMs": 1.5522999999999456
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects wrong snapshot run",
+          "status": "passed",
+          "durationMs": 1.2965000000000373
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects unknown parent",
+          "status": "passed",
+          "durationMs": 1.6432999999999538
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects unsafe identifier",
+          "status": "passed",
+          "durationMs": 2.1007000000000744
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects input seed mismatch",
+          "status": "passed",
+          "durationMs": 4.815200000000004
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects snapshot seed mismatch",
+          "status": "passed",
+          "durationMs": 2.2620999999999185
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects snapshot input mismatch",
+          "status": "passed",
+          "durationMs": 2.3537000000000035
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects negative quantity",
+          "status": "passed",
+          "durationMs": 2.2229999999999563
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects fractional money",
+          "status": "passed",
+          "durationMs": 1.3768999999999778
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects unknown mode",
+          "status": "passed",
+          "durationMs": 1.3191000000000486
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects world version mismatch",
+          "status": "passed",
+          "durationMs": 1.2767999999999802
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects invalid timestamp",
+          "status": "passed",
+          "durationMs": 1.5777000000000498
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects negative duration",
+          "status": "passed",
+          "durationMs": 1.6593000000000302
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects duplicate node",
+          "status": "passed",
+          "durationMs": 3.5010999999999513
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects carrying absent cargo",
+          "status": "passed",
+          "durationMs": 1.8275999999999613
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects carrying cargo away from robot",
+          "status": "passed",
+          "durationMs": 1.8010000000000446
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects delivered cargo outside target",
+          "status": "passed",
+          "durationMs": 1.2211999999999534
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects teleport path",
+          "status": "passed",
+          "durationMs": 1.4283000000000357
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects duplicate obstacle in different key order",
+          "status": "passed",
+          "durationMs": 2.2789999999999964
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects backwards timestamps",
+          "status": "passed",
+          "durationMs": 1.8573999999999842
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects malformed roots: undefined",
+          "status": "passed",
+          "durationMs": 0.32549999999991996
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects malformed roots: null",
+          "status": "passed",
+          "durationMs": 0.1556999999999107
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects malformed roots: undefined",
+          "status": "passed",
+          "durationMs": 0.20699999999999363
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects malformed roots: {}",
+          "status": "passed",
+          "durationMs": 0.39220000000000255
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects malformed roots: \"{broken json\"",
+          "status": "passed",
+          "durationMs": 0.2746999999999389
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects malformed roots: 17",
+          "status": "passed",
+          "durationMs": 0.23820000000000618
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects malformed roots: true",
+          "status": "passed",
+          "durationMs": 0.17889999999999873
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects missing and unexpected fields",
+          "status": "passed",
+          "durationMs": 2.675200000000018
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects an empty event trace and a trace exceeding the event limit",
+          "status": "passed",
+          "durationMs": 2.6639000000000124
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects oversized strings and oversized UTF-8 JSON byte payloads before replay",
+          "status": "passed",
+          "durationMs": 125.85839999999996
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: cycle",
+          "status": "passed",
+          "durationMs": 1.5217000000000098
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: function",
+          "status": "passed",
+          "durationMs": 4.731999999999971
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: nan",
+          "status": "passed",
+          "durationMs": 1.2115999999999758
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: infinity",
+          "status": "passed",
+          "durationMs": 2.4208000000000993
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: bigint",
+          "status": "passed",
+          "durationMs": 1.3564999999999827
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: undefined",
+          "status": "passed",
+          "durationMs": 1.3854000000000042
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: symbol",
+          "status": "passed",
+          "durationMs": 1.545699999999897
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: prototype",
+          "status": "passed",
+          "durationMs": 1.2078000000000202
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: deep",
+          "status": "passed",
+          "durationMs": 2.1779000000000224
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: array-hole",
+          "status": "passed",
+          "durationMs": 1.5781000000000631
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects non-JSON or excessive payload: array-property",
+          "status": "passed",
+          "durationMs": 1.434500000000071
+        },
+        {
+          "title": "bounded recording schema and detached imports rejects accessors without executing them or calling toJSON",
+          "status": "passed",
+          "durationMs": 6.087000000000103
+        },
+        {
+          "title": "pure snapshot replay selects a detached historical snapshot and never dispatches tools, network, storage, timers or runtime mutations",
+          "status": "passed",
+          "durationMs": 5.316299999999956
+        },
+        {
+          "title": "pure snapshot replay rejects replay index -1",
+          "status": "passed",
+          "durationMs": 1.813799999999901
+        },
+        {
+          "title": "pure snapshot replay rejects replay index 1.5",
+          "status": "passed",
+          "durationMs": 1.633100000000013
+        },
+        {
+          "title": "pure snapshot replay rejects replay index NaN",
+          "status": "passed",
+          "durationMs": 1.5538000000000238
+        },
+        {
+          "title": "pure snapshot replay rejects replay index Infinity",
+          "status": "passed",
+          "durationMs": 1.490699999999947
+        },
+        {
+          "title": "pure snapshot replay rejects replay index 999999",
+          "status": "passed",
+          "durationMs": 1.8500000000000227
         }
       ]
     },
@@ -1167,37 +1167,37 @@
         {
           "title": "weekend pending request recovery requests resume-only when identity may be lost and retains the pending intent on 401",
           "status": "passed",
-          "durationMs": 44.03129999999999
+          "durationMs": 40.579200000000014
         },
         {
           "title": "weekend pending request recovery persists intent before I/O and reuses exact body/key across a refresh after lost response",
           "status": "passed",
-          "durationMs": 4.033199999999965
+          "durationMs": 3.2051999999999907
         },
         {
           "title": "weekend pending request recovery blocks a changed intent while the previous operation remains uncertain",
           "status": "passed",
-          "durationMs": 1.1451000000000704
+          "durationMs": 1.0170000000000528
         },
         {
           "title": "weekend pending request recovery does not send when the durable intent cannot be saved",
           "status": "passed",
-          "durationMs": 0.8736000000000104
+          "durationMs": 0.6699999999999591
         },
         {
           "title": "weekend pending request recovery retains the original intent after a lookup 404",
           "status": "passed",
-          "durationMs": 1.36850000000004
+          "durationMs": 6.667699999999968
         },
         {
           "title": "weekend pending request recovery clears only a definitive business rejection and keeps 503 uncertain",
           "status": "passed",
-          "durationMs": 1.5845000000000482
+          "durationMs": 2.519100000000094
         },
         {
           "title": "weekend pending request recovery rejects malformed successful transport instead of inventing business success",
           "status": "passed",
-          "durationMs": 1.1019999999999754
+          "durationMs": 4.389499999999998
         }
       ]
     },
@@ -1208,7 +1208,336 @@
         {
           "title": "rejects a mode switch during connection without permanently locking later reconnects",
           "status": "passed",
-          "durationMs": 43.441799999999944
+          "durationMs": 39.57050000000004
+        }
+      ]
+    },
+    {
+      "file": "packages/intelligence/src/orbit/graph.test.ts",
+      "status": "passed",
+      "tests": [
+        {
+          "title": "stable nonnegative two-cost Dijkstra uses actual different routes and returns summed costs",
+          "status": "passed",
+          "durationMs": 18.243799999999965
+        },
+        {
+          "title": "stable nonnegative two-cost Dijkstra honors direction, closed edges, missing IDs and valid equal start/target",
+          "status": "passed",
+          "durationMs": 0.7404999999999973
+        },
+        {
+          "title": "stable nonnegative two-cost Dijkstra rejects invalid energy -1",
+          "status": "passed",
+          "durationMs": 0.324100000000044
+        },
+        {
+          "title": "stable nonnegative two-cost Dijkstra rejects invalid energy NaN",
+          "status": "passed",
+          "durationMs": 0.21270000000004075
+        },
+        {
+          "title": "stable nonnegative two-cost Dijkstra rejects invalid energy Infinity",
+          "status": "passed",
+          "durationMs": 0.22229999999990468
+        },
+        {
+          "title": "stable nonnegative two-cost Dijkstra rejects invalid energy 0.5",
+          "status": "passed",
+          "durationMs": 0.18719999999996162
+        },
+        {
+          "title": "stable nonnegative two-cost Dijkstra handles zero-energy cycles, shuffled lanes and immutable input",
+          "status": "passed",
+          "durationMs": 1.415399999999977
+        },
+        {
+          "title": "stable nonnegative two-cost Dijkstra matches an independent Floyd-Warshall oracle over 20 bounded graphs and all endpoint pairs",
+          "status": "passed",
+          "durationMs": 78.1508
+        }
+      ]
+    },
+    {
+      "file": "packages/intelligence/src/orbit/recording.test.ts",
+      "status": "passed",
+      "tests": [
+        {
+          "title": "bounded replay validates history without executing it rejects individually plausible teleport tampering",
+          "status": "passed",
+          "durationMs": 165.41319999999996
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects individually plausible elapsed jump tampering",
+          "status": "passed",
+          "durationMs": 90.32490000000007
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects individually plausible position tampering",
+          "status": "passed",
+          "durationMs": 87.202
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects individually plausible distance tampering",
+          "status": "passed",
+          "durationMs": 61.73699999999985
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects individually plausible target after delivery tampering",
+          "status": "passed",
+          "durationMs": 64.3266000000001
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects individually plausible energy spending tampering",
+          "status": "passed",
+          "durationMs": 45.43629999999985
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects individually plausible stock relocation tampering",
+          "status": "passed",
+          "durationMs": 47.13300000000004
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects individually plausible fault schedule tampering",
+          "status": "passed",
+          "durationMs": 41.87950000000001
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects individually plausible deadline tampering",
+          "status": "passed",
+          "durationMs": 48.786600000000135
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects individually plausible simulated tick gap tampering",
+          "status": "passed",
+          "durationMs": 70.31259999999997
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects individually plausible unrecorded action tampering",
+          "status": "passed",
+          "durationMs": 48.75589999999988
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects individually plausible wait budget tampering",
+          "status": "passed",
+          "durationMs": 49.49939999999992
+        },
+        {
+          "title": "bounded replay validates history without executing it returns immutable verified recordings and reuses the import validation for repeated seeks",
+          "status": "passed",
+          "durationMs": 65.29280000000017
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects unsafe cycle input before use",
+          "status": "passed",
+          "durationMs": 30.92769999999996
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects unsafe sparse input before use",
+          "status": "passed",
+          "durationMs": 34.07529999999997
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects unsafe array property input before use",
+          "status": "passed",
+          "durationMs": 42.377100000000155
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects unsafe oversized events input before use",
+          "status": "passed",
+          "durationMs": 92.93859999999995
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects unsafe oversized string input before use",
+          "status": "passed",
+          "durationMs": 28.922500000000127
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects unsafe prototype input before use",
+          "status": "passed",
+          "durationMs": 31.548099999999977
+        },
+        {
+          "title": "bounded replay validates history without executing it rejects unsafe poison key input before use",
+          "status": "passed",
+          "durationMs": 28.98889999999983
+        }
+      ]
+    },
+    {
+      "file": "packages/intelligence/src/orbit/runtime.test.ts",
+      "status": "passed",
+      "tests": [
+        {
+          "title": "ORBIT committed state and bounded dual-carrier scheduler normal actually delivers with both carriers and a valid trace",
+          "status": "passed",
+          "durationMs": 134.70990000000006
+        },
+        {
+          "title": "ORBIT committed state and bounded dual-carrier scheduler detour actually delivers with both carriers and a valid trace",
+          "status": "passed",
+          "durationMs": 83.86950000000002
+        },
+        {
+          "title": "ORBIT committed state and bounded dual-carrier scheduler sealed fails honestly: UNREACHABLE",
+          "status": "passed",
+          "durationMs": 6.810399999999959
+        },
+        {
+          "title": "ORBIT committed state and bounded dual-carrier scheduler scarce fails honestly: INSUFFICIENT_STOCK",
+          "status": "passed",
+          "durationMs": 2.487799999999993
+        },
+        {
+          "title": "ORBIT committed state and bounded dual-carrier scheduler low-energy fails honestly: INSUFFICIENT_ENERGY",
+          "status": "passed",
+          "durationMs": 8.295200000000023
+        },
+        {
+          "title": "ORBIT committed state and bounded dual-carrier scheduler closing an entered lane preserves progress and completes only that entered lane before replanning",
+          "status": "passed",
+          "durationMs": 22.372900000000072
+        },
+        {
+          "title": "ORBIT committed state and bounded dual-carrier scheduler unentered closed route is discarded with worldVersion and recovery does not teleport",
+          "status": "passed",
+          "durationMs": 31.442400000000134
+        },
+        {
+          "title": "ORBIT committed state and bounded dual-carrier scheduler cancel releases unladen reservations and preserves loaded/consumed/delivered facts",
+          "status": "passed",
+          "durationMs": 54.95209999999997
+        },
+        {
+          "title": "ORBIT committed state and bounded dual-carrier scheduler after a committed delivery target changes are rejected without reassigning the historical delivery",
+          "status": "passed",
+          "durationMs": 51.0625
+        },
+        {
+          "title": "ORBIT committed state and bounded dual-carrier scheduler retargeting before any delivery invalidates only future plans and completes at the new target",
+          "status": "passed",
+          "durationMs": 40.097999999999956
+        },
+        {
+          "title": "ORBIT committed state and bounded dual-carrier scheduler pause/step is inert and reset generates a new run with original quantities",
+          "status": "passed",
+          "durationMs": 13.234899999999925
+        },
+        {
+          "title": "ORBIT committed state and bounded dual-carrier scheduler returned snapshots/events cannot mutate facts or authorize duplicated actions",
+          "status": "passed",
+          "durationMs": 6.404199999999946
+        },
+        {
+          "title": "ORBIT committed state and bounded dual-carrier scheduler invalid targets and inputs are rejected without changing world facts",
+          "status": "passed",
+          "durationMs": 0.7308000000000447
+        },
+        {
+          "title": "isolated counterfactual comparison and read-only replay same fork preserves original and repeats future fault timing; strategy outcomes may coincide",
+          "status": "passed",
+          "durationMs": 31.594900000000052
+        },
+        {
+          "title": "isolated counterfactual comparison and read-only replay normal fixture offers a measured time/energy tradeoff without a hardcoded winner",
+          "status": "passed",
+          "durationMs": 25.572599999999966
+        },
+        {
+          "title": "isolated counterfactual comparison and read-only replay source key covers strategy, constraints, reservations, lane state, fault schedule and priority",
+          "status": "passed",
+          "durationMs": 3.9734000000000833
+        },
+        {
+          "title": "isolated counterfactual comparison and read-only replay source key ignores pause messages and measured tool duration without ignoring world facts",
+          "status": "passed",
+          "durationMs": 2.428899999999885
+        },
+        {
+          "title": "isolated counterfactual comparison and read-only replay replay selects initial/each event with no timers, network, runtime work or aliasing",
+          "status": "passed",
+          "durationMs": 57.6215000000002
+        },
+        {
+          "title": "isolated counterfactual comparison and read-only replay rejects malformed seq records before replay",
+          "status": "passed",
+          "durationMs": 49.459299999999985
+        },
+        {
+          "title": "isolated counterfactual comparison and read-only replay rejects malformed stock records before replay",
+          "status": "passed",
+          "durationMs": 41.71960000000013
+        },
+        {
+          "title": "isolated counterfactual comparison and read-only replay rejects malformed energy records before replay",
+          "status": "passed",
+          "durationMs": 61.150100000000066
+        },
+        {
+          "title": "isolated counterfactual comparison and read-only replay rejects malformed action records before replay",
+          "status": "passed",
+          "durationMs": 74.16370000000006
+        },
+        {
+          "title": "isolated counterfactual comparison and read-only replay rejects malformed seed records before replay",
+          "status": "passed",
+          "durationMs": 61.480800000000045
+        },
+        {
+          "title": "isolated counterfactual comparison and read-only replay rejects malformed version records before replay",
+          "status": "passed",
+          "durationMs": 50.76469999999995
+        },
+        {
+          "title": "isolated counterfactual comparison and read-only replay rejects malformed payload records before replay",
+          "status": "passed",
+          "durationMs": 48.19659999999999
+        }
+      ]
+    },
+    {
+      "file": "packages/intelligence/src/orbit/scheduler.test.ts",
+      "status": "passed",
+      "tests": [
+        {
+          "title": "priority reservations and finite execution serializes two carriers sharing a capacity-one source and lane without overselling",
+          "status": "passed",
+          "durationMs": 124.14739999999995
+        },
+        {
+          "title": "priority reservations and finite execution higher numeric priority obtains the first reservation and changed priorities invalidate plans",
+          "status": "passed",
+          "durationMs": 12.183099999999968
+        },
+        {
+          "title": "priority reservations and finite execution a permanently occupied target dock fails with a bounded wait and preserves committed delivery",
+          "status": "passed",
+          "durationMs": 223.88200000000006
+        },
+        {
+          "title": "priority reservations and finite execution scarce retries do not acquire new reservations or fabricate inventory",
+          "status": "passed",
+          "durationMs": 6.298500000000104
+        },
+        {
+          "title": "priority reservations and finite execution repeated control commands cannot create unbounded history and the stopped run remains exportable",
+          "status": "passed",
+          "durationMs": 522.4897000000001
+        },
+        {
+          "title": "priority reservations and finite execution heavy planning plus command storms stop before byte/structure limits with the exact last committed snapshot exportable",
+          "status": "passed",
+          "durationMs": 1615.3935000000001
+        },
+        {
+          "title": "priority reservations and finite execution an invalid reset after completion is a recorded refusal, without mutating committed facts",
+          "status": "passed",
+          "durationMs": 45.39599999999973
+        },
+        {
+          "title": "priority reservations and finite execution invalid resets after a replan limit remain inert and preserve the emergency cancel event",
+          "status": "passed",
+          "durationMs": 455.8091999999997
         }
       ]
     },
@@ -1219,37 +1548,37 @@
         {
           "title": "independent enterprise simulation keeps inventory conserved from partial reservation through procurement and shipment",
           "status": "passed",
-          "durationMs": 4.1311999999999784
+          "durationMs": 3.0055999999999585
         },
         {
           "title": "independent enterprise simulation rejects premature operations without changing the original state",
           "status": "passed",
-          "durationMs": 0.94399999999996
+          "durationMs": 0.5985000000000014
         },
         {
           "title": "independent enterprise simulation supports exact partial settlement and rejects overpayment",
           "status": "passed",
-          "durationMs": 0.7236000000000331
+          "durationMs": 0.4975000000000023
         },
         {
           "title": "independent enterprise simulation replays the same payment once and refuses the same key with another amount",
           "status": "passed",
-          "durationMs": 1.49939999999998
+          "durationMs": 1.0685000000000286
         },
         {
           "title": "independent enterprise simulation prevents double receiving with a different request key",
           "status": "passed",
-          "durationMs": 0.4847000000000321
+          "durationMs": 0.3020999999999958
         },
         {
           "title": "independent enterprise simulation parses currency as integer cents and rejects rounding or alternate numeric syntax",
           "status": "passed",
-          "durationMs": 0.8214999999999577
+          "durationMs": 0.5649999999999977
         },
         {
           "title": "independent enterprise simulation resets to a clean independent simulation without retained receipts",
           "status": "passed",
-          "durationMs": 0.5726999999999975
+          "durationMs": 0.4889999999999759
         }
       ]
     },
@@ -1260,42 +1589,42 @@
         {
           "title": "experiment data and virtual window filters the whole generated dataset and sorts by numeric values, stably",
           "status": "passed",
-          "durationMs": 110.45359999999994
+          "durationMs": 84.20679999999993
         },
         {
           "title": "experiment data and virtual window bounds rendered work independently of 100k records and handles empty/end windows",
           "status": "passed",
-          "durationMs": 0.6848999999999705
+          "durationMs": 0.7801999999999225
         },
         {
           "title": "experiment data and virtual window terminates old workers and refuses queued messages after replacement or leaving",
           "status": "passed",
-          "durationMs": 1.362299999999891
+          "durationMs": 1.7203999999999269
         },
         {
           "title": "server experiment contract cannot create a new identity while an original order intent requires recovery",
           "status": "passed",
-          "durationMs": 2.1884999999999764
+          "durationMs": 2.7298999999999296
         },
         {
           "title": "server experiment contract bounds the explicit-abandonment archive and propagates storage failure before caller clears evidence",
           "status": "passed",
-          "durationMs": 4.8057999999999765
+          "durationMs": 4.533400000000029
         },
         {
           "title": "server experiment contract restores an exact pending key/body, refuses corrupt or extended order requests",
           "status": "passed",
-          "durationMs": 0.5649000000000797
+          "durationMs": 0.4615999999999758
         },
         {
           "title": "server experiment contract sends identical order intent on retry, with the isolated session and no automatic retry",
           "status": "passed",
-          "durationMs": 36.2109999999999
+          "durationMs": 36.30340000000001
         },
         {
           "title": "server experiment contract never interprets an unavailable endpoint or API error as successful server evidence",
           "status": "passed",
-          "durationMs": 1.5474000000000387
+          "durationMs": 2.1018000000000256
         }
       ]
     },
@@ -1306,37 +1635,37 @@
         {
           "title": "synthetic replay prefix never consumes future quotes, volume or candle extremes",
           "status": "passed",
-          "durationMs": 4.89530000000002
+          "durationMs": 3.871600000000001
         },
         {
           "title": "synthetic replay prefix stops at a gap and recovers the same canonical prefix after backfill",
           "status": "passed",
-          "durationMs": 0.9280999999999722
+          "durationMs": 0.9746000000000095
         },
         {
           "title": "synthetic replay prefix discards duplicates without inflating trades or volume",
           "status": "passed",
-          "durationMs": 0.8239000000000374
+          "durationMs": 0.6642000000000507
         },
         {
           "title": "synthetic replay prefix rewinds by recalculating, restoring candle open state and empty reset",
           "status": "passed",
-          "durationMs": 1.9218000000000188
+          "durationMs": 1.7894000000000005
         },
         {
           "title": "synthetic replay prefix does not change the immutable source dataset",
           "status": "passed",
-          "durationMs": 5.788499999999999
+          "durationMs": 4.738699999999994
         },
         {
           "title": "symbol loading ownership aborts old requests and rejects late results even when the source ignores abort",
           "status": "passed",
-          "durationMs": 1.6030000000000086
+          "durationMs": 1.475400000000036
         },
         {
           "title": "symbol loading ownership invalidates pending work on disposal and propagates genuine loading errors",
           "status": "passed",
-          "durationMs": 2.656099999999981
+          "durationMs": 2.7010999999999967
         }
       ]
     }

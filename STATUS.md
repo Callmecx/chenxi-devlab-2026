@@ -1,4 +1,21 @@
-# V2 status
+# V3 development checkpoint — 2026-10-12 23:56 +08
+
+Only target: `Callmecx/chenxi-devlab-2026`; branch `feature/intelligence-lab-v3-rebuild`; released rollback baseline `v2.0.0` / `8059fb9`.
+
+- Replaced the flagship `/intelligence` experience with ORBIT: a layered orbital port, two carriers, direct-start mission, responsive bottom dock, object inspection, five camera modes and operational SVG fallback.
+- Implemented weighted graph search, inventory/capacity/energy guards, reservations, route closure/replanning, bounded unreachable/wait/history limits, isolated same-snapshot Worker comparison and strictly validated replay.
+- Retained practical product/activity/warehouse workflows at `/intelligence/tasks`; migrated their existing browser assertions without removing outcomes. Main, shop, pulse and other works remain in place.
+- Actual checks so far: 308/308 unit/API tests; full typecheck and lint; all three static applications, WeChat resources and App resources built. No device/store release is claimed.
+- V2 baseline and V3 round-1/round-2 real Chrome screenshots retained. Independent review identified and drove fixes for phone cropping, wide-screen heading wrapping, touch targets, material/lighting, camera reacquisition and stale file import.
+- Production V3 browser batch: 25/26 passed; the remaining camera comparison passed after closing the real manual-camera notice before screenshot comparison, with its pixel threshold unchanged. A fresh whole-site batch is still required; do not report 26/26 as one completed run yet.
+
+Next: final production build from this checkpoint, comparison-panel recapture, real failure/recovery video, active scene performance samples, complete browser regression, repository-base smoke, then authorized main publication and anonymous deployed-revision verification. Current online site remains V2 until that release completes.
+
+See `docs/intelligence-lab-v3/` for the baseline, rules, runtime boundary, visual review and demo guide. Old private portfolio, other repositories and withdrawn C-drive cleanup remain untouched.
+
+---
+
+# V2 status (preserved release record)
 
 Target: `Callmecx/chenxi-devlab-2026` · branch `feat/chenxi-v2` · baseline `b62db8d`.
 

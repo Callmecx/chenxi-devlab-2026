@@ -87,21 +87,21 @@ import ProjectCard from "../components/ProjectCard.vue";
         <p class="eyebrow">INTENT → PLAN → ACT → REFLECT</p>
         <h2>让目标变成行动，<br /><span>让过程可以观察。</span></h2>
         <p>
-          修改预算、批准工具动作，或为机器人放下一道障碍。<br />在智能演化实验室，亲手检验一条任务如何完成。
+          为轨道港送去三份能源，关闭航道，比较两种未来。<br />在星域智航，亲手检验智能如何改变下一步。
         </p>
         <div>
           <RouterLink class="button primary" to="/intelligence"
             >进入实验室 <ArrowUpRight :size="17" /></RouterLink
-          ><RouterLink class="text-link" to="/intelligence?guide=1"
-            >60 秒看作品 <ArrowRight :size="16"
+          ><RouterLink class="text-link" to="/intelligence/tasks"
+            >查看实用任务库 <ArrowRight :size="16"
           /></RouterLink>
         </div>
       </div>
       <div class="v2-feature-map" aria-label="四个精选作品入口">
         <RouterLink to="/intelligence"
           ><span>01 / INTELLIGENCE</span>
-          <h3>目标与行动实验室 <ArrowUpRight :size="19" /></h3>
-          <p>任务计划 · 审批 · A* 路径 · 事件回放</p>
+          <h3>星域智航 · 智能实验室 <ArrowUpRight :size="19" /></h3>
+          <p>双载体调度 · 改变航道 · 时间分岔 · 事件回放</p>
           <small>本地算法仿真与历史回放</small></RouterLink
         ><a :href="demoUrl('shop')"
           ><span>02 / COMMERCE</span>

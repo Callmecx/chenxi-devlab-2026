@@ -9,11 +9,36 @@ const router = createRouter({
   scrollBehavior: () => ({ top: 0 }),
   routes: [
     { path: "/", component: Home, meta: { title: "从业务需求到工程交付" } },
-    { path: "/intelligence", component: () => import("./pages/IntelligenceLab.vue"), meta: { title: "智能演化实验室" } },
-    { path: "/labs/market-replay", component: () => import("./pages/MarketReplay.vue"), meta: { title: "金融事件回放" } },
-    { path: "/labs/enterprise-flow", component: () => import("./pages/EnterpriseFlowLab.vue"), meta: { title: "企业业务闭环" } },
-    { path: "/writing", component: () => import("./pages/Writing.vue"), meta: { title: "工程笔记" } },
-    { path: "/labs/engineering", component: () => import("./pages/EngineeringExperiments.vue"), meta: { title: "三个工程实验" } },
+    {
+      path: "/intelligence",
+      component: () => import("./pages/OrbitLab.vue"),
+      meta: { title: "星域智航 · 智能演化实验室" },
+    },
+    {
+      path: "/intelligence/tasks",
+      component: () => import("./pages/IntelligenceLab.vue"),
+      meta: { title: "实用任务库 · 智能演化实验室" },
+    },
+    {
+      path: "/labs/market-replay",
+      component: () => import("./pages/MarketReplay.vue"),
+      meta: { title: "金融事件回放" },
+    },
+    {
+      path: "/labs/enterprise-flow",
+      component: () => import("./pages/EnterpriseFlowLab.vue"),
+      meta: { title: "企业业务闭环" },
+    },
+    {
+      path: "/writing",
+      component: () => import("./pages/Writing.vue"),
+      meta: { title: "工程笔记" },
+    },
+    {
+      path: "/labs/engineering",
+      component: () => import("./pages/EngineeringExperiments.vue"),
+      meta: { title: "三个工程实验" },
+    },
     {
       path: "/projects",
       component: () => import("./pages/Projects.vue"),

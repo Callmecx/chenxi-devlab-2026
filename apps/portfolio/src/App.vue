@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import { ref, watch } from "vue";
+import { computed, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 import { Moon, Sun, Menu, X, ArrowUpRight } from "lucide-vue-next";
 import { useTheme } from "./stores/theme";
 const theme = useTheme();
 const menu = ref(false);
 const route = useRoute();
+const immersive = computed(() => route.path === "/intelligence");
 function skipToMain() {
-  const main = document.getElementById('main');
+  const main = document.getElementById("main");
   main?.focus();
   main?.scrollIntoView();
 }
@@ -20,7 +21,7 @@ watch(
 </script>
 <template>
   <a class="skip-link" href="#main" @click.prevent="skipToMain">跳至主要内容</a>
-  <header class="site-header">
+  <header v-if="!immersive" class="site-header">
     <div class="header-inner">
       <RouterLink to="/" class="brand" aria-label="Chenxi DevLab 首页"
         ><span class="brand-symbol" aria-hidden="true">c<span>›</span></span
@@ -66,13 +67,13 @@ watch(
       ><RouterLink to="/contact">联系我</RouterLink>
     </nav>
   </header>
-  <main id="main" tabindex="-1">
+  <main id="main" tabindex="-1" :class="{ 'orbit-host': immersive }">
     <RouterView v-slot="{ Component }"
       ><Transition name="page" mode="out-in"
         ><component :is="Component" :key="route.path" /></Transition
     ></RouterView>
   </main>
-  <footer class="site-footer">
+  <footer v-if="!immersive" class="site-footer">
     <div class="footer-top">
       <RouterLink class="brand" to="/"
         ><span class="brand-symbol" aria-hidden="true">c<span>›</span></span

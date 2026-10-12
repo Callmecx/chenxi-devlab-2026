@@ -31,7 +31,7 @@ async function openConfig(page: Page) {
   if (await toggle.isVisible()) await toggle.click();
 }
 async function prepare(page: Page, preset: '商品研究' | '活动助理' | '仓库取送' = '商品研究') {
-  await page.goto('/#/intelligence');
+  await page.goto('/#/intelligence/tasks');
   await expect(page.getByRole('heading', { name: '让智能，在行动中演化。' })).toBeVisible();
   await openConfig(page);
   await page.getByRole('button', { name: preset, exact: true }).click();
@@ -209,7 +209,7 @@ test('保存、JSON导出、载入、单步和seek均投影历史；回放不提
 });
 
 test('3D真实canvas、减弱动效保留流程、可切二维；WebGL context loss自动降级保留任务', async ({ page }) => {
-  await page.goto('/#/intelligence');
+  await page.goto('/#/intelligence/tasks');
   const canvas = page.locator('[data-testid="intelligence-scene"] canvas');
   await expect(canvas).toBeVisible();
   await page.getByRole('button', { name: '工程视图', exact: true }).click();
@@ -234,7 +234,7 @@ test('3D真实canvas、减弱动效保留流程、可切二维；WebGL context l
 for (const width of [390, 1440]) {
   test(`${width}px布局截图：入口、真实任务详情和二维仓库均无横向溢出`, async ({ page }) => {
     await page.setViewportSize({ width, height: 1000 });
-    await page.goto('/#/intelligence');
+    await page.goto('/#/intelligence/tasks');
     if (width <= 740) {
       await expect(page.locator('.il-flat-graph')).toBeVisible();
       expect(await page.evaluate(() => performance.getEntriesByType('resource').some(entry => entry.name.includes('IntelligenceScene-') && entry.name.endsWith('.js')))).toBe(false);
@@ -262,7 +262,7 @@ for (const width of [390, 1440]) {
 }
 
 test('390px场景优先与抽屉配置：改预算、审批写入、折叠后可继续操作', async ({ page }) => {
-  await page.setViewportSize({ width: 390, height: 844 }); await page.goto('/#/intelligence');
+  await page.setViewportSize({ width: 390, height: 844 }); await page.goto('/#/intelligence/tasks');
   const toggle = page.getByRole('button', { name: '展开任务配置', exact: true });
   await expect(toggle).toHaveAttribute('aria-expanded', 'false');
   await expect(page.getByLabel('预算（元）')).toBeHidden();
@@ -289,7 +289,7 @@ test('切预设与重置同步清除故障选项；用户输入种子真实进�
 });
 
 test('导航10次真实卸载与重挂：离开后canvas移除且旧WebGL上下文已释放，每次仅一个新canvas', async ({ page }) => {
-  test.setTimeout(60000); await page.goto('/#/intelligence');
+  test.setTimeout(60000); await page.goto('/#/intelligence/tasks');
   const canvas = page.locator('[data-testid="intelligence-scene"] canvas');
   const nav = page.getByRole('navigation', { name: '主导航' });
   for (let visit = 0; visit < 10; visit += 1) {
@@ -306,7 +306,7 @@ test('导航10次真实卸载与重挂：离开后canvas移除且旧WebGL上下�
 });
 
 test('系统减弱动效在reload后生效且保留真实单步执行', async ({ page }) => {
-  await page.emulateMedia({ reducedMotion: 'reduce' }); await page.goto('/#/intelligence'); await page.reload();
+  await page.emulateMedia({ reducedMotion: 'reduce' }); await page.goto('/#/intelligence/tasks'); await page.reload();
   await page.getByRole('button', { name: '工程视图', exact: true }).click();
   await expect(page.getByLabel('减弱动效（保留完整操作）')).toBeChecked();
   await expect(page.locator('[data-testid="intelligence-scene"] canvas')).toBeVisible();

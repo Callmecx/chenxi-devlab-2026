@@ -1,0 +1,43 @@
+{
+  "measuredAt": "2026-10-12T13:07:43.089Z",
+  "node": "v24.18.0",
+  "machine": {
+    "os": "win32 10.0.26200",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+    "logicalCpus": 16,
+    "memoryGiB": 15.5
+  },
+  "protocol": "Real loopback HTTP, Node fetch, single Fastify process + SQLite WAL, five concurrent visitors, ten independent shop/H5 sessions; ten warm reads/domain excluded; one request at a time per visitor.",
+  "requests": 350,
+  "failures": 0,
+  "datasets": {
+    "productsPerSession": 12,
+    "skusPerSession": 25,
+    "slotsPerSession": 9,
+    "slotsPerMeasuredRoute": 3
+  },
+  "metrics": {
+    "shopCatalog": {
+      "count": 100,
+      "p50Ms": 5.05,
+      "p95Ms": 10.54,
+      "maxMs": 14.43
+    },
+    "h5Slots": {
+      "count": 100,
+      "p50Ms": 3.52,
+      "p95Ms": 6.53,
+      "maxMs": 16.9
+    },
+    "cartWrite": {
+      "count": 100,
+      "p50Ms": 6.59,
+      "p95Ms": 9.39,
+      "maxMs": 11.52
+    }
+  },
+  "limits": [
+    "Local machine and synthetic data only; no WAN/TLS or production capacity claim.",
+    "All transactions including reads persist the small session document; not a normalized multi-instance database benchmark."
+  ]
+}

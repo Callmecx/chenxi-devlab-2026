@@ -5,6 +5,7 @@ export default defineConfig({
       "apps/**/src/**/*.test.ts",
       "apps/commerce-mini/tests/**/*.test.ts",
       "packages/**/src/**/*.test.ts",
+      "services/**/src/**/*.test.ts",
     ],
     exclude: ["**/node_modules/**"],
     environment: "node",

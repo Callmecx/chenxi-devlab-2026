@@ -31,8 +31,10 @@ watch(
       >
       <nav aria-label="主导航" class="desktop-nav">
         <RouterLink to="/">首页</RouterLink
+        ><RouterLink to="/intelligence">智能实验室</RouterLink
         ><RouterLink to="/projects">项目作品</RouterLink
         ><RouterLink to="/capabilities">技术与方法</RouterLink
+        ><RouterLink to="/writing">工程笔记</RouterLink
         ><RouterLink to="/contact"
           >联系我 <ArrowUpRight :size="14"
         /></RouterLink>
@@ -57,8 +59,10 @@ watch(
     </div>
     <nav v-if="menu" id="mobile-nav" class="mobile-nav" aria-label="移动导航">
       <RouterLink to="/">首页</RouterLink
+      ><RouterLink to="/intelligence">智能实验室</RouterLink
       ><RouterLink to="/projects">项目作品</RouterLink
       ><RouterLink to="/capabilities">技术与方法</RouterLink
+      ><RouterLink to="/writing">工程笔记</RouterLink
       ><RouterLink to="/contact">联系我</RouterLink>
     </nav>
   </header>

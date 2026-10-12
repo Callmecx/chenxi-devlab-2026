@@ -44,6 +44,11 @@ cpSync(resolve(root, "docs/research/assets"), resolve(output, "evidence"), {
 for (const name of ["TEST_REPORT.md", "ARCHITECTURE.md", "PROJECT_SHOWCASE.md"])
   if (existsSync(resolve(root, name)))
     cpSync(resolve(root, name), resolve(output, "evidence", name));
+for (const folder of ["acceptance", "intelligence-lab", "interview"])
+  if (existsSync(resolve(root, "docs", folder)))
+    cpSync(resolve(root, "docs", folder), resolve(output, "evidence", folder), {
+      recursive: true,
+    });
 if (existsSync(resolve(root, "docs/screenshots")))
   cpSync(resolve(root, "docs/screenshots"), resolve(output, "screenshots"), {
     recursive: true,

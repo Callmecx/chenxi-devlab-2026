@@ -47,7 +47,7 @@ test('ShopPilot: filter, SKU inventory, integer totals, failure retry, idempoten
   await expect(page.getByText('购物袋还空着')).toBeVisible();
 });
 
-for (const width of [1440, 768, 390, 320]) {
+for (const width of [1920, 1440, 768, 390, 360, 320]) {
   test(`ShopPilot responsive catalog and checkout at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
     const errors: string[] = [];

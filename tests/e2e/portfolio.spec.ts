@@ -12,7 +12,7 @@ test("portfolio navigation, filters, theme and actual contact", async ({
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
   await page.reload();
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
-  await page.getByRole("link", { name: "探索我的作品" }).click();
+  await page.getByRole("link", { name: "查看工程作品", exact: true }).click();
   await page.getByRole("button", { name: "前端体验", exact: true }).click();
   await expect(page.locator(".project-card")).toHaveCount(2);
   await page.getByRole("searchbox", { name: "搜索项目" }).fill("不存在项目");
@@ -25,7 +25,7 @@ test("portfolio navigation, filters, theme and actual contact", async ({
   await expect(page.getByText("要解决什么问题？")).toBeVisible();
   await page.getByRole('link', { name: '04 证据与演示' }).click();
   await expect(page).toHaveURL(/#\/projects\/enterprise-flow$/);
-  await page.getByRole('button', { name: '放大功能截图' }).click();
+  await page.getByRole('button', { name: '放大项目证据图' }).click();
   await expect(page.locator('dialog')).toBeVisible();
   await page.getByRole('button', { name: '关闭截图' }).click();
   await expect(page.locator('dialog')).not.toBeVisible();
@@ -55,7 +55,7 @@ test('dark theme stays usable on small screens and skip navigation keeps route',
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
   }
 });
-for (const width of [1440, 768, 390, 320]) {
+for (const width of [1920, 1440, 768, 390, 360, 320]) {
   test(`portfolio responsive ${width}px, routes and screenshot`, async ({
     page,
   }) => {

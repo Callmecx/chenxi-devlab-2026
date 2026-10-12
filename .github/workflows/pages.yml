@@ -29,27 +29,37 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: npm run build:mini
+      - run: npm run build:app
       - run: npx playwright install --with-deps chromium
       - name: Install Chinese fonts for browser evidence
         run: sudo apt-get install -y fonts-noto-cjk
       - run: npm run test:e2e
+      - run: npm run test:summary
       - run: npm run security:scan
       - name: Build repository-path deployment
         run: npm run build
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
+      - name: Validate final Pages paths and business interactions
+        run: node scripts/check-built-path.mjs
+        env:
+          BASE_PATH: /${{ github.event.repository.name }}/
+      - run: npm run security:scan
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: test-evidence
           path: |
-            playwright-report/
             docs/testing/
             docs/screenshots/
       - uses: actions/upload-artifact@v4
         with:
           name: wechat-mini-build
           path: apps/commerce-mini/dist/build/mp-weixin/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: app-resources-not-installable
+          path: apps/commerce-mini/dist/build/app/
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name != 'pull_request'
         with:

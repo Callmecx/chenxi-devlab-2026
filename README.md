@@ -1,58 +1,46 @@
-# Chenxi DevLab
+# Chenxi DevLab V2
 
-**从业务需求到工程交付｜AI 应用、全栈系统与前端体验**
+**从业务问题到工程交付。运行作品，打开源码，核对证据。**
 
-一个原创个人开发者品牌站，以及两个有真实本地业务逻辑的前端作品：ShopPilot 电商 H5 / uni-app 小程序、PulseCampaign 活动预约 H5。三个应用独立开发、独立构建；演示数据、Mock 行为和历史项目边界均明确标注。
+唯一开发与发布仓库：[Callmecx/chenxi-devlab-2026](https://github.com/Callmecx/chenxi-devlab-2026)。沿用 Vue 3、TypeScript、Vite 与独立 uni-app 工程，新增状态驱动的智能演化实验室、金融回放、企业仿真与持久化演示 API。
 
-公开仓库：[Callmecx/chenxi-devlab-2026](https://github.com/Callmecx/chenxi-devlab-2026)。
+[主站](https://callmecx.github.io/chenxi-devlab-2026/#/) · [智能演化实验室](https://callmecx.github.io/chenxi-devlab-2026/#/intelligence) · [巷集商城](https://callmecx.github.io/chenxi-devlab-2026/shop/#/) · [蓉城周末 H5](https://callmecx.github.io/chenxi-devlab-2026/pulse/#/)。准确发布版本见 [STATUS.md](STATUS.md)。
 
-**在线体验：[个人主站](https://callmecx.github.io/chenxi-devlab-2026/) · [ShopPilot](https://callmecx.github.io/chenxi-devlab-2026/shop/) · [PulseCampaign](https://callmecx.github.io/chenxi-devlab-2026/pulse/)**
+![智能演化实验室实际浏览器截图](docs/screenshots/v2/intelligence-1440.png)
 
-2026-10-12 已完成 GitHub Pages 发布，三个入口均通过线上 Chrome 检查。部署与复核证据见 [DEPLOYMENT_REPORT.md](DEPLOYMENT_REPORT.md)。
+## 可以实际操作的内容
 
-本仓库不包含既有客户数据、私有项目源码、真实支付、交易执行或模型凭据。联系：[GitHub @Callmecx](https://github.com/Callmecx) · [496684212@qq.com](mailto:496684212@qq.com)（本人授权公开）。
+| 作品                | 本轮实现                                                                                                               | 运行边界                                                                     |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| 智能演化实验室      | 商品/活动目标、计划和工具节点、参数/结果/来源/耗时、审批/取消/失败/重试、A\* 取送、障碍重规划与不可达、保存回放、3D/2D | 本地确定性算法；未配置真实模型、未训练视觉模型、未连接实体机器人；AGI 为愿景 |
+| 巷集 Select         | 12 SPU/25 SKU/4 分类、SKU、购物车、优惠券、服务端报价/库存预留、模拟付款/履约、未知结果查询和恢复                      | Pages 默认本地模式；可信 API 模式须启动本机服务；没有真实支付                |
+| 蓉城周末 Lab        | 偏好推荐、路线/场次、名额检查、预约结果、查询取消、异常和丢响应恢复                                                    | 公开本地样例与本机持久 API 明确分开；数据为模拟                              |
+| Market Replay Lab   | 合成事件播放/单步/速度/时间线、只读已到达前缀、缺口冻结回补、去重、切换取消                                            | 非实盘、收益回测；旧 Rust 项目历史问题保留                                   |
+| EnterpriseFlow 仿真 | 审批→采购→收货→出库→分次结算、非法动作约束、幂等重放                                                                   | 独立原创仿真，未复制或修改旧 Java 私有系统                                   |
+| 三项工程实验        | 两角色争最后库存、已提交丢响应的恢复、10 万行 Worker 查询与虚拟列表                                                    | 库存/恢复实验连接本机 API；大列表可公开本地运行                              |
 
-![Chenxi DevLab 实际桌面界面](docs/screenshots/portfolio-desktop.png)
+## 本地运行
 
-查看 [ShopPilot 桌面截图](docs/screenshots/shop-desktop.png)、[PulseCampaign 移动截图](docs/screenshots/pulse-mobile.png) 与[全部验收截图](docs/screenshots)。
-
-## 本地开始
-
-使用 Node.js 24 与 npm。根 workspace 和 uni-app 工程使用独立锁文件，均需要安装：
+Node.js 24，根与 uni-app 保留两套锁文件：
 
 ```powershell
 npm ci
-npm --prefix apps/commerce-mini ci
+npm ci --prefix apps/commerce-mini
+npm run dev:api
 ```
 
-分别启动：
+另开终端运行 `npm run dev`、`npm run dev:pulse` 或 `npm run dev:shop`。端口以输出为准。API 默认 4016，SQLite 默认 `.local/data/demo.sqlite`；运行数据和凭据不进入 Git。
 
-```powershell
-npm run dev
-npm run dev:pulse
-npm run dev:shop
-```
-
-以命令输出的本机地址为准。要同时体验汇总后的三个应用：
+完整生产预览：
 
 ```powershell
 npm run build
 npm run preview
 ```
 
-默认本地预览为 `http://127.0.0.1:4173/`，两个作品入口是 `/shop/` 和 `/pulse/`。此地址仅为本地预览，不是公网发布地址。
+打开 `http://127.0.0.1:4173/`、`/shop/`、`/pulse/`。预览代理 `/api/v1/` 到 API。页面选择“服务端演示”并连接后才进入 API 模式，失败明确提示，不静默退回本地。服务端数据按 24 小时演示会话隔离，丢失身份后不能换新身份重发旧订单。
 
-## 展示内容
-
-| 应用 | 功能 |
-|---|---|
-| 主站 | 原创响应式设计、深浅主题、技术能力分层、七项项目案例、详情与证据、联系入口 |
-| ShopPilot | 分类/搜索/筛选、SKU 与库存、购物车增减删除勾选、优惠券和整数分金额、演示地址、重复提交保护、模拟订单状态、历史和本地持久化 |
-| PulseCampaign | 原创活动首页、详情、交互选场、多步骤预约、时间冲突与名额校验、草稿恢复、模拟失败与重试、成功回执、取消和本地统计 |
-
-建议现场演示：ShopPilot 选择规格 → 加入购物车 → 使用优惠券 → 选择演示地址 → 提交订单 → 推进订单状态；PulseCampaign 选场 → 尝试冲突时段 → 填写虚构昵称 → 模拟失败 → 重试成功 → 取消预约。两个作品都不需要账号、Key 或真实个人信息。
-
-## 验证
+## 验证与证据
 
 ```powershell
 npm run typecheck
@@ -60,30 +48,32 @@ npm run lint
 npm test
 npm run build
 npm run build:mini
+npm run build:app
+# 本机使用已安装 Chrome；录像工具放在当前 D 盘工作区
+$env:PLAYWRIGHT_BROWSERS_PATH = Join-Path (Get-Location) '.local/playwright'
+npx playwright install ffmpeg
 npm run test:e2e
+npm run test:summary
+node scripts/evaluate-intelligence.ts
+node scripts/benchmark-api.ts
 npm run security:scan
 ```
 
-本机测试默认使用已安装 Chrome；CI 使用 Playwright Chromium，运行 `npx playwright install --with-deps chromium` 安装。2026-10-12 实测：35/35 单元与状态测试、17/17 浏览器测试、全部类型检查/Lint/构建通过。测试范围和限制见 [TEST_REPORT.md](./TEST_REPORT.md)。
+2026-10-12 本轮实测：247 项单元/接口测试、64 项生产包浏览器测试通过；另有 450 个确定性智能场景评测通过预期断言，包含预期失败。完整范围和后续结果见 [TEST_REPORT.md](TEST_REPORT.md)。
 
-微信构建输出为 `apps/commerce-mini/dist/build/mp-weixin`。项目配置使用游客 AppID，仅用于开发者工具导入与编译实践；不表示微信审核或正式上线。
+E2E 使用独立 4116 API、4176 预览与 `.local/e2e/demo.sqlite`，不复用未知服务。CI 使用 Chromium。截图在 `docs/screenshots/`，原始录像/trace 留在忽略的 `.local/e2e/`；公开摘要不包含会话凭据或机器私密路径。
 
-## 项目说明
+- [架构](ARCHITECTURE.md) / [设计系统](DESIGN_SYSTEM.md) / [性能报告](PERFORMANCE_REPORT.md)
+- [智能评测](docs/intelligence-lab/EVALUATION_REPORT.md) / [能力与模式](docs/intelligence-lab/CAPABILITY_AND_MODE_MATRIX.md)
+- [API 契约](docs/upgrade/API_CONTRACT.md) / [数据库与状态](docs/architecture/DATA_AND_STATE.md)
+- [客户端恢复](docs/architecture/CLIENT_RECOVERY.md) / [跨端验收](docs/acceptance/PLATFORM_RELEASE_MATRIX.md)
+- [功能—源码—测试—演示—简历映射](docs/interview/FEATURE_SOURCE_TEST_DEMO_RESUME.md)
+- [面试演示](docs/interview/DEMO_GUIDE.md) / [简历 A 项目段落](docs/interview/RESUME_A_PROJECTS.md) / [简历 B 项目段落](docs/interview/RESUME_B_PROJECTS.md)
 
-- [架构与技术取舍](./ARCHITECTURE.md)
-- [项目展示与面试演示](./PROJECT_SHOWCASE.md)
-- [可用于简历的真实描述](./RESUME_PROJECT_HIGHLIGHTS.md)
-- [测试报告](./TEST_REPORT.md)
-- [真实 Lighthouse 性能报告](./PERFORMANCE_REPORT.md)
-- [安全审查与依赖审计](./docs/testing/SECURITY_REVIEW.md)
-- [既有项目证据与公开边界](./docs/research/PROJECT_EVIDENCE.md)
+## 发布边界
 
-旧案例包含 EnterpriseFlow、AI Agent Workbench、PokerReplay、Solana Radar 与 Rust 链上事件工具。公开源码入口与历史测试分别核实；未获得公开授权的源码和客户数据保持在原项目中。本轮没有修改这些旧工程。
+Pages 仅托管静态应用和脱敏证据，不能运行 Fastify/SQLite。当前没有已批准公网 API 地址；生产服务仍需要 HTTPS、精确 Origin、Secure Cookie、持久卷和监控等独立验收。
 
-## 静态发布
+微信构建为开发资源、游客 AppID；App 构建为 HBuilderX 输入资源。均不等于真机通过、APK/IPA、审核或上架。未付费调用模型、购买服务或公开客户数据。
 
-`BASE_PATH` 指定项目级部署路径，例如 PowerShell 设置 `$env:BASE_PATH='/your-repository/'` 后运行构建。汇总产物在 `dist/`，不包含服务器端业务进程。
-
-GitHub Actions 自动安装两套锁定依赖、检查类型与 Lint、执行单元/浏览器测试、构建 H5/小程序、扫描发布文件，再发布 GitHub Pages。小程序构建和测试证据作为 Actions artifacts 保留。CI 安装 CJK 字体，确保中文浏览器截图可读。
-
-本地模拟状态仅保存在当前浏览器；没有真实支付、服务器可信库存、多端同步或商业客户规模。开发采用 AI 协同，项目叙述与验收坚持以实际代码和可复现证据为准。
+开发采用 AI 协作，以实际源码和证据核对描述。历史私有源码、真实客户/支付/交易数据和凭据未合入。联系：[GitHub @Callmecx](https://github.com/Callmecx) · [496684212@qq.com](mailto:496684212@qq.com)。

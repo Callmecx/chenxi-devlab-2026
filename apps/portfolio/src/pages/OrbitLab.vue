@@ -1132,6 +1132,45 @@ onBeforeUnmount(() => {
         ><button @click="print">打印摘要</button>
       </div>
     </section>
+    <article class="orbit-print-summary">
+      <h2>星域智航 · 执行摘要</h2>
+      <p>
+        模式：{{ readonly ? "历史回放" : "本地算法仿真" }}；真实模型未连接。
+      </p>
+      <p>
+        目标：{{ snapshot.task.label }}。策略：{{
+          snapshot.strategy === "time" ? "优先时效" : "优先能耗"
+        }}，确定性优先级预约调度。
+      </p>
+      <p>
+        约束：库存与预留守恒；载荷不超过运力；进入航道前检查开放状态、容量、版本及能量；在途关闭后安全到下一节点。
+      </p>
+      <p>
+        结果：{{ labels[snapshot.status] }}；实际交付
+        {{ snapshot.task.delivered }}/{{ snapshot.task.quantity }}；消耗
+        {{ energyUsed }} EU；{{ snapshot.simTick }} 模拟步；重规划
+        {{ snapshot.replans }} 次。
+      </p>
+      <p>
+        原因/反馈：{{ snapshot.failureCode ?? "无失败码" }} ·
+        {{ snapshot.message }}
+      </p>
+      <p>
+        依据：{{ snapshot.runId }}，seed {{ snapshot.seed }}，{{
+          snapshot.plannerVersion
+        }}，worldVersion
+        {{ snapshot.worldVersion }}；事件记录可通过工程视图导出。
+      </p>
+      <p v-for="carrier in snapshot.carriers" :key="carrier.id">
+        {{ carrier.label }}：已交付 {{ carrier.delivered }}，在载
+        {{ carrier.cargo }}，剩余能量 {{ carrier.energy }}，位置
+        {{
+          carrier.transit
+            ? `${stationLabel(carrier.transit.from)} → ${stationLabel(carrier.transit.to)}`
+            : stationLabel(carrier.nodeId)
+        }}。
+      </p>
+    </article>
     <footer class="orbit-footer">
       <span>原创交互实验 / 图搜索 · 资源守恒 · 双载体调度</span
       ><span

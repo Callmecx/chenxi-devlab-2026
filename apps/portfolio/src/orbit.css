@@ -1,3 +1,6 @@
+.orbit-print-summary {
+  display: none;
+}
 .orbit-lab .orbit-drawer-comparison {
   width: 650px;
 }
@@ -1307,6 +1310,19 @@
   }
 }
 @media print {
+  .orbit-print-summary {
+    display: block;
+    color: #172b39;
+    padding: 24px;
+  }
+  .orbit-print-summary h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  .orbit-print-summary p {
+    margin: 8px 0;
+    line-height: 1.6;
+  }
   .orbit-nav,
   .orbit-stage,
   .orbit-primary-controls,

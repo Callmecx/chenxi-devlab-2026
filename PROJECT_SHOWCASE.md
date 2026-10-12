@@ -2,13 +2,13 @@
 
 本轮作品包含个人技术主站、确定性智能实验室、巷集 Select 商城、蓉城周末 Lab，以及事件回放、企业流程与工程故障实验。展示重点是业务状态、可解释的技术选择、失败恢复与可核对证据。
 
-2026-10-12，本机生产资源聚合浏览器测试 **64/64** 通过（约 3.2 分钟），单元/API 测试 **247/247** 通过；网页、微信小程序资源与 App 资源构建通过。本机性能报告已归档，**V2 发布尚未完成**。这些结果不等于公网后端、真机或商店验收。
+2026-10-12，本机生产资源聚合浏览器测试 **64/64** 通过（约 3.2 分钟），单元/API 测试 **247/247** 通过；网页、微信小程序资源与 App 资源构建通过。本机性能报告已归档，**V2 已通过 CI/Pages 发布并完成匿名线上复验，公开模式为静态演示**。这些结果不等于公网后端、真机或商店验收。
 
 本轮 Lighthouse 共 18 次有效测量，每组 3 次。Performance 中位数：首页手机模拟 **89**、首页桌面 **100**、EnterpriseFlow 静态案例手机模拟 **95**、Lab 默认 2D 手机模拟 **95**、H5 默认本地入口手机模拟 **93**、商城默认本地入口手机模拟 **90**；各组 Accessibility 均为 **100**、CLS 均为 **0**。首页手机模拟未达到 90 分目标；自动评分 100 不代表所有无障碍问题消失。[测量条件、范围及逐项问题](./docs/acceptance/LIGHTHOUSE_REPORT.md)
 
 另行显式启用 3D，在本机 headless 桌面 Chrome 的空闲商品场景采集 6 组样本（390px / 1440px 各 3 组），每组 rAF 帧间隔均为 p50 **16.7ms**、p95 **16.8ms**。这是独立的空闲场景样本，不是手机 GPU 实测或通用 60fps 承诺，也不混入默认 2D 的 Lighthouse 成绩。[3D 原始样本与限制](./docs/acceptance/scene-performance.json)
 
-已有公开静态入口保留：[个人主站](https://callmecx.github.io/chenxi-devlab-2026/) · [商城](https://callmecx.github.io/chenxi-devlab-2026/shop/) · [活动 H5](https://callmecx.github.io/chenxi-devlab-2026/pulse/)。本轮新增页面在 V2 发布前应使用本机已验证版本；不得默认远端已包含当前工作树全部功能。
+已发布的 V2 静态入口：[个人主站](https://callmecx.github.io/chenxi-devlab-2026/) · [商城](https://callmecx.github.io/chenxi-devlab-2026/shop/) · [活动 H5](https://callmecx.github.io/chenxi-devlab-2026/pulse/)。本轮主站新路由与商城/H5 静态入口已公开，V2 业务源码已合并至公开仓库 `main`；需要 API 的流程仍在本机演示。
 
 ## 先选一条演示路线
 
@@ -68,4 +68,6 @@
 | Solana Radar V23   | 可用时间、闭合数据、串行 Writer、缺失和右删失   | [公开概览](https://github.com/Callmecx/solana-early-token-risk-radar)；核心源码私有，PAPER / SHADOW 研究             |
 | Rust 链上事件工具  | Tokio 接入、去重、事务幂等、断流与重启恢复      | 脱敏说明，DRY RUN 不等于真钱验收                                                                                     |
 
-既有来源见 [PROJECT_EVIDENCE.md](./docs/research/PROJECT_EVIDENCE.md)。本轮生产聚合结果见 [Playwright 记录](./docs/testing/playwright-results.json)，模块验证与限制见 [CONTENT_EVIDENCE.md](./docs/upgrade/CONTENT_EVIDENCE.md)。各层级数字独立计量，不与历史项目或重复运行相加。最终公开版本与回归仍需发布记录确认。
+既有来源见 [PROJECT_EVIDENCE.md](./docs/research/PROJECT_EVIDENCE.md)。本轮生产聚合结果见 [Playwright 记录](./docs/testing/playwright-results.json)，模块验证与限制见 [CONTENT_EVIDENCE.md](./docs/upgrade/CONTENT_EVIDENCE.md)。各层级数字独立计量，不与历史项目或重复运行相加。本次匿名线上复验已通过；后续公开版本与复验结果持续记录在部署报告中。
+
+发布记录：本次 V2 经 [PR #1](https://github.com/Callmecx/chenxi-devlab-2026/pull/1) 合并，[CI/Pages](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38260520649) 成功。2026-10-12 22:15:31 +08 的[匿名线上复验](./docs/testing/online-smoke.json)为 PASS，部署元信息匹配提交 `e946a67b00dd103ead319b68af64300f35f14228`。该提交标识此次验收，不固定为永久最新版本；后续发布、修订与核验以 [DEPLOYMENT_REPORT.md](./DEPLOYMENT_REPORT.md) 为准。

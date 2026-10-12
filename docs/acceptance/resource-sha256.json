@@ -1,0 +1,16 @@
+[
+  {
+    "file": "chenxi-v2-wechat-resources-f17260b.zip",
+    "sha256": "fdf98eca133cec1cfc8cb3d8bf3cdee5f5bc71d08c992571ea0a094bc0100ae9",
+    "bytes": 79654,
+    "type": "development-resources-not-installable",
+    "sourceCommit": "f17260b781ba25d09a20a5942b0a516373ddafec"
+  },
+  {
+    "file": "chenxi-v2-app-resources-f17260b.zip",
+    "sha256": "617af7808c683b74ad9b671d1c2c512b07b9a75a3bbe5dd15571ab29b3647fdc",
+    "bytes": 356597,
+    "type": "development-resources-not-installable",
+    "sourceCommit": "f17260b781ba25d09a20a5942b0a516373ddafec"
+  }
+]

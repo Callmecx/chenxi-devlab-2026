@@ -2,7 +2,7 @@
 
 以下是可替换的项目段落，不是已修改或已投递的完整简历。当前未取得原 A/B 可编辑简历；公司、任职时间、职责比例和具体客户信息仍由本人按真实经历填写，不由项目代码推断。
 
-2026-10-12 本轮生产资源聚合浏览器测试 **64/64** 通过，耗时约 3.2 分钟；单元/API 测试 **247/247** 通过，网页、微信小程序资源和 App 资源构建通过。固定种子功能评测为 **450/450 预期结果**；本机 API 样本 **350 HTTP 请求、0 失败**。这些层级不相加，也不替代真机、生产容量或发布验收。本机性能报告已归档，V2 发布仍待完成。
+2026-10-12 本轮生产资源聚合浏览器测试 **64/64** 通过，耗时约 3.2 分钟；单元/API 测试 **247/247** 通过，网页、微信小程序资源和 App 资源构建通过。固定种子功能评测为 **450/450 预期结果**；本机 API 样本 **350 HTTP 请求、0 失败**。这些层级不相加，也不替代真机、生产容量或发布验收。本机性能报告已归档，V2 已静态公开并通过匿名线上复验。
 
 性能证据：18 次本机 Lighthouse 测量、每组 3 次，Performance 中位数为首页手机模拟 **89** / 桌面 **100**、EnterpriseFlow 静态案例手机模拟 **95**、Lab 默认 2D 手机模拟 **95**、H5 默认本地入口手机模拟 **93**、商城默认本地入口手机模拟 **90**；各组 Accessibility **100**、CLS **0**。首页手机模拟未达 90 分目标，自动评分不等于完整无障碍验收。[报告](./docs/acceptance/LIGHTHOUSE_REPORT.md)。独立显式启用 3D 的 6 组样本均为 rAF 帧间隔 p50 **16.7ms**、p95 **16.8ms**；仅为本机 headless 桌面 Chrome 空闲场景，不是手机 GPU 或全场景帧率承诺。[3D 样本](./docs/acceptance/scene-performance.json)
 
@@ -47,4 +47,6 @@
 
 AI 协同说明建议：“使用 AI 辅助需求拆分、实现与审查，围绕业务约束进行代码检查、测试和浏览器验收。”不把 AI 生成量等同于个人独立熟练度；面试时应能解释并复现列出的关键模块。
 
-证据入口：[生产浏览器结果](./docs/testing/playwright-results.json) · [功能评测](./docs/intelligence-lab/EVALUATION_REPORT.md) · [API 样本](./docs/acceptance/api-performance.json) · [跨端边界](./docs/acceptance/PLATFORM_RELEASE_MATRIX.md) · [既有项目证据](./docs/research/PROJECT_EVIDENCE.md)。线上 V2 状态由发布后核验确认，不能用本机通过推断已发布。
+证据入口：[生产浏览器结果](./docs/testing/playwright-results.json) · [功能评测](./docs/intelligence-lab/EVALUATION_REPORT.md) · [API 样本](./docs/acceptance/api-performance.json) · [跨端边界](./docs/acceptance/PLATFORM_RELEASE_MATRIX.md) · [既有项目证据](./docs/research/PROJECT_EVIDENCE.md)。V2 静态发布已由独立线上核验确认；本机 API、真实模型与设备范围不随静态发布扩大。
+
+发布记录：本次 V2 经 [PR #1](https://github.com/Callmecx/chenxi-devlab-2026/pull/1) 合并，[CI/Pages](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38260520649) 成功。2026-10-12 22:15:31 +08 的[匿名线上复验](./docs/testing/online-smoke.json)为 PASS，部署元信息匹配提交 `e946a67b00dd103ead319b68af64300f35f14228`。该提交标识此次验收，不固定为永久最新版本；后续发布、修订与核验以 [DEPLOYMENT_REPORT.md](./DEPLOYMENT_REPORT.md) 为准。

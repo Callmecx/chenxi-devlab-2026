@@ -69,6 +69,8 @@ E2E 使用独立 4116 API、4176 预览与 `.local/e2e/demo.sqlite`，不复用�
 - [客户端恢复](docs/architecture/CLIENT_RECOVERY.md) / [跨端验收](docs/acceptance/PLATFORM_RELEASE_MATRIX.md)
 - [功能—源码—测试—演示—简历映射](docs/interview/FEATURE_SOURCE_TEST_DEMO_RESUME.md)
 - [面试演示](docs/interview/DEMO_GUIDE.md) / [简历 A 项目段落](docs/interview/RESUME_A_PROJECTS.md) / [简历 B 项目段落](docs/interview/RESUME_B_PROJECTS.md)
+- [10分钟四作品路线与源码追问](docs/interview/FLAGSHIP_WALKTHROUGH.md) / [开发资源与SHA256](docs/acceptance/RESOURCE_ARTIFACTS.md)
+- [实际发布提交、CI与匿名线上复验](DEPLOYMENT_REPORT.md)
 
 ## 发布边界
 

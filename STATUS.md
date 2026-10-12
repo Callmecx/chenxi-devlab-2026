@@ -2,7 +2,9 @@
 
 Target: `Callmecx/chenxi-devlab-2026` · branch `feat/chenxi-v2` · baseline `b62db8d`.
 
-## Accepted local release candidate — 2026-10-12
+## Released and anonymously verified — 2026-10-12 22:15 +08
+
+V2 source release: `e946a67b00dd103ead319b68af64300f35f14228`, [PR #1](https://github.com/Callmecx/chenxi-devlab-2026/pull/1). [Main CI and Pages](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38260520649) succeeded at 22:14 +08. [Anonymous smoke](docs/testing/online-smoke.json) verifies the exact deployed revision, all eight routes at 390/1440, three public business paths and four evidence assets. See [deployment record](DEPLOYMENT_REPORT.md) for dated evidence; later documentation commits do not imply new functional claims.
 
 - Intelligence tools, warehouse A\*, interventions, approval/cancel/failure/retry and recorded replay implemented.
 - Persistent Fastify/SQLite API and both clients; unknown-response and lost-identity recovery verified.
@@ -10,7 +12,7 @@ Target: `Callmecx/chenxi-devlab-2026` · branch `feat/chenxi-v2` · baseline `b6
 - Typecheck/Lint passed; 247/247 unit/API tests; latest production Chrome 64/64, zero retries/skips.
 - Three static app builds, WeChat resources and App resources passed.
 - 450 deterministic evaluation scenarios meet their expected outcomes; 350 real HTTP benchmark requests, zero failures.
-- 360/390/768/1440/1920 screenshots and local videos generated. No V2 release yet.
+- 360/390/768/1440/1920 screenshots and 64 local videos generated; original three public entries remain available.
 - Final Lighthouse batch: 18/18 measurements; home mobile89/desktop100, enterprise95, Lab default 2D95, H5 93, shop90 (medians). All accessibility100 and CLS0. Home mobile remains below the 90 target; original results retained.
 - Six separate opt-in WebGL measurements: local desktop Chrome idle scene, rAF p50 16.7ms/p95 16.8ms. This is not a phone GPU guarantee or a 3D Lighthouse score.
 - Mobile defaults to an operational 2D view and loads Three.js only after opt-in. A final six-test visual pass followed the 64-test full run.
@@ -18,11 +20,14 @@ Target: `Callmecx/chenxi-devlab-2026` · branch `feat/chenxi-v2` · baseline `b6
 - Final visual evidence was recaptured after fixing an old-heading/route-transition screenshot race: 6/6 checks passed in 19.2 seconds; enterprise/writing desktop and Lab mobile screenshots manually inspected.
 - Feature/source/test/demo/resume matrix and A/B replacement project sections written. Original editable resumes were not found, so no employment timeline changed.
 
-## Next
+## Remaining boundaries and continuation
 
-1. Publish the reviewed candidate branch for CI.
-2. Merge only after CI passes; publish Pages and verify anonymous business flows and deployed sourceRevision.
-3. Record actual remote commit/run and final online evidence. Public API/model/device conditions remain explicitly unclaimed.
+1. Mobile home Lighthouse median89 is below the90 goal; retain this baseline for a focused future optimization.
+2. Public API deployment requires an approved persistent HTTPS host; local SQLite service and explicit public local modes are delivered. No hosting or model purchase was made.
+3. Real model, WeChat AppID/DevTools/device, Android/iOS device/signing/store remain unverified. Actual development resource archives and hashes are listed in [resource artifacts](docs/acceptance/RESOURCE_ARTIFACTS.md).
+4. The uni-app build-tool dependency advisory remains disclosed; do not force incompatible framework upgrades or claim all dependency audits are clean.
+
+The ten-minute walkthrough and both verified resume project sections are in docs/interview. No original editable resumes were provided; replacement project entries are delivered without inventing employment dates.
 
 Raw traces, API data and credentials remain in ignored .local. Public CI artifacts include only sanitized summaries and screenshots.
 No public API hosting, live model, real WeChat AppID, physical device, signed APK/IPA or store release is claimed.

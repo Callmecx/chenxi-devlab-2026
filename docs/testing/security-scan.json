@@ -1,9 +1,9 @@
 {
-  "checkedAt": "2026-10-12T16:36:44.159Z",
+  "checkedAt": "2026-10-12T18:04:42.177Z",
   "scope": "Git tracked and untracked non-ignored publication candidates; no secret values included in findings.",
   "result": "PASS",
-  "candidateFiles": 367,
-  "textFiles": 254,
+  "candidateFiles": 370,
+  "textFiles": 257,
   "binaryAssets": 113,
   "findings": [],
   "limitations": [

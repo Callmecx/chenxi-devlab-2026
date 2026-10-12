@@ -1,0 +1,241 @@
+{
+  "measuredAt": "2026-10-12T18:01:27.677Z",
+  "base": "http://127.0.0.1:4173/",
+  "browser": "154.0.8037.94",
+  "host": {
+    "platform": "win32",
+    "release": "10.0.26200",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+    "logicalCores": 16
+  },
+  "mode": "Real headless desktop Chrome, standard WebGL, active two-carrier execution, ten-second samples; mobile viewport is emulation, not a phone GPU.",
+  "samples": [
+    {
+      "width": 1440,
+      "run": 1,
+      "quality": "standard",
+      "deviceScaleFactor": 1,
+      "windowMs": 10000,
+      "timing": {
+        "frames": 600,
+        "p50": 16.699999999999818,
+        "p95": 16.800000000000182,
+        "longTasks": []
+      },
+      "renderer": {
+        "frames": 710,
+        "p50": 16.69999999999891,
+        "p95": 16.80000000000109,
+        "drawCalls": 110,
+        "geometries": 67,
+        "textures": 3,
+        "pixels": 892800
+      },
+      "canvas": [
+        {
+          "width": 1440,
+          "height": 620,
+          "cssWidth": 1440,
+          "cssHeight": 620
+        }
+      ],
+      "status": "running",
+      "tick": 6,
+      "fallback": false,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "run": 2,
+      "quality": "standard",
+      "deviceScaleFactor": 1,
+      "windowMs": 10000,
+      "timing": {
+        "frames": 600,
+        "p50": 16.699999999999818,
+        "p95": 16.800000000000182,
+        "longTasks": []
+      },
+      "renderer": {
+        "frames": 721,
+        "p50": 16.69999999999891,
+        "p95": 16.80000000000109,
+        "drawCalls": 110,
+        "geometries": 67,
+        "textures": 3,
+        "pixels": 892800
+      },
+      "canvas": [
+        {
+          "width": 1440,
+          "height": 620,
+          "cssWidth": 1440,
+          "cssHeight": 620
+        }
+      ],
+      "status": "running",
+      "tick": 6,
+      "fallback": false,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "run": 3,
+      "quality": "standard",
+      "deviceScaleFactor": 1,
+      "windowMs": 10000,
+      "timing": {
+        "frames": 600,
+        "p50": 16.699999999999818,
+        "p95": 16.80000000000109,
+        "longTasks": []
+      },
+      "renderer": {
+        "frames": 721,
+        "p50": 16.69999999999891,
+        "p95": 16.80000000000109,
+        "drawCalls": 110,
+        "geometries": 67,
+        "textures": 3,
+        "pixels": 892800
+      },
+      "canvas": [
+        {
+          "width": 1440,
+          "height": 620,
+          "cssWidth": 1440,
+          "cssHeight": 620
+        }
+      ],
+      "status": "running",
+      "tick": 6,
+      "fallback": false,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "run": 1,
+      "quality": "standard",
+      "deviceScaleFactor": 1,
+      "windowMs": 10000,
+      "timing": {
+        "frames": 599,
+        "p50": 16.69999999999891,
+        "p95": 16.80000000000109,
+        "longTasks": []
+      },
+      "renderer": {
+        "frames": 362,
+        "p50": 33.30000000000109,
+        "p95": 33.5,
+        "drawCalls": 107,
+        "geometries": 65,
+        "textures": 1,
+        "pixels": 183300
+      },
+      "canvas": [
+        {
+          "width": 390,
+          "height": 470,
+          "cssWidth": 390,
+          "cssHeight": 470
+        }
+      ],
+      "status": "running",
+      "tick": 6,
+      "fallback": false,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "run": 2,
+      "quality": "standard",
+      "deviceScaleFactor": 1,
+      "windowMs": 10000,
+      "timing": {
+        "frames": 599,
+        "p50": 16.69999999999891,
+        "p95": 16.80000000000109,
+        "longTasks": []
+      },
+      "renderer": {
+        "frames": 361,
+        "p50": 33.30000000000109,
+        "p95": 33.5,
+        "drawCalls": 107,
+        "geometries": 65,
+        "textures": 1,
+        "pixels": 183300
+      },
+      "canvas": [
+        {
+          "width": 390,
+          "height": 470,
+          "cssWidth": 390,
+          "cssHeight": 470
+        }
+      ],
+      "status": "running",
+      "tick": 6,
+      "fallback": false,
+      "errors": []
+    },
+    {
+      "width": 390,
+      "run": 3,
+      "quality": "standard",
+      "deviceScaleFactor": 1,
+      "windowMs": 10000,
+      "timing": {
+        "frames": 599,
+        "p50": 16.69999999999891,
+        "p95": 16.80000000000109,
+        "longTasks": []
+      },
+      "renderer": {
+        "frames": 361,
+        "p50": 33.30000000000109,
+        "p95": 33.5,
+        "drawCalls": 107,
+        "geometries": 65,
+        "textures": 1,
+        "pixels": 183300
+      },
+      "canvas": [
+        {
+          "width": 390,
+          "height": 470,
+          "cssWidth": 390,
+          "cssHeight": 470
+        }
+      ],
+      "status": "running",
+      "tick": 6,
+      "fallback": false,
+      "errors": []
+    }
+  ],
+  "limits": [
+    "Frame intervals are wall-clock requestAnimationFrame samples, not GPU timestamps.",
+    "No real phone device is attached; do not generalize these measurements to all phones.",
+    "Measurements are independent of still screenshot captures and retain all long tasks."
+  ],
+  "build": {
+    "basePath": "/",
+    "sourceRevision": "da9b6337be81f7d6650785071984d1d2eb73fb47",
+    "sourceTreeDirty": false,
+    "builtAt": "2026-10-12T17:45:06.651Z",
+    "apps": [
+      "portfolio",
+      "shop",
+      "pulse"
+    ]
+  },
+  "buildVerification": {
+    "metadataIdenticalBeforeAndAfter": true,
+    "entrySha256Before": "C950781D87F48026372F39625F99B93F2AFE3A1E3676F2D72F769A01747EF60F",
+    "entrySha256After": "C950781D87F48026372F39625F99B93F2AFE3A1E3676F2D72F769A01747EF60F",
+    "measurementScriptSha256": "455A6CAA790FDB07369CD2C246AB53E62FFA2900FBF5E5C9C0C8735A092B64F1",
+    "note": "Build metadata and entry hashes verified around this local batch. Original samples retained without alteration."
+  }
+}

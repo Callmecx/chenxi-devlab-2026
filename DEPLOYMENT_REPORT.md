@@ -1,10 +1,20 @@
 # GitHub 发布与线上验收
 
-## V3 本地发布前检查（2026-10-13）
+## V3 已发布并通过匿名业务复验（2026-10-13）
+
+功能发布提交：`da9b6337be81f7d6650785071984d1d2eb73fb47`；[PR #2](https://github.com/Callmecx/chenxi-devlab-2026/pull/2) 在完整 [PR CI](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38281209887) 通过后合并，主分支首次失败由静止减弱动效按需绘制修复。[主分支 CI 与 Pages](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38286209858) 于 **2026/10/13 01:58:05（Asia/Shanghai）** 成功。两套依赖安装、类型、Lint、308项单元/API、95项完整生产浏览器、网页/微信/App资源构建、最终仓库子路径业务与发布扫描全部通过。逐步骤证据：[PR CI](docs/testing/ci-v3-pr.json)、[主分支CI](docs/testing/ci-v3-release.json)。
+
+**2026/10/13 02:02:26** 使用全新未登录 Chrome 154.0.8037.94 完成线上复验：9路由分别在390/1440下HTTP200、标题正确、无横溢出；轨道港真实单步→全部封路→不可达→开路重试→双载体实际交付3份、实用任务商品审批拒绝、商城SKU→购物袋→结算与返回、H5预约入口均通过；4证据资产可访问，页面异常和失败资产均为0。`build-meta.json.sourceRevision` 与上述功能发布提交完全一致，`sourceTreeDirty:false`。机器证据：[online-smoke.json](docs/testing/online-smoke.json)。
+
+真实录屏：[v3.0.0 Release](https://github.com/Callmecx/chenxi-devlab-2026/releases/tag/v3.0.0)，75.720秒、16,000,955 bytes；GitHub附件返回的SHA-256与本机原片一致：`ef0a69e7d2429a47664ab29813d4437f9c231ab2996f792c48c457324c915af7`。它来自ec20eaf的实际浏览器操作，后续Worker恢复修复没有改变正常场景；不倒写影片源版本。
+
+三个既有公开入口及原实验室URL不变，旧私有仓和其他项目未修改。Pages为本地算法与模拟业务，未部署公网API或模型服务。后续验收文档提交保留这次带日期的功能发布记录；最新部署SHA另以build-meta和对应工作流核对。`v2.0.0`仍指向8059fb9，回退流程见[说明](docs/acceptance/DEPLOYMENT_AND_ROLLBACK.md)，不重写历史。
+
+## V3 历史本地发布前检查（2026-10-13 00:35）
 
 功能检查点 `dc336f17d672dc061e90c4a1b40966f1244ce4da`，分支 `feature/intelligence-lab-v3-rebuild`。完整本地93项生产浏览器、308项单元/API、类型、Lint及各端资源构建通过。
 
-**00:35:31（Asia/Shanghai）** 完成实际仓库路径 `/chenxi-devlab-2026/` 的生产构建与浏览器验证：9个路由分别在390/1440下检查，4个业务流程、4个证据资产通过；页面异常/失败资产均0，`sourceTreeDirty:false`，构建SHA与功能检查点一致。星港实际单步→全封路→不可达→开路重试→3份送达经过验证。机器证据：[deployment-path-check.json](docs/testing/deployment-path-check.json)。这还是本机子路径验证；公开发布和匿名线上结果在实际完成后补入。
+**00:35:31（Asia/Shanghai）** 完成实际仓库路径 `/chenxi-devlab-2026/` 的生产构建与浏览器验证：9个路由分别在390/1440下检查，4个业务流程、4个证据资产通过；页面异常/失败资产均0，`sourceTreeDirty:false`，构建SHA与功能检查点一致。星港实际单步→全封路→不可达→开路重试→3份送达经过验证。机器证据：[deployment-path-check.json](docs/testing/deployment-path-check.json)。这是当时的本机子路径验证；后续真实公开发布和匿名线上结果已在本报告顶部单列。
 
 远端 `v2.0.0` 标签已读回核对，指向 `8059fb954e089a7880a4d1cea52941f03deb5c54`，保留为上个正式版本的恢复目标。无仓库可见性、自定义域名或旧仓变更。
 

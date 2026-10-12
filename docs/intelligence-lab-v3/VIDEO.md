@@ -1,8 +1,8 @@
 # 实际浏览器操作录屏
 
-最终发布候选影片包含真正的失败恢复：全部航道封闭后进入 `failed / UNREACHABLE`，重新开放后仍处于失败状态，用户显式重试才在同一个 runId 内恢复并完成交付。封闭单条航道后自动绕行成功是另一个流程，两者不混称。
+最终交付影片包含真正的失败恢复：全部航道封闭后进入 `failed / UNREACHABLE`，重新开放后仍处于失败状态，用户显式重试才在同一个 runId 内恢复并完成交付。封闭单条航道后自动绕行成功是另一个流程，两者不混称。
 
-影片附件名为 `chenxi-orbit-v3-demo.webm`，已复制到 `.local/delivery/` 供发布，原片仍保留，复制后的 SHA-256 已核对一致；文件未放入 Git 历史。公开下载位置以发布负责人的实际 Release 记录为准。
+影片附件名为 `chenxi-orbit-v3-demo.webm`，已复制到 `.local/delivery/` 供发布，原片仍保留，复制后的 SHA-256 已核对一致；文件未放入 Git 历史。公开附件：[下载实际WebM](https://github.com/Callmecx/chenxi-devlab-2026/releases/download/v3.0.0/chenxi-orbit-v3-demo.webm)；[Release与发布说明](https://github.com/Callmecx/chenxi-devlab-2026/releases/tag/v3.0.0)。GitHub附件返回的大小及digest与下方本机值一致。
 
 [脱敏完整影片清单](video-manifest.json) 包含全部 18 步状态、构建元信息、同 run 失败恢复断言、ffprobe 数据和附件哈希；本机绝对路径已移除，失败/恢复的两份原始执行 JSON 不公开上传。最终 Release 附件名为 `chenxi-orbit-v3-demo.webm`。
 

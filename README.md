@@ -6,6 +6,10 @@
 
 公开仓库：[Callmecx/chenxi-devlab-2026](https://github.com/Callmecx/chenxi-devlab-2026)。
 
+**在线体验：[个人主站](https://callmecx.github.io/chenxi-devlab-2026/) · [ShopPilot](https://callmecx.github.io/chenxi-devlab-2026/shop/) · [PulseCampaign](https://callmecx.github.io/chenxi-devlab-2026/pulse/)**
+
+2026-10-12 已完成 GitHub Pages 发布，三个入口均通过线上 Chrome 检查。部署与复核证据见 [DEPLOYMENT_REPORT.md](DEPLOYMENT_REPORT.md)。
+
 本仓库不包含既有客户数据、私有项目源码、真实支付、交易执行或模型凭据。联系：[GitHub @Callmecx](https://github.com/Callmecx) · [496684212@qq.com](mailto:496684212@qq.com)（本人授权公开）。
 
 ![Chenxi DevLab 实际桌面界面](docs/screenshots/portfolio-desktop.png)
@@ -80,6 +84,6 @@ npm run security:scan
 
 `BASE_PATH` 指定项目级部署路径，例如 PowerShell 设置 `$env:BASE_PATH='/your-repository/'` 后运行构建。汇总产物在 `dist/`，不包含服务器端业务进程。
 
-GitHub 仓库和公网预览地址只在真实创建、推送与部署成功后记录。当前发布状态以交付报告和远端 Actions 结果为准，不根据预期仓库名构造成功链接。
+GitHub Actions 自动安装两套锁定依赖、检查类型与 Lint、执行单元/浏览器测试、构建 H5/小程序、扫描发布文件，再发布 GitHub Pages。小程序构建和测试证据作为 Actions artifacts 保留。CI 安装 CJK 字体，确保中文浏览器截图可读。
 
 本地模拟状态仅保存在当前浏览器；没有真实支付、服务器可信库存、多端同步或商业客户规模。开发采用 AI 协同，项目叙述与验收坚持以实际代码和可复现证据为准。

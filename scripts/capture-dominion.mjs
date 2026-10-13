@@ -1,9 +1,14 @@
-import { chromium, expect } from "@playwright/test";
 import { createHash } from "node:crypto";
 import { execFileSync } from "node:child_process";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { cpus, platform, release } from "node:os";
 import { resolve, relative, join } from "node:path";
+
+// Match the test runner's existing D/workspace cache before Playwright resolves
+// its recorder executable. This does not install or download any browser.
+if (!process.env.CI)
+  process.env.PLAYWRIGHT_BROWSERS_PATH ||= resolve(".local/playwright");
+const { chromium, expect } = await import("@playwright/test");
 
 // Production evidence only: no runtime injection, fake task completion or image edits.
 // node scripts/capture-dominion.mjs http://127.0.0.1:4173/#/intelligence [output-directory]

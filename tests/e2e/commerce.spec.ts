@@ -42,7 +42,7 @@ test('ShopPilot: filter, SKU inventory, integer totals, failure retry, idempoten
   await page.reload();
   await expect(page.locator('.order-status')).toHaveText('已完成');
   await expect(page.locator('.order-card')).toHaveCount(1);
-  await page.screenshot({ path: 'docs/screenshots/shop-order-complete.png', fullPage: true });
+  await page.screenshot({ path: 'docs/screenshots/v4/regression/shop-order-complete.png', fullPage: true });
   await page.getByTestId('open-cart').click();
   await expect(page.getByText('购物袋还空着')).toBeVisible();
 });

@@ -70,6 +70,10 @@ let bridge: THREE.Group | undefined;
 let planets: PlanetModel[] = [];
 let selectionRing: THREE.Mesh | undefined;
 const stations = new Map<string, StationModel>();
+const stationVolumes = new Map<string, THREE.Box3>();
+const berthPositions = new Map<string, THREE.Vector3>();
+const closeFocusOffset = new THREE.Vector3();
+let closeCameraKey = "";
 const ships = new Map<
   string,
   ShipModel & { target: THREE.Vector3; yaw: number }
@@ -133,12 +137,60 @@ function shipBerth(ship: Ship, nodeId: string, result: THREE.Vector3) {
     result.z += 7.4 - Math.floor(index / 2) * 3.3;
     result.y += 0.03;
   } else {
+    const key = `${ship.id}:${nodeId}`;
+    const cached = berthPositions.get(key);
+    if (cached) return result.copy(cached);
     const roleIndex =
       ship.role === "transport" ? 0 : ship.role === "survey" ? 1 : 2;
-    const angle = (roleIndex * Math.PI * 2) / 3 + (index % 2 ? 0.42 : -0.42);
-    result.x += Math.sin(angle) * 2.8;
-    result.z += Math.cos(angle) * 2.8;
+    const preferred =
+      (roleIndex * Math.PI * 2) / 3 + (index % 2 ? 0.42 : -0.42);
+    const clearance = ship.role === "transport" ? 2.8 : 2;
+    const volume = stationVolumes.get(nodeId);
+    const station = props.snapshot.stations.find((item) => item.id === nodeId);
+    const size =
+      volume && station
+        ? new THREE.Vector2(
+            Math.max(
+              Math.abs(volume.min.x - station.position[0]),
+              Math.abs(volume.max.x - station.position[0]),
+            ),
+            Math.max(
+              Math.abs(volume.min.z - station.position[2]),
+              Math.abs(volume.max.z - station.position[2]),
+            ),
+          )
+        : new THREE.Vector2(2.5, 2.5);
+    const radius = size.length() + clearance;
     result.y += roleIndex === 1 ? 0.6 : 0;
+    const base = result.clone(),
+      candidate = new THREE.Vector3();
+    let best = Infinity;
+    // Stable physical staging based on all station hulls, never on the active
+    // camera. Adjacent port architecture cannot intersect a remote work berth.
+    for (let offset = 0; offset < 16; offset++) {
+      const angle =
+        preferred +
+        ((offset % 2 ? 1 : -1) * Math.ceil(offset / 2) * Math.PI) / 8;
+      candidate
+        .copy(base)
+        .add(
+          new THREE.Vector3(
+            Math.sin(angle) * radius,
+            0,
+            Math.cos(angle) * radius,
+          ),
+        );
+      let score = Math.ceil(offset / 2) * 0.02;
+      for (const bounds of stationVolumes.values()) {
+        const distance = bounds.distanceToPoint(candidate);
+        if (distance < clearance) score += (clearance - distance) * 100;
+      }
+      if (score < best) {
+        best = score;
+        result.copy(candidate);
+      }
+    }
+    berthPositions.set(key, result.clone());
   }
   return result;
 }
@@ -239,6 +291,8 @@ function cameraProjection() {
 function configureCamera() {
   if (drag) return;
   manualCamera = false;
+  closeFocusOffset.set(0, 0, 0);
+  closeCameraKey = "";
   if (bridge) bridge.visible = props.camera === "cockpit";
   // The initial view is a port-side approach, not a fit-all tactical map.
   // Both the forward transport berth and ring crown remain inside the frustum.
@@ -251,18 +305,11 @@ function configureCamera() {
     ).sub(desiredFocus),
   );
   const ship = trackedShip();
-  if (props.camera === "follow" || props.camera === "scan") {
+  if (props.camera === "follow") {
     if (ship) shipPoint(ship, desiredFocus);
-    desiredOrbit.set(
-      compact ? 14.8 : 10.2,
-      1.06,
-      props.camera === "scan" ? -0.72 : 0.52,
-    );
-  } else if (props.camera === "docking") {
-    if (ship) shipPoint(ship, desiredFocus);
-    else stationPoint("port", desiredFocus);
-    desiredFocus.y += 0.25;
-    desiredOrbit.set(compact ? 15 : 11, 1.23, -0.65);
+    desiredOrbit.set(compact ? 14.8 : 10.2, 1.06, 0.52);
+  } else if (props.camera === "docking" || props.camera === "scan") {
+    if (ship) composeCloseCamera(ship);
   } else if (props.camera === "inspect") {
     selectionPoint(props.selected, desiredFocus);
     const station = props.snapshot.stations.find(
@@ -310,6 +357,72 @@ function configureCamera() {
     orbit.copy(desiredOrbit);
   }
 }
+function composeCloseCamera(ship: Ship) {
+  closeCameraKey = `${props.camera}:${ship.id}:${ship.nodeId}:${ship.transit?.laneId || ""}:${ship.action?.kind || ""}:${ship.action?.targetId || ""}:${compact}`;
+  const subject = shipPoint(ship, new THREE.Vector3());
+  const node = stationPoint(
+    ship.transit?.to || ship.nodeId,
+    new THREE.Vector3(),
+  );
+  closeFocusOffset.set(0, ship.role === "transport" ? 0.4 : 0.15, 0);
+  desiredFocus.copy(subject).add(closeFocusOffset);
+  const radius =
+    ship.role === "transport" ? (compact ? 10.8 : 9) : compact ? 7.4 : 6.4;
+  const outward = Math.atan2(subject.x - node.x, subject.z - node.z);
+  const obstacles = [...stations.values()]
+    .map((model) => model.group)
+    .concat(
+      [...ships.entries()]
+        .filter(([id]) => id !== ship.id)
+        .map(([, model]) => model.group),
+    );
+  world?.updateMatrixWorld(true);
+  const sight = new THREE.Raycaster(),
+    eye = new THREE.Vector3(),
+    target = new THREE.Vector3(),
+    ray = new THREE.Vector3();
+  const frame = new THREE.Spherical();
+  const half = ship.role === "transport" ? 1.3 : 0.8;
+  const offsets = [
+    [0, 0.3, 0],
+    [-half, 0.3, 0],
+    [half, 0.3, 0],
+    [0, 0.3, -half],
+    [0, 0.3, half],
+  ];
+  let best = Infinity;
+  // A small deterministic photography search is done only on camera requests
+  // or a changed work location/action, never in the animation frame loop.
+  // It retains all hulls and measures real geometry along each candidate view.
+  for (const phi of [1.02, 0.82, 1.2, 0.62]) {
+    for (const turn of [0.45, -0.45, 0.9, -0.9, 0, 1.5, -1.5, Math.PI]) {
+      frame.set(radius, phi, outward + turn);
+      eye.setFromSpherical(frame).add(desiredFocus);
+      let score = Math.abs(turn - 0.45) * 0.08 + Math.abs(phi - 1.02) * 0.2;
+      for (const [index, offset] of offsets.entries()) {
+        target
+          .copy(subject)
+          .add(new THREE.Vector3(offset[0], offset[1], offset[2]));
+        ray.subVectors(target, eye);
+        const distance = ray.length();
+        sight.set(eye, ray.normalize());
+        sight.near = 0;
+        sight.far = distance - 0.25;
+        if (sight.intersectObjects(obstacles, true).length)
+          score += index === 0 ? 40 : 10;
+      }
+      // A ray starting inside an opaque front-sided hull can miss its exit
+      // surface. Treat enclosing/near camera volumes as an invalid position,
+      // ahead of a partially occluded external view.
+      for (const bounds of stationVolumes.values())
+        if (bounds.distanceToPoint(eye) < 0.8) score += 10000;
+      if (score < best) {
+        best = score;
+        desiredOrbit.copy(frame);
+      }
+    }
+  }
+}
 function clearWorld() {
   if (world) scene.remove(world);
   if (environment) scene.remove(environment);
@@ -330,6 +443,9 @@ function clearWorld() {
   bridge = undefined;
   planets = [];
   stations.clear();
+  stationVolumes.clear();
+  berthPositions.clear();
+  closeCameraKey = "";
   ships.clear();
   lanes.clear();
   labels.clear();
@@ -355,6 +471,8 @@ function rebuildWorld() {
     } satisfies Selection;
     stations.set(station.id, model);
     world.add(model.group);
+    model.group.updateMatrixWorld(true);
+    stationVolumes.set(station.id, new THREE.Box3().setFromObject(model.group));
     pickable.push(model.group);
     const label = assets.label(station.label);
     label.position.set(
@@ -580,12 +698,107 @@ function updateResourceLayer() {
         station.position[2],
       );
       resourceLabels.set(station.id, label);
-      world.add(label.sprite);
+      world.add(label.sprite, label.connector);
     }
     if (label) {
       label.sprite.visible = visible;
+      label.connector.visible = visible;
       if (visible) label.update(station);
     }
+  }
+}
+function arrangeResourceLabels() {
+  if (!props.resourcesVisible || !host.value) return;
+  sceneCamera.updateMatrixWorld(true);
+  const width = host.value.clientWidth,
+    height = host.value.clientHeight;
+  const labelWidth = compact ? 174 : 240,
+    labelHeight = (labelWidth * 200) / 640;
+  const right = new THREE.Vector3().setFromMatrixColumn(
+    sceneCamera.matrixWorld,
+    0,
+  );
+  const up = new THREE.Vector3().setFromMatrixColumn(
+    sceneCamera.matrixWorld,
+    1,
+  );
+  const placed: { x: number; y: number }[] = [];
+  const region = props.camera === "planet" ? selectedPlanet()?.id : undefined;
+  for (const station of props.snapshot.stations) {
+    const label = resourceLabels.get(station.id);
+    if (!label || (region && station.regionId !== region)) continue;
+    const anchor = new THREE.Vector3(...station.position).add(
+      new THREE.Vector3(0, 2, 0),
+    );
+    const depth = -anchor.clone().applyMatrix4(sceneCamera.matrixWorldInverse)
+      .z;
+    if (depth <= 0) {
+      label.sprite.visible = false;
+      label.connector.visible = false;
+      continue;
+    }
+    label.sprite.visible = true;
+    label.connector.visible = true;
+    const projected = anchor.clone().project(sceneCamera);
+    const originalX = ((projected.x + 1) * width) / 2,
+      originalY = ((1 - projected.y) * height) / 2;
+    let x = originalX,
+      y = originalY - labelHeight - 24,
+      best = Infinity;
+    for (const [dx, dy] of [
+      [0, 0],
+      [0, -1],
+      [0, 1],
+      [-1, 0],
+      [1, 0],
+      [0, -2],
+      [0, 2],
+    ]) {
+      const cx = THREE.MathUtils.clamp(
+        originalX + dx * (labelWidth + 8),
+        labelWidth / 2 + 12,
+        width - labelWidth / 2 - 12,
+      );
+      const cy = THREE.MathUtils.clamp(
+        originalY - labelHeight - 24 + dy * (labelHeight + 10),
+        compact ? 156 : 164,
+        height - (compact ? 132 : 60),
+      );
+      let score =
+        Math.abs(cx - originalX) + Math.abs(cy - originalY + labelHeight + 24);
+      for (const prior of placed) {
+        const overlapX = Math.max(0, labelWidth + 8 - Math.abs(cx - prior.x));
+        const overlapY = Math.max(0, labelHeight + 8 - Math.abs(cy - prior.y));
+        score += overlapX * overlapY * 100;
+      }
+      if (score < best) {
+        best = score;
+        x = cx;
+        y = cy;
+      }
+    }
+    placed.push({ x, y });
+    const unitsPerPixel =
+      (depth * 2 * Math.tan(THREE.MathUtils.degToRad(sceneCamera.fov / 2))) /
+      height;
+    label.sprite.position
+      .copy(anchor)
+      .addScaledVector(right, (x - originalX) * unitsPerPixel)
+      .addScaledVector(up, (originalY - y) * unitsPerPixel);
+    label.sprite.scale.set(
+      labelWidth * unitsPerPixel,
+      labelHeight * unitsPerPixel,
+      1,
+    );
+    const positions = label.connector.geometry.getAttribute("position");
+    positions.setXYZ(0, anchor.x, anchor.y, anchor.z);
+    positions.setXYZ(
+      1,
+      label.sprite.position.x,
+      label.sprite.position.y,
+      label.sprite.position.z,
+    );
+    positions.needsUpdate = true;
   }
 }
 function updateSelection() {
@@ -897,7 +1110,7 @@ function animate(now: number) {
   if (!manualCamera && ["follow", "scan", "docking"].includes(props.camera)) {
     const ship = trackedShip();
     const model = ship ? ships.get(ship.id) : undefined;
-    if (model) desiredFocus.copy(model.group.position);
+    if (model) desiredFocus.copy(model.group.position).add(closeFocusOffset);
   }
   if (props.camera === "cockpit") {
     cameraOffset.setFromSpherical(cockpitLook);
@@ -922,6 +1135,7 @@ function animate(now: number) {
     sceneCamera.lookAt(focus);
   }
   updateEffects();
+  arrangeResourceLabels();
   renderer.render(scene, sceneCamera);
   frames++;
   renderer.domElement.dataset.frames = String(frames);
@@ -935,6 +1149,9 @@ function animate(now: number) {
   renderer.domElement.dataset.bridge = bridge?.visible ? "visible" : "hidden";
   renderer.domElement.dataset.layerResources = String(props.resourcesVisible);
   renderer.domElement.dataset.layerLanes = String(props.lanesVisible);
+  renderer.domElement.dataset.resourceLabels = String(
+    [...resourceLabels.values()].filter((label) => label.sprite.visible).length,
+  );
   if (modeChanged || now - lastMetric >= 3000) {
     const sorted = [...frameSamples].sort((x, y) => x - y);
     const metrics: SceneMetrics = {
@@ -1026,6 +1243,11 @@ watch(
     if (assetSession !== props.snapshot.sessionId || topology !== topologyKey())
       rebuildWorld();
     else updateFacts();
+    const ship = trackedShip();
+    if (!manualCamera && ship && ["docking", "scan"].includes(props.camera)) {
+      const key = `${props.camera}:${ship.id}:${ship.nodeId}:${ship.transit?.laneId || ""}:${ship.action?.kind || ""}:${ship.action?.targetId || ""}:${compact}`;
+      if (key !== closeCameraKey) composeCloseCamera(ship);
+    }
     wake();
   },
 );

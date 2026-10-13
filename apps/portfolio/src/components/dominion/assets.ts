@@ -1234,10 +1234,31 @@ export function createDominionAssets() {
       map,
       transparent: true,
       depthWrite: false,
+      depthTest: false,
     });
     materials.add(mat);
     const sprite = new THREE.Sprite(mat);
     sprite.scale.set(7, 2.1875, 1);
+    sprite.renderOrder = 22;
+    const connectorMaterial = new THREE.LineBasicMaterial({
+      color: "#80b7ad",
+      transparent: true,
+      opacity: 0.55,
+      depthTest: false,
+      depthWrite: false,
+    });
+    materials.add(connectorMaterial);
+    const connector = new THREE.Line(
+      keep(
+        new THREE.BufferGeometry().setAttribute(
+          "position",
+          new THREE.Float32BufferAttribute(new Float32Array(6), 3),
+        ),
+      ),
+      connectorMaterial,
+    );
+    connector.frustumCulled = false;
+    connector.renderOrder = 21;
     let previous = "";
     function update(station: Station) {
       const key = JSON.stringify([
@@ -1253,10 +1274,10 @@ export function createDominionAssets() {
       c.fillRect(0, 0, canvas.width, canvas.height);
       c.fillStyle = "#8fdfd6";
       c.fillRect(0, 0, 5, canvas.height);
-      c.font = '500 27px "Segoe UI", "Microsoft YaHei", sans-serif';
+      c.font = '500 35px "Segoe UI", "Microsoft YaHei", sans-serif';
       c.fillText(`${station.label} · 库存 / 已预留`, 22, 41, 590);
       c.fillStyle = "#e5f3f1";
-      c.font = '500 30px "Segoe UI", "Microsoft YaHei", sans-serif';
+      c.font = '500 42px "Segoe UI", "Microsoft YaHei", sans-serif';
       const resources = [
         ["energy", "能源"],
         ["supplies", "补给"],
@@ -1274,7 +1295,7 @@ export function createDominionAssets() {
       map.needsUpdate = true;
     }
     update(initial);
-    return { sprite, update };
+    return { sprite, connector, update };
   }
   function environment() {
     const group = new THREE.Group();

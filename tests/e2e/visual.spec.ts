@@ -10,7 +10,7 @@ const routes = [
 ] as const;
 
 test.beforeAll(async () => {
-  await mkdir("docs/screenshots/v2", { recursive: true });
+  await mkdir("docs/screenshots/v4/regression", { recursive: true });
   await mkdir("docs/screenshots/v4", { recursive: true });
 });
 for (const width of [360, 390, 768, 1440, 1920]) {
@@ -43,7 +43,7 @@ for (const width of [360, 390, 768, 1440, 1920]) {
         route,
       ).toBe(true);
       await page.screenshot({
-        path: `docs/screenshots/${name === "intelligence" ? "v4" : "v2"}/${name}-${width}.png`,
+        path: `docs/screenshots/v4/${name === "intelligence" ? "" : "regression/"}${name}-${width}.png`,
         fullPage: true,
       });
     }

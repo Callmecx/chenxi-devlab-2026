@@ -58,6 +58,7 @@ import {
 } from "../../../../packages/intelligence/src/dominion/model-adapter";
 import DominionMap from "../components/dominion/DominionMap.vue";
 import DominionBranchMap from "../components/dominion/DominionBranchMap.vue";
+import { createTickClock } from "../components/dominion/tick-clock";
 import "../dominion.css";
 
 type SceneModule = typeof import("../components/dominion/DominionScene.vue");
@@ -262,7 +263,7 @@ let workerTimer: ReturnType<typeof setTimeout> | undefined;
 let timer: ReturnType<typeof setInterval> | undefined;
 let generation = 0;
 let importEpoch = 0;
-let elapsed = 0;
+const tickClock = createTickClock(performance.now());
 let slowWindows = 0;
 let audio: AudioContext | undefined;
 let motionQuery: MediaQueryList | undefined;
@@ -599,7 +600,7 @@ function send(command: Command, automatic = false) {
   if (!automatic) {
     importEpoch++;
     stopComparison();
-    elapsed = 0;
+    tickClock.reset(performance.now());
   }
   try {
     const result = runtime.dispatch(command, crypto.randomUUID());
@@ -753,7 +754,7 @@ function reset() {
   eventPage.value = 0;
   camera.value = "overview";
   cameraRequest.value++;
-  elapsed = 0;
+  tickClock.reset(performance.now());
   notice.value = "已创建新世界会话；旧任务没有被改写。";
 }
 function compare() {
@@ -1011,7 +1012,7 @@ function stopGuide(takeover = true) {
     if (!readonly.value) sync();
   }
   stopComparison();
-  elapsed = 0;
+  tickClock.reset(performance.now());
 }
 function userTakesControl(event: Event) {
   if (!guideActive.value) return;
@@ -1222,7 +1223,7 @@ function hidden() {
     if (!readonly.value) sync();
     notice.value = "已进入后台，仿真安全暂停。返回后可继续。";
   }
-  elapsed = 0;
+  tickClock.reset(performance.now());
   replayPlaying.value = false;
   void audio?.suspend();
 }
@@ -1236,11 +1237,15 @@ onMounted(() => {
   motionQuery.addEventListener("change", motion);
   document.addEventListener("visibilitychange", hidden);
   timer = setInterval(() => {
-    if (document.hidden) return;
+    if (document.hidden) {
+      tickClock.reset(performance.now());
+      return;
+    }
     advanceGuide();
-    elapsed += 50;
-    if (elapsed < (guideActive.value ? 1200 : 800 / speed.value)) return;
-    elapsed = 0;
+    const active = readonly.value
+      ? replayPlaying.value
+      : snapshot.value.status === "running" && snapshot.value.connected;
+    if (!tickClock.advance(performance.now(), guideActive.value ? 1200 : 800 / speed.value, active)) return;
     if (readonly.value) {
       if (replayPlaying.value) historyStep();
     } else if (snapshot.value.status === "running" && snapshot.value.connected)

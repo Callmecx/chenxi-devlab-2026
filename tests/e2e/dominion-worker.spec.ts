@@ -294,9 +294,15 @@ test('DOMINION 真实 WebGL context loss 后二维保留世界，恢复三维并
 test('DOMINION 场景资源加载失败保留可操作二维世界并可重试资源', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'no-preference' });
   let failedRequests = 0;
+  let sceneUnavailable = true;
   await page.route(/\/.*DominionScene[^/]*\.(?:js|vue)(?:\?.*)?$/, async route => {
-    if (failedRequests++ === 0) await route.abort('failed');
-    else await route.continue();
+    // A failed modulepreload may be fetched again by the actual dynamic import.
+    // Keep this specific asset unavailable until the fallback is observed; a
+    // one-request fault could recover before the component loader sees it.
+    if (sceneUnavailable) {
+      failedRequests++;
+      await route.abort('failed');
+    } else await route.continue();
   });
   await page.goto(route);
   await expect(page.getByTestId('dominion-map')).toBeVisible();
@@ -306,6 +312,7 @@ test('DOMINION 场景资源加载失败保留可操作二维世界并可重试�
   await button(page, '单步').click();
   await expect(lab(page)).toHaveAttribute('data-status', 'paused');
   const before = await record(page);
+  sceneUnavailable = false;
   await button(page, '三维').click();
   const canvas = page.locator('canvas[data-dominion-canvas]');
   await expect(canvas).toBeVisible();

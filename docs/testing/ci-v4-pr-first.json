@@ -1,0 +1,1538 @@
+{
+  "source": "Actual Playwright run; sanitized summary. Raw traces and videos remain in ignored local storage; excluded from public CI artifacts.",
+  "generatedAt": "2026-10-13T06:08:42.157Z",
+  "stats": {
+    "startTime": "2026-10-13T05:47:34.494Z",
+    "duration": 1266265.4400000002,
+    "expected": 123,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  },
+  "cases": [
+    {
+      "file": "campaign.spec.ts",
+      "title": "Pulse completes persisted selection → validation → failed mock → retry → receipt → cancellation",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7621,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "campaign.spec.ts",
+      "title": "Pulse recovers from malformed storage, shows an empty state and handles unknown routes",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 606,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "campaign.spec.ts",
+      "title": "Pulse responsive 1920px, useful controls, detail navigation and screenshot",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1723,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "campaign.spec.ts",
+      "title": "Pulse responsive 1440px, useful controls, detail navigation and screenshot",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1637,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "campaign.spec.ts",
+      "title": "Pulse responsive 768px, useful controls, detail navigation and screenshot",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1649,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "campaign.spec.ts",
+      "title": "Pulse responsive 390px, useful controls, detail navigation and screenshot",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1735,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "campaign.spec.ts",
+      "title": "Pulse responsive 360px, useful controls, detail navigation and screenshot",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1719,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "campaign.spec.ts",
+      "title": "Pulse responsive 320px, useful controls, detail navigation and screenshot",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1700,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "commerce.spec.ts",
+      "title": "ShopPilot: filter, SKU inventory, integer totals, failure retry, idempotency and order history",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4595,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "commerce.spec.ts",
+      "title": "ShopPilot responsive catalog and checkout at 1920px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1408,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "commerce.spec.ts",
+      "title": "ShopPilot responsive catalog and checkout at 1440px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1273,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "commerce.spec.ts",
+      "title": "ShopPilot responsive catalog and checkout at 768px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1183,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "commerce.spec.ts",
+      "title": "ShopPilot responsive catalog and checkout at 390px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1081,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "commerce.spec.ts",
+      "title": "ShopPilot responsive catalog and checkout at 360px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1079,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "commerce.spec.ts",
+      "title": "ShopPilot responsive catalog and checkout at 320px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1027,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "content.spec.ts",
+      "title": "回放无未来数据、缺口重算、重复与切换取消 390px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3783,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "content.spec.ts",
+      "title": "企业库存到分次结算，非法动作和幂等重放 390px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4319,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "content.spec.ts",
+      "title": "回放无未来数据、缺口重算、重复与切换取消 1440px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4156,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "content.spec.ts",
+      "title": "企业库存到分次结算，非法动作和幂等重放 1440px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4645,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "content.spec.ts",
+      "title": "工程文章、历史验收边界、准确图片说明与案例跳转",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2631,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-guide.spec.ts",
+      "title": "DOMINION G01 default expedition completes actual relay plus supply without changing fixture",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 13116,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-guide.spec.ts",
+      "title": "DOMINION G02 test-double rejection stale approval and double confirmation never create extra tasks",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1426,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-guide.spec.ts",
+      "title": "DOMINION G03 reduced-motion 2D tour is reachable and user takeover stops commands for three seconds",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 11141,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-guide.spec.ts",
+      "title": "DOMINION G04 full unaccelerated tour gates scan closure repair comparison and actual delivery",
+      "status": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 146671,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-inspection.spec.ts",
+      "title": "DOMINION 真实航道维修保持用户禁行，图层与占用检查不改写暂停世界",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 19380,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-lifecycle.spec.ts",
+      "title": "DOMINION 生命周期：进入离开旗舰10轮释放3D上下文、Worker、RAF和全局监听",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 19455,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-lifecycle.spec.ts",
+      "title": "DOMINION 生命周期：体验舱镜头往返10轮资源有界且不推进世界",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 32623,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-lifecycle.spec.ts",
+      "title": "DOMINION 生命周期：切换场景10轮保留合法新会话且不积累渲染资源",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 16694,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-lifecycle.spec.ts",
+      "title": "DOMINION 生命周期：合法导入回放返回实时10轮无隐写且资源有界",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 15541,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-lifecycle.spec.ts",
+      "title": "DOMINION 生命周期：世界重置10轮清除旧事实并释放每轮Worker",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 15521,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION Worker constructor 同步失败保留源记录，重试获得真实分支与航迹",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1784,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION Worker postMessage 同步失败保留源记录，重试获得真实分支与航迹",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1783,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION 忽略错误 generation 响应，随后接受同一个真实 Worker 的匹配结果",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2245,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION 忽略错误 sourceKey 响应，随后接受同一个真实 Worker 的匹配结果",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2254,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION Worker 拒绝请求内过期worldVersion，保留源世界并可重新实算",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1855,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION reset 后旧 Worker 的迟到结果和错误不污染新世界或终止新比较",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2236,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION scenario 后旧 Worker 的迟到结果和错误不污染新世界或终止新比较",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2117,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION cancel 后旧 Worker 的迟到结果和错误不污染新世界或终止新比较",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2057,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION 真实 WebGL context loss 后二维保留世界，恢复三维并继续单步",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3362,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION 场景资源加载失败保留可操作二维世界并可重试资源",
+      "status": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 10671,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B01 actual supply, inspect, ledger, result and fresh session reset",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5694,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B02/B04 four tasks share six eligible ships; scan repair rescue and samples leave facts",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 19310,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B03 future closure causes real alternate departures; unavailable paths require new attempt",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 12727,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B06 isolated strategies retain paused facts and adoption changes only future policy",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7871,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B07 immutable replay seek and rejected JSON preserve authoritative live facts",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5612,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B08 communication reconnect and keyboard object control preserve one session",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5365,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B08 360px responsive fallback has accessible actions and no page overflow",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 801,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B08 390px responsive fallback has accessible actions and no page overflow",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 787,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B08 768px responsive fallback has accessible actions and no page overflow",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 937,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B08 1440px responsive fallback has accessible actions and no page overflow",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1167,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B08 1920px responsive fallback has accessible actions and no page overflow",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1282,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B05 distinct actual camera modes preserve the exact same paused world",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6362,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "engineering.spec.ts",
+      "title": "真实 API 竞态与订单原请求恢复 390px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3504,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "engineering.spec.ts",
+      "title": "十万行真实 Worker 搜索排序取消和虚拟渲染 390px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2713,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "engineering.spec.ts",
+      "title": "真实 API 竞态与订单原请求恢复 1440px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3240,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "engineering.spec.ts",
+      "title": "十万行真实 Worker 搜索排序取消和虚拟渲染 1440px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2955,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "engineering.spec.ts",
+      "title": "服务不可用不宣称成功，真实服务写入后网络响应丢失可恢复",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2739,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "engineering.spec.ts",
+      "title": "恢复身份丢失时保留原请求，不创建新会话；unknown 禁止重置，明确放弃有界归档",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2875,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "intelligence.spec.ts",
+      "title": "商品流程：真实查询比较、节点参数来源、审批后单次写入、实时时间线",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3077,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "intelligence.spec.ts",
+      "title": "活动流程：指定场次人数、确认一次隔离预约并显示真实剩余名额",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3188,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "intelligence.spec.ts",
+      "title": "商品与活动人工拒绝均保持零写入",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4238,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "intelligence.spec.ts",
+      "title": "预算不足明确失败，修改结构化预算重新规划可恢复",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3492,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "intelligence.spec.ts",
+      "title": "超时失败与解除故障重试；在途取消不会被迟到响应改回运行",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5691,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "intelligence.spec.ts",
+      "title": "不完整结果被拒绝，重新查询后可以生成草稿",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3253,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "intelligence.spec.ts",
+      "title": "仓库旧路径因新障碍失效，真实重规划后完成三货投递",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 19852,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "intelligence.spec.ts",
+      "title": "仓库全封闭明确不可达，打开通道后恢复真实移动",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2827,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "intelligence.spec.ts",
+      "title": "世界目标变化和缺货物在UI中产生新版本与明确失败",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1880,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "intelligence.spec.ts",
+      "title": "保存、JSON导出、载入、单步和seek均投影历史；回放不提供批准或新增写入",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3349,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "intelligence.spec.ts",
+      "title": "3D真实canvas、减弱动效保留流程、可切二维；WebGL context loss自动降级保留任务",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1942,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "intelligence.spec.ts",
+      "title": "390px布局截图：入口、真实任务详情和二维仓库均无横向溢出",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4475,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "intelligence.spec.ts",
+      "title": "1440px布局截图：入口、真实任务详情和二维仓库均无横向溢出",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4630,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "intelligence.spec.ts",
+      "title": "390px场景优先与抽屉配置：改预算、审批写入、折叠后可继续操作",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2589,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "intelligence.spec.ts",
+      "title": "切预设与重置同步清除故障选项；用户输入种子真实进入新世界与导出",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1912,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "intelligence.spec.ts",
+      "title": "导航10次真实卸载与重挂：离开后canvas移除且旧WebGL上下文已释放，每次仅一个新canvas",
+      "status": "unexpected",
+      "results": [
+        {
+          "status": "timedOut",
+          "durationMs": 64022,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "intelligence.spec.ts",
+      "title": "系统减弱动效在reload后生效且保留真实单步执行",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1573,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit-worker.spec.ts",
+      "title": "ORBIT Worker constructor 同步失败保留原世界，重试使用真实 Worker 计算",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 21951,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit-worker.spec.ts",
+      "title": "ORBIT Worker postMessage 同步失败保留原世界，重试使用真实 Worker 计算",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 22403,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit-worker.spec.ts",
+      "title": "ORBIT 已取消 Worker 的迟到 onerror 不得终止新的真实分支计算",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 18689,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 1440: 首屏主按钮可见、无横溢出、3D真实挂载与状态诚实",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6905,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 1920: 首屏主按钮可见、无横溢出、3D真实挂载与状态诚实",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7719,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 390: 首屏主按钮可见、无横溢出、3D真实挂载与状态诚实",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3285,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 360: 首屏主按钮可见、无横溢出、3D真实挂载与状态诚实",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3062,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 正常补给：两载体真实交付、所有事件资源/容量/能量守恒与动作唯一",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 24321,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 暂停/单步只前进一tick；五种镜头和二维切换不改业务身份或物资",
+      "status": "unexpected",
+      "results": [
+        {
+          "status": "failed",
+          "durationMs": 35385,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 关闭在途航道：版本失效、已有载体到下一安全节点、后续不进入关闭边",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 27890,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 全封路真实失败，开放后同run重试恢复且不重复交付",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 25736,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT sealed：明确有限失败，未虚构交付或扣成负库存",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 21379,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT scarce：明确有限失败，未虚构交付或扣成负库存",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 20722,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT low-energy：明确有限失败，未虚构交付或扣成负库存",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 20764,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 预置绕行：tick4故障真实进入事件，自动重规划后送达",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 28464,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 真Worker双分支隔离；采纳只换策略不导入未来动作",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 27279,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 比较期间重置取消旧Worker，不把旧分支应用到新run",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 13850,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 导入有效历史是隔离只读投影，退出后恢复新的实时世界",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 24808,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 分支结果过期后禁用采用，重新计算失败分支也不能伪报成功",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 16386,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 回放随机seek只读；返回实时保持全量事件，损坏记录拒绝导入",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 24619,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 取消释放未装载预留，保留已装载货物与能量；重置生成新run",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 23793,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT reduced-motion二维与键盘选航道可完成相同业务",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6939,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT WebGL上下文丢失自动二维，暂停事实保留后仍可完成",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 14077,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 手机横竖切换保留身份与货物，主要动作触控高度至少44px",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 10970,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 十次挂载卸载释放实际WebGL上下文与canvas，回到新run",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 59450,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 优先级改变真实预留次序；更换目标触发新版本而不改变既有物资",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 32045,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 键盘 Space 与 Enter 都可操作星图对象",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 872,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 减弱动效三维静止时按需绘制，镜头和世界变化后真实更新",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2885,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 世界全景按钮恢复拖动前实际构图，而非只改模式标签",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4353,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 跟随载体按钮恢复拖动前实际构图，而非只改模式标签",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 4633,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "orbit.spec.ts",
+      "title": "ORBIT 慢文件导入不能覆盖reset、新导入、returnLive或卸载后的用户意图",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 30747,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "portfolio navigation, filters, theme and actual contact",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3832,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "dark theme stays usable on small screens and skip navigation keeps route",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 911,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "portfolio responsive 1920px, routes and screenshot",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1252,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "portfolio responsive 1440px, routes and screenshot",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1128,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "portfolio responsive 768px, routes and screenshot",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1000,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "portfolio responsive 390px, routes and screenshot",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 992,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "portfolio responsive 360px, routes and screenshot",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 969,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "portfolio.spec.ts",
+      "title": "portfolio responsive 320px, routes and screenshot",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1014,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "server-flows.spec.ts",
+      "title": "H5 service recommendation, booking, reload ownership, cancel and responsive views",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2031,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "server-flows.spec.ts",
+      "title": "H5 committed response loss survives reload and confirms one original booking",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2992,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "server-flows.spec.ts",
+      "title": "Shop server catalog, coupon, quote, payment failure/success, shipping and receipt",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2794,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "server-flows.spec.ts",
+      "title": "Shop lost create-order response retains original intent after reload without duplicate order",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1461,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "server-flows.spec.ts",
+      "title": "Disconnected service remains explicitly disconnected until local mode is chosen",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 869,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "server-flows.spec.ts",
+      "title": "H5 lost identity cannot replay into a new session; explicit abandonment archives unknown intent",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2912,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "server-flows.spec.ts",
+      "title": "Shop missing token blocks recovery and only archives after explicit confirmation",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1326,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "visual.spec.ts",
+      "title": "Whole-site initial views fit 360px without script errors",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5250,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "visual.spec.ts",
+      "title": "Whole-site initial views fit 390px without script errors",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5267,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "visual.spec.ts",
+      "title": "Whole-site initial views fit 768px without script errors",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 10162,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "visual.spec.ts",
+      "title": "Whole-site initial views fit 1440px without script errors",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 12294,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "visual.spec.ts",
+      "title": "Whole-site initial views fit 1920px without script errors",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 13363,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "visual.spec.ts",
+      "title": "unknown portfolio routes keep the recovery page and navigation",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 326,
+          "retry": 0
+        }
+      ]
+    }
+  ]
+}

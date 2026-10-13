@@ -292,23 +292,27 @@ test("DOMINION G04 full unaccelerated tour gates scan closure repair comparison 
   const observations: TourObservation[] = [];
   let branches: BranchObservation[] = [];
   const started = Date.now();
+  const observe = async () => {
+    const state = await lab(page).evaluate((element) => ({
+      guide: element.dataset.guide ?? "",
+      tick: Number(element.dataset.tick),
+      worldVersion: Number(element.dataset.worldVersion),
+      completed: Number(element.dataset.completed),
+      status: element.dataset.status ?? "",
+      sessionId: element.dataset.sessionId ?? "",
+    }));
+    if (observations.at(-1)?.guide !== state.guide)
+      observations.push({ elapsedMs: Date.now() - started, ...state });
+    expect(
+      ["stopped", "taken-over", "idle"],
+      "Tour must report actual failure, never silently restart",
+    ).not.toContain(state.guide);
+    return state;
+  };
   await button(page, "远征导览 · 约100秒").click();
   try {
     while (Date.now() - started < 135000) {
-      const state = await lab(page).evaluate((element) => ({
-        guide: element.dataset.guide ?? "",
-        tick: Number(element.dataset.tick),
-        worldVersion: Number(element.dataset.worldVersion),
-        completed: Number(element.dataset.completed),
-        status: element.dataset.status ?? "",
-        sessionId: element.dataset.sessionId ?? "",
-      }));
-      if (observations.at(-1)?.guide !== state.guide)
-        observations.push({ elapsedMs: Date.now() - started, ...state });
-      expect(
-        ["stopped", "taken-over", "idle"],
-        "Tour must report actual failure, never silently restart",
-      ).not.toContain(state.guide);
+      const state = await observe();
       if (state.guide === "comparison-hold" && !branches.length) {
         expect(state.status).toBe("paused");
         expect(state.completed).toBe(1); // Branch predictions must not become the main-world deliveries.
@@ -332,10 +336,14 @@ test("DOMINION G04 full unaccelerated tour gates scan closure repair comparison 
       // Observe the real clock without clicking, changing speed, or faking timers.
       await page.waitForTimeout(250);
     }
+    await expect(lab(page)).toHaveAttribute("data-guide", "completed");
+    // The final DOM assertion can resolve after the sampling loop's deadline.
+    // Capture that real terminal frame, and include its wait in the time bound.
+    const terminal = await observe();
+    expect(terminal.guide).toBe("completed");
     const elapsedMs = Date.now() - started;
     expect(elapsedMs).toBeGreaterThanOrEqual(90000);
     expect(elapsedMs).toBeLessThan(140000);
-    await expect(lab(page)).toHaveAttribute("data-guide", "completed");
     await expect(page.locator(".dom-hero")).toHaveCount(0);
     await expect(
       page.getByRole("heading", { name: "接力任务已完成", exact: true }),

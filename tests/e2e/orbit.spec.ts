@@ -219,16 +219,11 @@ test("ORBIT 暂停/单步只前进一tick；五种镜头和二维切换不改业
   page,
 }) => {
   await open(page);
+  await expect(page.locator("canvas[data-orbit-canvas]")).toBeVisible();
   await single(page);
   await single(page);
   const before = last(await record(page));
-  for (const camera of [
-    "世界全景",
-    "载体近景",
-    "跟随载体",
-    "工程透视",
-    "切换任务星图",
-  ]) {
+  for (const camera of ["世界全景", "载体近景", "跟随载体", "工程透视"]) {
     await button(page, camera).click();
     await closePanel(page);
     await expect(lab(page)).toHaveAttribute("data-run-id", before.runId);
@@ -241,7 +236,20 @@ test("ORBIT 暂停/单步只前进一tick；五种镜头和二维切换不改业
       String(before.worldVersion),
     );
   }
+  // Software rendering may already have activated the real adaptive map
+  // fallback during the preceding 3D work. Request the target view, instead
+  // of blindly toggling an already-visible map back to a fresh 3D context.
+  if (!(await page.getByTestId("orbit-map").isVisible()))
+    await button(page, "切换任务星图").click();
   await expect(page.getByTestId("orbit-map")).toBeVisible();
+  await expect(button(page, "返回三维场景")).toBeVisible();
+  await expect(button(page, "切换任务星图")).toHaveCount(0);
+  await expect(lab(page)).toHaveAttribute("data-run-id", before.runId);
+  await expect(lab(page)).toHaveAttribute("data-tick", String(before.simTick));
+  await expect(lab(page)).toHaveAttribute(
+    "data-world-version",
+    String(before.worldVersion),
+  );
   expect(physical(last(await record(page)))).toEqual(physical(before));
   await button(page, "继续执行").click();
   await expect
@@ -556,6 +564,8 @@ test("ORBIT reduced-motion二维与键盘选航道可完成相同业务", async 
   await open(page);
   await expect(page.getByTestId("orbit-map")).toBeVisible();
   await expect(page.locator("canvas[data-orbit-canvas]")).toHaveCount(0);
+  await expect(button(page, "返回三维场景")).toBeVisible();
+  await expect(button(page, "切换任务星图")).toHaveCount(0);
   const lane = page.getByRole("button", {
     name: "航道 relay-target 畅通",
     exact: true,
@@ -746,7 +756,7 @@ test("ORBIT 减弱动效三维静止时按需绘制，镜头和世界变化后�
 }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await open(page);
-  await button(page, "切换任务星图").click();
+  await button(page, "返回三维场景").click();
   const canvas = page.locator("canvas[data-orbit-canvas]");
   await expect(canvas).toHaveAttribute("data-rendering", "active");
   await expect
@@ -790,7 +800,7 @@ for (const preset of ["世界全景", "跟随载体"]) {
   }, info) => {
     await page.emulateMedia({ reducedMotion: "reduce" });
     await open(page);
-    await button(page, "切换任务星图").click();
+    await button(page, "返回三维场景").click();
     const canvas = page.locator("canvas[data-orbit-canvas]");
     await expect(canvas).toHaveAttribute("data-rendering", "active");
     const original = await lab(page).getAttribute("data-run-id");

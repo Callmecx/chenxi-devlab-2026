@@ -20,14 +20,19 @@ import type {
   Ship,
 } from "../../../../../packages/intelligence/src/dominion/types";
 
-const props = defineProps<{
-  snapshot: DominionSnapshot;
-  selected: Selection | null;
-  camera: CameraMode;
-  cameraRequest: number;
-  quality: Quality;
-  reduced: boolean;
-}>();
+const props = withDefaults(
+  defineProps<{
+    snapshot: DominionSnapshot;
+    selected: Selection | null;
+    camera: CameraMode;
+    cameraRequest: number;
+    quality: Quality;
+    reduced: boolean;
+    resourcesVisible?: boolean;
+    lanesVisible?: boolean;
+  }>(),
+  { resourcesVisible: false, lanesVisible: true },
+);
 const emit = defineEmits<{
   select: [Selection];
   "camera-interrupt": [];
@@ -78,6 +83,10 @@ const lanes = new Map<
   }
 >();
 const labels = new Map<string, THREE.Sprite>();
+const resourceLabels = new Map<
+  string,
+  ReturnType<ReturnType<typeof createDominionAssets>["resourceLabel"]>
+>();
 const effects = new Map<string, { beam: THREE.Mesh; ring: THREE.Mesh }>();
 const pickable: THREE.Object3D[] = [];
 const frameSamples: number[] = [];
@@ -324,6 +333,7 @@ function clearWorld() {
   ships.clear();
   lanes.clear();
   labels.clear();
+  resourceLabels.clear();
   effects.clear();
   pickable.length = 0;
 }
@@ -498,6 +508,7 @@ function updateFacts() {
   for (const lane of props.snapshot.lanes) {
     const view = lanes.get(lane.id);
     if (!view) continue;
+    view.group.visible = props.lanesVisible;
     const selected =
       (props.selected?.kind === "lane" && props.selected.id === lane.id) ||
       (hover?.kind === "lane" && hover.id === lane.id);
@@ -545,15 +556,45 @@ function updateFacts() {
     const label = labels.get(station.id);
     if (label)
       label.visible =
+        !props.resourcesVisible &&
         props.camera !== "cockpit" &&
         (props.selected?.id === station.id || hover?.id === station.id);
   }
+  updateResourceLayer();
   updateSelection();
+}
+function updateResourceLayer() {
+  if (!assets || !world) return;
+  const region = props.camera === "planet" ? selectedPlanet()?.id : undefined;
+  for (const station of props.snapshot.stations) {
+    const visible =
+      props.resourcesVisible && (!region || station.regionId === region);
+    let label = resourceLabels.get(station.id);
+    // The default scene creates no resource texture or sprite. Within one
+    // session toggling reuses these; clearWorld disposes them with all assets.
+    if (visible && !label) {
+      label = assets.resourceLabel(station);
+      label.sprite.position.set(
+        station.position[0],
+        station.position[1] + (station.id === "port" ? 10.8 : 6),
+        station.position[2],
+      );
+      resourceLabels.set(station.id, label);
+      world.add(label.sprite);
+    }
+    if (label) {
+      label.sprite.visible = visible;
+      if (visible) label.update(station);
+    }
+  }
 }
 function updateSelection() {
   if (!selectionRing) return;
   const selected = hover || props.selected;
-  selectionRing.visible = !!selected && props.camera !== "cockpit";
+  selectionRing.visible =
+    !!selected &&
+    props.camera !== "cockpit" &&
+    (selected.kind !== "lane" || props.lanesVisible);
   if (selected) {
     selectionPoint(selected, selectionRing.position);
     selectionRing.position.y -= 0.9;
@@ -614,7 +655,10 @@ function pick(event: PointerEvent): Selection | null {
     (-(event.clientY - rect.top) / rect.height) * 2 + 1,
   );
   raycaster.setFromCamera(pointer, sceneCamera);
-  for (const hit of raycaster.intersectObjects(pickable, true)) {
+  for (const hit of raycaster.intersectObjects(
+    pickable.filter((object) => object.visible),
+    true,
+  )) {
     let object: THREE.Object3D | null = hit.object;
     while (object) {
       if (object.userData.selection)
@@ -889,6 +933,8 @@ function animate(now: number) {
   renderer.domElement.dataset.tick = String(props.snapshot.tick);
   renderer.domElement.dataset.shipCount = String(ships.size);
   renderer.domElement.dataset.bridge = bridge?.visible ? "visible" : "hidden";
+  renderer.domElement.dataset.layerResources = String(props.resourcesVisible);
+  renderer.domElement.dataset.layerLanes = String(props.lanesVisible);
   if (modeChanged || now - lastMetric >= 3000) {
     const sorted = [...frameSamples].sort((x, y) => x - y);
     const metrics: SceneMetrics = {
@@ -998,6 +1044,13 @@ watch(
   },
 );
 watch(() => props.quality, resize);
+watch(
+  () => [props.resourcesVisible, props.lanesVisible],
+  () => {
+    updateFacts();
+    wake();
+  },
+);
 onMounted(() => {
   if (!host.value) return;
   try {

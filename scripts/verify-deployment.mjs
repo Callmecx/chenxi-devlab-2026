@@ -19,7 +19,23 @@ page.on("response", (response) => {
   if (response.status() >= 400 && response.url().startsWith(base))
     failures.push({ url: response.url(), status: response.status() });
 });
+async function readBuildMetadata() {
+  const response = await page.request.get(new URL("build-meta.json", base).href, {
+    headers: { "Cache-Control": "no-cache" },
+  });
+  if (!response.ok()) throw new Error("Missing deployment build metadata");
+  const metadata = await response.json();
+  if (
+    metadata.basePath !== new URL(base).pathname ||
+    !/^[a-f0-9]{40}$/.test(metadata.sourceRevision) ||
+    metadata.sourceTreeDirty !== false
+  ) throw new Error("Deployment base/source revision is invalid or source tree is dirty");
+  if (process.env.EXPECTED_REVISION && metadata.sourceRevision !== process.env.EXPECTED_REVISION)
+    throw new Error(`Unexpected deployed revision: ${metadata.sourceRevision}`);
+  return metadata;
+}
 try {
+  const buildBefore = await readBuildMetadata();
   for (const width of [390, 1440]) {
     await page.setViewportSize({ width, height: width === 390 ? 844 : 1000 });
     for (const [path, expected] of [
@@ -156,6 +172,11 @@ try {
     "evidence/TEST_REPORT.md",
     "evidence/enterpriseflow-dashboard.png",
     "evidence/intelligence-lab/evaluation.json",
+    "evidence/intelligence-lab-v4/CONTRIBUTION_MAP.md",
+    "evidence/intelligence-lab-v4/TEST_REPORT.md",
+    "evidence/intelligence-lab-v4/PERFORMANCE.md",
+    "evidence/intelligence-lab-v4/DEMO_GUIDE.md",
+    "evidence/intelligence-lab-v4/MODE_AND_RELEASE_STATUS.md",
     "screenshots/shop-checkout-390.png",
   ]) {
     const response = await page.request.get(new URL(asset, base).href);
@@ -165,22 +186,9 @@ try {
   }
   if (errors.length || failures.length)
     throw new Error(JSON.stringify({ errors, failures }));
-  const metadataResponse = await page.request.get(
-    new URL("build-meta.json", base).href,
-  );
-  if (!metadataResponse.ok())
-    throw new Error("Missing deployment build metadata");
-  const build = await metadataResponse.json();
-  if (
-    build.basePath !== new URL(base).pathname ||
-    !/^[a-f0-9]{40}$/.test(build.sourceRevision)
-  )
-    throw new Error("Deployment base or source revision is invalid");
-  if (
-    process.env.EXPECTED_REVISION &&
-    build.sourceRevision !== process.env.EXPECTED_REVISION
-  )
-    throw new Error(`Unexpected deployed revision: ${build.sourceRevision}`);
+  const build = await readBuildMetadata();
+  if (JSON.stringify(build) !== JSON.stringify(buildBefore))
+    throw new Error("Deployment changed during browser verification; rerun against one revision");
   await mkdir("docs/testing", { recursive: true });
   const report = {
     checkedAt: new Date().toISOString(),

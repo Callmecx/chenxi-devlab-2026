@@ -201,19 +201,23 @@ test("DOMINION G03 reduced-motion 2D tour is reachable and user takeover stops c
     await page.setViewportSize({ width, height: width === 360 ? 800 : 844 });
     const targets = await page
       .locator(
-        ".dom-nav button, .dom-minor-controls button, .dom-minor-controls select",
+        ".dom-nav button:visible, .dom-minor-controls button:visible, .dom-minor-controls select:visible",
       )
       .evaluateAll((elements) =>
         elements.map((element) => {
           const rect = element.getBoundingClientRect();
           return {
-            label: element.getAttribute("aria-label") ?? element.textContent,
+            label: (element.getAttribute("aria-label") ?? element.textContent ?? "").trim(),
             width: rect.width,
             height: rect.height,
           };
         }),
       );
-    expect(targets.length).toBeGreaterThan(0);
+    // The desktop library menu is deliberately hidden at these widths. Require
+    // every actual mobile control, then measure only rendered touch targets.
+    expect(targets.map((target) => target.label).sort()).toEqual(
+      ["开启声音", "世界设置", "单步", "重置世界", "运行速度"].sort(),
+    );
     for (const target of targets) {
       expect(
         target.width,

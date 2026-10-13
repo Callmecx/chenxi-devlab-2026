@@ -27,6 +27,22 @@ function until(
 }
 
 describe("V4 authoritative fleet runtime", () => {
+  it("rejects unsupported physical damage and repairs supported facilities without overriding permission", () => {
+    const r = createDominionRuntime({ scenario: "expedition" });
+    const before = r.snapshot;
+    const denied = r.dispatch({ type: "damage-lane", laneId: "port-forge" });
+    expect(denied.accepted).toBe(false);
+    expect(denied.message).toContain("仅服务中继");
+    expect(r.snapshot.lanes).toEqual(before.lanes);
+    expect(r.snapshot.worldVersion).toBe(before.worldVersion);
+    expect(r.dispatch({ type: "damage-lane", laneId: "forge-relay" }).accepted).toBe(true);
+    r.dispatch({ type: "set-lane", laneId: "forge-relay", open: false });
+    expect(r.snapshot.lanes.find(l => l.id === "forge-relay")!.damaged).toBe(true);
+    const end = run(r);
+    expect(end.missions.every(m => m.status === "completed")).toBe(true);
+    expect(end.lanes.find(l => l.id === "forge-relay")).toMatchObject({ damaged: false, open: false });
+    expect(end.ledger.consumed.parts).toBe(2);
+  });
   it.each(["supply", "expedition", "four-missions"] as Scenario[])(
     "finishes %s by world facts and conserves resources throughout",
     (scenario) => {

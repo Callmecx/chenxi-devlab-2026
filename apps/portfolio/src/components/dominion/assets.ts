@@ -1220,6 +1220,62 @@ export function createDominionAssets() {
     sprite.scale.set(4.1, 0.64, 1);
     return sprite;
   }
+  /** Lazily allocated read-only ledger. Updates only when its station data changes. */
+  function resourceLabel(initial: Station) {
+    const canvas = document.createElement("canvas");
+    canvas.width = 640;
+    canvas.height = 200;
+    const context = canvas.getContext("2d");
+    if (!context) throw new Error("Resource surface unavailable");
+    const map = new THREE.CanvasTexture(canvas);
+    map.colorSpace = THREE.SRGBColorSpace;
+    textures.add(map);
+    const mat = new THREE.SpriteMaterial({
+      map,
+      transparent: true,
+      depthWrite: false,
+    });
+    materials.add(mat);
+    const sprite = new THREE.Sprite(mat);
+    sprite.scale.set(7, 2.1875, 1);
+    let previous = "";
+    function update(station: Station) {
+      const key = JSON.stringify([
+        station.label,
+        station.stock,
+        station.reserved,
+      ]);
+      if (previous === key) return;
+      previous = key;
+      const c = context!;
+      c.clearRect(0, 0, canvas.width, canvas.height);
+      c.fillStyle = "#07121ff2";
+      c.fillRect(0, 0, canvas.width, canvas.height);
+      c.fillStyle = "#8fdfd6";
+      c.fillRect(0, 0, 5, canvas.height);
+      c.font = '500 27px "Segoe UI", "Microsoft YaHei", sans-serif';
+      c.fillText(`${station.label} · 库存 / 已预留`, 22, 41, 590);
+      c.fillStyle = "#e5f3f1";
+      c.font = '500 30px "Segoe UI", "Microsoft YaHei", sans-serif';
+      const resources = [
+        ["energy", "能源"],
+        ["supplies", "补给"],
+        ["parts", "维修件"],
+        ["samples", "样本"],
+      ] as const;
+      resources.forEach(([resource, name], index) => {
+        c.fillText(
+          `${name} ${station.stock[resource]} / ${station.reserved[resource]}`,
+          22 + (index % 2) * 307,
+          103 + Math.floor(index / 2) * 60,
+          290,
+        );
+      });
+      map.needsUpdate = true;
+    }
+    update(initial);
+    return { sprite, update };
+  }
   function environment() {
     const group = new THREE.Group();
     const planets: PlanetModel[] = [];
@@ -1382,6 +1438,7 @@ export function createDominionAssets() {
     bridge,
     updateBridge,
     label,
+    resourceLabel,
     environment,
     builder,
     keep,

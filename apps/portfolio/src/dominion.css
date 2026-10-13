@@ -244,6 +244,72 @@
   color: #fff;
   background: #203344;
 }
+.dom-world-layers {
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  max-width: calc(100% - 32px);
+  padding: 3px 7px;
+  border: 1px solid var(--dom-line);
+  border-radius: 7px;
+  background: #0b1625ed;
+  color: #b9d3dd;
+  font-size: 11px;
+}
+.dom-world-layers > span {
+  padding: 0 6px;
+}
+.dom-world-layers button {
+  min-width: 48px;
+  min-height: 44px;
+  border-radius: 4px;
+  color: #b9d3dd;
+}
+.dom-world-layers button[aria-pressed="true"] {
+  background: #203c46;
+  color: #d0fff0;
+}
+.dom-world-layers small {
+  padding: 0 6px;
+  font-size: 10px;
+}
+.dom-commitments {
+  margin: 18px 0;
+  padding-top: 4px;
+  border-top: 1px solid var(--dom-line);
+}
+.dom-commitments ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+.dom-commitments li {
+  display: grid;
+  gap: 5px;
+  padding: 9px 10px;
+  margin-bottom: 6px;
+  background: #0b1a2a;
+  border-left: 2px solid #47796e;
+  overflow-wrap: anywhere;
+}
+.dom-commitments li b {
+  font-size: 12px;
+  color: #d0e9e5;
+}
+.dom-commitments li span {
+  font-size: 11px;
+  line-height: 1.7;
+  color: #a9c3ce;
+}
+.dom-commitments summary {
+  font-size: 12px;
+  line-height: 1.8;
+  cursor: pointer;
+}
 .dom-live-ribbon {
   position: absolute;
   bottom: 0;
@@ -1082,6 +1148,16 @@
   fill: #f4ba87;
   font-size: 12px;
 }
+.dom-map-resources rect {
+  fill: #091f2a;
+  stroke: #47796e;
+  stroke-width: 1;
+}
+.dom-map .dom-map-resources text {
+  font-size: 14px;
+  fill: #d0e9e5;
+  stroke-width: 1;
+}
 .dom-map .dom-map-meta {
   font:
     10px ui-monospace,
@@ -1282,6 +1358,18 @@
     min-height: 44px;
     padding: 0 4px;
     font-size: 10px;
+  }
+  .dom-world-layers {
+    top: 76px;
+    right: 16px;
+  }
+  .dom-world-layers > span,
+  .dom-world-layers small {
+    display: none;
+  }
+  .dom-commitments summary {
+    padding: 8px 0;
+    line-height: 1.8 !important;
   }
   .dom-stage-coordinate {
     display: none;

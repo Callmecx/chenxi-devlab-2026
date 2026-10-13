@@ -45,6 +45,7 @@ jobs:
         run: node scripts/check-built-path.mjs
         env:
           BASE_PATH: /${{ github.event.repository.name }}/
+          EXPECTED_REVISION: ${{ github.sha }}
       - run: npm run security:scan -- --report docs/testing/security-scan.json
       - uses: actions/upload-artifact@v4
         if: always()

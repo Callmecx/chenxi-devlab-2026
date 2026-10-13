@@ -2,6 +2,7 @@ import { z } from "zod";
 import {
   createFixture,
   createMission,
+  canRepairLane,
   PLANNER_VERSION,
   RESOURCES,
   resources,
@@ -909,6 +910,8 @@ export function createDominionRuntime(options: RuntimeOptions = {}) {
     if (c.type === "set-lane" || c.type === "damage-lane") {
       const lane = state.lanes.find((l) => l.id === c.laneId);
       if (!lane) return reject("航道不存在。");
+      if (c.type === "damage-lane" && !canRepairLane(lane))
+        return reject("当前维修链仅服务中继关联设施；其他航道可通过通行权限演示关闭与恢复。");
       if (c.type === "set-lane") lane.open = c.open;
       else lane.damaged = true;
       invalidate(

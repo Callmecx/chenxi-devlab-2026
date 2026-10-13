@@ -31,6 +31,7 @@ import {
 } from "../../../../packages/intelligence/src/dominion";
 import {
   RESOURCE_LABELS,
+  canRepairLane,
   RESOURCES,
   SCENARIOS,
   STRATEGIES,
@@ -219,6 +220,15 @@ const selected = ref<Selection | null>(null);
 const selectedMission = ref(snapshot.value.missions[0]?.id ?? "");
 const camera = ref<CameraMode>("overview");
 const cameraRequest = ref(0);
+const resourceLayer = ref(false);
+const laneLayer = ref(true);
+const observingLayers = computed(
+  () => camera.value === "planet" || workspace.value === "map",
+);
+const showResources = computed(
+  () => observingLayers.value && resourceLayer.value,
+);
+const showLanes = computed(() => !observingLayers.value || laneLayer.value);
 const initialReducedMotion =
   typeof window !== "undefined" &&
   typeof window.matchMedia === "function" &&
@@ -371,6 +381,113 @@ const lane = computed(() =>
     ? snapshot.value.lanes.find((s) => s.id === selected.value?.id)
     : undefined,
 );
+// The same predicates as runtime.enter()/occupied(): a transit commits exactly
+// its current lane and its next safe berth. Future route IDs are intent only.
+const stationDocked = computed(() =>
+  station.value
+    ? snapshot.value.ships.filter(
+        (s) => !s.transit && s.nodeId === station.value!.id,
+      )
+    : [],
+);
+const stationInbound = computed(() =>
+  station.value
+    ? snapshot.value.ships.filter((s) => s.transit?.to === station.value!.id)
+    : [],
+);
+const stationReserved = computed(() =>
+  station.value
+    ? snapshot.value.ships.filter(
+        (s) =>
+          s.sourceId === station.value!.id &&
+          RESOURCES.some((r) => s.reserved[r] > 0),
+      )
+    : [],
+);
+const stationFree = computed(() =>
+  station.value
+    ? Math.max(
+        0,
+        station.value.dockCapacity -
+          station.value.blockedBerths -
+          stationDocked.value.length -
+          stationInbound.value.length,
+      )
+    : 0,
+);
+function routeVisits(ship: (typeof snapshot.value.ships)[number], id: string) {
+  let cursor = ship.transit?.to || ship.nodeId;
+  for (const laneId of ship.route) {
+    const segment = snapshot.value.lanes.find((item) => item.id === laneId);
+    if (!segment) return false;
+    const next =
+      segment.from === cursor
+        ? segment.to
+        : segment.to === cursor
+          ? segment.from
+          : null;
+    if (!next) return false;
+    if (next === id) return true;
+    cursor = next;
+  }
+  return false;
+}
+const stationPlanned = computed(() =>
+  station.value
+    ? snapshot.value.ships.filter(
+        (s) =>
+          !stationDocked.value.includes(s) &&
+          !stationInbound.value.includes(s) &&
+          routeVisits(s, station.value!.id),
+      )
+    : [],
+);
+const laneTransit = computed(() =>
+  lane.value
+    ? snapshot.value.ships.filter((s) => s.transit?.laneId === lane.value!.id)
+    : [],
+);
+const lanePlanned = computed(() =>
+  lane.value
+    ? snapshot.value.ships.filter(
+        (s) =>
+          s.route.includes(lane.value!.id) &&
+          s.transit?.laneId !== lane.value!.id,
+      )
+    : [],
+);
+const laneFree = computed(() =>
+  lane.value ? Math.max(0, lane.value.capacity - laneTransit.value.length) : 0,
+);
+const relatedMissions = computed(() => {
+  const participants = station.value
+    ? [
+        ...stationDocked.value,
+        ...stationInbound.value,
+        ...stationReserved.value,
+        ...stationPlanned.value,
+      ]
+    : [...laneTransit.value, ...lanePlanned.value];
+  return snapshot.value.missions.filter(
+    (m) =>
+      participants.some((s) => s.missionId === m.id) ||
+      (!!station.value &&
+        m.steps.some((step) => {
+          const target =
+            step.kind === "rescue"
+              ? snapshot.value.ships.find((s) => s.id === step.targetId)?.nodeId
+              : step.targetId;
+          return (
+            step.sourceId === station.value!.id || target === station.value!.id
+          );
+        })),
+  );
+});
+function missionForShip(id: string | null) {
+  return (
+    snapshot.value.missions.find((m) => m.id === id)?.label || "未分配任务"
+  );
+}
 const visibleEvents = computed(() =>
   readonly.value && replay.value
     ? replay.value.recording.events.slice(
@@ -1157,6 +1274,8 @@ onBeforeUnmount(() => {
     :data-view="workspace"
     :data-guide="guide"
     :data-guide-seconds="guideSeconds"
+    :data-layer-resources="showResources"
+    :data-layer-lanes="showLanes"
     @pointerdown.capture="userTakesControl"
     @click.capture="userTakesControl"
     @input.capture="userTakesControl"
@@ -1205,6 +1324,8 @@ onBeforeUnmount(() => {
           :camera-request="cameraRequest"
           :quality="quality"
           :reduced="reduced"
+          :resources-visible="showResources"
+          :lanes-visible="showLanes"
           @select="choose"
           @camera-interrupt="notice = '镜头已交由你控制，任务保持原有状态。'"
           @context-lost="contextLost"
@@ -1214,8 +1335,33 @@ onBeforeUnmount(() => {
           v-else
           :snapshot="snapshot"
           :selected="selected"
+          :resources-visible="showResources"
+          :lanes-visible="showLanes"
           @select="choose"
         />
+      </div>
+      <div
+        v-if="observingLayers"
+        class="dom-world-layers"
+        role="group"
+        aria-label="世界观察图层"
+      >
+        <span>观察图层</span>
+        <button
+          aria-label="资源图层"
+          :aria-pressed="resourceLayer"
+          @click="resourceLayer = !resourceLayer"
+        >
+          资源
+        </button>
+        <button
+          aria-label="航道图层"
+          :aria-pressed="laneLayer"
+          @click="laneLayer = !laneLayer"
+        >
+          航道
+        </button>
+        <small v-if="resourceLayer">库存 / 已预留 · 同一世界</small>
       </div>
       <header
         v-if="
@@ -2047,6 +2193,78 @@ onBeforeUnmount(() => {
               泊位容量 {{ station.dockCapacity }} · 注入占用
               {{ station.blockedBerths }}
             </p>
+            <section
+              class="dom-commitments"
+              data-testid="station-commitments"
+              :data-docked="stationDocked.length"
+              :data-inbound="stationInbound.length"
+              :data-blocked="station.blockedBerths"
+              :data-free="stationFree"
+            >
+              <h3>泊位与已承诺预约</h3>
+              <p>
+                停靠 {{ stationDocked.length }} · 在途入站
+                {{ stationInbound.length }} · 可接收新预约 {{ stationFree }}
+              </p>
+              <ul>
+                <li
+                  v-for="s in stationDocked"
+                  :key="`dock-${s.id}`"
+                  :data-ship-id="s.id"
+                  data-commitment="docked"
+                >
+                  <b>{{ s.label }} · 已停靠</b
+                  ><span
+                    >{{ shipStatus[s.status] }} ·
+                    {{ missionForShip(s.missionId) }}</span
+                  >
+                </li>
+                <li
+                  v-for="s in stationInbound"
+                  :key="`inbound-${s.id}`"
+                  :data-ship-id="s.id"
+                  data-commitment="inbound"
+                >
+                  <b>{{ s.label }} · 下一泊位已预约</b
+                  ><span
+                    >{{ stationName(s.transit!.from) }} → {{ station.label }} ·
+                    {{ s.transit!.elapsed }}/{{ s.transit!.duration }} tick ·
+                    {{ missionForShip(s.missionId) }}</span
+                  >
+                </li>
+              </ul>
+              <p v-if="!stationDocked.length && !stationInbound.length">
+                没有停靠舰或已出发的入站预约。
+              </p>
+              <details v-if="stationReserved.length || stationPlanned.length">
+                <summary>资源预留与后续路线意图</summary>
+                <ul>
+                  <li
+                    v-for="s in stationReserved"
+                    :key="`resource-${s.id}`"
+                    :data-ship-id="s.id"
+                    data-commitment="resource"
+                  >
+                    <b>{{ s.label }} · 资源已预留</b
+                    ><span>{{ amount(s.reserved) }}</span>
+                  </li>
+                  <li
+                    v-for="s in stationPlanned"
+                    :key="`plan-${s.id}`"
+                    :data-ship-id="s.id"
+                    data-commitment="planned"
+                  >
+                    <b>{{ s.label }} · 后续计划经过</b
+                    ><span
+                      >尚未预约此泊位 · {{ missionForShip(s.missionId) }}</span
+                    >
+                  </li>
+                </ul>
+              </details>
+              <p class="dom-fine">
+                泊位计数只包含实际停靠、当前在途目的地和注入占用。未来路线与资源预留不额外占用泊位。
+              </p>
+            </section>
             <button
               class="dom-button secondary"
               :disabled="!canCommand"
@@ -2086,6 +2304,58 @@ onBeforeUnmount(() => {
             <p>
               禁行阻止新进入；已在途舰安全到下一节点。维修不会解除用户禁行。
             </p>
+            <section
+              class="dom-commitments"
+              data-testid="lane-commitments"
+              :data-transit="laneTransit.length"
+              :data-planned="lanePlanned.length"
+              :data-free="laneFree"
+            >
+              <h3>当前航道占用</h3>
+              <p>
+                已承诺在途 {{ laneTransit.length }}/{{ lane.capacity }} ·
+                容量余量 {{ laneFree }}
+              </p>
+              <ul>
+                <li
+                  v-for="s in laneTransit"
+                  :key="s.id"
+                  :data-ship-id="s.id"
+                  data-commitment="transit"
+                >
+                  <b>{{ s.label }} · 当前段已预约</b
+                  ><span
+                    >{{ stationName(s.transit!.from) }} →
+                    {{ stationName(s.transit!.to) }} ·
+                    {{ s.transit!.elapsed }}/{{ s.transit!.duration }} tick ·
+                    {{ missionForShip(s.missionId) }}</span
+                  >
+                </li>
+              </ul>
+              <p v-if="!laneTransit.length">当前没有已进入此段的舰船。</p>
+              <details v-if="lanePlanned.length">
+                <summary>
+                  后续路线意图 {{ lanePlanned.length }} 艘 · 尚未占用
+                </summary>
+                <ul>
+                  <li
+                    v-for="s in lanePlanned"
+                    :key="s.id"
+                    :data-ship-id="s.id"
+                    data-commitment="planned"
+                  >
+                    <b>{{ s.label }}</b
+                    ><span
+                      >{{ missionForShip(s.missionId) }} ·
+                      进入前仍需许可、设施、能量与下一泊位校验</span
+                    >
+                  </li>
+                </ul>
+              </details>
+              <p class="dom-fine">
+                只统计已经驶入当前航段的舰船。后续计划不会提前预约整条路线；容量有余量也不代表当前允许通行。
+              </p>
+            </section>
             <div class="dom-panel-actions">
               <button
                 class="dom-button"
@@ -2097,12 +2367,39 @@ onBeforeUnmount(() => {
                 {{ lane.open ? "关闭这条航道" : "重新开放航道" }}</button
               ><button
                 class="dom-button secondary"
+                v-if="canRepairLane(lane)"
                 :disabled="!canCommand || lane.damaged"
                 @click="send({ type: 'damage-lane', laneId: lane.id })"
               >
                 注入设施损坏
               </button>
             </div>
+            <p v-if="!canRepairLane(lane)">
+              此航道可关闭与重新开放；物理损坏演示限于有维修任务的中继关联设施。
+            </p>
+          </section>
+          <section
+            v-if="station || lane"
+            class="dom-commitments"
+            data-testid="object-related-missions"
+          >
+            <h3>关联任务</h3>
+            <ul>
+              <li
+                v-for="m in relatedMissions"
+                :key="m.id"
+                :data-mission-id="m.id"
+              >
+                <b>{{ m.label }}</b
+                ><span
+                  >{{ missionStatus[m.status] }} · 尝试 #{{ m.attempt }}</span
+                >
+              </li>
+            </ul>
+            <p v-if="!relatedMissions.length">当前没有关联的任务安排。</p>
+            <p class="dom-fine">
+              按此站的任务来源/目标，或当前占用、资源预留、后续路线对应舰船关联；关联本身不代表预约成功。
+            </p>
           </section>
           <details :open="!selected">
             <summary>选择站点、舰船与航道</summary>
@@ -2110,6 +2407,7 @@ onBeforeUnmount(() => {
               <button
                 v-for="s in snapshot.stations"
                 :key="s.id"
+                :data-station-id="s.id"
                 @click="selected = { kind: 'station', id: s.id }"
               >
                 {{ s.label }}<small>{{ s.stock.energy }} EU</small></button

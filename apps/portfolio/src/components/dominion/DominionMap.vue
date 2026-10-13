@@ -6,10 +6,15 @@ import type {
   Ship,
   RegionId,
 } from "../../../../../packages/intelligence/src/dominion/types";
-const props = defineProps<{
-  snapshot: DominionSnapshot;
-  selected: Selection | null;
-}>();
+const props = withDefaults(
+  defineProps<{
+    snapshot: DominionSnapshot;
+    selected: Selection | null;
+    resourcesVisible?: boolean;
+    lanesVisible?: boolean;
+  }>(),
+  { resourcesVisible: false, lanesVisible: true },
+);
 const emit = defineEmits<{ select: [value: Selection] }>();
 const region = ref<RegionId | "all">("all");
 const regions = [
@@ -74,7 +79,12 @@ function choose(kind: Selection["kind"], id: string) {
 </script>
 
 <template>
-  <div class="dom-map-wrap" data-testid="dominion-map">
+  <div
+    class="dom-map-wrap"
+    data-testid="dominion-map"
+    :data-layer-resources="resourcesVisible"
+    :data-layer-lanes="lanesVisible"
+  >
     <div class="dom-map-regions" aria-label="星图区域">
       <button
         v-for="r in regions"
@@ -98,55 +108,59 @@ function choose(kind: Selection["kind"], id: string) {
           :d="`M${n * 90} 45V545 M45 ${n * 50}H920`"
         />
       </g>
-      <g
-        v-for="lane in snapshot.lanes.filter(
-          (l) => visible(l.from) && visible(l.to),
-        )"
-        :key="lane.id"
-        role="button"
-        tabindex="0"
-        :aria-label="`航道 ${lane.id} ${!lane.open ? '用户禁行' : lane.damaged ? '设施受损' : '可通行'}`"
-        :data-lane-id="lane.id"
-        :data-open="lane.open"
-        :data-damaged="lane.damaged"
-        @click="choose('lane', lane.id)"
-        @keydown.enter.prevent="choose('lane', lane.id)"
-        @keydown.space.prevent="choose('lane', lane.id)"
-      >
-        <line
-          :x1="point(lane.from).x"
-          :y1="point(lane.from).y"
-          :x2="point(lane.to).x"
-          :y2="point(lane.to).y"
-          stroke="transparent"
-          stroke-width="32"
-        />
-        <line
-          :x1="point(lane.from).x"
-          :y1="point(lane.from).y"
-          :x2="point(lane.to).x"
-          :y2="point(lane.to).y"
-          :class="[
-            'dom-map-lane',
-            {
-              closed: !lane.open,
-              damaged: lane.damaged,
-              selected: selected?.kind === 'lane' && selected.id === lane.id,
-            },
-          ]"
-        />
-        <text
-          v-if="!lane.open || lane.damaged"
-          :x="(point(lane.from).x + point(lane.to).x) / 2"
-          :y="(point(lane.from).y + point(lane.to).y) / 2 - 8"
-          class="dom-map-warning"
+      <g v-if="lanesVisible" data-testid="map-lane-layer">
+        <g
+          v-for="lane in snapshot.lanes.filter(
+            (l) => visible(l.from) && visible(l.to),
+          )"
+          :key="lane.id"
+          class="dom-map-route"
+          role="button"
+          tabindex="0"
+          :aria-label="`航道 ${lane.id} ${!lane.open ? '用户禁行' : lane.damaged ? '设施受损' : '可通行'}`"
+          :data-lane-id="lane.id"
+          :data-open="lane.open"
+          :data-damaged="lane.damaged"
+          @click="choose('lane', lane.id)"
+          @keydown.enter.prevent="choose('lane', lane.id)"
+          @keydown.space.prevent="choose('lane', lane.id)"
         >
-          {{ !lane.open ? "禁行" : "受损" }}
-        </text>
+          <line
+            :x1="point(lane.from).x"
+            :y1="point(lane.from).y"
+            :x2="point(lane.to).x"
+            :y2="point(lane.to).y"
+            stroke="transparent"
+            stroke-width="32"
+          />
+          <line
+            :x1="point(lane.from).x"
+            :y1="point(lane.from).y"
+            :x2="point(lane.to).x"
+            :y2="point(lane.to).y"
+            :class="[
+              'dom-map-lane',
+              {
+                closed: !lane.open,
+                damaged: lane.damaged,
+                selected: selected?.kind === 'lane' && selected.id === lane.id,
+              },
+            ]"
+          />
+          <text
+            v-if="!lane.open || lane.damaged"
+            :x="(point(lane.from).x + point(lane.to).x) / 2"
+            :y="(point(lane.from).y + point(lane.to).y) / 2 - 8"
+            class="dom-map-warning"
+          >
+            {{ !lane.open ? "禁行" : "受损" }}
+          </text>
+        </g>
       </g>
       <g
         v-for="station in snapshot.stations.filter((s) => visible(s.id))"
         :key="station.id"
+        :data-station-id="station.id"
         role="button"
         tabindex="0"
         :aria-label="`站点 ${station.label} 泊位 ${station.dockCapacity - station.blockedBerths}`"
@@ -176,6 +190,34 @@ function choose(kind: Selection["kind"], id: string) {
             station.damaged ? "设施受损" : `泊位占用 ${station.blockedBerths}`
           }}
         </text>
+        <g
+          v-if="resourcesVisible"
+          class="dom-map-resources"
+          data-testid="map-resource-marker"
+          :data-station-id="station.id"
+          :data-stock="JSON.stringify(station.stock)"
+          :data-reserved="JSON.stringify(station.reserved)"
+        >
+          <title>
+            {{ station.label }}，库存 / 已预留：能源
+            {{ station.stock.energy }}/{{ station.reserved.energy }}，补给
+            {{ station.stock.supplies }}/{{ station.reserved.supplies }}，维修件
+            {{ station.stock.parts }}/{{ station.reserved.parts }}，样本
+            {{ station.stock.samples }}/{{
+              station.reserved.samples
+            }}。选择站点查看完整台账。
+          </title>
+          <path d="M0 -12V-31" />
+          <rect x="-85" y="-83" width="170" height="52" rx="5" />
+          <text x="0" y="-62" text-anchor="middle">
+            能 {{ station.stock.energy }}/{{ station.reserved.energy }} · 补
+            {{ station.stock.supplies }}/{{ station.reserved.supplies }}
+          </text>
+          <text x="0" y="-41" text-anchor="middle">
+            件 {{ station.stock.parts }}/{{ station.reserved.parts }} · 样
+            {{ station.stock.samples }}/{{ station.reserved.samples }}
+          </text>
+        </g>
       </g>
       <g
         v-for="ship in visibleShips"

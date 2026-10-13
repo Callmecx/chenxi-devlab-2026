@@ -1,5 +1,6 @@
 import type {
   DominionSnapshot,
+  Lane,
   Mission,
   MissionKind,
   MissionStep,
@@ -12,6 +13,10 @@ import type {
 } from "./types";
 
 export const PLANNER_VERSION = "dominion-dijkstra-reservation-v4.0";
+// The release's repair chain services the damaged relay facility. Permission
+// closures remain available on every lane, independently of physical damage.
+export const canRepairLane = (lane: Pick<Lane, "from" | "to">) =>
+  lane.from === "relay" || lane.to === "relay";
 export const SCENARIOS: Scenario[] = [
   "supply",
   "expedition",

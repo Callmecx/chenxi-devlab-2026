@@ -10,7 +10,13 @@ const button = (page: Page, name: string) => page.getByRole('button', { name, ex
 type Probe = {
   workers: { created: number; terminated: number; active: number };
   raf: { scheduled: number; fired: number; cancelled: number; active: number };
-  listeners: { active: number; byType: Record<string, number> };
+  listeners: {
+    active: number;
+    byType: Record<string, number>;
+    applicationOrUnattributedByType: Record<string, number>;
+    platformByType: Record<string, number>;
+    registrations: { id: number; key: string; origin: string; callbackSource: string; callbackFingerprint: string; registrationStack: string }[];
+  };
   webgl: { contextsCreated: number; contextsActive: number; objectsCreated: number; objectsDeleted: number; objectsReleasedByContextLoss: number; active: Record<string, number> };
 };
 type WindowWithProbe = Window & { __dominionLifecycleProbe: { read(): Probe } };
@@ -26,9 +32,35 @@ test.beforeEach(async ({ page }) => {
     // messages, renderer facts or planner outcomes are replaced by this probe.
     const nativeAdd = EventTarget.prototype.addEventListener;
     const nativeRemove = EventTarget.prototype.removeEventListener;
+    const nativeFunctionToString = Function.prototype.toString;
     type Listener = EventListenerOrEventListenerObject;
-    type Entry = { target: EventTarget; type: string; capture: boolean; original: Listener; wrapped: EventListener; signal?: AbortSignal; aborted?: EventListener };
+    type Entry = { target: EventTarget; type: string; capture: boolean; original: Listener; wrapped: EventListener; signal?: AbortSignal; aborted?: EventListener; provenance: Omit<Probe['listeners']['registrations'][number], 'key'> };
     const entries = new Set<Entry>();
+    let registrationId = 0;
+    const provenance = (target: EventTarget, type: string, capture: boolean, callback: Listener) => {
+      // These exact callback bodies and call sites come from the installed
+      // playwright-core/lib/coreBundle.js InjectedScript. Event names alone
+      // never exempt a listener: a real app mousemove remains zero-tolerance.
+      const source = typeof callback === 'function' ? nativeFunctionToString.call(callback) : '[EventListenerObject]';
+      const registrationStack = (new Error('listener registration provenance').stack ?? '').slice(0, 4096);
+      const compact = source.replace(/\s+/g, '');
+      const hitTargetBody = '(event)=>{var_a;return(_a=this._hitTargetInterceptor)==null?void0:_a.call(this,event);}';
+      const isHitTarget = target === window && capture && compact === hitTargetBody
+        && registrationStack.includes('addHitTargetInterceptorListeners')
+        && /_setupHitTargetInterceptors|InjectedScript/.test(registrationStack);
+      const isRemovalCheck = target === window && !capture && type === '__playwright_global_listeners_check__'
+        && compact === '()=>seenEvent=true'
+        && registrationStack.includes('_setupGlobalListenersRemovalDetection');
+      let fingerprint = 2166136261;
+      for (let index = 0; index < source.length; index++) fingerprint = Math.imul(fingerprint ^ source.charCodeAt(index), 16777619);
+      return {
+        id: ++registrationId,
+        origin: isHitTarget ? 'playwright-hit-target-interceptor' : isRemovalCheck ? 'playwright-listener-removal-check' : 'application-or-unattributed',
+        callbackSource: source.slice(0, 2048),
+        callbackFingerprint: `fnv1a32:${(fingerprint >>> 0).toString(16).padStart(8, '0')}:${source.length}`,
+        registrationStack,
+      };
+    };
     const forget = (entry: Entry) => {
       entries.delete(entry);
       if (entry.signal && entry.aborted) nativeRemove.call(entry.signal, 'abort', entry.aborted);
@@ -41,7 +73,7 @@ test.beforeEach(async ({ page }) => {
       const signal = typeof options === 'object' ? options.signal : undefined;
       if (signal?.aborted) return nativeAdd.call(this, type, callback, options);
       const once = typeof options === 'object' && options.once;
-      const entry: Entry = { target: this, type, capture, original: callback, signal, wrapped: () => undefined };
+      const entry: Entry = { target: this, type, capture, original: callback, signal, wrapped: () => undefined, provenance: provenance(this, type, capture, callback) };
       entry.wrapped = function (event) {
         if (once) forget(entry);
         if (typeof callback === 'function') callback.call(this, event);
@@ -121,9 +153,15 @@ test.beforeEach(async ({ page }) => {
     }
     (window as unknown as WindowWithProbe).__dominionLifecycleProbe = { read() {
       const byType: Record<string, number> = {};
+      const applicationOrUnattributedByType: Record<string, number> = {};
+      const platformByType: Record<string, number> = {};
+      const registrations: Probe['listeners']['registrations'] = [];
       for (const entry of entries) {
         const key = `${entry.target === window ? 'window' : 'document'}:${entry.type}:${entry.capture ? 'capture' : 'bubble'}`;
         byType[key] = (byType[key] ?? 0) + 1;
+        const group = entry.provenance.origin === 'application-or-unattributed' ? applicationOrUnattributedByType : platformByType;
+        group[key] = (group[key] ?? 0) + 1;
+        registrations.push({ key, ...entry.provenance });
       }
       let contextsActive = 0;
       const active: Record<string, number> = Object.fromEntries(resourceTypes.map(kind => [kind, 0]));
@@ -140,7 +178,7 @@ test.beforeEach(async ({ page }) => {
       }
       return {
         workers: { ...workers }, raf: { ...raf, active: pendingRaf.size },
-        listeners: { active: entries.size, byType },
+        listeners: { active: entries.size, byType, applicationOrUnattributedByType, platformByType, registrations },
         webgl: { contextsCreated: contexts.size, contextsActive, ...gpu, active },
       };
     } };
@@ -209,19 +247,17 @@ function noGrowth(current: Probe, ceiling: Probe, label: string) {
   expect(current.raf.active, `${label}: scheduled RAF after idle`).toBe(0);
   expect(current.webgl.contextsActive, `${label}: live WebGL contexts`).toBeLessThanOrEqual(ceiling.webgl.contextsActive);
   for (const [kind, count] of Object.entries(current.webgl.active)) expect(count, `${label}: active GL ${kind}`).toBeLessThanOrEqual(ceiling.webgl.active[kind] ?? 0);
-  for (const [kind, count] of Object.entries(current.listeners.byType)) {
-    // Installed Playwright's InjectedScript._setupGlobalListenersRemovalDetection
-    // registers this exact probe lazily. Keep it in the raw ledger, but never
-    // attribute a test-harness listener to the application. All other events,
-    // including application visibility/pointer/key listeners, retain zero tolerance.
-    if (kind === 'window:__playwright_global_listeners_check__:bubble') continue;
-    expect(count, `${label}: ${kind} listeners`).toBeLessThanOrEqual(ceiling.listeners.byType[kind] ?? 0);
+  for (const [kind, count] of Object.entries(current.listeners.applicationOrUnattributedByType)) {
+    // Only positively attributed installed-Playwright callbacks are separated.
+    // Raw totals and bounded callback/registration-stack evidence stay attached;
+    // every application or unknown-origin listener retains zero tolerance.
+    expect(count, `${label}: ${kind} application/unattributed listeners`).toBeLessThanOrEqual(ceiling.listeners.applicationOrUnattributedByType[kind] ?? 0);
   }
 }
 
 async function attach(info: TestInfo, category: string, samples: unknown[]) {
   await info.attach(`${category}-10-round-resource-ledger`, {
-    contentType: 'application/json', body: Buffer.from(JSON.stringify({ category, rounds: 10, samples, excludedFromApplicationGrowthAssertion: ['window:__playwright_global_listeners_check__:bubble (installed Playwright InjectedScript, retained in raw counts)'], boundaries: 'Transparent main-document platform counters; explicit delete and context-loss releases separated. Does not claim JS heap/GC or physical GPU memory measurement.' }, null, 2)),
+    contentType: 'application/json', body: Buffer.from(JSON.stringify({ category, rounds: 10, samples, listenerAttribution: 'Only exact installed-Playwright callback bodies together with their registration call sites are separated as platform listeners. Raw byType totals, source fingerprints, bounded callback bodies and registration stacks are retained. Event names alone do not exempt application or unknown listeners.', boundaries: 'Transparent main-document platform counters; explicit delete and context-loss releases separated. Does not claim JS heap/GC or physical GPU memory measurement.' }, null, 2)),
   });
 }
 
@@ -286,6 +322,23 @@ test('DOMINION 生命周期：体验舱镜头往返10轮资源有界且不推进
       await button(page, preset).click();
       await expect.poll(async () => Number(await canvas(page).getAttribute('data-frames'))).toBeGreaterThan(frames);
       await expect(button(page, preset)).toHaveAttribute('aria-pressed', 'true');
+      if (preset === '天体') {
+        // Include the real lazy-created resource textures/sprites in every
+        // camera round. Only the first full round establishes the ceiling;
+        // later rounds still require zero resource growth and unchanged facts.
+        const resources = button(page, '资源图层');
+        await expect(resources).toHaveAttribute('aria-pressed', 'false');
+        const beforeResourceFrame = Number(await canvas(page).getAttribute('data-frames'));
+        await resources.click();
+        await expect(resources).toHaveAttribute('aria-pressed', 'true');
+        await expect(canvas(page)).toHaveAttribute('data-layer-resources', 'true');
+        await expect.poll(async () => Number(await canvas(page).getAttribute('data-frames'))).toBeGreaterThan(beforeResourceFrame);
+        const beforeHideFrame = Number(await canvas(page).getAttribute('data-frames'));
+        await resources.click();
+        await expect(resources).toHaveAttribute('aria-pressed', 'false');
+        await expect(canvas(page)).toHaveAttribute('data-layer-resources', 'false');
+        await expect.poll(async () => Number(await canvas(page).getAttribute('data-frames'))).toBeGreaterThan(beforeHideFrame);
+      }
     }
     await compare(page);
     expect(await record(page)).toEqual(before);

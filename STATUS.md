@@ -1,3 +1,16 @@
+# V4 in development — 2026-10-13
+
+Target `Callmecx/chenxi-devlab-2026`, branch `feat/intelligence-v4-flagship`, preserved V3 base/tag `4d2a85f2908cc5b202bc104707ec9a00947af47c`. Nothing published for V4 yet.
+
+- G0 rerun from clean V3: typecheck, lint,308 unit/API, all app builds and95/95 browser checks passed; historical144 reports/screenshots restored byte for byte. Raw records: `.local/v4/baseline`.
+- New V4 domain has11 stations/16 routes, three ship roles/six ships, four mission chains, constrained inventory/berths/energy, finite waiting, recorded attempts, same-snapshot comparison and strict replay. Current targeted domain suite:84/84, including49 model-adapter test-double checks. These are not full V4 browser/visual acceptance.
+- Independent review fixed premature low-fuel assignment failure, history-limit running dead end, hidden per-hop cost, conflicting idempotency bodies, and replay tool timings. Actual state and recorded evidence remain authoritative.
+- G1 scene/UI is running on local5184 preview. First screenshots failed internal visual review (small foreground, cockpit intersection); iterative corrections and mobile checks continue. A97.038-second development M2 guide completed actual scan→closure→repair→Worker comparison→delivery; production recording still required.
+- Next: finish G1 visual evidence and commit integration, then complete G2—G5 production browser/lifecycle/performance checks and repairs. Promote the existing flagship route only after preview review, preserve V3 accessible version, then normal PR/CI/Pages and anonymous release checks.
+
+Core contracts/runtime/root config/Git remain owned by the integration lead; renderer/UI/QA have separate files. No real model calls, new paid services, repository visibility changes or other-project edits.
+
+---
 # V3 released and anonymously verified — 2026-10-13
 
 Only target: `Callmecx/chenxi-devlab-2026`. Development branch: `feature/intelligence-lab-v3-rebuild`; [PR #2](https://github.com/Callmecx/chenxi-devlab-2026/pull/2) merged into main. Functional release: `da9b6337be81f7d6650785071984d1d2eb73fb47`. [Main CI and Pages](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38286209858) succeeded at 2026/10/13 01:58:05 +08; [anonymous browser verification](docs/testing/online-smoke.json) at 2026/10/13 02:02:26 +08 checked that exact deployed revision.

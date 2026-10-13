@@ -27,6 +27,7 @@ try {
       ["shop/", "Select"],
       ["pulse/", "蓉城周末 Lab"],
       ["#/intelligence", "智能演化实验室"],
+      ["#/intelligence/v3", "V3 历史版本"],
       ["#/intelligence/tasks", "实用任务库"],
       ["#/labs/market-replay", "金融事件回放"],
       ["#/labs/enterprise-flow", "企业业务闭环"],
@@ -51,6 +52,32 @@ try {
     }
   }
   await page.goto(base + "#/intelligence");
+  const dominion = page.getByTestId("dominion-lab");
+  await page.getByRole('combobox', { name: '运行速度', exact: true }).selectOption('4');
+  await page.getByRole('button', { name: '单步', exact: true }).click();
+  await expect(dominion).toHaveAttribute('data-status', 'paused');
+  await expect(dominion).toHaveAttribute('data-tick', '1');
+  const session = await dominion.getAttribute('data-session-id');
+  await page.getByRole('button', { name: '世界设置', exact: true }).click();
+  await page.getByRole('button', { name: '封闭所有航道', exact: true }).click();
+  await page.getByRole('button', { name: '关闭面板', exact: true }).click();
+  await page.getByRole('button', { name: '继续远征', exact: true }).click();
+  await expect(page.locator('.dom-failure-strip')).toContainText('UNREACHABLE', { timeout: 15000 });
+  await expect(dominion).toHaveAttribute('data-status', 'paused');
+  await expect(dominion).toHaveAttribute('data-completed', '0');
+  await page.getByRole('button', { name: '世界设置', exact: true }).click();
+  await page.getByRole('button', { name: '重新开放所有航道', exact: true }).click();
+  await page.getByRole('button', { name: '关闭面板', exact: true }).click();
+  await page.getByRole('button', { name: '重试 勘测 · 维修 · 运输接力', exact: true }).click();
+  await page.getByRole('button', { name: '重试 深空常规补给', exact: true }).click();
+  await expect(dominion).toHaveAttribute('data-completed', '2', { timeout: 40000 });
+  await expect(dominion).toHaveAttribute('data-status', 'paused');
+  await expect(dominion).toHaveAttribute('data-session-id', session);
+  await page.getByRole('button', { name: '任务编排', exact: true }).click();
+  await expect(page.locator('[data-mission-status="completed"]')).toHaveCount(2);
+  await expect(page.locator('[data-step-status="completed"]')).toHaveCount(3);
+  interactions.push('V4 six-ship world: actual step → closure → unreachable → same-session explicit new attempts → survey/repair/transport and supply both complete.');
+  await page.goto(base + "#/intelligence/v3");
   const orbit = page.getByTestId("orbit-lab");
   await page.getByRole("button", { name: "开始补给任务", exact: true }).click();
   await page.getByRole("button", { name: "暂停任务", exact: true }).click();

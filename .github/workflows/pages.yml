@@ -56,6 +56,7 @@ jobs:
             docs/testing/
             docs/screenshots/
             .local/e2e/results/orbit-*/*.png
+            .local/e2e/results/dominion-*/*.png
       - uses: actions/upload-artifact@v4
         with:
           name: wechat-mini-build

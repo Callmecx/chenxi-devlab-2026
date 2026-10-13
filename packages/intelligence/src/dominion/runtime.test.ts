@@ -59,7 +59,7 @@ describe("V4 authoritative fleet runtime", () => {
       expect(state.status).toBe("paused");
     },
   );
-  it("T01/T02 three regions, six role-constrained ships, real relay sequence and repair consumption", () => {
+  it("T03/T10 three regions, six role-constrained ships, real relay sequence and repair consumption", () => {
     const r = createDominionRuntime({ scenario: "expedition" });
     const end = run(r),
       m = end.missions.find((m) => m.kind === "relay")!;
@@ -88,7 +88,7 @@ describe("V4 authoritative fleet runtime", () => {
     expect(end.ledger.consumed.parts).toBe(2);
     expect(end.stations.find((s) => s.id === "lab")!.stock.supplies).toBe(2);
   });
-  it("T03/T04 closures preserve an entered segment then replan; damage repair does not reopen user bans", () => {
+  it("T04/T05 closures preserve an entered segment then replan; damage repair does not reopen user bans", () => {
     const r = createDominionRuntime({ scenario: "supply" });
     until(r, (r) => !!r.snapshot.ships.find((s) => s.transit));
     const entered = r.snapshot.ships.find((s) => s.transit)!;
@@ -118,7 +118,7 @@ describe("V4 authoritative fleet runtime", () => {
     ["sealed", "UNREACHABLE"],
     ["low-energy", "INSUFFICIENT_ENERGY"],
   ] as const)(
-    "T05/T06 %s fails explicitly without teleporting or fabricated stock",
+    "T06/T09 %s fails explicitly without teleporting or fabricated stock",
     (scenario, code) => {
       const r = createDominionRuntime({ scenario }),
         before = r.snapshot;
@@ -131,7 +131,7 @@ describe("V4 authoritative fleet runtime", () => {
       expect(end.ledger.generated).toEqual(before.ledger.generated);
     },
   );
-  it("T07 finite resource conflict does not oversell and cancel releases only unloaded reservations", () => {
+  it("T02 finite resource conflict does not oversell and cancel releases only unloaded reservations", () => {
     const r = createDominionRuntime({ scenario: "competition" });
     r.dispatch({ type: "step" });
     expect(r.snapshot.missions.map((m) => m.status)).toContain("waiting");
@@ -146,7 +146,7 @@ describe("V4 authoritative fleet runtime", () => {
     expect(end.missions[1].status).toBe("completed");
     expect(end.stations.find((s) => s.id === "forge")!.stock.supplies).toBe(1);
   });
-  it("T08 cancelled loaded cargo remains owned until physically returned at its current station", () => {
+  it("T13/T16 cancelled loaded cargo remains owned until physically returned at its current station", () => {
     const r = createDominionRuntime({ scenario: "supply" });
     until(r, (r) => r.snapshot.ships.some((s) => s.cargo.supplies > 0));
     const ship = r.snapshot.ships.find((s) => s.cargo.supplies > 0)!;
@@ -180,7 +180,7 @@ describe("V4 authoritative fleet runtime", () => {
     expect(end.ledger.consumed.parts).toBe(3);
     expect(end.ledger.generated.energy).toBe(0);
   });
-  it("T10 discovery precedes generated samples and their real transfer", () => {
+  it("T21 discovery precedes generated samples and their real transfer", () => {
     const r = createDominionRuntime({ scenario: "four-missions" });
     expect(r.snapshot.ledger.generated.samples).toBe(0);
     const end = run(r),
@@ -194,7 +194,7 @@ describe("V4 authoritative fleet runtime", () => {
     expect(end.stations.find((s) => s.id === "lab")!.stock.samples).toBe(2);
     expect(end.stations.find((s) => s.id === "sample")!.stock.samples).toBe(2);
   });
-  it("T11 idempotent commands and closed sessions never duplicate or revive facts", () => {
+  it("T13/T16 idempotent commands and closed sessions never duplicate or revive facts", () => {
     const r = createDominionRuntime({ scenario: "supply" });
     expect(r.dispatch({ type: "step" }, "once").accepted).toBe(true);
     const before = r.exportRecording();
@@ -209,7 +209,7 @@ describe("V4 authoritative fleet runtime", () => {
     ).toBe(false);
     expect(r.exportRecording()).toEqual(closed);
   });
-  it("T12 failure retry creates a new attempt preserving history and partial facts", () => {
+  it("T07 failure retry creates a new attempt preserving history and partial facts", () => {
     const r = createDominionRuntime({ scenario: "sealed" });
     run(r);
     r.dispatch({ type: "set-all-lanes", open: true });
@@ -224,7 +224,7 @@ describe("V4 authoritative fleet runtime", () => {
     ]);
     expect(end.missions[0].delivered.supplies).toBe(2);
   });
-  it("T13 dock exclusion is a resource constraint with finite stop, then explicit recovery", () => {
+  it("T08/T12 dock exclusion is a resource constraint with finite stop, then explicit recovery", () => {
     const r = createDominionRuntime({ scenario: "supply" });
     expect(
       r.dispatch({ type: "hold-dock", stationId: "forge", berths: 3 }).accepted,
@@ -237,7 +237,7 @@ describe("V4 authoritative fleet runtime", () => {
     r.dispatch({ type: "retry-mission", missionId: "mission-1" });
     expect(run(r).missions[0].status).toBe("completed");
   });
-  it("T14 priority updates preserve entered commitments and connection loss safely pauses", () => {
+  it("T11/T22 priority updates preserve entered commitments and connection loss safely pauses", () => {
     const r = createDominionRuntime({ scenario: "expedition" });
     r.dispatch({ type: "step" });
     const inFlight = r.snapshot.ships.map((s) => s.transit);
@@ -251,7 +251,7 @@ describe("V4 authoritative fleet runtime", () => {
     expect(r.snapshot.status).toBe("paused");
     expect(run(r).missions.every((m) => m.status === "completed")).toBe(true);
   });
-  it("T15 same snapshot branches are real, isolated and stale adoption is refused", () => {
+  it("T17/T18 same snapshot branches are real, isolated and stale adoption is refused", () => {
     const r = createDominionRuntime({ scenario: "supply" });
     r.dispatch({ type: "pause" });
     const before = r.snapshot,
@@ -285,7 +285,7 @@ describe("V4 authoritative fleet runtime", () => {
     ).toBe(true);
     expect(r.snapshot.tick).toBe(before.tick);
   });
-  it("T16 cloning forks preserves the same queued fault condition and identity", () => {
+  it("T17 cloning forks preserves the same queued fault condition and identity", () => {
     const s = createFixture("supply", 4217, "fault-branch");
     s.status = "paused";
     s.faults.push({
@@ -301,5 +301,27 @@ describe("V4 authoritative fleet runtime", () => {
       expect(branch.snapshot.appliedFaults).toContain("fault-1");
       expect(branch.violations).toEqual([]);
     }
+  });
+  it('T17 identical policies reproduce the same constrained future', () => {
+    const r = createDominionRuntime({ scenario: 'four-missions', sessionId: 'same-policy', seed: 913 });
+    for (let i = 0; i < 8; i++) r.dispatch({ type: 'step' });
+    const result = compareStrategies(r.snapshot, 'balanced', 'balanced', r.events.length);
+    expect(sourceKey(result.a.snapshot)).toBe(sourceKey(result.b.snapshot));
+    expect(result.a.trace).toEqual(result.b.trace);
+    expect(result.a.completed).toBe(4); expect(result.b.violations).toEqual([]);
+  });
+  it('T11 urgent insertion keeps prior in-flight cargo and both tasks eventually complete', () => {
+    const r = createDominionRuntime({ scenario: 'supply' });
+    r.dispatch({ type: 'set-priority', missionId: 'mission-1', priority: 0 });
+    until(r, r => r.snapshot.ships.some(s => s.cargo.supplies > 0 && s.transit));
+    const committed = r.snapshot.ships.find(s => s.cargo.supplies > 0)!;
+    r.dispatch({ type: 'add-mission', kind: 'supply', targetId: 'lab' });
+    r.dispatch({ type: 'set-priority', missionId: 'mission-2', priority: 9 });
+    const preserved = r.snapshot.ships.find(s => s.id === committed.id)!;
+    expect(preserved.transit).toEqual(committed.transit);
+    expect(preserved.cargo).toEqual(committed.cargo);
+    expect(preserved.missionId).toBe('mission-1');
+    const final = run(r); expect(final.missions.every(m => m.status === 'completed')).toBe(true);
+    expect(final.missions.map(m => m.delivered.supplies)).toEqual([2,2]);
   });
 });

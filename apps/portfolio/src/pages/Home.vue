@@ -87,7 +87,7 @@ import ProjectCard from "../components/ProjectCard.vue";
         <p class="eyebrow">INTENT → PLAN → ACT → REFLECT</p>
         <h2>让目标变成行动，<br /><span>让过程可以观察。</span></h2>
         <p>
-          为轨道港送去三份能源，关闭航道，比较两种未来。<br />在星域智航，亲手检验智能如何改变下一步。
+          指挥六舰接力勘测、维修与运输，关闭航道，比较两种未来。<br />在星域智航，亲手检验协同如何改变下一步。
         </p>
         <div>
           <RouterLink class="button primary" to="/intelligence"
@@ -101,7 +101,7 @@ import ProjectCard from "../components/ProjectCard.vue";
         <RouterLink to="/intelligence"
           ><span>01 / INTELLIGENCE</span>
           <h3>星域智航 · 智能实验室 <ArrowUpRight :size="19" /></h3>
-          <p>双载体调度 · 改变航道 · 时间分岔 · 事件回放</p>
+          <p>六舰协同 · 接力与救援 · 两个未来 · 事件回放</p>
           <small>本地算法仿真与历史回放</small></RouterLink
         ><a :href="demoUrl('shop')"
           ><span>02 / COMMERCE</span>

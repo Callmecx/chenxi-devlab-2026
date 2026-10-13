@@ -18,7 +18,7 @@ test.afterEach(({ page }) => {
 });
 
 async function pausedWorld(page: Page) {
-  await page.goto("/#/intelligence");
+  await page.goto("/#/intelligence/v3");
   await expect(lab(page)).toHaveAttribute("data-status", "ready");
   await button(page, "单步").click();
   await expect(lab(page)).toHaveAttribute("data-status", "paused");

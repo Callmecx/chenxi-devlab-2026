@@ -6,7 +6,7 @@ import { useTheme } from "./stores/theme";
 const theme = useTheme();
 const menu = ref(false);
 const route = useRoute();
-const immersive = computed(() => route.path === "/intelligence");
+const immersive = computed(() => ["/intelligence", "/intelligence/preview-v4", "/intelligence/v3"].includes(route.path));
 function skipToMain() {
   const main = document.getElementById("main");
   main?.focus();

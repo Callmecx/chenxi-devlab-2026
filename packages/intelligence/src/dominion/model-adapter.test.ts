@@ -206,7 +206,7 @@ describe('T24 optional server caller policy — all callers in these tests are s
   it.each([
     { authorized: false }, { environment: 'browser' }, { authorizationId: '' }, { provider: '' }, { model: '' },
     { provider: 'https://attacker.invalid' }, { model: 'https://attacker.invalid' }, { perCallLimitMicrousd: 0 },
-    { dailyLimitMicrousd: 0 }, { perCallLimitMicrousd: 101 }, { apiKey: 'must-not-be-accepted' },
+    { dailyLimitMicrousd: 0 }, { perCallLimitMicrousd: 101 }, { apiKey: 'demo-invalid-policy-field' },
   ])('rejects missing authorization, identifiers, budgets or secret-bearing policy %j', change => {
     expect(() => createServerPlannerContext({ ...settings, ...change } as ServerPlannerSettings)).toThrow('INVALID_SERVER_POLICY');
   });

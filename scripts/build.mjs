@@ -75,6 +75,7 @@ for (const folder of [
   "acceptance",
   "intelligence-lab",
   "intelligence-lab-v3",
+  "intelligence-lab-v4",
   "interview",
 ])
   if (existsSync(resolve(root, "docs", folder)))

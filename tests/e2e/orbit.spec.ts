@@ -26,7 +26,7 @@ test.afterEach(({ page }) => {
 });
 
 async function open(page: Page) {
-  await page.goto("/#/intelligence");
+  await page.goto("/#/intelligence/v3");
   await expect(lab(page)).toHaveAttribute("data-status", "ready");
   await expect(lab(page)).toHaveAttribute("data-mode", "local-simulation");
   await expect(button(page, "开始补给任务")).toBeEnabled();
@@ -659,7 +659,7 @@ test("ORBIT 十次挂载卸载释放实际WebGL上下文与canvas，回到新run
     ).toEqual({ connected: false, lost: true });
     await handle!.dispose();
     await page.evaluate(() => {
-      location.hash = "#/intelligence";
+      location.hash = "#/intelligence/v3";
     });
   }
 });
@@ -959,7 +959,7 @@ test("ORBIT 慢文件导入不能覆盖reset、新导入、returnLive或卸载�
   await expect(lab(page)).toHaveCount(0);
   await page.waitForTimeout(1100);
   await page.evaluate(() => {
-    location.hash = "#/intelligence";
+    location.hash = "#/intelligence/v3";
   });
   await expect(lab(page)).toHaveAttribute("data-mode", "local-simulation");
   await expect(lab(page)).toHaveAttribute("data-status", "ready");

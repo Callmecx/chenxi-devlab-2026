@@ -1,14 +1,14 @@
 {
-  "checkedAt": "2026-10-12T18:02:26.174Z",
+  "checkedAt": "2026-10-13T07:20:21.270Z",
   "base": "https://callmecx.github.io/chenxi-devlab-2026/",
   "browser": "154.0.8037.94",
   "anonymous": true,
   "result": "PASS",
   "build": {
     "basePath": "/chenxi-devlab-2026/",
-    "sourceRevision": "da9b6337be81f7d6650785071984d1d2eb73fb47",
+    "sourceRevision": "01afff76df0ae76bd62bf16839fdff182c2827cb",
     "sourceTreeDirty": false,
-    "builtAt": "2026-10-12T17:56:32.144Z",
+    "builtAt": "2026-10-13T07:16:13.516Z",
     "apps": [
       "portfolio",
       "shop",
@@ -38,7 +38,13 @@
       "path": "#/intelligence",
       "width": 390,
       "status": 200,
-      "title": "星域智航 · 智能演化实验室 · Chenxi DevLab"
+      "title": "星域智航 V4 · 智能演化实验室 · Chenxi DevLab"
+    },
+    {
+      "path": "#/intelligence/v3",
+      "width": 390,
+      "status": 200,
+      "title": "星域智航 V3 历史版本 · 智能演化实验室 · Chenxi DevLab"
     },
     {
       "path": "#/intelligence/tasks",
@@ -92,7 +98,13 @@
       "path": "#/intelligence",
       "width": 1440,
       "status": 200,
-      "title": "星域智航 · 智能演化实验室 · Chenxi DevLab"
+      "title": "星域智航 V4 · 智能演化实验室 · Chenxi DevLab"
+    },
+    {
+      "path": "#/intelligence/v3",
+      "width": 1440,
+      "status": 200,
+      "title": "星域智航 V3 历史版本 · 智能演化实验室 · Chenxi DevLab"
     },
     {
       "path": "#/intelligence/tasks",
@@ -137,11 +149,32 @@
       "status": 200
     },
     {
+      "path": "evidence/intelligence-lab-v4/CONTRIBUTION_MAP.md",
+      "status": 200
+    },
+    {
+      "path": "evidence/intelligence-lab-v4/TEST_REPORT.md",
+      "status": 200
+    },
+    {
+      "path": "evidence/intelligence-lab-v4/PERFORMANCE.md",
+      "status": 200
+    },
+    {
+      "path": "evidence/intelligence-lab-v4/DEMO_GUIDE.md",
+      "status": 200
+    },
+    {
+      "path": "evidence/intelligence-lab-v4/MODE_AND_RELEASE_STATUS.md",
+      "status": 200
+    },
+    {
       "path": "screenshots/shop-checkout-390.png",
       "status": 200
     }
   ],
   "interactions": [
+    "V4 six-ship world: actual step → closure → unreachable → same-session explicit new attempts → survey/repair/transport and supply both complete.",
     "ORBIT dual-carrier task: real step → all routes blocked → unreachable → reopen/retry → 3 delivered.",
     "Product planning and tools reach approval; rejecting cancels without committing.",
     "Public local shop SKU → cart → checkout uses preserved deployment paths.",

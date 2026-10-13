@@ -1,6 +1,6 @@
 # V4 基线与实施边界
 
-2026-10-13（Asia/Shanghai），开发目标仅 `Callmecx/chenxi-devlab-2026`。真实工作树为 `D:/找工作创建个人项目集/chenxi-devlab-2026`；初始 HEAD、远端 main 与 `v3.0.0` 均为 `4d2a85f2908cc5b202bc104707ec9a00947af47c`，工作区无未提交修改。已读取仓库 AGENTS、STATUS、README、两套锁文件、路由、构建与 Pages 流程，以及用户完整 V4 指令。GitHub 使用已有 Callmecx 授权。
+2026-10-13（Asia/Shanghai），开发目标仅 `Callmecx/chenxi-devlab-2026`。真实Git根目录和远端均已核对；初始 HEAD、远端 main 与 `v3.0.0` 均为 `4d2a85f2908cc5b202bc104707ec9a00947af47c`，工作区无未提交修改。已读取仓库 AGENTS、STATUS、README、两套锁文件、路由、构建与 Pages 流程，以及用户完整 V4 指令。GitHub 使用已有 Callmecx 授权。
 
 开发分支 `feat/intelligence-v4-flagship` 从该 HEAD 新建，未改写旧提交、标签或原始 checkout。主站、`/intelligence`、`shop/`、`pulse/` 的 base/hash 访问合同保留。旧私有仓、其他项目和已经撤回的磁盘清理任务均不在本轮范围。
 

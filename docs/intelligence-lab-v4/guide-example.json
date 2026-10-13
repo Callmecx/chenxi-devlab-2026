@@ -4,7 +4,7 @@
   "initial": {
     "schemaVersion": 4,
     "plannerVersion": "dominion-dijkstra-reservation-v4.0",
-    "sessionId": "dominion-mv68gcui-2",
+    "sessionId": "dominion-mv6b0e1x-2",
     "seed": 4217,
     "scenario": "expedition",
     "tick": 0,
@@ -947,124 +947,124 @@
   },
   "commands": [
     {
-      "id": "3c7bf6ee-215f-4434-9c35-05871b1649b3",
+      "id": "000ece2e-f2de-4b64-92d6-561818453385",
       "command": {
         "type": "start"
       },
       "accepted": true,
       "tick": 0,
-      "stateKey": "dominion-mv68gcui-2:1:0:1:b9ec21dc"
+      "stateKey": "dominion-mv6b0e1x-2:1:0:1:8c8aedd7"
     },
     {
-      "id": "15a21c53-270c-45f4-a9bd-7d7aa9bd3ea7",
+      "id": "6e466eae-e5bb-4e41-ab07-e2ec4146f5ca",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 1,
-      "stateKey": "dominion-mv68gcui-2:1:1:2:3991db61"
+      "stateKey": "dominion-mv6b0e1x-2:1:1:2:8f3a8f4a"
     },
     {
-      "id": "988030c3-f3df-4321-876b-3295de627d36",
+      "id": "f044d4b5-c0d2-4769-a1f4-3065274ec1cf",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 2,
-      "stateKey": "dominion-mv68gcui-2:1:2:3:f6e8db2c"
+      "stateKey": "dominion-mv6b0e1x-2:1:2:3:899189e0"
     },
     {
-      "id": "7cecf0cb-b22d-4751-b83b-fa901d4b003f",
+      "id": "1cc46b92-7284-4a7a-8c50-5618fc8be9c6",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 3,
-      "stateKey": "dominion-mv68gcui-2:1:3:4:fddfee25"
+      "stateKey": "dominion-mv6b0e1x-2:1:3:4:4e4f5776"
     },
     {
-      "id": "dd862a62-600f-4d05-a4c8-ee8e2d6d9783",
+      "id": "126f6e6b-3141-400c-aaea-f10315230171",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 4,
-      "stateKey": "dominion-mv68gcui-2:1:4:5:9bd2874e"
+      "stateKey": "dominion-mv6b0e1x-2:1:4:5:baa5bd9d"
     },
     {
-      "id": "c099c943-cbe4-466f-b9bb-9f3106ffc4a2",
+      "id": "a570e39e-2e4e-43cd-9617-db4f924cdd49",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 5,
-      "stateKey": "dominion-mv68gcui-2:1:5:6:cbb9d2bc"
+      "stateKey": "dominion-mv6b0e1x-2:1:5:6:f425304e"
     },
     {
-      "id": "05d71118-165f-46c9-b164-b2a1216db0e1",
+      "id": "9c8d1c47-b403-420a-b981-71f541b53c76",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 6,
-      "stateKey": "dominion-mv68gcui-2:1:6:7:ecd3f1bb"
+      "stateKey": "dominion-mv6b0e1x-2:1:6:7:90022b41"
     },
     {
-      "id": "d28b075d-2921-44bc-96cc-81c6b88f9fa1",
+      "id": "e2a9438a-f753-4a21-bb96-4e87652050ad",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 7,
-      "stateKey": "dominion-mv68gcui-2:1:7:8:bfa36f72"
+      "stateKey": "dominion-mv6b0e1x-2:1:7:8:e1b8ddaf"
     },
     {
-      "id": "03fc0b23-c5bb-4305-be0a-bf17cb52005c",
+      "id": "ef6e4fb9-6be6-45c6-8707-4743bc5dd037",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 8,
-      "stateKey": "dominion-mv68gcui-2:1:8:9:88fe4f8a"
+      "stateKey": "dominion-mv6b0e1x-2:1:8:9:acdadcc6"
     },
     {
-      "id": "d014a971-a8f0-4e89-9c59-127169add420",
+      "id": "541935ce-07b4-4522-bb26-6e71e75ba54c",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 9,
-      "stateKey": "dominion-mv68gcui-2:1:9:10:7b53ecb2"
+      "stateKey": "dominion-mv6b0e1x-2:1:9:10:2bb74a0b"
     },
     {
-      "id": "c830bfa9-589a-490e-8307-db95a07ba6d0",
+      "id": "e68fbe96-464e-438c-ad88-de8f627e0098",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 10,
-      "stateKey": "dominion-mv68gcui-2:1:10:11:bc4d3746"
+      "stateKey": "dominion-mv6b0e1x-2:1:10:11:c6fc3c2a"
     },
     {
-      "id": "f6efae64-80ef-4e5f-a862-3ae8bbbccf51",
+      "id": "96a1bd92-bc3b-4162-9bfa-19c0c56d11af",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 11,
-      "stateKey": "dominion-mv68gcui-2:2:11:12:9e48b12f"
+      "stateKey": "dominion-mv6b0e1x-2:2:11:12:f736a3ca"
     },
     {
-      "id": "07599310-769b-4949-9003-8773f32f0a24",
+      "id": "62d38208-1f22-4505-bd98-14c6bbdb7ef6",
       "command": {
         "type": "pause"
       },
       "accepted": true,
       "tick": 11,
-      "stateKey": "dominion-mv68gcui-2:2:11:13:79f30738"
+      "stateKey": "dominion-mv6b0e1x-2:2:11:13:4d81af69"
     },
     {
-      "id": "c8dfe4dc-a68e-4064-b7a4-576503009144",
+      "id": "fbb89d22-91e7-4031-9ca3-d0d73950f7bf",
       "command": {
         "type": "set-lane",
         "laneId": "forge-relay",
@@ -1072,555 +1072,555 @@
       },
       "accepted": true,
       "tick": 11,
-      "stateKey": "dominion-mv68gcui-2:3:11:14:8b148f8a"
+      "stateKey": "dominion-mv6b0e1x-2:3:11:14:4ba901ce"
     },
     {
-      "id": "9f137565-b841-49e8-b33e-6d6975c4a5f4",
+      "id": "575c096f-042f-44a9-927a-4be9e9b13f8f",
       "command": {
         "type": "resume"
       },
       "accepted": true,
       "tick": 11,
-      "stateKey": "dominion-mv68gcui-2:3:11:15:69235476"
+      "stateKey": "dominion-mv6b0e1x-2:3:11:15:fb8ddcc0"
     },
     {
-      "id": "b9babc82-5223-4f98-80af-a4bbf947b991",
+      "id": "22487c36-edaa-4aeb-a30b-6923396a4780",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 12,
-      "stateKey": "dominion-mv68gcui-2:3:12:16:2f0b7e8e"
+      "stateKey": "dominion-mv6b0e1x-2:3:12:16:eb899f4b"
     },
     {
-      "id": "650173de-4466-48c6-9233-c8f34302225c",
+      "id": "2d00b6f6-6d11-4b51-8945-2462c05019b4",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 13,
-      "stateKey": "dominion-mv68gcui-2:3:13:17:95c2e60d"
+      "stateKey": "dominion-mv6b0e1x-2:3:13:17:6747bf3e"
     },
     {
-      "id": "f7a9c794-8eb5-44df-9168-a6e66d7112e8",
+      "id": "1e6fd6c8-e222-499a-ba05-e3a64b02ce00",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 14,
-      "stateKey": "dominion-mv68gcui-2:3:14:18:5800709c"
+      "stateKey": "dominion-mv6b0e1x-2:3:14:18:dc1a32f1"
     },
     {
-      "id": "83cec103-f3eb-4c99-8f67-a65ff7e26a24",
+      "id": "7fa761bc-0b69-40ef-a053-0b64ed5134c6",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 15,
-      "stateKey": "dominion-mv68gcui-2:3:15:19:6e47b853"
+      "stateKey": "dominion-mv6b0e1x-2:3:15:19:2e4a53b8"
     },
     {
-      "id": "40dfc2aa-f3e7-4bca-8502-365b8bfd4172",
+      "id": "40c4a753-8c7f-4d7c-ae11-a9c170833c8c",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 16,
-      "stateKey": "dominion-mv68gcui-2:3:16:20:93dc1ffd"
+      "stateKey": "dominion-mv6b0e1x-2:3:16:20:350524cb"
     },
     {
-      "id": "e94404cf-3d1e-49d6-9c3d-be8b64f773bc",
+      "id": "5eea640c-5a1e-4457-938c-49f6c6512ff2",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 17,
-      "stateKey": "dominion-mv68gcui-2:3:17:21:5ba1d144"
+      "stateKey": "dominion-mv6b0e1x-2:3:17:21:9c181f51"
     },
     {
-      "id": "0928e42c-1292-44a6-9b19-49cfc8d591ba",
+      "id": "7944d9bc-c158-46f5-b0d5-322b6c365321",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 18,
-      "stateKey": "dominion-mv68gcui-2:3:18:22:933630fd"
+      "stateKey": "dominion-mv6b0e1x-2:3:18:22:c70b357d"
     },
     {
-      "id": "a771cef0-967a-4da0-a950-ff339217bbf7",
+      "id": "5ef6361b-db7f-4ac3-a5d5-a98e2d2f8ac2",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 19,
-      "stateKey": "dominion-mv68gcui-2:3:19:23:102bf85"
+      "stateKey": "dominion-mv6b0e1x-2:3:19:23:bbf04c32"
     },
     {
-      "id": "848dd02e-5dde-4a82-99d3-18b2c1ce729d",
+      "id": "c15239f1-409a-4457-add4-65fa2b2cd0f1",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 20,
-      "stateKey": "dominion-mv68gcui-2:3:20:24:13b1a2dc"
+      "stateKey": "dominion-mv6b0e1x-2:3:20:24:58d8bc16"
     },
     {
-      "id": "ae213451-f780-492c-8d52-7393b31a5a95",
+      "id": "340c20ca-a749-4455-86c8-fcc51213fba0",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 21,
-      "stateKey": "dominion-mv68gcui-2:3:21:25:c4509ea3"
+      "stateKey": "dominion-mv6b0e1x-2:3:21:25:1864a55d"
     },
     {
-      "id": "8a5cb3b5-f447-4fa3-b967-9eea0ac7fdc8",
+      "id": "2116475a-7908-49a4-8d4d-de55ce5577f8",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 22,
-      "stateKey": "dominion-mv68gcui-2:3:22:26:4b1e37bf"
+      "stateKey": "dominion-mv6b0e1x-2:3:22:26:34413d1"
     },
     {
-      "id": "2f46c1d9-0d95-45a4-add6-52c1729e6ac7",
+      "id": "be16c7b5-f44f-4bde-9251-17308923ad38",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 23,
-      "stateKey": "dominion-mv68gcui-2:3:23:27:48b61e0d"
+      "stateKey": "dominion-mv6b0e1x-2:3:23:27:43f4baca"
     },
     {
-      "id": "b56f7324-aaad-4343-839d-1dcf94a95836",
+      "id": "c08c339c-b9d4-4b81-826f-43ea114bf993",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 24,
-      "stateKey": "dominion-mv68gcui-2:3:24:28:4a1b66d0"
+      "stateKey": "dominion-mv6b0e1x-2:3:24:28:b04cf704"
     },
     {
-      "id": "4a4aead8-ed4d-4951-91cc-3833f4eea299",
+      "id": "ebd2b605-aafa-4ae5-8f70-1dd251f8248f",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 25,
-      "stateKey": "dominion-mv68gcui-2:3:25:29:c13b2a8"
+      "stateKey": "dominion-mv6b0e1x-2:3:25:29:6d80ed62"
     },
     {
-      "id": "a0dc9828-3825-46df-813b-ac6c068402d2",
+      "id": "95eec738-cfc0-461d-8955-d8101bc3697e",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 26,
-      "stateKey": "dominion-mv68gcui-2:3:26:30:89b3483a"
+      "stateKey": "dominion-mv6b0e1x-2:3:26:30:5958060"
     },
     {
-      "id": "ce48511e-ddae-4f75-bf11-07c736ccd3c0",
+      "id": "31df6adf-a0a8-4c15-a460-ad66e09e3be4",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 27,
-      "stateKey": "dominion-mv68gcui-2:3:27:31:f3702a3f"
+      "stateKey": "dominion-mv6b0e1x-2:3:27:31:33d17c00"
     },
     {
-      "id": "eeabb819-92af-4bda-9329-bf7d08efa4d3",
+      "id": "be262f13-23c1-4783-a5e7-3023f9865bd8",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 28,
-      "stateKey": "dominion-mv68gcui-2:3:28:32:8989d8fe"
+      "stateKey": "dominion-mv6b0e1x-2:3:28:32:9bf034a2"
     },
     {
-      "id": "bfd6263f-5890-4392-820b-0b39eb89dd37",
+      "id": "9280d921-1b19-4dbf-a3dc-57d1ebe0fd1e",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 29,
-      "stateKey": "dominion-mv68gcui-2:3:29:33:541231a3"
+      "stateKey": "dominion-mv6b0e1x-2:3:29:33:73a81e52"
     },
     {
-      "id": "ef95f2e5-7107-42b8-9a6a-1c9b5571f690",
+      "id": "91404cd9-5a6d-48db-9eed-c327bcf3e93e",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 30,
-      "stateKey": "dominion-mv68gcui-2:3:30:34:e64ea4eb"
+      "stateKey": "dominion-mv6b0e1x-2:3:30:34:4099b175"
     },
     {
-      "id": "0f159fd2-da84-44bf-85e7-a9645893d54b",
+      "id": "4381c43e-5045-4259-8ad2-9a3b9306cd49",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 31,
-      "stateKey": "dominion-mv68gcui-2:3:31:35:846f603f"
+      "stateKey": "dominion-mv6b0e1x-2:3:31:35:106b1001"
     },
     {
-      "id": "69ddc835-159a-481d-8ed3-a0274b5cbf19",
+      "id": "3477fb9c-b828-4d74-b6e4-1f916485c44a",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 32,
-      "stateKey": "dominion-mv68gcui-2:3:32:36:5dc5d744"
+      "stateKey": "dominion-mv6b0e1x-2:3:32:36:7b2188c4"
     },
     {
-      "id": "eaf5bf68-b6fa-4aba-b8e5-d18fc639b892",
+      "id": "bb816866-f906-4c6d-af17-f5eaecbd0967",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 33,
-      "stateKey": "dominion-mv68gcui-2:3:33:37:1f91efc5"
+      "stateKey": "dominion-mv6b0e1x-2:3:33:37:acc28a3f"
     },
     {
-      "id": "f86c517d-62fc-4f6f-9144-5bcd82e86d51",
+      "id": "6f1b73d0-db7a-46c1-9328-d4a6a0c9e213",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 34,
-      "stateKey": "dominion-mv68gcui-2:3:34:38:763dafe5"
+      "stateKey": "dominion-mv6b0e1x-2:3:34:38:25bf6d7b"
     },
     {
-      "id": "e1962cc3-0b80-466f-a96f-3e06890555e8",
+      "id": "c25928b9-2e1e-49c4-a67e-3a32d051e18d",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 35,
-      "stateKey": "dominion-mv68gcui-2:3:35:39:e96dea0c"
+      "stateKey": "dominion-mv6b0e1x-2:3:35:39:8c0c2bd8"
     },
     {
-      "id": "184be903-f31a-47e5-9f70-9a4989296aba",
+      "id": "5a3cab2b-2c57-4808-88f6-f5ba0ebc5740",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 36,
-      "stateKey": "dominion-mv68gcui-2:3:36:40:ade9240b"
+      "stateKey": "dominion-mv6b0e1x-2:3:36:40:8f6672ba"
     },
     {
-      "id": "4fe560db-eec6-47f3-a5f5-c1b333e8e928",
+      "id": "cbe51a50-4afe-4d48-973e-54a4e61b996b",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 37,
-      "stateKey": "dominion-mv68gcui-2:3:37:41:56294b8b"
+      "stateKey": "dominion-mv6b0e1x-2:3:37:41:7254a596"
     },
     {
-      "id": "f3baf917-d05d-4ac7-95ae-e55019707d41",
+      "id": "f8af0490-8a78-4f20-915c-488055c61131",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 38,
-      "stateKey": "dominion-mv68gcui-2:4:38:42:f491ae97"
+      "stateKey": "dominion-mv6b0e1x-2:4:38:42:2b2a20cc"
     },
     {
-      "id": "9f10b4d4-97da-4fc7-8fb6-86083670c5f9",
+      "id": "c6ebbcd4-4657-4c73-b446-1aa09358e9c0",
       "command": {
         "type": "pause"
       },
       "accepted": true,
       "tick": 38,
-      "stateKey": "dominion-mv68gcui-2:4:38:43:c960cb01"
+      "stateKey": "dominion-mv6b0e1x-2:4:38:43:6eb78ad9"
     },
     {
-      "id": "b784bfe1-0e42-401f-92ef-626da2ed3b40",
+      "id": "d0a3828d-699e-4e17-8bf9-6265c6af8d56",
       "command": {
         "type": "resume"
       },
       "accepted": true,
       "tick": 38,
-      "stateKey": "dominion-mv68gcui-2:4:38:44:70ca6b68"
+      "stateKey": "dominion-mv6b0e1x-2:4:38:44:518eae17"
     },
     {
-      "id": "48de2c7f-fec8-48fc-b03f-90e696838789",
+      "id": "72ad3582-008c-40be-8c12-fe4d12fe7d96",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 39,
-      "stateKey": "dominion-mv68gcui-2:4:39:45:fc217635"
+      "stateKey": "dominion-mv6b0e1x-2:4:39:45:31bda9cc"
     },
     {
-      "id": "a6ad0fa0-d161-4454-bb36-cf3c6305271a",
+      "id": "0dc55451-a673-4f79-9070-57059eaac757",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 40,
-      "stateKey": "dominion-mv68gcui-2:4:40:46:c912e4f"
+      "stateKey": "dominion-mv6b0e1x-2:4:40:46:a983b346"
     },
     {
-      "id": "180b0e4a-9bbf-4806-8ee8-d65a6f25c6c8",
+      "id": "c1a3ed07-54ea-460d-b630-adf073af17c9",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 41,
-      "stateKey": "dominion-mv68gcui-2:4:41:47:1a067974"
+      "stateKey": "dominion-mv6b0e1x-2:4:41:47:3eb0a36a"
     },
     {
-      "id": "f24d2020-385f-4427-962c-ce58d565a6c6",
+      "id": "7669e888-0dc3-4aeb-9cc1-f98010d62b5f",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 42,
-      "stateKey": "dominion-mv68gcui-2:4:42:48:8a1081fe"
+      "stateKey": "dominion-mv6b0e1x-2:4:42:48:d63ef2c8"
     },
     {
-      "id": "cfeb58f3-a3ab-469f-86d3-95589464d5f7",
+      "id": "cf8cc0a0-e4f0-4fe4-93e2-d2f8e0a531fe",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 43,
-      "stateKey": "dominion-mv68gcui-2:4:43:49:49778553"
+      "stateKey": "dominion-mv6b0e1x-2:4:43:49:7451be7f"
     },
     {
-      "id": "0edb9fef-553f-4706-af9d-f495368eacb4",
+      "id": "bab8d294-5cbc-4c91-bf15-80df22d829e0",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 44,
-      "stateKey": "dominion-mv68gcui-2:4:44:50:c086bf14"
+      "stateKey": "dominion-mv6b0e1x-2:4:44:50:12a114a7"
     },
     {
-      "id": "ac2308b5-e72c-4e92-a130-7500cd73bde6",
+      "id": "e5517a49-d991-4013-8dcb-eacc595051c9",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 45,
-      "stateKey": "dominion-mv68gcui-2:4:45:51:1ae47fc0"
+      "stateKey": "dominion-mv6b0e1x-2:4:45:51:e9508c43"
     },
     {
-      "id": "87055333-183f-49d0-9242-413d3c4d0c5c",
+      "id": "acf0c3c1-a94f-41ae-aca3-71ac189626fa",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 46,
-      "stateKey": "dominion-mv68gcui-2:4:46:52:83698ba3"
+      "stateKey": "dominion-mv6b0e1x-2:4:46:52:4aa3d8e7"
     },
     {
-      "id": "749c1bdb-7a52-4a4e-8627-111f09fd2b77",
+      "id": "4ce37404-91bd-4783-9425-e8e36766332d",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 47,
-      "stateKey": "dominion-mv68gcui-2:4:47:53:e93d0bdf"
+      "stateKey": "dominion-mv6b0e1x-2:4:47:53:bad3c775"
     },
     {
-      "id": "b8c1c845-95d6-4c97-b2ce-6690f5ae5862",
+      "id": "ca82f1ab-2f71-4109-9886-b29a08b87a30",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 48,
-      "stateKey": "dominion-mv68gcui-2:4:48:54:4875c7d"
+      "stateKey": "dominion-mv6b0e1x-2:4:48:54:f2ad6461"
     },
     {
-      "id": "149a6e1a-4d32-43eb-a436-d9b2a43f9e55",
+      "id": "15d88079-075c-421e-ad55-ee236de5e114",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 49,
-      "stateKey": "dominion-mv68gcui-2:4:49:55:d74c3231"
+      "stateKey": "dominion-mv6b0e1x-2:4:49:55:81879f99"
     },
     {
-      "id": "d4d82101-9131-4cf0-9058-8b8ca0497fec",
+      "id": "02d905cf-523e-4934-8000-d940e9667330",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 50,
-      "stateKey": "dominion-mv68gcui-2:4:50:56:8b422e64"
+      "stateKey": "dominion-mv6b0e1x-2:4:50:56:a30579ed"
     },
     {
-      "id": "33863a83-dd93-4275-a5d0-0a576df6a9b8",
+      "id": "b5720e74-0a91-467d-9c3d-ef31ef0f6cbd",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 51,
-      "stateKey": "dominion-mv68gcui-2:4:51:57:b55f5f02"
+      "stateKey": "dominion-mv6b0e1x-2:4:51:57:eed9c0fd"
     },
     {
-      "id": "5de460d1-e632-438a-8c2c-4cdbdcb9c749",
+      "id": "c519a115-67db-4d95-a796-76776fcfcb16",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 52,
-      "stateKey": "dominion-mv68gcui-2:4:52:58:755f5469"
+      "stateKey": "dominion-mv6b0e1x-2:4:52:58:9bcdbaef"
     },
     {
-      "id": "ee70b1c7-62fe-4c56-b9ee-007801e9622f",
+      "id": "a5ed7141-d4ea-49b9-8220-0334cb3769ce",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 53,
-      "stateKey": "dominion-mv68gcui-2:4:53:59:33d1a145"
+      "stateKey": "dominion-mv6b0e1x-2:4:53:59:a62c6143"
     },
     {
-      "id": "0decb777-e55f-46af-845a-9880b1cfa56a",
+      "id": "21e688a4-d201-4d16-b442-43a01c4c33ae",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 54,
-      "stateKey": "dominion-mv68gcui-2:4:54:60:822b1cfe"
+      "stateKey": "dominion-mv6b0e1x-2:4:54:60:cf607d05"
     },
     {
-      "id": "5fd32c39-5130-4d4a-84b1-8a83f8ec3d73",
+      "id": "a47c08f6-eeee-4b97-a27a-f9e60c91717b",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 55,
-      "stateKey": "dominion-mv68gcui-2:4:55:61:af8dbffb"
+      "stateKey": "dominion-mv6b0e1x-2:4:55:61:69624e25"
     },
     {
-      "id": "ae109307-14ea-4a4b-8969-6a67ad648a15",
+      "id": "63e6125d-a6ec-4b04-83b8-5b337f9e6a4b",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 56,
-      "stateKey": "dominion-mv68gcui-2:4:56:62:3db9a63b"
+      "stateKey": "dominion-mv6b0e1x-2:4:56:62:b6a90d3c"
     },
     {
-      "id": "7ef851ec-964e-4304-bb21-95c721500b19",
+      "id": "dc70a7ee-3044-448f-8855-a7b45185a22a",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 57,
-      "stateKey": "dominion-mv68gcui-2:4:57:63:ab7bbe51"
+      "stateKey": "dominion-mv6b0e1x-2:4:57:63:2ef1ed22"
     },
     {
-      "id": "d609d8a4-5ee1-42fd-9129-31646c8ea7b5",
+      "id": "83936754-c4a6-49e7-bf28-c4f1076669e7",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 58,
-      "stateKey": "dominion-mv68gcui-2:4:58:64:e1acc6a7"
+      "stateKey": "dominion-mv6b0e1x-2:4:58:64:93068078"
     },
     {
-      "id": "a849b8a2-9bf1-4f64-976d-12969fb8c3a5",
+      "id": "5ecbd623-f978-4bf6-a57f-37e14a95c048",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 59,
-      "stateKey": "dominion-mv68gcui-2:4:59:65:bddefa71"
+      "stateKey": "dominion-mv6b0e1x-2:4:59:65:575a1d77"
     },
     {
-      "id": "0aed293b-b76a-4f39-a194-8d2a36b9ef11",
+      "id": "cf14c314-36b8-44e5-9f6a-88ebe7119135",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 60,
-      "stateKey": "dominion-mv68gcui-2:4:60:66:a0dfdaf"
+      "stateKey": "dominion-mv6b0e1x-2:4:60:66:c4a7297"
     },
     {
-      "id": "4169b7b1-995c-4d56-a39e-f52b0d9f46a6",
+      "id": "ae41da7c-9a0f-4134-ae47-92794f3af794",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 61,
-      "stateKey": "dominion-mv68gcui-2:4:61:67:5ab6b05b"
+      "stateKey": "dominion-mv6b0e1x-2:4:61:67:e7e0feb5"
     },
     {
-      "id": "ab7cd8ce-620e-4702-8501-57b68de91671",
+      "id": "644a79ad-b8b5-4377-869e-395e5f5fc81a",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 62,
-      "stateKey": "dominion-mv68gcui-2:4:62:68:5f5e6ae5"
+      "stateKey": "dominion-mv6b0e1x-2:4:62:68:48ead184"
     },
     {
-      "id": "6a49f5fa-83db-462f-aaeb-98d2d30614ac",
+      "id": "736442dc-9c5c-4fea-bd89-3949eecbb391",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 63,
-      "stateKey": "dominion-mv68gcui-2:4:63:69:a77ce7ba"
+      "stateKey": "dominion-mv6b0e1x-2:4:63:69:25c7fc63"
     },
     {
-      "id": "1a1ed040-4b97-4e81-abc8-cfb01d7b6698",
+      "id": "58349ab0-c00f-4dbb-9e22-b591175150c2",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 64,
-      "stateKey": "dominion-mv68gcui-2:4:64:70:1bcf58f2"
+      "stateKey": "dominion-mv6b0e1x-2:4:64:70:91b788c3"
     },
     {
-      "id": "3e058050-b7b4-4b40-a4dc-ffca0f33b38e",
+      "id": "866b60d2-e055-4ddb-91d5-28ea26cb5b78",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 65,
-      "stateKey": "dominion-mv68gcui-2:4:65:71:a5923c53"
+      "stateKey": "dominion-mv6b0e1x-2:4:65:71:a7f97a8"
     },
     {
-      "id": "9a913a6a-c91e-4a8d-8ad4-2b47dd305e2b",
+      "id": "ad72d10c-3934-4a3c-ada6-a7fd86766e5a",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 66,
-      "stateKey": "dominion-mv68gcui-2:4:66:72:726f1250"
+      "stateKey": "dominion-mv6b0e1x-2:4:66:72:11b2ef42"
     },
     {
-      "id": "2e349d90-8b0a-4817-8196-33aa77760dda",
+      "id": "c2f16307-7cb3-4e73-b644-329a57686082",
       "command": {
         "type": "step"
       },
       "accepted": true,
       "tick": 67,
-      "stateKey": "dominion-mv68gcui-2:4:67:73:6fdac7ac"
+      "stateKey": "dominion-mv6b0e1x-2:4:67:73:7e16571a"
     }
   ],
   "events": [
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:1",
+      "eventId": "dominion-mv6b0e1x-2:event:1",
       "seq": 1,
       "tick": 0,
-      "wallTime": "2026-10-13T05:21:03.705Z",
+      "wallTime": "2026-10-13T06:32:37.597Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "tool.completed",
       "actionId": null,
-      "toolCallId": "dominion-mv68gcui-2:tool:1",
+      "toolCallId": "dominion-mv6b0e1x-2:tool:1",
       "payload": {
         "tool": "read-world",
         "input": {
@@ -1636,13 +1636,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:2",
+      "eventId": "dominion-mv6b0e1x-2:event:2",
       "seq": 2,
       "tick": 0,
-      "wallTime": "2026-10-13T05:21:03.705Z",
+      "wallTime": "2026-10-13T06:32:37.598Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "session.running",
@@ -1652,17 +1652,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:3",
+      "eventId": "dominion-mv6b0e1x-2:event:3",
       "seq": 3,
       "tick": 1,
-      "wallTime": "2026-10-13T05:21:04.861Z",
+      "wallTime": "2026-10-13T06:32:38.825Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "task.assigned",
-      "actionId": "dominion-mv68gcui-2:action:1",
+      "actionId": "dominion-mv6b0e1x-2:action:1",
       "toolCallId": null,
       "payload": {
         "shipId": "survey-a",
@@ -1679,17 +1679,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:4",
+      "eventId": "dominion-mv6b0e1x-2:event:4",
       "seq": 4,
       "tick": 1,
-      "wallTime": "2026-10-13T05:21:04.861Z",
+      "wallTime": "2026-10-13T06:32:38.827Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "task.assigned",
-      "actionId": "dominion-mv68gcui-2:action:2",
+      "actionId": "dominion-mv6b0e1x-2:action:2",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-a",
@@ -1706,18 +1706,18 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:5",
+      "eventId": "dominion-mv6b0e1x-2:event:5",
       "seq": 5,
       "tick": 1,
-      "wallTime": "2026-10-13T05:21:04.862Z",
+      "wallTime": "2026-10-13T06:32:38.830Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "tool.completed",
       "actionId": null,
-      "toolCallId": "dominion-mv68gcui-2:tool:5",
+      "toolCallId": "dominion-mv6b0e1x-2:tool:5",
       "payload": {
         "tool": "estimate-route",
         "input": {
@@ -1742,18 +1742,18 @@
           "risk": 1,
           "score": 35
         },
-        "durationMs": 0
+        "durationMs": 0.19999992847442627
       }
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:6",
+      "eventId": "dominion-mv6b0e1x-2:event:6",
       "seq": 6,
       "tick": 1,
-      "wallTime": "2026-10-13T05:21:04.862Z",
+      "wallTime": "2026-10-13T06:32:38.830Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "plan.created",
@@ -1781,17 +1781,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:7",
+      "eventId": "dominion-mv6b0e1x-2:event:7",
       "seq": 7,
       "tick": 1,
-      "wallTime": "2026-10-13T05:21:04.862Z",
+      "wallTime": "2026-10-13T06:32:38.831Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "ship.departed",
-      "actionId": "dominion-mv68gcui-2:action:3",
+      "actionId": "dominion-mv6b0e1x-2:action:3",
       "toolCallId": null,
       "payload": {
         "shipId": "survey-a",
@@ -1805,18 +1805,18 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:8",
+      "eventId": "dominion-mv6b0e1x-2:event:8",
       "seq": 8,
       "tick": 1,
-      "wallTime": "2026-10-13T05:21:04.862Z",
+      "wallTime": "2026-10-13T06:32:38.831Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "tool.completed",
       "actionId": null,
-      "toolCallId": "dominion-mv68gcui-2:tool:8",
+      "toolCallId": "dominion-mv6b0e1x-2:tool:8",
       "payload": {
         "tool": "estimate-route",
         "input": {
@@ -1839,18 +1839,18 @@
           "risk": 1,
           "score": 29
         },
-        "durationMs": 0
+        "durationMs": 0.10000002384185791
       }
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:9",
+      "eventId": "dominion-mv6b0e1x-2:event:9",
       "seq": 9,
       "tick": 1,
-      "wallTime": "2026-10-13T05:21:04.862Z",
+      "wallTime": "2026-10-13T06:32:38.832Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "plan.created",
@@ -1876,17 +1876,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:10",
+      "eventId": "dominion-mv6b0e1x-2:event:10",
       "seq": 10,
       "tick": 1,
-      "wallTime": "2026-10-13T05:21:04.862Z",
+      "wallTime": "2026-10-13T06:32:38.832Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "ship.departed",
-      "actionId": "dominion-mv68gcui-2:action:4",
+      "actionId": "dominion-mv6b0e1x-2:action:4",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-a",
@@ -1900,13 +1900,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:11",
+      "eventId": "dominion-mv6b0e1x-2:event:11",
       "seq": 11,
       "tick": 1,
-      "wallTime": "2026-10-13T05:21:04.862Z",
+      "wallTime": "2026-10-13T06:32:38.832Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -1918,13 +1918,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:12",
+      "eventId": "dominion-mv6b0e1x-2:event:12",
       "seq": 12,
       "tick": 2,
-      "wallTime": "2026-10-13T05:21:06.053Z",
+      "wallTime": "2026-10-13T06:32:40.035Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -1936,17 +1936,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:13",
+      "eventId": "dominion-mv6b0e1x-2:event:13",
       "seq": 13,
       "tick": 3,
-      "wallTime": "2026-10-13T05:21:07.252Z",
+      "wallTime": "2026-10-13T06:32:41.236Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "ship.arrived",
-      "actionId": "dominion-mv68gcui-2:action:5",
+      "actionId": "dominion-mv6b0e1x-2:action:5",
       "toolCallId": null,
       "payload": {
         "shipId": "survey-a",
@@ -1956,13 +1956,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:14",
+      "eventId": "dominion-mv6b0e1x-2:event:14",
       "seq": 14,
       "tick": 3,
-      "wallTime": "2026-10-13T05:21:07.252Z",
+      "wallTime": "2026-10-13T06:32:41.236Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -1974,17 +1974,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:15",
+      "eventId": "dominion-mv6b0e1x-2:event:15",
       "seq": 15,
       "tick": 4,
-      "wallTime": "2026-10-13T05:21:08.450Z",
+      "wallTime": "2026-10-13T06:32:42.437Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "ship.departed",
-      "actionId": "dominion-mv68gcui-2:action:6",
+      "actionId": "dominion-mv6b0e1x-2:action:6",
       "toolCallId": null,
       "payload": {
         "shipId": "survey-a",
@@ -1998,17 +1998,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:16",
+      "eventId": "dominion-mv6b0e1x-2:event:16",
       "seq": 16,
       "tick": 4,
-      "wallTime": "2026-10-13T05:21:08.450Z",
+      "wallTime": "2026-10-13T06:32:42.437Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "ship.arrived",
-      "actionId": "dominion-mv68gcui-2:action:7",
+      "actionId": "dominion-mv6b0e1x-2:action:7",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-a",
@@ -2018,13 +2018,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:17",
+      "eventId": "dominion-mv6b0e1x-2:event:17",
       "seq": 17,
       "tick": 4,
-      "wallTime": "2026-10-13T05:21:08.450Z",
+      "wallTime": "2026-10-13T06:32:42.437Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -2036,17 +2036,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:18",
+      "eventId": "dominion-mv6b0e1x-2:event:18",
       "seq": 18,
       "tick": 5,
-      "wallTime": "2026-10-13T05:21:09.654Z",
+      "wallTime": "2026-10-13T06:32:43.636Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "action.started",
-      "actionId": "dominion-mv68gcui-2:action:8",
+      "actionId": "dominion-mv6b0e1x-2:action:8",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-a",
@@ -2060,13 +2060,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:19",
+      "eventId": "dominion-mv6b0e1x-2:event:19",
       "seq": 19,
       "tick": 5,
-      "wallTime": "2026-10-13T05:21:09.654Z",
+      "wallTime": "2026-10-13T06:32:43.636Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -2078,17 +2078,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:20",
+      "eventId": "dominion-mv6b0e1x-2:event:20",
       "seq": 20,
       "tick": 6,
-      "wallTime": "2026-10-13T05:21:10.853Z",
+      "wallTime": "2026-10-13T06:32:44.837Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "ship.arrived",
-      "actionId": "dominion-mv68gcui-2:action:9",
+      "actionId": "dominion-mv6b0e1x-2:action:9",
       "toolCallId": null,
       "payload": {
         "shipId": "survey-a",
@@ -2098,13 +2098,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:21",
+      "eventId": "dominion-mv6b0e1x-2:event:21",
       "seq": 21,
       "tick": 6,
-      "wallTime": "2026-10-13T05:21:10.853Z",
+      "wallTime": "2026-10-13T06:32:44.837Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -2116,17 +2116,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:22",
+      "eventId": "dominion-mv6b0e1x-2:event:22",
       "seq": 22,
       "tick": 7,
-      "wallTime": "2026-10-13T05:21:12.052Z",
+      "wallTime": "2026-10-13T06:32:45.993Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "action.started",
-      "actionId": "dominion-mv68gcui-2:action:10",
+      "actionId": "dominion-mv6b0e1x-2:action:10",
       "toolCallId": null,
       "payload": {
         "shipId": "survey-a",
@@ -2140,17 +2140,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:23",
+      "eventId": "dominion-mv6b0e1x-2:event:23",
       "seq": 23,
       "tick": 7,
-      "wallTime": "2026-10-13T05:21:12.052Z",
+      "wallTime": "2026-10-13T06:32:45.993Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "cargo.loaded",
-      "actionId": "dominion-mv68gcui-2:action:11",
+      "actionId": "dominion-mv6b0e1x-2:action:11",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-a",
@@ -2165,13 +2165,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:24",
+      "eventId": "dominion-mv6b0e1x-2:event:24",
       "seq": 24,
       "tick": 7,
-      "wallTime": "2026-10-13T05:21:12.052Z",
+      "wallTime": "2026-10-13T06:32:45.993Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -2183,18 +2183,18 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:25",
+      "eventId": "dominion-mv6b0e1x-2:event:25",
       "seq": 25,
       "tick": 8,
-      "wallTime": "2026-10-13T05:21:13.253Z",
+      "wallTime": "2026-10-13T06:32:47.245Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "tool.completed",
       "actionId": null,
-      "toolCallId": "dominion-mv68gcui-2:tool:25",
+      "toolCallId": "dominion-mv6b0e1x-2:tool:25",
       "payload": {
         "tool": "estimate-route",
         "input": {
@@ -2224,13 +2224,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:26",
+      "eventId": "dominion-mv6b0e1x-2:event:26",
       "seq": 26,
       "tick": 8,
-      "wallTime": "2026-10-13T05:21:13.253Z",
+      "wallTime": "2026-10-13T06:32:47.245Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "plan.created",
@@ -2258,17 +2258,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:27",
+      "eventId": "dominion-mv6b0e1x-2:event:27",
       "seq": 27,
       "tick": 8,
-      "wallTime": "2026-10-13T05:21:13.253Z",
+      "wallTime": "2026-10-13T06:32:47.245Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "ship.departed",
-      "actionId": "dominion-mv68gcui-2:action:12",
+      "actionId": "dominion-mv6b0e1x-2:action:12",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-a",
@@ -2282,13 +2282,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:28",
+      "eventId": "dominion-mv6b0e1x-2:event:28",
       "seq": 28,
       "tick": 8,
-      "wallTime": "2026-10-13T05:21:13.253Z",
+      "wallTime": "2026-10-13T06:32:47.245Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -2300,13 +2300,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:29",
+      "eventId": "dominion-mv6b0e1x-2:event:29",
       "seq": 29,
       "tick": 9,
-      "wallTime": "2026-10-13T05:21:14.453Z",
+      "wallTime": "2026-10-13T06:32:48.437Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -2318,13 +2318,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:30",
+      "eventId": "dominion-mv6b0e1x-2:event:30",
       "seq": 30,
       "tick": 10,
-      "wallTime": "2026-10-13T05:21:15.652Z",
+      "wallTime": "2026-10-13T06:32:49.637Z",
       "worldVersion": 1,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -2336,13 +2336,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:31",
+      "eventId": "dominion-mv6b0e1x-2:event:31",
       "seq": 31,
       "tick": 11,
-      "wallTime": "2026-10-13T05:21:16.850Z",
+      "wallTime": "2026-10-13T06:32:50.795Z",
       "worldVersion": 2,
       "mode": "local-simulation",
       "type": "survey.discovered",
@@ -2357,17 +2357,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:32",
+      "eventId": "dominion-mv6b0e1x-2:event:32",
       "seq": 32,
       "tick": 11,
-      "wallTime": "2026-10-13T05:21:16.850Z",
+      "wallTime": "2026-10-13T06:32:50.795Z",
       "worldVersion": 2,
       "mode": "local-simulation",
       "type": "step.completed",
-      "actionId": "dominion-mv68gcui-2:action:13",
+      "actionId": "dominion-mv6b0e1x-2:action:13",
       "toolCallId": null,
       "payload": {
         "stepId": "mission-1:step:1",
@@ -2377,17 +2377,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:33",
+      "eventId": "dominion-mv6b0e1x-2:event:33",
       "seq": 33,
       "tick": 11,
-      "wallTime": "2026-10-13T05:21:16.850Z",
+      "wallTime": "2026-10-13T06:32:50.795Z",
       "worldVersion": 2,
       "mode": "local-simulation",
       "type": "ship.arrived",
-      "actionId": "dominion-mv68gcui-2:action:14",
+      "actionId": "dominion-mv6b0e1x-2:action:14",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-a",
@@ -2397,13 +2397,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:34",
+      "eventId": "dominion-mv6b0e1x-2:event:34",
       "seq": 34,
       "tick": 11,
-      "wallTime": "2026-10-13T05:21:16.850Z",
+      "wallTime": "2026-10-13T06:32:50.795Z",
       "worldVersion": 2,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -2415,13 +2415,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:35",
+      "eventId": "dominion-mv6b0e1x-2:event:35",
       "seq": 35,
       "tick": 11,
-      "wallTime": "2026-10-13T05:21:16.904Z",
+      "wallTime": "2026-10-13T06:32:50.842Z",
       "worldVersion": 2,
       "mode": "local-simulation",
       "type": "session.paused",
@@ -2431,13 +2431,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:36",
+      "eventId": "dominion-mv6b0e1x-2:event:36",
       "seq": 36,
       "tick": 11,
-      "wallTime": "2026-10-13T05:21:16.907Z",
+      "wallTime": "2026-10-13T06:32:50.845Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "lane.permission-changed",
@@ -2451,18 +2451,18 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:37",
+      "eventId": "dominion-mv6b0e1x-2:event:37",
       "seq": 37,
       "tick": 11,
-      "wallTime": "2026-10-13T05:21:20.950Z",
+      "wallTime": "2026-10-13T06:32:54.894Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tool.completed",
       "actionId": null,
-      "toolCallId": "dominion-mv68gcui-2:tool:37",
+      "toolCallId": "dominion-mv6b0e1x-2:tool:37",
       "payload": {
         "tool": "read-world",
         "input": {
@@ -2478,13 +2478,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:38",
+      "eventId": "dominion-mv6b0e1x-2:event:38",
       "seq": 38,
       "tick": 11,
-      "wallTime": "2026-10-13T05:21:20.950Z",
+      "wallTime": "2026-10-13T06:32:54.894Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "session.running",
@@ -2494,17 +2494,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:39",
+      "eventId": "dominion-mv6b0e1x-2:event:39",
       "seq": 39,
       "tick": 12,
-      "wallTime": "2026-10-13T05:21:22.104Z",
+      "wallTime": "2026-10-13T06:32:56.096Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "task.assigned",
-      "actionId": "dominion-mv68gcui-2:action:15",
+      "actionId": "dominion-mv6b0e1x-2:action:15",
       "toolCallId": null,
       "payload": {
         "shipId": "repair-a",
@@ -2521,18 +2521,18 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:40",
+      "eventId": "dominion-mv6b0e1x-2:event:40",
       "seq": 40,
       "tick": 12,
-      "wallTime": "2026-10-13T05:21:22.105Z",
+      "wallTime": "2026-10-13T06:32:56.096Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tool.completed",
       "actionId": null,
-      "toolCallId": "dominion-mv68gcui-2:tool:40",
+      "toolCallId": "dominion-mv6b0e1x-2:tool:40",
       "payload": {
         "tool": "estimate-route",
         "input": {
@@ -2555,18 +2555,18 @@
           "risk": 1,
           "score": 29
         },
-        "durationMs": 0.10000002384185791
+        "durationMs": 0
       }
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:41",
+      "eventId": "dominion-mv6b0e1x-2:event:41",
       "seq": 41,
       "tick": 12,
-      "wallTime": "2026-10-13T05:21:22.105Z",
+      "wallTime": "2026-10-13T06:32:56.096Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "plan.created",
@@ -2592,17 +2592,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:42",
+      "eventId": "dominion-mv6b0e1x-2:event:42",
       "seq": 42,
       "tick": 12,
-      "wallTime": "2026-10-13T05:21:22.105Z",
+      "wallTime": "2026-10-13T06:32:56.096Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "ship.departed",
-      "actionId": "dominion-mv68gcui-2:action:16",
+      "actionId": "dominion-mv6b0e1x-2:action:16",
       "toolCallId": null,
       "payload": {
         "shipId": "repair-a",
@@ -2616,18 +2616,18 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:43",
+      "eventId": "dominion-mv6b0e1x-2:event:43",
       "seq": 43,
       "tick": 12,
-      "wallTime": "2026-10-13T05:21:22.105Z",
+      "wallTime": "2026-10-13T06:32:56.097Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tool.completed",
       "actionId": null,
-      "toolCallId": "dominion-mv68gcui-2:tool:43",
+      "toolCallId": "dominion-mv6b0e1x-2:tool:43",
       "payload": {
         "tool": "estimate-route",
         "input": {
@@ -2655,13 +2655,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:44",
+      "eventId": "dominion-mv6b0e1x-2:event:44",
       "seq": 44,
       "tick": 12,
-      "wallTime": "2026-10-13T05:21:22.105Z",
+      "wallTime": "2026-10-13T06:32:56.097Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "plan.created",
@@ -2687,17 +2687,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:45",
+      "eventId": "dominion-mv6b0e1x-2:event:45",
       "seq": 45,
       "tick": 12,
-      "wallTime": "2026-10-13T05:21:22.105Z",
+      "wallTime": "2026-10-13T06:32:56.097Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "ship.departed",
-      "actionId": "dominion-mv68gcui-2:action:17",
+      "actionId": "dominion-mv6b0e1x-2:action:17",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-a",
@@ -2711,13 +2711,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:46",
+      "eventId": "dominion-mv6b0e1x-2:event:46",
       "seq": 46,
       "tick": 12,
-      "wallTime": "2026-10-13T05:21:22.105Z",
+      "wallTime": "2026-10-13T06:32:56.097Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -2729,13 +2729,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:47",
+      "eventId": "dominion-mv6b0e1x-2:event:47",
       "seq": 47,
       "tick": 13,
-      "wallTime": "2026-10-13T05:21:23.303Z",
+      "wallTime": "2026-10-13T06:32:57.295Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -2747,13 +2747,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:48",
+      "eventId": "dominion-mv6b0e1x-2:event:48",
       "seq": 48,
       "tick": 14,
-      "wallTime": "2026-10-13T05:21:24.503Z",
+      "wallTime": "2026-10-13T06:32:58.541Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -2765,17 +2765,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:49",
+      "eventId": "dominion-mv6b0e1x-2:event:49",
       "seq": 49,
       "tick": 15,
-      "wallTime": "2026-10-13T05:21:25.704Z",
+      "wallTime": "2026-10-13T06:32:59.745Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "ship.arrived",
-      "actionId": "dominion-mv68gcui-2:action:18",
+      "actionId": "dominion-mv6b0e1x-2:action:18",
       "toolCallId": null,
       "payload": {
         "shipId": "repair-a",
@@ -2785,13 +2785,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:50",
+      "eventId": "dominion-mv6b0e1x-2:event:50",
       "seq": 50,
       "tick": 15,
-      "wallTime": "2026-10-13T05:21:25.704Z",
+      "wallTime": "2026-10-13T06:32:59.745Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -2803,17 +2803,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:51",
+      "eventId": "dominion-mv6b0e1x-2:event:51",
       "seq": 51,
       "tick": 16,
-      "wallTime": "2026-10-13T05:21:26.904Z",
+      "wallTime": "2026-10-13T06:33:00.947Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "action.started",
-      "actionId": "dominion-mv68gcui-2:action:19",
+      "actionId": "dominion-mv6b0e1x-2:action:19",
       "toolCallId": null,
       "payload": {
         "shipId": "repair-a",
@@ -2827,17 +2827,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:52",
+      "eventId": "dominion-mv6b0e1x-2:event:52",
       "seq": 52,
       "tick": 16,
-      "wallTime": "2026-10-13T05:21:26.904Z",
+      "wallTime": "2026-10-13T06:33:00.947Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "ship.arrived",
-      "actionId": "dominion-mv68gcui-2:action:20",
+      "actionId": "dominion-mv6b0e1x-2:action:20",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-a",
@@ -2847,13 +2847,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:53",
+      "eventId": "dominion-mv6b0e1x-2:event:53",
       "seq": 53,
       "tick": 16,
-      "wallTime": "2026-10-13T05:21:26.905Z",
+      "wallTime": "2026-10-13T06:33:00.947Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -2865,17 +2865,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:54",
+      "eventId": "dominion-mv6b0e1x-2:event:54",
       "seq": 54,
       "tick": 17,
-      "wallTime": "2026-10-13T05:21:28.100Z",
+      "wallTime": "2026-10-13T06:33:02.140Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "action.started",
-      "actionId": "dominion-mv68gcui-2:action:21",
+      "actionId": "dominion-mv6b0e1x-2:action:21",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-a",
@@ -2889,13 +2889,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:55",
+      "eventId": "dominion-mv6b0e1x-2:event:55",
       "seq": 55,
       "tick": 17,
-      "wallTime": "2026-10-13T05:21:28.100Z",
+      "wallTime": "2026-10-13T06:33:02.140Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -2907,17 +2907,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:56",
+      "eventId": "dominion-mv6b0e1x-2:event:56",
       "seq": 56,
       "tick": 18,
-      "wallTime": "2026-10-13T05:21:29.303Z",
+      "wallTime": "2026-10-13T06:33:03.296Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "cargo.loaded",
-      "actionId": "dominion-mv68gcui-2:action:22",
+      "actionId": "dominion-mv6b0e1x-2:action:22",
       "toolCallId": null,
       "payload": {
         "shipId": "repair-a",
@@ -2932,13 +2932,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:57",
+      "eventId": "dominion-mv6b0e1x-2:event:57",
       "seq": 57,
       "tick": 18,
-      "wallTime": "2026-10-13T05:21:29.303Z",
+      "wallTime": "2026-10-13T06:33:03.296Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -2950,18 +2950,18 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:58",
+      "eventId": "dominion-mv6b0e1x-2:event:58",
       "seq": 58,
       "tick": 19,
-      "wallTime": "2026-10-13T05:21:30.505Z",
+      "wallTime": "2026-10-13T06:33:04.548Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tool.completed",
       "actionId": null,
-      "toolCallId": "dominion-mv68gcui-2:tool:58",
+      "toolCallId": "dominion-mv6b0e1x-2:tool:58",
       "payload": {
         "tool": "estimate-route",
         "input": {
@@ -2988,18 +2988,18 @@
           "risk": 2,
           "score": 73
         },
-        "durationMs": 0.10000002384185791
+        "durationMs": 0.09999990463256836
       }
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:59",
+      "eventId": "dominion-mv6b0e1x-2:event:59",
       "seq": 59,
       "tick": 19,
-      "wallTime": "2026-10-13T05:21:30.505Z",
+      "wallTime": "2026-10-13T06:33:04.548Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "plan.created",
@@ -3029,17 +3029,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:60",
+      "eventId": "dominion-mv6b0e1x-2:event:60",
       "seq": 60,
       "tick": 19,
-      "wallTime": "2026-10-13T05:21:30.505Z",
+      "wallTime": "2026-10-13T06:33:04.548Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "ship.departed",
-      "actionId": "dominion-mv68gcui-2:action:23",
+      "actionId": "dominion-mv6b0e1x-2:action:23",
       "toolCallId": null,
       "payload": {
         "shipId": "repair-a",
@@ -3053,17 +3053,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:61",
+      "eventId": "dominion-mv6b0e1x-2:event:61",
       "seq": 61,
       "tick": 19,
-      "wallTime": "2026-10-13T05:21:30.505Z",
+      "wallTime": "2026-10-13T06:33:04.548Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "cargo.delivered",
-      "actionId": "dominion-mv68gcui-2:action:24",
+      "actionId": "dominion-mv6b0e1x-2:action:24",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-a",
@@ -3078,17 +3078,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:62",
+      "eventId": "dominion-mv6b0e1x-2:event:62",
       "seq": 62,
       "tick": 19,
-      "wallTime": "2026-10-13T05:21:30.505Z",
+      "wallTime": "2026-10-13T06:33:04.548Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "step.completed",
-      "actionId": "dominion-mv68gcui-2:action:25",
+      "actionId": "dominion-mv6b0e1x-2:action:25",
       "toolCallId": null,
       "payload": {
         "stepId": "mission-2:step:1",
@@ -3098,13 +3098,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-2",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:63",
+      "eventId": "dominion-mv6b0e1x-2:event:63",
       "seq": 63,
       "tick": 19,
-      "wallTime": "2026-10-13T05:21:30.505Z",
+      "wallTime": "2026-10-13T06:33:04.549Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "mission.completed",
@@ -3121,13 +3121,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:64",
+      "eventId": "dominion-mv6b0e1x-2:event:64",
       "seq": 64,
       "tick": 19,
-      "wallTime": "2026-10-13T05:21:30.505Z",
+      "wallTime": "2026-10-13T06:33:04.549Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3139,13 +3139,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:65",
+      "eventId": "dominion-mv6b0e1x-2:event:65",
       "seq": 65,
       "tick": 20,
-      "wallTime": "2026-10-13T05:21:31.703Z",
+      "wallTime": "2026-10-13T06:33:05.735Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3157,13 +3157,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:66",
+      "eventId": "dominion-mv6b0e1x-2:event:66",
       "seq": 66,
       "tick": 21,
-      "wallTime": "2026-10-13T05:21:32.903Z",
+      "wallTime": "2026-10-13T06:33:06.894Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3175,17 +3175,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:67",
+      "eventId": "dominion-mv6b0e1x-2:event:67",
       "seq": 67,
       "tick": 22,
-      "wallTime": "2026-10-13T05:21:34.104Z",
+      "wallTime": "2026-10-13T06:33:08.135Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "ship.arrived",
-      "actionId": "dominion-mv68gcui-2:action:26",
+      "actionId": "dominion-mv6b0e1x-2:action:26",
       "toolCallId": null,
       "payload": {
         "shipId": "repair-a",
@@ -3195,13 +3195,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:68",
+      "eventId": "dominion-mv6b0e1x-2:event:68",
       "seq": 68,
       "tick": 22,
-      "wallTime": "2026-10-13T05:21:34.104Z",
+      "wallTime": "2026-10-13T06:33:08.135Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3213,17 +3213,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:69",
+      "eventId": "dominion-mv6b0e1x-2:event:69",
       "seq": 69,
       "tick": 23,
-      "wallTime": "2026-10-13T05:21:35.302Z",
+      "wallTime": "2026-10-13T06:33:09.340Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "ship.departed",
-      "actionId": "dominion-mv68gcui-2:action:27",
+      "actionId": "dominion-mv6b0e1x-2:action:27",
       "toolCallId": null,
       "payload": {
         "shipId": "repair-a",
@@ -3237,13 +3237,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:70",
+      "eventId": "dominion-mv6b0e1x-2:event:70",
       "seq": 70,
       "tick": 23,
-      "wallTime": "2026-10-13T05:21:35.302Z",
+      "wallTime": "2026-10-13T06:33:09.340Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3255,13 +3255,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:71",
+      "eventId": "dominion-mv6b0e1x-2:event:71",
       "seq": 71,
       "tick": 24,
-      "wallTime": "2026-10-13T05:21:36.500Z",
+      "wallTime": "2026-10-13T06:33:10.539Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3273,13 +3273,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:72",
+      "eventId": "dominion-mv6b0e1x-2:event:72",
       "seq": 72,
       "tick": 25,
-      "wallTime": "2026-10-13T05:21:37.703Z",
+      "wallTime": "2026-10-13T06:33:11.734Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3291,17 +3291,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:73",
+      "eventId": "dominion-mv6b0e1x-2:event:73",
       "seq": 73,
       "tick": 26,
-      "wallTime": "2026-10-13T05:21:38.900Z",
+      "wallTime": "2026-10-13T06:33:12.937Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "ship.arrived",
-      "actionId": "dominion-mv68gcui-2:action:28",
+      "actionId": "dominion-mv6b0e1x-2:action:28",
       "toolCallId": null,
       "payload": {
         "shipId": "repair-a",
@@ -3311,13 +3311,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:74",
+      "eventId": "dominion-mv6b0e1x-2:event:74",
       "seq": 74,
       "tick": 26,
-      "wallTime": "2026-10-13T05:21:38.900Z",
+      "wallTime": "2026-10-13T06:33:12.937Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3329,17 +3329,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:75",
+      "eventId": "dominion-mv6b0e1x-2:event:75",
       "seq": 75,
       "tick": 27,
-      "wallTime": "2026-10-13T05:21:40.104Z",
+      "wallTime": "2026-10-13T06:33:14.137Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "ship.departed",
-      "actionId": "dominion-mv68gcui-2:action:29",
+      "actionId": "dominion-mv6b0e1x-2:action:29",
       "toolCallId": null,
       "payload": {
         "shipId": "repair-a",
@@ -3353,13 +3353,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:76",
+      "eventId": "dominion-mv6b0e1x-2:event:76",
       "seq": 76,
       "tick": 27,
-      "wallTime": "2026-10-13T05:21:40.104Z",
+      "wallTime": "2026-10-13T06:33:14.137Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3371,13 +3371,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:77",
+      "eventId": "dominion-mv6b0e1x-2:event:77",
       "seq": 77,
       "tick": 28,
-      "wallTime": "2026-10-13T05:21:41.304Z",
+      "wallTime": "2026-10-13T06:33:15.296Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3389,13 +3389,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:78",
+      "eventId": "dominion-mv6b0e1x-2:event:78",
       "seq": 78,
       "tick": 29,
-      "wallTime": "2026-10-13T05:21:42.503Z",
+      "wallTime": "2026-10-13T06:33:16.537Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3407,13 +3407,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:79",
+      "eventId": "dominion-mv6b0e1x-2:event:79",
       "seq": 79,
       "tick": 30,
-      "wallTime": "2026-10-13T05:21:43.704Z",
+      "wallTime": "2026-10-13T06:33:17.745Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3425,17 +3425,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:80",
+      "eventId": "dominion-mv6b0e1x-2:event:80",
       "seq": 80,
       "tick": 31,
-      "wallTime": "2026-10-13T05:21:44.904Z",
+      "wallTime": "2026-10-13T06:33:18.935Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "ship.arrived",
-      "actionId": "dominion-mv68gcui-2:action:30",
+      "actionId": "dominion-mv6b0e1x-2:action:30",
       "toolCallId": null,
       "payload": {
         "shipId": "repair-a",
@@ -3445,13 +3445,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:81",
+      "eventId": "dominion-mv6b0e1x-2:event:81",
       "seq": 81,
       "tick": 31,
-      "wallTime": "2026-10-13T05:21:44.904Z",
+      "wallTime": "2026-10-13T06:33:18.935Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3463,17 +3463,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:82",
+      "eventId": "dominion-mv6b0e1x-2:event:82",
       "seq": 82,
       "tick": 32,
-      "wallTime": "2026-10-13T05:21:46.104Z",
+      "wallTime": "2026-10-13T06:33:20.145Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "action.started",
-      "actionId": "dominion-mv68gcui-2:action:31",
+      "actionId": "dominion-mv6b0e1x-2:action:31",
       "toolCallId": null,
       "payload": {
         "shipId": "repair-a",
@@ -3487,13 +3487,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:83",
+      "eventId": "dominion-mv6b0e1x-2:event:83",
       "seq": 83,
       "tick": 32,
-      "wallTime": "2026-10-13T05:21:46.104Z",
+      "wallTime": "2026-10-13T06:33:20.145Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3505,13 +3505,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:84",
+      "eventId": "dominion-mv6b0e1x-2:event:84",
       "seq": 84,
       "tick": 33,
-      "wallTime": "2026-10-13T05:21:47.304Z",
+      "wallTime": "2026-10-13T06:33:21.296Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3523,13 +3523,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:85",
+      "eventId": "dominion-mv6b0e1x-2:event:85",
       "seq": 85,
       "tick": 34,
-      "wallTime": "2026-10-13T05:21:48.504Z",
+      "wallTime": "2026-10-13T06:33:22.495Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3541,13 +3541,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:86",
+      "eventId": "dominion-mv6b0e1x-2:event:86",
       "seq": 86,
       "tick": 35,
-      "wallTime": "2026-10-13T05:21:49.703Z",
+      "wallTime": "2026-10-13T06:33:23.745Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3559,13 +3559,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:87",
+      "eventId": "dominion-mv6b0e1x-2:event:87",
       "seq": 87,
       "tick": 36,
-      "wallTime": "2026-10-13T05:21:50.904Z",
+      "wallTime": "2026-10-13T06:33:24.898Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3577,13 +3577,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:88",
+      "eventId": "dominion-mv6b0e1x-2:event:88",
       "seq": 88,
       "tick": 37,
-      "wallTime": "2026-10-13T05:21:52.104Z",
+      "wallTime": "2026-10-13T06:33:26.095Z",
       "worldVersion": 3,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3595,13 +3595,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:89",
+      "eventId": "dominion-mv6b0e1x-2:event:89",
       "seq": 89,
       "tick": 38,
-      "wallTime": "2026-10-13T05:21:53.304Z",
+      "wallTime": "2026-10-13T06:33:27.296Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "relay.repaired",
@@ -3616,17 +3616,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:90",
+      "eventId": "dominion-mv6b0e1x-2:event:90",
       "seq": 90,
       "tick": 38,
-      "wallTime": "2026-10-13T05:21:53.304Z",
+      "wallTime": "2026-10-13T06:33:27.296Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "step.completed",
-      "actionId": "dominion-mv68gcui-2:action:32",
+      "actionId": "dominion-mv6b0e1x-2:action:32",
       "toolCallId": null,
       "payload": {
         "stepId": "mission-1:step:2",
@@ -3636,13 +3636,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:91",
+      "eventId": "dominion-mv6b0e1x-2:event:91",
       "seq": 91,
       "tick": 38,
-      "wallTime": "2026-10-13T05:21:53.304Z",
+      "wallTime": "2026-10-13T06:33:27.296Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3654,13 +3654,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:92",
+      "eventId": "dominion-mv6b0e1x-2:event:92",
       "seq": 92,
       "tick": 38,
-      "wallTime": "2026-10-13T05:21:53.351Z",
+      "wallTime": "2026-10-13T06:33:27.334Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "session.paused",
@@ -3670,18 +3670,18 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:93",
+      "eventId": "dominion-mv6b0e1x-2:event:93",
       "seq": 93,
       "tick": 38,
-      "wallTime": "2026-10-13T05:22:01.505Z",
+      "wallTime": "2026-10-13T06:33:35.585Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tool.completed",
       "actionId": null,
-      "toolCallId": "dominion-mv68gcui-2:tool:93",
+      "toolCallId": "dominion-mv6b0e1x-2:tool:93",
       "payload": {
         "tool": "read-world",
         "input": {
@@ -3697,13 +3697,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:94",
+      "eventId": "dominion-mv6b0e1x-2:event:94",
       "seq": 94,
       "tick": 38,
-      "wallTime": "2026-10-13T05:22:01.505Z",
+      "wallTime": "2026-10-13T06:33:35.586Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "session.running",
@@ -3713,17 +3713,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:95",
+      "eventId": "dominion-mv6b0e1x-2:event:95",
       "seq": 95,
       "tick": 39,
-      "wallTime": "2026-10-13T05:22:02.655Z",
+      "wallTime": "2026-10-13T06:33:36.836Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "task.assigned",
-      "actionId": "dominion-mv68gcui-2:action:33",
+      "actionId": "dominion-mv6b0e1x-2:action:33",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-b",
@@ -3740,18 +3740,18 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:96",
+      "eventId": "dominion-mv6b0e1x-2:event:96",
       "seq": 96,
       "tick": 39,
-      "wallTime": "2026-10-13T05:22:02.655Z",
+      "wallTime": "2026-10-13T06:33:36.837Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tool.completed",
       "actionId": null,
-      "toolCallId": "dominion-mv68gcui-2:tool:96",
+      "toolCallId": "dominion-mv6b0e1x-2:tool:96",
       "payload": {
         "tool": "estimate-route",
         "input": {
@@ -3779,13 +3779,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:97",
+      "eventId": "dominion-mv6b0e1x-2:event:97",
       "seq": 97,
       "tick": 39,
-      "wallTime": "2026-10-13T05:22:02.655Z",
+      "wallTime": "2026-10-13T06:33:36.837Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "plan.created",
@@ -3811,17 +3811,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:98",
+      "eventId": "dominion-mv6b0e1x-2:event:98",
       "seq": 98,
       "tick": 39,
-      "wallTime": "2026-10-13T05:22:02.655Z",
+      "wallTime": "2026-10-13T06:33:36.837Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "ship.departed",
-      "actionId": "dominion-mv68gcui-2:action:34",
+      "actionId": "dominion-mv6b0e1x-2:action:34",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-b",
@@ -3835,13 +3835,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:99",
+      "eventId": "dominion-mv6b0e1x-2:event:99",
       "seq": 99,
       "tick": 39,
-      "wallTime": "2026-10-13T05:22:02.655Z",
+      "wallTime": "2026-10-13T06:33:36.837Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3853,13 +3853,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:100",
+      "eventId": "dominion-mv6b0e1x-2:event:100",
       "seq": 100,
       "tick": 40,
-      "wallTime": "2026-10-13T05:22:03.853Z",
+      "wallTime": "2026-10-13T06:33:37.998Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3871,13 +3871,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:101",
+      "eventId": "dominion-mv6b0e1x-2:event:101",
       "seq": 101,
       "tick": 41,
-      "wallTime": "2026-10-13T05:22:05.055Z",
+      "wallTime": "2026-10-13T06:33:39.200Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3889,17 +3889,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:102",
+      "eventId": "dominion-mv6b0e1x-2:event:102",
       "seq": 102,
       "tick": 42,
-      "wallTime": "2026-10-13T05:22:06.255Z",
+      "wallTime": "2026-10-13T06:33:40.388Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "ship.arrived",
-      "actionId": "dominion-mv68gcui-2:action:35",
+      "actionId": "dominion-mv6b0e1x-2:action:35",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-b",
@@ -3909,13 +3909,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:103",
+      "eventId": "dominion-mv6b0e1x-2:event:103",
       "seq": 103,
       "tick": 42,
-      "wallTime": "2026-10-13T05:22:06.255Z",
+      "wallTime": "2026-10-13T06:33:40.389Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3927,17 +3927,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:104",
+      "eventId": "dominion-mv6b0e1x-2:event:104",
       "seq": 104,
       "tick": 43,
-      "wallTime": "2026-10-13T05:22:07.455Z",
+      "wallTime": "2026-10-13T06:33:41.588Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "action.started",
-      "actionId": "dominion-mv68gcui-2:action:36",
+      "actionId": "dominion-mv6b0e1x-2:action:36",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-b",
@@ -3951,13 +3951,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:105",
+      "eventId": "dominion-mv6b0e1x-2:event:105",
       "seq": 105,
       "tick": 43,
-      "wallTime": "2026-10-13T05:22:07.455Z",
+      "wallTime": "2026-10-13T06:33:41.588Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3969,13 +3969,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:106",
+      "eventId": "dominion-mv6b0e1x-2:event:106",
       "seq": 106,
       "tick": 44,
-      "wallTime": "2026-10-13T05:22:08.654Z",
+      "wallTime": "2026-10-13T06:33:42.835Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -3987,17 +3987,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:107",
+      "eventId": "dominion-mv6b0e1x-2:event:107",
       "seq": 107,
       "tick": 45,
-      "wallTime": "2026-10-13T05:22:09.854Z",
+      "wallTime": "2026-10-13T06:33:44.034Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "cargo.loaded",
-      "actionId": "dominion-mv68gcui-2:action:37",
+      "actionId": "dominion-mv6b0e1x-2:action:37",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-b",
@@ -4012,13 +4012,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:108",
+      "eventId": "dominion-mv6b0e1x-2:event:108",
       "seq": 108,
       "tick": 45,
-      "wallTime": "2026-10-13T05:22:09.854Z",
+      "wallTime": "2026-10-13T06:33:44.034Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4030,18 +4030,18 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:109",
+      "eventId": "dominion-mv6b0e1x-2:event:109",
       "seq": 109,
       "tick": 46,
-      "wallTime": "2026-10-13T05:22:11.055Z",
+      "wallTime": "2026-10-13T06:33:45.236Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tool.completed",
       "actionId": null,
-      "toolCallId": "dominion-mv68gcui-2:tool:109",
+      "toolCallId": "dominion-mv6b0e1x-2:tool:109",
       "payload": {
         "tool": "estimate-route",
         "input": {
@@ -4073,13 +4073,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:110",
+      "eventId": "dominion-mv6b0e1x-2:event:110",
       "seq": 110,
       "tick": 46,
-      "wallTime": "2026-10-13T05:22:11.055Z",
+      "wallTime": "2026-10-13T06:33:45.236Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "plan.created",
@@ -4109,17 +4109,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:111",
+      "eventId": "dominion-mv6b0e1x-2:event:111",
       "seq": 111,
       "tick": 46,
-      "wallTime": "2026-10-13T05:22:11.055Z",
+      "wallTime": "2026-10-13T06:33:45.237Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "ship.departed",
-      "actionId": "dominion-mv68gcui-2:action:38",
+      "actionId": "dominion-mv6b0e1x-2:action:38",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-b",
@@ -4133,13 +4133,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:112",
+      "eventId": "dominion-mv6b0e1x-2:event:112",
       "seq": 112,
       "tick": 46,
-      "wallTime": "2026-10-13T05:22:11.055Z",
+      "wallTime": "2026-10-13T06:33:45.237Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4151,13 +4151,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:113",
+      "eventId": "dominion-mv6b0e1x-2:event:113",
       "seq": 113,
       "tick": 47,
-      "wallTime": "2026-10-13T05:22:12.255Z",
+      "wallTime": "2026-10-13T06:33:46.435Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4169,13 +4169,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:114",
+      "eventId": "dominion-mv6b0e1x-2:event:114",
       "seq": 114,
       "tick": 48,
-      "wallTime": "2026-10-13T05:22:13.450Z",
+      "wallTime": "2026-10-13T06:33:47.586Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4187,17 +4187,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:115",
+      "eventId": "dominion-mv6b0e1x-2:event:115",
       "seq": 115,
       "tick": 49,
-      "wallTime": "2026-10-13T05:22:14.655Z",
+      "wallTime": "2026-10-13T06:33:48.835Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "ship.arrived",
-      "actionId": "dominion-mv68gcui-2:action:39",
+      "actionId": "dominion-mv6b0e1x-2:action:39",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-b",
@@ -4207,13 +4207,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:116",
+      "eventId": "dominion-mv6b0e1x-2:event:116",
       "seq": 116,
       "tick": 49,
-      "wallTime": "2026-10-13T05:22:14.655Z",
+      "wallTime": "2026-10-13T06:33:48.835Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4225,17 +4225,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:117",
+      "eventId": "dominion-mv6b0e1x-2:event:117",
       "seq": 117,
       "tick": 50,
-      "wallTime": "2026-10-13T05:22:15.855Z",
+      "wallTime": "2026-10-13T06:33:50.034Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "ship.departed",
-      "actionId": "dominion-mv68gcui-2:action:40",
+      "actionId": "dominion-mv6b0e1x-2:action:40",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-b",
@@ -4249,13 +4249,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:118",
+      "eventId": "dominion-mv6b0e1x-2:event:118",
       "seq": 118,
       "tick": 50,
-      "wallTime": "2026-10-13T05:22:15.855Z",
+      "wallTime": "2026-10-13T06:33:50.034Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4267,13 +4267,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:119",
+      "eventId": "dominion-mv6b0e1x-2:event:119",
       "seq": 119,
       "tick": 51,
-      "wallTime": "2026-10-13T05:22:17.054Z",
+      "wallTime": "2026-10-13T06:33:51.236Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4285,13 +4285,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:120",
+      "eventId": "dominion-mv6b0e1x-2:event:120",
       "seq": 120,
       "tick": 52,
-      "wallTime": "2026-10-13T05:22:18.255Z",
+      "wallTime": "2026-10-13T06:33:52.435Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4303,13 +4303,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:121",
+      "eventId": "dominion-mv6b0e1x-2:event:121",
       "seq": 121,
       "tick": 53,
-      "wallTime": "2026-10-13T05:22:19.455Z",
+      "wallTime": "2026-10-13T06:33:53.635Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4321,13 +4321,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:122",
+      "eventId": "dominion-mv6b0e1x-2:event:122",
       "seq": 122,
       "tick": 54,
-      "wallTime": "2026-10-13T05:22:20.655Z",
+      "wallTime": "2026-10-13T06:33:54.835Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4339,13 +4339,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:123",
+      "eventId": "dominion-mv6b0e1x-2:event:123",
       "seq": 123,
       "tick": 55,
-      "wallTime": "2026-10-13T05:22:21.852Z",
+      "wallTime": "2026-10-13T06:33:55.986Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4357,13 +4357,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:124",
+      "eventId": "dominion-mv6b0e1x-2:event:124",
       "seq": 124,
       "tick": 56,
-      "wallTime": "2026-10-13T05:22:23.055Z",
+      "wallTime": "2026-10-13T06:33:57.243Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4375,17 +4375,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:125",
+      "eventId": "dominion-mv6b0e1x-2:event:125",
       "seq": 125,
       "tick": 57,
-      "wallTime": "2026-10-13T05:22:24.255Z",
+      "wallTime": "2026-10-13T06:33:58.435Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "ship.arrived",
-      "actionId": "dominion-mv68gcui-2:action:41",
+      "actionId": "dominion-mv6b0e1x-2:action:41",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-b",
@@ -4395,13 +4395,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:126",
+      "eventId": "dominion-mv6b0e1x-2:event:126",
       "seq": 126,
       "tick": 57,
-      "wallTime": "2026-10-13T05:22:24.255Z",
+      "wallTime": "2026-10-13T06:33:58.435Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4413,17 +4413,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:127",
+      "eventId": "dominion-mv6b0e1x-2:event:127",
       "seq": 127,
       "tick": 58,
-      "wallTime": "2026-10-13T05:22:25.456Z",
+      "wallTime": "2026-10-13T06:33:59.648Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "ship.departed",
-      "actionId": "dominion-mv68gcui-2:action:42",
+      "actionId": "dominion-mv6b0e1x-2:action:42",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-b",
@@ -4437,13 +4437,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:128",
+      "eventId": "dominion-mv6b0e1x-2:event:128",
       "seq": 128,
       "tick": 58,
-      "wallTime": "2026-10-13T05:22:25.456Z",
+      "wallTime": "2026-10-13T06:33:59.648Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4455,13 +4455,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:129",
+      "eventId": "dominion-mv6b0e1x-2:event:129",
       "seq": 129,
       "tick": 59,
-      "wallTime": "2026-10-13T05:22:26.656Z",
+      "wallTime": "2026-10-13T06:34:00.835Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4473,13 +4473,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:130",
+      "eventId": "dominion-mv6b0e1x-2:event:130",
       "seq": 130,
       "tick": 60,
-      "wallTime": "2026-10-13T05:22:27.856Z",
+      "wallTime": "2026-10-13T06:34:02.035Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4491,13 +4491,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:131",
+      "eventId": "dominion-mv6b0e1x-2:event:131",
       "seq": 131,
       "tick": 61,
-      "wallTime": "2026-10-13T05:22:29.056Z",
+      "wallTime": "2026-10-13T06:34:03.186Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4509,13 +4509,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:132",
+      "eventId": "dominion-mv6b0e1x-2:event:132",
       "seq": 132,
       "tick": 62,
-      "wallTime": "2026-10-13T05:22:30.256Z",
+      "wallTime": "2026-10-13T06:34:04.434Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4527,13 +4527,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:133",
+      "eventId": "dominion-mv6b0e1x-2:event:133",
       "seq": 133,
       "tick": 63,
-      "wallTime": "2026-10-13T05:22:31.456Z",
+      "wallTime": "2026-10-13T06:34:05.586Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4545,17 +4545,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:134",
+      "eventId": "dominion-mv6b0e1x-2:event:134",
       "seq": 134,
       "tick": 64,
-      "wallTime": "2026-10-13T05:22:32.652Z",
+      "wallTime": "2026-10-13T06:34:06.834Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "ship.arrived",
-      "actionId": "dominion-mv68gcui-2:action:43",
+      "actionId": "dominion-mv6b0e1x-2:action:43",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-b",
@@ -4565,13 +4565,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:135",
+      "eventId": "dominion-mv6b0e1x-2:event:135",
       "seq": 135,
       "tick": 64,
-      "wallTime": "2026-10-13T05:22:32.652Z",
+      "wallTime": "2026-10-13T06:34:06.834Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4583,17 +4583,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:136",
+      "eventId": "dominion-mv6b0e1x-2:event:136",
       "seq": 136,
       "tick": 65,
-      "wallTime": "2026-10-13T05:22:33.856Z",
+      "wallTime": "2026-10-13T06:34:07.986Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "action.started",
-      "actionId": "dominion-mv68gcui-2:action:44",
+      "actionId": "dominion-mv6b0e1x-2:action:44",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-b",
@@ -4607,13 +4607,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:137",
+      "eventId": "dominion-mv6b0e1x-2:event:137",
       "seq": 137,
       "tick": 65,
-      "wallTime": "2026-10-13T05:22:33.856Z",
+      "wallTime": "2026-10-13T06:34:07.986Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4625,13 +4625,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:138",
+      "eventId": "dominion-mv6b0e1x-2:event:138",
       "seq": 138,
       "tick": 66,
-      "wallTime": "2026-10-13T05:22:35.056Z",
+      "wallTime": "2026-10-13T06:34:09.199Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4643,17 +4643,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:139",
+      "eventId": "dominion-mv6b0e1x-2:event:139",
       "seq": 139,
       "tick": 67,
-      "wallTime": "2026-10-13T05:22:36.256Z",
+      "wallTime": "2026-10-13T06:34:10.434Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "cargo.delivered",
-      "actionId": "dominion-mv68gcui-2:action:45",
+      "actionId": "dominion-mv6b0e1x-2:action:45",
       "toolCallId": null,
       "payload": {
         "shipId": "transport-b",
@@ -4668,17 +4668,17 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:140",
+      "eventId": "dominion-mv6b0e1x-2:event:140",
       "seq": 140,
       "tick": 67,
-      "wallTime": "2026-10-13T05:22:36.256Z",
+      "wallTime": "2026-10-13T06:34:10.434Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "step.completed",
-      "actionId": "dominion-mv68gcui-2:action:46",
+      "actionId": "dominion-mv6b0e1x-2:action:46",
       "toolCallId": null,
       "payload": {
         "stepId": "mission-1:step:3",
@@ -4688,13 +4688,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": "mission-1",
       "attempt": 1,
-      "eventId": "dominion-mv68gcui-2:event:141",
+      "eventId": "dominion-mv6b0e1x-2:event:141",
       "seq": 141,
       "tick": 67,
-      "wallTime": "2026-10-13T05:22:36.256Z",
+      "wallTime": "2026-10-13T06:34:10.434Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "mission.completed",
@@ -4711,13 +4711,13 @@
     },
     {
       "schemaVersion": 4,
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "missionId": null,
       "attempt": null,
-      "eventId": "dominion-mv68gcui-2:event:142",
+      "eventId": "dominion-mv6b0e1x-2:event:142",
       "seq": 142,
       "tick": 67,
-      "wallTime": "2026-10-13T05:22:36.256Z",
+      "wallTime": "2026-10-13T06:34:10.434Z",
       "worldVersion": 4,
       "mode": "local-simulation",
       "type": "tick.completed",
@@ -4731,7 +4731,7 @@
   "final": {
     "schemaVersion": 4,
     "plannerVersion": "dominion-dijkstra-reservation-v4.0",
-    "sessionId": "dominion-mv68gcui-2",
+    "sessionId": "dominion-mv6b0e1x-2",
     "seed": 4217,
     "scenario": "expedition",
     "tick": 67,
@@ -5677,133 +5677,133 @@
     "faults": [],
     "appliedFaults": [],
     "actionIds": [
-      "dominion-mv68gcui-2:action:1",
-      "dominion-mv68gcui-2:action:2",
-      "dominion-mv68gcui-2:action:3",
-      "dominion-mv68gcui-2:action:4",
-      "dominion-mv68gcui-2:action:5",
-      "dominion-mv68gcui-2:action:6",
-      "dominion-mv68gcui-2:action:7",
-      "dominion-mv68gcui-2:action:8",
-      "dominion-mv68gcui-2:action:9",
-      "dominion-mv68gcui-2:action:10",
-      "dominion-mv68gcui-2:action:11",
-      "dominion-mv68gcui-2:action:12",
-      "dominion-mv68gcui-2:action:13",
-      "dominion-mv68gcui-2:action:14",
-      "dominion-mv68gcui-2:action:15",
-      "dominion-mv68gcui-2:action:16",
-      "dominion-mv68gcui-2:action:17",
-      "dominion-mv68gcui-2:action:18",
-      "dominion-mv68gcui-2:action:19",
-      "dominion-mv68gcui-2:action:20",
-      "dominion-mv68gcui-2:action:21",
-      "dominion-mv68gcui-2:action:22",
-      "dominion-mv68gcui-2:action:23",
-      "dominion-mv68gcui-2:action:24",
-      "dominion-mv68gcui-2:action:25",
-      "dominion-mv68gcui-2:action:26",
-      "dominion-mv68gcui-2:action:27",
-      "dominion-mv68gcui-2:action:28",
-      "dominion-mv68gcui-2:action:29",
-      "dominion-mv68gcui-2:action:30",
-      "dominion-mv68gcui-2:action:31",
-      "dominion-mv68gcui-2:action:32",
-      "dominion-mv68gcui-2:action:33",
-      "dominion-mv68gcui-2:action:34",
-      "dominion-mv68gcui-2:action:35",
-      "dominion-mv68gcui-2:action:36",
-      "dominion-mv68gcui-2:action:37",
-      "dominion-mv68gcui-2:action:38",
-      "dominion-mv68gcui-2:action:39",
-      "dominion-mv68gcui-2:action:40",
-      "dominion-mv68gcui-2:action:41",
-      "dominion-mv68gcui-2:action:42",
-      "dominion-mv68gcui-2:action:43",
-      "dominion-mv68gcui-2:action:44",
-      "dominion-mv68gcui-2:action:45",
-      "dominion-mv68gcui-2:action:46"
+      "dominion-mv6b0e1x-2:action:1",
+      "dominion-mv6b0e1x-2:action:2",
+      "dominion-mv6b0e1x-2:action:3",
+      "dominion-mv6b0e1x-2:action:4",
+      "dominion-mv6b0e1x-2:action:5",
+      "dominion-mv6b0e1x-2:action:6",
+      "dominion-mv6b0e1x-2:action:7",
+      "dominion-mv6b0e1x-2:action:8",
+      "dominion-mv6b0e1x-2:action:9",
+      "dominion-mv6b0e1x-2:action:10",
+      "dominion-mv6b0e1x-2:action:11",
+      "dominion-mv6b0e1x-2:action:12",
+      "dominion-mv6b0e1x-2:action:13",
+      "dominion-mv6b0e1x-2:action:14",
+      "dominion-mv6b0e1x-2:action:15",
+      "dominion-mv6b0e1x-2:action:16",
+      "dominion-mv6b0e1x-2:action:17",
+      "dominion-mv6b0e1x-2:action:18",
+      "dominion-mv6b0e1x-2:action:19",
+      "dominion-mv6b0e1x-2:action:20",
+      "dominion-mv6b0e1x-2:action:21",
+      "dominion-mv6b0e1x-2:action:22",
+      "dominion-mv6b0e1x-2:action:23",
+      "dominion-mv6b0e1x-2:action:24",
+      "dominion-mv6b0e1x-2:action:25",
+      "dominion-mv6b0e1x-2:action:26",
+      "dominion-mv6b0e1x-2:action:27",
+      "dominion-mv6b0e1x-2:action:28",
+      "dominion-mv6b0e1x-2:action:29",
+      "dominion-mv6b0e1x-2:action:30",
+      "dominion-mv6b0e1x-2:action:31",
+      "dominion-mv6b0e1x-2:action:32",
+      "dominion-mv6b0e1x-2:action:33",
+      "dominion-mv6b0e1x-2:action:34",
+      "dominion-mv6b0e1x-2:action:35",
+      "dominion-mv6b0e1x-2:action:36",
+      "dominion-mv6b0e1x-2:action:37",
+      "dominion-mv6b0e1x-2:action:38",
+      "dominion-mv6b0e1x-2:action:39",
+      "dominion-mv6b0e1x-2:action:40",
+      "dominion-mv6b0e1x-2:action:41",
+      "dominion-mv6b0e1x-2:action:42",
+      "dominion-mv6b0e1x-2:action:43",
+      "dominion-mv6b0e1x-2:action:44",
+      "dominion-mv6b0e1x-2:action:45",
+      "dominion-mv6b0e1x-2:action:46"
     ],
     "commandIds": [
-      "3c7bf6ee-215f-4434-9c35-05871b1649b3",
-      "15a21c53-270c-45f4-a9bd-7d7aa9bd3ea7",
-      "988030c3-f3df-4321-876b-3295de627d36",
-      "7cecf0cb-b22d-4751-b83b-fa901d4b003f",
-      "dd862a62-600f-4d05-a4c8-ee8e2d6d9783",
-      "c099c943-cbe4-466f-b9bb-9f3106ffc4a2",
-      "05d71118-165f-46c9-b164-b2a1216db0e1",
-      "d28b075d-2921-44bc-96cc-81c6b88f9fa1",
-      "03fc0b23-c5bb-4305-be0a-bf17cb52005c",
-      "d014a971-a8f0-4e89-9c59-127169add420",
-      "c830bfa9-589a-490e-8307-db95a07ba6d0",
-      "f6efae64-80ef-4e5f-a862-3ae8bbbccf51",
-      "07599310-769b-4949-9003-8773f32f0a24",
-      "c8dfe4dc-a68e-4064-b7a4-576503009144",
-      "9f137565-b841-49e8-b33e-6d6975c4a5f4",
-      "b9babc82-5223-4f98-80af-a4bbf947b991",
-      "650173de-4466-48c6-9233-c8f34302225c",
-      "f7a9c794-8eb5-44df-9168-a6e66d7112e8",
-      "83cec103-f3eb-4c99-8f67-a65ff7e26a24",
-      "40dfc2aa-f3e7-4bca-8502-365b8bfd4172",
-      "e94404cf-3d1e-49d6-9c3d-be8b64f773bc",
-      "0928e42c-1292-44a6-9b19-49cfc8d591ba",
-      "a771cef0-967a-4da0-a950-ff339217bbf7",
-      "848dd02e-5dde-4a82-99d3-18b2c1ce729d",
-      "ae213451-f780-492c-8d52-7393b31a5a95",
-      "8a5cb3b5-f447-4fa3-b967-9eea0ac7fdc8",
-      "2f46c1d9-0d95-45a4-add6-52c1729e6ac7",
-      "b56f7324-aaad-4343-839d-1dcf94a95836",
-      "4a4aead8-ed4d-4951-91cc-3833f4eea299",
-      "a0dc9828-3825-46df-813b-ac6c068402d2",
-      "ce48511e-ddae-4f75-bf11-07c736ccd3c0",
-      "eeabb819-92af-4bda-9329-bf7d08efa4d3",
-      "bfd6263f-5890-4392-820b-0b39eb89dd37",
-      "ef95f2e5-7107-42b8-9a6a-1c9b5571f690",
-      "0f159fd2-da84-44bf-85e7-a9645893d54b",
-      "69ddc835-159a-481d-8ed3-a0274b5cbf19",
-      "eaf5bf68-b6fa-4aba-b8e5-d18fc639b892",
-      "f86c517d-62fc-4f6f-9144-5bcd82e86d51",
-      "e1962cc3-0b80-466f-a96f-3e06890555e8",
-      "184be903-f31a-47e5-9f70-9a4989296aba",
-      "4fe560db-eec6-47f3-a5f5-c1b333e8e928",
-      "f3baf917-d05d-4ac7-95ae-e55019707d41",
-      "9f10b4d4-97da-4fc7-8fb6-86083670c5f9",
-      "b784bfe1-0e42-401f-92ef-626da2ed3b40",
-      "48de2c7f-fec8-48fc-b03f-90e696838789",
-      "a6ad0fa0-d161-4454-bb36-cf3c6305271a",
-      "180b0e4a-9bbf-4806-8ee8-d65a6f25c6c8",
-      "f24d2020-385f-4427-962c-ce58d565a6c6",
-      "cfeb58f3-a3ab-469f-86d3-95589464d5f7",
-      "0edb9fef-553f-4706-af9d-f495368eacb4",
-      "ac2308b5-e72c-4e92-a130-7500cd73bde6",
-      "87055333-183f-49d0-9242-413d3c4d0c5c",
-      "749c1bdb-7a52-4a4e-8627-111f09fd2b77",
-      "b8c1c845-95d6-4c97-b2ce-6690f5ae5862",
-      "149a6e1a-4d32-43eb-a436-d9b2a43f9e55",
-      "d4d82101-9131-4cf0-9058-8b8ca0497fec",
-      "33863a83-dd93-4275-a5d0-0a576df6a9b8",
-      "5de460d1-e632-438a-8c2c-4cdbdcb9c749",
-      "ee70b1c7-62fe-4c56-b9ee-007801e9622f",
-      "0decb777-e55f-46af-845a-9880b1cfa56a",
-      "5fd32c39-5130-4d4a-84b1-8a83f8ec3d73",
-      "ae109307-14ea-4a4b-8969-6a67ad648a15",
-      "7ef851ec-964e-4304-bb21-95c721500b19",
-      "d609d8a4-5ee1-42fd-9129-31646c8ea7b5",
-      "a849b8a2-9bf1-4f64-976d-12969fb8c3a5",
-      "0aed293b-b76a-4f39-a194-8d2a36b9ef11",
-      "4169b7b1-995c-4d56-a39e-f52b0d9f46a6",
-      "ab7cd8ce-620e-4702-8501-57b68de91671",
-      "6a49f5fa-83db-462f-aaeb-98d2d30614ac",
-      "1a1ed040-4b97-4e81-abc8-cfb01d7b6698",
-      "3e058050-b7b4-4b40-a4dc-ffca0f33b38e",
-      "9a913a6a-c91e-4a8d-8ad4-2b47dd305e2b",
-      "2e349d90-8b0a-4817-8196-33aa77760dda"
+      "000ece2e-f2de-4b64-92d6-561818453385",
+      "6e466eae-e5bb-4e41-ab07-e2ec4146f5ca",
+      "f044d4b5-c0d2-4769-a1f4-3065274ec1cf",
+      "1cc46b92-7284-4a7a-8c50-5618fc8be9c6",
+      "126f6e6b-3141-400c-aaea-f10315230171",
+      "a570e39e-2e4e-43cd-9617-db4f924cdd49",
+      "9c8d1c47-b403-420a-b981-71f541b53c76",
+      "e2a9438a-f753-4a21-bb96-4e87652050ad",
+      "ef6e4fb9-6be6-45c6-8707-4743bc5dd037",
+      "541935ce-07b4-4522-bb26-6e71e75ba54c",
+      "e68fbe96-464e-438c-ad88-de8f627e0098",
+      "96a1bd92-bc3b-4162-9bfa-19c0c56d11af",
+      "62d38208-1f22-4505-bd98-14c6bbdb7ef6",
+      "fbb89d22-91e7-4031-9ca3-d0d73950f7bf",
+      "575c096f-042f-44a9-927a-4be9e9b13f8f",
+      "22487c36-edaa-4aeb-a30b-6923396a4780",
+      "2d00b6f6-6d11-4b51-8945-2462c05019b4",
+      "1e6fd6c8-e222-499a-ba05-e3a64b02ce00",
+      "7fa761bc-0b69-40ef-a053-0b64ed5134c6",
+      "40c4a753-8c7f-4d7c-ae11-a9c170833c8c",
+      "5eea640c-5a1e-4457-938c-49f6c6512ff2",
+      "7944d9bc-c158-46f5-b0d5-322b6c365321",
+      "5ef6361b-db7f-4ac3-a5d5-a98e2d2f8ac2",
+      "c15239f1-409a-4457-add4-65fa2b2cd0f1",
+      "340c20ca-a749-4455-86c8-fcc51213fba0",
+      "2116475a-7908-49a4-8d4d-de55ce5577f8",
+      "be16c7b5-f44f-4bde-9251-17308923ad38",
+      "c08c339c-b9d4-4b81-826f-43ea114bf993",
+      "ebd2b605-aafa-4ae5-8f70-1dd251f8248f",
+      "95eec738-cfc0-461d-8955-d8101bc3697e",
+      "31df6adf-a0a8-4c15-a460-ad66e09e3be4",
+      "be262f13-23c1-4783-a5e7-3023f9865bd8",
+      "9280d921-1b19-4dbf-a3dc-57d1ebe0fd1e",
+      "91404cd9-5a6d-48db-9eed-c327bcf3e93e",
+      "4381c43e-5045-4259-8ad2-9a3b9306cd49",
+      "3477fb9c-b828-4d74-b6e4-1f916485c44a",
+      "bb816866-f906-4c6d-af17-f5eaecbd0967",
+      "6f1b73d0-db7a-46c1-9328-d4a6a0c9e213",
+      "c25928b9-2e1e-49c4-a67e-3a32d051e18d",
+      "5a3cab2b-2c57-4808-88f6-f5ba0ebc5740",
+      "cbe51a50-4afe-4d48-973e-54a4e61b996b",
+      "f8af0490-8a78-4f20-915c-488055c61131",
+      "c6ebbcd4-4657-4c73-b446-1aa09358e9c0",
+      "d0a3828d-699e-4e17-8bf9-6265c6af8d56",
+      "72ad3582-008c-40be-8c12-fe4d12fe7d96",
+      "0dc55451-a673-4f79-9070-57059eaac757",
+      "c1a3ed07-54ea-460d-b630-adf073af17c9",
+      "7669e888-0dc3-4aeb-9cc1-f98010d62b5f",
+      "cf8cc0a0-e4f0-4fe4-93e2-d2f8e0a531fe",
+      "bab8d294-5cbc-4c91-bf15-80df22d829e0",
+      "e5517a49-d991-4013-8dcb-eacc595051c9",
+      "acf0c3c1-a94f-41ae-aca3-71ac189626fa",
+      "4ce37404-91bd-4783-9425-e8e36766332d",
+      "ca82f1ab-2f71-4109-9886-b29a08b87a30",
+      "15d88079-075c-421e-ad55-ee236de5e114",
+      "02d905cf-523e-4934-8000-d940e9667330",
+      "b5720e74-0a91-467d-9c3d-ef31ef0f6cbd",
+      "c519a115-67db-4d95-a796-76776fcfcb16",
+      "a5ed7141-d4ea-49b9-8220-0334cb3769ce",
+      "21e688a4-d201-4d16-b442-43a01c4c33ae",
+      "a47c08f6-eeee-4b97-a27a-f9e60c91717b",
+      "63e6125d-a6ec-4b04-83b8-5b337f9e6a4b",
+      "dc70a7ee-3044-448f-8855-a7b45185a22a",
+      "83936754-c4a6-49e7-bf28-c4f1076669e7",
+      "5ecbd623-f978-4bf6-a57f-37e14a95c048",
+      "cf14c314-36b8-44e5-9f6a-88ebe7119135",
+      "ae41da7c-9a0f-4134-ae47-92794f3af794",
+      "644a79ad-b8b5-4377-869e-395e5f5fc81a",
+      "736442dc-9c5c-4fea-bd89-3949eecbb391",
+      "58349ab0-c00f-4dbb-9e22-b591175150c2",
+      "866b60d2-e055-4ddb-91d5-28ea26cb5b78",
+      "ad72d10c-3934-4a3c-ada6-a7fd86766e5a",
+      "c2f16307-7cb3-4e73-b644-329a57686082"
     ],
     "replans": 8,
     "message": "当前任务批次已结束；世界仍开放，可查看结果、恢复失败或创建新任务。",
     "tools": [
       {
-        "id": "dominion-mv68gcui-2:tool:1",
+        "id": "dominion-mv6b0e1x-2:tool:1",
         "tool": "read-world",
         "input": {
           "worldVersion": 1
@@ -5821,7 +5821,7 @@
         "durationMs": 0.10000002384185791
       },
       {
-        "id": "dominion-mv68gcui-2:tool:5",
+        "id": "dominion-mv6b0e1x-2:tool:5",
         "tool": "estimate-route",
         "input": {
           "shipId": "survey-a",
@@ -5850,10 +5850,10 @@
           "seed:4217",
           "dominion-dijkstra-reservation-v4.0"
         ],
-        "durationMs": 0
+        "durationMs": 0.19999992847442627
       },
       {
-        "id": "dominion-mv68gcui-2:tool:8",
+        "id": "dominion-mv6b0e1x-2:tool:8",
         "tool": "estimate-route",
         "input": {
           "shipId": "transport-a",
@@ -5880,10 +5880,10 @@
           "seed:4217",
           "dominion-dijkstra-reservation-v4.0"
         ],
-        "durationMs": 0
+        "durationMs": 0.10000002384185791
       },
       {
-        "id": "dominion-mv68gcui-2:tool:25",
+        "id": "dominion-mv6b0e1x-2:tool:25",
         "tool": "estimate-route",
         "input": {
           "shipId": "transport-a",
@@ -5915,7 +5915,7 @@
         "durationMs": 0
       },
       {
-        "id": "dominion-mv68gcui-2:tool:37",
+        "id": "dominion-mv6b0e1x-2:tool:37",
         "tool": "read-world",
         "input": {
           "worldVersion": 3
@@ -5933,7 +5933,7 @@
         "durationMs": 0
       },
       {
-        "id": "dominion-mv68gcui-2:tool:40",
+        "id": "dominion-mv6b0e1x-2:tool:40",
         "tool": "estimate-route",
         "input": {
           "shipId": "repair-a",
@@ -5960,10 +5960,10 @@
           "seed:4217",
           "dominion-dijkstra-reservation-v4.0"
         ],
-        "durationMs": 0.10000002384185791
+        "durationMs": 0
       },
       {
-        "id": "dominion-mv68gcui-2:tool:43",
+        "id": "dominion-mv6b0e1x-2:tool:43",
         "tool": "estimate-route",
         "input": {
           "shipId": "transport-a",
@@ -5993,7 +5993,7 @@
         "durationMs": 0
       },
       {
-        "id": "dominion-mv68gcui-2:tool:58",
+        "id": "dominion-mv6b0e1x-2:tool:58",
         "tool": "estimate-route",
         "input": {
           "shipId": "repair-a",
@@ -6024,10 +6024,10 @@
           "seed:4217",
           "dominion-dijkstra-reservation-v4.0"
         ],
-        "durationMs": 0.10000002384185791
+        "durationMs": 0.09999990463256836
       },
       {
-        "id": "dominion-mv68gcui-2:tool:93",
+        "id": "dominion-mv6b0e1x-2:tool:93",
         "tool": "read-world",
         "input": {
           "worldVersion": 4
@@ -6045,7 +6045,7 @@
         "durationMs": 0.10000002384185791
       },
       {
-        "id": "dominion-mv68gcui-2:tool:96",
+        "id": "dominion-mv6b0e1x-2:tool:96",
         "tool": "estimate-route",
         "input": {
           "shipId": "transport-b",
@@ -6075,7 +6075,7 @@
         "durationMs": 0
       },
       {
-        "id": "dominion-mv68gcui-2:tool:109",
+        "id": "dominion-mv6b0e1x-2:tool:109",
         "tool": "estimate-route",
         "input": {
           "shipId": "transport-b",

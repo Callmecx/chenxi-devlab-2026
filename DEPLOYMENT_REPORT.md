@@ -1,10 +1,20 @@
 # GitHub 发布与线上验收
 
+## V4 功能发布与匿名验收（2026-10-13）
+
+功能发布提交：`01afff76df0ae76bd62bf16839fdff182c2827cb`。[PR #3](https://github.com/Callmecx/chenxi-devlab-2026/pull/3) 在[第二轮完整PR CI](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38356930003)通过后合并；[主分支 CI 与 Pages](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38359501057)完整成功。类型、Lint、407项单元/API、127项生产浏览器、三个网页与微信/App资源构建、仓库子路径业务、发布扫描和部署均通过；逐步骤证据：[PR](docs/testing/ci-v4-pr-second.json)、[主分支](docs/testing/ci-v4-main-functional.json)。首轮CI的4个失败及修复保留，不合并累计成通过数。
+
+**2026-10-13 15:20:21 +08**，全新未登录Chrome对部署进行了实际操作：10路由×390/1440，正确HTTP200/标题/无横溢出；V4真实单步→全封路→不可达→同会话显式新attempt→勘测维修运输与补给均完成，V3双载体失败恢复后交付3份，实用工具审批拒绝，商城SKU/购物袋/结算/返回，H5选择与预约入口；9证据资产可访问。页面错误和失败资源均为0，检查前后`build-meta`完全相同、`sourceTreeDirty:false`，源码SHA精确匹配。机器结果：[online-smoke.json](docs/testing/online-smoke.json)。这是公网静态模式验收，不是公网API/模型验收。
+
+[V4旗舰](https://callmecx.github.io/chenxi-devlab-2026/#/intelligence)、[主站](https://callmecx.github.io/chenxi-devlab-2026/#/)、[商城](https://callmecx.github.io/chenxi-devlab-2026/shop/#/)和[H5](https://callmecx.github.io/chenxi-devlab-2026/pulse/#/)保留原路径；V3和实用任务库仍可直接进入。后续纯证据提交不改变上述功能树；最终交付提交、其完整CI/Pages、精确版本匿名验收及原片附件另随[v4.0.0 Release](https://github.com/Callmecx/chenxi-devlab-2026/releases/tag/v4.0.0)提供；最终交付的精确版本以该Release附件为准，本段保留首次功能发布的实际验收。
+
+正式媒体和12样本性能锁定干净源码`157e5f6`：25张原图、101.640秒原始WebM，32,567,750bytes，SHA256 `381e704c1945ace82eccc04bc234a949b21d71c176bdbbd9ff82a83ffdedcff8`。以[媒体清单](docs/intelligence-lab-v4/media-manifest.json)的完整哈希为准；原片不进入Git，仅审阅后作为Release附件。回退保留`v3.0.0` / `4d2a85f2908cc5b202bc104707ec9a00947af47c`，不移动旧标签、不force push、不声称已演练线上回滚。无仓库可见性、旧仓、其他项目或费用变更。
+
 ## V3 已发布并通过匿名业务复验（2026-10-13）
 
 功能发布提交：`da9b6337be81f7d6650785071984d1d2eb73fb47`；[PR #2](https://github.com/Callmecx/chenxi-devlab-2026/pull/2) 在完整 [PR CI](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38281209887) 通过后合并，主分支首次失败由静止减弱动效按需绘制修复。[主分支 CI 与 Pages](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38286209858) 于 **2026/10/13 01:58:05（Asia/Shanghai）** 成功。两套依赖安装、类型、Lint、308项单元/API、95项完整生产浏览器、网页/微信/App资源构建、最终仓库子路径业务与发布扫描全部通过。逐步骤证据：[PR CI](docs/testing/ci-v3-pr.json)、[主分支CI](docs/testing/ci-v3-release.json)。
 
-**2026/10/13 02:02:26** 使用全新未登录 Chrome 154.0.8037.94 完成线上复验：9路由分别在390/1440下HTTP200、标题正确、无横溢出；轨道港真实单步→全部封路→不可达→开路重试→双载体实际交付3份、实用任务商品审批拒绝、商城SKU→购物袋→结算与返回、H5预约入口均通过；4证据资产可访问，页面异常和失败资产均为0。`build-meta.json.sourceRevision` 与上述功能发布提交完全一致，`sourceTreeDirty:false`。机器证据：[online-smoke.json](docs/testing/online-smoke.json)。
+**2026/10/13 02:02:26** 使用全新未登录 Chrome 154.0.8037.94 完成线上复验：9路由分别在390/1440下HTTP200、标题正确、无横溢出；轨道港真实单步→全部封路→不可达→开路重试→双载体实际交付3份、实用任务商品审批拒绝、商城SKU→购物袋→结算与返回、H5预约入口均通过；4证据资产可访问，页面异常和失败资产均为0。`build-meta.json.sourceRevision` 与上述功能发布提交完全一致，`sourceTreeDirty:false`。机器证据：[V3 online-smoke.json](https://github.com/Callmecx/chenxi-devlab-2026/blob/v3.0.0/docs/testing/online-smoke.json)。
 
 真实录屏：[v3.0.0 Release](https://github.com/Callmecx/chenxi-devlab-2026/releases/tag/v3.0.0)，75.720秒、16,000,955 bytes；GitHub附件返回的SHA-256与本机原片一致：`ef0a69e7d2429a47664ab29813d4437f9c231ab2996f792c48c457324c915af7`。它来自ec20eaf的实际浏览器操作，后续Worker恢复修复没有改变正常场景；不倒写影片源版本。
 
@@ -14,7 +24,7 @@
 
 功能检查点 `dc336f17d672dc061e90c4a1b40966f1244ce4da`，分支 `feature/intelligence-lab-v3-rebuild`。完整本地93项生产浏览器、308项单元/API、类型、Lint及各端资源构建通过。
 
-**00:35:31（Asia/Shanghai）** 完成实际仓库路径 `/chenxi-devlab-2026/` 的生产构建与浏览器验证：9个路由分别在390/1440下检查，4个业务流程、4个证据资产通过；页面异常/失败资产均0，`sourceTreeDirty:false`，构建SHA与功能检查点一致。星港实际单步→全封路→不可达→开路重试→3份送达经过验证。机器证据：[deployment-path-check.json](docs/testing/deployment-path-check.json)。这是当时的本机子路径验证；后续真实公开发布和匿名线上结果已在本报告顶部单列。
+**00:35:31（Asia/Shanghai）** 完成实际仓库路径 `/chenxi-devlab-2026/` 的生产构建与浏览器验证：9个路由分别在390/1440下检查，4个业务流程、4个证据资产通过；页面异常/失败资产均0，`sourceTreeDirty:false`，构建SHA与功能检查点一致。星港实际单步→全封路→不可达→开路重试→3份送达经过验证。机器证据：[V3 deployment-path-check.json](https://github.com/Callmecx/chenxi-devlab-2026/blob/v3.0.0/docs/testing/deployment-path-check.json)。这是当时的本机子路径验证；后续真实公开发布和匿名线上结果已在本报告顶部单列。
 
 远端 `v2.0.0` 标签已读回核对，指向 `8059fb954e089a7880a4d1cea52941f03deb5c54`，保留为上个正式版本的恢复目标。无仓库可见性、自定义域名或旧仓变更。
 

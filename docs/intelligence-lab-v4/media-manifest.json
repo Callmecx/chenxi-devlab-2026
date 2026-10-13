@@ -3,9 +3,9 @@
   "classification": "reviewed-clean-production-media",
   "sourceBuild": {
     "basePath": "/",
-    "sourceRevision": "3c6d78fae44f4416f4299827b57086c56253d596",
+    "sourceRevision": "157e5f6f9261ee8f7ed61f6688c2c1562166b374",
     "sourceTreeDirty": false,
-    "builtAt": "2026-10-13T05:08:39.828Z",
+    "builtAt": "2026-10-13T06:30:42.526Z",
     "apps": [
       "portfolio",
       "shop",
@@ -14,17 +14,17 @@
   },
   "sourceBuildAfter": {
     "basePath": "/",
-    "sourceRevision": "3c6d78fae44f4416f4299827b57086c56253d596",
+    "sourceRevision": "157e5f6f9261ee8f7ed61f6688c2c1562166b374",
     "sourceTreeDirty": false,
-    "builtAt": "2026-10-13T05:08:39.828Z",
+    "builtAt": "2026-10-13T06:30:42.526Z",
     "apps": [
       "portfolio",
       "shop",
       "pulse"
     ]
   },
-  "capturedFrom": "2026-10-13T05:20:24.774Z",
-  "capturedUntil": "2026-10-13T05:22:38.967Z",
+  "capturedFrom": "2026-10-13T06:31:42.398Z",
+  "capturedUntil": "2026-10-13T06:34:14.259Z",
   "browser": "154.0.8037.94",
   "conditions": {
     "deviceScaleFactor": 1,
@@ -42,7 +42,7 @@
       "sha256": "0f32ba747f4f8b1ee3e2915174ce8fa48c79b30ddc992f3678f57defc2f8a536",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68fmbt-1",
+        "sessionId": "dominion-mv6azb48-1",
         "status": "ready",
         "mode": "local-simulation",
         "tick": "0",
@@ -58,13 +58,13 @@
       "rendering": [
         {
           "engine": "three.js r186",
-          "dominionCanvas": "dominion-io5we26",
+          "dominionCanvas": "dominion-52hi4np",
           "rendering": "active",
           "pixels": "928800",
           "quality": "high",
           "rafPending": "1",
           "renderMode": "continuous",
-          "frames": "101",
+          "frames": "105",
           "camera": "overview",
           "cameraRequest": "1",
           "worldVersion": "1",
@@ -93,7 +93,7 @@
       "sha256": "003c9a838bb25eba038ab7e18ae12533f7a5ba0fdb772a70167d9241c8884773",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68fmbt-1",
+        "sessionId": "dominion-mv6azb48-1",
         "status": "ready",
         "mode": "local-simulation",
         "tick": "0",
@@ -109,13 +109,13 @@
       "rendering": [
         {
           "engine": "three.js r186",
-          "dominionCanvas": "dominion-io5we26",
+          "dominionCanvas": "dominion-52hi4np",
           "rendering": "active",
           "pixels": "928800",
           "quality": "high",
           "rafPending": "1",
           "renderMode": "continuous",
-          "frames": "180",
+          "frames": "199",
           "camera": "cockpit",
           "cameraRequest": "2",
           "worldVersion": "1",
@@ -140,11 +140,11 @@
     {
       "name": "1440-S3-loading",
       "file": "../screenshots/v4/1440-S3-loading.png",
-      "bytes": 531634,
-      "sha256": "bd7fa909ee801e786dd3cca21a4833c77ddf03b731dad9608b6760486232d80f",
+      "bytes": 531320,
+      "sha256": "619846d272bc96bc9a1d472e35a5d3dd8f5250fbc82089cc0fde0c245403604b",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68foy8-2",
+        "sessionId": "dominion-mv6aze3x-2",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "6",
@@ -160,13 +160,13 @@
       "rendering": [
         {
           "engine": "three.js r186",
-          "dominionCanvas": "dominion-io5we26",
+          "dominionCanvas": "dominion-52hi4np",
           "rendering": "active",
           "pixels": "928800",
           "quality": "high",
           "rafPending": "1",
           "renderMode": "continuous",
-          "frames": "348",
+          "frames": "460",
           "camera": "docking",
           "cameraRequest": "4",
           "worldVersion": "1",
@@ -176,8 +176,8 @@
           "layerResources": "false",
           "layerLanes": "true",
           "resourceLabels": "0",
-          "drawCalls": "158",
-          "geometries": "111",
+          "drawCalls": "160",
+          "geometries": "117",
           "textures": "1"
         }
       ],
@@ -228,17 +228,17 @@
           "waitTicks": 0,
           "totalWait": 0
         },
-        "sourceRecordingSha256": "e950d23e44e8101f5b52b1f07e34192ab22173b89efae5a92d3e05312fe9eda3"
+        "sourceRecordingSha256": "baa14f91c80d960e304ce625cb864ce400bee12031705ee88dfe0621a92b641b"
       }
     },
     {
       "name": "1440-S4-scanning",
       "file": "../screenshots/v4/1440-S4-scanning.png",
-      "bytes": 344989,
-      "sha256": "d74be805576e688ae494552638ef749ec55ca8226cdcf9c6a92e41370da0b842",
+      "bytes": 344439,
+      "sha256": "243646123bee25bcfaf5b549d855d3d7c7f6432fb2a114b0ae57c945d348c59e",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68fr5e-3",
+        "sessionId": "dominion-mv6azhrc-3",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "8",
@@ -254,13 +254,13 @@
       "rendering": [
         {
           "engine": "three.js r186",
-          "dominionCanvas": "dominion-io5we26",
+          "dominionCanvas": "dominion-52hi4np",
           "rendering": "active",
           "pixels": "928800",
           "quality": "high",
           "rafPending": "1",
           "renderMode": "continuous",
-          "frames": "537",
+          "frames": "750",
           "camera": "scan",
           "cameraRequest": "6",
           "worldVersion": "1",
@@ -270,8 +270,8 @@
           "layerResources": "false",
           "layerLanes": "true",
           "resourceLabels": "0",
-          "drawCalls": "124",
-          "geometries": "131",
+          "drawCalls": "157",
+          "geometries": "119",
           "textures": "1"
         }
       ],
@@ -322,17 +322,17 @@
           "waitTicks": 0,
           "totalWait": 0
         },
-        "sourceRecordingSha256": "49f972bacf5a7d5cdb3d947a8aec7748a0415073e81e0136735e9b1d8e96ff52"
+        "sourceRecordingSha256": "0b3c95531715f9f500200af575ff1dd89eb9e74a8d3e9891b62ad52f8efc7073"
       }
     },
     {
       "name": "1440-S5-repairing",
       "file": "../screenshots/v4/1440-S5-repairing.png",
-      "bytes": 390808,
-      "sha256": "cfb8538211a3defc49b4c7c2242e25a9d2af043f6d11b9eb03863ba4f02cb56f",
+      "bytes": 390039,
+      "sha256": "ec7f8d8aa468aa495b0b22451b8627865d3102c27fcf311cdca11ac43d3b0503",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68fr5e-3",
+        "sessionId": "dominion-mv6azhrc-3",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "26",
@@ -348,13 +348,13 @@
       "rendering": [
         {
           "engine": "three.js r186",
-          "dominionCanvas": "dominion-io5we26",
+          "dominionCanvas": "dominion-52hi4np",
           "rendering": "active",
           "pixels": "928800",
           "quality": "high",
           "rafPending": "1",
           "renderMode": "continuous",
-          "frames": "848",
+          "frames": "1275",
           "camera": "docking",
           "cameraRequest": "7",
           "worldVersion": "2",
@@ -364,7 +364,7 @@
           "layerResources": "false",
           "layerLanes": "true",
           "resourceLabels": "0",
-          "drawCalls": "117",
+          "drawCalls": "118",
           "geometries": "133",
           "textures": "1"
         }
@@ -416,17 +416,17 @@
           "waitTicks": 0,
           "totalWait": 0
         },
-        "sourceRecordingSha256": "a7ae065b45f4fb557ab4b92bd49b23b778c1d91703cd471f3d58cef743c66fad"
+        "sourceRecordingSha256": "1cc8a27022c86c83c5ffee25074dfc5a29a9f4b7827e0f2a168ecdbb6da525c2"
       }
     },
     {
       "name": "1440-S6-comparison",
       "file": "../screenshots/v4/1440-S6-comparison.png",
-      "bytes": 166440,
-      "sha256": "8823f23025e34e169cbbd8600dabbfe6509df493f6f6d65c3e9a388c05323dcd",
+      "bytes": 166823,
+      "sha256": "e2a4b2300874b8fa015fae05e4d60c6267cd7d044465e6dfef6a4be0aeaf4724",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68fr5e-3",
+        "sessionId": "dominion-mv6azhrc-3",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "26",
@@ -442,13 +442,13 @@
       "rendering": [
         {
           "engine": "three.js r186",
-          "dominionCanvas": "dominion-io5we26",
+          "dominionCanvas": "dominion-52hi4np",
           "rendering": "active",
           "pixels": "928800",
           "quality": "high",
           "rafPending": "1",
           "renderMode": "continuous",
-          "frames": "871",
+          "frames": "1339",
           "camera": "docking",
           "cameraRequest": "7",
           "worldVersion": "2",
@@ -458,7 +458,7 @@
           "layerResources": "false",
           "layerLanes": "true",
           "resourceLabels": "0",
-          "drawCalls": "117",
+          "drawCalls": "118",
           "geometries": "133",
           "textures": "1"
         }
@@ -484,7 +484,7 @@
       "sha256": "32fe7fe3fdf6f924aeddd93e3756902f61cbf021b8fc8e9ddaf14ce398c0ccc9",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68fy5h-1",
+        "sessionId": "dominion-mv6aztm2-1",
         "status": "ready",
         "mode": "local-simulation",
         "tick": "0",
@@ -500,13 +500,13 @@
       "rendering": [
         {
           "engine": "three.js r186",
-          "dominionCanvas": "dominion-20r2m8y",
+          "dominionCanvas": "dominion-nxfwfdl",
           "rendering": "active",
           "pixels": "202800",
           "quality": "mobile",
           "rafPending": "1",
           "renderMode": "continuous",
-          "frames": "67",
+          "frames": "65",
           "camera": "overview",
           "cameraRequest": "1",
           "worldVersion": "1",
@@ -535,7 +535,7 @@
       "sha256": "99eaa738f89bed90ba99ab72c0ec44a2c50fda4d336ab539b160d554dfb271cc",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68fy5h-1",
+        "sessionId": "dominion-mv6aztm2-1",
         "status": "ready",
         "mode": "local-simulation",
         "tick": "0",
@@ -551,13 +551,13 @@
       "rendering": [
         {
           "engine": "three.js r186",
-          "dominionCanvas": "dominion-20r2m8y",
+          "dominionCanvas": "dominion-nxfwfdl",
           "rendering": "active",
           "pixels": "202800",
           "quality": "mobile",
           "rafPending": "1",
           "renderMode": "continuous",
-          "frames": "103",
+          "frames": "104",
           "camera": "cockpit",
           "cameraRequest": "2",
           "worldVersion": "1",
@@ -586,7 +586,7 @@
       "sha256": "d2d36d78e97fbf1a0c42e978710b157cbd0146620cd861b62f8ced625e4b70be",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68g0la-2",
+        "sessionId": "dominion-mv6azwck-2",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "6",
@@ -602,13 +602,13 @@
       "rendering": [
         {
           "engine": "three.js r186",
-          "dominionCanvas": "dominion-20r2m8y",
+          "dominionCanvas": "dominion-nxfwfdl",
           "rendering": "active",
           "pixels": "202800",
           "quality": "mobile",
           "rafPending": "1",
           "renderMode": "continuous",
-          "frames": "211",
+          "frames": "246",
           "camera": "docking",
           "cameraRequest": "4",
           "worldVersion": "1",
@@ -618,8 +618,8 @@
           "layerResources": "false",
           "layerLanes": "true",
           "resourceLabels": "0",
-          "drawCalls": "122",
-          "geometries": "136",
+          "drawCalls": "115",
+          "geometries": "94",
           "textures": "1"
         }
       ],
@@ -670,17 +670,17 @@
           "waitTicks": 0,
           "totalWait": 0
         },
-        "sourceRecordingSha256": "68c62c60e146dbe2f5714f3bc5be8028aef95e0e5130f92d3911558f8ff52c86"
+        "sourceRecordingSha256": "953024a6870cb32e3223f7daa2759e6187434e4e22581d7f0cf97a69caf0f811"
       }
     },
     {
       "name": "390-S4-scanning",
       "file": "../screenshots/v4/390-S4-scanning.png",
-      "bytes": 147009,
-      "sha256": "386412764642bc45d8445dbe2aff0859c0d9c54dd0501cbc8918c8519a9703e1",
+      "bytes": 146845,
+      "sha256": "794dddc37e73e75e0c0d67cc72571578f80a52edc4aeb34c86f81f84aeb25a7a",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68g3cu-3",
+        "sessionId": "dominion-mv6b0040-3",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "8",
@@ -696,13 +696,13 @@
       "rendering": [
         {
           "engine": "three.js r186",
-          "dominionCanvas": "dominion-20r2m8y",
+          "dominionCanvas": "dominion-nxfwfdl",
           "rendering": "active",
           "pixels": "202800",
           "quality": "mobile",
           "rafPending": "1",
           "renderMode": "continuous",
-          "frames": "328",
+          "frames": "416",
           "camera": "scan",
           "cameraRequest": "6",
           "worldVersion": "1",
@@ -712,8 +712,8 @@
           "layerResources": "false",
           "layerLanes": "true",
           "resourceLabels": "0",
-          "drawCalls": "124",
-          "geometries": "117",
+          "drawCalls": "107",
+          "geometries": "95",
           "textures": "1"
         }
       ],
@@ -764,17 +764,17 @@
           "waitTicks": 0,
           "totalWait": 0
         },
-        "sourceRecordingSha256": "612b333c8c3c0df20d61f2c4bee0c66f0c6d8e9ae39b5a2a5d123fb8581e7375"
+        "sourceRecordingSha256": "a65b0ba5038281d0bde3f4d93217e2064dbd645c168d10f73035c820a5bf11f3"
       }
     },
     {
       "name": "390-S5-repairing",
       "file": "../screenshots/v4/390-S5-repairing.png",
-      "bytes": 140962,
-      "sha256": "bc23ad21cadbf74534fa1da7a1ad448983e0d12e18fa5c840ce7b51c8689f638",
+      "bytes": 141180,
+      "sha256": "690108a2860b002126ecf88199c786f95a5c83b6a1987082b6f14c94e1cf3f33",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68g3cu-3",
+        "sessionId": "dominion-mv6b0040-3",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "26",
@@ -790,13 +790,13 @@
       "rendering": [
         {
           "engine": "three.js r186",
-          "dominionCanvas": "dominion-20r2m8y",
+          "dominionCanvas": "dominion-nxfwfdl",
           "rendering": "active",
           "pixels": "202800",
           "quality": "mobile",
           "rafPending": "1",
           "renderMode": "continuous",
-          "frames": "537",
+          "frames": "712",
           "camera": "docking",
           "cameraRequest": "7",
           "worldVersion": "2",
@@ -806,8 +806,8 @@
           "layerResources": "false",
           "layerLanes": "true",
           "resourceLabels": "0",
-          "drawCalls": "92",
-          "geometries": "119",
+          "drawCalls": "74",
+          "geometries": "150",
           "textures": "1"
         }
       ],
@@ -858,7 +858,7 @@
           "waitTicks": 0,
           "totalWait": 0
         },
-        "sourceRecordingSha256": "34a410f2b1965d82d637ef1cf4284d8c10e3bed6cafd73a0c456e794635649a9"
+        "sourceRecordingSha256": "14548ce583ad93311616db3a351a59af4aed70cfa40d3099f9cdec7e3df56665"
       }
     },
     {
@@ -868,7 +868,7 @@
       "sha256": "dc5e2a1c230a423031251cbcb465b8a0cfdadde33be7e0f164104be14410988f",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68g3cu-3",
+        "sessionId": "dominion-mv6b0040-3",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "26",
@@ -884,13 +884,13 @@
       "rendering": [
         {
           "engine": "three.js r186",
-          "dominionCanvas": "dominion-20r2m8y",
+          "dominionCanvas": "dominion-nxfwfdl",
           "rendering": "active",
           "pixels": "202800",
           "quality": "mobile",
           "rafPending": "1",
           "renderMode": "continuous",
-          "frames": "547",
+          "frames": "731",
           "camera": "docking",
           "cameraRequest": "7",
           "worldVersion": "2",
@@ -900,8 +900,8 @@
           "layerResources": "false",
           "layerLanes": "true",
           "resourceLabels": "0",
-          "drawCalls": "92",
-          "geometries": "119",
+          "drawCalls": "74",
+          "geometries": "150",
           "textures": "1"
         }
       ],
@@ -926,7 +926,7 @@
       "sha256": "c6916d494f2e2171ddd1f16f928e91348309a67493f1fa3df7f27070f68c9eac",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68g3cu-3",
+        "sessionId": "dominion-mv6b0040-3",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "26",
@@ -942,13 +942,13 @@
       "rendering": [
         {
           "engine": "three.js r186",
-          "dominionCanvas": "dominion-20r2m8y",
+          "dominionCanvas": "dominion-nxfwfdl",
           "rendering": "active",
           "pixels": "202800",
           "quality": "mobile",
           "rafPending": "1",
           "renderMode": "continuous",
-          "frames": "550",
+          "frames": "735",
           "camera": "docking",
           "cameraRequest": "7",
           "worldVersion": "2",
@@ -958,8 +958,8 @@
           "layerResources": "false",
           "layerLanes": "true",
           "resourceLabels": "0",
-          "drawCalls": "92",
-          "geometries": "119",
+          "drawCalls": "74",
+          "geometries": "150",
           "textures": "1"
         }
       ],
@@ -975,11 +975,11 @@
     {
       "name": "guide-completed",
       "file": "../screenshots/v4/guide-completed.png",
-      "bytes": 619269,
-      "sha256": "833169d30985288cb5705b72fa0db8ddbac79e2a2cb9f725a770152ed8c7db3c",
+      "bytes": 619002,
+      "sha256": "75e65ddc9e772933694540c3fd9f6b86428f702fcbcb050f070b814975a90cee",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68gcui-2",
+        "sessionId": "dominion-mv6b0e1x-2",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "67",
@@ -995,13 +995,13 @@
       "rendering": [
         {
           "engine": "three.js r186",
-          "dominionCanvas": "dominion-zf39dox",
+          "dominionCanvas": "dominion-6let87n",
           "rendering": "active",
           "pixels": "928800",
           "quality": "high",
           "rafPending": "1",
           "renderMode": "continuous",
-          "frames": "5942",
+          "frames": "5947",
           "camera": "overview",
           "cameraRequest": "11",
           "worldVersion": "4",
@@ -1011,7 +1011,7 @@
           "layerResources": "false",
           "layerLanes": "true",
           "resourceLabels": "0",
-          "drawCalls": "142",
+          "drawCalls": "143",
           "geometries": "166",
           "textures": "5"
         }
@@ -1022,18 +1022,18 @@
       },
       "scrollWidth": 1440,
       "facts": {
-        "guideElapsedMs": 96676.1006
+        "guideElapsedMs": 96913.64300000001
       }
     }
   ],
   "supplementary": [
     {
       "file": "../screenshots/v4/1440-imported-guide-final.png",
-      "bytes": 378203,
-      "sha256": "d3452326c282e48de52f3c2845caf31c8efa99583825feac6709dcfd1992e84c",
+      "bytes": 378202,
+      "sha256": "ee88a1f35c342389837cef2a81edd5b46e184e4054323f126c926dc6e933628b",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68gcui-2",
+        "sessionId": "dominion-mv6b0e1x-2",
         "status": "paused",
         "mode": "history-replay",
         "tick": "67",
@@ -1055,7 +1055,7 @@
       "sha256": "fa7bfae674c9328dd3ccc738f4f9e6e22afdec05a1ef9ad171c3ca5da5e59326",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68jj78-2",
+        "sessionId": "dominion-mv6b2lrb-2",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "1",
@@ -1077,7 +1077,7 @@
       "sha256": "989db41e72909f6a9b0a6924d437a4f8108579dd24ea11ceefb679c2359bdf1a",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68jj78-2",
+        "sessionId": "dominion-mv6b2lrb-2",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "1",
@@ -1099,7 +1099,7 @@
       "sha256": "59b82ff4fa0f4df42d0be46c11eb1d855cbfd71d2c49e235e92f6a96021fb799",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68jj78-2",
+        "sessionId": "dominion-mv6b2lrb-2",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "1",
@@ -1121,7 +1121,7 @@
       "sha256": "051a65ae01407370d4cec9c2b10b302d81c629c9a16369eff643f26f919791a1",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68jj78-2",
+        "sessionId": "dominion-mv6b2lrb-2",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "1",
@@ -1143,7 +1143,7 @@
       "sha256": "75f3eaa00885aa9a8691131c14bf4b5b8970cb18a8a6eff52b1a644834f5c051",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68jj78-2",
+        "sessionId": "dominion-mv6b2lrb-2",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "1",
@@ -1165,7 +1165,7 @@
       "sha256": "b8928777650e8a6c0be8526d2894fa87a810bfc29ffcab91b304f0b955b0d91a",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68jkwt-2",
+        "sessionId": "dominion-mv6b2nvp-2",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "1",
@@ -1187,7 +1187,7 @@
       "sha256": "7504ad45c166daedff57d09e6c1eb0e21976082b3c0e1975640123903e11d00f",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68jkwt-2",
+        "sessionId": "dominion-mv6b2nvp-2",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "1",
@@ -1209,7 +1209,7 @@
       "sha256": "5a2447190ea17494c14d74141faec232be7eca4cb6ef194f9fb95c7389274da5",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68jkwt-2",
+        "sessionId": "dominion-mv6b2nvp-2",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "1",
@@ -1231,7 +1231,7 @@
       "sha256": "9948e095a310da8fb15cebe0e2175abf398f71cfa944efbed310eac13a279880",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68jkwt-2",
+        "sessionId": "dominion-mv6b2nvp-2",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "1",
@@ -1253,7 +1253,7 @@
       "sha256": "c8ca76627b30cc1c6135b233e8cf1c156aec366419a6a9e85f211d08f38bab9b",
       "state": {
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68jkwt-2",
+        "sessionId": "dominion-mv6b2nvp-2",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "1",
@@ -1275,7 +1275,7 @@
       {
         "elapsedMs": 0,
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68gcui-2",
+        "sessionId": "dominion-mv6b0e1x-2",
         "status": "ready",
         "mode": "local-simulation",
         "tick": "0",
@@ -1289,9 +1289,9 @@
         "layerLanes": "true"
       },
       {
-        "elapsedMs": 4015,
+        "elapsedMs": 3992.399999976158,
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68gcui-2",
+        "sessionId": "dominion-mv6b0e1x-2",
         "status": "running",
         "mode": "local-simulation",
         "tick": "0",
@@ -1305,9 +1305,9 @@
         "layerLanes": "true"
       },
       {
-        "elapsedMs": 17217,
+        "elapsedMs": 17239.099999904633,
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68gcui-2",
+        "sessionId": "dominion-mv6b0e1x-2",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "11",
@@ -1321,9 +1321,9 @@
         "layerLanes": "true"
       },
       {
-        "elapsedMs": 21258.700000047684,
+        "elapsedMs": 21284.299999952316,
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68gcui-2",
+        "sessionId": "dominion-mv6b0e1x-2",
         "status": "running",
         "mode": "local-simulation",
         "tick": "11",
@@ -1337,9 +1337,9 @@
         "layerLanes": "true"
       },
       {
-        "elapsedMs": 53658.300000071526,
+        "elapsedMs": 53723.199999928474,
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68gcui-2",
+        "sessionId": "dominion-mv6b0e1x-2",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "38",
@@ -1353,9 +1353,9 @@
         "layerLanes": "true"
       },
       {
-        "elapsedMs": 53760.39999997616,
+        "elapsedMs": 53952,
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68gcui-2",
+        "sessionId": "dominion-mv6b0e1x-2",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "38",
@@ -1369,9 +1369,9 @@
         "layerLanes": "true"
       },
       {
-        "elapsedMs": 61817.700000047684,
+        "elapsedMs": 61984.59999990463,
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68gcui-2",
+        "sessionId": "dominion-mv6b0e1x-2",
         "status": "running",
         "mode": "local-simulation",
         "tick": "38",
@@ -1380,14 +1380,14 @@
         "connected": "true",
         "view": "command",
         "guide": "delivery",
-        "guideSeconds": "61",
+        "guideSeconds": "62",
         "layerResources": "false",
         "layerLanes": "true"
       },
       {
-        "elapsedMs": 96612.5,
+        "elapsedMs": 96871.29999995232,
         "testid": "dominion-lab",
-        "sessionId": "dominion-mv68gcui-2",
+        "sessionId": "dominion-mv6b0e1x-2",
         "status": "paused",
         "mode": "local-simulation",
         "tick": "67",
@@ -1401,11 +1401,11 @@
         "layerLanes": "true"
       }
     ],
-    "sessionId": "dominion-mv68gcui-2",
-    "guideElapsedMs": 96676.1006,
+    "sessionId": "dominion-mv6b0e1x-2",
+    "guideElapsedMs": 96913.64300000001,
     "final": {
       "testid": "dominion-lab",
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "status": "paused",
       "mode": "local-simulation",
       "tick": "67",
@@ -1477,20 +1477,21 @@
         }
       ],
       "format": {
-        "duration": "100.480000",
-        "size": "32259419"
+        "duration": "101.640000",
+        "size": "32567750"
       }
     },
+    "durationNote": "Encoded metadata read after capture by existing ffprobe; original video SHA256 rechecked unchanged. guideElapsedMs is independently observed business completion time.",
     "recordingFile": "guide-example.json",
-    "recordingSha256": "1bb16e06d9eb534dd90096cafe5bdc1f02129eec0b5acc0c60c368d354e11d34",
-    "videoBytes": 32259419,
-    "videoSha256": "c02f3d9a9d5246229170e69218b5698df9ea9de8361a29e36862f3913969fdaa"
+    "recordingSha256": "120a5ba79095fc9232e09bb7d61833434f9aed43ff0c4b3419f19535ceaacb1b",
+    "videoBytes": 32567750,
+    "videoSha256": "381e704c1945ace82eccc04bc234a949b21d71c176bdbbd9ff82a83ffdedcff8"
   },
   "strictImport": {
     "accepted": true,
     "final": {
       "testid": "dominion-lab",
-      "sessionId": "dominion-mv68gcui-2",
+      "sessionId": "dominion-mv6b0e1x-2",
       "status": "paused",
       "mode": "history-replay",
       "tick": "67",
@@ -1504,12 +1505,12 @@
       "layerLanes": "true"
     },
     "rangeMax": "73",
-    "sourceSha256": "1bb16e06d9eb534dd90096cafe5bdc1f02129eec0b5acc0c60c368d354e11d34",
+    "sourceSha256": "120a5ba79095fc9232e09bb7d61833434f9aed43ff0c4b3419f19535ceaacb1b",
     "build": {
       "basePath": "/",
-      "sourceRevision": "3c6d78fae44f4416f4299827b57086c56253d596",
+      "sourceRevision": "157e5f6f9261ee8f7ed61f6688c2c1562166b374",
       "sourceTreeDirty": false,
-      "builtAt": "2026-10-13T05:08:39.828Z",
+      "builtAt": "2026-10-13T06:30:42.526Z",
       "apps": [
         "portfolio",
         "shop",
@@ -1522,9 +1523,9 @@
     "classification": "production-resource-restoration",
     "sourceBuild": {
       "basePath": "/",
-      "sourceRevision": "3c6d78fae44f4416f4299827b57086c56253d596",
+      "sourceRevision": "157e5f6f9261ee8f7ed61f6688c2c1562166b374",
       "sourceTreeDirty": false,
-      "builtAt": "2026-10-13T05:08:39.828Z",
+      "builtAt": "2026-10-13T06:30:42.526Z",
       "apps": [
         "portfolio",
         "shop",
@@ -1541,7 +1542,7 @@
         "pixelIdentical": true,
         "beforeState": {
           "testid": "dominion-lab",
-          "sessionId": "dominion-mv68jmgc-1",
+          "sessionId": "dominion-mv6b2pzt-1",
           "status": "ready",
           "mode": "local-simulation",
           "tick": "0",
@@ -1556,7 +1557,7 @@
         },
         "afterState": {
           "testid": "dominion-lab",
-          "sessionId": "dominion-mv68jmgc-1",
+          "sessionId": "dominion-mv6b2pzt-1",
           "status": "ready",
           "mode": "local-simulation",
           "tick": "0",
@@ -1579,7 +1580,7 @@
         "pixelIdentical": true,
         "beforeState": {
           "testid": "dominion-lab",
-          "sessionId": "dominion-mv68jnsf-1",
+          "sessionId": "dominion-mv6b2re6-1",
           "status": "ready",
           "mode": "local-simulation",
           "tick": "0",
@@ -1594,7 +1595,7 @@
         },
         "afterState": {
           "testid": "dominion-lab",
-          "sessionId": "dominion-mv68jnsf-1",
+          "sessionId": "dominion-mv6b2re6-1",
           "status": "ready",
           "mode": "local-simulation",
           "tick": "0",

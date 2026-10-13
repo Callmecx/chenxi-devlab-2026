@@ -1,0 +1,265 @@
+{
+  "conclusion": "success",
+  "createdAt": "2026-10-13T06:55:24Z",
+  "event": "push",
+  "headSha": "01afff76df0ae76bd62bf16839fdff182c2827cb",
+  "jobs": [
+    {
+      "completedAt": "2026-10-13T07:17:49Z",
+      "conclusion": "success",
+      "databaseId": 115170077801,
+      "name": "build",
+      "startedAt": "2026-10-13T06:55:27Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-13T06:55:28Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-13T06:55:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T06:55:32Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@v4",
+          "number": 2,
+          "startedAt": "2026-10-13T06:55:28Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T06:55:35Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@v4",
+          "number": 3,
+          "startedAt": "2026-10-13T06:55:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T06:55:43Z",
+          "conclusion": "success",
+          "name": "Run npm ci",
+          "number": 4,
+          "startedAt": "2026-10-13T06:55:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T06:57:06Z",
+          "conclusion": "success",
+          "name": "Run npm ci --prefix apps/commerce-mini",
+          "number": 5,
+          "startedAt": "2026-10-13T06:55:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T06:57:19Z",
+          "conclusion": "success",
+          "name": "Run npm run typecheck",
+          "number": 6,
+          "startedAt": "2026-10-13T06:57:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T06:57:24Z",
+          "conclusion": "success",
+          "name": "Run npm run lint",
+          "number": 7,
+          "startedAt": "2026-10-13T06:57:19Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T06:57:33Z",
+          "conclusion": "success",
+          "name": "Run npm test",
+          "number": 8,
+          "startedAt": "2026-10-13T06:57:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T06:57:55Z",
+          "conclusion": "success",
+          "name": "Run npm run build",
+          "number": 9,
+          "startedAt": "2026-10-13T06:57:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T06:57:59Z",
+          "conclusion": "success",
+          "name": "Run npm run build:mini",
+          "number": 10,
+          "startedAt": "2026-10-13T06:57:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T06:58:03Z",
+          "conclusion": "success",
+          "name": "Run npm run build:app",
+          "number": 11,
+          "startedAt": "2026-10-13T06:57:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T06:58:23Z",
+          "conclusion": "success",
+          "name": "Run npx playwright install --with-deps chromium",
+          "number": 12,
+          "startedAt": "2026-10-13T06:58:03Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T06:58:26Z",
+          "conclusion": "success",
+          "name": "Install Chinese fonts for browser evidence",
+          "number": 13,
+          "startedAt": "2026-10-13T06:58:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T07:15:51Z",
+          "conclusion": "success",
+          "name": "Run npm run test:e2e",
+          "number": 14,
+          "startedAt": "2026-10-13T06:58:26Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T07:15:51Z",
+          "conclusion": "success",
+          "name": "Run npm run test:summary",
+          "number": 15,
+          "startedAt": "2026-10-13T07:15:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T07:15:51Z",
+          "conclusion": "success",
+          "name": "Run npm run security:scan -- --report docs/testing/security-scan.json",
+          "number": 16,
+          "startedAt": "2026-10-13T07:15:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T07:16:13Z",
+          "conclusion": "success",
+          "name": "Build repository-path deployment",
+          "number": 17,
+          "startedAt": "2026-10-13T07:15:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T07:17:40Z",
+          "conclusion": "success",
+          "name": "Validate final Pages paths and business interactions",
+          "number": 18,
+          "startedAt": "2026-10-13T07:16:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T07:17:40Z",
+          "conclusion": "success",
+          "name": "Run npm run security:scan -- --report docs/testing/security-scan.json",
+          "number": 19,
+          "startedAt": "2026-10-13T07:17:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T07:17:43Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@v4",
+          "number": 20,
+          "startedAt": "2026-10-13T07:17:40Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T07:17:44Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@v4",
+          "number": 21,
+          "startedAt": "2026-10-13T07:17:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T07:17:45Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@v4",
+          "number": 22,
+          "startedAt": "2026-10-13T07:17:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T07:17:47Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-pages-artifact@v3",
+          "number": 23,
+          "startedAt": "2026-10-13T07:17:45Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T07:17:47Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@v4",
+          "number": 45,
+          "startedAt": "2026-10-13T07:17:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T07:17:48Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@v4",
+          "number": 46,
+          "startedAt": "2026-10-13T07:17:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T07:17:48Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 47,
+          "startedAt": "2026-10-13T07:17:48Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38359501057/job/115170077801"
+    },
+    {
+      "completedAt": "2026-10-13T07:18:02Z",
+      "conclusion": "success",
+      "databaseId": 115177385033,
+      "name": "deploy",
+      "startedAt": "2026-10-13T07:17:52Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-13T07:17:54Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-13T07:17:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T07:18:00Z",
+          "conclusion": "success",
+          "name": "Deploy",
+          "number": 2,
+          "startedAt": "2026-10-13T07:17:54Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-13T07:18:00Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 3,
+          "startedAt": "2026-10-13T07:18:00Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38359501057/job/115177385033"
+    }
+  ],
+  "status": "completed",
+  "updatedAt": "2026-10-13T07:18:02Z",
+  "url": "https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38359501057"
+}

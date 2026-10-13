@@ -19,7 +19,23 @@ page.on("response", (response) => {
   if (response.status() >= 400 && response.url().startsWith(base))
     failures.push({ url: response.url(), status: response.status() });
 });
+async function readBuildMetadata() {
+  const response = await page.request.get(new URL("build-meta.json", base).href, {
+    headers: { "Cache-Control": "no-cache" },
+  });
+  if (!response.ok()) throw new Error("Missing deployment build metadata");
+  const metadata = await response.json();
+  if (
+    metadata.basePath !== new URL(base).pathname ||
+    !/^[a-f0-9]{40}$/.test(metadata.sourceRevision) ||
+    metadata.sourceTreeDirty !== false
+  ) throw new Error("Deployment base/source revision is invalid or source tree is dirty");
+  if (process.env.EXPECTED_REVISION && metadata.sourceRevision !== process.env.EXPECTED_REVISION)
+    throw new Error(`Unexpected deployed revision: ${metadata.sourceRevision}`);
+  return metadata;
+}
 try {
+  const buildBefore = await readBuildMetadata();
   for (const width of [390, 1440]) {
     await page.setViewportSize({ width, height: width === 390 ? 844 : 1000 });
     for (const [path, expected] of [
@@ -27,6 +43,7 @@ try {
       ["shop/", "Select"],
       ["pulse/", "蓉城周末 Lab"],
       ["#/intelligence", "智能演化实验室"],
+      ["#/intelligence/v3", "V3 历史版本"],
       ["#/intelligence/tasks", "实用任务库"],
       ["#/labs/market-replay", "金融事件回放"],
       ["#/labs/enterprise-flow", "企业业务闭环"],
@@ -51,6 +68,32 @@ try {
     }
   }
   await page.goto(base + "#/intelligence");
+  const dominion = page.getByTestId("dominion-lab");
+  await page.getByRole('combobox', { name: '运行速度', exact: true }).selectOption('4');
+  await page.getByRole('button', { name: '单步', exact: true }).click();
+  await expect(dominion).toHaveAttribute('data-status', 'paused');
+  await expect(dominion).toHaveAttribute('data-tick', '1');
+  const session = await dominion.getAttribute('data-session-id');
+  await page.getByRole('button', { name: '世界设置', exact: true }).click();
+  await page.getByRole('button', { name: '封闭所有航道', exact: true }).click();
+  await page.getByRole('button', { name: '关闭面板', exact: true }).click();
+  await page.getByRole('button', { name: '继续远征', exact: true }).click();
+  await expect(page.locator('.dom-failure-strip')).toContainText('UNREACHABLE', { timeout: 15000 });
+  await expect(dominion).toHaveAttribute('data-status', 'paused');
+  await expect(dominion).toHaveAttribute('data-completed', '0');
+  await page.getByRole('button', { name: '世界设置', exact: true }).click();
+  await page.getByRole('button', { name: '重新开放所有航道', exact: true }).click();
+  await page.getByRole('button', { name: '关闭面板', exact: true }).click();
+  await page.getByRole('button', { name: '重试 勘测 · 维修 · 运输接力', exact: true }).click();
+  await page.getByRole('button', { name: '重试 深空常规补给', exact: true }).click();
+  await expect(dominion).toHaveAttribute('data-completed', '2', { timeout: 40000 });
+  await expect(dominion).toHaveAttribute('data-status', 'paused');
+  await expect(dominion).toHaveAttribute('data-session-id', session);
+  await page.getByRole('button', { name: '任务编排', exact: true }).click();
+  await expect(page.locator('[data-mission-status="completed"]')).toHaveCount(2);
+  await expect(page.locator('[data-step-status="completed"]')).toHaveCount(3);
+  interactions.push('V4 six-ship world: actual step → closure → unreachable → same-session explicit new attempts → survey/repair/transport and supply both complete.');
+  await page.goto(base + "#/intelligence/v3");
   const orbit = page.getByTestId("orbit-lab");
   await page.getByRole("button", { name: "开始补给任务", exact: true }).click();
   await page.getByRole("button", { name: "暂停任务", exact: true }).click();
@@ -129,6 +172,11 @@ try {
     "evidence/TEST_REPORT.md",
     "evidence/enterpriseflow-dashboard.png",
     "evidence/intelligence-lab/evaluation.json",
+    "evidence/intelligence-lab-v4/CONTRIBUTION_MAP.md",
+    "evidence/intelligence-lab-v4/TEST_REPORT.md",
+    "evidence/intelligence-lab-v4/PERFORMANCE.md",
+    "evidence/intelligence-lab-v4/DEMO_GUIDE.md",
+    "evidence/intelligence-lab-v4/MODE_AND_RELEASE_STATUS.md",
     "screenshots/shop-checkout-390.png",
   ]) {
     const response = await page.request.get(new URL(asset, base).href);
@@ -138,22 +186,9 @@ try {
   }
   if (errors.length || failures.length)
     throw new Error(JSON.stringify({ errors, failures }));
-  const metadataResponse = await page.request.get(
-    new URL("build-meta.json", base).href,
-  );
-  if (!metadataResponse.ok())
-    throw new Error("Missing deployment build metadata");
-  const build = await metadataResponse.json();
-  if (
-    build.basePath !== new URL(base).pathname ||
-    !/^[a-f0-9]{40}$/.test(build.sourceRevision)
-  )
-    throw new Error("Deployment base or source revision is invalid");
-  if (
-    process.env.EXPECTED_REVISION &&
-    build.sourceRevision !== process.env.EXPECTED_REVISION
-  )
-    throw new Error(`Unexpected deployed revision: ${build.sourceRevision}`);
+  const build = await readBuildMetadata();
+  if (JSON.stringify(build) !== JSON.stringify(buildBefore))
+    throw new Error("Deployment changed during browser verification; rerun against one revision");
   await mkdir("docs/testing", { recursive: true });
   const report = {
     checkedAt: new Date().toISOString(),

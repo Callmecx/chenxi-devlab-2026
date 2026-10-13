@@ -1,0 +1,6113 @@
+{
+  "schemaVersion": 4,
+  "plannerVersion": "dominion-dijkstra-reservation-v4.0",
+  "initial": {
+    "schemaVersion": 4,
+    "plannerVersion": "dominion-dijkstra-reservation-v4.0",
+    "sessionId": "dominion-mv68gcui-2",
+    "seed": 4217,
+    "scenario": "expedition",
+    "tick": 0,
+    "worldVersion": 1,
+    "status": "ready",
+    "strategy": "balanced",
+    "connected": true,
+    "stations": [
+      {
+        "id": "port",
+        "label": "曙光环港",
+        "regionId": "dawn",
+        "kind": "port",
+        "position": [
+          -15,
+          0,
+          10
+        ],
+        "stock": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 8,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "forge",
+        "label": "赫利俄斯物资仓",
+        "regionId": "dawn",
+        "kind": "depot",
+        "position": [
+          -12,
+          3,
+          0
+        ],
+        "stock": {
+          "energy": 80,
+          "supplies": 12,
+          "parts": 10,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 3,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "depot",
+        "label": "晨曦能源舱",
+        "regionId": "dawn",
+        "kind": "depot",
+        "position": [
+          -20,
+          -1,
+          -6
+        ],
+        "stock": {
+          "energy": 60,
+          "supplies": 4,
+          "parts": 4,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 2,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "gate",
+        "label": "远征航门",
+        "regionId": "dawn",
+        "kind": "relay",
+        "position": [
+          -5,
+          2,
+          -8
+        ],
+        "stock": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 3,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "ice",
+        "label": "霜环前哨",
+        "regionId": "frost",
+        "kind": "outpost",
+        "position": [
+          4,
+          1,
+          -13
+        ],
+        "stock": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 3,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "silo",
+        "label": "冰脊资源站",
+        "regionId": "frost",
+        "kind": "depot",
+        "position": [
+          13,
+          -1,
+          -9
+        ],
+        "stock": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 2,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "beacon",
+        "label": "北冕导航台",
+        "regionId": "frost",
+        "kind": "relay",
+        "position": [
+          10,
+          4,
+          0
+        ],
+        "stock": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 3,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "relay",
+        "label": "赤砂受损中继",
+        "regionId": "ember",
+        "kind": "relay",
+        "position": [
+          2,
+          1,
+          7
+        ],
+        "stock": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 3,
+        "blockedBerths": 0,
+        "damaged": true
+      },
+      {
+        "id": "lab",
+        "label": "赤砂科研站",
+        "regionId": "ember",
+        "kind": "science",
+        "position": [
+          14,
+          0,
+          10
+        ],
+        "stock": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 4,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "sample",
+        "label": "砾光勘测点",
+        "regionId": "ember",
+        "kind": "sample",
+        "position": [
+          20,
+          2,
+          5
+        ],
+        "stock": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 3,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "dock",
+        "label": "启明星维修坞",
+        "regionId": "dawn",
+        "kind": "port",
+        "position": [
+          -3,
+          -1,
+          13
+        ],
+        "stock": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 3,
+        "blockedBerths": 0,
+        "damaged": false
+      }
+    ],
+    "lanes": [
+      {
+        "id": "port-forge",
+        "from": "port",
+        "to": "forge",
+        "ticks": 3,
+        "energy": 4,
+        "risk": 1,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "port-depot",
+        "from": "port",
+        "to": "depot",
+        "ticks": 5,
+        "energy": 2,
+        "risk": 0,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "port-dock",
+        "from": "port",
+        "to": "dock",
+        "ticks": 3,
+        "energy": 3,
+        "risk": 1,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "forge-gate",
+        "from": "forge",
+        "to": "gate",
+        "ticks": 3,
+        "energy": 4,
+        "risk": 2,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "depot-gate",
+        "from": "depot",
+        "to": "gate",
+        "ticks": 5,
+        "energy": 2,
+        "risk": 0,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "gate-ice",
+        "from": "gate",
+        "to": "ice",
+        "ticks": 4,
+        "energy": 8,
+        "risk": 3,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "ice-silo",
+        "from": "ice",
+        "to": "silo",
+        "ticks": 3,
+        "energy": 2,
+        "risk": 1,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "gate-beacon",
+        "from": "gate",
+        "to": "beacon",
+        "ticks": 7,
+        "energy": 2,
+        "risk": 0,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "silo-beacon",
+        "from": "silo",
+        "to": "beacon",
+        "ticks": 4,
+        "energy": 3,
+        "risk": 1,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "forge-relay",
+        "from": "forge",
+        "to": "relay",
+        "ticks": 4,
+        "energy": 5,
+        "risk": 3,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "dock-relay",
+        "from": "dock",
+        "to": "relay",
+        "ticks": 4,
+        "energy": 2,
+        "risk": 0,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "relay-beacon",
+        "from": "relay",
+        "to": "beacon",
+        "ticks": 4,
+        "energy": 3,
+        "risk": 1,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "relay-lab",
+        "from": "relay",
+        "to": "lab",
+        "ticks": 3,
+        "energy": 4,
+        "risk": 2,
+        "capacity": 1,
+        "open": true,
+        "damaged": true,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "beacon-lab",
+        "from": "beacon",
+        "to": "lab",
+        "ticks": 6,
+        "energy": 2,
+        "risk": 0,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "lab-sample",
+        "from": "lab",
+        "to": "sample",
+        "ticks": 3,
+        "energy": 3,
+        "risk": 1,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "silo-sample",
+        "from": "silo",
+        "to": "sample",
+        "ticks": 6,
+        "energy": 5,
+        "risk": 2,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      }
+    ],
+    "ships": [
+      {
+        "id": "transport-a",
+        "label": "方舟 1",
+        "role": "transport",
+        "nodeId": "port",
+        "transit": null,
+        "capacity": 8,
+        "energy": 100,
+        "initialEnergy": 100,
+        "speed": 1,
+        "cargo": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "cargoOwner": null,
+        "sourceId": null,
+        "missionId": null,
+        "stepId": null,
+        "route": [],
+        "planVersion": 0,
+        "phase": "idle",
+        "status": "idle",
+        "action": null,
+        "disabled": false,
+        "waitTicks": 0,
+        "totalWait": 0
+      },
+      {
+        "id": "transport-b",
+        "label": "方舟 2",
+        "role": "transport",
+        "nodeId": "port",
+        "transit": null,
+        "capacity": 8,
+        "energy": 100,
+        "initialEnergy": 100,
+        "speed": 1,
+        "cargo": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "cargoOwner": null,
+        "sourceId": null,
+        "missionId": null,
+        "stepId": null,
+        "route": [],
+        "planVersion": 0,
+        "phase": "idle",
+        "status": "idle",
+        "action": null,
+        "disabled": false,
+        "waitTicks": 0,
+        "totalWait": 0
+      },
+      {
+        "id": "survey-a",
+        "label": "游隼 1",
+        "role": "survey",
+        "nodeId": "port",
+        "transit": null,
+        "capacity": 2,
+        "energy": 100,
+        "initialEnergy": 100,
+        "speed": 2,
+        "cargo": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "cargoOwner": null,
+        "sourceId": null,
+        "missionId": null,
+        "stepId": null,
+        "route": [],
+        "planVersion": 0,
+        "phase": "idle",
+        "status": "idle",
+        "action": null,
+        "disabled": false,
+        "waitTicks": 0,
+        "totalWait": 0
+      },
+      {
+        "id": "survey-b",
+        "label": "游隼 2",
+        "role": "survey",
+        "nodeId": "port",
+        "transit": null,
+        "capacity": 2,
+        "energy": 100,
+        "initialEnergy": 100,
+        "speed": 2,
+        "cargo": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "cargoOwner": null,
+        "sourceId": null,
+        "missionId": null,
+        "stepId": null,
+        "route": [],
+        "planVersion": 0,
+        "phase": "idle",
+        "status": "idle",
+        "action": null,
+        "disabled": false,
+        "waitTicks": 0,
+        "totalWait": 0
+      },
+      {
+        "id": "repair-a",
+        "label": "织星 1",
+        "role": "repair",
+        "nodeId": "port",
+        "transit": null,
+        "capacity": 24,
+        "energy": 100,
+        "initialEnergy": 100,
+        "speed": 1,
+        "cargo": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "cargoOwner": null,
+        "sourceId": null,
+        "missionId": null,
+        "stepId": null,
+        "route": [],
+        "planVersion": 0,
+        "phase": "idle",
+        "status": "idle",
+        "action": null,
+        "disabled": false,
+        "waitTicks": 0,
+        "totalWait": 0
+      },
+      {
+        "id": "repair-b",
+        "label": "织星 2",
+        "role": "repair",
+        "nodeId": "port",
+        "transit": null,
+        "capacity": 24,
+        "energy": 100,
+        "initialEnergy": 100,
+        "speed": 1,
+        "cargo": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "cargoOwner": null,
+        "sourceId": null,
+        "missionId": null,
+        "stepId": null,
+        "route": [],
+        "planVersion": 0,
+        "phase": "idle",
+        "status": "idle",
+        "action": null,
+        "disabled": false,
+        "waitTicks": 0,
+        "totalWait": 0
+      }
+    ],
+    "missions": [
+      {
+        "id": "mission-1",
+        "kind": "relay",
+        "label": "勘测 · 维修 · 运输接力",
+        "status": "queued",
+        "priority": 6,
+        "createdAt": 0,
+        "deadline": 240,
+        "deadlineWindow": 240,
+        "attempt": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "startedAt": 0,
+            "endedAt": null,
+            "outcome": "active",
+            "reason": null
+          }
+        ],
+        "steps": [
+          {
+            "id": "mission-1:step:1",
+            "label": "勘测受损中继",
+            "kind": "scan",
+            "role": "survey",
+            "targetId": "relay",
+            "sourceId": null,
+            "resources": {
+              "energy": 0,
+              "supplies": 0,
+              "parts": 0,
+              "samples": 0
+            },
+            "dependsOn": [],
+            "status": "queued",
+            "shipId": null,
+            "startedAt": null,
+            "completedAt": null
+          },
+          {
+            "id": "mission-1:step:2",
+            "label": "携维修件恢复科研通道",
+            "kind": "repair",
+            "role": "repair",
+            "targetId": "relay",
+            "sourceId": "forge",
+            "resources": {
+              "energy": 0,
+              "supplies": 0,
+              "parts": 2,
+              "samples": 0
+            },
+            "dependsOn": [
+              "mission-1:step:1"
+            ],
+            "status": "blocked",
+            "shipId": null,
+            "startedAt": null,
+            "completedAt": null
+          },
+          {
+            "id": "mission-1:step:3",
+            "label": "转运科研载荷",
+            "kind": "deliver",
+            "role": "transport",
+            "targetId": "lab",
+            "sourceId": "forge",
+            "resources": {
+              "energy": 0,
+              "supplies": 2,
+              "parts": 0,
+              "samples": 0
+            },
+            "dependsOn": [
+              "mission-1:step:2"
+            ],
+            "status": "blocked",
+            "shipId": null,
+            "startedAt": null,
+            "completedAt": null
+          }
+        ],
+        "delivered": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "failureCode": null,
+        "message": "等待舰型、资源与前置条件",
+        "waitTicks": 0,
+        "lastProgress": 0
+      },
+      {
+        "id": "mission-2",
+        "kind": "supply",
+        "label": "深空常规补给",
+        "status": "queued",
+        "priority": 4,
+        "createdAt": 0,
+        "deadline": 180,
+        "deadlineWindow": 180,
+        "attempt": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "startedAt": 0,
+            "endedAt": null,
+            "outcome": "active",
+            "reason": null
+          }
+        ],
+        "steps": [
+          {
+            "id": "mission-2:step:1",
+            "label": "预留、装载并交付补给",
+            "kind": "deliver",
+            "role": "transport",
+            "targetId": "ice",
+            "sourceId": "forge",
+            "resources": {
+              "energy": 3,
+              "supplies": 2,
+              "parts": 0,
+              "samples": 0
+            },
+            "dependsOn": [],
+            "status": "queued",
+            "shipId": null,
+            "startedAt": null,
+            "completedAt": null
+          }
+        ],
+        "delivered": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "failureCode": null,
+        "message": "等待舰型、资源与前置条件",
+        "waitTicks": 0,
+        "lastProgress": 0
+      }
+    ],
+    "discoveries": [],
+    "ledger": {
+      "initial": {
+        "energy": 740,
+        "supplies": 16,
+        "parts": 14,
+        "samples": 0
+      },
+      "generated": {
+        "energy": 0,
+        "supplies": 0,
+        "parts": 0,
+        "samples": 0
+      },
+      "consumed": {
+        "energy": 0,
+        "supplies": 0,
+        "parts": 0,
+        "samples": 0
+      }
+    },
+    "faults": [],
+    "appliedFaults": [],
+    "actionIds": [],
+    "commandIds": [],
+    "replans": 0,
+    "message": "六舰待命。确定性调度与实际世界状态决定行动。",
+    "tools": []
+  },
+  "commands": [
+    {
+      "id": "3c7bf6ee-215f-4434-9c35-05871b1649b3",
+      "command": {
+        "type": "start"
+      },
+      "accepted": true,
+      "tick": 0,
+      "stateKey": "dominion-mv68gcui-2:1:0:1:b9ec21dc"
+    },
+    {
+      "id": "15a21c53-270c-45f4-a9bd-7d7aa9bd3ea7",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 1,
+      "stateKey": "dominion-mv68gcui-2:1:1:2:3991db61"
+    },
+    {
+      "id": "988030c3-f3df-4321-876b-3295de627d36",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 2,
+      "stateKey": "dominion-mv68gcui-2:1:2:3:f6e8db2c"
+    },
+    {
+      "id": "7cecf0cb-b22d-4751-b83b-fa901d4b003f",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 3,
+      "stateKey": "dominion-mv68gcui-2:1:3:4:fddfee25"
+    },
+    {
+      "id": "dd862a62-600f-4d05-a4c8-ee8e2d6d9783",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 4,
+      "stateKey": "dominion-mv68gcui-2:1:4:5:9bd2874e"
+    },
+    {
+      "id": "c099c943-cbe4-466f-b9bb-9f3106ffc4a2",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 5,
+      "stateKey": "dominion-mv68gcui-2:1:5:6:cbb9d2bc"
+    },
+    {
+      "id": "05d71118-165f-46c9-b164-b2a1216db0e1",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 6,
+      "stateKey": "dominion-mv68gcui-2:1:6:7:ecd3f1bb"
+    },
+    {
+      "id": "d28b075d-2921-44bc-96cc-81c6b88f9fa1",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 7,
+      "stateKey": "dominion-mv68gcui-2:1:7:8:bfa36f72"
+    },
+    {
+      "id": "03fc0b23-c5bb-4305-be0a-bf17cb52005c",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 8,
+      "stateKey": "dominion-mv68gcui-2:1:8:9:88fe4f8a"
+    },
+    {
+      "id": "d014a971-a8f0-4e89-9c59-127169add420",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 9,
+      "stateKey": "dominion-mv68gcui-2:1:9:10:7b53ecb2"
+    },
+    {
+      "id": "c830bfa9-589a-490e-8307-db95a07ba6d0",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 10,
+      "stateKey": "dominion-mv68gcui-2:1:10:11:bc4d3746"
+    },
+    {
+      "id": "f6efae64-80ef-4e5f-a862-3ae8bbbccf51",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 11,
+      "stateKey": "dominion-mv68gcui-2:2:11:12:9e48b12f"
+    },
+    {
+      "id": "07599310-769b-4949-9003-8773f32f0a24",
+      "command": {
+        "type": "pause"
+      },
+      "accepted": true,
+      "tick": 11,
+      "stateKey": "dominion-mv68gcui-2:2:11:13:79f30738"
+    },
+    {
+      "id": "c8dfe4dc-a68e-4064-b7a4-576503009144",
+      "command": {
+        "type": "set-lane",
+        "laneId": "forge-relay",
+        "open": false
+      },
+      "accepted": true,
+      "tick": 11,
+      "stateKey": "dominion-mv68gcui-2:3:11:14:8b148f8a"
+    },
+    {
+      "id": "9f137565-b841-49e8-b33e-6d6975c4a5f4",
+      "command": {
+        "type": "resume"
+      },
+      "accepted": true,
+      "tick": 11,
+      "stateKey": "dominion-mv68gcui-2:3:11:15:69235476"
+    },
+    {
+      "id": "b9babc82-5223-4f98-80af-a4bbf947b991",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 12,
+      "stateKey": "dominion-mv68gcui-2:3:12:16:2f0b7e8e"
+    },
+    {
+      "id": "650173de-4466-48c6-9233-c8f34302225c",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 13,
+      "stateKey": "dominion-mv68gcui-2:3:13:17:95c2e60d"
+    },
+    {
+      "id": "f7a9c794-8eb5-44df-9168-a6e66d7112e8",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 14,
+      "stateKey": "dominion-mv68gcui-2:3:14:18:5800709c"
+    },
+    {
+      "id": "83cec103-f3eb-4c99-8f67-a65ff7e26a24",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 15,
+      "stateKey": "dominion-mv68gcui-2:3:15:19:6e47b853"
+    },
+    {
+      "id": "40dfc2aa-f3e7-4bca-8502-365b8bfd4172",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 16,
+      "stateKey": "dominion-mv68gcui-2:3:16:20:93dc1ffd"
+    },
+    {
+      "id": "e94404cf-3d1e-49d6-9c3d-be8b64f773bc",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 17,
+      "stateKey": "dominion-mv68gcui-2:3:17:21:5ba1d144"
+    },
+    {
+      "id": "0928e42c-1292-44a6-9b19-49cfc8d591ba",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 18,
+      "stateKey": "dominion-mv68gcui-2:3:18:22:933630fd"
+    },
+    {
+      "id": "a771cef0-967a-4da0-a950-ff339217bbf7",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 19,
+      "stateKey": "dominion-mv68gcui-2:3:19:23:102bf85"
+    },
+    {
+      "id": "848dd02e-5dde-4a82-99d3-18b2c1ce729d",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 20,
+      "stateKey": "dominion-mv68gcui-2:3:20:24:13b1a2dc"
+    },
+    {
+      "id": "ae213451-f780-492c-8d52-7393b31a5a95",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 21,
+      "stateKey": "dominion-mv68gcui-2:3:21:25:c4509ea3"
+    },
+    {
+      "id": "8a5cb3b5-f447-4fa3-b967-9eea0ac7fdc8",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 22,
+      "stateKey": "dominion-mv68gcui-2:3:22:26:4b1e37bf"
+    },
+    {
+      "id": "2f46c1d9-0d95-45a4-add6-52c1729e6ac7",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 23,
+      "stateKey": "dominion-mv68gcui-2:3:23:27:48b61e0d"
+    },
+    {
+      "id": "b56f7324-aaad-4343-839d-1dcf94a95836",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 24,
+      "stateKey": "dominion-mv68gcui-2:3:24:28:4a1b66d0"
+    },
+    {
+      "id": "4a4aead8-ed4d-4951-91cc-3833f4eea299",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 25,
+      "stateKey": "dominion-mv68gcui-2:3:25:29:c13b2a8"
+    },
+    {
+      "id": "a0dc9828-3825-46df-813b-ac6c068402d2",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 26,
+      "stateKey": "dominion-mv68gcui-2:3:26:30:89b3483a"
+    },
+    {
+      "id": "ce48511e-ddae-4f75-bf11-07c736ccd3c0",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 27,
+      "stateKey": "dominion-mv68gcui-2:3:27:31:f3702a3f"
+    },
+    {
+      "id": "eeabb819-92af-4bda-9329-bf7d08efa4d3",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 28,
+      "stateKey": "dominion-mv68gcui-2:3:28:32:8989d8fe"
+    },
+    {
+      "id": "bfd6263f-5890-4392-820b-0b39eb89dd37",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 29,
+      "stateKey": "dominion-mv68gcui-2:3:29:33:541231a3"
+    },
+    {
+      "id": "ef95f2e5-7107-42b8-9a6a-1c9b5571f690",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 30,
+      "stateKey": "dominion-mv68gcui-2:3:30:34:e64ea4eb"
+    },
+    {
+      "id": "0f159fd2-da84-44bf-85e7-a9645893d54b",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 31,
+      "stateKey": "dominion-mv68gcui-2:3:31:35:846f603f"
+    },
+    {
+      "id": "69ddc835-159a-481d-8ed3-a0274b5cbf19",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 32,
+      "stateKey": "dominion-mv68gcui-2:3:32:36:5dc5d744"
+    },
+    {
+      "id": "eaf5bf68-b6fa-4aba-b8e5-d18fc639b892",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 33,
+      "stateKey": "dominion-mv68gcui-2:3:33:37:1f91efc5"
+    },
+    {
+      "id": "f86c517d-62fc-4f6f-9144-5bcd82e86d51",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 34,
+      "stateKey": "dominion-mv68gcui-2:3:34:38:763dafe5"
+    },
+    {
+      "id": "e1962cc3-0b80-466f-a96f-3e06890555e8",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 35,
+      "stateKey": "dominion-mv68gcui-2:3:35:39:e96dea0c"
+    },
+    {
+      "id": "184be903-f31a-47e5-9f70-9a4989296aba",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 36,
+      "stateKey": "dominion-mv68gcui-2:3:36:40:ade9240b"
+    },
+    {
+      "id": "4fe560db-eec6-47f3-a5f5-c1b333e8e928",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 37,
+      "stateKey": "dominion-mv68gcui-2:3:37:41:56294b8b"
+    },
+    {
+      "id": "f3baf917-d05d-4ac7-95ae-e55019707d41",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 38,
+      "stateKey": "dominion-mv68gcui-2:4:38:42:f491ae97"
+    },
+    {
+      "id": "9f10b4d4-97da-4fc7-8fb6-86083670c5f9",
+      "command": {
+        "type": "pause"
+      },
+      "accepted": true,
+      "tick": 38,
+      "stateKey": "dominion-mv68gcui-2:4:38:43:c960cb01"
+    },
+    {
+      "id": "b784bfe1-0e42-401f-92ef-626da2ed3b40",
+      "command": {
+        "type": "resume"
+      },
+      "accepted": true,
+      "tick": 38,
+      "stateKey": "dominion-mv68gcui-2:4:38:44:70ca6b68"
+    },
+    {
+      "id": "48de2c7f-fec8-48fc-b03f-90e696838789",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 39,
+      "stateKey": "dominion-mv68gcui-2:4:39:45:fc217635"
+    },
+    {
+      "id": "a6ad0fa0-d161-4454-bb36-cf3c6305271a",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 40,
+      "stateKey": "dominion-mv68gcui-2:4:40:46:c912e4f"
+    },
+    {
+      "id": "180b0e4a-9bbf-4806-8ee8-d65a6f25c6c8",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 41,
+      "stateKey": "dominion-mv68gcui-2:4:41:47:1a067974"
+    },
+    {
+      "id": "f24d2020-385f-4427-962c-ce58d565a6c6",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 42,
+      "stateKey": "dominion-mv68gcui-2:4:42:48:8a1081fe"
+    },
+    {
+      "id": "cfeb58f3-a3ab-469f-86d3-95589464d5f7",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 43,
+      "stateKey": "dominion-mv68gcui-2:4:43:49:49778553"
+    },
+    {
+      "id": "0edb9fef-553f-4706-af9d-f495368eacb4",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 44,
+      "stateKey": "dominion-mv68gcui-2:4:44:50:c086bf14"
+    },
+    {
+      "id": "ac2308b5-e72c-4e92-a130-7500cd73bde6",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 45,
+      "stateKey": "dominion-mv68gcui-2:4:45:51:1ae47fc0"
+    },
+    {
+      "id": "87055333-183f-49d0-9242-413d3c4d0c5c",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 46,
+      "stateKey": "dominion-mv68gcui-2:4:46:52:83698ba3"
+    },
+    {
+      "id": "749c1bdb-7a52-4a4e-8627-111f09fd2b77",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 47,
+      "stateKey": "dominion-mv68gcui-2:4:47:53:e93d0bdf"
+    },
+    {
+      "id": "b8c1c845-95d6-4c97-b2ce-6690f5ae5862",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 48,
+      "stateKey": "dominion-mv68gcui-2:4:48:54:4875c7d"
+    },
+    {
+      "id": "149a6e1a-4d32-43eb-a436-d9b2a43f9e55",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 49,
+      "stateKey": "dominion-mv68gcui-2:4:49:55:d74c3231"
+    },
+    {
+      "id": "d4d82101-9131-4cf0-9058-8b8ca0497fec",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 50,
+      "stateKey": "dominion-mv68gcui-2:4:50:56:8b422e64"
+    },
+    {
+      "id": "33863a83-dd93-4275-a5d0-0a576df6a9b8",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 51,
+      "stateKey": "dominion-mv68gcui-2:4:51:57:b55f5f02"
+    },
+    {
+      "id": "5de460d1-e632-438a-8c2c-4cdbdcb9c749",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 52,
+      "stateKey": "dominion-mv68gcui-2:4:52:58:755f5469"
+    },
+    {
+      "id": "ee70b1c7-62fe-4c56-b9ee-007801e9622f",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 53,
+      "stateKey": "dominion-mv68gcui-2:4:53:59:33d1a145"
+    },
+    {
+      "id": "0decb777-e55f-46af-845a-9880b1cfa56a",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 54,
+      "stateKey": "dominion-mv68gcui-2:4:54:60:822b1cfe"
+    },
+    {
+      "id": "5fd32c39-5130-4d4a-84b1-8a83f8ec3d73",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 55,
+      "stateKey": "dominion-mv68gcui-2:4:55:61:af8dbffb"
+    },
+    {
+      "id": "ae109307-14ea-4a4b-8969-6a67ad648a15",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 56,
+      "stateKey": "dominion-mv68gcui-2:4:56:62:3db9a63b"
+    },
+    {
+      "id": "7ef851ec-964e-4304-bb21-95c721500b19",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 57,
+      "stateKey": "dominion-mv68gcui-2:4:57:63:ab7bbe51"
+    },
+    {
+      "id": "d609d8a4-5ee1-42fd-9129-31646c8ea7b5",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 58,
+      "stateKey": "dominion-mv68gcui-2:4:58:64:e1acc6a7"
+    },
+    {
+      "id": "a849b8a2-9bf1-4f64-976d-12969fb8c3a5",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 59,
+      "stateKey": "dominion-mv68gcui-2:4:59:65:bddefa71"
+    },
+    {
+      "id": "0aed293b-b76a-4f39-a194-8d2a36b9ef11",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 60,
+      "stateKey": "dominion-mv68gcui-2:4:60:66:a0dfdaf"
+    },
+    {
+      "id": "4169b7b1-995c-4d56-a39e-f52b0d9f46a6",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 61,
+      "stateKey": "dominion-mv68gcui-2:4:61:67:5ab6b05b"
+    },
+    {
+      "id": "ab7cd8ce-620e-4702-8501-57b68de91671",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 62,
+      "stateKey": "dominion-mv68gcui-2:4:62:68:5f5e6ae5"
+    },
+    {
+      "id": "6a49f5fa-83db-462f-aaeb-98d2d30614ac",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 63,
+      "stateKey": "dominion-mv68gcui-2:4:63:69:a77ce7ba"
+    },
+    {
+      "id": "1a1ed040-4b97-4e81-abc8-cfb01d7b6698",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 64,
+      "stateKey": "dominion-mv68gcui-2:4:64:70:1bcf58f2"
+    },
+    {
+      "id": "3e058050-b7b4-4b40-a4dc-ffca0f33b38e",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 65,
+      "stateKey": "dominion-mv68gcui-2:4:65:71:a5923c53"
+    },
+    {
+      "id": "9a913a6a-c91e-4a8d-8ad4-2b47dd305e2b",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 66,
+      "stateKey": "dominion-mv68gcui-2:4:66:72:726f1250"
+    },
+    {
+      "id": "2e349d90-8b0a-4817-8196-33aa77760dda",
+      "command": {
+        "type": "step"
+      },
+      "accepted": true,
+      "tick": 67,
+      "stateKey": "dominion-mv68gcui-2:4:67:73:6fdac7ac"
+    }
+  ],
+  "events": [
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:1",
+      "seq": 1,
+      "tick": 0,
+      "wallTime": "2026-10-13T05:21:03.705Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "tool.completed",
+      "actionId": null,
+      "toolCallId": "dominion-mv68gcui-2:tool:1",
+      "payload": {
+        "tool": "read-world",
+        "input": {
+          "worldVersion": 1
+        },
+        "output": {
+          "ships": 6,
+          "missions": 2,
+          "knownDiscoveries": 0
+        },
+        "durationMs": 0.10000002384185791
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:2",
+      "seq": 2,
+      "tick": 0,
+      "wallTime": "2026-10-13T05:21:03.705Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "session.running",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {}
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:3",
+      "seq": 3,
+      "tick": 1,
+      "wallTime": "2026-10-13T05:21:04.861Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "task.assigned",
+      "actionId": "dominion-mv68gcui-2:action:1",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "survey-a",
+        "role": "survey",
+        "stepId": "mission-1:step:1",
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "effectivePriority": 6
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:4",
+      "seq": 4,
+      "tick": 1,
+      "wallTime": "2026-10-13T05:21:04.861Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "task.assigned",
+      "actionId": "dominion-mv68gcui-2:action:2",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-a",
+        "role": "transport",
+        "stepId": "mission-2:step:1",
+        "reserved": {
+          "energy": 3,
+          "supplies": 2,
+          "parts": 0,
+          "samples": 0
+        },
+        "effectivePriority": 4
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:5",
+      "seq": 5,
+      "tick": 1,
+      "wallTime": "2026-10-13T05:21:04.862Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "tool.completed",
+      "actionId": null,
+      "toolCallId": "dominion-mv68gcui-2:tool:5",
+      "payload": {
+        "tool": "estimate-route",
+        "input": {
+          "shipId": "survey-a",
+          "from": "port",
+          "to": "relay",
+          "strategy": "balanced",
+          "worldVersion": 1
+        },
+        "output": {
+          "stations": [
+            "port",
+            "dock",
+            "relay"
+          ],
+          "lanes": [
+            "port-dock",
+            "dock-relay"
+          ],
+          "ticks": 4,
+          "energy": 5,
+          "risk": 1,
+          "score": 35
+        },
+        "durationMs": 0
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:6",
+      "seq": 6,
+      "tick": 1,
+      "wallTime": "2026-10-13T05:21:04.862Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "plan.created",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "shipId": "survey-a",
+        "destination": "relay",
+        "route": {
+          "stations": [
+            "port",
+            "dock",
+            "relay"
+          ],
+          "lanes": [
+            "port-dock",
+            "dock-relay"
+          ],
+          "ticks": 4,
+          "energy": 5,
+          "risk": 1,
+          "score": 35
+        }
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:7",
+      "seq": 7,
+      "tick": 1,
+      "wallTime": "2026-10-13T05:21:04.862Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "ship.departed",
+      "actionId": "dominion-mv68gcui-2:action:3",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "survey-a",
+        "laneId": "port-dock",
+        "from": "port",
+        "to": "dock",
+        "energy": 3,
+        "duration": 2,
+        "planVersion": 1
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:8",
+      "seq": 8,
+      "tick": 1,
+      "wallTime": "2026-10-13T05:21:04.862Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "tool.completed",
+      "actionId": null,
+      "toolCallId": "dominion-mv68gcui-2:tool:8",
+      "payload": {
+        "tool": "estimate-route",
+        "input": {
+          "shipId": "transport-a",
+          "from": "port",
+          "to": "forge",
+          "strategy": "balanced",
+          "worldVersion": 1
+        },
+        "output": {
+          "stations": [
+            "port",
+            "forge"
+          ],
+          "lanes": [
+            "port-forge"
+          ],
+          "ticks": 3,
+          "energy": 4,
+          "risk": 1,
+          "score": 29
+        },
+        "durationMs": 0
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:9",
+      "seq": 9,
+      "tick": 1,
+      "wallTime": "2026-10-13T05:21:04.862Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "plan.created",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-a",
+        "destination": "forge",
+        "route": {
+          "stations": [
+            "port",
+            "forge"
+          ],
+          "lanes": [
+            "port-forge"
+          ],
+          "ticks": 3,
+          "energy": 4,
+          "risk": 1,
+          "score": 29
+        }
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:10",
+      "seq": 10,
+      "tick": 1,
+      "wallTime": "2026-10-13T05:21:04.862Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "ship.departed",
+      "actionId": "dominion-mv68gcui-2:action:4",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-a",
+        "laneId": "port-forge",
+        "from": "port",
+        "to": "forge",
+        "energy": 4,
+        "duration": 3,
+        "planVersion": 1
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:11",
+      "seq": 11,
+      "tick": 1,
+      "wallTime": "2026-10-13T05:21:04.862Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 1
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:12",
+      "seq": 12,
+      "tick": 2,
+      "wallTime": "2026-10-13T05:21:06.053Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 2
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:13",
+      "seq": 13,
+      "tick": 3,
+      "wallTime": "2026-10-13T05:21:07.252Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "ship.arrived",
+      "actionId": "dominion-mv68gcui-2:action:5",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "survey-a",
+        "from": "port",
+        "to": "dock"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:14",
+      "seq": 14,
+      "tick": 3,
+      "wallTime": "2026-10-13T05:21:07.252Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 3
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:15",
+      "seq": 15,
+      "tick": 4,
+      "wallTime": "2026-10-13T05:21:08.450Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "ship.departed",
+      "actionId": "dominion-mv68gcui-2:action:6",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "survey-a",
+        "laneId": "dock-relay",
+        "from": "dock",
+        "to": "relay",
+        "energy": 2,
+        "duration": 2,
+        "planVersion": 1
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:16",
+      "seq": 16,
+      "tick": 4,
+      "wallTime": "2026-10-13T05:21:08.450Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "ship.arrived",
+      "actionId": "dominion-mv68gcui-2:action:7",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-a",
+        "from": "port",
+        "to": "forge"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:17",
+      "seq": 17,
+      "tick": 4,
+      "wallTime": "2026-10-13T05:21:08.450Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 4
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:18",
+      "seq": 18,
+      "tick": 5,
+      "wallTime": "2026-10-13T05:21:09.654Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "action.started",
+      "actionId": "dominion-mv68gcui-2:action:8",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-a",
+        "stepId": "mission-2:step:1",
+        "kind": "load",
+        "elapsed": 0,
+        "duration": 2,
+        "targetId": "forge",
+        "missionId": "mission-2"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:19",
+      "seq": 19,
+      "tick": 5,
+      "wallTime": "2026-10-13T05:21:09.654Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 5
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:20",
+      "seq": 20,
+      "tick": 6,
+      "wallTime": "2026-10-13T05:21:10.853Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "ship.arrived",
+      "actionId": "dominion-mv68gcui-2:action:9",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "survey-a",
+        "from": "dock",
+        "to": "relay"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:21",
+      "seq": 21,
+      "tick": 6,
+      "wallTime": "2026-10-13T05:21:10.853Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 6
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:22",
+      "seq": 22,
+      "tick": 7,
+      "wallTime": "2026-10-13T05:21:12.052Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "action.started",
+      "actionId": "dominion-mv68gcui-2:action:10",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "survey-a",
+        "stepId": "mission-1:step:1",
+        "kind": "scan",
+        "elapsed": 0,
+        "duration": 4,
+        "targetId": "relay",
+        "missionId": "mission-1"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:23",
+      "seq": 23,
+      "tick": 7,
+      "wallTime": "2026-10-13T05:21:12.052Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "cargo.loaded",
+      "actionId": "dominion-mv68gcui-2:action:11",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-a",
+        "sourceId": "forge",
+        "cargo": {
+          "energy": 3,
+          "supplies": 2,
+          "parts": 0,
+          "samples": 0
+        }
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:24",
+      "seq": 24,
+      "tick": 7,
+      "wallTime": "2026-10-13T05:21:12.052Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 7
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:25",
+      "seq": 25,
+      "tick": 8,
+      "wallTime": "2026-10-13T05:21:13.253Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "tool.completed",
+      "actionId": null,
+      "toolCallId": "dominion-mv68gcui-2:tool:25",
+      "payload": {
+        "tool": "estimate-route",
+        "input": {
+          "shipId": "transport-a",
+          "from": "forge",
+          "to": "ice",
+          "strategy": "balanced",
+          "worldVersion": 1
+        },
+        "output": {
+          "stations": [
+            "forge",
+            "gate",
+            "ice"
+          ],
+          "lanes": [
+            "forge-gate",
+            "gate-ice"
+          ],
+          "ticks": 7,
+          "energy": 12,
+          "risk": 5,
+          "score": 97
+        },
+        "durationMs": 0
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:26",
+      "seq": 26,
+      "tick": 8,
+      "wallTime": "2026-10-13T05:21:13.253Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "plan.created",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-a",
+        "destination": "ice",
+        "route": {
+          "stations": [
+            "forge",
+            "gate",
+            "ice"
+          ],
+          "lanes": [
+            "forge-gate",
+            "gate-ice"
+          ],
+          "ticks": 7,
+          "energy": 12,
+          "risk": 5,
+          "score": 97
+        }
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:27",
+      "seq": 27,
+      "tick": 8,
+      "wallTime": "2026-10-13T05:21:13.253Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "ship.departed",
+      "actionId": "dominion-mv68gcui-2:action:12",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-a",
+        "laneId": "forge-gate",
+        "from": "forge",
+        "to": "gate",
+        "energy": 4,
+        "duration": 3,
+        "planVersion": 1
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:28",
+      "seq": 28,
+      "tick": 8,
+      "wallTime": "2026-10-13T05:21:13.253Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 8
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:29",
+      "seq": 29,
+      "tick": 9,
+      "wallTime": "2026-10-13T05:21:14.453Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 9
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:30",
+      "seq": 30,
+      "tick": 10,
+      "wallTime": "2026-10-13T05:21:15.652Z",
+      "worldVersion": 1,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 10
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:31",
+      "seq": 31,
+      "tick": 11,
+      "wallTime": "2026-10-13T05:21:16.850Z",
+      "worldVersion": 2,
+      "mode": "local-simulation",
+      "type": "survey.discovered",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "shipId": "survey-a",
+        "stationId": "relay",
+        "missionId": "mission-1",
+        "discoveredAt": 11
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:32",
+      "seq": 32,
+      "tick": 11,
+      "wallTime": "2026-10-13T05:21:16.850Z",
+      "worldVersion": 2,
+      "mode": "local-simulation",
+      "type": "step.completed",
+      "actionId": "dominion-mv68gcui-2:action:13",
+      "toolCallId": null,
+      "payload": {
+        "stepId": "mission-1:step:1",
+        "shipId": "survey-a",
+        "kind": "scan"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:33",
+      "seq": 33,
+      "tick": 11,
+      "wallTime": "2026-10-13T05:21:16.850Z",
+      "worldVersion": 2,
+      "mode": "local-simulation",
+      "type": "ship.arrived",
+      "actionId": "dominion-mv68gcui-2:action:14",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-a",
+        "from": "forge",
+        "to": "gate"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:34",
+      "seq": 34,
+      "tick": 11,
+      "wallTime": "2026-10-13T05:21:16.850Z",
+      "worldVersion": 2,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 11
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:35",
+      "seq": 35,
+      "tick": 11,
+      "wallTime": "2026-10-13T05:21:16.904Z",
+      "worldVersion": 2,
+      "mode": "local-simulation",
+      "type": "session.paused",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {}
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:36",
+      "seq": 36,
+      "tick": 11,
+      "wallTime": "2026-10-13T05:21:16.907Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "lane.permission-changed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "laneId": "forge-relay",
+        "open": false,
+        "damaged": false
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:37",
+      "seq": 37,
+      "tick": 11,
+      "wallTime": "2026-10-13T05:21:20.950Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tool.completed",
+      "actionId": null,
+      "toolCallId": "dominion-mv68gcui-2:tool:37",
+      "payload": {
+        "tool": "read-world",
+        "input": {
+          "worldVersion": 3
+        },
+        "output": {
+          "ships": 6,
+          "missions": 2,
+          "knownDiscoveries": 1
+        },
+        "durationMs": 0
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:38",
+      "seq": 38,
+      "tick": 11,
+      "wallTime": "2026-10-13T05:21:20.950Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "session.running",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {}
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:39",
+      "seq": 39,
+      "tick": 12,
+      "wallTime": "2026-10-13T05:21:22.104Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "task.assigned",
+      "actionId": "dominion-mv68gcui-2:action:15",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "repair-a",
+        "role": "repair",
+        "stepId": "mission-1:step:2",
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 2,
+          "samples": 0
+        },
+        "effectivePriority": 6
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:40",
+      "seq": 40,
+      "tick": 12,
+      "wallTime": "2026-10-13T05:21:22.105Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tool.completed",
+      "actionId": null,
+      "toolCallId": "dominion-mv68gcui-2:tool:40",
+      "payload": {
+        "tool": "estimate-route",
+        "input": {
+          "shipId": "repair-a",
+          "from": "port",
+          "to": "forge",
+          "strategy": "balanced",
+          "worldVersion": 3
+        },
+        "output": {
+          "stations": [
+            "port",
+            "forge"
+          ],
+          "lanes": [
+            "port-forge"
+          ],
+          "ticks": 3,
+          "energy": 4,
+          "risk": 1,
+          "score": 29
+        },
+        "durationMs": 0.10000002384185791
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:41",
+      "seq": 41,
+      "tick": 12,
+      "wallTime": "2026-10-13T05:21:22.105Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "plan.created",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "shipId": "repair-a",
+        "destination": "forge",
+        "route": {
+          "stations": [
+            "port",
+            "forge"
+          ],
+          "lanes": [
+            "port-forge"
+          ],
+          "ticks": 3,
+          "energy": 4,
+          "risk": 1,
+          "score": 29
+        }
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:42",
+      "seq": 42,
+      "tick": 12,
+      "wallTime": "2026-10-13T05:21:22.105Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "ship.departed",
+      "actionId": "dominion-mv68gcui-2:action:16",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "repair-a",
+        "laneId": "port-forge",
+        "from": "port",
+        "to": "forge",
+        "energy": 4,
+        "duration": 3,
+        "planVersion": 3
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:43",
+      "seq": 43,
+      "tick": 12,
+      "wallTime": "2026-10-13T05:21:22.105Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tool.completed",
+      "actionId": null,
+      "toolCallId": "dominion-mv68gcui-2:tool:43",
+      "payload": {
+        "tool": "estimate-route",
+        "input": {
+          "shipId": "transport-a",
+          "from": "gate",
+          "to": "ice",
+          "strategy": "balanced",
+          "worldVersion": 3
+        },
+        "output": {
+          "stations": [
+            "gate",
+            "ice"
+          ],
+          "lanes": [
+            "gate-ice"
+          ],
+          "ticks": 4,
+          "energy": 8,
+          "risk": 3,
+          "score": 60
+        },
+        "durationMs": 0
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:44",
+      "seq": 44,
+      "tick": 12,
+      "wallTime": "2026-10-13T05:21:22.105Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "plan.created",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-a",
+        "destination": "ice",
+        "route": {
+          "stations": [
+            "gate",
+            "ice"
+          ],
+          "lanes": [
+            "gate-ice"
+          ],
+          "ticks": 4,
+          "energy": 8,
+          "risk": 3,
+          "score": 60
+        }
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:45",
+      "seq": 45,
+      "tick": 12,
+      "wallTime": "2026-10-13T05:21:22.105Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "ship.departed",
+      "actionId": "dominion-mv68gcui-2:action:17",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-a",
+        "laneId": "gate-ice",
+        "from": "gate",
+        "to": "ice",
+        "energy": 8,
+        "duration": 4,
+        "planVersion": 3
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:46",
+      "seq": 46,
+      "tick": 12,
+      "wallTime": "2026-10-13T05:21:22.105Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 12
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:47",
+      "seq": 47,
+      "tick": 13,
+      "wallTime": "2026-10-13T05:21:23.303Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 13
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:48",
+      "seq": 48,
+      "tick": 14,
+      "wallTime": "2026-10-13T05:21:24.503Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 14
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:49",
+      "seq": 49,
+      "tick": 15,
+      "wallTime": "2026-10-13T05:21:25.704Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "ship.arrived",
+      "actionId": "dominion-mv68gcui-2:action:18",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "repair-a",
+        "from": "port",
+        "to": "forge"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:50",
+      "seq": 50,
+      "tick": 15,
+      "wallTime": "2026-10-13T05:21:25.704Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 15
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:51",
+      "seq": 51,
+      "tick": 16,
+      "wallTime": "2026-10-13T05:21:26.904Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "action.started",
+      "actionId": "dominion-mv68gcui-2:action:19",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "repair-a",
+        "stepId": "mission-1:step:2",
+        "kind": "load",
+        "elapsed": 0,
+        "duration": 2,
+        "targetId": "forge",
+        "missionId": "mission-1"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:52",
+      "seq": 52,
+      "tick": 16,
+      "wallTime": "2026-10-13T05:21:26.904Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "ship.arrived",
+      "actionId": "dominion-mv68gcui-2:action:20",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-a",
+        "from": "gate",
+        "to": "ice"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:53",
+      "seq": 53,
+      "tick": 16,
+      "wallTime": "2026-10-13T05:21:26.905Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 16
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:54",
+      "seq": 54,
+      "tick": 17,
+      "wallTime": "2026-10-13T05:21:28.100Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "action.started",
+      "actionId": "dominion-mv68gcui-2:action:21",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-a",
+        "stepId": "mission-2:step:1",
+        "kind": "deliver",
+        "elapsed": 0,
+        "duration": 2,
+        "targetId": "ice",
+        "missionId": "mission-2"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:55",
+      "seq": 55,
+      "tick": 17,
+      "wallTime": "2026-10-13T05:21:28.100Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 17
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:56",
+      "seq": 56,
+      "tick": 18,
+      "wallTime": "2026-10-13T05:21:29.303Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "cargo.loaded",
+      "actionId": "dominion-mv68gcui-2:action:22",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "repair-a",
+        "sourceId": "forge",
+        "cargo": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 2,
+          "samples": 0
+        }
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:57",
+      "seq": 57,
+      "tick": 18,
+      "wallTime": "2026-10-13T05:21:29.303Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 18
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:58",
+      "seq": 58,
+      "tick": 19,
+      "wallTime": "2026-10-13T05:21:30.505Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tool.completed",
+      "actionId": null,
+      "toolCallId": "dominion-mv68gcui-2:tool:58",
+      "payload": {
+        "tool": "estimate-route",
+        "input": {
+          "shipId": "repair-a",
+          "from": "forge",
+          "to": "relay",
+          "strategy": "balanced",
+          "worldVersion": 3
+        },
+        "output": {
+          "stations": [
+            "forge",
+            "port",
+            "dock",
+            "relay"
+          ],
+          "lanes": [
+            "port-forge",
+            "port-dock",
+            "dock-relay"
+          ],
+          "ticks": 10,
+          "energy": 9,
+          "risk": 2,
+          "score": 73
+        },
+        "durationMs": 0.10000002384185791
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:59",
+      "seq": 59,
+      "tick": 19,
+      "wallTime": "2026-10-13T05:21:30.505Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "plan.created",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "shipId": "repair-a",
+        "destination": "relay",
+        "route": {
+          "stations": [
+            "forge",
+            "port",
+            "dock",
+            "relay"
+          ],
+          "lanes": [
+            "port-forge",
+            "port-dock",
+            "dock-relay"
+          ],
+          "ticks": 10,
+          "energy": 9,
+          "risk": 2,
+          "score": 73
+        }
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:60",
+      "seq": 60,
+      "tick": 19,
+      "wallTime": "2026-10-13T05:21:30.505Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "ship.departed",
+      "actionId": "dominion-mv68gcui-2:action:23",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "repair-a",
+        "laneId": "port-forge",
+        "from": "forge",
+        "to": "port",
+        "energy": 4,
+        "duration": 3,
+        "planVersion": 3
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:61",
+      "seq": 61,
+      "tick": 19,
+      "wallTime": "2026-10-13T05:21:30.505Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "cargo.delivered",
+      "actionId": "dominion-mv68gcui-2:action:24",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-a",
+        "targetId": "ice",
+        "resources": {
+          "energy": 3,
+          "supplies": 2,
+          "parts": 0,
+          "samples": 0
+        }
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:62",
+      "seq": 62,
+      "tick": 19,
+      "wallTime": "2026-10-13T05:21:30.505Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "step.completed",
+      "actionId": "dominion-mv68gcui-2:action:25",
+      "toolCallId": null,
+      "payload": {
+        "stepId": "mission-2:step:1",
+        "shipId": "transport-a",
+        "kind": "deliver"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-2",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:63",
+      "seq": 63,
+      "tick": 19,
+      "wallTime": "2026-10-13T05:21:30.505Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "mission.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "delivered": {
+          "energy": 3,
+          "supplies": 2,
+          "parts": 0,
+          "samples": 0
+        }
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:64",
+      "seq": 64,
+      "tick": 19,
+      "wallTime": "2026-10-13T05:21:30.505Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 19
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:65",
+      "seq": 65,
+      "tick": 20,
+      "wallTime": "2026-10-13T05:21:31.703Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 20
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:66",
+      "seq": 66,
+      "tick": 21,
+      "wallTime": "2026-10-13T05:21:32.903Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 21
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:67",
+      "seq": 67,
+      "tick": 22,
+      "wallTime": "2026-10-13T05:21:34.104Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "ship.arrived",
+      "actionId": "dominion-mv68gcui-2:action:26",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "repair-a",
+        "from": "forge",
+        "to": "port"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:68",
+      "seq": 68,
+      "tick": 22,
+      "wallTime": "2026-10-13T05:21:34.104Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 22
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:69",
+      "seq": 69,
+      "tick": 23,
+      "wallTime": "2026-10-13T05:21:35.302Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "ship.departed",
+      "actionId": "dominion-mv68gcui-2:action:27",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "repair-a",
+        "laneId": "port-dock",
+        "from": "port",
+        "to": "dock",
+        "energy": 3,
+        "duration": 3,
+        "planVersion": 3
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:70",
+      "seq": 70,
+      "tick": 23,
+      "wallTime": "2026-10-13T05:21:35.302Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 23
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:71",
+      "seq": 71,
+      "tick": 24,
+      "wallTime": "2026-10-13T05:21:36.500Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 24
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:72",
+      "seq": 72,
+      "tick": 25,
+      "wallTime": "2026-10-13T05:21:37.703Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 25
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:73",
+      "seq": 73,
+      "tick": 26,
+      "wallTime": "2026-10-13T05:21:38.900Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "ship.arrived",
+      "actionId": "dominion-mv68gcui-2:action:28",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "repair-a",
+        "from": "port",
+        "to": "dock"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:74",
+      "seq": 74,
+      "tick": 26,
+      "wallTime": "2026-10-13T05:21:38.900Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 26
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:75",
+      "seq": 75,
+      "tick": 27,
+      "wallTime": "2026-10-13T05:21:40.104Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "ship.departed",
+      "actionId": "dominion-mv68gcui-2:action:29",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "repair-a",
+        "laneId": "dock-relay",
+        "from": "dock",
+        "to": "relay",
+        "energy": 2,
+        "duration": 4,
+        "planVersion": 3
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:76",
+      "seq": 76,
+      "tick": 27,
+      "wallTime": "2026-10-13T05:21:40.104Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 27
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:77",
+      "seq": 77,
+      "tick": 28,
+      "wallTime": "2026-10-13T05:21:41.304Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 28
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:78",
+      "seq": 78,
+      "tick": 29,
+      "wallTime": "2026-10-13T05:21:42.503Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 29
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:79",
+      "seq": 79,
+      "tick": 30,
+      "wallTime": "2026-10-13T05:21:43.704Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 30
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:80",
+      "seq": 80,
+      "tick": 31,
+      "wallTime": "2026-10-13T05:21:44.904Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "ship.arrived",
+      "actionId": "dominion-mv68gcui-2:action:30",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "repair-a",
+        "from": "dock",
+        "to": "relay"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:81",
+      "seq": 81,
+      "tick": 31,
+      "wallTime": "2026-10-13T05:21:44.904Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 31
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:82",
+      "seq": 82,
+      "tick": 32,
+      "wallTime": "2026-10-13T05:21:46.104Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "action.started",
+      "actionId": "dominion-mv68gcui-2:action:31",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "repair-a",
+        "stepId": "mission-1:step:2",
+        "kind": "repair",
+        "elapsed": 0,
+        "duration": 6,
+        "targetId": "relay",
+        "missionId": "mission-1"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:83",
+      "seq": 83,
+      "tick": 32,
+      "wallTime": "2026-10-13T05:21:46.104Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 32
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:84",
+      "seq": 84,
+      "tick": 33,
+      "wallTime": "2026-10-13T05:21:47.304Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 33
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:85",
+      "seq": 85,
+      "tick": 34,
+      "wallTime": "2026-10-13T05:21:48.504Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 34
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:86",
+      "seq": 86,
+      "tick": 35,
+      "wallTime": "2026-10-13T05:21:49.703Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 35
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:87",
+      "seq": 87,
+      "tick": 36,
+      "wallTime": "2026-10-13T05:21:50.904Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 36
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:88",
+      "seq": 88,
+      "tick": 37,
+      "wallTime": "2026-10-13T05:21:52.104Z",
+      "worldVersion": 3,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 37
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:89",
+      "seq": 89,
+      "tick": 38,
+      "wallTime": "2026-10-13T05:21:53.304Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "relay.repaired",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "shipId": "repair-a",
+        "stationId": "relay",
+        "partsConsumed": 2,
+        "permissionRule": "user-closed lanes stay closed"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:90",
+      "seq": 90,
+      "tick": 38,
+      "wallTime": "2026-10-13T05:21:53.304Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "step.completed",
+      "actionId": "dominion-mv68gcui-2:action:32",
+      "toolCallId": null,
+      "payload": {
+        "stepId": "mission-1:step:2",
+        "shipId": "repair-a",
+        "kind": "repair"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:91",
+      "seq": 91,
+      "tick": 38,
+      "wallTime": "2026-10-13T05:21:53.304Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 38
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:92",
+      "seq": 92,
+      "tick": 38,
+      "wallTime": "2026-10-13T05:21:53.351Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "session.paused",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {}
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:93",
+      "seq": 93,
+      "tick": 38,
+      "wallTime": "2026-10-13T05:22:01.505Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tool.completed",
+      "actionId": null,
+      "toolCallId": "dominion-mv68gcui-2:tool:93",
+      "payload": {
+        "tool": "read-world",
+        "input": {
+          "worldVersion": 4
+        },
+        "output": {
+          "ships": 6,
+          "missions": 2,
+          "knownDiscoveries": 1
+        },
+        "durationMs": 0.10000002384185791
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:94",
+      "seq": 94,
+      "tick": 38,
+      "wallTime": "2026-10-13T05:22:01.505Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "session.running",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {}
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:95",
+      "seq": 95,
+      "tick": 39,
+      "wallTime": "2026-10-13T05:22:02.655Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "task.assigned",
+      "actionId": "dominion-mv68gcui-2:action:33",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-b",
+        "role": "transport",
+        "stepId": "mission-1:step:3",
+        "reserved": {
+          "energy": 0,
+          "supplies": 2,
+          "parts": 0,
+          "samples": 0
+        },
+        "effectivePriority": 6
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:96",
+      "seq": 96,
+      "tick": 39,
+      "wallTime": "2026-10-13T05:22:02.655Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tool.completed",
+      "actionId": null,
+      "toolCallId": "dominion-mv68gcui-2:tool:96",
+      "payload": {
+        "tool": "estimate-route",
+        "input": {
+          "shipId": "transport-b",
+          "from": "port",
+          "to": "forge",
+          "strategy": "balanced",
+          "worldVersion": 4
+        },
+        "output": {
+          "stations": [
+            "port",
+            "forge"
+          ],
+          "lanes": [
+            "port-forge"
+          ],
+          "ticks": 3,
+          "energy": 4,
+          "risk": 1,
+          "score": 29
+        },
+        "durationMs": 0
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:97",
+      "seq": 97,
+      "tick": 39,
+      "wallTime": "2026-10-13T05:22:02.655Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "plan.created",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-b",
+        "destination": "forge",
+        "route": {
+          "stations": [
+            "port",
+            "forge"
+          ],
+          "lanes": [
+            "port-forge"
+          ],
+          "ticks": 3,
+          "energy": 4,
+          "risk": 1,
+          "score": 29
+        }
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:98",
+      "seq": 98,
+      "tick": 39,
+      "wallTime": "2026-10-13T05:22:02.655Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "ship.departed",
+      "actionId": "dominion-mv68gcui-2:action:34",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-b",
+        "laneId": "port-forge",
+        "from": "port",
+        "to": "forge",
+        "energy": 4,
+        "duration": 3,
+        "planVersion": 4
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:99",
+      "seq": 99,
+      "tick": 39,
+      "wallTime": "2026-10-13T05:22:02.655Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 39
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:100",
+      "seq": 100,
+      "tick": 40,
+      "wallTime": "2026-10-13T05:22:03.853Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 40
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:101",
+      "seq": 101,
+      "tick": 41,
+      "wallTime": "2026-10-13T05:22:05.055Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 41
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:102",
+      "seq": 102,
+      "tick": 42,
+      "wallTime": "2026-10-13T05:22:06.255Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "ship.arrived",
+      "actionId": "dominion-mv68gcui-2:action:35",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-b",
+        "from": "port",
+        "to": "forge"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:103",
+      "seq": 103,
+      "tick": 42,
+      "wallTime": "2026-10-13T05:22:06.255Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 42
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:104",
+      "seq": 104,
+      "tick": 43,
+      "wallTime": "2026-10-13T05:22:07.455Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "action.started",
+      "actionId": "dominion-mv68gcui-2:action:36",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-b",
+        "stepId": "mission-1:step:3",
+        "kind": "load",
+        "elapsed": 0,
+        "duration": 2,
+        "targetId": "forge",
+        "missionId": "mission-1"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:105",
+      "seq": 105,
+      "tick": 43,
+      "wallTime": "2026-10-13T05:22:07.455Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 43
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:106",
+      "seq": 106,
+      "tick": 44,
+      "wallTime": "2026-10-13T05:22:08.654Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 44
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:107",
+      "seq": 107,
+      "tick": 45,
+      "wallTime": "2026-10-13T05:22:09.854Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "cargo.loaded",
+      "actionId": "dominion-mv68gcui-2:action:37",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-b",
+        "sourceId": "forge",
+        "cargo": {
+          "energy": 0,
+          "supplies": 2,
+          "parts": 0,
+          "samples": 0
+        }
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:108",
+      "seq": 108,
+      "tick": 45,
+      "wallTime": "2026-10-13T05:22:09.854Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 45
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:109",
+      "seq": 109,
+      "tick": 46,
+      "wallTime": "2026-10-13T05:22:11.055Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tool.completed",
+      "actionId": null,
+      "toolCallId": "dominion-mv68gcui-2:tool:109",
+      "payload": {
+        "tool": "estimate-route",
+        "input": {
+          "shipId": "transport-b",
+          "from": "forge",
+          "to": "lab",
+          "strategy": "balanced",
+          "worldVersion": 4
+        },
+        "output": {
+          "stations": [
+            "forge",
+            "gate",
+            "beacon",
+            "lab"
+          ],
+          "lanes": [
+            "forge-gate",
+            "gate-beacon",
+            "beacon-lab"
+          ],
+          "ticks": 16,
+          "energy": 8,
+          "risk": 2,
+          "score": 88
+        },
+        "durationMs": 0
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:110",
+      "seq": 110,
+      "tick": 46,
+      "wallTime": "2026-10-13T05:22:11.055Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "plan.created",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-b",
+        "destination": "lab",
+        "route": {
+          "stations": [
+            "forge",
+            "gate",
+            "beacon",
+            "lab"
+          ],
+          "lanes": [
+            "forge-gate",
+            "gate-beacon",
+            "beacon-lab"
+          ],
+          "ticks": 16,
+          "energy": 8,
+          "risk": 2,
+          "score": 88
+        }
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:111",
+      "seq": 111,
+      "tick": 46,
+      "wallTime": "2026-10-13T05:22:11.055Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "ship.departed",
+      "actionId": "dominion-mv68gcui-2:action:38",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-b",
+        "laneId": "forge-gate",
+        "from": "forge",
+        "to": "gate",
+        "energy": 4,
+        "duration": 3,
+        "planVersion": 4
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:112",
+      "seq": 112,
+      "tick": 46,
+      "wallTime": "2026-10-13T05:22:11.055Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 46
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:113",
+      "seq": 113,
+      "tick": 47,
+      "wallTime": "2026-10-13T05:22:12.255Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 47
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:114",
+      "seq": 114,
+      "tick": 48,
+      "wallTime": "2026-10-13T05:22:13.450Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 48
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:115",
+      "seq": 115,
+      "tick": 49,
+      "wallTime": "2026-10-13T05:22:14.655Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "ship.arrived",
+      "actionId": "dominion-mv68gcui-2:action:39",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-b",
+        "from": "forge",
+        "to": "gate"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:116",
+      "seq": 116,
+      "tick": 49,
+      "wallTime": "2026-10-13T05:22:14.655Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 49
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:117",
+      "seq": 117,
+      "tick": 50,
+      "wallTime": "2026-10-13T05:22:15.855Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "ship.departed",
+      "actionId": "dominion-mv68gcui-2:action:40",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-b",
+        "laneId": "gate-beacon",
+        "from": "gate",
+        "to": "beacon",
+        "energy": 2,
+        "duration": 7,
+        "planVersion": 4
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:118",
+      "seq": 118,
+      "tick": 50,
+      "wallTime": "2026-10-13T05:22:15.855Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 50
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:119",
+      "seq": 119,
+      "tick": 51,
+      "wallTime": "2026-10-13T05:22:17.054Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 51
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:120",
+      "seq": 120,
+      "tick": 52,
+      "wallTime": "2026-10-13T05:22:18.255Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 52
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:121",
+      "seq": 121,
+      "tick": 53,
+      "wallTime": "2026-10-13T05:22:19.455Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 53
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:122",
+      "seq": 122,
+      "tick": 54,
+      "wallTime": "2026-10-13T05:22:20.655Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 54
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:123",
+      "seq": 123,
+      "tick": 55,
+      "wallTime": "2026-10-13T05:22:21.852Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 55
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:124",
+      "seq": 124,
+      "tick": 56,
+      "wallTime": "2026-10-13T05:22:23.055Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 56
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:125",
+      "seq": 125,
+      "tick": 57,
+      "wallTime": "2026-10-13T05:22:24.255Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "ship.arrived",
+      "actionId": "dominion-mv68gcui-2:action:41",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-b",
+        "from": "gate",
+        "to": "beacon"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:126",
+      "seq": 126,
+      "tick": 57,
+      "wallTime": "2026-10-13T05:22:24.255Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 57
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:127",
+      "seq": 127,
+      "tick": 58,
+      "wallTime": "2026-10-13T05:22:25.456Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "ship.departed",
+      "actionId": "dominion-mv68gcui-2:action:42",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-b",
+        "laneId": "beacon-lab",
+        "from": "beacon",
+        "to": "lab",
+        "energy": 2,
+        "duration": 6,
+        "planVersion": 4
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:128",
+      "seq": 128,
+      "tick": 58,
+      "wallTime": "2026-10-13T05:22:25.456Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 58
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:129",
+      "seq": 129,
+      "tick": 59,
+      "wallTime": "2026-10-13T05:22:26.656Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 59
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:130",
+      "seq": 130,
+      "tick": 60,
+      "wallTime": "2026-10-13T05:22:27.856Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 60
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:131",
+      "seq": 131,
+      "tick": 61,
+      "wallTime": "2026-10-13T05:22:29.056Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 61
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:132",
+      "seq": 132,
+      "tick": 62,
+      "wallTime": "2026-10-13T05:22:30.256Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 62
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:133",
+      "seq": 133,
+      "tick": 63,
+      "wallTime": "2026-10-13T05:22:31.456Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 63
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:134",
+      "seq": 134,
+      "tick": 64,
+      "wallTime": "2026-10-13T05:22:32.652Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "ship.arrived",
+      "actionId": "dominion-mv68gcui-2:action:43",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-b",
+        "from": "beacon",
+        "to": "lab"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:135",
+      "seq": 135,
+      "tick": 64,
+      "wallTime": "2026-10-13T05:22:32.652Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 64
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:136",
+      "seq": 136,
+      "tick": 65,
+      "wallTime": "2026-10-13T05:22:33.856Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "action.started",
+      "actionId": "dominion-mv68gcui-2:action:44",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-b",
+        "stepId": "mission-1:step:3",
+        "kind": "deliver",
+        "elapsed": 0,
+        "duration": 2,
+        "targetId": "lab",
+        "missionId": "mission-1"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:137",
+      "seq": 137,
+      "tick": 65,
+      "wallTime": "2026-10-13T05:22:33.856Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 65
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:138",
+      "seq": 138,
+      "tick": 66,
+      "wallTime": "2026-10-13T05:22:35.056Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 66
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:139",
+      "seq": 139,
+      "tick": 67,
+      "wallTime": "2026-10-13T05:22:36.256Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "cargo.delivered",
+      "actionId": "dominion-mv68gcui-2:action:45",
+      "toolCallId": null,
+      "payload": {
+        "shipId": "transport-b",
+        "targetId": "lab",
+        "resources": {
+          "energy": 0,
+          "supplies": 2,
+          "parts": 0,
+          "samples": 0
+        }
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:140",
+      "seq": 140,
+      "tick": 67,
+      "wallTime": "2026-10-13T05:22:36.256Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "step.completed",
+      "actionId": "dominion-mv68gcui-2:action:46",
+      "toolCallId": null,
+      "payload": {
+        "stepId": "mission-1:step:3",
+        "shipId": "transport-b",
+        "kind": "deliver"
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": "mission-1",
+      "attempt": 1,
+      "eventId": "dominion-mv68gcui-2:event:141",
+      "seq": 141,
+      "tick": 67,
+      "wallTime": "2026-10-13T05:22:36.256Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "mission.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "delivered": {
+          "energy": 0,
+          "supplies": 2,
+          "parts": 0,
+          "samples": 0
+        }
+      }
+    },
+    {
+      "schemaVersion": 4,
+      "sessionId": "dominion-mv68gcui-2",
+      "missionId": null,
+      "attempt": null,
+      "eventId": "dominion-mv68gcui-2:event:142",
+      "seq": 142,
+      "tick": 67,
+      "wallTime": "2026-10-13T05:22:36.256Z",
+      "worldVersion": 4,
+      "mode": "local-simulation",
+      "type": "tick.completed",
+      "actionId": null,
+      "toolCallId": null,
+      "payload": {
+        "tick": 67
+      }
+    }
+  ],
+  "final": {
+    "schemaVersion": 4,
+    "plannerVersion": "dominion-dijkstra-reservation-v4.0",
+    "sessionId": "dominion-mv68gcui-2",
+    "seed": 4217,
+    "scenario": "expedition",
+    "tick": 67,
+    "worldVersion": 4,
+    "status": "paused",
+    "strategy": "balanced",
+    "connected": true,
+    "stations": [
+      {
+        "id": "port",
+        "label": "曙光环港",
+        "regionId": "dawn",
+        "kind": "port",
+        "position": [
+          -15,
+          0,
+          10
+        ],
+        "stock": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 8,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "forge",
+        "label": "赫利俄斯物资仓",
+        "regionId": "dawn",
+        "kind": "depot",
+        "position": [
+          -12,
+          3,
+          0
+        ],
+        "stock": {
+          "energy": 77,
+          "supplies": 8,
+          "parts": 8,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 3,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "depot",
+        "label": "晨曦能源舱",
+        "regionId": "dawn",
+        "kind": "depot",
+        "position": [
+          -20,
+          -1,
+          -6
+        ],
+        "stock": {
+          "energy": 60,
+          "supplies": 4,
+          "parts": 4,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 2,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "gate",
+        "label": "远征航门",
+        "regionId": "dawn",
+        "kind": "relay",
+        "position": [
+          -5,
+          2,
+          -8
+        ],
+        "stock": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 3,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "ice",
+        "label": "霜环前哨",
+        "regionId": "frost",
+        "kind": "outpost",
+        "position": [
+          4,
+          1,
+          -13
+        ],
+        "stock": {
+          "energy": 3,
+          "supplies": 2,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 3,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "silo",
+        "label": "冰脊资源站",
+        "regionId": "frost",
+        "kind": "depot",
+        "position": [
+          13,
+          -1,
+          -9
+        ],
+        "stock": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 2,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "beacon",
+        "label": "北冕导航台",
+        "regionId": "frost",
+        "kind": "relay",
+        "position": [
+          10,
+          4,
+          0
+        ],
+        "stock": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 3,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "relay",
+        "label": "赤砂受损中继",
+        "regionId": "ember",
+        "kind": "relay",
+        "position": [
+          2,
+          1,
+          7
+        ],
+        "stock": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 3,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "lab",
+        "label": "赤砂科研站",
+        "regionId": "ember",
+        "kind": "science",
+        "position": [
+          14,
+          0,
+          10
+        ],
+        "stock": {
+          "energy": 0,
+          "supplies": 2,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 4,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "sample",
+        "label": "砾光勘测点",
+        "regionId": "ember",
+        "kind": "sample",
+        "position": [
+          20,
+          2,
+          5
+        ],
+        "stock": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 3,
+        "blockedBerths": 0,
+        "damaged": false
+      },
+      {
+        "id": "dock",
+        "label": "启明星维修坞",
+        "regionId": "dawn",
+        "kind": "port",
+        "position": [
+          -3,
+          -1,
+          13
+        ],
+        "stock": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "dockCapacity": 3,
+        "blockedBerths": 0,
+        "damaged": false
+      }
+    ],
+    "lanes": [
+      {
+        "id": "port-forge",
+        "from": "port",
+        "to": "forge",
+        "ticks": 3,
+        "energy": 4,
+        "risk": 1,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "port-depot",
+        "from": "port",
+        "to": "depot",
+        "ticks": 5,
+        "energy": 2,
+        "risk": 0,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "port-dock",
+        "from": "port",
+        "to": "dock",
+        "ticks": 3,
+        "energy": 3,
+        "risk": 1,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "forge-gate",
+        "from": "forge",
+        "to": "gate",
+        "ticks": 3,
+        "energy": 4,
+        "risk": 2,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "depot-gate",
+        "from": "depot",
+        "to": "gate",
+        "ticks": 5,
+        "energy": 2,
+        "risk": 0,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "gate-ice",
+        "from": "gate",
+        "to": "ice",
+        "ticks": 4,
+        "energy": 8,
+        "risk": 3,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "ice-silo",
+        "from": "ice",
+        "to": "silo",
+        "ticks": 3,
+        "energy": 2,
+        "risk": 1,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "gate-beacon",
+        "from": "gate",
+        "to": "beacon",
+        "ticks": 7,
+        "energy": 2,
+        "risk": 0,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "silo-beacon",
+        "from": "silo",
+        "to": "beacon",
+        "ticks": 4,
+        "energy": 3,
+        "risk": 1,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "forge-relay",
+        "from": "forge",
+        "to": "relay",
+        "ticks": 4,
+        "energy": 5,
+        "risk": 3,
+        "capacity": 1,
+        "open": false,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "dock-relay",
+        "from": "dock",
+        "to": "relay",
+        "ticks": 4,
+        "energy": 2,
+        "risk": 0,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "relay-beacon",
+        "from": "relay",
+        "to": "beacon",
+        "ticks": 4,
+        "energy": 3,
+        "risk": 1,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "relay-lab",
+        "from": "relay",
+        "to": "lab",
+        "ticks": 3,
+        "energy": 4,
+        "risk": 2,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "beacon-lab",
+        "from": "beacon",
+        "to": "lab",
+        "ticks": 6,
+        "energy": 2,
+        "risk": 0,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "lab-sample",
+        "from": "lab",
+        "to": "sample",
+        "ticks": 3,
+        "energy": 3,
+        "risk": 1,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      {
+        "id": "silo-sample",
+        "from": "silo",
+        "to": "sample",
+        "ticks": 6,
+        "energy": 5,
+        "risk": 2,
+        "capacity": 1,
+        "open": true,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      }
+    ],
+    "ships": [
+      {
+        "id": "transport-a",
+        "label": "方舟 1",
+        "role": "transport",
+        "nodeId": "ice",
+        "transit": null,
+        "capacity": 8,
+        "energy": 84,
+        "initialEnergy": 100,
+        "speed": 1,
+        "cargo": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "cargoOwner": null,
+        "sourceId": null,
+        "missionId": null,
+        "stepId": null,
+        "route": [],
+        "planVersion": 0,
+        "phase": "idle",
+        "status": "idle",
+        "action": null,
+        "disabled": false,
+        "waitTicks": 0,
+        "totalWait": 0
+      },
+      {
+        "id": "transport-b",
+        "label": "方舟 2",
+        "role": "transport",
+        "nodeId": "lab",
+        "transit": null,
+        "capacity": 8,
+        "energy": 88,
+        "initialEnergy": 100,
+        "speed": 1,
+        "cargo": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "cargoOwner": null,
+        "sourceId": null,
+        "missionId": null,
+        "stepId": null,
+        "route": [],
+        "planVersion": 0,
+        "phase": "idle",
+        "status": "idle",
+        "action": null,
+        "disabled": false,
+        "waitTicks": 0,
+        "totalWait": 0
+      },
+      {
+        "id": "survey-a",
+        "label": "游隼 1",
+        "role": "survey",
+        "nodeId": "relay",
+        "transit": null,
+        "capacity": 2,
+        "energy": 95,
+        "initialEnergy": 100,
+        "speed": 2,
+        "cargo": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "cargoOwner": null,
+        "sourceId": null,
+        "missionId": null,
+        "stepId": null,
+        "route": [],
+        "planVersion": 0,
+        "phase": "idle",
+        "status": "idle",
+        "action": null,
+        "disabled": false,
+        "waitTicks": 0,
+        "totalWait": 0
+      },
+      {
+        "id": "survey-b",
+        "label": "游隼 2",
+        "role": "survey",
+        "nodeId": "port",
+        "transit": null,
+        "capacity": 2,
+        "energy": 100,
+        "initialEnergy": 100,
+        "speed": 2,
+        "cargo": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "cargoOwner": null,
+        "sourceId": null,
+        "missionId": null,
+        "stepId": null,
+        "route": [],
+        "planVersion": 0,
+        "phase": "idle",
+        "status": "idle",
+        "action": null,
+        "disabled": false,
+        "waitTicks": 0,
+        "totalWait": 0
+      },
+      {
+        "id": "repair-a",
+        "label": "织星 1",
+        "role": "repair",
+        "nodeId": "relay",
+        "transit": null,
+        "capacity": 24,
+        "energy": 87,
+        "initialEnergy": 100,
+        "speed": 1,
+        "cargo": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "cargoOwner": null,
+        "sourceId": null,
+        "missionId": null,
+        "stepId": null,
+        "route": [],
+        "planVersion": 0,
+        "phase": "idle",
+        "status": "idle",
+        "action": null,
+        "disabled": false,
+        "waitTicks": 0,
+        "totalWait": 0
+      },
+      {
+        "id": "repair-b",
+        "label": "织星 2",
+        "role": "repair",
+        "nodeId": "port",
+        "transit": null,
+        "capacity": 24,
+        "energy": 100,
+        "initialEnergy": 100,
+        "speed": 1,
+        "cargo": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "reserved": {
+          "energy": 0,
+          "supplies": 0,
+          "parts": 0,
+          "samples": 0
+        },
+        "cargoOwner": null,
+        "sourceId": null,
+        "missionId": null,
+        "stepId": null,
+        "route": [],
+        "planVersion": 0,
+        "phase": "idle",
+        "status": "idle",
+        "action": null,
+        "disabled": false,
+        "waitTicks": 0,
+        "totalWait": 0
+      }
+    ],
+    "missions": [
+      {
+        "id": "mission-1",
+        "kind": "relay",
+        "label": "勘测 · 维修 · 运输接力",
+        "status": "completed",
+        "priority": 6,
+        "createdAt": 0,
+        "deadline": 240,
+        "deadlineWindow": 240,
+        "attempt": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "startedAt": 0,
+            "endedAt": 67,
+            "outcome": "completed",
+            "reason": null
+          }
+        ],
+        "steps": [
+          {
+            "id": "mission-1:step:1",
+            "label": "勘测受损中继",
+            "kind": "scan",
+            "role": "survey",
+            "targetId": "relay",
+            "sourceId": null,
+            "resources": {
+              "energy": 0,
+              "supplies": 0,
+              "parts": 0,
+              "samples": 0
+            },
+            "dependsOn": [],
+            "status": "completed",
+            "shipId": "survey-a",
+            "startedAt": 1,
+            "completedAt": 11
+          },
+          {
+            "id": "mission-1:step:2",
+            "label": "携维修件恢复科研通道",
+            "kind": "repair",
+            "role": "repair",
+            "targetId": "relay",
+            "sourceId": "forge",
+            "resources": {
+              "energy": 0,
+              "supplies": 0,
+              "parts": 2,
+              "samples": 0
+            },
+            "dependsOn": [
+              "mission-1:step:1"
+            ],
+            "status": "completed",
+            "shipId": "repair-a",
+            "startedAt": 12,
+            "completedAt": 38
+          },
+          {
+            "id": "mission-1:step:3",
+            "label": "转运科研载荷",
+            "kind": "deliver",
+            "role": "transport",
+            "targetId": "lab",
+            "sourceId": "forge",
+            "resources": {
+              "energy": 0,
+              "supplies": 2,
+              "parts": 0,
+              "samples": 0
+            },
+            "dependsOn": [
+              "mission-1:step:2"
+            ],
+            "status": "completed",
+            "shipId": "transport-b",
+            "startedAt": 39,
+            "completedAt": 67
+          }
+        ],
+        "delivered": {
+          "energy": 0,
+          "supplies": 2,
+          "parts": 0,
+          "samples": 0
+        },
+        "failureCode": null,
+        "message": "前置依赖、资源账本与交付事实已核验。",
+        "waitTicks": 0,
+        "lastProgress": 67
+      },
+      {
+        "id": "mission-2",
+        "kind": "supply",
+        "label": "深空常规补给",
+        "status": "completed",
+        "priority": 4,
+        "createdAt": 0,
+        "deadline": 180,
+        "deadlineWindow": 180,
+        "attempt": 1,
+        "attempts": [
+          {
+            "attempt": 1,
+            "startedAt": 0,
+            "endedAt": 19,
+            "outcome": "completed",
+            "reason": null
+          }
+        ],
+        "steps": [
+          {
+            "id": "mission-2:step:1",
+            "label": "预留、装载并交付补给",
+            "kind": "deliver",
+            "role": "transport",
+            "targetId": "ice",
+            "sourceId": "forge",
+            "resources": {
+              "energy": 3,
+              "supplies": 2,
+              "parts": 0,
+              "samples": 0
+            },
+            "dependsOn": [],
+            "status": "completed",
+            "shipId": "transport-a",
+            "startedAt": 1,
+            "completedAt": 19
+          }
+        ],
+        "delivered": {
+          "energy": 3,
+          "supplies": 2,
+          "parts": 0,
+          "samples": 0
+        },
+        "failureCode": null,
+        "message": "前置依赖、资源账本与交付事实已核验。",
+        "waitTicks": 0,
+        "lastProgress": 19
+      }
+    ],
+    "discoveries": [
+      {
+        "id": "mission-1:discovery:1",
+        "stationId": "relay",
+        "missionId": "mission-1",
+        "shipId": "survey-a",
+        "tick": 11,
+        "kind": "damage",
+        "quantity": 0
+      }
+    ],
+    "ledger": {
+      "initial": {
+        "energy": 740,
+        "supplies": 16,
+        "parts": 14,
+        "samples": 0
+      },
+      "generated": {
+        "energy": 0,
+        "supplies": 0,
+        "parts": 0,
+        "samples": 0
+      },
+      "consumed": {
+        "energy": 46,
+        "supplies": 0,
+        "parts": 2,
+        "samples": 0
+      }
+    },
+    "faults": [],
+    "appliedFaults": [],
+    "actionIds": [
+      "dominion-mv68gcui-2:action:1",
+      "dominion-mv68gcui-2:action:2",
+      "dominion-mv68gcui-2:action:3",
+      "dominion-mv68gcui-2:action:4",
+      "dominion-mv68gcui-2:action:5",
+      "dominion-mv68gcui-2:action:6",
+      "dominion-mv68gcui-2:action:7",
+      "dominion-mv68gcui-2:action:8",
+      "dominion-mv68gcui-2:action:9",
+      "dominion-mv68gcui-2:action:10",
+      "dominion-mv68gcui-2:action:11",
+      "dominion-mv68gcui-2:action:12",
+      "dominion-mv68gcui-2:action:13",
+      "dominion-mv68gcui-2:action:14",
+      "dominion-mv68gcui-2:action:15",
+      "dominion-mv68gcui-2:action:16",
+      "dominion-mv68gcui-2:action:17",
+      "dominion-mv68gcui-2:action:18",
+      "dominion-mv68gcui-2:action:19",
+      "dominion-mv68gcui-2:action:20",
+      "dominion-mv68gcui-2:action:21",
+      "dominion-mv68gcui-2:action:22",
+      "dominion-mv68gcui-2:action:23",
+      "dominion-mv68gcui-2:action:24",
+      "dominion-mv68gcui-2:action:25",
+      "dominion-mv68gcui-2:action:26",
+      "dominion-mv68gcui-2:action:27",
+      "dominion-mv68gcui-2:action:28",
+      "dominion-mv68gcui-2:action:29",
+      "dominion-mv68gcui-2:action:30",
+      "dominion-mv68gcui-2:action:31",
+      "dominion-mv68gcui-2:action:32",
+      "dominion-mv68gcui-2:action:33",
+      "dominion-mv68gcui-2:action:34",
+      "dominion-mv68gcui-2:action:35",
+      "dominion-mv68gcui-2:action:36",
+      "dominion-mv68gcui-2:action:37",
+      "dominion-mv68gcui-2:action:38",
+      "dominion-mv68gcui-2:action:39",
+      "dominion-mv68gcui-2:action:40",
+      "dominion-mv68gcui-2:action:41",
+      "dominion-mv68gcui-2:action:42",
+      "dominion-mv68gcui-2:action:43",
+      "dominion-mv68gcui-2:action:44",
+      "dominion-mv68gcui-2:action:45",
+      "dominion-mv68gcui-2:action:46"
+    ],
+    "commandIds": [
+      "3c7bf6ee-215f-4434-9c35-05871b1649b3",
+      "15a21c53-270c-45f4-a9bd-7d7aa9bd3ea7",
+      "988030c3-f3df-4321-876b-3295de627d36",
+      "7cecf0cb-b22d-4751-b83b-fa901d4b003f",
+      "dd862a62-600f-4d05-a4c8-ee8e2d6d9783",
+      "c099c943-cbe4-466f-b9bb-9f3106ffc4a2",
+      "05d71118-165f-46c9-b164-b2a1216db0e1",
+      "d28b075d-2921-44bc-96cc-81c6b88f9fa1",
+      "03fc0b23-c5bb-4305-be0a-bf17cb52005c",
+      "d014a971-a8f0-4e89-9c59-127169add420",
+      "c830bfa9-589a-490e-8307-db95a07ba6d0",
+      "f6efae64-80ef-4e5f-a862-3ae8bbbccf51",
+      "07599310-769b-4949-9003-8773f32f0a24",
+      "c8dfe4dc-a68e-4064-b7a4-576503009144",
+      "9f137565-b841-49e8-b33e-6d6975c4a5f4",
+      "b9babc82-5223-4f98-80af-a4bbf947b991",
+      "650173de-4466-48c6-9233-c8f34302225c",
+      "f7a9c794-8eb5-44df-9168-a6e66d7112e8",
+      "83cec103-f3eb-4c99-8f67-a65ff7e26a24",
+      "40dfc2aa-f3e7-4bca-8502-365b8bfd4172",
+      "e94404cf-3d1e-49d6-9c3d-be8b64f773bc",
+      "0928e42c-1292-44a6-9b19-49cfc8d591ba",
+      "a771cef0-967a-4da0-a950-ff339217bbf7",
+      "848dd02e-5dde-4a82-99d3-18b2c1ce729d",
+      "ae213451-f780-492c-8d52-7393b31a5a95",
+      "8a5cb3b5-f447-4fa3-b967-9eea0ac7fdc8",
+      "2f46c1d9-0d95-45a4-add6-52c1729e6ac7",
+      "b56f7324-aaad-4343-839d-1dcf94a95836",
+      "4a4aead8-ed4d-4951-91cc-3833f4eea299",
+      "a0dc9828-3825-46df-813b-ac6c068402d2",
+      "ce48511e-ddae-4f75-bf11-07c736ccd3c0",
+      "eeabb819-92af-4bda-9329-bf7d08efa4d3",
+      "bfd6263f-5890-4392-820b-0b39eb89dd37",
+      "ef95f2e5-7107-42b8-9a6a-1c9b5571f690",
+      "0f159fd2-da84-44bf-85e7-a9645893d54b",
+      "69ddc835-159a-481d-8ed3-a0274b5cbf19",
+      "eaf5bf68-b6fa-4aba-b8e5-d18fc639b892",
+      "f86c517d-62fc-4f6f-9144-5bcd82e86d51",
+      "e1962cc3-0b80-466f-a96f-3e06890555e8",
+      "184be903-f31a-47e5-9f70-9a4989296aba",
+      "4fe560db-eec6-47f3-a5f5-c1b333e8e928",
+      "f3baf917-d05d-4ac7-95ae-e55019707d41",
+      "9f10b4d4-97da-4fc7-8fb6-86083670c5f9",
+      "b784bfe1-0e42-401f-92ef-626da2ed3b40",
+      "48de2c7f-fec8-48fc-b03f-90e696838789",
+      "a6ad0fa0-d161-4454-bb36-cf3c6305271a",
+      "180b0e4a-9bbf-4806-8ee8-d65a6f25c6c8",
+      "f24d2020-385f-4427-962c-ce58d565a6c6",
+      "cfeb58f3-a3ab-469f-86d3-95589464d5f7",
+      "0edb9fef-553f-4706-af9d-f495368eacb4",
+      "ac2308b5-e72c-4e92-a130-7500cd73bde6",
+      "87055333-183f-49d0-9242-413d3c4d0c5c",
+      "749c1bdb-7a52-4a4e-8627-111f09fd2b77",
+      "b8c1c845-95d6-4c97-b2ce-6690f5ae5862",
+      "149a6e1a-4d32-43eb-a436-d9b2a43f9e55",
+      "d4d82101-9131-4cf0-9058-8b8ca0497fec",
+      "33863a83-dd93-4275-a5d0-0a576df6a9b8",
+      "5de460d1-e632-438a-8c2c-4cdbdcb9c749",
+      "ee70b1c7-62fe-4c56-b9ee-007801e9622f",
+      "0decb777-e55f-46af-845a-9880b1cfa56a",
+      "5fd32c39-5130-4d4a-84b1-8a83f8ec3d73",
+      "ae109307-14ea-4a4b-8969-6a67ad648a15",
+      "7ef851ec-964e-4304-bb21-95c721500b19",
+      "d609d8a4-5ee1-42fd-9129-31646c8ea7b5",
+      "a849b8a2-9bf1-4f64-976d-12969fb8c3a5",
+      "0aed293b-b76a-4f39-a194-8d2a36b9ef11",
+      "4169b7b1-995c-4d56-a39e-f52b0d9f46a6",
+      "ab7cd8ce-620e-4702-8501-57b68de91671",
+      "6a49f5fa-83db-462f-aaeb-98d2d30614ac",
+      "1a1ed040-4b97-4e81-abc8-cfb01d7b6698",
+      "3e058050-b7b4-4b40-a4dc-ffca0f33b38e",
+      "9a913a6a-c91e-4a8d-8ad4-2b47dd305e2b",
+      "2e349d90-8b0a-4817-8196-33aa77760dda"
+    ],
+    "replans": 8,
+    "message": "当前任务批次已结束；世界仍开放，可查看结果、恢复失败或创建新任务。",
+    "tools": [
+      {
+        "id": "dominion-mv68gcui-2:tool:1",
+        "tool": "read-world",
+        "input": {
+          "worldVersion": 1
+        },
+        "output": {
+          "ships": 6,
+          "missions": 2,
+          "knownDiscoveries": 0
+        },
+        "sources": [
+          "world:1",
+          "seed:4217",
+          "dominion-dijkstra-reservation-v4.0"
+        ],
+        "durationMs": 0.10000002384185791
+      },
+      {
+        "id": "dominion-mv68gcui-2:tool:5",
+        "tool": "estimate-route",
+        "input": {
+          "shipId": "survey-a",
+          "from": "port",
+          "to": "relay",
+          "strategy": "balanced",
+          "worldVersion": 1
+        },
+        "output": {
+          "stations": [
+            "port",
+            "dock",
+            "relay"
+          ],
+          "lanes": [
+            "port-dock",
+            "dock-relay"
+          ],
+          "ticks": 4,
+          "energy": 5,
+          "risk": 1,
+          "score": 35
+        },
+        "sources": [
+          "world:1",
+          "seed:4217",
+          "dominion-dijkstra-reservation-v4.0"
+        ],
+        "durationMs": 0
+      },
+      {
+        "id": "dominion-mv68gcui-2:tool:8",
+        "tool": "estimate-route",
+        "input": {
+          "shipId": "transport-a",
+          "from": "port",
+          "to": "forge",
+          "strategy": "balanced",
+          "worldVersion": 1
+        },
+        "output": {
+          "stations": [
+            "port",
+            "forge"
+          ],
+          "lanes": [
+            "port-forge"
+          ],
+          "ticks": 3,
+          "energy": 4,
+          "risk": 1,
+          "score": 29
+        },
+        "sources": [
+          "world:1",
+          "seed:4217",
+          "dominion-dijkstra-reservation-v4.0"
+        ],
+        "durationMs": 0
+      },
+      {
+        "id": "dominion-mv68gcui-2:tool:25",
+        "tool": "estimate-route",
+        "input": {
+          "shipId": "transport-a",
+          "from": "forge",
+          "to": "ice",
+          "strategy": "balanced",
+          "worldVersion": 1
+        },
+        "output": {
+          "stations": [
+            "forge",
+            "gate",
+            "ice"
+          ],
+          "lanes": [
+            "forge-gate",
+            "gate-ice"
+          ],
+          "ticks": 7,
+          "energy": 12,
+          "risk": 5,
+          "score": 97
+        },
+        "sources": [
+          "world:1",
+          "seed:4217",
+          "dominion-dijkstra-reservation-v4.0"
+        ],
+        "durationMs": 0
+      },
+      {
+        "id": "dominion-mv68gcui-2:tool:37",
+        "tool": "read-world",
+        "input": {
+          "worldVersion": 3
+        },
+        "output": {
+          "ships": 6,
+          "missions": 2,
+          "knownDiscoveries": 1
+        },
+        "sources": [
+          "world:3",
+          "seed:4217",
+          "dominion-dijkstra-reservation-v4.0"
+        ],
+        "durationMs": 0
+      },
+      {
+        "id": "dominion-mv68gcui-2:tool:40",
+        "tool": "estimate-route",
+        "input": {
+          "shipId": "repair-a",
+          "from": "port",
+          "to": "forge",
+          "strategy": "balanced",
+          "worldVersion": 3
+        },
+        "output": {
+          "stations": [
+            "port",
+            "forge"
+          ],
+          "lanes": [
+            "port-forge"
+          ],
+          "ticks": 3,
+          "energy": 4,
+          "risk": 1,
+          "score": 29
+        },
+        "sources": [
+          "world:3",
+          "seed:4217",
+          "dominion-dijkstra-reservation-v4.0"
+        ],
+        "durationMs": 0.10000002384185791
+      },
+      {
+        "id": "dominion-mv68gcui-2:tool:43",
+        "tool": "estimate-route",
+        "input": {
+          "shipId": "transport-a",
+          "from": "gate",
+          "to": "ice",
+          "strategy": "balanced",
+          "worldVersion": 3
+        },
+        "output": {
+          "stations": [
+            "gate",
+            "ice"
+          ],
+          "lanes": [
+            "gate-ice"
+          ],
+          "ticks": 4,
+          "energy": 8,
+          "risk": 3,
+          "score": 60
+        },
+        "sources": [
+          "world:3",
+          "seed:4217",
+          "dominion-dijkstra-reservation-v4.0"
+        ],
+        "durationMs": 0
+      },
+      {
+        "id": "dominion-mv68gcui-2:tool:58",
+        "tool": "estimate-route",
+        "input": {
+          "shipId": "repair-a",
+          "from": "forge",
+          "to": "relay",
+          "strategy": "balanced",
+          "worldVersion": 3
+        },
+        "output": {
+          "stations": [
+            "forge",
+            "port",
+            "dock",
+            "relay"
+          ],
+          "lanes": [
+            "port-forge",
+            "port-dock",
+            "dock-relay"
+          ],
+          "ticks": 10,
+          "energy": 9,
+          "risk": 2,
+          "score": 73
+        },
+        "sources": [
+          "world:3",
+          "seed:4217",
+          "dominion-dijkstra-reservation-v4.0"
+        ],
+        "durationMs": 0.10000002384185791
+      },
+      {
+        "id": "dominion-mv68gcui-2:tool:93",
+        "tool": "read-world",
+        "input": {
+          "worldVersion": 4
+        },
+        "output": {
+          "ships": 6,
+          "missions": 2,
+          "knownDiscoveries": 1
+        },
+        "sources": [
+          "world:4",
+          "seed:4217",
+          "dominion-dijkstra-reservation-v4.0"
+        ],
+        "durationMs": 0.10000002384185791
+      },
+      {
+        "id": "dominion-mv68gcui-2:tool:96",
+        "tool": "estimate-route",
+        "input": {
+          "shipId": "transport-b",
+          "from": "port",
+          "to": "forge",
+          "strategy": "balanced",
+          "worldVersion": 4
+        },
+        "output": {
+          "stations": [
+            "port",
+            "forge"
+          ],
+          "lanes": [
+            "port-forge"
+          ],
+          "ticks": 3,
+          "energy": 4,
+          "risk": 1,
+          "score": 29
+        },
+        "sources": [
+          "world:4",
+          "seed:4217",
+          "dominion-dijkstra-reservation-v4.0"
+        ],
+        "durationMs": 0
+      },
+      {
+        "id": "dominion-mv68gcui-2:tool:109",
+        "tool": "estimate-route",
+        "input": {
+          "shipId": "transport-b",
+          "from": "forge",
+          "to": "lab",
+          "strategy": "balanced",
+          "worldVersion": 4
+        },
+        "output": {
+          "stations": [
+            "forge",
+            "gate",
+            "beacon",
+            "lab"
+          ],
+          "lanes": [
+            "forge-gate",
+            "gate-beacon",
+            "beacon-lab"
+          ],
+          "ticks": 16,
+          "energy": 8,
+          "risk": 2,
+          "score": 88
+        },
+        "sources": [
+          "world:4",
+          "seed:4217",
+          "dominion-dijkstra-reservation-v4.0"
+        ],
+        "durationMs": 0
+      }
+    ]
+  }
+}

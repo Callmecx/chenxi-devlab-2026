@@ -1,22 +1,26 @@
-# Chenxi DevLab · 星域智航 V3
+# Chenxi DevLab · 星域智航 V4
 
 **从业务问题到工程交付。运行作品，打开源码，核对证据。**
 
-唯一开发与发布仓库：[Callmecx/chenxi-devlab-2026](https://github.com/Callmecx/chenxi-devlab-2026)。沿用 Vue 3、TypeScript、Vite、Three.js 与独立 uni-app 工程。V3 将智能实验室重构为可干预的轨道港，同时保留商城、H5、金融回放、企业仿真和本机持久化 API。
+唯一开发与发布仓库：[Callmecx/chenxi-devlab-2026](https://github.com/Callmecx/chenxi-devlab-2026)。沿用 Vue 3、TypeScript、Vite、Three.js 与独立 uni-app 工程。V4 将智能实验室扩展为三类六舰、四条任务链的星际协同指挥中枢；商城、H5、金融回放、企业仿真与本机持久化 API 保持独立。
 
 [主站](https://callmecx.github.io/chenxi-devlab-2026/#/) · [智能演化实验室](https://callmecx.github.io/chenxi-devlab-2026/#/intelligence) · [巷集商城](https://callmecx.github.io/chenxi-devlab-2026/shop/#/) · [蓉城周末 H5](https://callmecx.github.io/chenxi-devlab-2026/pulse/#/)。准确发布版本见 [STATUS.md](STATUS.md)。
 
-![星域智航实际浏览器截图](docs/screenshots/v3/after-production-r2-1440x900-overview.png)
+点击“启动远征”，观察勘测、维修与运输的真实依赖。关闭航道、制造不可达、重新开放并显式重试；暂停后从同一快照实算两个未来，采用只改变后续策略。镜头、装卸、扫描与维修显示来自真实世界状态，动画不能宣布任务完成。“远征导览”可随时接管，导出记录可严格验证后只读回放。
 
-点击“开始补给任务”，观察两艘载体取送三份能源。关闭航道、制造不可达、重新开放并恢复；从同一暂停快照比较时效/能耗策略；在工程视图核对输入输出和事件，再回放实际过程。结果由世界状态与约束判定，不由动画结束判定。
+[V4 架构与世界规则](docs/intelligence-lab-v4/ARCHITECTURE.md) · [模式与发布状态](docs/intelligence-lab-v4/MODE_AND_RELEASE_STATUS.md) · [三分钟演示及源码追问](docs/intelligence-lab-v4/DEMO_GUIDE.md) · [功能与贡献映射](docs/intelligence-lab-v4/CONTRIBUTION_MAP.md) · [A/B 简历条目](docs/intelligence-lab-v4/RESUME_BULLETS.md)。当前验收和公开版本以 [STATUS](STATUS.md) 为准。
 
-[V3 验收矩阵](docs/intelligence-lab-v3/ACCEPTANCE_REPORT.md) · [世界规则](docs/intelligence-lab-v3/WORLD_RULES.md) · [状态与渲染边界](docs/intelligence-lab-v3/RUNTIME_CONTRACT.md) · [前后视觉评审](docs/intelligence-lab-v3/VISUAL_REVIEW.md) · [动态性能实测](docs/intelligence-lab-v3/PERFORMANCE_REPORT.md) · [实际操作录屏](docs/intelligence-lab-v3/VIDEO.md) · [三分钟演示与简历建议](docs/intelligence-lab-v3/DEMO_GUIDE.md)。最终验收和公开版本以 [STATUS](STATUS.md) 为准。
+![V4实际生产画面：曙光环港与三类六舰](docs/screenshots/v4/1440-S1-overview.png)
+
+[六态原图、手机与V3对照](docs/intelligence-lab-v4/VISUAL_REVIEW.md) · [本轮测试](docs/intelligence-lab-v4/TEST_REPORT.md) · [性能实测](docs/intelligence-lab-v4/PERFORMANCE.md) · [可导入的合成运行记录](docs/intelligence-lab-v4/guide-example.json)。本地干净源码3c6d78f通过399项单元/API、127项生产浏览器与50轮生命周期检查；原始导览100.480秒。CI与实际部署独立记账，不用本地成绩代替上线结论。
+
+[V3 历史运行入口](https://callmecx.github.io/chenxi-devlab-2026/#/intelligence/v3)与[V3 原始验收记录](docs/intelligence-lab-v3/ACCEPTANCE_REPORT.md)保留；旧版截图、标签和测试不会冒充 V4 的本轮证据。
 
 ## 可以实际操作的内容
 
 | 作品                | 本轮实现                                                                                                           | 运行边界                                                                   |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
-| 星域智航 V3         | 原创轨道港、7站9路、双载体预约、库存/容量/能量约束、封路重规划、同源Worker分支、严格历史校验、3D/2D/手机与减弱动效 | 本地确定性算法；无模型在线、视觉训练或实体机器人；启发式调度不宣称全局最优 |
+| 星域智航 V4         | 原创三域、11站16路、三类六舰、补给/接力/救援/采样任务、资格/资源/泊位约束、六共享视图、五种体验、四策略Worker分支与严格回放 | 本地确定性算法和受控规划替身；无在线模型或实体航天验证；启发式调度不宣称全局最优 |
 | 实用任务库          | 商品/活动目标、参数/结果/来源/耗时、审批/取消/失败/重试、原仓库 A\* 与回放                                         | 保留于 `/intelligence/tasks`；模拟数据和本地草稿；AGI 为愿景               |
 | 巷集 Select         | 12 SPU/25 SKU/4 分类、SKU、购物车、优惠券、服务端报价/库存预留、模拟付款/履约、未知结果查询和恢复                  | Pages 默认本地模式；可信 API 模式须启动本机服务；没有真实支付              |
 | 蓉城周末 Lab        | 偏好推荐、路线/场次、名额检查、预约结果、查询取消、异常和丢响应恢复                                                | 公开本地样例与本机持久 API 明确分开；数据为模拟                            |
@@ -61,11 +65,14 @@ npm run test:e2e
 npm run test:summary
 node scripts/evaluate-intelligence.ts
 node scripts/benchmark-api.ts
-node scripts/measure-orbit.mjs http://127.0.0.1:4173/
+# V4生产截图/无剪辑导览（要求干净源码构建，输出到忽略的.local/v4）
+node scripts/capture-dominion.mjs http://127.0.0.1:4173/
+# 同硬件V3/V4对比；先保留V3生产包到.local/v4/baseline/production-dist
+node scripts/measure-dominion.mjs
 npm run security:scan
 ```
 
-V3 已实际通过 308 项单元/接口测试（其中61项为新增轨道港领域测试）。2026-10-13 01:47:59.688（Asia/Shanghai）开始的 `da9b633` 本机生产包完整回归 **95/95** 通过，耗时296.929秒（约4分56.9秒），零失败、跳过和重试；包含原全站64项、旗舰28项和Worker故障恢复3项。远端[PR CI](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38281209887)与[主分支CI/Pages](https://github.com/Callmecx/chenxi-devlab-2026/actions/runs/38286209858)均已通过；2026/10/13 02:02:26（Asia/Shanghai）匿名浏览器复验了实际提交`da9b6337be81f7d6650785071984d1d2eb73fb47`，9路由×2视口、4业务流程、4证据资产，页面错误和失败资产均为0。详见[部署报告](DEPLOYMENT_REPORT.md)。性能、历史93项及94项记录与发布结果见 [TEST_REPORT.md](TEST_REPORT.md) 和 V3 验收报告。V2 的247项单元/接口、64项浏览器和450个评测场景作为历史证据保留，不代替 V3 验收。
+V4测试与发布按G0—G6分别记账，最终结果见[STATUS](STATUS.md)。升级前已重新跑通干净V3的308项单元/API和95项浏览器基线。原V3浏览器断言保留，仅将历史场景导航到 `/intelligence/v3`；新V4业务、故障、导览和生命周期用例覆盖正式 `/intelligence`。不会把编写了用例、构建成功或历史通过数当成本轮验收。V3旧发布记录保留于[原验收报告](docs/intelligence-lab-v3/ACCEPTANCE_REPORT.md)。
 
 E2E 使用独立 4116 API、4176 预览与 `.local/e2e/demo.sqlite`，不复用未知服务。CI 使用 Chromium。截图在 `docs/screenshots/`，原始录像/trace 留在忽略的 `.local/e2e/`；公开摘要不包含会话凭据或机器私密路径。
 

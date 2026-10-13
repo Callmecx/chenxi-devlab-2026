@@ -300,12 +300,12 @@ test('导航10次真实卸载与重挂：离开后canvas移除且旧WebGL上下�
     expect(await previous!.evaluate(element => !element.isConnected)).toBe(true);
     await expect.poll(() => previous!.evaluate(element => (element as HTMLCanvasElement).getContext('webgl2')?.isContextLost() ?? true)).toBe(true);
     await previous!.dispose();
-    await nav.getByRole('link', { name: '智能实验室', exact: true }).click();
-    await expect(page.getByTestId('orbit-lab')).toBeVisible();
-    await page.getByRole('button', { name: '实用任务库', exact: true }).first().click();
-    await page.getByRole('link', { name: /01 \/ 商品研究/ }).click();
+    // Keep this lifecycle test on the task library's real Home entry. The V4
+    // flagship has its own ten-round resource audit in dominion-lifecycle.spec.ts.
+    await page.getByRole('link', { name: '查看实用任务库', exact: true }).click();
+    await expect(page).toHaveURL(/#\/intelligence\/tasks$/);
   }
-  await expect(canvas).toHaveCount(1);
+  await expect(canvas).toHaveCount(1); await expect(canvas).toBeVisible();
 });
 
 test('系统减弱动效在reload后生效且保留真实单步执行', async ({ page }) => {

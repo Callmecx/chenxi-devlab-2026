@@ -10,9 +10,19 @@ const router = createRouter({
   routes: [
     { path: "/", component: Home, meta: { title: "从业务需求到工程交付" } },
     {
+      path: "/intelligence/preview-v4",
+      component: () => import("./pages/StarCommand.vue"),
+      meta: { title: "星域智航 V4 · 星际协同指挥中枢" },
+    },
+    {
       path: "/intelligence",
+      component: () => import("./pages/StarCommand.vue"),
+      meta: { title: "星域智航 V4 · 智能演化实验室" },
+    },
+    {
+      path: "/intelligence/v3",
       component: () => import("./pages/OrbitLab.vue"),
-      meta: { title: "星域智航 · 智能演化实验室" },
+      meta: { title: "星域智航 V3 历史版本 · 智能演化实验室" },
     },
     {
       path: "/intelligence/tasks",

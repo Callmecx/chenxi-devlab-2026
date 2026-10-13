@@ -589,7 +589,7 @@ onBeforeUnmount(() => {
         </button>
         <button
           :class="{ active: view === 'map' }"
-          aria-label="切换任务星图"
+          :aria-label="view === '3d' ? '切换任务星图' : '返回三维场景'"
           @click="view = view === '3d' ? 'map' : '3d'"
         >
           <GitFork :size="18" /><span>{{

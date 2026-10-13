@@ -78,7 +78,7 @@ for (const width of [1920, 1440, 768, 390, 360, 320]) {
       await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
     ).toBe(true);
     await page.screenshot({
-      path: `docs/screenshots/pulse-${width}.png`,
+      path: `docs/screenshots/v4/regression/pulse-${width}.png`,
       fullPage: true,
       animations: 'disabled',
     });

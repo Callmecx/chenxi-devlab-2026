@@ -1,4 +1,4 @@
-# V3 发布与回退流程
+# V4 发布与回退流程
 
 目标仅 Callmecx/chenxi-devlab-2026。旧私有仓及其他项目不变。
 
@@ -9,9 +9,17 @@
 3. BASE_PATH=/chenxi-devlab-2026/ 再构建；node scripts/check-built-path.mjs 启动4186执行最终子路径浏览器检查。
 4. 扫描Git发布候选；公开工件仅应用、脱敏摘要和已审核图片。原始HTML trace、会话令牌及SQLite不上传。
 5. 分支PR通过相同CI后合并main；Pages工作流从验证后的dist发布。
-6. node scripts/verify-deployment.mjs https://callmecx.github.io/chenxi-devlab-2026/ 使用无登录浏览器复验三入口、新路由、业务交互与证据资产。
+6. 设置 `EXPECTED_REVISION` 为本次部署的完整40位提交，再执行 `node scripts/verify-deployment.mjs https://callmecx.github.io/chenxi-devlab-2026/`。使用无登录浏览器复验主站、旗舰、商城、H5，以及V3历史入口、业务交互与新旧证据资产；元数据必须标记干净源码并与提交一致。
 
-## 回退
+## V4 → V3 回退
+
+已核对的上一公开版本为 `v3.0.0`，提交 `4d2a85f2908cc5b202bc104707ec9a00947af47c`。标签不可移动；V4保留的 `/intelligence/v3` 便于现场对照，但只进入历史路由不等于将线上部署回滚。
+
+发生发布回归时，先保存当前main的提交及工作流证据，从当时的main新建恢复分支。通过 `git log --first-parent --oneline v3.0.0..origin/main` 列出全部变更；审查V4实际合并提交和之后的功能修复，按逆序执行普通 `git revert`，合并提交使用明确核对后的 `-m 1`。不要猜合并SHA，也不能只撤销合并而遗留后续V4功能修复。若范围混有其他工作，逐文件审查，避免撤销无关变更。
+
+恢复分支必须重新运行类型/Lint、原308项领域/API、V3浏览器业务和Pages实际base构建，再以普通PR合并、发布、匿名核对主站、`/#/intelligence`、`/shop/#/`、`/pulse/#/`及构建SHA。保留V4历史、报告、Release和旧标签；不reset主分支、不force push、不删仓库或本机数据。本文给出恢复路径，未声称已做线上回滚演练。
+
+## 历史：V3 → V2 回退
 
 上一公开版本通过标签 `v2.0.0` 保留，提交为 `8059fb954e089a7880a4d1cea52941f03deb5c54`。若 V3 发布回归失败，停止继续合并，从当前 main 建立独立恢复分支，先按逆序撤销合并后的功能修复 `da9b633`，再用 `git revert -m 1 37d2b6d` 撤销 V3 合并；审查最终源码、配置和锁文件是否与 V2 标签一致，再经完整 CI/PR 发布。**不能只撤销合并提交而遗留后续 V3 渲染修复。** 如果后续增加了其他功能提交，须先列出 V2 至当前 main 的完整提交范围并纳入恢复审查。
 

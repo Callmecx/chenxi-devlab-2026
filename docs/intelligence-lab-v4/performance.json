@@ -1,0 +1,3018 @@
+{
+  "measuredAt": "2026-10-13T05:26:29.639Z",
+  "browser": "154.0.8037.94",
+  "host": {
+    "platform": "win32",
+    "release": "10.0.26200",
+    "cpu": "13th Gen Intel(R) Core(TM) i5-13500H",
+    "logicalCores": 16,
+    "gpu": {
+      "devices": [
+        {
+          "vendorId": 32902,
+          "deviceId": 42912,
+          "subSysId": 1066801066,
+          "revision": 4,
+          "vendorString": "",
+          "deviceString": "Intel(R) Iris(R) Xe Graphics",
+          "driverVendor": "Intel",
+          "driverVersion": "32.0.101.6790"
+        },
+        {
+          "vendorId": 32902,
+          "deviceId": 42912,
+          "subSysId": 1066801066,
+          "revision": 4,
+          "vendorString": "",
+          "deviceString": "Intel(R) Iris(R) Xe Graphics",
+          "driverVendor": "",
+          "driverVersion": "32.0.101.6790"
+        },
+        {
+          "vendorId": 5140,
+          "deviceId": 140,
+          "subSysId": 0,
+          "revision": 0,
+          "vendorString": "",
+          "deviceString": "Microsoft Basic Render Driver",
+          "driverVendor": "",
+          "driverVersion": "10.0.26100.9278"
+        }
+      ],
+      "glRenderer": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x0000A7A0) Direct3D11 vs_5_0 ps_5_0, D3D11-32.0.101.6790)",
+      "glVendor": "Google Inc. (Intel)"
+    }
+  },
+  "dpr": 1,
+  "samples": [
+    {
+      "version": "V3",
+      "width": 1440,
+      "run": 1,
+      "source": {
+        "basePath": "/",
+        "sourceRevision": "4d2a85f2908cc5b202bc104707ec9a00947af47c",
+        "sourceTreeDirty": false,
+        "builtAt": "2026-10-13T02:47:55.749Z",
+        "apps": [
+          "portfolio",
+          "shop",
+          "pulse"
+        ]
+      },
+      "controlsReadyMs": 407.40000009536743,
+      "firstObservedSceneMs": 415.60000002384186,
+      "prewarmEndMs": 2329.100000023842,
+      "prewarm": "at least 100 actual renderer frames; bounded 30-second wait",
+      "defaultQuality": "standard (mobile viewport capped at 30Hz)",
+      "startedTick": 0,
+      "timing": {
+        "raf": {
+          "count": 600,
+          "p50": 16.699999999999818,
+          "p95": 16.80000000000109
+        },
+        "rendered": {
+          "count": 600,
+          "p50": 16.699999999999818,
+          "p95": 16.80000000000109
+        },
+        "longTasks": [],
+        "qualityChanges": [
+          {
+            "atMs": 2.7999999284743353,
+            "quality": "standard"
+          }
+        ],
+        "actualWindowMs": 10004.299999952316,
+        "canvas": {
+          "width": 1440,
+          "height": 620,
+          "cssWidth": 1440,
+          "cssHeight": 620,
+          "dataset": {
+            "engine": "three.js r186",
+            "orbitCanvas": "orbit-g08c1y1",
+            "rendering": "active",
+            "pixels": "892800",
+            "quality": "standard",
+            "rafPending": "1",
+            "renderMode": "continuous",
+            "frames": "728",
+            "camera": "overview",
+            "cameraRequest": "0",
+            "drawCalls": "110",
+            "geometries": "67",
+            "textures": "3"
+          }
+        },
+        "tick": 6,
+        "status": "running"
+      },
+      "qualityChanges": [
+        {
+          "atMs": 2.7999999284743353,
+          "quality": "standard"
+        }
+      ],
+      "coldLoad": {
+        "cutoffMs": 416.40000009536743,
+        "longTasks": [
+          {
+            "start": 68,
+            "duration": 56
+          },
+          {
+            "start": 135,
+            "duration": 138
+          },
+          {
+            "start": 274.2000000476837,
+            "duration": 130
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4195/assets/index-DBsAvmB8.js",
+            "initiatorType": "script",
+            "transferSize": 168965,
+            "encodedBodySize": 168665,
+            "decodedBodySize": 168665,
+            "duration": 4.399999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/index-BwZAuv6z.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 5
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C7-kACOz.js",
+            "initiatorType": "script",
+            "transferSize": 73298,
+            "encodedBodySize": 72998,
+            "decodedBodySize": 72998,
+            "duration": 2.799999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/square-DfTaf4vH.js",
+            "initiatorType": "script",
+            "transferSize": 2304,
+            "encodedBodySize": 2004,
+            "decodedBodySize": 2004,
+            "duration": 2.899999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C2cBD0C5.css",
+            "initiatorType": "link",
+            "transferSize": 20261,
+            "encodedBodySize": 19961,
+            "decodedBodySize": 19961,
+            "duration": 4.5
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-BHk-2eJS.js",
+            "initiatorType": "script",
+            "transferSize": 27143,
+            "encodedBodySize": 26843,
+            "decodedBodySize": 26843,
+            "duration": 3.5
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/three.module-CGrNJSnY.js",
+            "initiatorType": "script",
+            "transferSize": 570678,
+            "encodedBodySize": 570378,
+            "decodedBodySize": 570378,
+            "duration": 5.100000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-DmOtbB8p.css",
+            "initiatorType": "link",
+            "transferSize": 1173,
+            "encodedBodySize": 873,
+            "decodedBodySize": 873,
+            "duration": 3.799999952316284
+          }
+        ]
+      },
+      "loadingThroughSampleEnd": {
+        "longTasks": [
+          {
+            "start": 68,
+            "duration": 56
+          },
+          {
+            "start": 135,
+            "duration": 138
+          },
+          {
+            "start": 274.2000000476837,
+            "duration": 130
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4195/assets/index-DBsAvmB8.js",
+            "initiatorType": "script",
+            "transferSize": 168965,
+            "encodedBodySize": 168665,
+            "decodedBodySize": 168665,
+            "duration": 4.399999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/index-BwZAuv6z.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 5
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C7-kACOz.js",
+            "initiatorType": "script",
+            "transferSize": 73298,
+            "encodedBodySize": 72998,
+            "decodedBodySize": 72998,
+            "duration": 2.799999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/square-DfTaf4vH.js",
+            "initiatorType": "script",
+            "transferSize": 2304,
+            "encodedBodySize": 2004,
+            "decodedBodySize": 2004,
+            "duration": 2.899999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C2cBD0C5.css",
+            "initiatorType": "link",
+            "transferSize": 20261,
+            "encodedBodySize": 19961,
+            "decodedBodySize": 19961,
+            "duration": 4.5
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-BHk-2eJS.js",
+            "initiatorType": "script",
+            "transferSize": 27143,
+            "encodedBodySize": 26843,
+            "decodedBodySize": 26843,
+            "duration": 3.5
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/three.module-CGrNJSnY.js",
+            "initiatorType": "script",
+            "transferSize": 570678,
+            "encodedBodySize": 570378,
+            "decodedBodySize": 570378,
+            "duration": 5.100000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-DmOtbB8p.css",
+            "initiatorType": "link",
+            "transferSize": 1173,
+            "encodedBodySize": 873,
+            "decodedBodySize": 873,
+            "duration": 3.799999952316284
+          }
+        ]
+      },
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "version": "V4",
+      "width": 1440,
+      "run": 1,
+      "source": {
+        "basePath": "/",
+        "sourceRevision": "3c6d78fae44f4416f4299827b57086c56253d596",
+        "sourceTreeDirty": false,
+        "builtAt": "2026-10-13T05:08:39.828Z",
+        "apps": [
+          "portfolio",
+          "shop",
+          "pulse"
+        ]
+      },
+      "controlsReadyMs": 349.39999997615814,
+      "firstObservedSceneMs": 354.89999997615814,
+      "prewarmEndMs": 2249.5,
+      "prewarm": "at least 100 actual renderer frames; bounded 30-second wait",
+      "defaultQuality": "balanced with measured slow-frame fallback",
+      "startedTick": 0,
+      "timing": {
+        "raf": {
+          "count": 600,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182
+        },
+        "rendered": {
+          "count": 600,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182
+        },
+        "longTasks": [],
+        "qualityChanges": [
+          {
+            "atMs": 9.200000047683716,
+            "quality": "balanced"
+          }
+        ],
+        "actualWindowMs": 10010.800000071526,
+        "canvas": {
+          "width": 1440,
+          "height": 645,
+          "cssWidth": 1440,
+          "cssHeight": 645,
+          "dataset": {
+            "engine": "three.js r186",
+            "dominionCanvas": "dominion-x6pcxgq",
+            "rendering": "active",
+            "pixels": "928800",
+            "quality": "balanced",
+            "rafPending": "1",
+            "renderMode": "continuous",
+            "frames": "726",
+            "camera": "overview",
+            "cameraRequest": "0",
+            "worldVersion": "1",
+            "tick": "6",
+            "shipCount": "6",
+            "bridge": "hidden",
+            "layerResources": "false",
+            "layerLanes": "true",
+            "resourceLabels": "0",
+            "drawCalls": "152",
+            "geometries": "118",
+            "textures": "1"
+          }
+        },
+        "tick": 6,
+        "status": "running"
+      },
+      "qualityChanges": [
+        {
+          "atMs": 9.200000047683716,
+          "quality": "balanced"
+        }
+      ],
+      "coldLoad": {
+        "cutoffMs": 355.5,
+        "longTasks": [
+          {
+            "start": 127.20000004768372,
+            "duration": 84
+          },
+          {
+            "start": 212.5,
+            "duration": 133
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4194/assets/index-Cni-gzXT.js",
+            "initiatorType": "script",
+            "transferSize": 169532,
+            "encodedBodySize": 169232,
+            "decodedBodySize": 169232,
+            "duration": 3.100000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/index-M_6LlgtZ.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-hCvfHNTp.js",
+            "initiatorType": "script",
+            "transferSize": 209064,
+            "encodedBodySize": 208764,
+            "decodedBodySize": 208764,
+            "duration": 3.100000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/graph-CrvmHxBU.js",
+            "initiatorType": "script",
+            "transferSize": 2939,
+            "encodedBodySize": 2639,
+            "decodedBodySize": 2639,
+            "duration": 4.300000071525574
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/skip-forward-CR3ocv_M.js",
+            "initiatorType": "script",
+            "transferSize": 2034,
+            "encodedBodySize": 1734,
+            "decodedBodySize": 1734,
+            "duration": 4.200000047683716
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-DlVP7Sgv.css",
+            "initiatorType": "link",
+            "transferSize": 26726,
+            "encodedBodySize": 26426,
+            "decodedBodySize": 26426,
+            "duration": 5.199999928474426
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-DW4YTn22.js",
+            "initiatorType": "script",
+            "transferSize": 46462,
+            "encodedBodySize": 46162,
+            "decodedBodySize": 46162,
+            "duration": 1.9000000953674316
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/three.module-C3K5CKFU.js",
+            "initiatorType": "script",
+            "transferSize": 574799,
+            "encodedBodySize": 574499,
+            "decodedBodySize": 574499,
+            "duration": 2.3000000715255737
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/BufferGeometryUtils-B5GrCQm0.js",
+            "initiatorType": "script",
+            "transferSize": 4134,
+            "encodedBodySize": 3834,
+            "decodedBodySize": 3834,
+            "duration": 1.7000000476837158
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-BKzPa2Ag.css",
+            "initiatorType": "link",
+            "transferSize": 1176,
+            "encodedBodySize": 876,
+            "decodedBodySize": 876,
+            "duration": 3.1999999284744263
+          }
+        ]
+      },
+      "loadingThroughSampleEnd": {
+        "longTasks": [
+          {
+            "start": 127.20000004768372,
+            "duration": 84
+          },
+          {
+            "start": 212.5,
+            "duration": 133
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4194/assets/index-Cni-gzXT.js",
+            "initiatorType": "script",
+            "transferSize": 169532,
+            "encodedBodySize": 169232,
+            "decodedBodySize": 169232,
+            "duration": 3.100000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/index-M_6LlgtZ.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-hCvfHNTp.js",
+            "initiatorType": "script",
+            "transferSize": 209064,
+            "encodedBodySize": 208764,
+            "decodedBodySize": 208764,
+            "duration": 3.100000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/graph-CrvmHxBU.js",
+            "initiatorType": "script",
+            "transferSize": 2939,
+            "encodedBodySize": 2639,
+            "decodedBodySize": 2639,
+            "duration": 4.300000071525574
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/skip-forward-CR3ocv_M.js",
+            "initiatorType": "script",
+            "transferSize": 2034,
+            "encodedBodySize": 1734,
+            "decodedBodySize": 1734,
+            "duration": 4.200000047683716
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-DlVP7Sgv.css",
+            "initiatorType": "link",
+            "transferSize": 26726,
+            "encodedBodySize": 26426,
+            "decodedBodySize": 26426,
+            "duration": 5.199999928474426
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-DW4YTn22.js",
+            "initiatorType": "script",
+            "transferSize": 46462,
+            "encodedBodySize": 46162,
+            "decodedBodySize": 46162,
+            "duration": 1.9000000953674316
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/three.module-C3K5CKFU.js",
+            "initiatorType": "script",
+            "transferSize": 574799,
+            "encodedBodySize": 574499,
+            "decodedBodySize": 574499,
+            "duration": 2.3000000715255737
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/BufferGeometryUtils-B5GrCQm0.js",
+            "initiatorType": "script",
+            "transferSize": 4134,
+            "encodedBodySize": 3834,
+            "decodedBodySize": 3834,
+            "duration": 1.7000000476837158
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-BKzPa2Ag.css",
+            "initiatorType": "link",
+            "transferSize": 1176,
+            "encodedBodySize": 876,
+            "decodedBodySize": 876,
+            "duration": 3.1999999284744263
+          }
+        ]
+      },
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "version": "V3",
+      "width": 1440,
+      "run": 2,
+      "source": {
+        "basePath": "/",
+        "sourceRevision": "4d2a85f2908cc5b202bc104707ec9a00947af47c",
+        "sourceTreeDirty": false,
+        "builtAt": "2026-10-13T02:47:55.749Z",
+        "apps": [
+          "portfolio",
+          "shop",
+          "pulse"
+        ]
+      },
+      "controlsReadyMs": 259.89999997615814,
+      "firstObservedSceneMs": 265.60000002384186,
+      "prewarmEndMs": 2179.3000000715256,
+      "prewarm": "at least 100 actual renderer frames; bounded 30-second wait",
+      "defaultQuality": "standard (mobile viewport capped at 30Hz)",
+      "startedTick": 0,
+      "timing": {
+        "raf": {
+          "count": 600,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182
+        },
+        "rendered": {
+          "count": 600,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182
+        },
+        "longTasks": [],
+        "qualityChanges": [
+          {
+            "atMs": 9.700000023841767,
+            "quality": "standard"
+          }
+        ],
+        "actualWindowMs": 10012.400000095367,
+        "canvas": {
+          "width": 1440,
+          "height": 620,
+          "cssWidth": 1440,
+          "cssHeight": 620,
+          "dataset": {
+            "engine": "three.js r186",
+            "orbitCanvas": "orbit-6fjq8eg",
+            "rendering": "active",
+            "pixels": "892800",
+            "quality": "standard",
+            "rafPending": "1",
+            "renderMode": "continuous",
+            "frames": "727",
+            "camera": "overview",
+            "cameraRequest": "0",
+            "drawCalls": "110",
+            "geometries": "67",
+            "textures": "3"
+          }
+        },
+        "tick": 6,
+        "status": "running"
+      },
+      "qualityChanges": [
+        {
+          "atMs": 9.700000023841767,
+          "quality": "standard"
+        }
+      ],
+      "coldLoad": {
+        "cutoffMs": 266.39999997615814,
+        "longTasks": [
+          {
+            "start": 54.89999997615814,
+            "duration": 57
+          },
+          {
+            "start": 126,
+            "duration": 86
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4195/assets/index-DBsAvmB8.js",
+            "initiatorType": "script",
+            "transferSize": 168965,
+            "encodedBodySize": 168665,
+            "decodedBodySize": 168665,
+            "duration": 2.6999999284744263
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/index-BwZAuv6z.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 3.899999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C7-kACOz.js",
+            "initiatorType": "script",
+            "transferSize": 73298,
+            "encodedBodySize": 72998,
+            "decodedBodySize": 72998,
+            "duration": 2.200000047683716
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C2cBD0C5.css",
+            "initiatorType": "link",
+            "transferSize": 20261,
+            "encodedBodySize": 19961,
+            "decodedBodySize": 19961,
+            "duration": 4
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/square-DfTaf4vH.js",
+            "initiatorType": "script",
+            "transferSize": 2304,
+            "encodedBodySize": 2004,
+            "decodedBodySize": 2004,
+            "duration": 2.399999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-BHk-2eJS.js",
+            "initiatorType": "script",
+            "transferSize": 27143,
+            "encodedBodySize": 26843,
+            "decodedBodySize": 26843,
+            "duration": 2.399999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/three.module-CGrNJSnY.js",
+            "initiatorType": "script",
+            "transferSize": 570678,
+            "encodedBodySize": 570378,
+            "decodedBodySize": 570378,
+            "duration": 2.6999999284744263
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-DmOtbB8p.css",
+            "initiatorType": "link",
+            "transferSize": 1173,
+            "encodedBodySize": 873,
+            "decodedBodySize": 873,
+            "duration": 2.3000000715255737
+          }
+        ]
+      },
+      "loadingThroughSampleEnd": {
+        "longTasks": [
+          {
+            "start": 54.89999997615814,
+            "duration": 57
+          },
+          {
+            "start": 126,
+            "duration": 86
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4195/assets/index-DBsAvmB8.js",
+            "initiatorType": "script",
+            "transferSize": 168965,
+            "encodedBodySize": 168665,
+            "decodedBodySize": 168665,
+            "duration": 2.6999999284744263
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/index-BwZAuv6z.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 3.899999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C7-kACOz.js",
+            "initiatorType": "script",
+            "transferSize": 73298,
+            "encodedBodySize": 72998,
+            "decodedBodySize": 72998,
+            "duration": 2.200000047683716
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C2cBD0C5.css",
+            "initiatorType": "link",
+            "transferSize": 20261,
+            "encodedBodySize": 19961,
+            "decodedBodySize": 19961,
+            "duration": 4
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/square-DfTaf4vH.js",
+            "initiatorType": "script",
+            "transferSize": 2304,
+            "encodedBodySize": 2004,
+            "decodedBodySize": 2004,
+            "duration": 2.399999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-BHk-2eJS.js",
+            "initiatorType": "script",
+            "transferSize": 27143,
+            "encodedBodySize": 26843,
+            "decodedBodySize": 26843,
+            "duration": 2.399999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/three.module-CGrNJSnY.js",
+            "initiatorType": "script",
+            "transferSize": 570678,
+            "encodedBodySize": 570378,
+            "decodedBodySize": 570378,
+            "duration": 2.6999999284744263
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-DmOtbB8p.css",
+            "initiatorType": "link",
+            "transferSize": 1173,
+            "encodedBodySize": 873,
+            "decodedBodySize": 873,
+            "duration": 2.3000000715255737
+          }
+        ]
+      },
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "version": "V4",
+      "width": 1440,
+      "run": 2,
+      "source": {
+        "basePath": "/",
+        "sourceRevision": "3c6d78fae44f4416f4299827b57086c56253d596",
+        "sourceTreeDirty": false,
+        "builtAt": "2026-10-13T05:08:39.828Z",
+        "apps": [
+          "portfolio",
+          "shop",
+          "pulse"
+        ]
+      },
+      "controlsReadyMs": 283,
+      "firstObservedSceneMs": 288,
+      "prewarmEndMs": 2185.7000000476837,
+      "prewarm": "at least 100 actual renderer frames; bounded 30-second wait",
+      "defaultQuality": "balanced with measured slow-frame fallback",
+      "startedTick": 0,
+      "timing": {
+        "raf": {
+          "count": 599,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182
+        },
+        "rendered": {
+          "count": 598,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182
+        },
+        "longTasks": [],
+        "qualityChanges": [
+          {
+            "atMs": 13.599999904632568,
+            "quality": "balanced"
+          }
+        ],
+        "actualWindowMs": 10000.399999976158,
+        "canvas": {
+          "width": 1440,
+          "height": 645,
+          "cssWidth": 1440,
+          "cssHeight": 645,
+          "dataset": {
+            "engine": "three.js r186",
+            "dominionCanvas": "dominion-p0f7ypb",
+            "rendering": "active",
+            "pixels": "928800",
+            "quality": "balanced",
+            "rafPending": "1",
+            "renderMode": "continuous",
+            "frames": "725",
+            "camera": "overview",
+            "cameraRequest": "0",
+            "worldVersion": "1",
+            "tick": "6",
+            "shipCount": "6",
+            "bridge": "hidden",
+            "layerResources": "false",
+            "layerLanes": "true",
+            "resourceLabels": "0",
+            "drawCalls": "152",
+            "geometries": "118",
+            "textures": "1"
+          }
+        },
+        "tick": 6,
+        "status": "running"
+      },
+      "qualityChanges": [
+        {
+          "atMs": 13.599999904632568,
+          "quality": "balanced"
+        }
+      ],
+      "coldLoad": {
+        "cutoffMs": 288.8000000715256,
+        "longTasks": [
+          {
+            "start": 82.30000007152557,
+            "duration": 53
+          },
+          {
+            "start": 154.70000004768372,
+            "duration": 78
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4194/assets/index-Cni-gzXT.js",
+            "initiatorType": "script",
+            "transferSize": 169532,
+            "encodedBodySize": 169232,
+            "decodedBodySize": 169232,
+            "duration": 3.299999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/index-M_6LlgtZ.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 4.5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-hCvfHNTp.js",
+            "initiatorType": "script",
+            "transferSize": 209064,
+            "encodedBodySize": 208764,
+            "decodedBodySize": 208764,
+            "duration": 6
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/graph-CrvmHxBU.js",
+            "initiatorType": "script",
+            "transferSize": 2939,
+            "encodedBodySize": 2639,
+            "decodedBodySize": 2639,
+            "duration": 4.5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/skip-forward-CR3ocv_M.js",
+            "initiatorType": "script",
+            "transferSize": 2034,
+            "encodedBodySize": 1734,
+            "decodedBodySize": 1734,
+            "duration": 8.199999928474426
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-DlVP7Sgv.css",
+            "initiatorType": "link",
+            "transferSize": 26726,
+            "encodedBodySize": 26426,
+            "decodedBodySize": 26426,
+            "duration": 8.600000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-DW4YTn22.js",
+            "initiatorType": "script",
+            "transferSize": 46462,
+            "encodedBodySize": 46162,
+            "decodedBodySize": 46162,
+            "duration": 3.799999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/three.module-C3K5CKFU.js",
+            "initiatorType": "script",
+            "transferSize": 574799,
+            "encodedBodySize": 574499,
+            "decodedBodySize": 574499,
+            "duration": 4.800000071525574
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/BufferGeometryUtils-B5GrCQm0.js",
+            "initiatorType": "script",
+            "transferSize": 4134,
+            "encodedBodySize": 3834,
+            "decodedBodySize": 3834,
+            "duration": 2.5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-BKzPa2Ag.css",
+            "initiatorType": "link",
+            "transferSize": 1176,
+            "encodedBodySize": 876,
+            "decodedBodySize": 876,
+            "duration": 4
+          }
+        ]
+      },
+      "loadingThroughSampleEnd": {
+        "longTasks": [
+          {
+            "start": 82.30000007152557,
+            "duration": 53
+          },
+          {
+            "start": 154.70000004768372,
+            "duration": 78
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4194/assets/index-Cni-gzXT.js",
+            "initiatorType": "script",
+            "transferSize": 169532,
+            "encodedBodySize": 169232,
+            "decodedBodySize": 169232,
+            "duration": 3.299999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/index-M_6LlgtZ.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 4.5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-hCvfHNTp.js",
+            "initiatorType": "script",
+            "transferSize": 209064,
+            "encodedBodySize": 208764,
+            "decodedBodySize": 208764,
+            "duration": 6
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/graph-CrvmHxBU.js",
+            "initiatorType": "script",
+            "transferSize": 2939,
+            "encodedBodySize": 2639,
+            "decodedBodySize": 2639,
+            "duration": 4.5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/skip-forward-CR3ocv_M.js",
+            "initiatorType": "script",
+            "transferSize": 2034,
+            "encodedBodySize": 1734,
+            "decodedBodySize": 1734,
+            "duration": 8.199999928474426
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-DlVP7Sgv.css",
+            "initiatorType": "link",
+            "transferSize": 26726,
+            "encodedBodySize": 26426,
+            "decodedBodySize": 26426,
+            "duration": 8.600000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-DW4YTn22.js",
+            "initiatorType": "script",
+            "transferSize": 46462,
+            "encodedBodySize": 46162,
+            "decodedBodySize": 46162,
+            "duration": 3.799999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/three.module-C3K5CKFU.js",
+            "initiatorType": "script",
+            "transferSize": 574799,
+            "encodedBodySize": 574499,
+            "decodedBodySize": 574499,
+            "duration": 4.800000071525574
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/BufferGeometryUtils-B5GrCQm0.js",
+            "initiatorType": "script",
+            "transferSize": 4134,
+            "encodedBodySize": 3834,
+            "decodedBodySize": 3834,
+            "duration": 2.5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-BKzPa2Ag.css",
+            "initiatorType": "link",
+            "transferSize": 1176,
+            "encodedBodySize": 876,
+            "decodedBodySize": 876,
+            "duration": 4
+          }
+        ]
+      },
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "version": "V3",
+      "width": 1440,
+      "run": 3,
+      "source": {
+        "basePath": "/",
+        "sourceRevision": "4d2a85f2908cc5b202bc104707ec9a00947af47c",
+        "sourceTreeDirty": false,
+        "builtAt": "2026-10-13T02:47:55.749Z",
+        "apps": [
+          "portfolio",
+          "shop",
+          "pulse"
+        ]
+      },
+      "controlsReadyMs": 244,
+      "firstObservedSceneMs": 250.5,
+      "prewarmEndMs": 2145.7000000476837,
+      "prewarm": "at least 100 actual renderer frames; bounded 30-second wait",
+      "defaultQuality": "standard (mobile viewport capped at 30Hz)",
+      "startedTick": 0,
+      "timing": {
+        "raf": {
+          "count": 599,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182
+        },
+        "rendered": {
+          "count": 598,
+          "p50": 16.699999999999818,
+          "p95": 16.80000000000109
+        },
+        "longTasks": [],
+        "qualityChanges": [
+          {
+            "atMs": 10.699999952316375,
+            "quality": "standard"
+          }
+        ],
+        "actualWindowMs": 10003.699999928474,
+        "canvas": {
+          "width": 1440,
+          "height": 620,
+          "cssWidth": 1440,
+          "cssHeight": 620,
+          "dataset": {
+            "engine": "three.js r186",
+            "orbitCanvas": "orbit-e58lcob",
+            "rendering": "active",
+            "pixels": "892800",
+            "quality": "standard",
+            "rafPending": "1",
+            "renderMode": "continuous",
+            "frames": "726",
+            "camera": "overview",
+            "cameraRequest": "0",
+            "drawCalls": "110",
+            "geometries": "67",
+            "textures": "3"
+          }
+        },
+        "tick": 6,
+        "status": "running"
+      },
+      "qualityChanges": [
+        {
+          "atMs": 10.699999952316375,
+          "quality": "standard"
+        }
+      ],
+      "coldLoad": {
+        "cutoffMs": 251.60000002384186,
+        "longTasks": [
+          {
+            "start": 68.89999997615814,
+            "duration": 59
+          },
+          {
+            "start": 147.70000004768372,
+            "duration": 54
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4195/assets/index-DBsAvmB8.js",
+            "initiatorType": "script",
+            "transferSize": 168965,
+            "encodedBodySize": 168665,
+            "decodedBodySize": 168665,
+            "duration": 10.200000047683716
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/index-BwZAuv6z.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 5.199999928474426
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C7-kACOz.js",
+            "initiatorType": "script",
+            "transferSize": 73298,
+            "encodedBodySize": 72998,
+            "decodedBodySize": 72998,
+            "duration": 2.399999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C2cBD0C5.css",
+            "initiatorType": "link",
+            "transferSize": 20261,
+            "encodedBodySize": 19961,
+            "decodedBodySize": 19961,
+            "duration": 5
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/square-DfTaf4vH.js",
+            "initiatorType": "script",
+            "transferSize": 2304,
+            "encodedBodySize": 2004,
+            "decodedBodySize": 2004,
+            "duration": 3.399999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-BHk-2eJS.js",
+            "initiatorType": "script",
+            "transferSize": 27143,
+            "encodedBodySize": 26843,
+            "decodedBodySize": 26843,
+            "duration": 1.6999999284744263
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/three.module-CGrNJSnY.js",
+            "initiatorType": "script",
+            "transferSize": 570678,
+            "encodedBodySize": 570378,
+            "decodedBodySize": 570378,
+            "duration": 3.200000047683716
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-DmOtbB8p.css",
+            "initiatorType": "link",
+            "transferSize": 1173,
+            "encodedBodySize": 873,
+            "decodedBodySize": 873,
+            "duration": 4.100000023841858
+          }
+        ]
+      },
+      "loadingThroughSampleEnd": {
+        "longTasks": [
+          {
+            "start": 68.89999997615814,
+            "duration": 59
+          },
+          {
+            "start": 147.70000004768372,
+            "duration": 54
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4195/assets/index-DBsAvmB8.js",
+            "initiatorType": "script",
+            "transferSize": 168965,
+            "encodedBodySize": 168665,
+            "decodedBodySize": 168665,
+            "duration": 10.200000047683716
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/index-BwZAuv6z.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 5.199999928474426
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C7-kACOz.js",
+            "initiatorType": "script",
+            "transferSize": 73298,
+            "encodedBodySize": 72998,
+            "decodedBodySize": 72998,
+            "duration": 2.399999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C2cBD0C5.css",
+            "initiatorType": "link",
+            "transferSize": 20261,
+            "encodedBodySize": 19961,
+            "decodedBodySize": 19961,
+            "duration": 5
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/square-DfTaf4vH.js",
+            "initiatorType": "script",
+            "transferSize": 2304,
+            "encodedBodySize": 2004,
+            "decodedBodySize": 2004,
+            "duration": 3.399999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-BHk-2eJS.js",
+            "initiatorType": "script",
+            "transferSize": 27143,
+            "encodedBodySize": 26843,
+            "decodedBodySize": 26843,
+            "duration": 1.6999999284744263
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/three.module-CGrNJSnY.js",
+            "initiatorType": "script",
+            "transferSize": 570678,
+            "encodedBodySize": 570378,
+            "decodedBodySize": 570378,
+            "duration": 3.200000047683716
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-DmOtbB8p.css",
+            "initiatorType": "link",
+            "transferSize": 1173,
+            "encodedBodySize": 873,
+            "decodedBodySize": 873,
+            "duration": 4.100000023841858
+          }
+        ]
+      },
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "version": "V4",
+      "width": 1440,
+      "run": 3,
+      "source": {
+        "basePath": "/",
+        "sourceRevision": "3c6d78fae44f4416f4299827b57086c56253d596",
+        "sourceTreeDirty": false,
+        "builtAt": "2026-10-13T05:08:39.828Z",
+        "apps": [
+          "portfolio",
+          "shop",
+          "pulse"
+        ]
+      },
+      "controlsReadyMs": 251.10000002384186,
+      "firstObservedSceneMs": 257.6999999284744,
+      "prewarmEndMs": 2151.399999976158,
+      "prewarm": "at least 100 actual renderer frames; bounded 30-second wait",
+      "defaultQuality": "balanced with measured slow-frame fallback",
+      "startedTick": 0,
+      "timing": {
+        "raf": {
+          "count": 600,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182
+        },
+        "rendered": {
+          "count": 600,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182
+        },
+        "longTasks": [],
+        "qualityChanges": [
+          {
+            "atMs": 5.600000047683807,
+            "quality": "balanced"
+          }
+        ],
+        "actualWindowMs": 10007.300000071526,
+        "canvas": {
+          "width": 1440,
+          "height": 645,
+          "cssWidth": 1440,
+          "cssHeight": 645,
+          "dataset": {
+            "engine": "three.js r186",
+            "dominionCanvas": "dominion-fy4zssj",
+            "rendering": "active",
+            "pixels": "928800",
+            "quality": "balanced",
+            "rafPending": "1",
+            "renderMode": "continuous",
+            "frames": "726",
+            "camera": "overview",
+            "cameraRequest": "0",
+            "worldVersion": "1",
+            "tick": "6",
+            "shipCount": "6",
+            "bridge": "hidden",
+            "layerResources": "false",
+            "layerLanes": "true",
+            "resourceLabels": "0",
+            "drawCalls": "152",
+            "geometries": "118",
+            "textures": "1"
+          }
+        },
+        "tick": 6,
+        "status": "running"
+      },
+      "qualityChanges": [
+        {
+          "atMs": 5.600000047683807,
+          "quality": "balanced"
+        }
+      ],
+      "coldLoad": {
+        "cutoffMs": 258.5,
+        "longTasks": [
+          {
+            "start": 132.79999995231628,
+            "duration": 73
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4194/assets/index-Cni-gzXT.js",
+            "initiatorType": "script",
+            "transferSize": 169532,
+            "encodedBodySize": 169232,
+            "decodedBodySize": 169232,
+            "duration": 3.799999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/index-M_6LlgtZ.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 5.299999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-hCvfHNTp.js",
+            "initiatorType": "script",
+            "transferSize": 209064,
+            "encodedBodySize": 208764,
+            "decodedBodySize": 208764,
+            "duration": 3.799999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/graph-CrvmHxBU.js",
+            "initiatorType": "script",
+            "transferSize": 2939,
+            "encodedBodySize": 2639,
+            "decodedBodySize": 2639,
+            "duration": 3.0999999046325684
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/skip-forward-CR3ocv_M.js",
+            "initiatorType": "script",
+            "transferSize": 2034,
+            "encodedBodySize": 1734,
+            "decodedBodySize": 1734,
+            "duration": 3.4000000953674316
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-DlVP7Sgv.css",
+            "initiatorType": "link",
+            "transferSize": 26726,
+            "encodedBodySize": 26426,
+            "decodedBodySize": 26426,
+            "duration": 5.100000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-DW4YTn22.js",
+            "initiatorType": "script",
+            "transferSize": 46462,
+            "encodedBodySize": 46162,
+            "decodedBodySize": 46162,
+            "duration": 1.899999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/BufferGeometryUtils-B5GrCQm0.js",
+            "initiatorType": "script",
+            "transferSize": 4134,
+            "encodedBodySize": 3834,
+            "decodedBodySize": 3834,
+            "duration": 1.5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/three.module-C3K5CKFU.js",
+            "initiatorType": "script",
+            "transferSize": 574799,
+            "encodedBodySize": 574499,
+            "decodedBodySize": 574499,
+            "duration": 2
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-BKzPa2Ag.css",
+            "initiatorType": "link",
+            "transferSize": 1176,
+            "encodedBodySize": 876,
+            "decodedBodySize": 876,
+            "duration": 3.299999952316284
+          }
+        ]
+      },
+      "loadingThroughSampleEnd": {
+        "longTasks": [
+          {
+            "start": 132.79999995231628,
+            "duration": 73
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4194/assets/index-Cni-gzXT.js",
+            "initiatorType": "script",
+            "transferSize": 169532,
+            "encodedBodySize": 169232,
+            "decodedBodySize": 169232,
+            "duration": 3.799999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/index-M_6LlgtZ.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 5.299999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-hCvfHNTp.js",
+            "initiatorType": "script",
+            "transferSize": 209064,
+            "encodedBodySize": 208764,
+            "decodedBodySize": 208764,
+            "duration": 3.799999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/graph-CrvmHxBU.js",
+            "initiatorType": "script",
+            "transferSize": 2939,
+            "encodedBodySize": 2639,
+            "decodedBodySize": 2639,
+            "duration": 3.0999999046325684
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/skip-forward-CR3ocv_M.js",
+            "initiatorType": "script",
+            "transferSize": 2034,
+            "encodedBodySize": 1734,
+            "decodedBodySize": 1734,
+            "duration": 3.4000000953674316
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-DlVP7Sgv.css",
+            "initiatorType": "link",
+            "transferSize": 26726,
+            "encodedBodySize": 26426,
+            "decodedBodySize": 26426,
+            "duration": 5.100000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-DW4YTn22.js",
+            "initiatorType": "script",
+            "transferSize": 46462,
+            "encodedBodySize": 46162,
+            "decodedBodySize": 46162,
+            "duration": 1.899999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/BufferGeometryUtils-B5GrCQm0.js",
+            "initiatorType": "script",
+            "transferSize": 4134,
+            "encodedBodySize": 3834,
+            "decodedBodySize": 3834,
+            "duration": 1.5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/three.module-C3K5CKFU.js",
+            "initiatorType": "script",
+            "transferSize": 574799,
+            "encodedBodySize": 574499,
+            "decodedBodySize": 574499,
+            "duration": 2
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-BKzPa2Ag.css",
+            "initiatorType": "link",
+            "transferSize": 1176,
+            "encodedBodySize": 876,
+            "decodedBodySize": 876,
+            "duration": 3.299999952316284
+          }
+        ]
+      },
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "version": "V3",
+      "width": 390,
+      "run": 1,
+      "source": {
+        "basePath": "/",
+        "sourceRevision": "4d2a85f2908cc5b202bc104707ec9a00947af47c",
+        "sourceTreeDirty": false,
+        "builtAt": "2026-10-13T02:47:55.749Z",
+        "apps": [
+          "portfolio",
+          "shop",
+          "pulse"
+        ]
+      },
+      "controlsReadyMs": 248.10000002384186,
+      "firstObservedSceneMs": 254.80000007152557,
+      "prewarmEndMs": 4182.700000047684,
+      "prewarm": "at least 100 actual renderer frames; bounded 30-second wait",
+      "defaultQuality": "standard (mobile viewport capped at 30Hz)",
+      "startedTick": 0,
+      "timing": {
+        "raf": {
+          "count": 599,
+          "p50": 16.69999999999891,
+          "p95": 16.80000000000109
+        },
+        "rendered": {
+          "count": 299,
+          "p50": 33.30000000000109,
+          "p95": 33.5
+        },
+        "longTasks": [],
+        "qualityChanges": [
+          {
+            "atMs": 6.5999999284740625,
+            "quality": "standard"
+          }
+        ],
+        "actualWindowMs": 10001.299999952316,
+        "canvas": {
+          "width": 390,
+          "height": 470,
+          "cssWidth": 390,
+          "cssHeight": 470,
+          "dataset": {
+            "engine": "three.js r186",
+            "orbitCanvas": "orbit-ekhou8e",
+            "rendering": "active",
+            "pixels": "183300",
+            "quality": "standard",
+            "rafPending": "1",
+            "renderMode": "continuous",
+            "frames": "424",
+            "camera": "overview",
+            "cameraRequest": "0",
+            "drawCalls": "107",
+            "geometries": "65",
+            "textures": "1"
+          }
+        },
+        "tick": 6,
+        "status": "running"
+      },
+      "qualityChanges": [
+        {
+          "atMs": 6.5999999284740625,
+          "quality": "standard"
+        }
+      ],
+      "coldLoad": {
+        "cutoffMs": 255.5,
+        "longTasks": [
+          {
+            "start": 61.800000071525574,
+            "duration": 56
+          },
+          {
+            "start": 134.90000009536743,
+            "duration": 69
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4195/assets/index-DBsAvmB8.js",
+            "initiatorType": "script",
+            "transferSize": 168965,
+            "encodedBodySize": 168665,
+            "decodedBodySize": 168665,
+            "duration": 2.100000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/index-BwZAuv6z.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 3.399999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C7-kACOz.js",
+            "initiatorType": "script",
+            "transferSize": 73298,
+            "encodedBodySize": 72998,
+            "decodedBodySize": 72998,
+            "duration": 2.8000000715255737
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/square-DfTaf4vH.js",
+            "initiatorType": "script",
+            "transferSize": 2304,
+            "encodedBodySize": 2004,
+            "decodedBodySize": 2004,
+            "duration": 3.200000047683716
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C2cBD0C5.css",
+            "initiatorType": "link",
+            "transferSize": 20261,
+            "encodedBodySize": 19961,
+            "decodedBodySize": 19961,
+            "duration": 4.799999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-BHk-2eJS.js",
+            "initiatorType": "script",
+            "transferSize": 27143,
+            "encodedBodySize": 26843,
+            "decodedBodySize": 26843,
+            "duration": 4.599999904632568
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/three.module-CGrNJSnY.js",
+            "initiatorType": "script",
+            "transferSize": 570678,
+            "encodedBodySize": 570378,
+            "decodedBodySize": 570378,
+            "duration": 5.399999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-DmOtbB8p.css",
+            "initiatorType": "link",
+            "transferSize": 1173,
+            "encodedBodySize": 873,
+            "decodedBodySize": 873,
+            "duration": 5
+          }
+        ]
+      },
+      "loadingThroughSampleEnd": {
+        "longTasks": [
+          {
+            "start": 61.800000071525574,
+            "duration": 56
+          },
+          {
+            "start": 134.90000009536743,
+            "duration": 69
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4195/assets/index-DBsAvmB8.js",
+            "initiatorType": "script",
+            "transferSize": 168965,
+            "encodedBodySize": 168665,
+            "decodedBodySize": 168665,
+            "duration": 2.100000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/index-BwZAuv6z.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 3.399999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C7-kACOz.js",
+            "initiatorType": "script",
+            "transferSize": 73298,
+            "encodedBodySize": 72998,
+            "decodedBodySize": 72998,
+            "duration": 2.8000000715255737
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/square-DfTaf4vH.js",
+            "initiatorType": "script",
+            "transferSize": 2304,
+            "encodedBodySize": 2004,
+            "decodedBodySize": 2004,
+            "duration": 3.200000047683716
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C2cBD0C5.css",
+            "initiatorType": "link",
+            "transferSize": 20261,
+            "encodedBodySize": 19961,
+            "decodedBodySize": 19961,
+            "duration": 4.799999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-BHk-2eJS.js",
+            "initiatorType": "script",
+            "transferSize": 27143,
+            "encodedBodySize": 26843,
+            "decodedBodySize": 26843,
+            "duration": 4.599999904632568
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/three.module-CGrNJSnY.js",
+            "initiatorType": "script",
+            "transferSize": 570678,
+            "encodedBodySize": 570378,
+            "decodedBodySize": 570378,
+            "duration": 5.399999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-DmOtbB8p.css",
+            "initiatorType": "link",
+            "transferSize": 1173,
+            "encodedBodySize": 873,
+            "decodedBodySize": 873,
+            "duration": 5
+          }
+        ]
+      },
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "version": "V4",
+      "width": 390,
+      "run": 1,
+      "source": {
+        "basePath": "/",
+        "sourceRevision": "3c6d78fae44f4416f4299827b57086c56253d596",
+        "sourceTreeDirty": false,
+        "builtAt": "2026-10-13T05:08:39.828Z",
+        "apps": [
+          "portfolio",
+          "shop",
+          "pulse"
+        ]
+      },
+      "controlsReadyMs": 248.20000004768372,
+      "firstObservedSceneMs": 253,
+      "prewarmEndMs": 2164.600000023842,
+      "prewarm": "at least 100 actual renderer frames; bounded 30-second wait",
+      "defaultQuality": "balanced with measured slow-frame fallback",
+      "startedTick": 0,
+      "timing": {
+        "raf": {
+          "count": 599,
+          "p50": 16.699999999999818,
+          "p95": 16.80000000000109
+        },
+        "rendered": {
+          "count": 599,
+          "p50": 16.699999999999818,
+          "p95": 16.80000000000109
+        },
+        "longTasks": [],
+        "qualityChanges": [
+          {
+            "atMs": 9.700000023841767,
+            "quality": "balanced"
+          }
+        ],
+        "actualWindowMs": 10006.700000047684,
+        "canvas": {
+          "width": 390,
+          "height": 520,
+          "cssWidth": 390,
+          "cssHeight": 520,
+          "dataset": {
+            "engine": "three.js r186",
+            "dominionCanvas": "dominion-jpl56m2",
+            "rendering": "active",
+            "pixels": "202800",
+            "quality": "balanced",
+            "rafPending": "1",
+            "renderMode": "continuous",
+            "frames": "726",
+            "camera": "overview",
+            "cameraRequest": "0",
+            "worldVersion": "1",
+            "tick": "6",
+            "shipCount": "6",
+            "bridge": "hidden",
+            "layerResources": "false",
+            "layerLanes": "true",
+            "resourceLabels": "0",
+            "drawCalls": "107",
+            "geometries": "95",
+            "textures": "1"
+          }
+        },
+        "tick": 6,
+        "status": "running"
+      },
+      "qualityChanges": [
+        {
+          "atMs": 9.700000023841767,
+          "quality": "balanced"
+        }
+      ],
+      "coldLoad": {
+        "cutoffMs": 253.39999997615814,
+        "longTasks": [
+          {
+            "start": 133.30000007152557,
+            "duration": 75
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4194/assets/index-Cni-gzXT.js",
+            "initiatorType": "script",
+            "transferSize": 169532,
+            "encodedBodySize": 169232,
+            "decodedBodySize": 169232,
+            "duration": 4.600000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/index-M_6LlgtZ.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 8.200000047683716
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-hCvfHNTp.js",
+            "initiatorType": "script",
+            "transferSize": 209064,
+            "encodedBodySize": 208764,
+            "decodedBodySize": 208764,
+            "duration": 2.899999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/graph-CrvmHxBU.js",
+            "initiatorType": "script",
+            "transferSize": 2939,
+            "encodedBodySize": 2639,
+            "decodedBodySize": 2639,
+            "duration": 3.200000047683716
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/skip-forward-CR3ocv_M.js",
+            "initiatorType": "script",
+            "transferSize": 2034,
+            "encodedBodySize": 1734,
+            "decodedBodySize": 1734,
+            "duration": 3.799999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-DlVP7Sgv.css",
+            "initiatorType": "link",
+            "transferSize": 26726,
+            "encodedBodySize": 26426,
+            "decodedBodySize": 26426,
+            "duration": 5.5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-DW4YTn22.js",
+            "initiatorType": "script",
+            "transferSize": 46462,
+            "encodedBodySize": 46162,
+            "decodedBodySize": 46162,
+            "duration": 1.7999999523162842
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/BufferGeometryUtils-B5GrCQm0.js",
+            "initiatorType": "script",
+            "transferSize": 4134,
+            "encodedBodySize": 3834,
+            "decodedBodySize": 3834,
+            "duration": 1.5999999046325684
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/three.module-C3K5CKFU.js",
+            "initiatorType": "script",
+            "transferSize": 574799,
+            "encodedBodySize": 574499,
+            "decodedBodySize": 574499,
+            "duration": 3.299999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-BKzPa2Ag.css",
+            "initiatorType": "link",
+            "transferSize": 1176,
+            "encodedBodySize": 876,
+            "decodedBodySize": 876,
+            "duration": 3.700000047683716
+          }
+        ]
+      },
+      "loadingThroughSampleEnd": {
+        "longTasks": [
+          {
+            "start": 133.30000007152557,
+            "duration": 75
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4194/assets/index-Cni-gzXT.js",
+            "initiatorType": "script",
+            "transferSize": 169532,
+            "encodedBodySize": 169232,
+            "decodedBodySize": 169232,
+            "duration": 4.600000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/index-M_6LlgtZ.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 8.200000047683716
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-hCvfHNTp.js",
+            "initiatorType": "script",
+            "transferSize": 209064,
+            "encodedBodySize": 208764,
+            "decodedBodySize": 208764,
+            "duration": 2.899999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/graph-CrvmHxBU.js",
+            "initiatorType": "script",
+            "transferSize": 2939,
+            "encodedBodySize": 2639,
+            "decodedBodySize": 2639,
+            "duration": 3.200000047683716
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/skip-forward-CR3ocv_M.js",
+            "initiatorType": "script",
+            "transferSize": 2034,
+            "encodedBodySize": 1734,
+            "decodedBodySize": 1734,
+            "duration": 3.799999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-DlVP7Sgv.css",
+            "initiatorType": "link",
+            "transferSize": 26726,
+            "encodedBodySize": 26426,
+            "decodedBodySize": 26426,
+            "duration": 5.5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-DW4YTn22.js",
+            "initiatorType": "script",
+            "transferSize": 46462,
+            "encodedBodySize": 46162,
+            "decodedBodySize": 46162,
+            "duration": 1.7999999523162842
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/BufferGeometryUtils-B5GrCQm0.js",
+            "initiatorType": "script",
+            "transferSize": 4134,
+            "encodedBodySize": 3834,
+            "decodedBodySize": 3834,
+            "duration": 1.5999999046325684
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/three.module-C3K5CKFU.js",
+            "initiatorType": "script",
+            "transferSize": 574799,
+            "encodedBodySize": 574499,
+            "decodedBodySize": 574499,
+            "duration": 3.299999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-BKzPa2Ag.css",
+            "initiatorType": "link",
+            "transferSize": 1176,
+            "encodedBodySize": 876,
+            "decodedBodySize": 876,
+            "duration": 3.700000047683716
+          }
+        ]
+      },
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "version": "V3",
+      "width": 390,
+      "run": 2,
+      "source": {
+        "basePath": "/",
+        "sourceRevision": "4d2a85f2908cc5b202bc104707ec9a00947af47c",
+        "sourceTreeDirty": false,
+        "builtAt": "2026-10-13T02:47:55.749Z",
+        "apps": [
+          "portfolio",
+          "shop",
+          "pulse"
+        ]
+      },
+      "controlsReadyMs": 224.79999995231628,
+      "firstObservedSceneMs": 228.69999992847443,
+      "prewarmEndMs": 4155.899999976158,
+      "prewarm": "at least 100 actual renderer frames; bounded 30-second wait",
+      "defaultQuality": "standard (mobile viewport capped at 30Hz)",
+      "startedTick": 0,
+      "timing": {
+        "raf": {
+          "count": 599,
+          "p50": 16.69999999999891,
+          "p95": 16.80000000000109
+        },
+        "rendered": {
+          "count": 299,
+          "p50": 33.30000000000109,
+          "p95": 33.5
+        },
+        "longTasks": [],
+        "qualityChanges": [
+          {
+            "atMs": 15.200000047683716,
+            "quality": "standard"
+          }
+        ],
+        "actualWindowMs": 10000.200000047684,
+        "canvas": {
+          "width": 390,
+          "height": 470,
+          "cssWidth": 390,
+          "cssHeight": 470,
+          "dataset": {
+            "engine": "three.js r186",
+            "orbitCanvas": "orbit-5vwx5tx",
+            "rendering": "active",
+            "pixels": "183300",
+            "quality": "standard",
+            "rafPending": "1",
+            "renderMode": "continuous",
+            "frames": "423",
+            "camera": "overview",
+            "cameraRequest": "0",
+            "drawCalls": "107",
+            "geometries": "65",
+            "textures": "1"
+          }
+        },
+        "tick": 6,
+        "status": "running"
+      },
+      "qualityChanges": [
+        {
+          "atMs": 15.200000047683716,
+          "quality": "standard"
+        }
+      ],
+      "coldLoad": {
+        "cutoffMs": 229.19999992847443,
+        "longTasks": [
+          {
+            "start": 126.39999997615814,
+            "duration": 54
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4195/assets/index-DBsAvmB8.js",
+            "initiatorType": "script",
+            "transferSize": 168965,
+            "encodedBodySize": 168665,
+            "decodedBodySize": 168665,
+            "duration": 3.9000000953674316
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/index-BwZAuv6z.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 5.199999928474426
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C7-kACOz.js",
+            "initiatorType": "script",
+            "transferSize": 73298,
+            "encodedBodySize": 72998,
+            "decodedBodySize": 72998,
+            "duration": 1.899999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/square-DfTaf4vH.js",
+            "initiatorType": "script",
+            "transferSize": 2304,
+            "encodedBodySize": 2004,
+            "decodedBodySize": 2004,
+            "duration": 2.100000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C2cBD0C5.css",
+            "initiatorType": "link",
+            "transferSize": 20261,
+            "encodedBodySize": 19961,
+            "decodedBodySize": 19961,
+            "duration": 3
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-BHk-2eJS.js",
+            "initiatorType": "script",
+            "transferSize": 27143,
+            "encodedBodySize": 26843,
+            "decodedBodySize": 26843,
+            "duration": 1.5
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/three.module-CGrNJSnY.js",
+            "initiatorType": "script",
+            "transferSize": 570678,
+            "encodedBodySize": 570378,
+            "decodedBodySize": 570378,
+            "duration": 1.899999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-DmOtbB8p.css",
+            "initiatorType": "link",
+            "transferSize": 1173,
+            "encodedBodySize": 873,
+            "decodedBodySize": 873,
+            "duration": 2.799999952316284
+          }
+        ]
+      },
+      "loadingThroughSampleEnd": {
+        "longTasks": [
+          {
+            "start": 126.39999997615814,
+            "duration": 54
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4195/assets/index-DBsAvmB8.js",
+            "initiatorType": "script",
+            "transferSize": 168965,
+            "encodedBodySize": 168665,
+            "decodedBodySize": 168665,
+            "duration": 3.9000000953674316
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/index-BwZAuv6z.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 5.199999928474426
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C7-kACOz.js",
+            "initiatorType": "script",
+            "transferSize": 73298,
+            "encodedBodySize": 72998,
+            "decodedBodySize": 72998,
+            "duration": 1.899999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/square-DfTaf4vH.js",
+            "initiatorType": "script",
+            "transferSize": 2304,
+            "encodedBodySize": 2004,
+            "decodedBodySize": 2004,
+            "duration": 2.100000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C2cBD0C5.css",
+            "initiatorType": "link",
+            "transferSize": 20261,
+            "encodedBodySize": 19961,
+            "decodedBodySize": 19961,
+            "duration": 3
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-BHk-2eJS.js",
+            "initiatorType": "script",
+            "transferSize": 27143,
+            "encodedBodySize": 26843,
+            "decodedBodySize": 26843,
+            "duration": 1.5
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/three.module-CGrNJSnY.js",
+            "initiatorType": "script",
+            "transferSize": 570678,
+            "encodedBodySize": 570378,
+            "decodedBodySize": 570378,
+            "duration": 1.899999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-DmOtbB8p.css",
+            "initiatorType": "link",
+            "transferSize": 1173,
+            "encodedBodySize": 873,
+            "decodedBodySize": 873,
+            "duration": 2.799999952316284
+          }
+        ]
+      },
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "version": "V4",
+      "width": 390,
+      "run": 2,
+      "source": {
+        "basePath": "/",
+        "sourceRevision": "3c6d78fae44f4416f4299827b57086c56253d596",
+        "sourceTreeDirty": false,
+        "builtAt": "2026-10-13T05:08:39.828Z",
+        "apps": [
+          "portfolio",
+          "shop",
+          "pulse"
+        ]
+      },
+      "controlsReadyMs": 260.89999997615814,
+      "firstObservedSceneMs": 265.7999999523163,
+      "prewarmEndMs": 2161.2999999523163,
+      "prewarm": "at least 100 actual renderer frames; bounded 30-second wait",
+      "defaultQuality": "balanced with measured slow-frame fallback",
+      "startedTick": 0,
+      "timing": {
+        "raf": {
+          "count": 600,
+          "p50": 16.69999999999891,
+          "p95": 16.80000000000109
+        },
+        "rendered": {
+          "count": 600,
+          "p50": 16.69999999999891,
+          "p95": 16.80000000000109
+        },
+        "longTasks": [],
+        "qualityChanges": [
+          {
+            "atMs": 1.099999999999909,
+            "quality": "balanced"
+          }
+        ],
+        "actualWindowMs": 10004.699999928474,
+        "canvas": {
+          "width": 390,
+          "height": 520,
+          "cssWidth": 390,
+          "cssHeight": 520,
+          "dataset": {
+            "engine": "three.js r186",
+            "dominionCanvas": "dominion-j1p5b5u",
+            "rendering": "active",
+            "pixels": "202800",
+            "quality": "balanced",
+            "rafPending": "1",
+            "renderMode": "continuous",
+            "frames": "726",
+            "camera": "overview",
+            "cameraRequest": "0",
+            "worldVersion": "1",
+            "tick": "6",
+            "shipCount": "6",
+            "bridge": "hidden",
+            "layerResources": "false",
+            "layerLanes": "true",
+            "resourceLabels": "0",
+            "drawCalls": "107",
+            "geometries": "95",
+            "textures": "1"
+          }
+        },
+        "tick": 6,
+        "status": "running"
+      },
+      "qualityChanges": [
+        {
+          "atMs": 1.099999999999909,
+          "quality": "balanced"
+        }
+      ],
+      "coldLoad": {
+        "cutoffMs": 266.5,
+        "longTasks": [
+          {
+            "start": 137.69999992847443,
+            "duration": 74
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4194/assets/index-Cni-gzXT.js",
+            "initiatorType": "script",
+            "transferSize": 169532,
+            "encodedBodySize": 169232,
+            "decodedBodySize": 169232,
+            "duration": 3.299999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/index-M_6LlgtZ.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-hCvfHNTp.js",
+            "initiatorType": "script",
+            "transferSize": 209064,
+            "encodedBodySize": 208764,
+            "decodedBodySize": 208764,
+            "duration": 4.100000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/graph-CrvmHxBU.js",
+            "initiatorType": "script",
+            "transferSize": 2939,
+            "encodedBodySize": 2639,
+            "decodedBodySize": 2639,
+            "duration": 5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-DlVP7Sgv.css",
+            "initiatorType": "link",
+            "transferSize": 26726,
+            "encodedBodySize": 26426,
+            "decodedBodySize": 26426,
+            "duration": 6.700000047683716
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/skip-forward-CR3ocv_M.js",
+            "initiatorType": "script",
+            "transferSize": 2034,
+            "encodedBodySize": 1734,
+            "decodedBodySize": 1734,
+            "duration": 5.899999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-DW4YTn22.js",
+            "initiatorType": "script",
+            "transferSize": 46462,
+            "encodedBodySize": 46162,
+            "decodedBodySize": 46162,
+            "duration": 1.7999999523162842
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/three.module-C3K5CKFU.js",
+            "initiatorType": "script",
+            "transferSize": 574799,
+            "encodedBodySize": 574499,
+            "decodedBodySize": 574499,
+            "duration": 2.600000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-BKzPa2Ag.css",
+            "initiatorType": "link",
+            "transferSize": 1176,
+            "encodedBodySize": 876,
+            "decodedBodySize": 876,
+            "duration": 2.9000000953674316
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/BufferGeometryUtils-B5GrCQm0.js",
+            "initiatorType": "script",
+            "transferSize": 4134,
+            "encodedBodySize": 3834,
+            "decodedBodySize": 3834,
+            "duration": 1.7000000476837158
+          }
+        ]
+      },
+      "loadingThroughSampleEnd": {
+        "longTasks": [
+          {
+            "start": 137.69999992847443,
+            "duration": 74
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4194/assets/index-Cni-gzXT.js",
+            "initiatorType": "script",
+            "transferSize": 169532,
+            "encodedBodySize": 169232,
+            "decodedBodySize": 169232,
+            "duration": 3.299999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/index-M_6LlgtZ.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-hCvfHNTp.js",
+            "initiatorType": "script",
+            "transferSize": 209064,
+            "encodedBodySize": 208764,
+            "decodedBodySize": 208764,
+            "duration": 4.100000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/graph-CrvmHxBU.js",
+            "initiatorType": "script",
+            "transferSize": 2939,
+            "encodedBodySize": 2639,
+            "decodedBodySize": 2639,
+            "duration": 5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-DlVP7Sgv.css",
+            "initiatorType": "link",
+            "transferSize": 26726,
+            "encodedBodySize": 26426,
+            "decodedBodySize": 26426,
+            "duration": 6.700000047683716
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/skip-forward-CR3ocv_M.js",
+            "initiatorType": "script",
+            "transferSize": 2034,
+            "encodedBodySize": 1734,
+            "decodedBodySize": 1734,
+            "duration": 5.899999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-DW4YTn22.js",
+            "initiatorType": "script",
+            "transferSize": 46462,
+            "encodedBodySize": 46162,
+            "decodedBodySize": 46162,
+            "duration": 1.7999999523162842
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/three.module-C3K5CKFU.js",
+            "initiatorType": "script",
+            "transferSize": 574799,
+            "encodedBodySize": 574499,
+            "decodedBodySize": 574499,
+            "duration": 2.600000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-BKzPa2Ag.css",
+            "initiatorType": "link",
+            "transferSize": 1176,
+            "encodedBodySize": 876,
+            "decodedBodySize": 876,
+            "duration": 2.9000000953674316
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/BufferGeometryUtils-B5GrCQm0.js",
+            "initiatorType": "script",
+            "transferSize": 4134,
+            "encodedBodySize": 3834,
+            "decodedBodySize": 3834,
+            "duration": 1.7000000476837158
+          }
+        ]
+      },
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "version": "V3",
+      "width": 390,
+      "run": 3,
+      "source": {
+        "basePath": "/",
+        "sourceRevision": "4d2a85f2908cc5b202bc104707ec9a00947af47c",
+        "sourceTreeDirty": false,
+        "builtAt": "2026-10-13T02:47:55.749Z",
+        "apps": [
+          "portfolio",
+          "shop",
+          "pulse"
+        ]
+      },
+      "controlsReadyMs": 235.30000007152557,
+      "firstObservedSceneMs": 239.90000009536743,
+      "prewarmEndMs": 4168.600000023842,
+      "prewarm": "at least 100 actual renderer frames; bounded 30-second wait",
+      "defaultQuality": "standard (mobile viewport capped at 30Hz)",
+      "startedTick": 0,
+      "timing": {
+        "raf": {
+          "count": 599,
+          "p50": 16.69999999999891,
+          "p95": 16.899999999999636
+        },
+        "rendered": {
+          "count": 300,
+          "p50": 33.30000000000109,
+          "p95": 33.5
+        },
+        "longTasks": [],
+        "qualityChanges": [
+          {
+            "atMs": 14.199999928474426,
+            "quality": "standard"
+          }
+        ],
+        "actualWindowMs": 10000.799999952316,
+        "canvas": {
+          "width": 390,
+          "height": 470,
+          "cssWidth": 390,
+          "cssHeight": 470,
+          "dataset": {
+            "engine": "three.js r186",
+            "orbitCanvas": "orbit-mq630l7",
+            "rendering": "active",
+            "pixels": "183300",
+            "quality": "standard",
+            "rafPending": "1",
+            "renderMode": "continuous",
+            "frames": "425",
+            "camera": "overview",
+            "cameraRequest": "0",
+            "drawCalls": "107",
+            "geometries": "65",
+            "textures": "1"
+          }
+        },
+        "tick": 6,
+        "status": "running"
+      },
+      "qualityChanges": [
+        {
+          "atMs": 14.199999928474426,
+          "quality": "standard"
+        }
+      ],
+      "coldLoad": {
+        "cutoffMs": 240.90000009536743,
+        "longTasks": [
+          {
+            "start": 72.5,
+            "duration": 52
+          },
+          {
+            "start": 143.70000004768372,
+            "duration": 54
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4195/assets/index-DBsAvmB8.js",
+            "initiatorType": "script",
+            "transferSize": 168965,
+            "encodedBodySize": 168665,
+            "decodedBodySize": 168665,
+            "duration": 3.600000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/index-BwZAuv6z.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 6
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C7-kACOz.js",
+            "initiatorType": "script",
+            "transferSize": 73298,
+            "encodedBodySize": 72998,
+            "decodedBodySize": 72998,
+            "duration": 2.600000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/square-DfTaf4vH.js",
+            "initiatorType": "script",
+            "transferSize": 2304,
+            "encodedBodySize": 2004,
+            "decodedBodySize": 2004,
+            "duration": 2.299999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C2cBD0C5.css",
+            "initiatorType": "link",
+            "transferSize": 20261,
+            "encodedBodySize": 19961,
+            "decodedBodySize": 19961,
+            "duration": 3.399999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-BHk-2eJS.js",
+            "initiatorType": "script",
+            "transferSize": 27143,
+            "encodedBodySize": 26843,
+            "decodedBodySize": 26843,
+            "duration": 1.5
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/three.module-CGrNJSnY.js",
+            "initiatorType": "script",
+            "transferSize": 570678,
+            "encodedBodySize": 570378,
+            "decodedBodySize": 570378,
+            "duration": 2
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-DmOtbB8p.css",
+            "initiatorType": "link",
+            "transferSize": 1173,
+            "encodedBodySize": 873,
+            "decodedBodySize": 873,
+            "duration": 2.399999976158142
+          }
+        ]
+      },
+      "loadingThroughSampleEnd": {
+        "longTasks": [
+          {
+            "start": 72.5,
+            "duration": 52
+          },
+          {
+            "start": 143.70000004768372,
+            "duration": 54
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4195/assets/index-DBsAvmB8.js",
+            "initiatorType": "script",
+            "transferSize": 168965,
+            "encodedBodySize": 168665,
+            "decodedBodySize": 168665,
+            "duration": 3.600000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/index-BwZAuv6z.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 6
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C7-kACOz.js",
+            "initiatorType": "script",
+            "transferSize": 73298,
+            "encodedBodySize": 72998,
+            "decodedBodySize": 72998,
+            "duration": 2.600000023841858
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/square-DfTaf4vH.js",
+            "initiatorType": "script",
+            "transferSize": 2304,
+            "encodedBodySize": 2004,
+            "decodedBodySize": 2004,
+            "duration": 2.299999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitLab-C2cBD0C5.css",
+            "initiatorType": "link",
+            "transferSize": 20261,
+            "encodedBodySize": 19961,
+            "decodedBodySize": 19961,
+            "duration": 3.399999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-BHk-2eJS.js",
+            "initiatorType": "script",
+            "transferSize": 27143,
+            "encodedBodySize": 26843,
+            "decodedBodySize": 26843,
+            "duration": 1.5
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/three.module-CGrNJSnY.js",
+            "initiatorType": "script",
+            "transferSize": 570678,
+            "encodedBodySize": 570378,
+            "decodedBodySize": 570378,
+            "duration": 2
+          },
+          {
+            "name": "http://127.0.0.1:4195/assets/OrbitScene-DmOtbB8p.css",
+            "initiatorType": "link",
+            "transferSize": 1173,
+            "encodedBodySize": 873,
+            "decodedBodySize": 873,
+            "duration": 2.399999976158142
+          }
+        ]
+      },
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "version": "V4",
+      "width": 390,
+      "run": 3,
+      "source": {
+        "basePath": "/",
+        "sourceRevision": "3c6d78fae44f4416f4299827b57086c56253d596",
+        "sourceTreeDirty": false,
+        "builtAt": "2026-10-13T05:08:39.828Z",
+        "apps": [
+          "portfolio",
+          "shop",
+          "pulse"
+        ]
+      },
+      "controlsReadyMs": 252.89999997615814,
+      "firstObservedSceneMs": 256.7999999523163,
+      "prewarmEndMs": 2163.2999999523163,
+      "prewarm": "at least 100 actual renderer frames; bounded 30-second wait",
+      "defaultQuality": "balanced with measured slow-frame fallback",
+      "startedTick": 0,
+      "timing": {
+        "raf": {
+          "count": 599,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182
+        },
+        "rendered": {
+          "count": 599,
+          "p50": 16.699999999999818,
+          "p95": 16.800000000000182
+        },
+        "longTasks": [],
+        "qualityChanges": [
+          {
+            "atMs": 5.500000047683898,
+            "quality": "balanced"
+          }
+        ],
+        "actualWindowMs": 10001.200000047684,
+        "canvas": {
+          "width": 390,
+          "height": 520,
+          "cssWidth": 390,
+          "cssHeight": 520,
+          "dataset": {
+            "engine": "three.js r186",
+            "dominionCanvas": "dominion-xgs5ppx",
+            "rendering": "active",
+            "pixels": "202800",
+            "quality": "balanced",
+            "rafPending": "1",
+            "renderMode": "continuous",
+            "frames": "726",
+            "camera": "overview",
+            "cameraRequest": "0",
+            "worldVersion": "1",
+            "tick": "6",
+            "shipCount": "6",
+            "bridge": "hidden",
+            "layerResources": "false",
+            "layerLanes": "true",
+            "resourceLabels": "0",
+            "drawCalls": "107",
+            "geometries": "95",
+            "textures": "1"
+          }
+        },
+        "tick": 6,
+        "status": "running"
+      },
+      "qualityChanges": [
+        {
+          "atMs": 5.500000047683898,
+          "quality": "balanced"
+        }
+      ],
+      "coldLoad": {
+        "cutoffMs": 257.2999999523163,
+        "longTasks": [
+          {
+            "start": 135.69999992847443,
+            "duration": 73
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4194/assets/index-Cni-gzXT.js",
+            "initiatorType": "script",
+            "transferSize": 169532,
+            "encodedBodySize": 169232,
+            "decodedBodySize": 169232,
+            "duration": 2.899999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/index-M_6LlgtZ.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 5.299999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-hCvfHNTp.js",
+            "initiatorType": "script",
+            "transferSize": 209064,
+            "encodedBodySize": 208764,
+            "decodedBodySize": 208764,
+            "duration": 4.299999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/graph-CrvmHxBU.js",
+            "initiatorType": "script",
+            "transferSize": 2939,
+            "encodedBodySize": 2639,
+            "decodedBodySize": 2639,
+            "duration": 4
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-DlVP7Sgv.css",
+            "initiatorType": "link",
+            "transferSize": 26726,
+            "encodedBodySize": 26426,
+            "decodedBodySize": 26426,
+            "duration": 7.800000071525574
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/skip-forward-CR3ocv_M.js",
+            "initiatorType": "script",
+            "transferSize": 2034,
+            "encodedBodySize": 1734,
+            "decodedBodySize": 1734,
+            "duration": 5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-DW4YTn22.js",
+            "initiatorType": "script",
+            "transferSize": 46462,
+            "encodedBodySize": 46162,
+            "decodedBodySize": 46162,
+            "duration": 1.7999999523162842
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/BufferGeometryUtils-B5GrCQm0.js",
+            "initiatorType": "script",
+            "transferSize": 4134,
+            "encodedBodySize": 3834,
+            "decodedBodySize": 3834,
+            "duration": 2
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/three.module-C3K5CKFU.js",
+            "initiatorType": "script",
+            "transferSize": 574799,
+            "encodedBodySize": 574499,
+            "decodedBodySize": 574499,
+            "duration": 2.8000000715255737
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-BKzPa2Ag.css",
+            "initiatorType": "link",
+            "transferSize": 1176,
+            "encodedBodySize": 876,
+            "decodedBodySize": 876,
+            "duration": 3.100000023841858
+          }
+        ]
+      },
+      "loadingThroughSampleEnd": {
+        "longTasks": [
+          {
+            "start": 135.69999992847443,
+            "duration": 73
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4194/assets/index-Cni-gzXT.js",
+            "initiatorType": "script",
+            "transferSize": 169532,
+            "encodedBodySize": 169232,
+            "decodedBodySize": 169232,
+            "duration": 2.899999976158142
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/index-M_6LlgtZ.css",
+            "initiatorType": "link",
+            "transferSize": 34709,
+            "encodedBodySize": 34409,
+            "decodedBodySize": 34409,
+            "duration": 5.299999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-hCvfHNTp.js",
+            "initiatorType": "script",
+            "transferSize": 209064,
+            "encodedBodySize": 208764,
+            "decodedBodySize": 208764,
+            "duration": 4.299999952316284
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/graph-CrvmHxBU.js",
+            "initiatorType": "script",
+            "transferSize": 2939,
+            "encodedBodySize": 2639,
+            "decodedBodySize": 2639,
+            "duration": 4
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/StarCommand-DlVP7Sgv.css",
+            "initiatorType": "link",
+            "transferSize": 26726,
+            "encodedBodySize": 26426,
+            "decodedBodySize": 26426,
+            "duration": 7.800000071525574
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/skip-forward-CR3ocv_M.js",
+            "initiatorType": "script",
+            "transferSize": 2034,
+            "encodedBodySize": 1734,
+            "decodedBodySize": 1734,
+            "duration": 5
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-DW4YTn22.js",
+            "initiatorType": "script",
+            "transferSize": 46462,
+            "encodedBodySize": 46162,
+            "decodedBodySize": 46162,
+            "duration": 1.7999999523162842
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/BufferGeometryUtils-B5GrCQm0.js",
+            "initiatorType": "script",
+            "transferSize": 4134,
+            "encodedBodySize": 3834,
+            "decodedBodySize": 3834,
+            "duration": 2
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/three.module-C3K5CKFU.js",
+            "initiatorType": "script",
+            "transferSize": 574799,
+            "encodedBodySize": 574499,
+            "decodedBodySize": 574499,
+            "duration": 2.8000000715255737
+          },
+          {
+            "name": "http://127.0.0.1:4194/assets/DominionScene-BKzPa2Ag.css",
+            "initiatorType": "link",
+            "transferSize": 1176,
+            "encodedBodySize": 876,
+            "decodedBodySize": 876,
+            "duration": 3.100000023841858
+          }
+        ]
+      },
+      "errors": [],
+      "failedResponses": []
+    }
+  ],
+  "limitations": [
+    "Real headless Chrome on one desktop, phone-sized viewport is not a phone GPU.",
+    "Controls-ready and first observed draw are reproducible cold-load proxies, not Lighthouse interactive/TBT metrics. coldLoad stops at observed first draw; the separately named loadingThroughSampleEnd includes the whole test.",
+    "Static localhost server sends uncompressed files with cache disabled. Report actual transfer and decoded bytes; do not present as Internet latency.",
+    "RAF and renderer-frame-counter intervals are wall-clock measurements, not GPU timestamps. Adapter list alone does not prove hardware acceleration; glRenderer is recorded separately.",
+    "Each version uses its actual default task workload: V3 two carriers; V4 six ships and two dependent missions. V3 mobile defaults to 30Hz; V4 balanced targets 60Hz before measured fallback. Actual canvas dimensions are recorded; no equal-workload, equal-area or equal-FPS speedup claim."
+  ]
+}

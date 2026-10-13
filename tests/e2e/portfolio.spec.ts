@@ -49,7 +49,7 @@ test('dark theme stays usable on small screens and skip navigation keeps route',
   await expect(page.locator('main')).toBeFocused();
   await page.locator('main').evaluate(element => element.blur());
   await page.evaluate(() => window.scrollTo(0, 0));
-  await page.screenshot({ path: 'docs/screenshots/portfolio-dark-390.png', fullPage: true });
+  await page.screenshot({ path: 'docs/screenshots/v4/regression/portfolio-dark-390.png', fullPage: true });
   for (const path of ['/#/projects', '/#/projects/enterprise-flow', '/#/contact']) {
     await page.goto(path); await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
@@ -87,7 +87,7 @@ for (const width of [1920, 1440, 768, 390, 360, 320]) {
       await page.goto("/");
     }
     await page.screenshot({
-      path: `docs/screenshots/portfolio-${width}.png`,
+      path: `docs/screenshots/v4/regression/portfolio-${width}.png`,
       fullPage: true,
     });
   });

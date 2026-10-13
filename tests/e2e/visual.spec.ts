@@ -10,8 +10,8 @@ const routes = [
 ] as const;
 
 test.beforeAll(async () => {
-  await mkdir("docs/screenshots/v2", { recursive: true });
-  await mkdir("docs/screenshots/v3", { recursive: true });
+  await mkdir("docs/screenshots/v4/regression", { recursive: true });
+  await mkdir("docs/screenshots/v4", { recursive: true });
 });
 for (const width of [360, 390, 768, 1440, 1920]) {
   test(`Whole-site initial views fit ${width}px without script errors`, async ({
@@ -34,7 +34,7 @@ for (const width of [360, 390, 768, 1440, 1920]) {
       await expect(page.locator("main > *").first()).toHaveCSS("opacity", "1");
       if (name === "intelligence")
         await expect(
-          page.locator("[data-orbit-canvas], .orbit-map").first(),
+          page.locator("[data-dominion-canvas], .dom-map").first(),
         ).toBeVisible();
       expect(
         await page.evaluate(
@@ -43,7 +43,7 @@ for (const width of [360, 390, 768, 1440, 1920]) {
         route,
       ).toBe(true);
       await page.screenshot({
-        path: `docs/screenshots/${name === "intelligence" ? "v3" : "v2"}/${name}-${width}.png`,
+        path: `docs/screenshots/v4/${name === "intelligence" ? "" : "regression/"}${name}-${width}.png`,
         fullPage: true,
       });
     }

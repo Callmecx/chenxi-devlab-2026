@@ -10,6 +10,10 @@
 
 [V4 架构与世界规则](docs/intelligence-lab-v4/ARCHITECTURE.md) · [模式与发布状态](docs/intelligence-lab-v4/MODE_AND_RELEASE_STATUS.md) · [三分钟演示及源码追问](docs/intelligence-lab-v4/DEMO_GUIDE.md) · [功能与贡献映射](docs/intelligence-lab-v4/CONTRIBUTION_MAP.md) · [A/B 简历条目](docs/intelligence-lab-v4/RESUME_BULLETS.md)。当前验收和公开版本以 [STATUS](STATUS.md) 为准。
 
+![V4实际生产画面：曙光环港与三类六舰](docs/screenshots/v4/1440-S1-overview.png)
+
+[六态原图、手机与V3对照](docs/intelligence-lab-v4/VISUAL_REVIEW.md) · [本轮测试](docs/intelligence-lab-v4/TEST_REPORT.md) · [性能实测](docs/intelligence-lab-v4/PERFORMANCE.md) · [可导入的合成运行记录](docs/intelligence-lab-v4/guide-example.json)。本地干净源码3c6d78f通过399项单元/API、127项生产浏览器与50轮生命周期检查；原始导览100.480秒。CI与实际部署独立记账，不用本地成绩代替上线结论。
+
 [V3 历史运行入口](https://callmecx.github.io/chenxi-devlab-2026/#/intelligence/v3)与[V3 原始验收记录](docs/intelligence-lab-v3/ACCEPTANCE_REPORT.md)保留；旧版截图、标签和测试不会冒充 V4 的本轮证据。
 
 ## 可以实际操作的内容

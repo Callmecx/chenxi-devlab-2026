@@ -1,0 +1,1621 @@
+{
+  "schemaVersion": 1,
+  "classification": "reviewed-clean-production-media",
+  "sourceBuild": {
+    "basePath": "/",
+    "sourceRevision": "3c6d78fae44f4416f4299827b57086c56253d596",
+    "sourceTreeDirty": false,
+    "builtAt": "2026-10-13T05:08:39.828Z",
+    "apps": [
+      "portfolio",
+      "shop",
+      "pulse"
+    ]
+  },
+  "sourceBuildAfter": {
+    "basePath": "/",
+    "sourceRevision": "3c6d78fae44f4416f4299827b57086c56253d596",
+    "sourceTreeDirty": false,
+    "builtAt": "2026-10-13T05:08:39.828Z",
+    "apps": [
+      "portfolio",
+      "shop",
+      "pulse"
+    ]
+  },
+  "capturedFrom": "2026-10-13T05:20:24.774Z",
+  "capturedUntil": "2026-10-13T05:22:38.967Z",
+  "browser": "154.0.8037.94",
+  "conditions": {
+    "deviceScaleFactor": 1,
+    "desktop": "1440×900, high",
+    "mobile": "390×844, mobile quality; viewport simulation only",
+    "audio": "muted by application default",
+    "capture": "unaltered browser pixels and original Playwright WebM"
+  },
+  "visualReview": "VISUAL_REVIEW.md",
+  "screenshots": [
+    {
+      "name": "1440-S1-overview",
+      "file": "../screenshots/v4/1440-S1-overview.png",
+      "bytes": 624372,
+      "sha256": "0f32ba747f4f8b1ee3e2915174ce8fa48c79b30ddc992f3678f57defc2f8a536",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68fmbt-1",
+        "status": "ready",
+        "mode": "local-simulation",
+        "tick": "0",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      "rendering": [
+        {
+          "engine": "three.js r186",
+          "dominionCanvas": "dominion-io5we26",
+          "rendering": "active",
+          "pixels": "928800",
+          "quality": "high",
+          "rafPending": "1",
+          "renderMode": "continuous",
+          "frames": "101",
+          "camera": "overview",
+          "cameraRequest": "1",
+          "worldVersion": "1",
+          "tick": "0",
+          "shipCount": "6",
+          "bridge": "hidden",
+          "layerResources": "false",
+          "layerLanes": "true",
+          "resourceLabels": "0",
+          "drawCalls": "158",
+          "geometries": "111",
+          "textures": "1"
+        }
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollWidth": 1440,
+      "facts": {}
+    },
+    {
+      "name": "1440-S2-cockpit",
+      "file": "../screenshots/v4/1440-S2-cockpit.png",
+      "bytes": 559309,
+      "sha256": "003c9a838bb25eba038ab7e18ae12533f7a5ba0fdb772a70167d9241c8884773",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68fmbt-1",
+        "status": "ready",
+        "mode": "local-simulation",
+        "tick": "0",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      "rendering": [
+        {
+          "engine": "three.js r186",
+          "dominionCanvas": "dominion-io5we26",
+          "rendering": "active",
+          "pixels": "928800",
+          "quality": "high",
+          "rafPending": "1",
+          "renderMode": "continuous",
+          "frames": "180",
+          "camera": "cockpit",
+          "cameraRequest": "2",
+          "worldVersion": "1",
+          "tick": "0",
+          "shipCount": "6",
+          "bridge": "visible",
+          "layerResources": "false",
+          "layerLanes": "true",
+          "resourceLabels": "0",
+          "drawCalls": "125",
+          "geometries": "146",
+          "textures": "4"
+        }
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollWidth": 1440,
+      "facts": {}
+    },
+    {
+      "name": "1440-S3-loading",
+      "file": "../screenshots/v4/1440-S3-loading.png",
+      "bytes": 531634,
+      "sha256": "bd7fa909ee801e786dd3cca21a4833c77ddf03b731dad9608b6760486232d80f",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68foy8-2",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "6",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      "rendering": [
+        {
+          "engine": "three.js r186",
+          "dominionCanvas": "dominion-io5we26",
+          "rendering": "active",
+          "pixels": "928800",
+          "quality": "high",
+          "rafPending": "1",
+          "renderMode": "continuous",
+          "frames": "348",
+          "camera": "docking",
+          "cameraRequest": "4",
+          "worldVersion": "1",
+          "tick": "6",
+          "shipCount": "6",
+          "bridge": "hidden",
+          "layerResources": "false",
+          "layerLanes": "true",
+          "resourceLabels": "0",
+          "drawCalls": "158",
+          "geometries": "111",
+          "textures": "1"
+        }
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollWidth": 1440,
+      "facts": {
+        "ship": {
+          "id": "transport-a",
+          "label": "方舟 1",
+          "role": "transport",
+          "nodeId": "forge",
+          "transit": null,
+          "capacity": 8,
+          "energy": 96,
+          "initialEnergy": 100,
+          "speed": 1,
+          "cargo": {
+            "energy": 0,
+            "supplies": 0,
+            "parts": 0,
+            "samples": 0
+          },
+          "reserved": {
+            "energy": 3,
+            "supplies": 2,
+            "parts": 0,
+            "samples": 0
+          },
+          "cargoOwner": "mission-1",
+          "sourceId": "forge",
+          "missionId": "mission-1",
+          "stepId": "mission-1:step:1",
+          "route": [],
+          "planVersion": 1,
+          "phase": "working",
+          "status": "loading",
+          "action": {
+            "kind": "load",
+            "elapsed": 1,
+            "duration": 2,
+            "targetId": "forge",
+            "missionId": "mission-1"
+          },
+          "disabled": false,
+          "waitTicks": 0,
+          "totalWait": 0
+        },
+        "sourceRecordingSha256": "e950d23e44e8101f5b52b1f07e34192ab22173b89efae5a92d3e05312fe9eda3"
+      }
+    },
+    {
+      "name": "1440-S4-scanning",
+      "file": "../screenshots/v4/1440-S4-scanning.png",
+      "bytes": 344989,
+      "sha256": "d74be805576e688ae494552638ef749ec55ca8226cdcf9c6a92e41370da0b842",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68fr5e-3",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "8",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      "rendering": [
+        {
+          "engine": "three.js r186",
+          "dominionCanvas": "dominion-io5we26",
+          "rendering": "active",
+          "pixels": "928800",
+          "quality": "high",
+          "rafPending": "1",
+          "renderMode": "continuous",
+          "frames": "537",
+          "camera": "scan",
+          "cameraRequest": "6",
+          "worldVersion": "1",
+          "tick": "8",
+          "shipCount": "6",
+          "bridge": "hidden",
+          "layerResources": "false",
+          "layerLanes": "true",
+          "resourceLabels": "0",
+          "drawCalls": "124",
+          "geometries": "131",
+          "textures": "1"
+        }
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollWidth": 1440,
+      "facts": {
+        "ship": {
+          "id": "survey-a",
+          "label": "游隼 1",
+          "role": "survey",
+          "nodeId": "relay",
+          "transit": null,
+          "capacity": 2,
+          "energy": 95,
+          "initialEnergy": 100,
+          "speed": 2,
+          "cargo": {
+            "energy": 0,
+            "supplies": 0,
+            "parts": 0,
+            "samples": 0
+          },
+          "reserved": {
+            "energy": 0,
+            "supplies": 0,
+            "parts": 0,
+            "samples": 0
+          },
+          "cargoOwner": null,
+          "sourceId": null,
+          "missionId": "mission-1",
+          "stepId": "mission-1:step:1",
+          "route": [],
+          "planVersion": 1,
+          "phase": "working",
+          "status": "scanning",
+          "action": {
+            "kind": "scan",
+            "elapsed": 1,
+            "duration": 4,
+            "targetId": "relay",
+            "missionId": "mission-1"
+          },
+          "disabled": false,
+          "waitTicks": 0,
+          "totalWait": 0
+        },
+        "sourceRecordingSha256": "49f972bacf5a7d5cdb3d947a8aec7748a0415073e81e0136735e9b1d8e96ff52"
+      }
+    },
+    {
+      "name": "1440-S5-repairing",
+      "file": "../screenshots/v4/1440-S5-repairing.png",
+      "bytes": 390808,
+      "sha256": "cfb8538211a3defc49b4c7c2242e25a9d2af043f6d11b9eb03863ba4f02cb56f",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68fr5e-3",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "26",
+        "worldVersion": "2",
+        "completed": "1",
+        "connected": "true",
+        "view": "command",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      "rendering": [
+        {
+          "engine": "three.js r186",
+          "dominionCanvas": "dominion-io5we26",
+          "rendering": "active",
+          "pixels": "928800",
+          "quality": "high",
+          "rafPending": "1",
+          "renderMode": "continuous",
+          "frames": "848",
+          "camera": "docking",
+          "cameraRequest": "7",
+          "worldVersion": "2",
+          "tick": "26",
+          "shipCount": "6",
+          "bridge": "hidden",
+          "layerResources": "false",
+          "layerLanes": "true",
+          "resourceLabels": "0",
+          "drawCalls": "117",
+          "geometries": "133",
+          "textures": "1"
+        }
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollWidth": 1440,
+      "facts": {
+        "ship": {
+          "id": "repair-a",
+          "label": "织星 1",
+          "role": "repair",
+          "nodeId": "relay",
+          "transit": null,
+          "capacity": 24,
+          "energy": 91,
+          "initialEnergy": 100,
+          "speed": 1,
+          "cargo": {
+            "energy": 0,
+            "supplies": 0,
+            "parts": 2,
+            "samples": 0
+          },
+          "reserved": {
+            "energy": 0,
+            "supplies": 0,
+            "parts": 0,
+            "samples": 0
+          },
+          "cargoOwner": "mission-1",
+          "sourceId": "forge",
+          "missionId": "mission-1",
+          "stepId": "mission-1:step:2",
+          "route": [],
+          "planVersion": 2,
+          "phase": "working",
+          "status": "repairing",
+          "action": {
+            "kind": "repair",
+            "elapsed": 2,
+            "duration": 6,
+            "targetId": "relay",
+            "missionId": "mission-1"
+          },
+          "disabled": false,
+          "waitTicks": 0,
+          "totalWait": 0
+        },
+        "sourceRecordingSha256": "a7ae065b45f4fb557ab4b92bd49b23b778c1d91703cd471f3d58cef743c66fad"
+      }
+    },
+    {
+      "name": "1440-S6-comparison",
+      "file": "../screenshots/v4/1440-S6-comparison.png",
+      "bytes": 166440,
+      "sha256": "8823f23025e34e169cbbd8600dabbfe6509df493f6f6d65c3e9a388c05323dcd",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68fr5e-3",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "26",
+        "worldVersion": "2",
+        "completed": "1",
+        "connected": "true",
+        "view": "engineering",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      "rendering": [
+        {
+          "engine": "three.js r186",
+          "dominionCanvas": "dominion-io5we26",
+          "rendering": "active",
+          "pixels": "928800",
+          "quality": "high",
+          "rafPending": "1",
+          "renderMode": "continuous",
+          "frames": "871",
+          "camera": "docking",
+          "cameraRequest": "7",
+          "worldVersion": "2",
+          "tick": "26",
+          "shipCount": "6",
+          "bridge": "hidden",
+          "layerResources": "false",
+          "layerLanes": "true",
+          "resourceLabels": "0",
+          "drawCalls": "117",
+          "geometries": "133",
+          "textures": "1"
+        }
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollWidth": 1440,
+      "facts": {
+        "sourceTick": 26,
+        "sourceWorldVersion": 2,
+        "branches": [
+          "A / 时效优先2项任务完成曙光环港霜环前哨赤砂受损中继赤砂科研站青：运输 · 紫：勘测 · 琥珀：维修额外模拟步23能源消耗13 EU等待0 tick失败 / 超期0 / 0约束违规0 采用时效优先",
+          "B / 能耗优先2项任务完成曙光环港霜环前哨赤砂受损中继赤砂科研站青：运输 · 紫：勘测 · 琥珀：维修额外模拟步33能源消耗12 EU等待0 tick失败 / 超期0 / 0约束违规0 采用能耗优先"
+        ]
+      }
+    },
+    {
+      "name": "390-S1-overview",
+      "file": "../screenshots/v4/390-S1-overview.png",
+      "bytes": 159536,
+      "sha256": "32fe7fe3fdf6f924aeddd93e3756902f61cbf021b8fc8e9ddaf14ce398c0ccc9",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68fy5h-1",
+        "status": "ready",
+        "mode": "local-simulation",
+        "tick": "0",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      "rendering": [
+        {
+          "engine": "three.js r186",
+          "dominionCanvas": "dominion-20r2m8y",
+          "rendering": "active",
+          "pixels": "202800",
+          "quality": "mobile",
+          "rafPending": "1",
+          "renderMode": "continuous",
+          "frames": "67",
+          "camera": "overview",
+          "cameraRequest": "1",
+          "worldVersion": "1",
+          "tick": "0",
+          "shipCount": "6",
+          "bridge": "hidden",
+          "layerResources": "false",
+          "layerLanes": "true",
+          "resourceLabels": "0",
+          "drawCalls": "113",
+          "geometries": "88",
+          "textures": "1"
+        }
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollWidth": 390,
+      "facts": {}
+    },
+    {
+      "name": "390-S2-cockpit",
+      "file": "../screenshots/v4/390-S2-cockpit.png",
+      "bytes": 164645,
+      "sha256": "99eaa738f89bed90ba99ab72c0ec44a2c50fda4d336ab539b160d554dfb271cc",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68fy5h-1",
+        "status": "ready",
+        "mode": "local-simulation",
+        "tick": "0",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      "rendering": [
+        {
+          "engine": "three.js r186",
+          "dominionCanvas": "dominion-20r2m8y",
+          "rendering": "active",
+          "pixels": "202800",
+          "quality": "mobile",
+          "rafPending": "1",
+          "renderMode": "continuous",
+          "frames": "103",
+          "camera": "cockpit",
+          "cameraRequest": "2",
+          "worldVersion": "1",
+          "tick": "0",
+          "shipCount": "6",
+          "bridge": "visible",
+          "layerResources": "false",
+          "layerLanes": "true",
+          "resourceLabels": "0",
+          "drawCalls": "88",
+          "geometries": "131",
+          "textures": "4"
+        }
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollWidth": 390,
+      "facts": {}
+    },
+    {
+      "name": "390-S3-loading",
+      "file": "../screenshots/v4/390-S3-loading.png",
+      "bytes": 148772,
+      "sha256": "d2d36d78e97fbf1a0c42e978710b157cbd0146620cd861b62f8ced625e4b70be",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68g0la-2",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "6",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      "rendering": [
+        {
+          "engine": "three.js r186",
+          "dominionCanvas": "dominion-20r2m8y",
+          "rendering": "active",
+          "pixels": "202800",
+          "quality": "mobile",
+          "rafPending": "1",
+          "renderMode": "continuous",
+          "frames": "211",
+          "camera": "docking",
+          "cameraRequest": "4",
+          "worldVersion": "1",
+          "tick": "6",
+          "shipCount": "6",
+          "bridge": "hidden",
+          "layerResources": "false",
+          "layerLanes": "true",
+          "resourceLabels": "0",
+          "drawCalls": "122",
+          "geometries": "136",
+          "textures": "1"
+        }
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollWidth": 390,
+      "facts": {
+        "ship": {
+          "id": "transport-a",
+          "label": "方舟 1",
+          "role": "transport",
+          "nodeId": "forge",
+          "transit": null,
+          "capacity": 8,
+          "energy": 96,
+          "initialEnergy": 100,
+          "speed": 1,
+          "cargo": {
+            "energy": 0,
+            "supplies": 0,
+            "parts": 0,
+            "samples": 0
+          },
+          "reserved": {
+            "energy": 3,
+            "supplies": 2,
+            "parts": 0,
+            "samples": 0
+          },
+          "cargoOwner": "mission-1",
+          "sourceId": "forge",
+          "missionId": "mission-1",
+          "stepId": "mission-1:step:1",
+          "route": [],
+          "planVersion": 1,
+          "phase": "working",
+          "status": "loading",
+          "action": {
+            "kind": "load",
+            "elapsed": 1,
+            "duration": 2,
+            "targetId": "forge",
+            "missionId": "mission-1"
+          },
+          "disabled": false,
+          "waitTicks": 0,
+          "totalWait": 0
+        },
+        "sourceRecordingSha256": "68c62c60e146dbe2f5714f3bc5be8028aef95e0e5130f92d3911558f8ff52c86"
+      }
+    },
+    {
+      "name": "390-S4-scanning",
+      "file": "../screenshots/v4/390-S4-scanning.png",
+      "bytes": 147009,
+      "sha256": "386412764642bc45d8445dbe2aff0859c0d9c54dd0501cbc8918c8519a9703e1",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68g3cu-3",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "8",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      "rendering": [
+        {
+          "engine": "three.js r186",
+          "dominionCanvas": "dominion-20r2m8y",
+          "rendering": "active",
+          "pixels": "202800",
+          "quality": "mobile",
+          "rafPending": "1",
+          "renderMode": "continuous",
+          "frames": "328",
+          "camera": "scan",
+          "cameraRequest": "6",
+          "worldVersion": "1",
+          "tick": "8",
+          "shipCount": "6",
+          "bridge": "hidden",
+          "layerResources": "false",
+          "layerLanes": "true",
+          "resourceLabels": "0",
+          "drawCalls": "124",
+          "geometries": "117",
+          "textures": "1"
+        }
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollWidth": 390,
+      "facts": {
+        "ship": {
+          "id": "survey-a",
+          "label": "游隼 1",
+          "role": "survey",
+          "nodeId": "relay",
+          "transit": null,
+          "capacity": 2,
+          "energy": 95,
+          "initialEnergy": 100,
+          "speed": 2,
+          "cargo": {
+            "energy": 0,
+            "supplies": 0,
+            "parts": 0,
+            "samples": 0
+          },
+          "reserved": {
+            "energy": 0,
+            "supplies": 0,
+            "parts": 0,
+            "samples": 0
+          },
+          "cargoOwner": null,
+          "sourceId": null,
+          "missionId": "mission-1",
+          "stepId": "mission-1:step:1",
+          "route": [],
+          "planVersion": 1,
+          "phase": "working",
+          "status": "scanning",
+          "action": {
+            "kind": "scan",
+            "elapsed": 1,
+            "duration": 4,
+            "targetId": "relay",
+            "missionId": "mission-1"
+          },
+          "disabled": false,
+          "waitTicks": 0,
+          "totalWait": 0
+        },
+        "sourceRecordingSha256": "612b333c8c3c0df20d61f2c4bee0c66f0c6d8e9ae39b5a2a5d123fb8581e7375"
+      }
+    },
+    {
+      "name": "390-S5-repairing",
+      "file": "../screenshots/v4/390-S5-repairing.png",
+      "bytes": 140962,
+      "sha256": "bc23ad21cadbf74534fa1da7a1ad448983e0d12e18fa5c840ce7b51c8689f638",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68g3cu-3",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "26",
+        "worldVersion": "2",
+        "completed": "1",
+        "connected": "true",
+        "view": "command",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      "rendering": [
+        {
+          "engine": "three.js r186",
+          "dominionCanvas": "dominion-20r2m8y",
+          "rendering": "active",
+          "pixels": "202800",
+          "quality": "mobile",
+          "rafPending": "1",
+          "renderMode": "continuous",
+          "frames": "537",
+          "camera": "docking",
+          "cameraRequest": "7",
+          "worldVersion": "2",
+          "tick": "26",
+          "shipCount": "6",
+          "bridge": "hidden",
+          "layerResources": "false",
+          "layerLanes": "true",
+          "resourceLabels": "0",
+          "drawCalls": "92",
+          "geometries": "119",
+          "textures": "1"
+        }
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollWidth": 390,
+      "facts": {
+        "ship": {
+          "id": "repair-a",
+          "label": "织星 1",
+          "role": "repair",
+          "nodeId": "relay",
+          "transit": null,
+          "capacity": 24,
+          "energy": 91,
+          "initialEnergy": 100,
+          "speed": 1,
+          "cargo": {
+            "energy": 0,
+            "supplies": 0,
+            "parts": 2,
+            "samples": 0
+          },
+          "reserved": {
+            "energy": 0,
+            "supplies": 0,
+            "parts": 0,
+            "samples": 0
+          },
+          "cargoOwner": "mission-1",
+          "sourceId": "forge",
+          "missionId": "mission-1",
+          "stepId": "mission-1:step:2",
+          "route": [],
+          "planVersion": 2,
+          "phase": "working",
+          "status": "repairing",
+          "action": {
+            "kind": "repair",
+            "elapsed": 2,
+            "duration": 6,
+            "targetId": "relay",
+            "missionId": "mission-1"
+          },
+          "disabled": false,
+          "waitTicks": 0,
+          "totalWait": 0
+        },
+        "sourceRecordingSha256": "34a410f2b1965d82d637ef1cf4284d8c10e3bed6cafd73a0c456e794635649a9"
+      }
+    },
+    {
+      "name": "390-S6-comparison",
+      "file": "../screenshots/v4/390-S6-comparison.png",
+      "bytes": 38330,
+      "sha256": "dc5e2a1c230a423031251cbcb465b8a0cfdadde33be7e0f164104be14410988f",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68g3cu-3",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "26",
+        "worldVersion": "2",
+        "completed": "1",
+        "connected": "true",
+        "view": "engineering",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      "rendering": [
+        {
+          "engine": "three.js r186",
+          "dominionCanvas": "dominion-20r2m8y",
+          "rendering": "active",
+          "pixels": "202800",
+          "quality": "mobile",
+          "rafPending": "1",
+          "renderMode": "continuous",
+          "frames": "547",
+          "camera": "docking",
+          "cameraRequest": "7",
+          "worldVersion": "2",
+          "tick": "26",
+          "shipCount": "6",
+          "bridge": "hidden",
+          "layerResources": "false",
+          "layerLanes": "true",
+          "resourceLabels": "0",
+          "drawCalls": "92",
+          "geometries": "119",
+          "textures": "1"
+        }
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollWidth": 390,
+      "facts": {
+        "sourceTick": 26,
+        "sourceWorldVersion": 2,
+        "branches": [
+          "A / 时效优先2项任务完成曙光环港霜环前哨赤砂受损中继赤砂科研站青：运输 · 紫：勘测 · 琥珀：维修额外模拟步23能源消耗13 EU等待0 tick失败 / 超期0 / 0约束违规0 采用时效优先",
+          "B / 能耗优先2项任务完成曙光环港霜环前哨赤砂受损中继赤砂科研站青：运输 · 紫：勘测 · 琥珀：维修额外模拟步33能源消耗12 EU等待0 tick失败 / 超期0 / 0约束违规0 采用能耗优先"
+        ]
+      }
+    },
+    {
+      "name": "390-S6-comparison-lower",
+      "file": "../screenshots/v4/390-S6-comparison-lower.png",
+      "bytes": 31238,
+      "sha256": "c6916d494f2e2171ddd1f16f928e91348309a67493f1fa3df7f27070f68c9eac",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68g3cu-3",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "26",
+        "worldVersion": "2",
+        "completed": "1",
+        "connected": "true",
+        "view": "engineering",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      "rendering": [
+        {
+          "engine": "three.js r186",
+          "dominionCanvas": "dominion-20r2m8y",
+          "rendering": "active",
+          "pixels": "202800",
+          "quality": "mobile",
+          "rafPending": "1",
+          "renderMode": "continuous",
+          "frames": "550",
+          "camera": "docking",
+          "cameraRequest": "7",
+          "worldVersion": "2",
+          "tick": "26",
+          "shipCount": "6",
+          "bridge": "hidden",
+          "layerResources": "false",
+          "layerLanes": "true",
+          "resourceLabels": "0",
+          "drawCalls": "92",
+          "geometries": "119",
+          "textures": "1"
+        }
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "scrollWidth": 390,
+      "facts": {
+        "note": "Second actual viewport of the scrollable comparison panel, not a stitched image."
+      }
+    },
+    {
+      "name": "guide-completed",
+      "file": "../screenshots/v4/guide-completed.png",
+      "bytes": 619269,
+      "sha256": "833169d30985288cb5705b72fa0db8ddbac79e2a2cb9f725a770152ed8c7db3c",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68gcui-2",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "67",
+        "worldVersion": "4",
+        "completed": "2",
+        "connected": "true",
+        "view": "command",
+        "guide": "completed",
+        "guideSeconds": "96",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      "rendering": [
+        {
+          "engine": "three.js r186",
+          "dominionCanvas": "dominion-zf39dox",
+          "rendering": "active",
+          "pixels": "928800",
+          "quality": "high",
+          "rafPending": "1",
+          "renderMode": "continuous",
+          "frames": "5942",
+          "camera": "overview",
+          "cameraRequest": "11",
+          "worldVersion": "4",
+          "tick": "67",
+          "shipCount": "6",
+          "bridge": "hidden",
+          "layerResources": "false",
+          "layerLanes": "true",
+          "resourceLabels": "0",
+          "drawCalls": "142",
+          "geometries": "166",
+          "textures": "5"
+        }
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "scrollWidth": 1440,
+      "facts": {
+        "guideElapsedMs": 96676.1006
+      }
+    }
+  ],
+  "supplementary": [
+    {
+      "file": "../screenshots/v4/1440-imported-guide-final.png",
+      "bytes": 378203,
+      "sha256": "d3452326c282e48de52f3c2845caf31c8efa99583825feac6709dcfd1992e84c",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68gcui-2",
+        "status": "paused",
+        "mode": "history-replay",
+        "tick": "67",
+        "worldVersion": "4",
+        "completed": "2",
+        "connected": "true",
+        "view": "engineering",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      "viewport": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "file": "../screenshots/v4/1440-resources-map.png",
+      "bytes": 443648,
+      "sha256": "fa7bfae674c9328dd3ccc738f4f9e6e22afdec05a1ef9ad171c3ca5da5e59326",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68jj78-2",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "1",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "map",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "true",
+        "layerLanes": "true"
+      },
+      "viewport": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "file": "../screenshots/v4/1440-resources-map-lanes-hidden.png",
+      "bytes": 422971,
+      "sha256": "989db41e72909f6a9b0a6924d437a4f8108579dd24ea11ceefb679c2359bdf1a",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68jj78-2",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "1",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "map",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "true",
+        "layerLanes": "false"
+      },
+      "viewport": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "file": "../screenshots/v4/1440-resources-planet.png",
+      "bytes": 413051,
+      "sha256": "59b82ff4fa0f4df42d0be46c11eb1d855cbfd71d2c49e235e92f6a96021fb799",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68jj78-2",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "1",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "true",
+        "layerLanes": "false"
+      },
+      "viewport": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "file": "../screenshots/v4/1440-actual-forge-reservation.png",
+      "bytes": 251429,
+      "sha256": "051a65ae01407370d4cec9c2b10b302d81c629c9a16369eff643f26f919791a1",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68jj78-2",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "1",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "true",
+        "layerLanes": "false"
+      },
+      "viewport": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "file": "../screenshots/v4/1440-actual-port-forge-transit.png",
+      "bytes": 257160,
+      "sha256": "75f3eaa00885aa9a8691131c14bf4b5b8970cb18a8a6eff52b1a644834f5c051",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68jj78-2",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "1",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "true",
+        "layerLanes": "false"
+      },
+      "viewport": 1440,
+      "scrollWidth": 1440
+    },
+    {
+      "file": "../screenshots/v4/390-resources-map.png",
+      "bytes": 148860,
+      "sha256": "b8928777650e8a6c0be8526d2894fa87a810bfc29ffcab91b304f0b955b0d91a",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68jkwt-2",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "1",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "map",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "true",
+        "layerLanes": "true"
+      },
+      "viewport": 390,
+      "scrollWidth": 390
+    },
+    {
+      "file": "../screenshots/v4/390-resources-map-lanes-hidden.png",
+      "bytes": 142779,
+      "sha256": "7504ad45c166daedff57d09e6c1eb0e21976082b3c0e1975640123903e11d00f",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68jkwt-2",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "1",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "map",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "true",
+        "layerLanes": "false"
+      },
+      "viewport": 390,
+      "scrollWidth": 390
+    },
+    {
+      "file": "../screenshots/v4/390-resources-planet.png",
+      "bytes": 127861,
+      "sha256": "5a2447190ea17494c14d74141faec232be7eca4cb6ef194f9fb95c7389274da5",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68jkwt-2",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "1",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "true",
+        "layerLanes": "false"
+      },
+      "viewport": 390,
+      "scrollWidth": 390
+    },
+    {
+      "file": "../screenshots/v4/390-actual-forge-reservation.png",
+      "bytes": 45547,
+      "sha256": "9948e095a310da8fb15cebe0e2175abf398f71cfa944efbed310eac13a279880",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68jkwt-2",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "1",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "true",
+        "layerLanes": "false"
+      },
+      "viewport": 390,
+      "scrollWidth": 390
+    },
+    {
+      "file": "../screenshots/v4/390-actual-port-forge-transit.png",
+      "bytes": 53106,
+      "sha256": "c8ca76627b30cc1c6135b233e8cf1c156aec366419a6a9e85f211d08f38bab9b",
+      "state": {
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68jkwt-2",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "1",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "idle",
+        "guideSeconds": "0",
+        "layerResources": "true",
+        "layerLanes": "false"
+      },
+      "viewport": 390,
+      "scrollWidth": 390
+    }
+  ],
+  "guide": {
+    "transitions": [
+      {
+        "elapsedMs": 0,
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68gcui-2",
+        "status": "ready",
+        "mode": "local-simulation",
+        "tick": "0",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "intro",
+        "guideSeconds": "0",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      {
+        "elapsedMs": 4015,
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68gcui-2",
+        "status": "running",
+        "mode": "local-simulation",
+        "tick": "0",
+        "worldVersion": "1",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "scan",
+        "guideSeconds": "4",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      {
+        "elapsedMs": 17217,
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68gcui-2",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "11",
+        "worldVersion": "3",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "closure",
+        "guideSeconds": "17",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      {
+        "elapsedMs": 21258.700000047684,
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68gcui-2",
+        "status": "running",
+        "mode": "local-simulation",
+        "tick": "11",
+        "worldVersion": "3",
+        "completed": "0",
+        "connected": "true",
+        "view": "command",
+        "guide": "repair",
+        "guideSeconds": "21",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      {
+        "elapsedMs": 53658.300000071526,
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68gcui-2",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "38",
+        "worldVersion": "4",
+        "completed": "1",
+        "connected": "true",
+        "view": "command",
+        "guide": "comparison",
+        "guideSeconds": "53",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      {
+        "elapsedMs": 53760.39999997616,
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68gcui-2",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "38",
+        "worldVersion": "4",
+        "completed": "1",
+        "connected": "true",
+        "view": "command",
+        "guide": "comparison-hold",
+        "guideSeconds": "53",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      {
+        "elapsedMs": 61817.700000047684,
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68gcui-2",
+        "status": "running",
+        "mode": "local-simulation",
+        "tick": "38",
+        "worldVersion": "4",
+        "completed": "1",
+        "connected": "true",
+        "view": "command",
+        "guide": "delivery",
+        "guideSeconds": "61",
+        "layerResources": "false",
+        "layerLanes": "true"
+      },
+      {
+        "elapsedMs": 96612.5,
+        "testid": "dominion-lab",
+        "sessionId": "dominion-mv68gcui-2",
+        "status": "paused",
+        "mode": "local-simulation",
+        "tick": "67",
+        "worldVersion": "4",
+        "completed": "2",
+        "connected": "true",
+        "view": "command",
+        "guide": "completed",
+        "guideSeconds": "96",
+        "layerResources": "false",
+        "layerLanes": "true"
+      }
+    ],
+    "sessionId": "dominion-mv68gcui-2",
+    "guideElapsedMs": 96676.1006,
+    "final": {
+      "testid": "dominion-lab",
+      "sessionId": "dominion-mv68gcui-2",
+      "status": "paused",
+      "mode": "local-simulation",
+      "tick": "67",
+      "worldVersion": "4",
+      "completed": "2",
+      "connected": "true",
+      "view": "command",
+      "guide": "completed",
+      "guideSeconds": "96",
+      "layerResources": "false",
+      "layerLanes": "true"
+    },
+    "business": {
+      "tick": 67,
+      "worldVersion": 4,
+      "missions": [
+        {
+          "id": "mission-1",
+          "kind": "relay",
+          "status": "completed",
+          "delivered": {
+            "energy": 0,
+            "supplies": 2,
+            "parts": 0,
+            "samples": 0
+          }
+        },
+        {
+          "id": "mission-2",
+          "kind": "supply",
+          "status": "completed",
+          "delivered": {
+            "energy": 3,
+            "supplies": 2,
+            "parts": 0,
+            "samples": 0
+          }
+        }
+      ],
+      "events": 142,
+      "closedLane": {
+        "id": "forge-relay",
+        "from": "forge",
+        "to": "relay",
+        "ticks": 4,
+        "energy": 5,
+        "risk": 3,
+        "capacity": 1,
+        "open": false,
+        "damaged": false,
+        "roles": [
+          "transport",
+          "survey",
+          "repair"
+        ]
+      },
+      "discoveryCount": 1
+    },
+    "videoFile": "dominion-guide-original.webm",
+    "encodedMedia": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "vp9",
+          "width": 1440,
+          "height": 900,
+          "r_frame_rate": "25/1"
+        }
+      ],
+      "format": {
+        "duration": "100.480000",
+        "size": "32259419"
+      }
+    },
+    "recordingFile": "guide-example.json",
+    "recordingSha256": "1bb16e06d9eb534dd90096cafe5bdc1f02129eec0b5acc0c60c368d354e11d34",
+    "videoBytes": 32259419,
+    "videoSha256": "c02f3d9a9d5246229170e69218b5698df9ea9de8361a29e36862f3913969fdaa"
+  },
+  "strictImport": {
+    "accepted": true,
+    "final": {
+      "testid": "dominion-lab",
+      "sessionId": "dominion-mv68gcui-2",
+      "status": "paused",
+      "mode": "history-replay",
+      "tick": "67",
+      "worldVersion": "4",
+      "completed": "2",
+      "connected": "true",
+      "view": "engineering",
+      "guide": "idle",
+      "guideSeconds": "0",
+      "layerResources": "false",
+      "layerLanes": "true"
+    },
+    "rangeMax": "73",
+    "sourceSha256": "1bb16e06d9eb534dd90096cafe5bdc1f02129eec0b5acc0c60c368d354e11d34",
+    "build": {
+      "basePath": "/",
+      "sourceRevision": "3c6d78fae44f4416f4299827b57086c56253d596",
+      "sourceTreeDirty": false,
+      "builtAt": "2026-10-13T05:08:39.828Z",
+      "apps": [
+        "portfolio",
+        "shop",
+        "pulse"
+      ]
+    },
+    "passed": true
+  },
+  "resourceRestoration": {
+    "classification": "production-resource-restoration",
+    "sourceBuild": {
+      "basePath": "/",
+      "sourceRevision": "3c6d78fae44f4416f4299827b57086c56253d596",
+      "sourceTreeDirty": false,
+      "builtAt": "2026-10-13T05:08:39.828Z",
+      "apps": [
+        "portfolio",
+        "shop",
+        "pulse"
+      ]
+    },
+    "samples": [
+      {
+        "width": 1440,
+        "visibleCounts": [
+          0
+        ],
+        "restoredCount": 3,
+        "pixelIdentical": true,
+        "beforeState": {
+          "testid": "dominion-lab",
+          "sessionId": "dominion-mv68jmgc-1",
+          "status": "ready",
+          "mode": "local-simulation",
+          "tick": "0",
+          "worldVersion": "1",
+          "completed": "0",
+          "connected": "true",
+          "view": "command",
+          "guide": "idle",
+          "guideSeconds": "0",
+          "layerResources": "true",
+          "layerLanes": "true"
+        },
+        "afterState": {
+          "testid": "dominion-lab",
+          "sessionId": "dominion-mv68jmgc-1",
+          "status": "ready",
+          "mode": "local-simulation",
+          "tick": "0",
+          "worldVersion": "1",
+          "completed": "0",
+          "connected": "true",
+          "view": "command",
+          "guide": "idle",
+          "guideSeconds": "0",
+          "layerResources": "true",
+          "layerLanes": "true"
+        }
+      },
+      {
+        "width": 390,
+        "visibleCounts": [
+          0
+        ],
+        "restoredCount": 3,
+        "pixelIdentical": true,
+        "beforeState": {
+          "testid": "dominion-lab",
+          "sessionId": "dominion-mv68jnsf-1",
+          "status": "ready",
+          "mode": "local-simulation",
+          "tick": "0",
+          "worldVersion": "1",
+          "completed": "0",
+          "connected": "true",
+          "view": "command",
+          "guide": "idle",
+          "guideSeconds": "0",
+          "layerResources": "true",
+          "layerLanes": "true"
+        },
+        "afterState": {
+          "testid": "dominion-lab",
+          "sessionId": "dominion-mv68jnsf-1",
+          "status": "ready",
+          "mode": "local-simulation",
+          "tick": "0",
+          "worldVersion": "1",
+          "completed": "0",
+          "connected": "true",
+          "view": "command",
+          "guide": "idle",
+          "guideSeconds": "0",
+          "layerResources": "true",
+          "layerLanes": "true"
+        }
+      }
+    ],
+    "passed": true
+  },
+  "pageErrors": [],
+  "mediaCapturePassed": true,
+  "limitations": [
+    "Desktop Chrome viewport simulation, not a physical phone GPU test",
+    "Original unedited WebM is a Release asset; not committed to source Git",
+    "Capture pass and internal visual review are separate; no user aesthetic approval inferred"
+  ]
+}

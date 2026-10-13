@@ -1,10 +1,10 @@
 {
   "source": "Actual Playwright run; sanitized summary. Raw traces and videos remain in ignored local storage; excluded from public CI artifacts.",
-  "generatedAt": "2026-10-12T17:52:57.605Z",
+  "generatedAt": "2026-10-13T05:19:29.558Z",
   "stats": {
-    "startTime": "2026-10-12T17:47:59.688Z",
-    "duration": 296928.968,
-    "expected": 95,
+    "startTime": "2026-10-13T05:09:00.994Z",
+    "duration": 577173.301,
+    "expected": 127,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
@@ -17,7 +17,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 8545,
+          "durationMs": 8189,
           "retry": 0
         }
       ]
@@ -29,7 +29,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 643,
+          "durationMs": 641,
           "retry": 0
         }
       ]
@@ -41,7 +41,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1737,
+          "durationMs": 1615,
           "retry": 0
         }
       ]
@@ -53,7 +53,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1825,
+          "durationMs": 1723,
           "retry": 0
         }
       ]
@@ -65,7 +65,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1769,
+          "durationMs": 1863,
           "retry": 0
         }
       ]
@@ -77,7 +77,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1898,
+          "durationMs": 1908,
           "retry": 0
         }
       ]
@@ -89,7 +89,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1985,
+          "durationMs": 1880,
           "retry": 0
         }
       ]
@@ -101,7 +101,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1842,
+          "durationMs": 1770,
           "retry": 0
         }
       ]
@@ -113,7 +113,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 4693,
+          "durationMs": 4737,
           "retry": 0
         }
       ]
@@ -125,7 +125,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1111,
+          "durationMs": 1209,
           "retry": 0
         }
       ]
@@ -137,7 +137,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1139,
+          "durationMs": 1241,
           "retry": 0
         }
       ]
@@ -149,7 +149,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1068,
+          "durationMs": 1124,
           "retry": 0
         }
       ]
@@ -161,7 +161,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1028,
+          "durationMs": 1071,
           "retry": 0
         }
       ]
@@ -173,7 +173,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1048,
+          "durationMs": 1060,
           "retry": 0
         }
       ]
@@ -185,7 +185,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1017,
+          "durationMs": 1053,
           "retry": 0
         }
       ]
@@ -197,7 +197,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3821,
+          "durationMs": 3868,
           "retry": 0
         }
       ]
@@ -209,7 +209,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 4556,
+          "durationMs": 4508,
           "retry": 0
         }
       ]
@@ -221,7 +221,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3865,
+          "durationMs": 4071,
           "retry": 0
         }
       ]
@@ -233,7 +233,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 4586,
+          "durationMs": 4557,
           "retry": 0
         }
       ]
@@ -245,7 +245,391 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2717,
+          "durationMs": 2687,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-guide.spec.ts",
+      "title": "DOMINION G01 default expedition completes actual relay plus supply without changing fixture",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 13268,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-guide.spec.ts",
+      "title": "DOMINION G02 test-double rejection stale approval and double confirmation never create extra tasks",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1281,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-guide.spec.ts",
+      "title": "DOMINION G03 reduced-motion 2D tour is reachable and user takeover stops commands for three seconds",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 11166,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-guide.spec.ts",
+      "title": "DOMINION G04 full unaccelerated tour gates scan closure repair comparison and actual delivery",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 98570,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-inspection.spec.ts",
+      "title": "DOMINION 真实航道维修保持用户禁行，图层与占用检查不改写暂停世界",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 17593,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-lifecycle.spec.ts",
+      "title": "DOMINION 生命周期：进入离开旗舰10轮释放3D上下文、Worker、RAF和全局监听",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 8638,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-lifecycle.spec.ts",
+      "title": "DOMINION 生命周期：体验舱镜头往返10轮资源有界且不推进世界",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 14493,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-lifecycle.spec.ts",
+      "title": "DOMINION 生命周期：切换场景10轮保留合法新会话且不积累渲染资源",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6946,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-lifecycle.spec.ts",
+      "title": "DOMINION 生命周期：合法导入回放返回实时10轮无隐写且资源有界",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7638,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-lifecycle.spec.ts",
+      "title": "DOMINION 生命周期：世界重置10轮清除旧事实并释放每轮Worker",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7586,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION Worker constructor 同步失败保留源记录，重试获得真实分支与航迹",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1679,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION Worker postMessage 同步失败保留源记录，重试获得真实分支与航迹",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1683,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION 忽略错误 generation 响应，随后接受同一个真实 Worker 的匹配结果",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2240,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION 忽略错误 sourceKey 响应，随后接受同一个真实 Worker 的匹配结果",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2211,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION Worker 拒绝请求内过期worldVersion，保留源世界并可重新实算",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1614,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION reset 后旧 Worker 的迟到结果和错误不污染新世界或终止新比较",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1933,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION scenario 后旧 Worker 的迟到结果和错误不污染新世界或终止新比较",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1955,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION cancel 后旧 Worker 的迟到结果和错误不污染新世界或终止新比较",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2020,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION 真实 WebGL context loss 后二维保留世界，恢复三维并继续单步",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1903,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion-worker.spec.ts",
+      "title": "DOMINION 场景资源加载失败保留可操作二维世界并可重试资源",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1592,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B01 actual supply, inspect, ledger, result and fresh session reset",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5288,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B02/B04 four tasks share six eligible ships; scan repair rescue and samples leave facts",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 19435,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B03 future closure causes real alternate departures; unavailable paths require new attempt",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 12032,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B06 isolated strategies retain paused facts and adoption changes only future policy",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 7712,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B07 immutable replay seek and rejected JSON preserve authoritative live facts",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5710,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B08 communication reconnect and keyboard object control preserve one session",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 5134,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B08 360px responsive fallback has accessible actions and no page overflow",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 859,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B08 390px responsive fallback has accessible actions and no page overflow",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 849,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B08 768px responsive fallback has accessible actions and no page overflow",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 894,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B08 1440px responsive fallback has accessible actions and no page overflow",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 957,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B08 1920px responsive fallback has accessible actions and no page overflow",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 986,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dominion.spec.ts",
+      "title": "DOMINION B05 distinct actual camera modes preserve the exact same paused world",
+      "status": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 2657,
           "retry": 0
         }
       ]
@@ -257,7 +641,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3558,
+          "durationMs": 3546,
           "retry": 0
         }
       ]
@@ -269,7 +653,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2809,
+          "durationMs": 2625,
           "retry": 0
         }
       ]
@@ -281,7 +665,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3669,
+          "durationMs": 3721,
           "retry": 0
         }
       ]
@@ -293,7 +677,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2770,
+          "durationMs": 2864,
           "retry": 0
         }
       ]
@@ -305,7 +689,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2667,
+          "durationMs": 2687,
           "retry": 0
         }
       ]
@@ -317,7 +701,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2775,
+          "durationMs": 2765,
           "retry": 0
         }
       ]
@@ -329,7 +713,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2577,
+          "durationMs": 2745,
           "retry": 0
         }
       ]
@@ -341,7 +725,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2538,
+          "durationMs": 2584,
           "retry": 0
         }
       ]
@@ -353,7 +737,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3773,
+          "durationMs": 3838,
           "retry": 0
         }
       ]
@@ -365,7 +749,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3268,
+          "durationMs": 3294,
           "retry": 0
         }
       ]
@@ -377,7 +761,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 5191,
+          "durationMs": 5255,
           "retry": 0
         }
       ]
@@ -389,7 +773,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2738,
+          "durationMs": 2816,
           "retry": 0
         }
       ]
@@ -401,7 +785,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 20017,
+          "durationMs": 20042,
           "retry": 0
         }
       ]
@@ -425,7 +809,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1267,
+          "durationMs": 1331,
           "retry": 0
         }
       ]
@@ -437,7 +821,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3092,
+          "durationMs": 3019,
           "retry": 0
         }
       ]
@@ -449,7 +833,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2069,
+          "durationMs": 1364,
           "retry": 0
         }
       ]
@@ -461,7 +845,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3877,
+          "durationMs": 3799,
           "retry": 0
         }
       ]
@@ -473,7 +857,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3143,
+          "durationMs": 3247,
           "retry": 0
         }
       ]
@@ -485,7 +869,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2729,
+          "durationMs": 2682,
           "retry": 0
         }
       ]
@@ -497,7 +881,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1482,
+          "durationMs": 1360,
           "retry": 0
         }
       ]
@@ -509,7 +893,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 9151,
+          "durationMs": 9011,
           "retry": 0
         }
       ]
@@ -521,7 +905,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1052,
+          "durationMs": 1038,
           "retry": 0
         }
       ]
@@ -533,7 +917,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2020,
+          "durationMs": 2175,
           "retry": 0
         }
       ]
@@ -545,7 +929,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1804,
+          "durationMs": 2309,
           "retry": 0
         }
       ]
@@ -557,7 +941,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1705,
+          "durationMs": 2057,
           "retry": 0
         }
       ]
@@ -569,7 +953,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 868,
+          "durationMs": 999,
           "retry": 0
         }
       ]
@@ -581,7 +965,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1012,
+          "durationMs": 1098,
           "retry": 0
         }
       ]
@@ -593,7 +977,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 660,
+          "durationMs": 775,
           "retry": 0
         }
       ]
@@ -605,7 +989,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 608,
+          "durationMs": 757,
           "retry": 0
         }
       ]
@@ -617,7 +1001,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 5401,
+          "durationMs": 6208,
           "retry": 0
         }
       ]
@@ -629,7 +1013,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3962,
+          "durationMs": 3660,
           "retry": 0
         }
       ]
@@ -641,7 +1025,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 5604,
+          "durationMs": 5839,
           "retry": 0
         }
       ]
@@ -653,7 +1037,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 6357,
+          "durationMs": 6773,
           "retry": 0
         }
       ]
@@ -665,7 +1049,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2324,
+          "durationMs": 2395,
           "retry": 0
         }
       ]
@@ -677,7 +1061,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2227,
+          "durationMs": 2224,
           "retry": 0
         }
       ]
@@ -689,7 +1073,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2274,
+          "durationMs": 2777,
           "retry": 0
         }
       ]
@@ -701,7 +1085,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 6238,
+          "durationMs": 6968,
           "retry": 0
         }
       ]
@@ -713,7 +1097,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 6817,
+          "durationMs": 7233,
           "retry": 0
         }
       ]
@@ -725,7 +1109,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1924,
+          "durationMs": 1986,
           "retry": 0
         }
       ]
@@ -737,7 +1121,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 5858,
+          "durationMs": 6278,
           "retry": 0
         }
       ]
@@ -749,7 +1133,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1528,
+          "durationMs": 1863,
           "retry": 0
         }
       ]
@@ -761,7 +1145,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 6082,
+          "durationMs": 5961,
           "retry": 0
         }
       ]
@@ -773,7 +1157,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2181,
+          "durationMs": 2462,
           "retry": 0
         }
       ]
@@ -785,7 +1169,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 6474,
+          "durationMs": 6715,
           "retry": 0
         }
       ]
@@ -797,7 +1181,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 5302,
+          "durationMs": 5581,
           "retry": 0
         }
       ]
@@ -809,7 +1193,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1244,
+          "durationMs": 1298,
           "retry": 0
         }
       ]
@@ -821,7 +1205,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 6729,
+          "durationMs": 7044,
           "retry": 0
         }
       ]
@@ -833,7 +1217,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 8646,
+          "durationMs": 8663,
           "retry": 0
         }
       ]
@@ -845,7 +1229,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 765,
+          "durationMs": 832,
           "retry": 0
         }
       ]
@@ -857,7 +1241,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2040,
+          "durationMs": 2216,
           "retry": 0
         }
       ]
@@ -869,7 +1253,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2330,
+          "durationMs": 2442,
           "retry": 0
         }
       ]
@@ -881,7 +1265,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2199,
+          "durationMs": 2319,
           "retry": 0
         }
       ]
@@ -893,7 +1277,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 10725,
+          "durationMs": 10818,
           "retry": 0
         }
       ]
@@ -905,7 +1289,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3550,
+          "durationMs": 3544,
           "retry": 0
         }
       ]
@@ -917,7 +1301,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 835,
+          "durationMs": 869,
           "retry": 0
         }
       ]
@@ -929,7 +1313,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 960,
+          "durationMs": 1175,
           "retry": 0
         }
       ]
@@ -941,7 +1325,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 916,
+          "durationMs": 1125,
           "retry": 0
         }
       ]
@@ -953,7 +1337,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 808,
+          "durationMs": 1060,
           "retry": 0
         }
       ]
@@ -965,7 +1349,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 947,
+          "durationMs": 1097,
           "retry": 0
         }
       ]
@@ -977,7 +1361,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 920,
+          "durationMs": 974,
           "retry": 0
         }
       ]
@@ -989,7 +1373,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 941,
+          "durationMs": 1020,
           "retry": 0
         }
       ]
@@ -1001,7 +1385,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1947,
+          "durationMs": 2015,
           "retry": 0
         }
       ]
@@ -1013,7 +1397,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2847,
+          "durationMs": 2556,
           "retry": 0
         }
       ]
@@ -1025,7 +1409,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2568,
+          "durationMs": 2606,
           "retry": 0
         }
       ]
@@ -1037,7 +1421,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1319,
+          "durationMs": 1474,
           "retry": 0
         }
       ]
@@ -1049,7 +1433,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 829,
+          "durationMs": 869,
           "retry": 0
         }
       ]
@@ -1061,7 +1445,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2920,
+          "durationMs": 2894,
           "retry": 0
         }
       ]
@@ -1073,7 +1457,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1369,
+          "durationMs": 1425,
           "retry": 0
         }
       ]
@@ -1085,7 +1469,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2469,
+          "durationMs": 2569,
           "retry": 0
         }
       ]
@@ -1097,7 +1481,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2307,
+          "durationMs": 2609,
           "retry": 0
         }
       ]
@@ -1109,7 +1493,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2639,
+          "durationMs": 2845,
           "retry": 0
         }
       ]
@@ -1121,7 +1505,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2711,
+          "durationMs": 3046,
           "retry": 0
         }
       ]
@@ -1133,7 +1517,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2760,
+          "durationMs": 3079,
           "retry": 0
         }
       ]
@@ -1145,7 +1529,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 340,
+          "durationMs": 414,
           "retry": 0
         }
       ]
